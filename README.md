@@ -8,9 +8,9 @@ Syncfusion Vue is a modern Vue UI Components library that has been built from th
 
 ## Resources
 
-* [Getting Started](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-cli?utm_source=npm&utm_campaign=ej2-vue-base)
-* [View Online Demos](https://ej2.syncfusion.com/vue/demos?utm_source=npm&utm_campaign=ej2-vue-base)
-* [Product Page](https://www.syncfusion.com/vue-ui-components?utm_source=npm&utm_campaign=ej2-vue-base)
+* [Getting Started](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-cli?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+* [View Online Demos](https://ej2.syncfusion.com/vue/demos?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+* [Product Page](https://www.syncfusion.com/vue-ui-components?utm_source=npm&utm_campaign=ej2-vue-ui-components)
 
 ## Framework highlights
 
@@ -46,21 +46,21 @@ With our commitment to at least four major updates per year, you receive the mos
 
 The Essential JS 2 is also offered in following list of frameworks.
 
-* [JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_source=npm&utm_campaign=ej2-vue-base)
-* [Angular](https://www.syncfusion.com/angular-ui-components?utm_source=npm&utm_campaign=ej2-vue-base)
-* [React](https://www.syncfusion.com/react-ui-components?utm_source=npm&utm_campaign=ej2-vue-base)
-* [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_source=npm&utm_campaign=ej2-vue-base)
-* [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_source=npm&utm_campaign=ej2-vue-base)
+* [JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+* [Angular](https://www.syncfusion.com/angular-ui-components?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+* [React](https://www.syncfusion.com/react-ui-components?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+* [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+* [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_source=npm&utm_campaign=ej2-vue-ui-components)
 
 ## Showcase Applications
 
-* [IT Asset Management](https://ej2.syncfusion.com/showcase/vue/assetmanagement?utm_source=npm&utm_campaign=ej2-vue-base)
+* [IT Asset Management](https://ej2.syncfusion.com/showcase/vue/assetmanagement?utm_source=npm&utm_campaign=ej2-vue-ui-components)
 
 ## Support
 
 Product support is available for through following mediums.
 
-* Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=ej2-vue-base) support system or [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_campaign=ej2-vue-base).
+* Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=ej2-vue-ui-components) support system or [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_campaign=ej2-vue-ui-components).
 * New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/issues/new).
 * Ask your query in [Stack Overflow](https://stackoverflow.com/) with tag `syncfusion` and `ej2`.
 
@@ -70,7 +70,7 @@ Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-compone
 
 ## Changelog
 
-Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes?utm_source=npm&utm_campaign=ej2-vue-base)
+Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes?utm_source=npm&utm_campaign=ej2-vue-ui-components)
 
     © Copyright 2018 Syncfusion, Inc. All Rights Reserved.
     The Syncfusion Essential Studio license and copyright applies to this distribution.
