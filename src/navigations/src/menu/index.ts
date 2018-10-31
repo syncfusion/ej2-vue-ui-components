@@ -1,0 +1,1 @@
+export { MenuComponent, MenuPlugin } from './menu.component';
