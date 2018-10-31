@@ -1,0 +1,46 @@
+import Vue from 'vue';
+import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
+import { PivotFieldList } from '@syncfusion/ej2-pivotview';
+
+
+export const properties: string[] = ['allowCalculatedField', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'locale', 'renderMode', 'showValuesButton', 'target', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+export const modelProps: string[] = [];
+
+/**
+ * `ejs-pivotfieldlist` represents the VueJS PivotFieldList Component.
+ * ```vue
+ * <ejs-pivotfieldlist></ejs-pivotfieldlist>
+ * ```
+ */
+@EJComponentDecorator({
+    props: properties
+})
+export class PivotFieldListComponent extends ComponentBase {
+    
+    public ej2Instances: any;
+    public propKeys: string[] = properties;
+    public models: string[] = modelProps;
+    public hasChildDirective: boolean = false;
+    protected hasInjectedModules: boolean = false;
+    public tagMapper: { [key: string]: Object } = {};
+    public tagNameMapper: Object = {};
+    
+    constructor() {
+        super();
+        this.ej2Instances = new PivotFieldList({});
+        this.bindProperties();
+    }
+
+    public render(createElement: any) {
+        return createElement('div', (this as any).$slots.default);
+    }
+    
+}
+
+export const PivotFieldListPlugin = {
+    name: 'ejs-pivotfieldlist',
+    install(Vue: any) {
+        Vue.component(PivotFieldListPlugin.name, PivotFieldListComponent);
+
+    }
+}
