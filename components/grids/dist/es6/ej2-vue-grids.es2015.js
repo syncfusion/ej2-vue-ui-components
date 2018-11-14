@@ -255,8 +255,8 @@ let GridComponent = class GridComponent extends ComponentBase {
     deleteRow(tr) {
         return this.ej2Instances.deleteRow(tr);
     }
-    destroyTemplate(propertyNames) {
-        return this.ej2Instances.destroyTemplate(propertyNames);
+    destroyTemplate(propertyNames, index) {
+        return this.ej2Instances.destroyTemplate(propertyNames, index);
     }
     endEdit() {
         return this.ej2Instances.endEdit();

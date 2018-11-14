@@ -73,8 +73,8 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     }
-    focusIn() {
-        return this.ej2Instances.focusIn();
+    focusIn(e) {
+        return this.ej2Instances.focusIn(e);
     }
     focusOut() {
         return this.ej2Instances.focusOut();

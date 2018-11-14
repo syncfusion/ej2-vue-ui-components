@@ -83,8 +83,8 @@ export class DropDownListComponent extends ComponentBase {
         return this.ej2Instances.addItem(items, itemIndex);
     }
 
-    public focusIn(): void {
-        return this.ej2Instances.focusIn();
+    public focusIn(e?: Object | Object | Object | Object): void {
+        return this.ej2Instances.focusIn(e);
     }
 
     public focusOut(): void {

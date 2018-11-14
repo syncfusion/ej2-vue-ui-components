@@ -14,7 +14,17 @@ export const NodesPlugin = {
     }
 }
 
-
+/**
+ * `e-node` directive represent a nodes of the vue diagram. 
+ * It must be contained in a Diagram component(`ejs-diagram`). 
+ * ```html
+ * <ejs-diagram>
+ * <e-nodes>
+ * <e-node></e-node>
+ * </e-nodes>
+ * </ejs-diagram>
+ * ```
+ */
 @EJComponentDecorator({})
 export class NodeDirective extends Vue {
     public render(): void {

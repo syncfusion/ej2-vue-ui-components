@@ -2,12 +2,9 @@ import { ListView } from '@syncfusion/ej2-lists';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -71,9 +68,6 @@ var ListViewComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ListViewComponent.prototype.hideItem = function (obj) {
         return this.ej2Instances.hideItem(obj);
-    };
-    ListViewComponent.prototype.refreshItemHeight = function () {
-        return this.ej2Instances.refreshItemHeight();
     };
     ListViewComponent.prototype.removeItem = function (obj) {
         return this.ej2Instances.removeItem(obj);

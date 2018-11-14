@@ -89,8 +89,8 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownListComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     };
-    DropDownListComponent.prototype.focusIn = function () {
-        return this.ej2Instances.focusIn();
+    DropDownListComponent.prototype.focusIn = function (e) {
+        return this.ej2Instances.focusIn(e);
     };
     DropDownListComponent.prototype.focusOut = function () {
         return this.ej2Instances.focusOut();

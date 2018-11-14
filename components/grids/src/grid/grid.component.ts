@@ -122,8 +122,8 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.deleteRow(tr);
     }
 
-    public destroyTemplate(propertyNames?: string[]): void {
-        return this.ej2Instances.destroyTemplate(propertyNames);
+    public destroyTemplate(propertyNames?: string[], index?: any): void {
+        return this.ej2Instances.destroyTemplate(propertyNames, index);
     }
 
     public endEdit(): void {

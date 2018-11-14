@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-lists",
-	"version": "16.3.29",
+	"version": "16.2.41",
 	"description": "Essential JS 2 List Components for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -35,7 +35,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/syncfusion/ej2-vue-lists.git"
+		"url": "https://github.com/syncfusion/ej2-vue-ui-components.git"
 	},
 	"main": "./dist/ej2-vue-lists.umd.min.js",
 	"module": "./index.js",

@@ -2,12 +2,9 @@ import { HeatMap } from '@syncfusion/ej2-heatmap';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -48,8 +45,8 @@ var HeatMapComponent = /** @__PURE__ @class */ (function (_super) {
     HeatMapComponent.prototype.heatMapMouseClick = function (e) {
         return this.ej2Instances.heatMapMouseClick(e);
     };
-    HeatMapComponent.prototype.refresh = function () {
-        return this.ej2Instances.refresh();
+    HeatMapComponent.prototype.removeSvg = function () {
+        return this.ej2Instances.removeSvg();
     };
     HeatMapComponent = __decorate([
         EJComponentDecorator({

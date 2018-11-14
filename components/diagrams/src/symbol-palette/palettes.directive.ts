@@ -14,7 +14,13 @@ export const PalettesPlugin = {
     }
 }
 
-
+/**
+ * `Palette` directive represent a axis palette of the vue SymbolPalette. 
+ * It must be contained in a SymbolPalette component(`SymbolPaletteComponent`). 
+ * ```html
+ * <e-palettes><e-palette></e-palette><e-palettes>
+ * ```
+ */
 @EJComponentDecorator({})
 export class PaletteDirective extends Vue {
     public render(): void {

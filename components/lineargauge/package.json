@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-lineargauge",
-	"version": "16.3.24",
+	"version": "16.3.30",
 	"description": "Essential JS 2 LinearGauge Components for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -25,7 +25,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/syncfusion/ej2-vue-lineargauge.git"
+		"url": "https://github.com/syncfusion/ej2-vue-ui-components.git"
 	},
 	"main": "./dist/ej2-vue-lineargauge.umd.min.js",
 	"module": "./index.js",

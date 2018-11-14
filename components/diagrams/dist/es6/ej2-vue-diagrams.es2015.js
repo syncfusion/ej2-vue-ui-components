@@ -22,6 +22,18 @@ const LayersPlugin = {
         Vue$$1.component(LayersPlugin.name, LayersDirective);
     }
 };
+/**
+ * `e-layers` directive represent a layers of the vue diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```vue
+ * <ejs-diagram>
+ * <e-layers>
+ * <e-layer>
+ * </e-layers>
+ * </e-layers>
+</ejs-diagram>
+ * ```
+ */
 let LayerDirective = class LayerDirective extends Vue {
     render() {
         return;
@@ -57,6 +69,22 @@ const ConnectorAnnotationsPlugin = {
         Vue$$1.component(ConnectorAnnotationsPlugin.name, ConnectorAnnotationsDirective);
     }
 };
+/**
+ * `e-connector-annotation` directive represent a annotation of the vue Diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-connectors>
+ * <e-connector>
+ * <e-connector-annotations>
+ * <e-connector-annotation>
+ * </e-connector-annotation>
+ * </e-connector-annotations>
+ * </e-connector>
+ * </e-connectors>
+ * </ejs-diagram>
+ * ```
+ */
 let ConnectorAnnotationDirective = class ConnectorAnnotationDirective extends Vue {
     render() {
         return;
@@ -92,6 +120,17 @@ const ConnectorsPlugin = {
         Vue$$1.component(ConnectorsPlugin.name, ConnectorsDirective);
     }
 };
+/**
+ * `e-connectors` directive represent a connectors of the vue diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-connectors>
+ * <e-connector></e-connector>
+ * </e-connectors>
+ * </ejs-diagram>
+ * ```
+ */
 let ConnectorDirective = class ConnectorDirective extends Vue {
     render() {
         return;
@@ -127,6 +166,22 @@ const NodeAnnotationsPlugin = {
         Vue$$1.component(NodeAnnotationsPlugin.name, NodeAnnotationsDirective);
     }
 };
+/**
+ * `e-node` directive represent a annotation of the vue Diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-nodes>
+ * <e-node>
+ * <e-node-annotations>
+ * <e-node-annotation>
+ * </e-node-annotation>
+ * </e-node-annotations>
+ * </e-node>
+ * </e-nodes>
+ * </ejs-diagram>
+ * ```
+ */
 let NodeAnnotationDirective = class NodeAnnotationDirective extends Vue {
     render() {
         return;
@@ -162,6 +217,22 @@ const PortsPlugin = {
         Vue$$1.component(PortsPlugin.name, PortsDirective);
     }
 };
+/**
+ * `e-port` directive represent a port of the vue Diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-nodes>
+ * <e-node>
+ * <e-node-ports>
+ * <e-node-port>
+ * </e-node-port>
+ * </e-node-ports>
+ * </e-node>
+ * </e-nodes>
+ * </ejs-diagram>
+ * ```
+ */
 let PortDirective = class PortDirective extends Vue {
     render() {
         return;
@@ -197,6 +268,17 @@ const NodesPlugin = {
         Vue$$1.component(NodesPlugin.name, NodesDirective);
     }
 };
+/**
+ * `e-node` directive represent a nodes of the vue diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-nodes>
+ * <e-node></e-node>
+ * </e-nodes>
+ * </ejs-diagram>
+ * ```
+ */
 let NodeDirective = class NodeDirective extends Vue {
     render() {
         return;
@@ -220,6 +302,12 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
 };
 const properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 const modelProps = [];
+/**
+ * Represents vue Diagram Component
+ * ```html
+ * <ejs-diagram></ejs-diagram>
+ * ```
+ */
 let DiagramComponent = class DiagramComponent extends ComponentBase {
     constructor() {
         super();
@@ -237,6 +325,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     }
     add(obj, group) {
         return this.ej2Instances.add(obj, group);
+    }
+    addConstraints(constraintsType, constraintsValue) {
+        return this.ej2Instances.addConstraints(constraintsType, constraintsValue);
     }
     addHistoryEntry(entry) {
         return this.ej2Instances.addHistoryEntry(entry);
@@ -283,9 +374,6 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     copy() {
         return this.ej2Instances.copy();
     }
-    createSvg(id, width, height) {
-        return this.ej2Instances.createSvg(id, width, height);
-    }
     cut() {
         return this.ej2Instances.cut();
     }
@@ -331,9 +419,6 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     getCursor(action, active) {
         return this.ej2Instances.getCursor(action, active);
     }
-    getEndNodeWrapper(node, connector, source) {
-        return this.ej2Instances.getEndNodeWrapper(node, connector, source);
-    }
     getObject(name) {
         return this.ej2Instances.getObject(name);
     }
@@ -342,9 +427,6 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     }
     group() {
         return this.ej2Instances.group();
-    }
-    initLayerObjects() {
-        return this.ej2Instances.initLayerObjects();
     }
     loadDiagram(data) {
         return this.ej2Instances.loadDiagram(data);
@@ -373,8 +455,8 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     remove(obj) {
         return this.ej2Instances.remove(obj);
     }
-    removeElements(currentObj) {
-        return this.ej2Instances.removeElements(currentObj);
+    removeConstraints(constraintsType, constraintsValue) {
+        return this.ej2Instances.removeConstraints(constraintsType, constraintsValue);
     }
     removeLabels(obj, labels) {
         return this.ej2Instances.removeLabels(obj, labels);
@@ -382,17 +464,11 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     removeLayer(layerId) {
         return this.ej2Instances.removeLayer(layerId);
     }
-    removeObjectsFromLayer(obj) {
-        return this.ej2Instances.removeObjectsFromLayer(obj);
-    }
     removePorts(obj, ports) {
         return this.ej2Instances.removePorts(obj, ports);
     }
     removeProcess(id) {
         return this.ej2Instances.removeProcess(id);
-    }
-    renderSelectorForAnnotation(selectorModel, selectorElement) {
-        return this.ej2Instances.renderSelectorForAnnotation(selectorModel, selectorElement);
     }
     reset() {
         return this.ej2Instances.reset();
@@ -442,14 +518,8 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     undo() {
         return this.ej2Instances.undo();
     }
-    updateConnectorEdges(actualObject) {
-        return this.ej2Instances.updateConnectorEdges(actualObject);
-    }
     updateViewPort() {
         return this.ej2Instances.updateViewPort();
-    }
-    updateVirtualObjects(collection, remove, tCollection) {
-        return this.ej2Instances.updateVirtualObjects(collection, remove, tCollection);
     }
     zoom(factor, focusedPoint) {
         return this.ej2Instances.zoom(factor, focusedPoint);
@@ -502,6 +572,13 @@ const PalettesPlugin = {
         Vue$$1.component(PalettesPlugin.name, PalettesDirective);
     }
 };
+/**
+ * `Palette` directive represent a axis palette of the vue SymbolPalette.
+ * It must be contained in a SymbolPalette component(`SymbolPaletteComponent`).
+ * ```html
+ * <e-palettes><e-palette></e-palette><e-palettes>
+ * ```
+ */
 let PaletteDirective = class PaletteDirective extends Vue {
     render() {
         return;
@@ -525,6 +602,12 @@ var __decorate$8 = (undefined && undefined.__decorate) || function (decorators, 
 };
 const properties$1 = ['accessKey', 'allowDrag', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSearch', 'expandMode', 'filterSymbols', 'getConnectorDefaults', 'getNodeDefaults', 'getSymbolInfo', 'getSymbolTemplate', 'height', 'locale', 'palettes', 'symbolHeight', 'symbolMargin', 'symbolPreview', 'symbolWidth', 'width', 'paletteSelectionChange'];
 const modelProps$1 = [];
+/**
+ * Represents vue SymbolPalette Component
+ * ```html
+ * <ej-symbol-palette></ej-symbol-palette>
+ * ```
+ */
 let SymbolPaletteComponent = class SymbolPaletteComponent extends ComponentBase {
     constructor() {
         super();
@@ -569,6 +652,12 @@ var __decorate$9 = (undefined && undefined.__decorate) || function (decorators, 
 };
 const properties$2 = ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width', 'created'];
 const modelProps$2 = [];
+/**
+ * Represents vue Overview Component
+ * ```html
+ * <ej-overview></ej-overview>
+ * ```
+ */
 let OverviewComponent = class OverviewComponent extends ComponentBase {
     constructor() {
         super();

@@ -7,7 +7,12 @@ import { PalettesDirective, PaletteDirective, PalettesPlugin, PalettePlugin } fr
 export const properties: string[] = ['accessKey', 'allowDrag', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSearch', 'expandMode', 'filterSymbols', 'getConnectorDefaults', 'getNodeDefaults', 'getSymbolInfo', 'getSymbolTemplate', 'height', 'locale', 'palettes', 'symbolHeight', 'symbolMargin', 'symbolPreview', 'symbolWidth', 'width', 'paletteSelectionChange'];
 export const modelProps: string[] = [];
 
-
+/**
+ * Represents vue SymbolPalette Component
+ * ```html
+ * <ej-symbol-palette></ej-symbol-palette>
+ * ```
+ */
 @EJComponentDecorator({
     props: properties
 })

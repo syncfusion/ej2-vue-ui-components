@@ -57,9 +57,6 @@ let ListViewComponent = class ListViewComponent extends ComponentBase {
     hideItem(obj) {
         return this.ej2Instances.hideItem(obj);
     }
-    refreshItemHeight() {
-        return this.ej2Instances.refreshItemHeight();
-    }
     removeItem(obj) {
         return this.ej2Instances.removeItem(obj);
     }

@@ -14,7 +14,18 @@ export const LayersPlugin = {
     }
 }
 
-
+/**
+ * `e-layers` directive represent a layers of the vue diagram. 
+ * It must be contained in a Diagram component(`ejs-diagram`). 
+ * ```vue
+ * <ejs-diagram>
+ * <e-layers>
+ * <e-layer>
+ * </e-layers>
+ * </e-layers>
+</ejs-diagram>
+ * ```
+ */
 @EJComponentDecorator({})
 export class LayerDirective extends Vue {
     public render(): void {

@@ -14,7 +14,17 @@ export const ConnectorsPlugin = {
     }
 }
 
-
+/**
+ * `e-connectors` directive represent a connectors of the vue diagram. 
+ * It must be contained in a Diagram component(`ejs-diagram`). 
+ * ```html
+ * <ejs-diagram>
+ * <e-connectors>
+ * <e-connector></e-connector>
+ * </e-connectors>
+ * </ejs-diagram>
+ * ```
+ */
 @EJComponentDecorator({})
 export class ConnectorDirective extends Vue {
     public render(): void {

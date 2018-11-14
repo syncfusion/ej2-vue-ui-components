@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-richtexteditor",
-	"version": "16.3.27",
+	"version": "16.3.30",
 	"description": "Essential JS 2 RichTextEditor component for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -20,7 +20,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/syncfusion/ej2-vue-richtexteditor.git"
+		"url": "https://github.com/syncfusion/ej2-vue-ui-components.git"
 	},
 	"main": "./dist/ej2-vue-richtexteditor.umd.min.js",
 	"module": "./index.js",

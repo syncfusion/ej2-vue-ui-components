@@ -33,8 +33,8 @@ let HeatMapComponent = class HeatMapComponent extends ComponentBase {
     heatMapMouseClick(e) {
         return this.ej2Instances.heatMapMouseClick(e);
     }
-    refresh() {
-        return this.ej2Instances.refresh();
+    removeSvg() {
+        return this.ej2Instances.removeSvg();
     }
 };
 HeatMapComponent = __decorate([

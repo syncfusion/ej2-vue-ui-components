@@ -12,7 +12,12 @@ import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.
 export const properties: string[] = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
-
+/**
+ * Represents vue Diagram Component
+ * ```html
+ * <ejs-diagram></ejs-diagram>
+ * ```
+ */
 @EJComponentDecorator({
     props: properties
 })
@@ -38,6 +43,10 @@ export class DiagramComponent extends ComponentBase {
     
     public add(obj: Object | Object, group?: boolean): undefined {
         return this.ej2Instances.add(obj, group);
+    }
+
+    public addConstraints(constraintsType: number, constraintsValue: number): number {
+        return this.ej2Instances.addConstraints(constraintsType, constraintsValue);
     }
 
     public addHistoryEntry(entry: Object): void {
@@ -100,10 +109,6 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.copy();
     }
 
-    public createSvg(id: string, width: string | Object, height: string | Object): Object {
-        return this.ej2Instances.createSvg(id, width, height);
-    }
-
     public cut(): void {
         return this.ej2Instances.cut();
     }
@@ -164,10 +169,6 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.getCursor(action, active);
     }
 
-    public getEndNodeWrapper(node: Object, connector: Object, source: boolean): Object {
-        return this.ej2Instances.getEndNodeWrapper(node, connector, source);
-    }
-
     public getObject(name: string): Object {
         return this.ej2Instances.getObject(name);
     }
@@ -178,10 +179,6 @@ export class DiagramComponent extends ComponentBase {
 
     public group(): void {
         return this.ej2Instances.group();
-    }
-
-    public initLayerObjects(): void {
-        return this.ej2Instances.initLayerObjects();
     }
 
     public loadDiagram(data: string): Object {
@@ -220,8 +217,8 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.remove(obj);
     }
 
-    public removeElements(currentObj: Object | Object): void {
-        return this.ej2Instances.removeElements(currentObj);
+    public removeConstraints(constraintsType: number, constraintsValue: number): number {
+        return this.ej2Instances.removeConstraints(constraintsType, constraintsValue);
     }
 
     public removeLabels(obj: Object | Object, labels: Object[] | Object[]): void {
@@ -232,20 +229,12 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.removeLayer(layerId);
     }
 
-    public removeObjectsFromLayer(obj: Object | Object): void {
-        return this.ej2Instances.removeObjectsFromLayer(obj);
-    }
-
     public removePorts(obj: Object, ports: Object[]): void {
         return this.ej2Instances.removePorts(obj, ports);
     }
 
     public removeProcess(id: string): void {
         return this.ej2Instances.removeProcess(id);
-    }
-
-    public renderSelectorForAnnotation(selectorModel: Object, selectorElement: Object | Object): void {
-        return this.ej2Instances.renderSelectorForAnnotation(selectorModel, selectorElement);
     }
 
     public reset(): void {
@@ -312,16 +301,8 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.undo();
     }
 
-    public updateConnectorEdges(actualObject: Object): void {
-        return this.ej2Instances.updateConnectorEdges(actualObject);
-    }
-
     public updateViewPort(): void {
         return this.ej2Instances.updateViewPort();
-    }
-
-    public updateVirtualObjects(collection: string[], remove: boolean, tCollection?: string[]): void {
-        return this.ej2Instances.updateVirtualObjects(collection, remove, tCollection);
     }
 
     public zoom(factor: number, focusedPoint?: Object): void {

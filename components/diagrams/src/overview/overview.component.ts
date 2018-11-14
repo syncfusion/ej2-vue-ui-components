@@ -6,7 +6,12 @@ import { Overview } from '@syncfusion/ej2-diagrams';
 export const properties: string[] = ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width', 'created'];
 export const modelProps: string[] = [];
 
-
+/**
+ * Represents vue Overview Component
+ * ```html
+ * <ej-overview></ej-overview>
+ * ```
+ */
 @EJComponentDecorator({
     props: properties
 })
