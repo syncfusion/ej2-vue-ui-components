@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 16.3.33 (2018-11-15)
+
+### Common
+
+#### Bug Fixes
+
+- Fixed the  provider accessing issue  when provider is specified in decorator in the typescript format.
+
 ## 16.3.31 (2018-11-07)
 
 ### Common

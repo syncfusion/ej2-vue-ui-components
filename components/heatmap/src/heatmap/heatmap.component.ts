@@ -39,8 +39,8 @@ export class HeatMapComponent extends ComponentBase {
         return this.ej2Instances.heatMapMouseClick(e);
     }
 
-    public removeSvg(): void {
-        return this.ej2Instances.removeSvg();
+    public refresh(): void {
+        return this.ej2Instances.refresh();
     }
 }
 

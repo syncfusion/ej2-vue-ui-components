@@ -4,7 +4,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { TextBox } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['blur', 'change', 'focus', 'input', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'placeholder', 'readonly', 'showClearButton', 'type', 'value', 'created', 'destroyed'];
+export const properties: string[] = ['cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'placeholder', 'readonly', 'showClearButton', 'type', 'value', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
 export const modelProps: string[] = ['value'];
 
 /**

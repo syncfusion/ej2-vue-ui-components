@@ -47,19 +47,19 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.checkAllItems();
     }
 
-    public checkItem(item: Object | Object): void {
+    public checkItem(item: Object | Object | Object): void {
         return this.ej2Instances.checkItem(item);
     }
 
-    public disableItem(obj: Object | Object): void {
+    public disableItem(obj: Object | Object | Object): void {
         return this.ej2Instances.disableItem(obj);
     }
 
-    public enableItem(obj: Object | Object): void {
+    public enableItem(obj: Object | Object | Object): void {
         return this.ej2Instances.enableItem(obj);
     }
 
-    public findItem(obj: Object | Object): Object {
+    public findItem(obj: Object | Object | Object): Object {
         return this.ej2Instances.findItem(obj);
     }
 
@@ -67,15 +67,19 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.getSelectedItems();
     }
 
-    public hideItem(obj: Object | Object): void {
+    public hideItem(obj: Object | Object | Object): void {
         return this.ej2Instances.hideItem(obj);
     }
 
-    public removeItem(obj: Object | Object): void {
+    public refreshItemHeight(): void {
+        return this.ej2Instances.refreshItemHeight();
+    }
+
+    public removeItem(obj: Object | Object | Object): void {
         return this.ej2Instances.removeItem(obj);
     }
 
-    public removeMultipleItems(obj: Object[] | Object[]): void {
+    public removeMultipleItems(obj: Object[] | Object[] | Object[]): void {
         return this.ej2Instances.removeMultipleItems(obj);
     }
 
@@ -83,15 +87,15 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.requiredModules();
     }
 
-    public selectItem(obj: Object | Object): void {
+    public selectItem(obj: Object | Object | Object): void {
         return this.ej2Instances.selectItem(obj);
     }
 
-    public selectMultipleItems(obj: Object[] | Object[]): void {
+    public selectMultipleItems(obj: Object[] | Object[] | Object[]): void {
         return this.ej2Instances.selectMultipleItems(obj);
     }
 
-    public showItem(obj: Object | Object): void {
+    public showItem(obj: Object | Object | Object): void {
         return this.ej2Instances.showItem(obj);
     }
 
@@ -99,7 +103,7 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.uncheckAllItems();
     }
 
-    public uncheckItem(item: Object | Object): void {
+    public uncheckItem(item: Object | Object | Object): void {
         return this.ej2Instances.uncheckItem(item);
     }
 }

@@ -50,7 +50,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
             var injectables = provide;
             if (typeof provide === 'function') {
                 // tslint:disable:no-any
-                injectables = this.$vnode.context.$options.provide();
+                injectables = this.$vnode.context.$options.provide.bind(this.$vnode.context)();
             }
             ret = injectables[this.ej2Instances.getModuleName()] || [];
         }
