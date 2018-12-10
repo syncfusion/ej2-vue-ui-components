@@ -4,7 +4,7 @@ import { Uploader } from '@syncfusion/ej2-inputs';
 import { FilesDirective, UploadedFilesDirective, FilesPlugin, UploadedFilesPlugin } from './files.directive'
 
 
-export const properties: string[] = ['allowedExtensions', 'asyncSettings', 'autoUpload', 'buttons', 'directoryUpload', 'dropArea', 'enablePersistence', 'enableRtl', 'enabled', 'files', 'locale', 'maxFileSize', 'minFileSize', 'multiple', 'showFileList', 'template', 'canceling', 'change', 'chunkFailure', 'chunkSuccess', 'clearing', 'created', 'failure', 'pausing', 'progress', 'removing', 'resuming', 'selected', 'success', 'uploading'];
+export const properties: string[] = ['allowedExtensions', 'asyncSettings', 'autoUpload', 'buttons', 'directoryUpload', 'dropArea', 'enablePersistence', 'enableRtl', 'enabled', 'files', 'locale', 'maxFileSize', 'minFileSize', 'multiple', 'sequentialUpload', 'showFileList', 'template', 'canceling', 'change', 'chunkFailure', 'chunkSuccess', 'chunkUploading', 'clearing', 'created', 'failure', 'pausing', 'progress', 'removing', 'resuming', 'selected', 'success', 'uploading'];
 export const modelProps: string[] = [];
 
 /**

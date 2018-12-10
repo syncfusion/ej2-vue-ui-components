@@ -224,6 +224,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     adjustEventWrapper() {
         return this.ej2Instances.adjustEventWrapper();
     }
+    boundaryValidation(pageY, pageX) {
+        return this.ej2Instances.boundaryValidation(pageY, pageX);
+    }
     changeDate(selectedDate, event) {
         return this.ej2Instances.changeDate(selectedDate, event);
     }
@@ -338,11 +341,14 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     isSlotAvailable(startTime, endTime, groupIndex) {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
     }
-    openEditor(data, action, isEventData) {
-        return this.ej2Instances.openEditor(data, action, isEventData);
+    openEditor(data, action, isEventData, repeatType) {
+        return this.ej2Instances.openEditor(data, action, isEventData, repeatType);
     }
     refreshEvents() {
         return this.ej2Instances.refreshEvents();
+    }
+    removeNewEventElement() {
+        return this.ej2Instances.removeNewEventElement();
     }
     removeResource(resourceId, name) {
         return this.ej2Instances.removeResource(resourceId, name);

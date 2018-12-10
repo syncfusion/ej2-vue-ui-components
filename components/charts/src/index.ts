@@ -21,3 +21,13 @@ export { RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSetting
 export { SparklineComponent, SparklinePlugin } from './sparkline/sparkline.component';
 export { SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin } from './smithchart/series.directive';
 export { SmithchartComponent, SmithchartPlugin } from './smithchart/smithchart.component';
+export { StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin } from './stock-chart/trendlines.directive';
+export { StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin } from './stock-chart/series.directive';
+export { StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin } from './stock-chart/striplines.directive';
+export { StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin } from './stock-chart/axes.directive';
+export { StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin } from './stock-chart/rows.directive';
+export { StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin } from './stock-chart/annotations.directive';
+export { StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin } from './stock-chart/selecteddataindexes.directive';
+export { StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin } from './stock-chart/periods.directive';
+export { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin } from './stock-chart/indicators.directive';
+export { StockChartComponent, StockChartPlugin } from './stock-chart/stockchart.component';

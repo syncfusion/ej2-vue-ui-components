@@ -121,6 +121,10 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.mouseEndOnMap(e);
     }
 
+    public mouseLeaveOnMap(e: Object): void {
+        return this.ej2Instances.mouseLeaveOnMap(e);
+    }
+
     public mouseMoveOnMap(e: Object): void {
         return this.ej2Instances.mouseMoveOnMap(e);
     }

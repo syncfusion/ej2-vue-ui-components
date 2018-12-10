@@ -98,6 +98,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.adjustEventWrapper();
     }
 
+    public boundaryValidation(pageY: number, pageX: number): Object {
+        return this.ej2Instances.boundaryValidation(pageY, pageX);
+    }
+
     public changeDate(selectedDate: Object, event?: Object): void {
         return this.ej2Instances.changeDate(selectedDate, event);
     }
@@ -250,12 +254,16 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
     }
 
-    public openEditor(data: Object, action: Object, isEventData?: boolean): void {
-        return this.ej2Instances.openEditor(data, action, isEventData);
+    public openEditor(data: Object, action: Object, isEventData?: boolean, repeatType?: number): void {
+        return this.ej2Instances.openEditor(data, action, isEventData, repeatType);
     }
 
     public refreshEvents(): void {
         return this.ej2Instances.refreshEvents();
+    }
+
+    public removeNewEventElement(): void {
+        return this.ej2Instances.removeNewEventElement();
     }
 
     public removeResource(resourceId: string | number, name: string): void {

@@ -4,7 +4,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { PivotView } from '@syncfusion/ej2-pivotview';
 
 
-export const properties: string[] = ['allowCalculatedField', 'allowConditionalFormatting', 'allowExcelExport', 'allowPdfExport', 'currencyCode', 'dataSource', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'gridSettings', 'groupingBarSettings', 'height', 'locale', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showValuesButton', 'width', 'beforeExport', 'cellClick', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+export const properties: string[] = ['allowCalculatedField', 'allowConditionalFormatting', 'allowDeferLayoutUpdate', 'allowDrillThrough', 'allowExcelExport', 'allowPdfExport', 'currencyCode', 'dataSource', 'editSettings', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'gridSettings', 'groupingBarSettings', 'height', 'hyperlinkSettings', 'locale', 'maxNodeLimitInMemberEditor', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showTooltip', 'showValuesButton', 'width', 'beforeExport', 'cellClick', 'cellSelected', 'created', 'dataBound', 'destroyed', 'drillThrough', 'enginePopulated', 'enginePopulating', 'hyperlinkCellClick', 'load', 'onFieldDropped'];
 export const modelProps: string[] = ['datasource'];
 
 /**
@@ -89,6 +89,14 @@ export class PivotViewComponent extends ComponentBase {
 
     public pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): void {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
+    }
+
+    public setCommonColumnsWidth(columns: Object[], width: number): void {
+        return this.ej2Instances.setCommonColumnsWidth(columns, width);
+    }
+
+    public triggerColumnRenderEvent(gridcolumns: Object[]): void {
+        return this.ej2Instances.triggerColumnRenderEvent(gridcolumns);
     }
 }
 

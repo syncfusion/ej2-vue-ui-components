@@ -1,6 +1,7 @@
-import { Button, CheckBox, RadioButton, Switch } from '@syncfusion/ej2-buttons';
+import { Button, CheckBox, ChipList, RadioButton, Switch } from '@syncfusion/ej2-buttons';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { isUndefined } from '@syncfusion/ej2-base';
+import Vue from 'vue';
 
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -39,8 +40,8 @@ ButtonComponent = __decorate([
 ], ButtonComponent);
 const ButtonPlugin = {
     name: 'ejs-button',
-    install(Vue) {
-        Vue.component(ButtonPlugin.name, ButtonComponent);
+    install(Vue$$1) {
+        Vue$$1.component(ButtonPlugin.name, ButtonComponent);
     }
 };
 
@@ -123,8 +124,8 @@ CheckBoxComponent = __decorate$1([
 ], CheckBoxComponent);
 const CheckBoxPlugin = {
     name: 'ejs-checkbox',
-    install(Vue) {
-        Vue.component(CheckBoxPlugin.name, CheckBoxComponent);
+    install(Vue$$1) {
+        Vue$$1.component(CheckBoxPlugin.name, CheckBoxComponent);
     }
 };
 
@@ -207,8 +208,8 @@ RadioButtonComponent = __decorate$2([
 ], RadioButtonComponent);
 const RadioButtonPlugin = {
     name: 'ejs-radiobutton',
-    install(Vue) {
-        Vue.component(RadioButtonPlugin.name, RadioButtonComponent);
+    install(Vue$$1) {
+        Vue$$1.component(RadioButtonPlugin.name, RadioButtonComponent);
     }
 };
 
@@ -294,11 +295,116 @@ SwitchComponent = __decorate$3([
 ], SwitchComponent);
 const SwitchPlugin = {
     name: 'ejs-switch',
-    install(Vue) {
-        Vue.component(SwitchPlugin.name, SwitchComponent);
+    install(Vue$$1) {
+        Vue$$1.component(SwitchPlugin.name, SwitchComponent);
     }
 };
 
-export { ButtonComponent, ButtonPlugin, CheckBoxComponent, CheckBoxPlugin, RadioButtonComponent, RadioButtonPlugin, SwitchComponent, SwitchPlugin };
+var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let ChipsDirective = class ChipsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+ChipsDirective = __decorate$4([
+    EJComponentDecorator({})
+], ChipsDirective);
+const ChipsPlugin = {
+    name: 'e-chips',
+    install(Vue$$1) {
+        Vue$$1.component(ChipsPlugin.name, ChipsDirective);
+    }
+};
+/**
+ * `e-chip` directive represent a chip of the Vue ChipList.
+ * ```html
+ * <ejs-chiplist >
+ *   <e-chips>
+ *    <e-chip text='chip1'></e-chip>
+ *    <e-chip text='chip2'></e-chip>
+ *   </e-chips>
+ * </ejs-chiplist>
+ * ```
+ */
+let ChipDirective = class ChipDirective extends Vue {
+    render() {
+        return;
+    }
+};
+ChipDirective = __decorate$4([
+    EJComponentDecorator({})
+], ChipDirective);
+const ChipPlugin = {
+    name: 'e-chip',
+    install(Vue$$1) {
+        Vue$$1.component(ChipPlugin.name, ChipDirective);
+    }
+};
+
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties$4 = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'click', 'created', 'delete'];
+const modelProps$4 = [];
+/**
+ * Represents the Essential JS 2 VueJS ChipList Component.
+ * ```html
+ * <ejs-chiplist></ejs-chiplist>
+ * ```
+ */
+let ChipListComponent = class ChipListComponent extends ComponentBase {
+    constructor() {
+        super();
+        this.propKeys = properties$4;
+        this.models = modelProps$4;
+        this.hasChildDirective = true;
+        this.hasInjectedModules = false;
+        this.tagMapper = { "e-chips": "e-chip" };
+        this.tagNameMapper = {};
+        this.ej2Instances = new ChipList({});
+        this.bindProperties();
+    }
+    render(createElement) {
+        return createElement('div', this.$slots.default);
+    }
+    add(chipsData) {
+        return this.ej2Instances.add(chipsData);
+    }
+    find(fields) {
+        return this.ej2Instances.find(fields);
+    }
+    getSelectedChips() {
+        return this.ej2Instances.getSelectedChips();
+    }
+    remove(fields) {
+        return this.ej2Instances.remove(fields);
+    }
+    select(fields) {
+        return this.ej2Instances.select(fields);
+    }
+};
+ChipListComponent = __decorate$5([
+    EJComponentDecorator({
+        props: properties$4
+    })
+], ChipListComponent);
+const ChipListPlugin = {
+    name: 'ejs-chiplist',
+    install(Vue$$1) {
+        Vue$$1.component(ChipListPlugin.name, ChipListComponent);
+        Vue$$1.component(ChipPlugin.name, ChipDirective);
+        Vue$$1.component(ChipsPlugin.name, ChipsDirective);
+    }
+};
+
+export { ButtonComponent, ButtonPlugin, CheckBoxComponent, CheckBoxPlugin, RadioButtonComponent, RadioButtonPlugin, SwitchComponent, SwitchPlugin, ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin, ChipListComponent, ChipListPlugin };
 export * from '@syncfusion/ej2-buttons';
 //# sourceMappingURL=ej2-vue-buttons.es2015.js.map

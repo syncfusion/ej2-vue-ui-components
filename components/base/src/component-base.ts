@@ -34,7 +34,7 @@ export class ComponentBase extends Vue {
             let injectables: any = provide;
             if (typeof provide === 'function') {
                 // tslint:disable:no-any
-                injectables = (this.$vnode.context.$options.provide as any).bind(this.$vnode.context)();
+                injectables = (this.$vnode.context.$options.provide as any)();
             }
             ret = injectables[this.ej2Instances.getModuleName()] || [];
         }

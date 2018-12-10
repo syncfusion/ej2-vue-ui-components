@@ -20,7 +20,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['cellSettings', 'dataSource', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'created', 'load', 'tooltipRender'];
+var properties = ['cellSelected', 'allowSelection', 'cellSettings', 'dataSource', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellRender', 'created', 'load', 'tooltipRender'];
 var modelProps = [];
 /**
  * Represents Vuejs HeatMap Component
@@ -45,11 +45,17 @@ var HeatMapComponent = /** @__PURE__ @class */ (function (_super) {
     HeatMapComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    HeatMapComponent.prototype.clearSelection = function () {
+        return this.ej2Instances.clearSelection();
+    };
     HeatMapComponent.prototype.heatMapMouseClick = function (e) {
         return this.ej2Instances.heatMapMouseClick(e);
     };
     HeatMapComponent.prototype.refresh = function () {
         return this.ej2Instances.refresh();
+    };
+    HeatMapComponent.prototype.refreshBound = function () {
+        return this.ej2Instances.refreshBound();
     };
     HeatMapComponent = __decorate([
         EJComponentDecorator({

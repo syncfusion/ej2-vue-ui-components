@@ -142,8 +142,8 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
     setPlaceHolder() {
         return this.ej2Instances.setPlaceHolder();
     }
-    setReadOnly() {
-        return this.ej2Instances.setReadOnly();
+    setReadOnly(initial) {
+        return this.ej2Instances.setReadOnly(initial);
     }
     showFullScreen() {
         return this.ej2Instances.showFullScreen();

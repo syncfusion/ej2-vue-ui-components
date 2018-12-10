@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { setTemplateEngine, getTemplateEngine, getUniqueID, createElement, detach } from "@syncfusion/ej2-base";
+import { setTemplateEngine, getTemplateEngine, getUniqueID, createElement, detach, extend } from "@syncfusion/ej2-base";
 
 // tslint:disable:no-any
 let stringCompiler: (template: string, helper?: object) => (data: Object | JSON) => string = getTemplateEngine();
@@ -19,7 +19,7 @@ export function compile(templateElement: any, helper?: Object):
             let tempObj: any = templateElement.call(that, {});
 
             let templateVue: any = new Vue(tempObj.template);
-            templateVue.$data.data = data || {};
+            templateVue.$data.data = extend(tempObj.data, data);
             templateVue.$mount('#' + id);
             
             let returnEle: any = ele.childNodes;

@@ -4,7 +4,7 @@ import { TreeMap } from '@syncfusion/ej2-treemap';
 import { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin } from './levels.directive'
 
 
-export const properties: string[] = ['background', 'border', 'dataSource', 'description', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'load', 'loaded', 'mouseMove', 'resize', 'tooltipRendering'];
+export const properties: string[] = ['background', 'border', 'colorValuePath', 'dataSource', 'description', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'load', 'loaded', 'mouseMove', 'resize', 'tooltipRendering'];
 export const modelProps: string[] = [];
 
 /**

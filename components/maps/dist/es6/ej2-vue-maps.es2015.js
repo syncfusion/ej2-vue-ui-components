@@ -388,6 +388,9 @@ let MapsComponent = class MapsComponent extends ComponentBase {
     mouseEndOnMap(e) {
         return this.ej2Instances.mouseEndOnMap(e);
     }
+    mouseLeaveOnMap(e) {
+        return this.ej2Instances.mouseLeaveOnMap(e);
+    }
     mouseMoveOnMap(e) {
         return this.ej2Instances.mouseMoveOnMap(e);
     }

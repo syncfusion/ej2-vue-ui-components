@@ -3,9 +3,12 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -18,7 +21,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['allowCalculatedField', 'allowConditionalFormatting', 'allowExcelExport', 'allowPdfExport', 'currencyCode', 'dataSource', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'gridSettings', 'groupingBarSettings', 'height', 'locale', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showValuesButton', 'width', 'beforeExport', 'cellClick', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+var properties = ['allowCalculatedField', 'allowConditionalFormatting', 'allowDeferLayoutUpdate', 'allowDrillThrough', 'allowExcelExport', 'allowPdfExport', 'currencyCode', 'dataSource', 'editSettings', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'gridSettings', 'groupingBarSettings', 'height', 'hyperlinkSettings', 'locale', 'maxNodeLimitInMemberEditor', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showTooltip', 'showValuesButton', 'width', 'beforeExport', 'cellClick', 'cellSelected', 'created', 'dataBound', 'destroyed', 'drillThrough', 'enginePopulated', 'enginePopulating', 'hyperlinkCellClick', 'load', 'onFieldDropped'];
 var modelProps = ['datasource'];
 /**
  * `ejs-pivotview` represents the VueJS PivotView Component.
@@ -92,6 +95,12 @@ var PivotViewComponent = /** @__PURE__ @class */ (function (_super) {
     PivotViewComponent.prototype.pdfExport = function (pdfExportProperties, isMultipleExport, pdfDoc, isBlob) {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
     };
+    PivotViewComponent.prototype.setCommonColumnsWidth = function (columns, width) {
+        return this.ej2Instances.setCommonColumnsWidth(columns, width);
+    };
+    PivotViewComponent.prototype.triggerColumnRenderEvent = function (gridcolumns) {
+        return this.ej2Instances.triggerColumnRenderEvent(gridcolumns);
+    };
     PivotViewComponent = __decorate([
         EJComponentDecorator({
             props: properties,
@@ -110,9 +119,12 @@ var PivotViewPlugin = {
 };
 
 var __extends$1 = (undefined && undefined.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -125,7 +137,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$1 = ['allowCalculatedField', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'locale', 'renderMode', 'showValuesButton', 'target', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+var properties$1 = ['allowCalculatedField', 'allowDeferLayoutUpdate', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'locale', 'maxNodeLimitInMemberEditor', 'renderMode', 'showValuesButton', 'target', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
 var modelProps$1 = [];
 /**
  * `ejs-pivotfieldlist` represents the VueJS PivotFieldList Component.

@@ -79,6 +79,10 @@ export class SliderComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public reposition(): void {
+        return this.ej2Instances.reposition();
+    }
+
     public setTooltip(): void {
         return this.ej2Instances.setTooltip();
     }

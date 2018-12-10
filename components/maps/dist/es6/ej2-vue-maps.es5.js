@@ -542,6 +542,9 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
     MapsComponent.prototype.mouseEndOnMap = function (e) {
         return this.ej2Instances.mouseEndOnMap(e);
     };
+    MapsComponent.prototype.mouseLeaveOnMap = function (e) {
+        return this.ej2Instances.mouseLeaveOnMap(e);
+    };
     MapsComponent.prototype.mouseMoveOnMap = function (e) {
         return this.ej2Instances.mouseMoveOnMap(e);
     };

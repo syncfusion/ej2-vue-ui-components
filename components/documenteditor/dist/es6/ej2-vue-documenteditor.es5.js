@@ -1,4 +1,4 @@
-import { DocumentEditor } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditor, DocumentEditorContainer } from '@syncfusion/ej2-documenteditor';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 var __extends = (undefined && undefined.__extends) || (function () {
@@ -104,6 +104,64 @@ var DocumentEditorPlugin = {
     }
 };
 
-export { DocumentEditorComponent, DocumentEditorPlugin };
+var __extends$1 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var properties$1 = ['enableLocalPaste', 'enablePersistence', 'enableRtl', 'enableToolbar', 'locale', 'restrictEditing', 'serviceUrl', 'showPropertiesPane', 'created', 'destroyed'];
+var modelProps$1 = [];
+/**
+ * Represents the Essential JS 2 VueJS Document Editor Container
+ * ```html
+ * <ejs-documenteditor-container id='container'></ejs-documenteditor-container>
+ * ```
+ */
+var DocumentEditorContainerComponent = /** @__PURE__ @class */ (function (_super) {
+    __extends$1(DocumentEditorContainerComponent, _super);
+    function DocumentEditorContainerComponent() {
+        var _this = _super.call(this) || this;
+        _this.propKeys = properties$1;
+        _this.models = modelProps$1;
+        _this.hasChildDirective = false;
+        _this.hasInjectedModules = true;
+        _this.tagMapper = {};
+        _this.tagNameMapper = {};
+        _this.ej2Instances = new DocumentEditorContainer({});
+        _this.bindProperties();
+        return _this;
+    }
+    DocumentEditorContainerComponent.prototype.render = function (createElement) {
+        return createElement('div', this.$slots.default);
+    };
+    DocumentEditorContainerComponent = __decorate$1([
+        EJComponentDecorator({
+            props: properties$1
+        })
+    ], DocumentEditorContainerComponent);
+    return DocumentEditorContainerComponent;
+}(ComponentBase));
+var DocumentEditorContainerPlugin = {
+    name: 'ejs-documenteditorcontainer',
+    install: function (Vue) {
+        Vue.component(DocumentEditorContainerPlugin.name, DocumentEditorContainerComponent);
+    }
+};
+
+export { DocumentEditorComponent, DocumentEditorPlugin, DocumentEditorContainerComponent, DocumentEditorContainerPlugin };
 export * from '@syncfusion/ej2-documenteditor';
 //# sourceMappingURL=ej2-vue-documenteditor.es5.js.map

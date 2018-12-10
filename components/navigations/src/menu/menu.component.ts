@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Menu } from '@syncfusion/ej2-navigations';
 
 
-export const properties: string[] = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+export const properties: string[] = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 export const modelProps: string[] = [];
 
 /**

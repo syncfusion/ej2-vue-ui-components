@@ -7,7 +7,12 @@ import { RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective,
 export const properties: string[] = ['allowSnapping', 'animationDuration', 'dataSource', 'disableRangeSelector', 'enableDeferredUpdate', 'enableGrouping', 'enablePersistence', 'enableRtl', 'groupBy', 'height', 'interval', 'intervalType', 'labelFormat', 'labelIntersectAction', 'labelPosition', 'labelStyle', 'locale', 'logBase', 'majorGridLines', 'majorTickLines', 'margin', 'maximum', 'minimum', 'navigatorBorder', 'navigatorStyleSettings', 'periodSelectorSettings', 'query', 'secondaryLabelAlignment', 'series', 'skeleton', 'skeletonType', 'theme', 'tickPosition', 'tooltip', 'useGroupingSeparator', 'value', 'valueType', 'width', 'xName', 'yName', 'beforePrint', 'changed', 'labelRender', 'load', 'loaded', 'resized', 'selectorRender', 'tooltipRender'];
 export const modelProps: string[] = [];
 
-
+/**
+ * Represents Vuejs RangeNavigator Component
+ * ```vue
+ * <ejs-rangenavigator></ejs-rangenavigator>
+ * ```
+ */
 @EJComponentDecorator({
     props: properties
 })

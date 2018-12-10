@@ -8,7 +8,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['allowCalculatedField', 'allowConditionalFormatting', 'allowExcelExport', 'allowPdfExport', 'currencyCode', 'dataSource', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'gridSettings', 'groupingBarSettings', 'height', 'locale', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showValuesButton', 'width', 'beforeExport', 'cellClick', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+const properties = ['allowCalculatedField', 'allowConditionalFormatting', 'allowDeferLayoutUpdate', 'allowDrillThrough', 'allowExcelExport', 'allowPdfExport', 'currencyCode', 'dataSource', 'editSettings', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'gridSettings', 'groupingBarSettings', 'height', 'hyperlinkSettings', 'locale', 'maxNodeLimitInMemberEditor', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showTooltip', 'showValuesButton', 'width', 'beforeExport', 'cellClick', 'cellSelected', 'created', 'dataBound', 'destroyed', 'drillThrough', 'enginePopulated', 'enginePopulating', 'hyperlinkCellClick', 'load', 'onFieldDropped'];
 const modelProps = ['datasource'];
 /**
  * `ejs-pivotview` represents the VueJS PivotView Component.
@@ -79,6 +79,12 @@ let PivotViewComponent = class PivotViewComponent extends ComponentBase {
     pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob) {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
     }
+    setCommonColumnsWidth(columns, width) {
+        return this.ej2Instances.setCommonColumnsWidth(columns, width);
+    }
+    triggerColumnRenderEvent(gridcolumns) {
+        return this.ej2Instances.triggerColumnRenderEvent(gridcolumns);
+    }
 };
 PivotViewComponent = __decorate([
     EJComponentDecorator({
@@ -101,7 +107,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['allowCalculatedField', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'locale', 'renderMode', 'showValuesButton', 'target', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+const properties$1 = ['allowCalculatedField', 'allowDeferLayoutUpdate', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'locale', 'maxNodeLimitInMemberEditor', 'renderMode', 'showValuesButton', 'target', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
 const modelProps$1 = [];
 /**
  * `ejs-pivotfieldlist` represents the VueJS PivotFieldList Component.

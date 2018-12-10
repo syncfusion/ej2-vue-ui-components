@@ -5,10 +5,15 @@ import { AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Acc
 import { AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['annotations', 'background', 'border', 'currencyCode', 'dataSource', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSmartLabels', 'height', 'isMultiSelect', 'legendSettings', 'locale', 'margin', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'theme', 'title', 'titleStyle', 'tooltip', 'width', 'animationComplete', 'annotationRender', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'seriesRender', 'textRender', 'tooltipRender'];
+export const properties: string[] = ['annotations', 'background', 'border', 'center', 'currencyCode', 'dataSource', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSmartLabels', 'height', 'isMultiSelect', 'legendSettings', 'locale', 'margin', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'theme', 'title', 'titleStyle', 'tooltip', 'width', 'animationComplete', 'annotationRender', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'seriesRender', 'textRender', 'tooltipRender'];
 export const modelProps: string[] = [];
 
-
+/**
+ * Represents Vuejs AccumulationChart Component
+ * ```vue
+ * <ejs-accumulationchart></ejs-accumulationchart>
+ * ```
+ */
 @EJComponentDecorator({
     props: properties
 })

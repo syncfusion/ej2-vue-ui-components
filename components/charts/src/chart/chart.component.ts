@@ -18,7 +18,12 @@ import { IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlu
 export const properties: string[] = ['annotations', 'axes', 'background', 'border', 'chartArea', 'columns', 'crosshair', 'currencyCode', 'dataSource', 'description', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSideBySidePlacement', 'height', 'indicators', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRender', 'axisLabelRender', 'axisMultiLabelRender', 'axisRangeCalculated', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'dragComplete', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'scrollChanged', 'scrollEnd', 'scrollStart', 'seriesRender', 'textRender', 'tooltipRender', 'zoomComplete'];
 export const modelProps: string[] = [];
 
-
+/**
+ * Represents Vuejs chart Component
+ * ```vue
+ * <ejs-chart></ejs-chart>
+ * ```
+ */
 @EJComponentDecorator({
     props: properties
 })
@@ -44,6 +49,10 @@ export class ChartComponent extends ComponentBase {
     
     public addSeries(seriesCollection: Object[]): void {
         return this.ej2Instances.addSeries(seriesCollection);
+    }
+
+    public createChartSvg(): void {
+        return this.ej2Instances.createChartSvg();
     }
 
     public export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number): void {

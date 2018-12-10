@@ -1,4 +1,4 @@
-import { AccumulationChart, Chart, RangeNavigator, Smithchart, Sparkline } from '@syncfusion/ej2-charts';
+import { AccumulationChart, Chart, RangeNavigator, Smithchart, Sparkline, StockChart } from '@syncfusion/ej2-charts';
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
@@ -442,6 +442,12 @@ var __decorate$12 = (undefined && undefined.__decorate) || function (decorators,
 };
 const properties = ['annotations', 'axes', 'background', 'border', 'chartArea', 'columns', 'crosshair', 'currencyCode', 'dataSource', 'description', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSideBySidePlacement', 'height', 'indicators', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRender', 'axisLabelRender', 'axisMultiLabelRender', 'axisRangeCalculated', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'dragComplete', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'scrollChanged', 'scrollEnd', 'scrollStart', 'seriesRender', 'textRender', 'tooltipRender', 'zoomComplete'];
 const modelProps = [];
+/**
+ * Represents Vuejs chart Component
+ * ```vue
+ * <ejs-chart></ejs-chart>
+ * ```
+ */
 let ChartComponent = class ChartComponent extends ComponentBase {
     constructor() {
         super();
@@ -459,6 +465,9 @@ let ChartComponent = class ChartComponent extends ComponentBase {
     }
     addSeries(seriesCollection) {
         return this.ej2Instances.addSeries(seriesCollection);
+    }
+    createChartSvg() {
+        return this.ej2Instances.createChartSvg();
     }
     export(type, fileName, orientation, controls, width, height) {
         return this.ej2Instances.export(type, fileName, orientation, controls, width, height);
@@ -588,8 +597,14 @@ var __decorate$15 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['annotations', 'background', 'border', 'currencyCode', 'dataSource', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSmartLabels', 'height', 'isMultiSelect', 'legendSettings', 'locale', 'margin', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'theme', 'title', 'titleStyle', 'tooltip', 'width', 'animationComplete', 'annotationRender', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'seriesRender', 'textRender', 'tooltipRender'];
+const properties$1 = ['annotations', 'background', 'border', 'center', 'currencyCode', 'dataSource', 'enableAnimation', 'enablePersistence', 'enableRtl', 'enableSmartLabels', 'height', 'isMultiSelect', 'legendSettings', 'locale', 'margin', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'theme', 'title', 'titleStyle', 'tooltip', 'width', 'animationComplete', 'annotationRender', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'seriesRender', 'textRender', 'tooltipRender'];
 const modelProps$1 = [];
+/**
+ * Represents Vuejs AccumulationChart Component
+ * ```vue
+ * <ejs-accumulationchart></ejs-accumulationchart>
+ * ```
+ */
 let AccumulationChartComponent = class AccumulationChartComponent extends ComponentBase {
     constructor() {
         super();
@@ -677,6 +692,12 @@ var __decorate$17 = (undefined && undefined.__decorate) || function (decorators,
 };
 const properties$2 = ['allowSnapping', 'animationDuration', 'dataSource', 'disableRangeSelector', 'enableDeferredUpdate', 'enableGrouping', 'enablePersistence', 'enableRtl', 'groupBy', 'height', 'interval', 'intervalType', 'labelFormat', 'labelIntersectAction', 'labelPosition', 'labelStyle', 'locale', 'logBase', 'majorGridLines', 'majorTickLines', 'margin', 'maximum', 'minimum', 'navigatorBorder', 'navigatorStyleSettings', 'periodSelectorSettings', 'query', 'secondaryLabelAlignment', 'series', 'skeleton', 'skeletonType', 'theme', 'tickPosition', 'tooltip', 'useGroupingSeparator', 'value', 'valueType', 'width', 'xName', 'yName', 'beforePrint', 'changed', 'labelRender', 'load', 'loaded', 'resized', 'selectorRender', 'tooltipRender'];
 const modelProps$2 = [];
+/**
+ * Represents Vuejs RangeNavigator Component
+ * ```vue
+ * <ejs-rangenavigator></ejs-rangenavigator>
+ * ```
+ */
 let RangeNavigatorComponent = class RangeNavigatorComponent extends ComponentBase {
     constructor() {
         super();
@@ -898,6 +919,402 @@ const SmithchartPlugin = {
     }
 };
 
-export { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin, SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin, SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin, StripLinesDirective, StripLineDirective, StripLinesPlugin, StripLinePlugin, CategoriesDirective, CategoryDirective, CategoriesPlugin, CategoryPlugin, MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPlugin, MultiLevelLabelPlugin, AxesDirective, AxisDirective, AxesPlugin, AxisPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin, IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin, ChartComponent, ChartPlugin, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin, AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin, AccumulationChartComponent, AccumulationChartPlugin, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin, RangeNavigatorComponent, RangeNavigatorPlugin, RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin, SparklineComponent, SparklinePlugin, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin, SmithchartComponent, SmithchartPlugin };
+var __decorate$22 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartTrendlinesDirective = class StockChartTrendlinesDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartTrendlinesDirective = __decorate$22([
+    EJComponentDecorator({})
+], StockChartTrendlinesDirective);
+const StockChartTrendlinesPlugin = {
+    name: 'e-trendlines',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartTrendlinesPlugin.name, StockChartTrendlinesDirective);
+    }
+};
+let StockChartTrendlineDirective = class StockChartTrendlineDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartTrendlineDirective = __decorate$22([
+    EJComponentDecorator({})
+], StockChartTrendlineDirective);
+const StockChartTrendlinePlugin = {
+    name: 'e-trendline',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartTrendlinePlugin.name, StockChartTrendlineDirective);
+    }
+};
+
+var __decorate$23 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartSeriesCollectionDirective = class StockChartSeriesCollectionDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartSeriesCollectionDirective = __decorate$23([
+    EJComponentDecorator({})
+], StockChartSeriesCollectionDirective);
+const StockChartSeriesCollectionPlugin = {
+    name: 'e-stockchart-series-collection',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartSeriesCollectionPlugin.name, StockChartSeriesCollectionDirective);
+    }
+};
+let StockChartSeriesDirective = class StockChartSeriesDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartSeriesDirective = __decorate$23([
+    EJComponentDecorator({})
+], StockChartSeriesDirective);
+const StockChartSeriesPlugin = {
+    name: 'e-stockchart-series',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartSeriesPlugin.name, StockChartSeriesDirective);
+    }
+};
+
+var __decorate$24 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartStripLinesDirective = class StockChartStripLinesDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartStripLinesDirective = __decorate$24([
+    EJComponentDecorator({})
+], StockChartStripLinesDirective);
+const StockChartStripLinesPlugin = {
+    name: 'e-stockchart-striplines',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartStripLinesPlugin.name, StockChartStripLinesDirective);
+    }
+};
+let StockChartStripLineDirective = class StockChartStripLineDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartStripLineDirective = __decorate$24([
+    EJComponentDecorator({})
+], StockChartStripLineDirective);
+const StockChartStripLinePlugin = {
+    name: 'e-stockchart-stripline',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartStripLinePlugin.name, StockChartStripLineDirective);
+    }
+};
+
+var __decorate$25 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartAxesDirective = class StockChartAxesDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartAxesDirective = __decorate$25([
+    EJComponentDecorator({})
+], StockChartAxesDirective);
+const StockChartAxesPlugin = {
+    name: 'e-stockchart-axes',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartAxesPlugin.name, StockChartAxesDirective);
+    }
+};
+let StockChartAxisDirective = class StockChartAxisDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartAxisDirective = __decorate$25([
+    EJComponentDecorator({})
+], StockChartAxisDirective);
+const StockChartAxisPlugin = {
+    name: 'e-stockchart-axis',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartAxisPlugin.name, StockChartAxisDirective);
+    }
+};
+
+var __decorate$26 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartRowsDirective = class StockChartRowsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartRowsDirective = __decorate$26([
+    EJComponentDecorator({})
+], StockChartRowsDirective);
+const StockChartRowsPlugin = {
+    name: 'e-stockchart-rows',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartRowsPlugin.name, StockChartRowsDirective);
+    }
+};
+let StockChartRowDirective = class StockChartRowDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartRowDirective = __decorate$26([
+    EJComponentDecorator({})
+], StockChartRowDirective);
+const StockChartRowPlugin = {
+    name: 'e-stockchart-row',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartRowPlugin.name, StockChartRowDirective);
+    }
+};
+
+var __decorate$27 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartAnnotationsDirective = class StockChartAnnotationsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartAnnotationsDirective = __decorate$27([
+    EJComponentDecorator({})
+], StockChartAnnotationsDirective);
+const StockChartAnnotationsPlugin = {
+    name: 'e-stockchart-annotations',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartAnnotationsPlugin.name, StockChartAnnotationsDirective);
+    }
+};
+/**
+ * `e-annotation` directive represent a annotation of the VueJS Chart.
+ * It must be contained in a Chart component(`ejs-chart`).
+ * ```vue
+ * <ejs-stockchart>
+ *   <e-stockchart-annotations>
+ *    <e-annotation content='ID' />
+ *    <e-annotation content='ID' />
+ *   </e-annotations>
+ * </ejs-chart>
+ * ```
+ */
+let StockChartAnnotationDirective = class StockChartAnnotationDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartAnnotationDirective = __decorate$27([
+    EJComponentDecorator({})
+], StockChartAnnotationDirective);
+const StockChartAnnotationPlugin = {
+    name: 'e-stockchart-annotation',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartAnnotationPlugin.name, StockChartAnnotationDirective);
+    }
+};
+
+var __decorate$28 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartSelectedDataIndexesDirective = class StockChartSelectedDataIndexesDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartSelectedDataIndexesDirective = __decorate$28([
+    EJComponentDecorator({})
+], StockChartSelectedDataIndexesDirective);
+const StockChartSelectedDataIndexesPlugin = {
+    name: 'e-stockchart-selectedDataIndexes',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartSelectedDataIndexesPlugin.name, StockChartSelectedDataIndexesDirective);
+    }
+};
+let StockChartSelectedDataIndexDirective = class StockChartSelectedDataIndexDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartSelectedDataIndexDirective = __decorate$28([
+    EJComponentDecorator({})
+], StockChartSelectedDataIndexDirective);
+const StockChartSelectedDataIndexPlugin = {
+    name: 'e-stockchart-selectedDataIndex',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartSelectedDataIndexPlugin.name, StockChartSelectedDataIndexDirective);
+    }
+};
+
+var __decorate$29 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartPeriodsDirective = class StockChartPeriodsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartPeriodsDirective = __decorate$29([
+    EJComponentDecorator({})
+], StockChartPeriodsDirective);
+const StockChartPeriodsPlugin = {
+    name: 'e-stockchart-periods',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartPeriodsPlugin.name, StockChartPeriodsDirective);
+    }
+};
+let StockChartPeriodDirective = class StockChartPeriodDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartPeriodDirective = __decorate$29([
+    EJComponentDecorator({})
+], StockChartPeriodDirective);
+const StockChartPeriodPlugin = {
+    name: 'e-stockchart-period',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartPeriodPlugin.name, StockChartPeriodDirective);
+    }
+};
+
+var __decorate$30 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let StockChartIndicatorsDirective = class StockChartIndicatorsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartIndicatorsDirective = __decorate$30([
+    EJComponentDecorator({})
+], StockChartIndicatorsDirective);
+const StockChartIndicatorsPlugin = {
+    name: 'e-stockchart-indicators',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
+    }
+};
+let StockChartIndicatorDirective = class StockChartIndicatorDirective extends Vue {
+    render() {
+        return;
+    }
+};
+StockChartIndicatorDirective = __decorate$30([
+    EJComponentDecorator({})
+], StockChartIndicatorDirective);
+const StockChartIndicatorPlugin = {
+    name: 'e-stockchart-indicator',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
+    }
+};
+
+var __decorate$31 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties$5 = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isSingleAxis', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'selectorRender', 'seriesRender', 'tooltipRender'];
+const modelProps$5 = [];
+/**
+ * Represents Vuejs chart Component
+ * ```vue
+ * <ejs-stockchart></ejs-stockchart>
+ * ```
+ */
+let StockChartComponent = class StockChartComponent extends ComponentBase {
+    constructor() {
+        super();
+        this.propKeys = properties$5;
+        this.models = modelProps$5;
+        this.hasChildDirective = true;
+        this.hasInjectedModules = true;
+        this.tagMapper = { "e-stockchart-series-collection": { "e-stockchart-series": { "e-trendlines": "e-trendline" } }, "e-stockchart-axes": { "e-stockchart-axis": { "e-stockchart-striplines": "e-stockchart-stripline" } }, "e-stockchart-rows": "e-stockchart-row", "e-stockchart-annotations": "e-stockchart-annotation", "e-stockchart-selectedDataIndexes": "e-stockchart-selectedDataIndex", "e-stockchart-periods": "e-stockchart-period", "e-stockchart-indicators": "e-stockchart-indicator" };
+        this.tagNameMapper = { "e-stockchart-series-collection": "e-series", "e-stockchart-striplines": "e-stripLines", "e-stockchart-axes": "e-axes", "e-stockchart-rows": "e-rows", "e-stockchart-annotations": "e-annotations", "e-stockchart-selectedDataIndexes": "e-selectedDataIndexes", "e-stockchart-periods": "e-periods", "e-stockchart-indicators": "e-indicators" };
+        this.ej2Instances = new StockChart({});
+        this.bindProperties();
+    }
+    render(createElement) {
+        return createElement('div', this.$slots.default);
+    }
+    chartModuleInjection() {
+        return this.ej2Instances.chartModuleInjection();
+    }
+    rangeChanged(updatedStart, updatedEnd) {
+        return this.ej2Instances.rangeChanged(updatedStart, updatedEnd);
+    }
+    renderPeriodSelector() {
+        return this.ej2Instances.renderPeriodSelector();
+    }
+};
+StockChartComponent = __decorate$31([
+    EJComponentDecorator({
+        props: properties$5
+    })
+], StockChartComponent);
+const StockChartPlugin = {
+    name: 'ejs-stockchart',
+    install(Vue$$1) {
+        Vue$$1.component(StockChartPlugin.name, StockChartComponent);
+        Vue$$1.component(StockChartSeriesPlugin.name, StockChartSeriesDirective);
+        Vue$$1.component(StockChartSeriesCollectionPlugin.name, StockChartSeriesCollectionDirective);
+        Vue$$1.component(StockChartTrendlinePlugin.name, StockChartTrendlineDirective);
+        Vue$$1.component(StockChartTrendlinesPlugin.name, StockChartTrendlinesDirective);
+        Vue$$1.component(StockChartAxisPlugin.name, StockChartAxisDirective);
+        Vue$$1.component(StockChartAxesPlugin.name, StockChartAxesDirective);
+        Vue$$1.component(StockChartStripLinePlugin.name, StockChartStripLineDirective);
+        Vue$$1.component(StockChartStripLinesPlugin.name, StockChartStripLinesDirective);
+        Vue$$1.component(StockChartRowPlugin.name, StockChartRowDirective);
+        Vue$$1.component(StockChartRowsPlugin.name, StockChartRowsDirective);
+        Vue$$1.component(StockChartAnnotationPlugin.name, StockChartAnnotationDirective);
+        Vue$$1.component(StockChartAnnotationsPlugin.name, StockChartAnnotationsDirective);
+        Vue$$1.component(StockChartSelectedDataIndexPlugin.name, StockChartSelectedDataIndexDirective);
+        Vue$$1.component(StockChartSelectedDataIndexesPlugin.name, StockChartSelectedDataIndexesDirective);
+        Vue$$1.component(StockChartPeriodPlugin.name, StockChartPeriodDirective);
+        Vue$$1.component(StockChartPeriodsPlugin.name, StockChartPeriodsDirective);
+        Vue$$1.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
+        Vue$$1.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
+    }
+};
+
+export { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin, SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin, SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin, StripLinesDirective, StripLineDirective, StripLinesPlugin, StripLinePlugin, CategoriesDirective, CategoryDirective, CategoriesPlugin, CategoryPlugin, MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPlugin, MultiLevelLabelPlugin, AxesDirective, AxisDirective, AxesPlugin, AxisPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin, IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin, ChartComponent, ChartPlugin, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin, AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin, AccumulationChartComponent, AccumulationChartPlugin, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin, RangeNavigatorComponent, RangeNavigatorPlugin, RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin, SparklineComponent, SparklinePlugin, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin, SmithchartComponent, SmithchartPlugin, StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin, StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin, StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin, StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin, StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin, StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin, StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin, StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin, StockChartComponent, StockChartPlugin };
 export * from '@syncfusion/ej2-charts';
 //# sourceMappingURL=ej2-vue-charts.es2015.js.map

@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { HeatMap } from '@syncfusion/ej2-heatmap';
 
 
-export const properties: string[] = ['cellSettings', 'dataSource', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'created', 'load', 'tooltipRender'];
+export const properties: string[] = ['cellSelected', 'allowSelection', 'cellSettings', 'dataSource', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellRender', 'created', 'load', 'tooltipRender'];
 export const modelProps: string[] = [];
 
 /**
@@ -35,12 +35,20 @@ export class HeatMapComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public clearSelection(): void {
+        return this.ej2Instances.clearSelection();
+    }
+
     public heatMapMouseClick(e: Object): boolean {
         return this.ej2Instances.heatMapMouseClick(e);
     }
 
     public refresh(): void {
         return this.ej2Instances.refresh();
+    }
+
+    public refreshBound(): void {
+        return this.ej2Instances.refreshBound();
     }
 }
 

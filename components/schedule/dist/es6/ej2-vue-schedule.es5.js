@@ -309,6 +309,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.adjustEventWrapper = function () {
         return this.ej2Instances.adjustEventWrapper();
     };
+    ScheduleComponent.prototype.boundaryValidation = function (pageY, pageX) {
+        return this.ej2Instances.boundaryValidation(pageY, pageX);
+    };
     ScheduleComponent.prototype.changeDate = function (selectedDate, event) {
         return this.ej2Instances.changeDate(selectedDate, event);
     };
@@ -423,11 +426,14 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.isSlotAvailable = function (startTime, endTime, groupIndex) {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
     };
-    ScheduleComponent.prototype.openEditor = function (data, action, isEventData) {
-        return this.ej2Instances.openEditor(data, action, isEventData);
+    ScheduleComponent.prototype.openEditor = function (data, action, isEventData, repeatType) {
+        return this.ej2Instances.openEditor(data, action, isEventData, repeatType);
     };
     ScheduleComponent.prototype.refreshEvents = function () {
         return this.ej2Instances.refreshEvents();
+    };
+    ScheduleComponent.prototype.removeNewEventElement = function () {
+        return this.ej2Instances.removeNewEventElement();
     };
     ScheduleComponent.prototype.removeResource = function (resourceId, name) {
         return this.ej2Instances.removeResource(resourceId, name);

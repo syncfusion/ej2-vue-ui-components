@@ -175,8 +175,8 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.setPlaceHolder();
     }
 
-    public setReadOnly(): void {
-        return this.ej2Instances.setReadOnly();
+    public setReadOnly(initial?: boolean): void {
+        return this.ej2Instances.setReadOnly(initial);
     }
 
     public showFullScreen(): void {

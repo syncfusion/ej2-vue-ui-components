@@ -9,7 +9,7 @@ import { PortsDirective, PortDirective, PortsPlugin, PortPlugin } from './ports.
 import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.directive'
 
 
-export const properties: string[] = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+export const properties: string[] = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
 /**
@@ -181,6 +181,10 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.group();
     }
 
+    public insertData(node?: Object | Object): object {
+        return this.ej2Instances.insertData(node);
+    }
+
     public loadDiagram(data: string): Object {
         return this.ej2Instances.loadDiagram(data);
     }
@@ -219,6 +223,10 @@ export class DiagramComponent extends ComponentBase {
 
     public removeConstraints(constraintsType: number, constraintsValue: number): number {
         return this.ej2Instances.removeConstraints(constraintsType, constraintsValue);
+    }
+
+    public removeData(node?: Object | Object): object {
+        return this.ej2Instances.removeData(node);
     }
 
     public removeLabels(obj: Object | Object, labels: Object[] | Object[]): void {
@@ -299,6 +307,10 @@ export class DiagramComponent extends ComponentBase {
 
     public undo(): void {
         return this.ej2Instances.undo();
+    }
+
+    public updateData(node?: Object | Object): object {
+        return this.ej2Instances.updateData(node);
     }
 
     public updateViewPort(): void {

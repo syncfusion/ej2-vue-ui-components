@@ -79,12 +79,12 @@ export class SidebarComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public hide(e?: Object): void {
-        return this.ej2Instances.hide(e);
+    public hide(): void {
+        return this.ej2Instances.hide();
     }
 
-    public show(e?: Object): void {
-        return this.ej2Instances.show(e);
+    public show(): void {
+        return this.ej2Instances.show();
     }
 
     public toggle(e?: Object): void {

@@ -158,8 +158,8 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.setPlaceHolder = function () {
         return this.ej2Instances.setPlaceHolder();
     };
-    RichTextEditorComponent.prototype.setReadOnly = function () {
-        return this.ej2Instances.setReadOnly();
+    RichTextEditorComponent.prototype.setReadOnly = function (initial) {
+        return this.ej2Instances.setReadOnly(initial);
     };
     RichTextEditorComponent.prototype.showFullScreen = function () {
         return this.ej2Instances.showFullScreen();

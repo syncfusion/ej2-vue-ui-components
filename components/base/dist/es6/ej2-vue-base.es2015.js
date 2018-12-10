@@ -29,7 +29,7 @@ class ComponentBase extends Vue {
             let injectables = provide;
             if (typeof provide === 'function') {
                 // tslint:disable:no-any
-                injectables = this.$vnode.context.$options.provide.bind(this.$vnode.context)();
+                injectables = this.$vnode.context.$options.provide();
             }
             ret = injectables[this.ej2Instances.getModuleName()] || [];
         }
@@ -285,7 +285,7 @@ function compile(templateElement, helper) {
             document.body.appendChild(ele);
             let tempObj = templateElement.call(that, {});
             let templateVue = new Vue(tempObj.template);
-            templateVue.$data.data = data || {};
+            templateVue.$data.data = extend(tempObj.data, data);
             templateVue.$mount('#' + id);
             let returnEle = ele.childNodes;
             detach(ele);
