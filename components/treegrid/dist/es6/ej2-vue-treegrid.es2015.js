@@ -372,6 +372,9 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     goToPage(pageNo) {
         return this.ej2Instances.goToPage(pageNo);
     }
+    hideColumns(keys, hideBy) {
+        return this.ej2Instances.hideColumns(keys, hideBy);
+    }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
     }
@@ -410,6 +413,9 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     }
     setRowData(key, rowData) {
         return this.ej2Instances.setRowData(key, rowData);
+    }
+    showColumns(keys, showBy) {
+        return this.ej2Instances.showColumns(keys, showBy);
     }
     showSpinner() {
         return this.ej2Instances.showSpinner();

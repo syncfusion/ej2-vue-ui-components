@@ -4,7 +4,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Calendar } from '@syncfusion/ej2-calendars';
 
 
-export const properties: string[] = ['depth', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'isMultiSelection', 'locale', 'max', 'min', 'showTodayButton', 'start', 'value', 'values', 'weekNumber', 'change', 'created', 'destroyed', 'navigated', 'renderDayCell'];
+export const properties: string[] = ['calendarMode', 'depth', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'isMultiSelection', 'locale', 'max', 'min', 'showTodayButton', 'start', 'value', 'values', 'weekNumber', 'change', 'created', 'destroyed', 'navigated', 'renderDayCell'];
 export const modelProps: string[] = ['value', 'values'];
 
 /**
@@ -25,7 +25,7 @@ export class CalendarComponent extends ComponentBase {
     public propKeys: string[] = properties;
     public models: string[] = modelProps;
     public hasChildDirective: boolean = false;
-    protected hasInjectedModules: boolean = false;
+    protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {};
     public tagNameMapper: Object = {};
     
@@ -97,6 +97,10 @@ export class CalendarComponent extends ComponentBase {
 
     public removeDate(dates: Object | Object[]): void {
         return this.ej2Instances.removeDate(dates);
+    }
+
+    public requiredModules(): undefined {
+        return this.ej2Instances.requiredModules();
     }
 }
 

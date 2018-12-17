@@ -95,12 +95,6 @@ var PivotViewComponent = /** @__PURE__ @class */ (function (_super) {
     PivotViewComponent.prototype.pdfExport = function (pdfExportProperties, isMultipleExport, pdfDoc, isBlob) {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
     };
-    PivotViewComponent.prototype.setCommonColumnsWidth = function (columns, width) {
-        return this.ej2Instances.setCommonColumnsWidth(columns, width);
-    };
-    PivotViewComponent.prototype.triggerColumnRenderEvent = function (gridcolumns) {
-        return this.ej2Instances.triggerColumnRenderEvent(gridcolumns);
-    };
     PivotViewComponent = __decorate([
         EJComponentDecorator({
             props: properties,

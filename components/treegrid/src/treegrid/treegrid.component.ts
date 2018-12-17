@@ -278,6 +278,10 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.goToPage(pageNo);
     }
 
+    public hideColumns(keys: string | string[], hideBy?: string): void {
+        return this.ej2Instances.hideColumns(keys, hideBy);
+    }
+
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
     }
@@ -328,6 +332,10 @@ export class TreeGridComponent extends ComponentBase {
 
     public setRowData(key: string | number, rowData?: Object): void {
         return this.ej2Instances.setRowData(key, rowData);
+    }
+
+    public showColumns(keys: string | string[], showBy?: string): void {
+        return this.ej2Instances.showColumns(keys, showBy);
     }
 
     public showSpinner(): void {

@@ -9,7 +9,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['depth', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'isMultiSelection', 'locale', 'max', 'min', 'showTodayButton', 'start', 'value', 'values', 'weekNumber', 'change', 'created', 'destroyed', 'navigated', 'renderDayCell'];
+const properties = ['calendarMode', 'depth', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'isMultiSelection', 'locale', 'max', 'min', 'showTodayButton', 'start', 'value', 'values', 'weekNumber', 'change', 'created', 'destroyed', 'navigated', 'renderDayCell'];
 const modelProps = ['value', 'values'];
 /**
  * Represents the Essential JS 2  VueJS Calendar Component.
@@ -23,7 +23,7 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
         this.propKeys = properties;
         this.models = modelProps;
         this.hasChildDirective = false;
-        this.hasInjectedModules = false;
+        this.hasInjectedModules = true;
         this.tagMapper = {};
         this.tagNameMapper = {};
         this.ej2Instances = new Calendar({});
@@ -86,6 +86,9 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
     removeDate(dates) {
         return this.ej2Instances.removeDate(dates);
     }
+    requiredModules() {
+        return this.ej2Instances.requiredModules();
+    }
 };
 CalendarComponent = __decorate([
     EJComponentDecorator({
@@ -108,7 +111,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['allowEdit', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
+const properties$1 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
 const modelProps$1 = ['value'];
 /**
  * Represents the Essential JS 2 VueJS DatePicker Component.
@@ -122,7 +125,7 @@ let DatePickerComponent = class DatePickerComponent extends ComponentBase {
         this.propKeys = properties$1;
         this.models = modelProps$1;
         this.hasChildDirective = false;
-        this.hasInjectedModules = false;
+        this.hasInjectedModules = true;
         this.tagMapper = {};
         this.tagNameMapper = {};
         this.ej2Instances = new DatePicker({});
@@ -193,6 +196,9 @@ let DatePickerComponent = class DatePickerComponent extends ComponentBase {
     }
     removeDate(dates) {
         return this.ej2Instances.removeDate(dates);
+    }
+    requiredModules() {
+        return this.ej2Instances.requiredModules();
     }
     show(type, e) {
         return this.ej2Instances.show(type, e);
@@ -362,7 +368,7 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$3 = ['allowEdit', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
+const properties$3 = ['allowEdit', 'calendarMode', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
 const modelProps$3 = ['startDate', 'endDate', 'value'];
 /**
  * Represents the Essential JS 2 VueJS DateRangePicker Component.
@@ -436,6 +442,9 @@ let DateRangePickerComponent = class DateRangePickerComponent extends ComponentB
     hide(event) {
         return this.ej2Instances.hide(event);
     }
+    requiredModules() {
+        return this.ej2Instances.requiredModules();
+    }
     show(element, event) {
         return this.ej2Instances.show(element, event);
     }
@@ -463,7 +472,7 @@ var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$4 = ['allowEdit', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
+const properties$4 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
 const modelProps$4 = ['value'];
 /**
  * Represents the Essential JS 2 VueJS DateTimePicker Component.
@@ -477,7 +486,7 @@ let DateTimePickerComponent = class DateTimePickerComponent extends ComponentBas
         this.propKeys = properties$4;
         this.models = modelProps$4;
         this.hasChildDirective = false;
-        this.hasInjectedModules = false;
+        this.hasInjectedModules = true;
         this.tagMapper = {};
         this.tagNameMapper = {};
         this.ej2Instances = new DateTimePicker({});
@@ -548,6 +557,9 @@ let DateTimePickerComponent = class DateTimePickerComponent extends ComponentBas
     }
     removeDate(dates) {
         return this.ej2Instances.removeDate(dates);
+    }
+    requiredModules() {
+        return this.ej2Instances.requiredModules();
     }
     show(type, e) {
         return this.ej2Instances.show(type, e);

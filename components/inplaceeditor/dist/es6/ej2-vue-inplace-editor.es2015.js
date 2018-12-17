@@ -54,4 +54,4 @@ const InPlaceEditorPlugin = {
 
 export { InPlaceEditorComponent, InPlaceEditorPlugin };
 export * from '@syncfusion/ej2-inplace-editor';
-//# sourceMappingURL=ej2-vue-inplaceeditor.es2015.js.map
+//# sourceMappingURL=ej2-vue-inplace-editor.es2015.js.map

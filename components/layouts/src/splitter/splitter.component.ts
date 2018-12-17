@@ -36,6 +36,17 @@ export class SplitterComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public addPane(paneProperties: Object, index: number): void {
+        return this.ej2Instances.addPane(paneProperties, index);
+    }
+
+    public removePane(index: number): void {
+        return this.ej2Instances.removePane(index);
+    }
+
+    public removeSeparator(): void {
+        return this.ej2Instances.removeSeparator();
+    }
 }
 
 export const SplitterPlugin = {

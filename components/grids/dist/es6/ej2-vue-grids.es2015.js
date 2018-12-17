@@ -258,9 +258,6 @@ let GridComponent = class GridComponent extends ComponentBase {
     destroyTemplate(propertyNames, index) {
         return this.ej2Instances.destroyTemplate(propertyNames, index);
     }
-    disableRowDD(enable) {
-        return this.ej2Instances.disableRowDD(enable);
-    }
     endEdit() {
         return this.ej2Instances.endEdit();
     }

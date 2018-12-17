@@ -299,7 +299,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerMouseMove', 'markerRendering', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender'];
+const properties = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'zoom'];
 const modelProps = ['dataSource'];
 /**
  * Represents Vuejs Maps Component
@@ -364,8 +364,8 @@ let MapsComponent = class MapsComponent extends ComponentBase {
     addLayer(layer) {
         return this.ej2Instances.addLayer(layer);
     }
-    addMarker(layerIndex, marker) {
-        return this.ej2Instances.addMarker(layerIndex, marker);
+    addMarker(layerIndex, markerCollection) {
+        return this.ej2Instances.addMarker(layerIndex, markerCollection);
     }
     export(type, fileName, orientation) {
         return this.ej2Instances.export(type, fileName, orientation);
@@ -396,6 +396,9 @@ let MapsComponent = class MapsComponent extends ComponentBase {
     }
     onMouseMove(e) {
         return this.ej2Instances.onMouseMove(e);
+    }
+    panByDirection(direction) {
+        return this.ej2Instances.panByDirection(direction);
     }
     print(id) {
         return this.ej2Instances.print(id);

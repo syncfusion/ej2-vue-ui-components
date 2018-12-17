@@ -126,10 +126,6 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.destroyTemplate(propertyNames, index);
     }
 
-    public disableRowDD(enable: boolean): void {
-        return this.ej2Instances.disableRowDD(enable);
-    }
-
     public endEdit(): void {
         return this.ej2Instances.endEdit();
     }

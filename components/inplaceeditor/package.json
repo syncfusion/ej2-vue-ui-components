@@ -1,6 +1,6 @@
 {
-	"name": "@syncfusion/ej2-vue-inplaceeditor",
-	"version": "1.20.1",
+	"name": "@syncfusion/ej2-vue-inplace-editor",
+	"version": "16.4.40",
 	"description": "A package of Essential JS 2 Inplace editor components, which is used to edit and update the value dynamically in server. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -12,15 +12,16 @@
 		"editor",
 		"vue",
 		"vue-inplace-editor",
+		"vue-inplace-editor-component",
 		"ej2-vue-inplace-editor"
 	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/syncfusion/ej2-vue-ui-components.git"
 	},
-	"main": "./dist/ej2-vue-inplaceeditor.umd.min.js",
+	"main": "./dist/ej2-vue-inplace-editor.umd.min.js",
 	"module": "./index.js",
-	"es2015": "dist/es6/ej2-vue-inplaceeditor.es2015.js",
+	"es2015": "dist/es6/ej2-vue-inplace-editor.es2015.js",
 	"readme": "ReadMe.md",
 	"dependencies": {
 		"@syncfusion/ej2-base": "*",

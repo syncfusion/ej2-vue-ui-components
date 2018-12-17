@@ -450,7 +450,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerMouseMove', 'markerRendering', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender'];
+var properties = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'zoom'];
 var modelProps = ['dataSource'];
 /**
  * Represents Vuejs Maps Component
@@ -518,8 +518,8 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
     MapsComponent.prototype.addLayer = function (layer) {
         return this.ej2Instances.addLayer(layer);
     };
-    MapsComponent.prototype.addMarker = function (layerIndex, marker) {
-        return this.ej2Instances.addMarker(layerIndex, marker);
+    MapsComponent.prototype.addMarker = function (layerIndex, markerCollection) {
+        return this.ej2Instances.addMarker(layerIndex, markerCollection);
     };
     MapsComponent.prototype.export = function (type, fileName, orientation) {
         return this.ej2Instances.export(type, fileName, orientation);
@@ -550,6 +550,9 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
     };
     MapsComponent.prototype.onMouseMove = function (e) {
         return this.ej2Instances.onMouseMove(e);
+    };
+    MapsComponent.prototype.panByDirection = function (direction) {
+        return this.ej2Instances.panByDirection(direction);
     };
     MapsComponent.prototype.print = function (id) {
         return this.ej2Instances.print(id);

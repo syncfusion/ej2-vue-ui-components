@@ -87,8 +87,8 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
     deleteGroups(groupID) {
         return this.ej2Instances.deleteGroups(groupID);
     }
-    deleteRules(filterID) {
-        return this.ej2Instances.deleteRules(filterID);
+    deleteRules(ruleID) {
+        return this.ej2Instances.deleteRules(ruleID);
     }
     getDataManagerQuery(rule) {
         return this.ej2Instances.getDataManagerQuery(rule);
@@ -119,6 +119,9 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
     }
     setRulesFromSql(sqlString) {
         return this.ej2Instances.setRulesFromSql(sqlString);
+    }
+    validateFields() {
+        return this.ej2Instances.validateFields();
     }
 };
 QueryBuilderComponent = __decorate$1([

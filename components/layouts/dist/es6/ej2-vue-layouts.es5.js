@@ -116,6 +116,15 @@ var SplitterComponent = /** @__PURE__ @class */ (function (_super) {
     SplitterComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    SplitterComponent.prototype.addPane = function (paneProperties, index) {
+        return this.ej2Instances.addPane(paneProperties, index);
+    };
+    SplitterComponent.prototype.removePane = function (index) {
+        return this.ej2Instances.removePane(index);
+    };
+    SplitterComponent.prototype.removeSeparator = function () {
+        return this.ej2Instances.removeSeparator();
+    };
     SplitterComponent = __decorate$1([
         EJComponentDecorator({
             props: properties

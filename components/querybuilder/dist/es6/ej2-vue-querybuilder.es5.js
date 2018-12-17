@@ -125,8 +125,8 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     QueryBuilderComponent.prototype.deleteGroups = function (groupID) {
         return this.ej2Instances.deleteGroups(groupID);
     };
-    QueryBuilderComponent.prototype.deleteRules = function (filterID) {
-        return this.ej2Instances.deleteRules(filterID);
+    QueryBuilderComponent.prototype.deleteRules = function (ruleID) {
+        return this.ej2Instances.deleteRules(ruleID);
     };
     QueryBuilderComponent.prototype.getDataManagerQuery = function (rule) {
         return this.ej2Instances.getDataManagerQuery(rule);
@@ -157,6 +157,9 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     };
     QueryBuilderComponent.prototype.setRulesFromSql = function (sqlString) {
         return this.ej2Instances.setRulesFromSql(sqlString);
+    };
+    QueryBuilderComponent.prototype.validateFields = function () {
+        return this.ej2Instances.validateFields();
     };
     QueryBuilderComponent = __decorate$1([
         EJComponentDecorator({

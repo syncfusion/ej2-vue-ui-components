@@ -343,9 +343,6 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.destroyTemplate = function (propertyNames, index) {
         return this.ej2Instances.destroyTemplate(propertyNames, index);
     };
-    GridComponent.prototype.disableRowDD = function (enable) {
-        return this.ej2Instances.disableRowDD(enable);
-    };
     GridComponent.prototype.endEdit = function () {
         return this.ej2Instances.endEdit();
     };

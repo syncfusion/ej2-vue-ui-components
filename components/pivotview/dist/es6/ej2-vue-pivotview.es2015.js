@@ -79,12 +79,6 @@ let PivotViewComponent = class PivotViewComponent extends ComponentBase {
     pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob) {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
     }
-    setCommonColumnsWidth(columns, width) {
-        return this.ej2Instances.setCommonColumnsWidth(columns, width);
-    }
-    triggerColumnRenderEvent(gridcolumns) {
-        return this.ej2Instances.triggerColumnRenderEvent(gridcolumns);
-    }
 };
 PivotViewComponent = __decorate([
     EJComponentDecorator({

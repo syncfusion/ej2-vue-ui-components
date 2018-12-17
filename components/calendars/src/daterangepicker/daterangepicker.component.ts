@@ -5,7 +5,7 @@ import { DateRangePicker } from '@syncfusion/ej2-calendars';
 import { PresetsDirective, PresetDirective, PresetsPlugin, PresetPlugin } from './presets.directive'
 
 
-export const properties: string[] = ['allowEdit', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
+export const properties: string[] = ['allowEdit', 'calendarMode', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
 export const modelProps: string[] = ['startDate', 'endDate', 'value'];
 
 /**
@@ -94,6 +94,10 @@ export class DateRangePickerComponent extends ComponentBase {
 
     public hide(event?: Object | Object | Object): void {
         return this.ej2Instances.hide(event);
+    }
+
+    public requiredModules(): undefined {
+        return this.ej2Instances.requiredModules();
     }
 
     public show(element?: Object, event?: Object | Object | Object): void {

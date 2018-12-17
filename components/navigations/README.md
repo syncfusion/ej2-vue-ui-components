@@ -57,9 +57,9 @@ Following list of components are available in the package
 * TreeView - Represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more.
 
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/treeview/getting-started.html?utm_source=npm&utm_campaign=treeview)
-  * [API References](https://ej2.syncfusion.com/vue/documentation/treeview/api.html?utm_source=npm&utm_campaign=treeview)
+  * [API References](https://ej2.syncfusion.com/vue/documentation/api/treeview?utm_source=npm&utm_campaign=treeview)
   * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=treeview#/material/treeview/default.html)
-  * [Product Page](https://www.syncfusion.com/products/vue/tree-view)
+  * [Product Page](https://www.syncfusion.com/vue-ui-components/tree-view)
 
 * Menu - Graphical user interface that serves as navigation header for your application or site. It has the support to provide nested level menu items that can be populated from a data source such as an array of JavaScript objects.
 

@@ -48,8 +48,8 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.deleteGroups(groupID);
     }
 
-    public deleteRules(filterID: string[]): void {
-        return this.ej2Instances.deleteRules(filterID);
+    public deleteRules(ruleID: string[]): void {
+        return this.ej2Instances.deleteRules(ruleID);
     }
 
     public getDataManagerQuery(rule: Object): Object {
@@ -90,6 +90,10 @@ export class QueryBuilderComponent extends ComponentBase {
 
     public setRulesFromSql(sqlString: string): void {
         return this.ej2Instances.setRulesFromSql(sqlString);
+    }
+
+    public validateFields(): void {
+        return this.ej2Instances.validateFields();
     }
 }
 

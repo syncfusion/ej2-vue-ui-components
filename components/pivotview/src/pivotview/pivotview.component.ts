@@ -90,14 +90,6 @@ export class PivotViewComponent extends ComponentBase {
     public pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): void {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
     }
-
-    public setCommonColumnsWidth(columns: Object[], width: number): void {
-        return this.ej2Instances.setCommonColumnsWidth(columns, width);
-    }
-
-    public triggerColumnRenderEvent(gridcolumns: Object[]): void {
-        return this.ej2Instances.triggerColumnRenderEvent(gridcolumns);
-    }
 }
 
 export const PivotViewPlugin = {

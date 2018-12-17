@@ -4,7 +4,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { DatePicker } from '@syncfusion/ej2-calendars';
 
 
-export const properties: string[] = ['allowEdit', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
+export const properties: string[] = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'strictMode', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
 export const modelProps: string[] = ['value'];
 
 /**
@@ -25,7 +25,7 @@ export class DatePickerComponent extends ComponentBase {
     public propKeys: string[] = properties;
     public models: string[] = modelProps;
     public hasChildDirective: boolean = false;
-    protected hasInjectedModules: boolean = false;
+    protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {};
     public tagNameMapper: Object = {};
     
@@ -109,6 +109,10 @@ export class DatePickerComponent extends ComponentBase {
 
     public removeDate(dates: Object | Object[]): void {
         return this.ej2Instances.removeDate(dates);
+    }
+
+    public requiredModules(): undefined {
+        return this.ej2Instances.requiredModules();
     }
 
     public show(type?: null | string, e?: Object | Object | Object): void {

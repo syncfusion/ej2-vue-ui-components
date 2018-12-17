@@ -10,7 +10,7 @@ import { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './la
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerMouseMove', 'markerRendering', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender'];
+export const properties: string[] = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'zoom'];
 export const modelProps: string[] = ['dataSource'];
 
 /**
@@ -89,8 +89,8 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.addLayer(layer);
     }
 
-    public addMarker(layerIndex: number, marker: Object): void {
-        return this.ej2Instances.addMarker(layerIndex, marker);
+    public addMarker(layerIndex: number, markerCollection: Object[]): void {
+        return this.ej2Instances.addMarker(layerIndex, markerCollection);
     }
 
     public export(type: Object, fileName: string, orientation?: Object): void {
@@ -131,6 +131,10 @@ export class MapsComponent extends ComponentBase {
 
     public onMouseMove(e: Object): boolean {
         return this.ej2Instances.onMouseMove(e);
+    }
+
+    public panByDirection(direction: Object): void {
+        return this.ej2Instances.panByDirection(direction);
     }
 
     public print(id?: string[] | string | Object): void {
