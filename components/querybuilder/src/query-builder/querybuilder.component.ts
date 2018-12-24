@@ -92,7 +92,7 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.setRulesFromSql(sqlString);
     }
 
-    public validateFields(): void {
+    public validateFields(): boolean {
         return this.ej2Instances.validateFields();
     }
 }
