@@ -119,7 +119,7 @@ var DialogComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     DialogComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

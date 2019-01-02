@@ -34,7 +34,7 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -136,7 +136,7 @@ let DatePickerComponent = class DatePickerComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -250,7 +250,7 @@ let TimePickerComponent = class TimePickerComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -393,7 +393,7 @@ let DateRangePickerComponent = class DateRangePickerComponent extends ComponentB
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -497,7 +497,7 @@ let DateTimePickerComponent = class DateTimePickerComponent extends ComponentBas
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

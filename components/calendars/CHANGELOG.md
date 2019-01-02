@@ -2,29 +2,23 @@
 
 ## [Unreleased]
 
-## 16.4.44 (2018-12-24)
+## 16.4.45 (2018-12-24)
 
 ### DatePicker
 
 #### Bug Fixes
 
-- Fixed the `allowEdit` issue in mobile mode.
+- DatePicker will allow assigning string value when type system configuration is disabled.
 
 #### New Features
 
 - Added the Islamic DatePicker support.
 
-### DateRangePicker
-
-#### Bug Fixes
-
-- Fixed the localization issue in preset `custom range` element.
-
 ### TimePicker
 
 #### Bug Fixes
 
-- Fixed the component destroy issue when `showClearButton` in disabled state.
+- Pop-up positioning support has been provided.
 
 ### Calendar
 
@@ -37,6 +31,26 @@
 #### New Features
 
 - Added the Islamic DateTimePicker support.
+
+## 16.4.44 (2018-12-24)
+
+### DatePicker
+
+#### Bug Fixes
+
+- Fixed the `allowEdit` issue in mobile mode.
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- Fixed the localization issue in preset `custom range` element.
+
+### TimePicker
+
+#### Bug Fixes
+
+- Fixed the component destroy issue when `showClearButton` in disabled state.
 
 ## 16.4.42 (2018-12-14)
 

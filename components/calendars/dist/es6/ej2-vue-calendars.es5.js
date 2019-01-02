@@ -49,7 +49,7 @@ var CalendarComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     CalendarComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -168,7 +168,7 @@ var DatePickerComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     DatePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -299,7 +299,7 @@ var TimePickerComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     TimePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -482,7 +482,7 @@ var DateRangePickerComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     DateRangePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -603,7 +603,7 @@ var DateTimePickerComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     DateTimePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

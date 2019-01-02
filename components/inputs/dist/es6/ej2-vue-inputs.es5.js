@@ -49,7 +49,7 @@ var TextBoxComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     TextBoxComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -156,7 +156,7 @@ var NumericTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     NumericTextBoxComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -266,7 +266,7 @@ var MaskedTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     MaskedTextBoxComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -370,7 +370,7 @@ var SliderComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     SliderComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -640,7 +640,7 @@ var ColorPickerComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     ColorPickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
