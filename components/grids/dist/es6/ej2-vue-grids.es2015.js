@@ -390,8 +390,8 @@ let GridComponent = class GridComponent extends ComponentBase {
     print() {
         return this.ej2Instances.print();
     }
-    refresh() {
-        return this.ej2Instances.refresh();
+    refresh(isClearSelection) {
+        return this.ej2Instances.refresh(isClearSelection);
     }
     refreshColumns() {
         return this.ej2Instances.refreshColumns();

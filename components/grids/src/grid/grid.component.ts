@@ -302,8 +302,8 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.print();
     }
 
-    public refresh(): void {
-        return this.ej2Instances.refresh();
+    public refresh(isClearSelection?: boolean): void {
+        return this.ej2Instances.refresh(isClearSelection);
     }
 
     public refreshColumns(): void {

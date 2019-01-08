@@ -2,21 +2,11 @@
 
 ## [Unreleased]
 
-## 16.4.45 (2018-12-24)
-
-### DatePicker
-
-#### Bug Fixes
-
-- DatePicker will allow assigning string value when type system configuration is disabled.
-
-#### New Features
-
-- Added the Islamic DatePicker support.
+## 16.4.46 (2019-01-02)
 
 ### TimePicker
 
-#### Bug Fixes
+#### New Features
 
 - Pop-up positioning support has been provided.
 
@@ -26,11 +16,25 @@
 
 - Added the Islamic calendar support.
 
+### DatePicker
+
+#### New Features
+
+- Added the Islamic DatePicker support.
+
 ### DateTimePicker
 
 #### New Features
 
 - Added the Islamic DateTimePicker support.
+
+## 16.4.45 (2019-01-02)
+
+### DatePicker
+
+#### Bug Fixes
+
+- DatePicker will allow assigning string value when type system configuration is disabled.
 
 ## 16.4.44 (2018-12-24)
 

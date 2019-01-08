@@ -23,11 +23,14 @@
 	"main": "./dist/ej2-vue-base.umd.min.js",
 	"module": "./index.js",
 	"readme": "ReadMe.md",
+	"peerDependencies": {
+		"vue": "2.5.2 - 2.5.21"
+	},
 	"dependencies": {
-		"@syncfusion/ej2-base": "*",
-		"vue": "^2.5.2"
+		"@syncfusion/ej2-base": "*"
 	},
 	"devDependencies": {
+		"vue": "2.5.2 - 2.5.21",
 		"@types/chai": "^3.4.28",
 		"@types/es6-promise": "0.0.28",
 		"@types/jasmine": "^2.2.29",

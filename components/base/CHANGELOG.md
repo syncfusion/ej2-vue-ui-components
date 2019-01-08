@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 16.4.46 (2019-01-02)
+
+### Common
+
+#### Bug Fixes
+
+- Moved vue from dependency to peer dependency for resolving duplicate dependency installation.
+
 ## 16.3.31 (2018-11-07)
 
 ### Common
