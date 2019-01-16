@@ -547,6 +547,41 @@ var __decorate$9 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let MenuItemsDirective = class MenuItemsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+MenuItemsDirective = __decorate$9([
+    EJComponentDecorator({})
+], MenuItemsDirective);
+const MenuItemsPlugin = {
+    name: 'e-menu-items',
+    install(Vue$$1) {
+        Vue$$1.component(MenuItemsPlugin.name, MenuItemsDirective);
+    }
+};
+let MenuItemDirective = class MenuItemDirective extends Vue {
+    render() {
+        return;
+    }
+};
+MenuItemDirective = __decorate$9([
+    EJComponentDecorator({})
+], MenuItemDirective);
+const MenuItemPlugin = {
+    name: 'e-',
+    install(Vue$$1) {
+        Vue$$1.component(MenuItemPlugin.name, MenuItemDirective);
+    }
+};
+
+var __decorate$10 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 const properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 const modelProps$6 = [];
 /**
@@ -560,10 +595,10 @@ let MenuComponent = class MenuComponent extends ComponentBase {
         super();
         this.propKeys = properties$6;
         this.models = modelProps$6;
-        this.hasChildDirective = false;
+        this.hasChildDirective = true;
         this.hasInjectedModules = false;
-        this.tagMapper = {};
-        this.tagNameMapper = {};
+        this.tagMapper = { "e-menu-items": "e-" };
+        this.tagNameMapper = { "e-menu-items": "e-items" };
         this.ej2Instances = new Menu({});
         this.bindProperties();
     }
@@ -589,7 +624,7 @@ let MenuComponent = class MenuComponent extends ComponentBase {
         return this.ej2Instances.showItems(items, isUniqueId);
     }
 };
-MenuComponent = __decorate$9([
+MenuComponent = __decorate$10([
     EJComponentDecorator({
         props: properties$6
     })
@@ -598,9 +633,11 @@ const MenuPlugin = {
     name: 'ejs-menu',
     install(Vue$$1) {
         Vue$$1.component(MenuPlugin.name, MenuComponent);
+        Vue$$1.component(MenuItemPlugin.name, MenuItemDirective);
+        Vue$$1.component(MenuItemsPlugin.name, MenuItemsDirective);
     }
 };
 
-export { AccordionItemsDirective, AccordionItemDirective, AccordionItemsPlugin, AccordionItemPlugin, AccordionComponent, AccordionPlugin, ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin, ToolbarComponent, ToolbarPlugin, ContextMenuComponent, ContextMenuPlugin, TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin, TabComponent, TabPlugin, TreeViewComponent, TreeViewPlugin, SidebarComponent, SidebarPlugin, MenuComponent, MenuPlugin };
+export { AccordionItemsDirective, AccordionItemDirective, AccordionItemsPlugin, AccordionItemPlugin, AccordionComponent, AccordionPlugin, ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin, ToolbarComponent, ToolbarPlugin, ContextMenuComponent, ContextMenuPlugin, TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin, TabComponent, TabPlugin, TreeViewComponent, TreeViewPlugin, SidebarComponent, SidebarPlugin, MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin, MenuComponent, MenuPlugin };
 export * from '@syncfusion/ej2-navigations';
 //# sourceMappingURL=ej2-vue-navigations.es2015.js.map

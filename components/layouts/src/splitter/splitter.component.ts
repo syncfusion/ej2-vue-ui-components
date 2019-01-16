@@ -43,10 +43,6 @@ export class SplitterComponent extends ComponentBase {
     public removePane(index: number): void {
         return this.ej2Instances.removePane(index);
     }
-
-    public removeSeparator(): void {
-        return this.ej2Instances.removeSeparator();
-    }
 }
 
 export const SplitterPlugin = {

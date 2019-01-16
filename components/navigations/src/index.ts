@@ -8,4 +8,5 @@ export { TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin } fr
 export { TabComponent, TabPlugin } from './tab/tab.component';
 export { TreeViewComponent, TreeViewPlugin } from './treeview/treeview.component';
 export { SidebarComponent, SidebarPlugin } from './sidebar/sidebar.component';
+export { MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin } from './menu/items.directive';
 export { MenuComponent, MenuPlugin } from './menu/menu.component';

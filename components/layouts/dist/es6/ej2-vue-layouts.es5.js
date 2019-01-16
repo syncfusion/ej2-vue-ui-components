@@ -122,9 +122,6 @@ var SplitterComponent = /** @__PURE__ @class */ (function (_super) {
     SplitterComponent.prototype.removePane = function (index) {
         return this.ej2Instances.removePane(index);
     };
-    SplitterComponent.prototype.removeSeparator = function () {
-        return this.ej2Instances.removeSeparator();
-    };
     SplitterComponent = __decorate$1([
         EJComponentDecorator({
             props: properties

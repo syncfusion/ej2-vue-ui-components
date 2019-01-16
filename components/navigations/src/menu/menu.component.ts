@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Menu } from '@syncfusion/ej2-navigations';
+import { MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin } from './items.directive'
 
 
 export const properties: string[] = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
@@ -20,10 +21,10 @@ export class MenuComponent extends ComponentBase {
     public ej2Instances: any;
     public propKeys: string[] = properties;
     public models: string[] = modelProps;
-    public hasChildDirective: boolean = false;
+    public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = false;
-    public tagMapper: { [key: string]: Object } = {};
-    public tagNameMapper: Object = {};
+    public tagMapper: { [key: string]: Object } = {"e-menu-items":"e-"};
+    public tagNameMapper: Object = {"e-menu-items":"e-items"};
     
     constructor() {
         super();
@@ -64,6 +65,8 @@ export const MenuPlugin = {
     name: 'ejs-menu',
     install(Vue: any) {
         Vue.component(MenuPlugin.name, MenuComponent);
+        Vue.component(MenuItemPlugin.name, MenuItemDirective);
+        Vue.component(MenuItemsPlugin.name, MenuItemsDirective);
 
     }
 }

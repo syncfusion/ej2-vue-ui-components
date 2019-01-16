@@ -726,6 +726,64 @@ var __decorate$9 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var MenuItemsDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$9(MenuItemsDirective, _super);
+    function MenuItemsDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MenuItemsDirective.prototype.render = function () {
+        return;
+    };
+    MenuItemsDirective = __decorate$9([
+        EJComponentDecorator({})
+    ], MenuItemsDirective);
+    return MenuItemsDirective;
+}(Vue));
+var MenuItemsPlugin = {
+    name: 'e-menu-items',
+    install: function (Vue$$1) {
+        Vue$$1.component(MenuItemsPlugin.name, MenuItemsDirective);
+    }
+};
+var MenuItemDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$9(MenuItemDirective, _super);
+    function MenuItemDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MenuItemDirective.prototype.render = function () {
+        return;
+    };
+    MenuItemDirective = __decorate$9([
+        EJComponentDecorator({})
+    ], MenuItemDirective);
+    return MenuItemDirective;
+}(Vue));
+var MenuItemPlugin = {
+    name: 'e-',
+    install: function (Vue$$1) {
+        Vue$$1.component(MenuItemPlugin.name, MenuItemDirective);
+    }
+};
+
+var __extends$10 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$10 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 var modelProps$6 = [];
 /**
@@ -735,15 +793,15 @@ var modelProps$6 = [];
  * ```
  */
 var MenuComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$9(MenuComponent, _super);
+    __extends$10(MenuComponent, _super);
     function MenuComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties$6;
         _this.models = modelProps$6;
-        _this.hasChildDirective = false;
+        _this.hasChildDirective = true;
         _this.hasInjectedModules = false;
-        _this.tagMapper = {};
-        _this.tagNameMapper = {};
+        _this.tagMapper = { "e-menu-items": "e-" };
+        _this.tagNameMapper = { "e-menu-items": "e-items" };
         _this.ej2Instances = new Menu({});
         _this.bindProperties();
         return _this;
@@ -769,7 +827,7 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
     MenuComponent.prototype.showItems = function (items, isUniqueId) {
         return this.ej2Instances.showItems(items, isUniqueId);
     };
-    MenuComponent = __decorate$9([
+    MenuComponent = __decorate$10([
         EJComponentDecorator({
             props: properties$6
         })
@@ -780,9 +838,11 @@ var MenuPlugin = {
     name: 'ejs-menu',
     install: function (Vue$$1) {
         Vue$$1.component(MenuPlugin.name, MenuComponent);
+        Vue$$1.component(MenuItemPlugin.name, MenuItemDirective);
+        Vue$$1.component(MenuItemsPlugin.name, MenuItemsDirective);
     }
 };
 
-export { AccordionItemsDirective, AccordionItemDirective, AccordionItemsPlugin, AccordionItemPlugin, AccordionComponent, AccordionPlugin, ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin, ToolbarComponent, ToolbarPlugin, ContextMenuComponent, ContextMenuPlugin, TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin, TabComponent, TabPlugin, TreeViewComponent, TreeViewPlugin, SidebarComponent, SidebarPlugin, MenuComponent, MenuPlugin };
+export { AccordionItemsDirective, AccordionItemDirective, AccordionItemsPlugin, AccordionItemPlugin, AccordionComponent, AccordionPlugin, ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin, ToolbarComponent, ToolbarPlugin, ContextMenuComponent, ContextMenuPlugin, TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin, TabComponent, TabPlugin, TreeViewComponent, TreeViewPlugin, SidebarComponent, SidebarPlugin, MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin, MenuComponent, MenuPlugin };
 export * from '@syncfusion/ej2-navigations';
 //# sourceMappingURL=ej2-vue-navigations.es5.js.map

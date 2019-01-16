@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 16.4.46 (2019-01-02)
+## 16.4.47 (2019-01-08)
 
 ### TimePicker
 
-#### New Features
+#### Bug Fixes
 
-- Pop-up positioning support has been provided.
+- TimePicker will allow assigning string value when type system configuration is disabled.
 
 ### Calendar
 
@@ -27,6 +27,14 @@
 #### New Features
 
 - Added the Islamic DateTimePicker support.
+
+## 16.4.46 (2019-01-08)
+
+### TimePicker
+
+#### New Features
+
+- Pop-up positioning support has been provided.
 
 ## 16.4.45 (2019-01-02)
 

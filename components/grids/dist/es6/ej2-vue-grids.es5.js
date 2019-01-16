@@ -475,8 +475,8 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.print = function () {
         return this.ej2Instances.print();
     };
-    GridComponent.prototype.refresh = function (isClearSelection) {
-        return this.ej2Instances.refresh(isClearSelection);
+    GridComponent.prototype.refresh = function () {
+        return this.ej2Instances.refresh();
     };
     GridComponent.prototype.refreshColumns = function () {
         return this.ej2Instances.refreshColumns();

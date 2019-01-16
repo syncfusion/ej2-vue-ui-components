@@ -84,9 +84,6 @@ let SplitterComponent = class SplitterComponent extends ComponentBase {
     removePane(index) {
         return this.ej2Instances.removePane(index);
     }
-    removeSeparator() {
-        return this.ej2Instances.removeSeparator();
-    }
 };
 SplitterComponent = __decorate$1([
     EJComponentDecorator({
