@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-dropdowns",
-	"version": "16.4.44",
+	"version": "16.4.47",
 	"description": "Essential JS 2 DropDown Components for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -42,6 +42,7 @@
 		"@types/jasmine": "^2.2.29",
 		"@types/jasmine-ajax": "^3.1.27",
 		"@types/requirejs": "^2.1.26",
+		"vue": "2.5.2 - 2.5.21",
 		"es6-promise": "^3.2.1",
 		"gulp": "^3.9.1",
 		"gulp-sass": "^3.1.0",
