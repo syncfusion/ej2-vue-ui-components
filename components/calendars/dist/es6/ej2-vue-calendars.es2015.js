@@ -34,7 +34,7 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -136,7 +136,7 @@ let DatePickerComponent = class DatePickerComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -250,7 +250,7 @@ let TimePickerComponent = class TimePickerComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -393,7 +393,7 @@ let DateRangePickerComponent = class DateRangePickerComponent extends ComponentB
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -472,7 +472,7 @@ var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$4 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
+const properties$4 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'scrollTo', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
 const modelProps$4 = ['value'];
 /**
  * Represents the Essential JS 2 VueJS DateTimePicker Component.
@@ -497,7 +497,7 @@ let DateTimePickerComponent = class DateTimePickerComponent extends ComponentBas
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

@@ -188,7 +188,7 @@ let GridComponent = class GridComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -398,6 +398,12 @@ let GridComponent = class GridComponent extends ComponentBase {
     }
     refreshHeader() {
         return this.ej2Instances.refreshHeader();
+    }
+    reorderColumnByIndex(fromIndex, toIndex) {
+        return this.ej2Instances.reorderColumnByIndex(fromIndex, toIndex);
+    }
+    reorderColumnByTargetIndex(fieldName, toIndex) {
+        return this.ej2Instances.reorderColumnByTargetIndex(fieldName, toIndex);
     }
     reorderColumns(fromFName, toFName) {
         return this.ej2Instances.reorderColumns(fromFName, toFName);

@@ -33,7 +33,7 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -144,7 +144,7 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -255,7 +255,7 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -366,7 +366,7 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { RecurrenceEditor } from '@syncfusion/ej2-schedule';
 
 
-export const properties: string[] = ['cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
+export const properties: string[] = ['calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
 export const modelProps: string[] = [];
 
 /**
@@ -35,6 +35,10 @@ export class RecurrenceEditorComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public getCalendarMode(): string {
+        return this.ej2Instances.getCalendarMode();
+    }
+
     public getRecurrenceDates(startDate: Object, rule: string, excludeDate?: string, maximumCount?: number, viewDate?: Object): undefined {
         return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
     }

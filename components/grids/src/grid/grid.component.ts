@@ -42,7 +42,7 @@ export class GridComponent extends ComponentBase {
         this.bindProperties();
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -312,6 +312,14 @@ export class GridComponent extends ComponentBase {
 
     public refreshHeader(): void {
         return this.ej2Instances.refreshHeader();
+    }
+
+    public reorderColumnByIndex(fromIndex: number, toIndex: number): void {
+        return this.ej2Instances.reorderColumnByIndex(fromIndex, toIndex);
+    }
+
+    public reorderColumnByTargetIndex(fieldName: string | string[], toIndex: number): void {
+        return this.ej2Instances.reorderColumnByTargetIndex(fieldName, toIndex);
     }
 
     public reorderColumns(fromFName: string | string[], toFName: string): void {

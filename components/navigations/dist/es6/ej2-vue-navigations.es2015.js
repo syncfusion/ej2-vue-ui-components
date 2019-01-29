@@ -479,7 +479,7 @@ let SidebarComponent = class SidebarComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -516,11 +516,11 @@ let SidebarComponent = class SidebarComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    hide() {
-        return this.ej2Instances.hide();
+    hide(e) {
+        return this.ej2Instances.hide(e);
     }
-    show() {
-        return this.ej2Instances.show();
+    show(e) {
+        return this.ej2Instances.show(e);
     }
     toggle(e) {
         return this.ej2Instances.toggle(e);

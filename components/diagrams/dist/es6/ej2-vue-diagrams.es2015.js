@@ -300,7 +300,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+const properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 const modelProps = [];
 /**
  * Represents vue Diagram Component
@@ -398,6 +398,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     exportDiagram(options) {
         return this.ej2Instances.exportDiagram(options);
     }
+    exportImage(image, options) {
+        return this.ej2Instances.exportImage(image, options);
+    }
     findElementUnderMouse(obj, position) {
         return this.ej2Instances.findElementUnderMouse(obj, position);
     }
@@ -418,6 +421,12 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     }
     getCursor(action, active) {
         return this.ej2Instances.getCursor(action, active);
+    }
+    getDiagramBounds() {
+        return this.ej2Instances.getDiagramBounds();
+    }
+    getDiagramContent(styleSheets) {
+        return this.ej2Instances.getDiagramContent(styleSheets);
     }
     getObject(name) {
         return this.ej2Instances.getObject(name);
@@ -451,6 +460,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     }
     print(options) {
         return this.ej2Instances.print(options);
+    }
+    printImage(image, options) {
+        return this.ej2Instances.printImage(image, options);
     }
     redo() {
         return this.ej2Instances.redo();

@@ -49,7 +49,7 @@ var TextBoxComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     TextBoxComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -129,7 +129,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$1 = ['cssClass', 'currency', 'currencyCode', 'decimals', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showSpinButton', 'step', 'strictMode', 'validateDecimalOnType', 'value', 'width', 'change', 'created', 'destroyed'];
+var properties$1 = ['cssClass', 'currency', 'currencyCode', 'decimals', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showSpinButton', 'step', 'strictMode', 'validateDecimalOnType', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus'];
 var modelProps$1 = ['value'];
 /**
  * Represents the Essential JS 2 VueJS NumericTextBox Component
@@ -156,7 +156,7 @@ var NumericTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     NumericTextBoxComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -239,7 +239,7 @@ var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$2 = ['cssClass', 'customCharacters', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'mask', 'placeholder', 'promptChar', 'showClearButton', 'value', 'width', 'change', 'created', 'destroyed', 'focus'];
+var properties$2 = ['cssClass', 'customCharacters', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'mask', 'placeholder', 'promptChar', 'showClearButton', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus'];
 var modelProps$2 = ['value'];
 /**
  * Represents the Essential JS 2 VueJS MaskedTextBox Component
@@ -266,7 +266,7 @@ var MaskedTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     MaskedTextBoxComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -370,7 +370,7 @@ var SliderComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     SliderComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -640,7 +640,7 @@ var ColorPickerComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     ColorPickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

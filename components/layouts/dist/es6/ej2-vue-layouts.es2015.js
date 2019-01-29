@@ -1,4 +1,4 @@
-import { Splitter } from '@syncfusion/ej2-layouts';
+import { DashboardLayout, Splitter } from '@syncfusion/ej2-layouts';
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
@@ -99,6 +99,115 @@ const SplitterPlugin = {
     }
 };
 
-export { PanesDirective, PaneDirective, PanesPlugin, PanePlugin, SplitterComponent, SplitterPlugin };
+var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+let PanelsDirective = class PanelsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+PanelsDirective = __decorate$2([
+    EJComponentDecorator({})
+], PanelsDirective);
+const PanelsPlugin = {
+    name: 'e-panels',
+    install(Vue$$1) {
+        Vue$$1.component(PanelsPlugin.name, PanelsDirective);
+    }
+};
+/**
+ * 'e-panels' directive represent a presets of VueJS dashboardlayout component
+ * It must be contained in a dashboardlayout component(`ejs-dashboardlayout`).
+ * ```html
+ * <ejs-dashboardlayout>
+ *   <e-panels>
+ *   <e-panel></e-panel>
+ *   <e-panel></e-panel>
+ *   </e-panels>
+ * </ejs-dashboardlayout>
+ * ```
+ */
+let PanelDirective = class PanelDirective extends Vue {
+    render() {
+        return;
+    }
+};
+PanelDirective = __decorate$2([
+    EJComponentDecorator({})
+], PanelDirective);
+const PanelPlugin = {
+    name: 'e-panel',
+    install(Vue$$1) {
+        Vue$$1.component(PanelPlugin.name, PanelDirective);
+    }
+};
+
+var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties$1 = ['allowDragging', 'allowFloating', 'allowPushing', 'allowResizing', 'cellAspectRatio', 'cellSpacing', 'columns', 'draggableHandle', 'enablePersistence', 'enableRtl', 'locale', 'mediaQuery', 'panels', 'resizableHandles', 'change', 'drag', 'dragStart', 'dragStop', 'resize', 'resizeStart', 'resizeStop'];
+const modelProps$1 = [];
+/**
+ * Represents the Essential JS 2 VueJS DashboardLayout Component.
+ * ```html
+ * <ejs-dashboardlayout></ejs-dashboardlayout>
+ * ```
+ */
+let DashboardLayoutComponent = class DashboardLayoutComponent extends ComponentBase {
+    constructor() {
+        super();
+        this.propKeys = properties$1;
+        this.models = modelProps$1;
+        this.hasChildDirective = true;
+        this.hasInjectedModules = false;
+        this.tagMapper = { "e-panels": "e-panel" };
+        this.tagNameMapper = {};
+        this.ej2Instances = new DashboardLayout({});
+        this.bindProperties();
+    }
+    render(createElement) {
+        return createElement('div', this.$slots.default);
+    }
+    addPanel(panel) {
+        return this.ej2Instances.addPanel(panel);
+    }
+    movePanel(id, row, col) {
+        return this.ej2Instances.movePanel(id, row, col);
+    }
+    removeAll() {
+        return this.ej2Instances.removeAll();
+    }
+    removePanel(id) {
+        return this.ej2Instances.removePanel(id);
+    }
+    resizePanel(id, sizeX, sizeY) {
+        return this.ej2Instances.resizePanel(id, sizeX, sizeY);
+    }
+    serialize() {
+        return this.ej2Instances.serialize();
+    }
+};
+DashboardLayoutComponent = __decorate$3([
+    EJComponentDecorator({
+        props: properties$1
+    })
+], DashboardLayoutComponent);
+const DashboardLayoutPlugin = {
+    name: 'ejs-dashboardlayout',
+    install(Vue$$1) {
+        Vue$$1.component(DashboardLayoutPlugin.name, DashboardLayoutComponent);
+        Vue$$1.component(PanelPlugin.name, PanelDirective);
+        Vue$$1.component(PanelsPlugin.name, PanelsDirective);
+    }
+};
+
+export { PanesDirective, PaneDirective, PanesPlugin, PanePlugin, SplitterComponent, SplitterPlugin, PanelsDirective, PanelDirective, PanelsPlugin, PanelPlugin, DashboardLayoutComponent, DashboardLayoutPlugin };
 export * from '@syncfusion/ej2-layouts';
 //# sourceMappingURL=ej2-vue-layouts.es2015.js.map

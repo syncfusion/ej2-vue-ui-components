@@ -4,7 +4,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { MaskedTextBox } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['cssClass', 'customCharacters', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'mask', 'placeholder', 'promptChar', 'showClearButton', 'value', 'width', 'change', 'created', 'destroyed', 'focus'];
+export const properties: string[] = ['cssClass', 'customCharacters', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'mask', 'placeholder', 'promptChar', 'showClearButton', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus'];
 export const modelProps: string[] = ['value'];
 
 /**
@@ -39,7 +39,7 @@ export class MaskedTextBoxComponent extends ComponentBase {
         this.bindProperties();
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

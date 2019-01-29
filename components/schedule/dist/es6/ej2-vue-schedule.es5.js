@@ -259,7 +259,7 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     ScheduleComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -507,7 +507,7 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$1 = ['cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
+var properties$1 = ['calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
 var modelProps$1 = [];
 /**
  * `ejs-recurrenceeditor` represents the VueJS RecurrenceEditor Component.
@@ -531,6 +531,9 @@ var RecurrenceEditorComponent = /** @__PURE__ @class */ (function (_super) {
     }
     RecurrenceEditorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
+    };
+    RecurrenceEditorComponent.prototype.getCalendarMode = function () {
+        return this.ej2Instances.getCalendarMode();
     };
     RecurrenceEditorComponent.prototype.getRecurrenceDates = function (startDate, rule, excludeDate, maximumCount, viewDate) {
         return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
