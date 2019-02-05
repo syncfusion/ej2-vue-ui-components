@@ -2,15 +2,13 @@
 
 ## [Unreleased]
 
-## 17.1.1-beta (2019-01-22)
-
-### TimePicker
-
-#### Breaking Changes
-
-- TimePicker pop-up will position at the center of the viewport in mobile resolution.
+## 16.4.52 (2019-02-05)
 
 ### Calendar
+
+#### Bug Fixes
+
+- Tabindex support has been provided.
 
 #### New Features
 
@@ -20,13 +18,45 @@
 
 #### New Features
 
+- Now, date type skeleton support has been provided for the format property.
+
 - Added the Islamic DatePicker support.
+
+#### Bug Fixes
+
+- Tabindex support has been provided.
 
 ### DateTimePicker
 
 #### New Features
 
+- Now, scrollTo support has been added for the TimePicker pop-up element of the DateTimePicker. This is used to set the scroll position to the given time value when no value is selected in the popup list.
+
 - Added the Islamic DateTimePicker support.
+
+#### Bug Fixes
+
+- Tabindex support has been provided.
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- Tabindex support has been provided.
+
+### TimePicker
+
+#### Bug Fixes
+
+- Tabindex support has been provided.
+
+## 16.4.48 (2019-01-22)
+
+### TimePicker
+
+#### Breaking Changes
+
+- TimePicker pop-up will position at the center of the viewport in mobile resolution.
 
 ## 16.4.47 (2019-01-16)
 

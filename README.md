@@ -37,7 +37,7 @@
 * New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/issues/new).
 * Ask your query in [Stack Overflow](https://stackoverflow.com/) with tag `syncfusion` and `ej2`.
  ## License
- Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license).
+ Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/LICENSE).
  ## Changelog
  Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes?utm_source=npm&utm_campaign=ej2-vue-ui-components)
      © Copyright 2018 Syncfusion, Inc. All Rights Reserved.

@@ -272,7 +272,7 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     GridComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -483,12 +483,6 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.refreshHeader = function () {
         return this.ej2Instances.refreshHeader();
-    };
-    GridComponent.prototype.reorderColumnByIndex = function (fromIndex, toIndex) {
-        return this.ej2Instances.reorderColumnByIndex(fromIndex, toIndex);
-    };
-    GridComponent.prototype.reorderColumnByTargetIndex = function (fieldName, toIndex) {
-        return this.ej2Instances.reorderColumnByTargetIndex(fieldName, toIndex);
     };
     GridComponent.prototype.reorderColumns = function (fromFName, toFName) {
         return this.ej2Instances.reorderColumns(fromFName, toFName);

@@ -451,7 +451,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+var properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 var modelProps = [];
 /**
  * Represents vue Diagram Component
@@ -551,9 +551,6 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.exportDiagram = function (options) {
         return this.ej2Instances.exportDiagram(options);
     };
-    DiagramComponent.prototype.exportImage = function (image, options) {
-        return this.ej2Instances.exportImage(image, options);
-    };
     DiagramComponent.prototype.findElementUnderMouse = function (obj, position) {
         return this.ej2Instances.findElementUnderMouse(obj, position);
     };
@@ -574,12 +571,6 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.getCursor = function (action, active) {
         return this.ej2Instances.getCursor(action, active);
-    };
-    DiagramComponent.prototype.getDiagramBounds = function () {
-        return this.ej2Instances.getDiagramBounds();
-    };
-    DiagramComponent.prototype.getDiagramContent = function (styleSheets) {
-        return this.ej2Instances.getDiagramContent(styleSheets);
     };
     DiagramComponent.prototype.getObject = function (name) {
         return this.ej2Instances.getObject(name);
@@ -613,9 +604,6 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.print = function (options) {
         return this.ej2Instances.print(options);
-    };
-    DiagramComponent.prototype.printImage = function (image, options) {
-        return this.ej2Instances.printImage(image, options);
     };
     DiagramComponent.prototype.redo = function () {
         return this.ej2Instances.redo();

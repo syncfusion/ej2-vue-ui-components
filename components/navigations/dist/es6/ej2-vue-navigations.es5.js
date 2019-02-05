@@ -643,7 +643,7 @@ var SidebarComponent = /** @__PURE__ @class */ (function (_super) {
         return _this;
     }
     SidebarComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -681,11 +681,11 @@ var SidebarComponent = /** @__PURE__ @class */ (function (_super) {
     SidebarComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    SidebarComponent.prototype.hide = function (e) {
-        return this.ej2Instances.hide(e);
+    SidebarComponent.prototype.hide = function () {
+        return this.ej2Instances.hide();
     };
-    SidebarComponent.prototype.show = function (e) {
-        return this.ej2Instances.show(e);
+    SidebarComponent.prototype.show = function () {
+        return this.ej2Instances.show();
     };
     SidebarComponent.prototype.toggle = function (e) {
         return this.ej2Instances.toggle(e);

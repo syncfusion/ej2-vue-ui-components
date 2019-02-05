@@ -39,7 +39,7 @@ export class SidebarComponent extends ComponentBase {
         this.bindProperties();
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -79,12 +79,12 @@ export class SidebarComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public hide(e?: Object): void {
-        return this.ej2Instances.hide(e);
+    public hide(): void {
+        return this.ej2Instances.hide();
     }
 
-    public show(e?: Object): void {
-        return this.ej2Instances.show(e);
+    public show(): void {
+        return this.ej2Instances.show();
     }
 
     public toggle(e?: Object): void {
