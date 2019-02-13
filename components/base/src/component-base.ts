@@ -28,7 +28,7 @@ export class ComponentBase extends Vue {
     }
     public getInjectedServices(): Object[] {
         let ret = [];
-        let provide: any = getValue('$vnode.context.$options.provide', this);
+        let provide: any = getValue('$vnode.context.$options.provide', this) || getValue('$root.$options.provide', this);
         if (provide) {
             // tslint:disable:no-any
             let injectables: any = provide;

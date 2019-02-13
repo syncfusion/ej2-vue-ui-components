@@ -33,7 +33,7 @@ let PivotViewComponent = class PivotViewComponent extends ComponentBase {
         this.bindProperties();
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

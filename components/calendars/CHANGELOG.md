@@ -2,6 +2,46 @@
 
 ## [Unreleased]
 
+## 16.4.53 (2019-02-13)
+
+### DatePicker
+
+#### Bug Fixes
+
+- Fixed the form validation class `ng-dirty` issue in Angular forms.
+
+#### New Features
+
+- Added the Islamic DatePicker support.
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- Fixed the form validation class `ng-dirty` issue in Angular forms.
+
+### DateTimePicker
+
+#### Bug Fixes
+
+- Fixed the form validation class `ng-dirty` issue in Angular forms.
+
+#### New Features
+
+- Added the Islamic DateTimePicker support.
+
+### TimePicker
+
+#### Bug Fixes
+
+- Fixed the form validation class `ng-dirty` issue in Angular forms.
+
+### Calendar
+
+#### New Features
+
+- Added the Islamic calendar support.
+
 ## 16.4.52 (2019-02-05)
 
 ### Calendar
@@ -10,17 +50,11 @@
 
 - Tabindex support has been provided.
 
-#### New Features
-
-- Added the Islamic calendar support.
-
 ### DatePicker
 
 #### New Features
 
 - Now, date type skeleton support has been provided for the format property.
-
-- Added the Islamic DatePicker support.
 
 #### Bug Fixes
 
@@ -31,8 +65,6 @@
 #### New Features
 
 - Now, scrollTo support has been added for the TimePicker pop-up element of the DateTimePicker. This is used to set the scroll position to the given time value when no value is selected in the popup list.
-
-- Added the Islamic DateTimePicker support.
 
 #### Bug Fixes
 

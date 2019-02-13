@@ -484,6 +484,12 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.refreshHeader = function () {
         return this.ej2Instances.refreshHeader();
     };
+    GridComponent.prototype.reorderColumnByIndex = function (fromIndex, toIndex) {
+        return this.ej2Instances.reorderColumnByIndex(fromIndex, toIndex);
+    };
+    GridComponent.prototype.reorderColumnByTargetIndex = function (fieldName, toIndex) {
+        return this.ej2Instances.reorderColumnByTargetIndex(fieldName, toIndex);
+    };
     GridComponent.prototype.reorderColumns = function (fromFName, toFName) {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     };

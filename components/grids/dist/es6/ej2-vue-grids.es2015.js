@@ -399,6 +399,12 @@ let GridComponent = class GridComponent extends ComponentBase {
     refreshHeader() {
         return this.ej2Instances.refreshHeader();
     }
+    reorderColumnByIndex(fromIndex, toIndex) {
+        return this.ej2Instances.reorderColumnByIndex(fromIndex, toIndex);
+    }
+    reorderColumnByTargetIndex(fieldName, toIndex) {
+        return this.ej2Instances.reorderColumnByTargetIndex(fieldName, toIndex);
+    }
     reorderColumns(fromFName, toFName) {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     }
