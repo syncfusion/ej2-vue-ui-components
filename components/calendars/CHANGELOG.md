@@ -2,6 +2,47 @@
 
 ## [Unreleased]
 
+## 16.4.54 (2019-02-19)
+
+### DatePicker
+
+#### Bug Fixes
+
+- Issue with, “DatePicker not restoring the initial value on form reset” has been fixed.
+
+#### New Features
+
+- Added the Islamic DatePicker support.
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- Issue with, “DateRangePicker not restoring the initial value on form reset” has been fixed.
+- Now year values are shown in the selected range of decade view.
+
+### DateTimePicker
+
+#### Bug Fixes
+
+- Issue with, “DateTimePicker not restoring the initial value on form reset” has been fixed.
+
+#### New Features
+
+- Added the Islamic DateTimePicker support.
+
+### TimePicker
+
+#### Bug Fixes
+
+- Issue with, “TimePicker not restoring the initial value on form reset” has been fixed.
+
+### Calendar
+
+#### New Features
+
+- Added the Islamic calendar support.
+
 ## 16.4.53 (2019-02-13)
 
 ### DatePicker
@@ -9,10 +50,6 @@
 #### Bug Fixes
 
 - Fixed the form validation class `ng-dirty` issue in Angular forms.
-
-#### New Features
-
-- Added the Islamic DatePicker support.
 
 ### DateRangePicker
 
@@ -26,21 +63,11 @@
 
 - Fixed the form validation class `ng-dirty` issue in Angular forms.
 
-#### New Features
-
-- Added the Islamic DateTimePicker support.
-
 ### TimePicker
 
 #### Bug Fixes
 
 - Fixed the form validation class `ng-dirty` issue in Angular forms.
-
-### Calendar
-
-#### New Features
-
-- Added the Islamic calendar support.
 
 ## 16.4.52 (2019-02-05)
 
