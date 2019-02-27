@@ -2,6 +2,30 @@
 
 ## [Unreleased]
 
+## 16.4.55 (2019-02-27)
+
+### DatePicker
+
+#### Bug Fixes
+
+- Resolved the issue with today button text not updated when dynamically change the localization of the page.
+
+#### New Features
+
+- Added the Islamic DatePicker support.
+
+### Calendar
+
+#### New Features
+
+- Added the Islamic calendar support.
+
+### DateTimePicker
+
+#### New Features
+
+- Added the Islamic DateTimePicker support.
+
 ## 16.4.54 (2019-02-19)
 
 ### DatePicker
@@ -9,10 +33,6 @@
 #### Bug Fixes
 
 - Issue with, “DatePicker not restoring the initial value on form reset” has been fixed.
-
-#### New Features
-
-- Added the Islamic DatePicker support.
 
 ### DateRangePicker
 
@@ -27,21 +47,11 @@
 
 - Issue with, “DateTimePicker not restoring the initial value on form reset” has been fixed.
 
-#### New Features
-
-- Added the Islamic DateTimePicker support.
-
 ### TimePicker
 
 #### Bug Fixes
 
 - Issue with, “TimePicker not restoring the initial value on form reset” has been fixed.
-
-### Calendar
-
-#### New Features
-
-- Added the Islamic calendar support.
 
 ## 16.4.53 (2019-02-13)
 
