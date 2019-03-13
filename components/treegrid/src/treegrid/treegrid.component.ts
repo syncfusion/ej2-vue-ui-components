@@ -7,7 +7,7 @@ import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPl
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
 
 
-export const properties: string[] = ['aggregates', 'allowExcelExport', 'allowFiltering', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowTextWrap', 'childMapping', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'dataSource', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableHover', 'enablePersistence', 'enableRtl', 'expandStateMapping', 'filterSettings', 'gridLines', 'hasChildMapping', 'height', 'idMapping', 'locale', 'pageSettings', 'parentIdMapping', 'printMode', 'query', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'treeColumnIndex', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeDataBound', 'beforeExcelExport', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'toolbarClick'];
+export const properties: string[] = ['aggregates', 'allowExcelExport', 'allowFiltering', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowTextWrap', 'autoCheckHierarchy', 'childMapping', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'dataSource', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableHover', 'enablePersistence', 'enableRtl', 'expandStateMapping', 'filterSettings', 'gridLines', 'hasChildMapping', 'height', 'idMapping', 'locale', 'pageSettings', 'parentIdMapping', 'printMode', 'query', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'treeColumnIndex', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeDataBound', 'beforeExcelExport', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'checkboxChange', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 /**
@@ -36,46 +36,37 @@ export class TreeGridComponent extends ComponentBase {
         super();
         this.ej2Instances = new TreeGrid({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
 
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
                 (this as any).$emit('modelchanged', eventProp[propKey]);
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
             this.ej2Instances._trigger(eventName, eventProp);
         }            
-    }
-
-    public setProperties(prop: any, muteOnChange: boolean): void {
-        if (this.ej2Instances && this.ej2Instances._setProperties) {
-            this.ej2Instances._setProperties(prop, muteOnChange);
-        }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys: string[] = Object.keys(prop);
-            let emitKeys: string[] = [];
-            let emitFlag: boolean = false;
-            keys.map((key: string): void => {
-                this.models.map((model: string): void => {
-                    if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
-                    }
-                });
-            });
-            if (emitFlag) {
-                emitKeys.map((propKey: string): void => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                })
-            }
-        }
     }
 
     public render(createElement: any) {
@@ -160,6 +151,10 @@ export class TreeGridComponent extends ComponentBase {
 
     public getCellFromIndex(rowIndex: number, columnIndex: number): Object {
         return this.ej2Instances.getCellFromIndex(rowIndex, columnIndex);
+    }
+
+    public getCheckedRowIndexes(): undefined {
+        return this.ej2Instances.getCheckedRowIndexes();
     }
 
     public getColumnByField(field: string): Object {
@@ -316,6 +311,10 @@ export class TreeGridComponent extends ComponentBase {
 
     public selectCell(cellIndex: Object, isToggle?: boolean): void {
         return this.ej2Instances.selectCell(cellIndex, isToggle);
+    }
+
+    public selectCheckboxes(indexes: number[]): void {
+        return this.ej2Instances.selectCheckboxes(indexes);
     }
 
     public selectRow(index: number, isToggle?: boolean): void {

@@ -44,7 +44,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
     };
     ComponentBase.prototype.getInjectedServices = function () {
         var ret = [];
-        var provide = getValue('$vnode.context.$options.provide', this) || getValue('$root.$options.provide', this);
+        var provide = getValue('$vnode.context.$options.provide', this);
         if (provide) {
             // tslint:disable:no-any
             var injectables = provide;

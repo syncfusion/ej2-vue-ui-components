@@ -91,7 +91,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeConditionChange', 'beforeFieldChange', 'beforeOperatorChange', 'beforeValueChange', 'conditionChanged', 'created', 'fieldChanged', 'groupDelete', 'groupInsert', 'operatorChanged', 'ruleDelete', 'ruleInsert', 'valueChanged'];
+var properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created'];
 var modelProps = [];
 /**
  * Represents the VueJS QueryBuilder Component.
@@ -111,8 +111,25 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new QueryBuilder({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    QueryBuilderComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     QueryBuilderComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -122,11 +139,11 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     QueryBuilderComponent.prototype.addRules = function (rule, groupID) {
         return this.ej2Instances.addRules(rule, groupID);
     };
-    QueryBuilderComponent.prototype.deleteGroups = function (groupID) {
-        return this.ej2Instances.deleteGroups(groupID);
+    QueryBuilderComponent.prototype.deleteGroups = function (groupIdColl) {
+        return this.ej2Instances.deleteGroups(groupIdColl);
     };
-    QueryBuilderComponent.prototype.deleteRules = function (ruleID) {
-        return this.ej2Instances.deleteRules(ruleID);
+    QueryBuilderComponent.prototype.deleteRules = function (ruleIdColl) {
+        return this.ej2Instances.deleteRules(ruleIdColl);
     };
     QueryBuilderComponent.prototype.getDataManagerQuery = function (rule) {
         return this.ej2Instances.getDataManagerQuery(rule);

@@ -63,6 +63,22 @@ let AccordionComponent = class AccordionComponent extends ComponentBase {
         this.tagNameMapper = { "e-accordionitems": "e-items" };
         this.ej2Instances = new Accordion({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
@@ -160,6 +176,22 @@ let ToolbarComponent = class ToolbarComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new Toolbar({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
@@ -223,6 +255,22 @@ let ContextMenuComponent = class ContextMenuComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new ContextMenu({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('ul', this.$slots.default);
@@ -324,6 +372,22 @@ let TabComponent = class TabComponent extends ComponentBase {
         this.tagNameMapper = { "e-tabitems": "e-items" };
         this.ej2Instances = new Tab({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
@@ -386,6 +450,22 @@ let TreeViewComponent = class TreeViewComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new TreeView({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
@@ -474,15 +554,30 @@ let SidebarComponent = class SidebarComponent extends ComponentBase {
         this.ej2Instances = new Sidebar({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
                 this.$emit('modelchanged', eventProp[propKey]);
             }
         }
@@ -490,37 +585,14 @@ let SidebarComponent = class SidebarComponent extends ComponentBase {
             this.ej2Instances._trigger(eventName, eventProp);
         }
     }
-    setProperties(prop, muteOnChange) {
-        if (this.ej2Instances && this.ej2Instances._setProperties) {
-            this.ej2Instances._setProperties(prop, muteOnChange);
-        }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
-                this.models.map((model) => {
-                    if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
-                    }
-                });
-            });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
-            }
-        }
-    }
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    hide() {
-        return this.ej2Instances.hide();
+    hide(e) {
+        return this.ej2Instances.hide(e);
     }
-    show() {
-        return this.ej2Instances.show();
+    show(e) {
+        return this.ej2Instances.show(e);
     }
     toggle(e) {
         return this.ej2Instances.toggle(e);
@@ -601,6 +673,22 @@ let MenuComponent = class MenuComponent extends ComponentBase {
         this.tagNameMapper = { "e-menu-items": "e-items" };
         this.ej2Instances = new Menu({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('ul', this.$slots.default);

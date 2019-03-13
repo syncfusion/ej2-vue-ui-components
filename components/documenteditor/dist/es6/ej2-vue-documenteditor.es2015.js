@@ -7,7 +7,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableContextMenu', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'isReadOnly', 'locale', 'zoomFactor', 'contentChange', 'created', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
+const properties = ['enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableContextMenu', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'isReadOnly', 'locale', 'zoomFactor', 'contentChange', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
 const modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS Document Editor Component
@@ -26,6 +26,22 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
         this.tagNameMapper = {};
         this.ej2Instances = new DocumentEditor({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
@@ -68,6 +84,12 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     }
     serialize() {
         return this.ej2Instances.serialize();
+    }
+    setDefaultCharacterFormat(characterFormat) {
+        return this.ej2Instances.setDefaultCharacterFormat(characterFormat);
+    }
+    setDefaultParagraphFormat(paragraphFormat) {
+        return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
     }
     showDialog(dialogType) {
         return this.ej2Instances.showDialog(dialogType);
@@ -113,6 +135,22 @@ let DocumentEditorContainerComponent = class DocumentEditorContainerComponent ex
         this.tagNameMapper = {};
         this.ej2Instances = new DocumentEditorContainer({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);

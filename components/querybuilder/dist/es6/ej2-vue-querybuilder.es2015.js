@@ -55,7 +55,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeConditionChange', 'beforeFieldChange', 'beforeOperatorChange', 'beforeValueChange', 'conditionChanged', 'created', 'fieldChanged', 'groupDelete', 'groupInsert', 'operatorChanged', 'ruleDelete', 'ruleInsert', 'valueChanged'];
+const properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created'];
 const modelProps = [];
 /**
  * Represents the VueJS QueryBuilder Component.
@@ -74,6 +74,22 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new QueryBuilder({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
@@ -84,11 +100,11 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
     addRules(rule, groupID) {
         return this.ej2Instances.addRules(rule, groupID);
     }
-    deleteGroups(groupID) {
-        return this.ej2Instances.deleteGroups(groupID);
+    deleteGroups(groupIdColl) {
+        return this.ej2Instances.deleteGroups(groupIdColl);
     }
-    deleteRules(ruleID) {
-        return this.ej2Instances.deleteRules(ruleID);
+    deleteRules(ruleIdColl) {
+        return this.ej2Instances.deleteRules(ruleIdColl);
     }
     getDataManagerQuery(rule) {
         return this.ej2Instances.getDataManagerQuery(rule);

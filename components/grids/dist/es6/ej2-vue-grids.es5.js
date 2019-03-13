@@ -266,45 +266,37 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new Grid({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    GridComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     GridComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    GridComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     GridComponent.prototype.render = function (createElement) {
@@ -612,8 +604,25 @@ var PagerComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new Pager({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    PagerComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     PagerComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };

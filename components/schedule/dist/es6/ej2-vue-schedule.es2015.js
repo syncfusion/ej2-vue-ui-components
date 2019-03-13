@@ -150,7 +150,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing'];
+const properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enableAdaptiveRows', 'enablePersistence', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing'];
 const modelProps = ['currentView', 'selectedDate'];
 /**
  * `ej-schedule` represents the VueJS Schedule Component.
@@ -170,43 +170,35 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
         this.ej2Instances = new Schedule({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -221,9 +213,6 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     addSelectedClass(cells, focusCell) {
         return this.ej2Instances.addSelectedClass(cells, focusCell);
     }
-    adjustEventWrapper() {
-        return this.ej2Instances.adjustEventWrapper();
-    }
     boundaryValidation(pageY, pageX) {
         return this.ej2Instances.boundaryValidation(pageY, pageX);
     }
@@ -235,6 +224,12 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     }
     deleteEvent(id, currentAction) {
         return this.ej2Instances.deleteEvent(id, currentAction);
+    }
+    exportToExcel(excelExportOptions) {
+        return this.ej2Instances.exportToExcel(excelExportOptions);
+    }
+    exportToICalendar(fileName) {
+        return this.ej2Instances.exportToICalendar(fileName);
     }
     getAllDayRow() {
         return this.ej2Instances.getAllDayRow();
@@ -281,8 +276,8 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getEventTooltipTemplate() {
         return this.ej2Instances.getEventTooltipTemplate();
     }
-    getEvents() {
-        return this.ej2Instances.getEvents();
+    getEvents(startDate, endDate, includeOccurrences) {
+        return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
     }
     getHeaderTooltipTemplate() {
         return this.ej2Instances.getHeaderTooltipTemplate();
@@ -334,6 +329,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
+    }
+    importICalendar(fileContent) {
+        return this.ej2Instances.importICalendar(fileContent);
     }
     isAllDayCell(td) {
         return this.ej2Instances.isAllDayCell(td);
@@ -427,6 +425,22 @@ let RecurrenceEditorComponent = class RecurrenceEditorComponent extends Componen
         this.tagNameMapper = {};
         this.ej2Instances = new RecurrenceEditor({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);

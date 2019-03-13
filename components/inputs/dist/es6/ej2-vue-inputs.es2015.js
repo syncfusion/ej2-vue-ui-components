@@ -9,7 +9,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'placeholder', 'readonly', 'showClearButton', 'type', 'value', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
+const properties = ['cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'locale', 'multiline', 'placeholder', 'readonly', 'showClearButton', 'type', 'value', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
 const modelProps = ['value'];
 /**
  * Represents the Essential JS 2 VueJS TextBox Component
@@ -29,43 +29,35 @@ let TextBoxComponent = class TextBoxComponent extends ComponentBase {
         this.ej2Instances = new TextBox({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -119,43 +111,35 @@ let NumericTextBoxComponent = class NumericTextBoxComponent extends ComponentBas
         this.ej2Instances = new NumericTextBox({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -212,43 +196,35 @@ let MaskedTextBoxComponent = class MaskedTextBoxComponent extends ComponentBase 
         this.ej2Instances = new MaskedTextBox({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -299,43 +275,35 @@ let SliderComponent = class SliderComponent extends ComponentBase {
         this.ej2Instances = new Slider({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -435,6 +403,22 @@ let UploaderComponent = class UploaderComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new Uploader({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('input', this.$slots.default);
@@ -513,43 +497,35 @@ let ColorPickerComponent = class ColorPickerComponent extends ComponentBase {
         this.ej2Instances = new ColorPicker({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {

@@ -4,7 +4,7 @@ import { QueryBuilder } from '@syncfusion/ej2-querybuilder';
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 
 
-export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeConditionChange', 'beforeFieldChange', 'beforeOperatorChange', 'beforeValueChange', 'conditionChanged', 'created', 'fieldChanged', 'groupDelete', 'groupInsert', 'operatorChanged', 'ruleDelete', 'ruleInsert', 'valueChanged'];
+export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created'];
 export const modelProps: string[] = [];
 
 /**
@@ -30,6 +30,22 @@ export class QueryBuilderComponent extends ComponentBase {
         super();
         this.ej2Instances = new QueryBuilder({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
 
     public render(createElement: any) {
@@ -44,12 +60,12 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.addRules(rule, groupID);
     }
 
-    public deleteGroups(groupID: string[]): void {
-        return this.ej2Instances.deleteGroups(groupID);
+    public deleteGroups(groupIdColl: string[]): void {
+        return this.ej2Instances.deleteGroups(groupIdColl);
     }
 
-    public deleteRules(ruleID: string[]): void {
-        return this.ej2Instances.deleteRules(ruleID);
+    public deleteRules(ruleIdColl: string[]): void {
+        return this.ej2Instances.deleteRules(ruleIdColl);
     }
 
     public getDataManagerQuery(rule: Object): Object {

@@ -9,7 +9,7 @@ import { PortsDirective, PortDirective, PortsPlugin, PortPlugin } from './ports.
 import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.directive'
 
 
-export const properties: string[] = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+export const properties: string[] = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
 /**
@@ -35,6 +35,22 @@ export class DiagramComponent extends ComponentBase {
         super();
         this.ej2Instances = new Diagram({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
 
     public render(createElement: any) {
@@ -57,8 +73,16 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.addLabels(obj, labels);
     }
 
+    public addLanes(node: Object, lane: Object[], index?: number): void {
+        return this.ej2Instances.addLanes(node, lane, index);
+    }
+
     public addLayer(layer: Object, layerObject?: Object[]): void {
         return this.ej2Instances.addLayer(layer, layerObject);
+    }
+
+    public addPhases(node: Object, phases: Object[]): void {
+        return this.ej2Instances.addPhases(node, phases);
     }
 
     public addPorts(obj: Object, ports: Object[]): void {
@@ -95,6 +119,10 @@ export class DiagramComponent extends ComponentBase {
 
     public clear(): void {
         return this.ej2Instances.clear();
+    }
+
+    public clearHistory(): void {
+        return this.ej2Instances.clearHistory();
     }
 
     public clearSelection(): void {
@@ -141,6 +169,10 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.exportDiagram(options);
     }
 
+    public exportImage(image: string, options: Object): void {
+        return this.ej2Instances.exportImage(image, options);
+    }
+
     public findElementUnderMouse(obj: Object, position: Object): Object {
         return this.ej2Instances.findElementUnderMouse(obj, position);
     }
@@ -167,6 +199,14 @@ export class DiagramComponent extends ComponentBase {
 
     public getCursor(action: string, active: boolean): string {
         return this.ej2Instances.getCursor(action, active);
+    }
+
+    public getDiagramBounds(): Object {
+        return this.ej2Instances.getDiagramBounds();
+    }
+
+    public getDiagramContent(styleSheets?: Object): string {
+        return this.ej2Instances.getDiagramContent(styleSheets);
     }
 
     public getObject(name: string): Object {
@@ -211,6 +251,10 @@ export class DiagramComponent extends ComponentBase {
 
     public print(options: Object): void {
         return this.ej2Instances.print(options);
+    }
+
+    public printImage(image: string, options: Object): void {
+        return this.ej2Instances.printImage(image, options);
     }
 
     public redo(): void {
@@ -287,6 +331,10 @@ export class DiagramComponent extends ComponentBase {
 
     public setActiveLayer(layerName: string): void {
         return this.ej2Instances.setActiveLayer(layerName);
+    }
+
+    public setStackLimit(stackLimit: number): void {
+        return this.ej2Instances.setStackLimit(stackLimit);
     }
 
     public startGroupAction(): void {

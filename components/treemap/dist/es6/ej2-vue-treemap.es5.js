@@ -89,7 +89,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['background', 'border', 'colorValuePath', 'dataSource', 'description', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'load', 'loaded', 'mouseMove', 'resize', 'tooltipRendering'];
+var properties = ['background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
 var modelProps = [];
 /**
  * Represents Vuejs TreeMap Component
@@ -109,13 +109,42 @@ var TreeMapComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new TreeMap({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    TreeMapComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     TreeMapComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    TreeMapComponent.prototype.calculatePreviousLevelChildItems = function (labelText, drillLevelValues, item, directLevel) {
+        return this.ej2Instances.calculatePreviousLevelChildItems(labelText, drillLevelValues, item, directLevel);
+    };
+    TreeMapComponent.prototype.calculateSelectedTextLevels = function (labelText, item) {
+        return this.ej2Instances.calculateSelectedTextLevels(labelText, item);
+    };
     TreeMapComponent.prototype.clickOnTreeMap = function (e) {
         return this.ej2Instances.clickOnTreeMap(e);
+    };
+    TreeMapComponent.prototype.compareSelectedLabelWithDrillDownItems = function (drillLevelValues, item, i) {
+        return this.ej2Instances.compareSelectedLabelWithDrillDownItems(drillLevelValues, item, i);
+    };
+    TreeMapComponent.prototype.doubleClickOnTreeMap = function (e) {
+        return this.ej2Instances.doubleClickOnTreeMap(e);
     };
     TreeMapComponent.prototype.export = function (type, fileName, orientation) {
         return this.ej2Instances.export(type, fileName, orientation);
@@ -143,6 +172,9 @@ var TreeMapComponent = /** @__PURE__ @class */ (function (_super) {
     };
     TreeMapComponent.prototype.resizeOnTreeMap = function (e) {
         return this.ej2Instances.resizeOnTreeMap(e);
+    };
+    TreeMapComponent.prototype.rightClickOnTreeMap = function (e) {
+        return this.ej2Instances.rightClickOnTreeMap(e);
     };
     TreeMapComponent = __decorate$1([
         EJComponentDecorator({

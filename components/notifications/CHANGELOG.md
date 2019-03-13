@@ -47,7 +47,7 @@ The toast is a small container, in which user can show a single or multiple info
 - **Template**: User customized element can be defined for the toast using the template property.
 
 
-## 16.4.40-beta (2018-12-10)
+## 17.1.1-beta (2019-01-29)
 
 ### Toast
 

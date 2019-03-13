@@ -53,7 +53,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['background', 'border', 'colorValuePath', 'dataSource', 'description', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'load', 'loaded', 'mouseMove', 'resize', 'tooltipRendering'];
+const properties = ['background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
 const modelProps = [];
 /**
  * Represents Vuejs TreeMap Component
@@ -72,12 +72,40 @@ let TreeMapComponent = class TreeMapComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new TreeMap({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    calculatePreviousLevelChildItems(labelText, drillLevelValues, item, directLevel) {
+        return this.ej2Instances.calculatePreviousLevelChildItems(labelText, drillLevelValues, item, directLevel);
+    }
+    calculateSelectedTextLevels(labelText, item) {
+        return this.ej2Instances.calculateSelectedTextLevels(labelText, item);
+    }
     clickOnTreeMap(e) {
         return this.ej2Instances.clickOnTreeMap(e);
+    }
+    compareSelectedLabelWithDrillDownItems(drillLevelValues, item, i) {
+        return this.ej2Instances.compareSelectedLabelWithDrillDownItems(drillLevelValues, item, i);
+    }
+    doubleClickOnTreeMap(e) {
+        return this.ej2Instances.doubleClickOnTreeMap(e);
     }
     export(type, fileName, orientation) {
         return this.ej2Instances.export(type, fileName, orientation);
@@ -105,6 +133,9 @@ let TreeMapComponent = class TreeMapComponent extends ComponentBase {
     }
     resizeOnTreeMap(e) {
         return this.ej2Instances.resizeOnTreeMap(e);
+    }
+    rightClickOnTreeMap(e) {
+        return this.ej2Instances.rightClickOnTreeMap(e);
     }
 };
 TreeMapComponent = __decorate$1([

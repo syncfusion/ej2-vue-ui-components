@@ -245,7 +245,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['aggregates', 'allowExcelExport', 'allowFiltering', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowTextWrap', 'childMapping', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'dataSource', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableHover', 'enablePersistence', 'enableRtl', 'expandStateMapping', 'filterSettings', 'gridLines', 'hasChildMapping', 'height', 'idMapping', 'locale', 'pageSettings', 'parentIdMapping', 'printMode', 'query', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'treeColumnIndex', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeDataBound', 'beforeExcelExport', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'toolbarClick'];
+var properties = ['aggregates', 'allowExcelExport', 'allowFiltering', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowTextWrap', 'autoCheckHierarchy', 'childMapping', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'dataSource', 'editSettings', 'enableAltRow', 'enableCollapseAll', 'enableHover', 'enablePersistence', 'enableRtl', 'expandStateMapping', 'filterSettings', 'gridLines', 'hasChildMapping', 'height', 'idMapping', 'locale', 'pageSettings', 'parentIdMapping', 'printMode', 'query', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'treeColumnIndex', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeDataBound', 'beforeExcelExport', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'checkboxChange', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'toolbarClick'];
 var modelProps = ['dataSource'];
 /**
  * `ejs-treegrid` represents the VueJS TreeGrid Component.
@@ -266,45 +266,37 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new TreeGrid({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    TreeGridComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     TreeGridComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    TreeGridComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     TreeGridComponent.prototype.render = function (createElement) {
@@ -369,6 +361,9 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     TreeGridComponent.prototype.getCellFromIndex = function (rowIndex, columnIndex) {
         return this.ej2Instances.getCellFromIndex(rowIndex, columnIndex);
+    };
+    TreeGridComponent.prototype.getCheckedRowIndexes = function () {
+        return this.ej2Instances.getCheckedRowIndexes();
     };
     TreeGridComponent.prototype.getColumnByField = function (field) {
         return this.ej2Instances.getColumnByField(field);
@@ -486,6 +481,9 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     TreeGridComponent.prototype.selectCell = function (cellIndex, isToggle) {
         return this.ej2Instances.selectCell(cellIndex, isToggle);
+    };
+    TreeGridComponent.prototype.selectCheckboxes = function (indexes) {
+        return this.ej2Instances.selectCheckboxes(indexes);
     };
     TreeGridComponent.prototype.selectRow = function (index, isToggle) {
         return this.ej2Instances.selectRow(index, isToggle);

@@ -30,6 +30,22 @@ export class SmithchartComponent extends ComponentBase {
         super();
         this.ej2Instances = new Smithchart({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
 
     public render(createElement: any) {

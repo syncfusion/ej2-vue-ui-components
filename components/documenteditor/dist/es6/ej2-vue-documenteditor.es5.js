@@ -20,7 +20,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableContextMenu', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'isReadOnly', 'locale', 'zoomFactor', 'contentChange', 'created', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
+var properties = ['enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableContextMenu', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'isReadOnly', 'locale', 'zoomFactor', 'contentChange', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
 var modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS Document Editor Component
@@ -40,8 +40,25 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new DocumentEditor({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    DocumentEditorComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     DocumentEditorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -83,6 +100,12 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DocumentEditorComponent.prototype.serialize = function () {
         return this.ej2Instances.serialize();
+    };
+    DocumentEditorComponent.prototype.setDefaultCharacterFormat = function (characterFormat) {
+        return this.ej2Instances.setDefaultCharacterFormat(characterFormat);
+    };
+    DocumentEditorComponent.prototype.setDefaultParagraphFormat = function (paragraphFormat) {
+        return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
     };
     DocumentEditorComponent.prototype.showDialog = function (dialogType) {
         return this.ej2Instances.showDialog(dialogType);
@@ -143,8 +166,25 @@ var DocumentEditorContainerComponent = /** @__PURE__ @class */ (function (_super
         _this.tagNameMapper = {};
         _this.ej2Instances = new DocumentEditorContainer({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    DocumentEditorContainerComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     DocumentEditorContainerComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };

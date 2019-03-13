@@ -183,43 +183,35 @@ let GridComponent = class GridComponent extends ComponentBase {
         this.ej2Instances = new Grid({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         this.bindProperties();
-    }
-    trigger(eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key = this.models.toString().match(/checked|value/) || [];
-            let propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
     }
     setProperties(prop, muteOnChange) {
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys = Object.keys(prop);
-            let emitKeys = [];
-            let emitFlag = false;
-            keys.map((key) => {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
                 this.models.map((model) => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag) {
-                emitKeys.map((propKey) => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -512,6 +504,22 @@ let PagerComponent = class PagerComponent extends ComponentBase {
         this.tagNameMapper = {};
         this.ej2Instances = new Pager({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     render(createElement) {
         return createElement('div', this.$slots.default);

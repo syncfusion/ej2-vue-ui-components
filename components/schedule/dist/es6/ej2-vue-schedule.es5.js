@@ -232,7 +232,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing'];
+var properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enableAdaptiveRows', 'enablePersistence', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing'];
 var modelProps = ['currentView', 'selectedDate'];
 /**
  * `ej-schedule` represents the VueJS Schedule Component.
@@ -253,45 +253,37 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new Schedule({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    ScheduleComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     ScheduleComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    ScheduleComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     ScheduleComponent.prototype.render = function (createElement) {
@@ -306,9 +298,6 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.addSelectedClass = function (cells, focusCell) {
         return this.ej2Instances.addSelectedClass(cells, focusCell);
     };
-    ScheduleComponent.prototype.adjustEventWrapper = function () {
-        return this.ej2Instances.adjustEventWrapper();
-    };
     ScheduleComponent.prototype.boundaryValidation = function (pageY, pageX) {
         return this.ej2Instances.boundaryValidation(pageY, pageX);
     };
@@ -320,6 +309,12 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ScheduleComponent.prototype.deleteEvent = function (id, currentAction) {
         return this.ej2Instances.deleteEvent(id, currentAction);
+    };
+    ScheduleComponent.prototype.exportToExcel = function (excelExportOptions) {
+        return this.ej2Instances.exportToExcel(excelExportOptions);
+    };
+    ScheduleComponent.prototype.exportToICalendar = function (fileName) {
+        return this.ej2Instances.exportToICalendar(fileName);
     };
     ScheduleComponent.prototype.getAllDayRow = function () {
         return this.ej2Instances.getAllDayRow();
@@ -366,8 +361,8 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getEventTooltipTemplate = function () {
         return this.ej2Instances.getEventTooltipTemplate();
     };
-    ScheduleComponent.prototype.getEvents = function () {
-        return this.ej2Instances.getEvents();
+    ScheduleComponent.prototype.getEvents = function (startDate, endDate, includeOccurrences) {
+        return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
     };
     ScheduleComponent.prototype.getHeaderTooltipTemplate = function () {
         return this.ej2Instances.getHeaderTooltipTemplate();
@@ -419,6 +414,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ScheduleComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
+    };
+    ScheduleComponent.prototype.importICalendar = function (fileContent) {
+        return this.ej2Instances.importICalendar(fileContent);
     };
     ScheduleComponent.prototype.isAllDayCell = function (td) {
         return this.ej2Instances.isAllDayCell(td);
@@ -527,8 +525,25 @@ var RecurrenceEditorComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new RecurrenceEditor({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    RecurrenceEditorComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     RecurrenceEditorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };

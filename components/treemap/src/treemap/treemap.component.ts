@@ -4,7 +4,7 @@ import { TreeMap } from '@syncfusion/ej2-treemap';
 import { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin } from './levels.directive'
 
 
-export const properties: string[] = ['background', 'border', 'colorValuePath', 'dataSource', 'description', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'load', 'loaded', 'mouseMove', 'resize', 'tooltipRendering'];
+export const properties: string[] = ['background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
 export const modelProps: string[] = [];
 
 /**
@@ -30,14 +30,46 @@ export class TreeMapComponent extends ComponentBase {
         super();
         this.ej2Instances = new TreeMap({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
 
     public render(createElement: any) {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public calculatePreviousLevelChildItems(labelText: Object, drillLevelValues: Object, item: Object, directLevel: boolean): boolean {
+        return this.ej2Instances.calculatePreviousLevelChildItems(labelText, drillLevelValues, item, directLevel);
+    }
+
+    public calculateSelectedTextLevels(labelText: Object, item: Object): Object {
+        return this.ej2Instances.calculateSelectedTextLevels(labelText, item);
+    }
+
     public clickOnTreeMap(e: Object): void {
         return this.ej2Instances.clickOnTreeMap(e);
+    }
+
+    public compareSelectedLabelWithDrillDownItems(drillLevelValues: Object, item: Object, i: number): Object {
+        return this.ej2Instances.compareSelectedLabelWithDrillDownItems(drillLevelValues, item, i);
+    }
+
+    public doubleClickOnTreeMap(e: Object): void {
+        return this.ej2Instances.doubleClickOnTreeMap(e);
     }
 
     public export(type: Object, fileName: string, orientation?: Object): void {
@@ -74,6 +106,10 @@ export class TreeMapComponent extends ComponentBase {
 
     public resizeOnTreeMap(e: Object): void {
         return this.ej2Instances.resizeOnTreeMap(e);
+    }
+
+    public rightClickOnTreeMap(e: Object): void {
+        return this.ej2Instances.rightClickOnTreeMap(e);
     }
 }
 

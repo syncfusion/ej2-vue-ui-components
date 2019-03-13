@@ -9,10 +9,11 @@ import { StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, 
 import { StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin } from './annotations.directive'
 import { StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin } from './selecteddataindexes.directive'
 import { StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin } from './periods.directive'
+import { StockChartStockEventsDirective, StockChartStockEventDirective, StockChartStockEventsPlugin, StockChartStockEventPlugin } from './stockevents.directive'
 import { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin } from './indicators.directive'
 
 
-export const properties: string[] = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'rangeChange', 'selectorRender', 'seriesRender', 'tooltipRender'];
+export const properties: string[] = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'stockEvents', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'rangeChange', 'selectorRender', 'seriesRender', 'stockEventRender', 'tooltipRender'];
 export const modelProps: string[] = [];
 
 /**
@@ -31,13 +32,29 @@ export class StockChartComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-stockchart-series-collection":{"e-stockchart-series":{"e-trendlines":"e-trendline"}},"e-stockchart-axes":{"e-stockchart-axis":{"e-stockchart-striplines":"e-stockchart-stripline"}},"e-stockchart-rows":"e-stockchart-row","e-stockchart-annotations":"e-stockchart-annotation","e-stockchart-selectedDataIndexes":"e-stockchart-selectedDataIndex","e-stockchart-periods":"e-stockchart-period","e-stockchart-indicators":"e-stockchart-indicator"};
-    public tagNameMapper: Object = {"e-stockchart-series-collection":"e-series","e-stockchart-striplines":"e-stripLines","e-stockchart-axes":"e-axes","e-stockchart-rows":"e-rows","e-stockchart-annotations":"e-annotations","e-stockchart-selectedDataIndexes":"e-selectedDataIndexes","e-stockchart-periods":"e-periods","e-stockchart-indicators":"e-indicators"};
+    public tagMapper: { [key: string]: Object } = {"e-stockchart-series-collection":{"e-stockchart-series":{"e-trendlines":"e-trendline"}},"e-stockchart-axes":{"e-stockchart-axis":{"e-stockchart-striplines":"e-stockchart-stripline"}},"e-stockchart-rows":"e-stockchart-row","e-stockchart-annotations":"e-stockchart-annotation","e-stockchart-selectedDataIndexes":"e-stockchart-selectedDataIndex","e-stockchart-periods":"e-stockchart-period","e-stockchart-stockevents":"e-stockchart-stockevent","e-stockchart-indicators":"e-stockchart-indicator"};
+    public tagNameMapper: Object = {"e-stockchart-series-collection":"e-series","e-stockchart-striplines":"e-stripLines","e-stockchart-axes":"e-axes","e-stockchart-rows":"e-rows","e-stockchart-annotations":"e-annotations","e-stockchart-selectedDataIndexes":"e-selectedDataIndexes","e-stockchart-periods":"e-periods","e-stockchart-stockevents":"e-stockEvents","e-stockchart-indicators":"e-indicators"};
     
     constructor() {
         super();
         this.ej2Instances = new StockChart({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
 
     public render(createElement: any) {
@@ -77,6 +94,8 @@ export const StockChartPlugin = {
         Vue.component(StockChartSelectedDataIndexesPlugin.name, StockChartSelectedDataIndexesDirective);
         Vue.component(StockChartPeriodPlugin.name, StockChartPeriodDirective);
         Vue.component(StockChartPeriodsPlugin.name, StockChartPeriodsDirective);
+        Vue.component(StockChartStockEventPlugin.name, StockChartStockEventDirective);
+        Vue.component(StockChartStockEventsPlugin.name, StockChartStockEventsDirective);
         Vue.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
         Vue.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
 

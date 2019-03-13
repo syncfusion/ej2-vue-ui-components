@@ -2,6 +2,27 @@
 
 ## [Unreleased]
 
+## 17.1.32-beta (2019-03-13)
+
+### DatePicker
+
+#### Bug Fixes
+
+- Issue with clear button not shown when disable the `allowEdit` property has been fixed.
+
+### DateRangePicker
+
+#### New Features
+
+- Now, you can move to a particular date without UI interaction using `NavigateTo` method.
+- Provided option to set the start and depth level view of the calendar.
+
+### DateTimePicker
+
+#### New Features
+
+- Now, you can provide datetime value as a string to the DateTimePicker.
+
 ## 16.4.55 (2019-02-27)
 
 ### DatePicker
@@ -9,22 +30,6 @@
 #### Bug Fixes
 
 - Resolved the issue with today button text not updated when dynamically change the localization of the page.
-
-#### New Features
-
-- Added the Islamic DatePicker support.
-
-### Calendar
-
-#### New Features
-
-- Added the Islamic calendar support.
-
-### DateTimePicker
-
-#### New Features
-
-- Added the Islamic DateTimePicker support.
 
 ## 16.4.54 (2019-02-19)
 
@@ -119,7 +124,7 @@
 
 - Tabindex support has been provided.
 
-## 16.4.48 (2019-01-22)
+## 17.1.1-beta (2019-01-29)
 
 ### TimePicker
 

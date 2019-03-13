@@ -29,5 +29,6 @@ export { StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, 
 export { StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin } from './stock-chart/annotations.directive';
 export { StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin } from './stock-chart/selecteddataindexes.directive';
 export { StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin } from './stock-chart/periods.directive';
+export { StockChartStockEventsDirective, StockChartStockEventDirective, StockChartStockEventsPlugin, StockChartStockEventPlugin } from './stock-chart/stockevents.directive';
 export { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin } from './stock-chart/indicators.directive';
 export { StockChartComponent, StockChartPlugin } from './stock-chart/stockchart.component';

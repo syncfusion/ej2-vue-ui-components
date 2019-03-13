@@ -749,8 +749,25 @@ var ChartComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-series-collection": "e-series", "e-striplines": "e-stripLines", "e-multilevellabels": "e-multiLevelLabels", "e-selecteddataindexes": "e-selectedDataIndexes" };
         _this.ej2Instances = new Chart({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    ChartComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     ChartComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -965,8 +982,25 @@ var AccumulationChartComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-accumulation-series-collection": "e-series", "e-accumulation-annotations": "e-annotations" };
         _this.ej2Instances = new AccumulationChart({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    AccumulationChartComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     AccumulationChartComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -1094,8 +1128,25 @@ var RangeNavigatorComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-rangenavigator-series-collection": "e-series" };
         _this.ej2Instances = new RangeNavigator({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    RangeNavigatorComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     RangeNavigatorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -1224,8 +1275,25 @@ var SparklineComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new Sparkline({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    SparklineComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     SparklineComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -1345,8 +1413,25 @@ var SmithchartComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-seriesCollection": "e-series" };
         _this.ej2Instances = new Smithchart({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    SmithchartComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     SmithchartComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -1879,42 +1964,42 @@ var __decorate$30 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var StockChartIndicatorsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$30(StockChartIndicatorsDirective, _super);
-    function StockChartIndicatorsDirective() {
+var StockChartStockEventsDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$30(StockChartStockEventsDirective, _super);
+    function StockChartStockEventsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    StockChartIndicatorsDirective.prototype.render = function () {
+    StockChartStockEventsDirective.prototype.render = function () {
         return;
     };
-    StockChartIndicatorsDirective = __decorate$30([
+    StockChartStockEventsDirective = __decorate$30([
         EJComponentDecorator({})
-    ], StockChartIndicatorsDirective);
-    return StockChartIndicatorsDirective;
+    ], StockChartStockEventsDirective);
+    return StockChartStockEventsDirective;
 }(Vue));
-var StockChartIndicatorsPlugin = {
-    name: 'e-stockchart-indicators',
+var StockChartStockEventsPlugin = {
+    name: 'e-stockchart-stockevents',
     install: function (Vue$$1) {
-        Vue$$1.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
+        Vue$$1.component(StockChartStockEventsPlugin.name, StockChartStockEventsDirective);
     }
 };
-var StockChartIndicatorDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$30(StockChartIndicatorDirective, _super);
-    function StockChartIndicatorDirective() {
+var StockChartStockEventDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$30(StockChartStockEventDirective, _super);
+    function StockChartStockEventDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    StockChartIndicatorDirective.prototype.render = function () {
+    StockChartStockEventDirective.prototype.render = function () {
         return;
     };
-    StockChartIndicatorDirective = __decorate$30([
+    StockChartStockEventDirective = __decorate$30([
         EJComponentDecorator({})
-    ], StockChartIndicatorDirective);
-    return StockChartIndicatorDirective;
+    ], StockChartStockEventDirective);
+    return StockChartStockEventDirective;
 }(Vue));
-var StockChartIndicatorPlugin = {
-    name: 'e-stockchart-indicator',
+var StockChartStockEventPlugin = {
+    name: 'e-stockchart-stockevent',
     install: function (Vue$$1) {
-        Vue$$1.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
+        Vue$$1.component(StockChartStockEventPlugin.name, StockChartStockEventDirective);
     }
 };
 
@@ -1937,7 +2022,65 @@ var __decorate$31 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$5 = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'rangeChange', 'selectorRender', 'seriesRender', 'tooltipRender'];
+var StockChartIndicatorsDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$31(StockChartIndicatorsDirective, _super);
+    function StockChartIndicatorsDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    StockChartIndicatorsDirective.prototype.render = function () {
+        return;
+    };
+    StockChartIndicatorsDirective = __decorate$31([
+        EJComponentDecorator({})
+    ], StockChartIndicatorsDirective);
+    return StockChartIndicatorsDirective;
+}(Vue));
+var StockChartIndicatorsPlugin = {
+    name: 'e-stockchart-indicators',
+    install: function (Vue$$1) {
+        Vue$$1.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
+    }
+};
+var StockChartIndicatorDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$31(StockChartIndicatorDirective, _super);
+    function StockChartIndicatorDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    StockChartIndicatorDirective.prototype.render = function () {
+        return;
+    };
+    StockChartIndicatorDirective = __decorate$31([
+        EJComponentDecorator({})
+    ], StockChartIndicatorDirective);
+    return StockChartIndicatorDirective;
+}(Vue));
+var StockChartIndicatorPlugin = {
+    name: 'e-stockchart-indicator',
+    install: function (Vue$$1) {
+        Vue$$1.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
+    }
+};
+
+var __extends$32 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$32 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var properties$5 = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'stockEvents', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'rangeChange', 'selectorRender', 'seriesRender', 'stockEventRender', 'tooltipRender'];
 var modelProps$5 = [];
 /**
  * Represents Vuejs chart Component
@@ -1946,19 +2089,36 @@ var modelProps$5 = [];
  * ```
  */
 var StockChartComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$31(StockChartComponent, _super);
+    __extends$32(StockChartComponent, _super);
     function StockChartComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties$5;
         _this.models = modelProps$5;
         _this.hasChildDirective = true;
         _this.hasInjectedModules = true;
-        _this.tagMapper = { "e-stockchart-series-collection": { "e-stockchart-series": { "e-trendlines": "e-trendline" } }, "e-stockchart-axes": { "e-stockchart-axis": { "e-stockchart-striplines": "e-stockchart-stripline" } }, "e-stockchart-rows": "e-stockchart-row", "e-stockchart-annotations": "e-stockchart-annotation", "e-stockchart-selectedDataIndexes": "e-stockchart-selectedDataIndex", "e-stockchart-periods": "e-stockchart-period", "e-stockchart-indicators": "e-stockchart-indicator" };
-        _this.tagNameMapper = { "e-stockchart-series-collection": "e-series", "e-stockchart-striplines": "e-stripLines", "e-stockchart-axes": "e-axes", "e-stockchart-rows": "e-rows", "e-stockchart-annotations": "e-annotations", "e-stockchart-selectedDataIndexes": "e-selectedDataIndexes", "e-stockchart-periods": "e-periods", "e-stockchart-indicators": "e-indicators" };
+        _this.tagMapper = { "e-stockchart-series-collection": { "e-stockchart-series": { "e-trendlines": "e-trendline" } }, "e-stockchart-axes": { "e-stockchart-axis": { "e-stockchart-striplines": "e-stockchart-stripline" } }, "e-stockchart-rows": "e-stockchart-row", "e-stockchart-annotations": "e-stockchart-annotation", "e-stockchart-selectedDataIndexes": "e-stockchart-selectedDataIndex", "e-stockchart-periods": "e-stockchart-period", "e-stockchart-stockevents": "e-stockchart-stockevent", "e-stockchart-indicators": "e-stockchart-indicator" };
+        _this.tagNameMapper = { "e-stockchart-series-collection": "e-series", "e-stockchart-striplines": "e-stripLines", "e-stockchart-axes": "e-axes", "e-stockchart-rows": "e-rows", "e-stockchart-annotations": "e-annotations", "e-stockchart-selectedDataIndexes": "e-selectedDataIndexes", "e-stockchart-periods": "e-periods", "e-stockchart-stockevents": "e-stockEvents", "e-stockchart-indicators": "e-indicators" };
         _this.ej2Instances = new StockChart({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    StockChartComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     StockChartComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -1971,7 +2131,7 @@ var StockChartComponent = /** @__PURE__ @class */ (function (_super) {
     StockChartComponent.prototype.renderPeriodSelector = function () {
         return this.ej2Instances.renderPeriodSelector();
     };
-    StockChartComponent = __decorate$31([
+    StockChartComponent = __decorate$32([
         EJComponentDecorator({
             props: properties$5
         })
@@ -1998,11 +2158,13 @@ var StockChartPlugin = {
         Vue$$1.component(StockChartSelectedDataIndexesPlugin.name, StockChartSelectedDataIndexesDirective);
         Vue$$1.component(StockChartPeriodPlugin.name, StockChartPeriodDirective);
         Vue$$1.component(StockChartPeriodsPlugin.name, StockChartPeriodsDirective);
+        Vue$$1.component(StockChartStockEventPlugin.name, StockChartStockEventDirective);
+        Vue$$1.component(StockChartStockEventsPlugin.name, StockChartStockEventsDirective);
         Vue$$1.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
         Vue$$1.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
     }
 };
 
-export { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin, SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin, SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin, StripLinesDirective, StripLineDirective, StripLinesPlugin, StripLinePlugin, CategoriesDirective, CategoryDirective, CategoriesPlugin, CategoryPlugin, MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPlugin, MultiLevelLabelPlugin, AxesDirective, AxisDirective, AxesPlugin, AxisPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin, IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin, ChartComponent, ChartPlugin, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin, AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin, AccumulationChartComponent, AccumulationChartPlugin, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin, RangeNavigatorComponent, RangeNavigatorPlugin, RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin, SparklineComponent, SparklinePlugin, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin, SmithchartComponent, SmithchartPlugin, StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin, StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin, StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin, StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin, StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin, StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin, StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin, StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin, StockChartComponent, StockChartPlugin };
+export { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin, SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin, SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin, StripLinesDirective, StripLineDirective, StripLinesPlugin, StripLinePlugin, CategoriesDirective, CategoryDirective, CategoriesPlugin, CategoryPlugin, MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPlugin, MultiLevelLabelPlugin, AxesDirective, AxisDirective, AxesPlugin, AxisPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin, IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin, ChartComponent, ChartPlugin, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin, AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin, AccumulationChartComponent, AccumulationChartPlugin, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin, RangeNavigatorComponent, RangeNavigatorPlugin, RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin, SparklineComponent, SparklinePlugin, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin, SmithchartComponent, SmithchartPlugin, StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin, StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin, StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin, StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin, StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin, StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin, StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin, StockChartStockEventsDirective, StockChartStockEventDirective, StockChartStockEventsPlugin, StockChartStockEventPlugin, StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin, StockChartComponent, StockChartPlugin };
 export * from '@syncfusion/ej2-charts';
 //# sourceMappingURL=ej2-vue-charts.es5.js.map

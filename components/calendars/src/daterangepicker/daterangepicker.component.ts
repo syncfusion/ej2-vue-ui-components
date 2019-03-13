@@ -5,7 +5,7 @@ import { DateRangePicker } from '@syncfusion/ej2-calendars';
 import { PresetsDirective, PresetDirective, PresetsPlugin, PresetPlugin } from './presets.directive'
 
 
-export const properties: string[] = ['allowEdit', 'calendarMode', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
+export const properties: string[] = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'start', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
 export const modelProps: string[] = ['startDate', 'endDate', 'value'];
 
 /**
@@ -34,46 +34,37 @@ export class DateRangePickerComponent extends ComponentBase {
         super();
         this.ej2Instances = new DateRangePicker({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
 
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
                 (this as any).$emit('modelchanged', eventProp[propKey]);
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
             this.ej2Instances._trigger(eventName, eventProp);
         }            
-    }
-
-    public setProperties(prop: any, muteOnChange: boolean): void {
-        if (this.ej2Instances && this.ej2Instances._setProperties) {
-            this.ej2Instances._setProperties(prop, muteOnChange);
-        }
-        if (prop && this.models && (this.models.length !== 0)) {
-            let keys: string[] = Object.keys(prop);
-            let emitKeys: string[] = [];
-            let emitFlag: boolean = false;
-            keys.map((key: string): void => {
-                this.models.map((model: string): void => {
-                    if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys.push(key);
-                        emitFlag = true;
-                    }
-                });
-            });
-            if (emitFlag) {
-                emitKeys.map((propKey: string): void => {
-                    this.$emit('update:' + propKey, prop[propKey]);
-                })
-            }
-        }
     }
 
     public render(createElement: any) {

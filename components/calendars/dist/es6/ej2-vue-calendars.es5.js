@@ -43,45 +43,37 @@ var CalendarComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new Calendar({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    CalendarComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     CalendarComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    CalendarComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     CalendarComponent.prototype.render = function (createElement) {
@@ -162,45 +154,37 @@ var DatePickerComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new DatePicker({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    DatePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     DatePickerComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    DatePickerComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     DatePickerComponent.prototype.render = function (createElement) {
@@ -293,45 +277,37 @@ var TimePickerComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new TimePicker({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    TimePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     TimePickerComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    TimePickerComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     TimePickerComponent.prototype.render = function (createElement) {
@@ -455,7 +431,7 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$3 = ['allowEdit', 'calendarMode', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
+var properties$3 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'endDate', 'firstDayOfWeek', 'floatLabelType', 'format', 'locale', 'max', 'maxDays', 'min', 'minDays', 'placeholder', 'presets', 'readonly', 'separator', 'showClearButton', 'start', 'startDate', 'strictMode', 'value', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell', 'select'];
 var modelProps$3 = ['startDate', 'endDate', 'value'];
 /**
  * Represents the Essential JS 2 VueJS DateRangePicker Component.
@@ -476,45 +452,37 @@ var DateRangePickerComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new DateRangePicker({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    DateRangePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     DateRangePickerComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    DateRangePickerComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     DateRangePickerComponent.prototype.render = function (createElement) {
@@ -576,7 +544,7 @@ var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$4 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
+var properties$4 = ['allowEdit', 'calendarMode', 'cssClass', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'isMultiSelection', 'locale', 'max', 'min', 'placeholder', 'readonly', 'scrollTo', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'width', 'zIndex', 'blur', 'change', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
 var modelProps$4 = ['value'];
 /**
  * Represents the Essential JS 2 VueJS DateTimePicker Component.
@@ -597,45 +565,37 @@ var DateTimePickerComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new DateTimePicker({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
-    DateTimePickerComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            var key = this.models.toString().match(/checked|value/) || [];
-            var propKey = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                this.$emit('modelchanged', eventProp[propKey]);
-            }
-        }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
-        }
-    };
     DateTimePickerComponent.prototype.setProperties = function (prop, muteOnChange) {
         var _this = this;
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
                 _this.models.map(function (model) {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
+                        _this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
+        }
+    };
+    DateTimePickerComponent.prototype.trigger = function (eventName, eventProp) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
             }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     DateTimePickerComponent.prototype.render = function (createElement) {

@@ -100,8 +100,25 @@ var AccordionComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-accordionitems": "e-items" };
         _this.ej2Instances = new Accordion({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    AccordionComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     AccordionComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -236,8 +253,25 @@ var ToolbarComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new Toolbar({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    ToolbarComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     ToolbarComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -315,8 +349,25 @@ var ContextMenuComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new ContextMenu({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    ContextMenuComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     ContextMenuComponent.prototype.render = function (createElement) {
         return createElement('ul', this.$slots.default);
     };
@@ -455,8 +506,25 @@ var TabComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-tabitems": "e-items" };
         _this.ej2Instances = new Tab({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    TabComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     TabComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -533,8 +601,25 @@ var TreeViewComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new TreeView({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    TreeViewComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     TreeViewComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -637,16 +722,32 @@ var SidebarComponent = /** @__PURE__ @class */ (function (_super) {
         _this.ej2Instances = new Sidebar({});
         _this.ej2Instances._trigger = _this.ej2Instances.trigger;
         _this.ej2Instances.trigger = _this.trigger;
-        //this.ej2Instances._setProperties = this.ej2Instances.setProperties;
-        //this.ej2Instances.setProperties = this.setProperties;
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    SidebarComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     SidebarComponent.prototype.trigger = function (eventName, eventProp) {
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
                 this.$emit('modelchanged', eventProp[propKey]);
             }
         }
@@ -654,38 +755,14 @@ var SidebarComponent = /** @__PURE__ @class */ (function (_super) {
             this.ej2Instances._trigger(eventName, eventProp);
         }
     };
-    SidebarComponent.prototype.setProperties = function (prop, muteOnChange) {
-        var _this = this;
-        if (this.ej2Instances && this.ej2Instances._setProperties) {
-            this.ej2Instances._setProperties(prop, muteOnChange);
-        }
-        if (prop && this.models && (this.models.length !== 0)) {
-            var keys = Object.keys(prop);
-            var emitKeys_1 = [];
-            var emitFlag_1 = false;
-            keys.map(function (key) {
-                _this.models.map(function (model) {
-                    if ((key === model) && !(/datasource/i.test(key))) {
-                        emitKeys_1.push(key);
-                        emitFlag_1 = true;
-                    }
-                });
-            });
-            if (emitFlag_1) {
-                emitKeys_1.map(function (propKey) {
-                    _this.$emit('update:' + propKey, prop[propKey]);
-                });
-            }
-        }
-    };
     SidebarComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    SidebarComponent.prototype.hide = function () {
-        return this.ej2Instances.hide();
+    SidebarComponent.prototype.hide = function (e) {
+        return this.ej2Instances.hide(e);
     };
-    SidebarComponent.prototype.show = function () {
-        return this.ej2Instances.show();
+    SidebarComponent.prototype.show = function (e) {
+        return this.ej2Instances.show(e);
     };
     SidebarComponent.prototype.toggle = function (e) {
         return this.ej2Instances.toggle(e);
@@ -804,8 +881,25 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-menu-items": "e-items" };
         _this.ej2Instances = new Menu({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    MenuComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     MenuComponent.prototype.render = function (createElement) {
         return createElement('ul', this.$slots.default);
     };

@@ -111,8 +111,25 @@ var ToastComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-buttonmodelprop": "e-buttons" };
         _this.ej2Instances = new Toast({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    ToastComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     ToastComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };

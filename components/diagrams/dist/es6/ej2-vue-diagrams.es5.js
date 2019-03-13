@@ -451,7 +451,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+var properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectors', 'constraints', 'contextMenuSettings', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 var modelProps = [];
 /**
  * Represents vue Diagram Component
@@ -471,8 +471,25 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = { "e-connector-annotations": "e-annotations", "e-node-annotations": "e-annotations", "e-node-ports": "e-ports" };
         _this.ej2Instances = new Diagram({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    DiagramComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     DiagramComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -488,8 +505,14 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.addLabels = function (obj, labels) {
         return this.ej2Instances.addLabels(obj, labels);
     };
+    DiagramComponent.prototype.addLanes = function (node, lane, index) {
+        return this.ej2Instances.addLanes(node, lane, index);
+    };
     DiagramComponent.prototype.addLayer = function (layer, layerObject) {
         return this.ej2Instances.addLayer(layer, layerObject);
+    };
+    DiagramComponent.prototype.addPhases = function (node, phases) {
+        return this.ej2Instances.addPhases(node, phases);
     };
     DiagramComponent.prototype.addPorts = function (obj, ports) {
         return this.ej2Instances.addPorts(obj, ports);
@@ -517,6 +540,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.clear = function () {
         return this.ej2Instances.clear();
+    };
+    DiagramComponent.prototype.clearHistory = function () {
+        return this.ej2Instances.clearHistory();
     };
     DiagramComponent.prototype.clearSelection = function () {
         return this.ej2Instances.clearSelection();
@@ -551,6 +577,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.exportDiagram = function (options) {
         return this.ej2Instances.exportDiagram(options);
     };
+    DiagramComponent.prototype.exportImage = function (image, options) {
+        return this.ej2Instances.exportImage(image, options);
+    };
     DiagramComponent.prototype.findElementUnderMouse = function (obj, position) {
         return this.ej2Instances.findElementUnderMouse(obj, position);
     };
@@ -571,6 +600,12 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.getCursor = function (action, active) {
         return this.ej2Instances.getCursor(action, active);
+    };
+    DiagramComponent.prototype.getDiagramBounds = function () {
+        return this.ej2Instances.getDiagramBounds();
+    };
+    DiagramComponent.prototype.getDiagramContent = function (styleSheets) {
+        return this.ej2Instances.getDiagramContent(styleSheets);
     };
     DiagramComponent.prototype.getObject = function (name) {
         return this.ej2Instances.getObject(name);
@@ -604,6 +639,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.print = function (options) {
         return this.ej2Instances.print(options);
+    };
+    DiagramComponent.prototype.printImage = function (image, options) {
+        return this.ej2Instances.printImage(image, options);
     };
     DiagramComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
@@ -661,6 +699,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.setActiveLayer = function (layerName) {
         return this.ej2Instances.setActiveLayer(layerName);
+    };
+    DiagramComponent.prototype.setStackLimit = function (stackLimit) {
+        return this.ej2Instances.setStackLimit(stackLimit);
     };
     DiagramComponent.prototype.startGroupAction = function () {
         return this.ej2Instances.startGroupAction();
@@ -819,8 +860,25 @@ var SymbolPaletteComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new SymbolPalette({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    SymbolPaletteComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     SymbolPaletteComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
@@ -885,8 +943,25 @@ var OverviewComponent = /** @__PURE__ @class */ (function (_super) {
         _this.tagNameMapper = {};
         _this.ej2Instances = new Overview({});
         _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
         return _this;
     }
+    OverviewComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
     OverviewComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };

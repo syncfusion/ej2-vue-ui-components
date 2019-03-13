@@ -4,7 +4,7 @@ import { Splitter } from '@syncfusion/ej2-layouts';
 import { PanesDirective, PaneDirective, PanesPlugin, PanePlugin } from './panesettings.directive'
 
 
-export const properties: string[] = ['cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'height', 'locale', 'orientation', 'paneSettings', 'separatorSize', 'width', 'created', 'resizeStart', 'resizeStop', 'resizing'];
+export const properties: string[] = ['cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'height', 'locale', 'orientation', 'paneSettings', 'separatorSize', 'width', 'beforeCollapse', 'beforeExpand', 'collapsed', 'created', 'expanded', 'resizeStart', 'resizeStop', 'resizing'];
 export const modelProps: string[] = [];
 
 /**
@@ -30,6 +30,22 @@ export class SplitterComponent extends ComponentBase {
         super();
         this.ej2Instances = new Splitter({});
         this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    public setProperties(prop: any, muteOnChange: boolean): void {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key: string): void => {
+                this.models.map((model: string): void => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
     }
 
     public render(createElement: any) {
@@ -38,6 +54,14 @@ export class SplitterComponent extends ComponentBase {
     
     public addPane(paneProperties: Object, index: number): void {
         return this.ej2Instances.addPane(paneProperties, index);
+    }
+
+    public collapse(index: number): void {
+        return this.ej2Instances.collapse(index);
+    }
+
+    public expand(index: number): void {
+        return this.ej2Instances.expand(index);
     }
 
     public removePane(index: number): void {
