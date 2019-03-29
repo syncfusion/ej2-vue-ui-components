@@ -62,6 +62,9 @@ var InPlaceEditorComponent = /** @__PURE__ @class */ (function (_super) {
     InPlaceEditorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    InPlaceEditorComponent.prototype.extendModelValue = function (val) {
+        return this.ej2Instances.extendModelValue(val);
+    };
     InPlaceEditorComponent.prototype.save = function () {
         return this.ej2Instances.save();
     };

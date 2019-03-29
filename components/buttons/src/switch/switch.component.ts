@@ -53,7 +53,7 @@ export class SwitchComponent extends ComponentBase {
         }
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {

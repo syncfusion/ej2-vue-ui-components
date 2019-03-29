@@ -55,8 +55,8 @@ export class LinearGaugeComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public setAnnotationValue(annotationIndex: number, content: string): void {
-        return this.ej2Instances.setAnnotationValue(annotationIndex, content);
+    public setAnnotationValue(annotationIndex: number, content: string, axisValue?: number): void {
+        return this.ej2Instances.setAnnotationValue(annotationIndex, content, axisValue);
     }
 
     public setPointerValue(axisIndex: number, pointerIndex: number, value: number): void {

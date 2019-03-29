@@ -52,8 +52,8 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     enableToolbarItems(items) {
         return this.ej2Instances.enableToolbarItems(items);
     }
-    refreshContent() {
-        return this.ej2Instances.refreshContent();
+    refreshFiles() {
+        return this.ej2Instances.refreshFiles();
     }
 };
 FileManagerComponent = __decorate([

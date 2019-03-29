@@ -4,7 +4,7 @@ import { QueryBuilder } from '@syncfusion/ej2-querybuilder';
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 
 
-export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created'];
+export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created', 'ruleChange'];
 export const modelProps: string[] = [];
 
 /**
@@ -72,7 +72,7 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.getDataManagerQuery(rule);
     }
 
-    public getFilteredRecords(): undefined {
+    public getFilteredRecords(): Object {
         return this.ej2Instances.getFilteredRecords();
     }
 
@@ -90,6 +90,10 @@ export class QueryBuilderComponent extends ComponentBase {
 
     public getSqlFromRules(rule: Object): string {
         return this.ej2Instances.getSqlFromRules(rule);
+    }
+
+    public getValidRules(currentRule: Object): Object {
+        return this.ej2Instances.getValidRules(currentRule);
     }
 
     public notifyChange(value: string | number | boolean | Object | string[] | number[] | Object[], element: Object): void {

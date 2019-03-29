@@ -9,7 +9,7 @@ import { StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, 
 import { StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin } from './annotations.directive'
 import { StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin } from './selecteddataindexes.directive'
 import { StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin } from './periods.directive'
-import { StockChartStockEventsDirective, StockChartStockEventDirective, StockChartStockEventsPlugin, StockChartStockEventPlugin } from './stockevents.directive'
+import { StockEventsDirective, StockEventDirective, StockEventsPlugin, StockEventPlugin } from './stockevents.directive'
 import { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin } from './indicators.directive'
 
 
@@ -94,8 +94,8 @@ export const StockChartPlugin = {
         Vue.component(StockChartSelectedDataIndexesPlugin.name, StockChartSelectedDataIndexesDirective);
         Vue.component(StockChartPeriodPlugin.name, StockChartPeriodDirective);
         Vue.component(StockChartPeriodsPlugin.name, StockChartPeriodsDirective);
-        Vue.component(StockChartStockEventPlugin.name, StockChartStockEventDirective);
-        Vue.component(StockChartStockEventsPlugin.name, StockChartStockEventsDirective);
+        Vue.component(StockEventPlugin.name, StockEventDirective);
+        Vue.component(StockEventsPlugin.name, StockEventsDirective);
         Vue.component(StockChartIndicatorPlugin.name, StockChartIndicatorDirective);
         Vue.component(StockChartIndicatorsPlugin.name, StockChartIndicatorsDirective);
 

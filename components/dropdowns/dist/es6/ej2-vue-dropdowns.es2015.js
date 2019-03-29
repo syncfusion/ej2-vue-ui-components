@@ -1,4 +1,4 @@
-import { AutoComplete, ComboBox, DropDownList, MultiSelect } from '@syncfusion/ej2-dropdowns';
+import { AutoComplete, ComboBox, DropDownList, ListBox, MultiSelect } from '@syncfusion/ej2-dropdowns';
 import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
@@ -47,7 +47,7 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
         }
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -150,7 +150,7 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
         }
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -253,7 +253,7 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
         }
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -356,7 +356,7 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
         }
     }
     trigger(eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -414,6 +414,106 @@ const MultiSelectPlugin = {
     }
 };
 
-export { DropDownListComponent, DropDownListPlugin, ComboBoxComponent, ComboBoxPlugin, AutoCompleteComponent, AutoCompletePlugin, MultiSelectComponent, MultiSelectPlugin };
+var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties$4 = ['actionFailureTemplate', 'allowDragAndDrop', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'groupTemplate', 'height', 'ignoreAccent', 'itemTemplate', 'locale', 'noRecordsTemplate', 'query', 'scope', 'selectionSettings', 'sortOrder', 'toolbarSettings', 'value', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeItemRender', 'created', 'dataBound', 'destroyed', 'drag', 'dragStart', 'drop', 'select'];
+const modelProps$4 = ['value'];
+/**
+ * ListBox component allows the user to select values from the predefined list of values.
+ * ```html
+ * <ejs-listbox :dataSource='data'></ejs-listbox>
+ * ```
+ */
+let ListBoxComponent = class ListBoxComponent extends ComponentBase {
+    constructor() {
+        super();
+        this.propKeys = properties$4;
+        this.models = modelProps$4;
+        this.hasChildDirective = false;
+        this.hasInjectedModules = true;
+        this.tagMapper = {};
+        this.tagNameMapper = {};
+        this.ej2Instances = new ListBox({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
+        this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
+        }
+    }
+    render(createElement) {
+        return createElement('input', this.$slots.default);
+    }
+    addItem(items, itemIndex) {
+        return this.ej2Instances.addItem(items, itemIndex);
+    }
+    addItems(items, itemIndex) {
+        return this.ej2Instances.addItems(items, itemIndex);
+    }
+    enableItems(items, enable) {
+        return this.ej2Instances.enableItems(items, enable);
+    }
+    getDataByValue(value) {
+        return this.ej2Instances.getDataByValue(value);
+    }
+    getItems() {
+        return this.ej2Instances.getItems();
+    }
+    requiredModules() {
+        return this.ej2Instances.requiredModules();
+    }
+    selectAll(state) {
+        return this.ej2Instances.selectAll(state);
+    }
+    selectItems(items, state) {
+        return this.ej2Instances.selectItems(items, state);
+    }
+};
+ListBoxComponent = __decorate$4([
+    EJComponentDecorator({
+        props: properties$4,
+        model: {
+            event: 'modelchanged'
+        }
+    })
+], ListBoxComponent);
+const ListBoxPlugin = {
+    name: 'ejs-listbox',
+    install(Vue) {
+        Vue.component(ListBoxPlugin.name, ListBoxComponent);
+    }
+};
+
+export { DropDownListComponent, DropDownListPlugin, ComboBoxComponent, ComboBoxPlugin, AutoCompleteComponent, AutoCompletePlugin, MultiSelectComponent, MultiSelectPlugin, ListBoxComponent, ListBoxPlugin };
 export * from '@syncfusion/ej2-dropdowns';
 //# sourceMappingURL=ej2-vue-dropdowns.es2015.js.map

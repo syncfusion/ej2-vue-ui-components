@@ -2,28 +2,28 @@ import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 @EJComponentDecorator({})
-export class StockChartStockEventsDirective extends Vue {
+export class StockEventsDirective extends Vue {
     public render(): void {
         return;
     }
 }
-export const StockChartStockEventsPlugin = {
+export const StockEventsPlugin = {
     name: 'e-stockchart-stockevents',
     install(Vue: any) {
-        Vue.component(StockChartStockEventsPlugin.name, StockChartStockEventsDirective);
+        Vue.component(StockEventsPlugin.name, StockEventsDirective);
     }
 }
 
 
 @EJComponentDecorator({})
-export class StockChartStockEventDirective extends Vue {
+export class StockEventDirective extends Vue {
     public render(): void {
         return;
     }
 }
-export const StockChartStockEventPlugin = {
+export const StockEventPlugin = {
     name: 'e-stockchart-stockevent',
     install(Vue: any) {
-        Vue.component(StockChartStockEventPlugin.name, StockChartStockEventDirective);
+        Vue.component(StockEventPlugin.name, StockEventDirective);
     }
 }

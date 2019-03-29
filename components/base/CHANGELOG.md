@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.1.38 (2019-03-29)
+
+### Common
+
+#### New Features
+
+- Provided .sync modifier support for Essential JS 2 for Vue components.
+
 ## 17.1.32-beta (2019-03-13)
 
 ### Common

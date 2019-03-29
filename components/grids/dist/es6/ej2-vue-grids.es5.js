@@ -287,7 +287,7 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
         }
     };
     GridComponent.prototype.trigger = function (eventName, eventProp) {
-        if (eventName === 'change' && this.models && (this.models.length !== 0)) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
@@ -457,6 +457,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.hideColumns = function (keys, hideBy) {
         return this.ej2Instances.hideColumns(keys, hideBy);
+    };
+    GridComponent.prototype.hideScroll = function () {
+        return this.ej2Instances.hideScroll();
     };
     GridComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();

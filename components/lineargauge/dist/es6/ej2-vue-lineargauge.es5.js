@@ -335,8 +335,8 @@ var LinearGaugeComponent = /** @__PURE__ @class */ (function (_super) {
     LinearGaugeComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    LinearGaugeComponent.prototype.setAnnotationValue = function (annotationIndex, content) {
-        return this.ej2Instances.setAnnotationValue(annotationIndex, content);
+    LinearGaugeComponent.prototype.setAnnotationValue = function (annotationIndex, content, axisValue) {
+        return this.ej2Instances.setAnnotationValue(annotationIndex, content, axisValue);
     };
     LinearGaugeComponent.prototype.setPointerValue = function (axisIndex, pointerIndex, value) {
         return this.ej2Instances.setPointerValue(axisIndex, pointerIndex, value);

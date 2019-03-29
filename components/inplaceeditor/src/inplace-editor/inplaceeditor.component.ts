@@ -51,6 +51,10 @@ export class InPlaceEditorComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public extendModelValue(val: string | number | boolean | Object | Object | string[] | Object[] | number[] | boolean[]): void {
+        return this.ej2Instances.extendModelValue(val);
+    }
+
     public save(): void {
         return this.ej2Instances.save();
     }

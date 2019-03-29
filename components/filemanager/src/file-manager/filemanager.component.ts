@@ -59,8 +59,8 @@ export class FileManagerComponent extends ComponentBase {
         return this.ej2Instances.enableToolbarItems(items);
     }
 
-    public refreshContent(): void {
-        return this.ej2Instances.refreshContent();
+    public refreshFiles(): void {
+        return this.ej2Instances.refreshFiles();
     }
 }
 

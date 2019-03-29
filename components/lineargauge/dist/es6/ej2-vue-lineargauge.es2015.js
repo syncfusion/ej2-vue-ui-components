@@ -227,8 +227,8 @@ let LinearGaugeComponent = class LinearGaugeComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    setAnnotationValue(annotationIndex, content) {
-        return this.ej2Instances.setAnnotationValue(annotationIndex, content);
+    setAnnotationValue(annotationIndex, content, axisValue) {
+        return this.ej2Instances.setAnnotationValue(annotationIndex, content, axisValue);
     }
     setPointerValue(axisIndex, pointerIndex, value) {
         return this.ej2Instances.setPointerValue(axisIndex, pointerIndex, value);

@@ -46,6 +46,9 @@ let InPlaceEditorComponent = class InPlaceEditorComponent extends ComponentBase 
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    extendModelValue(val) {
+        return this.ej2Instances.extendModelValue(val);
+    }
     save() {
         return this.ej2Instances.save();
     }
