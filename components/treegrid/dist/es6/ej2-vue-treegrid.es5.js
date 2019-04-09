@@ -302,8 +302,8 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     TreeGridComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    TreeGridComponent.prototype.addRecord = function (data, index) {
-        return this.ej2Instances.addRecord(data, index);
+    TreeGridComponent.prototype.addRecord = function (data, index, position) {
+        return this.ej2Instances.addRecord(data, index, position);
     };
     TreeGridComponent.prototype.autoFitColumns = function (fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);

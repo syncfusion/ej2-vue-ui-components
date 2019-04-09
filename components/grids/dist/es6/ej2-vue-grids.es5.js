@@ -425,6 +425,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.getRowByIndex = function (index) {
         return this.ej2Instances.getRowByIndex(index);
     };
+    GridComponent.prototype.getRowIndexByPrimaryKey = function (value) {
+        return this.ej2Instances.getRowIndexByPrimaryKey(value);
+    };
     GridComponent.prototype.getRowInfo = function (target) {
         return this.ej2Instances.getRowInfo(target);
     };

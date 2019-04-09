@@ -441,7 +441,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['addDialogFields', 'allowFiltering', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowUnscheduledTasks', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationUnit', 'editDialogFields', 'editSettings', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'renderBaseline', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'sortSettings', 'splitterSettings', 'taskFields', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'width', 'workWeek', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'dataBound', 'expanded', 'expanding', 'headerCellInfo', 'load', 'queryCellInfo', 'queryTaskbarInfo', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
+var properties = ['addDialogFields', 'allowFiltering', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowUnscheduledTasks', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationUnit', 'editDialogFields', 'editSettings', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'renderBaseline', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'sortSettings', 'splitterSettings', 'taskFields', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'width', 'workWeek', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'dataBound', 'endEdit', 'expanded', 'expanding', 'headerCellInfo', 'load', 'queryCellInfo', 'queryTaskbarInfo', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
 var modelProps = ['dataSource'];
 /**
  * `ejs-gantt` represents the VueJS Gantt Component.
@@ -498,11 +498,17 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    GanttComponent.prototype.addPredecessor = function (ganttRecord, predecessorString) {
-        return this.ej2Instances.addPredecessor(ganttRecord, predecessorString);
+    GanttComponent.prototype.ShowColumn = function (keys, showBy) {
+        return this.ej2Instances.ShowColumn(keys, showBy);
+    };
+    GanttComponent.prototype.addPredecessor = function (id, predecessorString) {
+        return this.ej2Instances.addPredecessor(id, predecessorString);
     };
     GanttComponent.prototype.addRecord = function (data, rowPosition, rowIndex) {
         return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
+    };
+    GanttComponent.prototype.cancelEdit = function (scrollTop) {
+        return this.ej2Instances.cancelEdit(scrollTop);
     };
     GanttComponent.prototype.clearFiltering = function () {
         return this.ej2Instances.clearFiltering();
@@ -510,11 +516,17 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.clearSorting = function () {
         return this.ej2Instances.clearSorting();
     };
+    GanttComponent.prototype.collapseAll = function () {
+        return this.ej2Instances.collapseAll();
+    };
     GanttComponent.prototype.collapseByID = function (id) {
         return this.ej2Instances.collapseByID(id);
     };
     GanttComponent.prototype.collapseByIndex = function (index) {
         return this.ej2Instances.collapseByIndex(index);
+    };
+    GanttComponent.prototype.expandAll = function () {
+        return this.ej2Instances.expandAll();
     };
     GanttComponent.prototype.expandByID = function (id) {
         return this.ej2Instances.expandByID(id);
@@ -537,6 +549,12 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.getFormatedDate = function (date, format) {
         return this.ej2Instances.getFormatedDate(date, format);
     };
+    GanttComponent.prototype.getGanttColumns = function () {
+        return this.ej2Instances.getGanttColumns();
+    };
+    GanttComponent.prototype.getGridColumns = function () {
+        return this.ej2Instances.getGridColumns();
+    };
     GanttComponent.prototype.getParentTask = function (cloneParent) {
         return this.ej2Instances.getParentTask(cloneParent);
     };
@@ -555,6 +573,9 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.getTaskbarHeight = function () {
         return this.ej2Instances.getTaskbarHeight();
     };
+    GanttComponent.prototype.hideColumn = function (keys, hideBy) {
+        return this.ej2Instances.hideColumn(keys, hideBy);
+    };
     GanttComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
     };
@@ -570,8 +591,8 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.previousTimeSpan = function (mode) {
         return this.ej2Instances.previousTimeSpan(mode);
     };
-    GanttComponent.prototype.removePredecessor = function (ganttRecord) {
-        return this.ej2Instances.removePredecessor(ganttRecord);
+    GanttComponent.prototype.removePredecessor = function (id) {
+        return this.ej2Instances.removePredecessor(id);
     };
     GanttComponent.prototype.removeSortColumn = function (columnName) {
         return this.ej2Instances.removeSortColumn(columnName);
@@ -588,8 +609,14 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.search = function (keyVal) {
         return this.ej2Instances.search(keyVal);
     };
-    GanttComponent.prototype.setSplitterPosition = function (value, valueType) {
-        return this.ej2Instances.setSplitterPosition(value, valueType);
+    GanttComponent.prototype.selectCells = function (cellIndex, isToggle) {
+        return this.ej2Instances.selectCells(cellIndex, isToggle);
+    };
+    GanttComponent.prototype.setScrollTop = function (scrollTop) {
+        return this.ej2Instances.setScrollTop(scrollTop);
+    };
+    GanttComponent.prototype.setSplitterPosition = function (value, type) {
+        return this.ej2Instances.setSplitterPosition(value, type);
     };
     GanttComponent.prototype.showSpinner = function () {
         return this.ej2Instances.showSpinner();
@@ -600,14 +627,17 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.updateChartScrollOffset = function (left, top) {
         return this.ej2Instances.updateChartScrollOffset(left, top);
     };
-    GanttComponent.prototype.updatePredecessor = function (ganttRecord, predecessorString) {
-        return this.ej2Instances.updatePredecessor(ganttRecord, predecessorString);
+    GanttComponent.prototype.updatePredecessor = function (id, predecessorString) {
+        return this.ej2Instances.updatePredecessor(id, predecessorString);
     };
     GanttComponent.prototype.updateProjectDates = function (startDate, endDate, isTimelineRoundOff) {
         return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff);
     };
     GanttComponent.prototype.updateRecordByID = function (data) {
         return this.ej2Instances.updateRecordByID(data);
+    };
+    GanttComponent.prototype.updateRecordByIndex = function (index, data) {
+        return this.ej2Instances.updateRecordByIndex(index, data);
     };
     GanttComponent = __decorate$6([
         EJComponentDecorator({

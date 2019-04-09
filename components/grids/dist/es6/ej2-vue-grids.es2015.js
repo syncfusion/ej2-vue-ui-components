@@ -340,6 +340,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     getRowByIndex(index) {
         return this.ej2Instances.getRowByIndex(index);
     }
+    getRowIndexByPrimaryKey(value) {
+        return this.ej2Instances.getRowIndexByPrimaryKey(value);
+    }
     getRowInfo(target) {
         return this.ej2Instances.getRowInfo(target);
     }

@@ -82,11 +82,11 @@ export class ComboBoxComponent extends ComponentBase {
         return this.ej2Instances.focusOut();
     }
 
-    public getDataByValue(value: string | number | boolean): undefined {
+    public getDataByValue(value: string | number | boolean): Object | string | number | boolean {
         return this.ej2Instances.getDataByValue(value);
     }
 
-    public getItems(): undefined {
+    public getItems(): Object[] {
         return this.ej2Instances.getItems();
     }
 

@@ -63,7 +63,7 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.redo();
     }
 
-    public requiredModules(): undefined {
+    public requiredModules(): Object[] {
         return this.ej2Instances.requiredModules();
     }
 

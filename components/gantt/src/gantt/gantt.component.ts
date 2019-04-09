@@ -10,7 +10,7 @@ import { HolidaysDirective, HolidayDirective, HolidaysPlugin, HolidayPlugin } fr
 import { EventMarkersDirective, EventMarkerDirective, EventMarkersPlugin, EventMarkerPlugin } from './eventmarkers.directive'
 
 
-export const properties: string[] = ['addDialogFields', 'allowFiltering', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowUnscheduledTasks', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationUnit', 'editDialogFields', 'editSettings', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'renderBaseline', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'sortSettings', 'splitterSettings', 'taskFields', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'width', 'workWeek', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'dataBound', 'expanded', 'expanding', 'headerCellInfo', 'load', 'queryCellInfo', 'queryTaskbarInfo', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
+export const properties: string[] = ['addDialogFields', 'allowFiltering', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowUnscheduledTasks', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationUnit', 'editDialogFields', 'editSettings', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'renderBaseline', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'sortSettings', 'splitterSettings', 'taskFields', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'width', 'workWeek', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'dataBound', 'endEdit', 'expanded', 'expanding', 'headerCellInfo', 'load', 'queryCellInfo', 'queryTaskbarInfo', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 /**
@@ -76,12 +76,20 @@ export class GanttComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public addPredecessor(ganttRecord: Object, predecessorString: string): void {
-        return this.ej2Instances.addPredecessor(ganttRecord, predecessorString);
+    public ShowColumn(keys: string | string[], showBy?: string): void {
+        return this.ej2Instances.ShowColumn(keys, showBy);
+    }
+
+    public addPredecessor(id: Object | number, predecessorString: string): void {
+        return this.ej2Instances.addPredecessor(id, predecessorString);
     }
 
     public addRecord(data?: Object | Object, rowPosition?: Object, rowIndex?: number): void {
         return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
+    }
+
+    public cancelEdit(scrollTop: number): void {
+        return this.ej2Instances.cancelEdit(scrollTop);
     }
 
     public clearFiltering(): void {
@@ -92,12 +100,20 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.clearSorting();
     }
 
+    public collapseAll(): void {
+        return this.ej2Instances.collapseAll();
+    }
+
     public collapseByID(id: string | number): void {
         return this.ej2Instances.collapseByID(id);
     }
 
     public collapseByIndex(index: number): void {
         return this.ej2Instances.collapseByIndex(index);
+    }
+
+    public expandAll(): void {
+        return this.ej2Instances.expandAll();
     }
 
     public expandByID(id: string | number): void {
@@ -120,12 +136,20 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.getDurationString(duration, durationUnit);
     }
 
-    public getExpandedRecords(records: Object[]): undefined {
+    public getExpandedRecords(records: Object[]): Object[] {
         return this.ej2Instances.getExpandedRecords(records);
     }
 
     public getFormatedDate(date: Object, format?: string): string {
         return this.ej2Instances.getFormatedDate(date, format);
+    }
+
+    public getGanttColumns(): Object[] {
+        return this.ej2Instances.getGanttColumns();
+    }
+
+    public getGridColumns(): Object[] {
+        return this.ej2Instances.getGridColumns();
     }
 
     public getParentTask(cloneParent: Object): Object {
@@ -152,6 +176,10 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.getTaskbarHeight();
     }
 
+    public hideColumn(keys: string | string[], hideBy?: string): void {
+        return this.ej2Instances.hideColumn(keys, hideBy);
+    }
+
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
     }
@@ -172,8 +200,8 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.previousTimeSpan(mode);
     }
 
-    public removePredecessor(ganttRecord: Object): void {
-        return this.ej2Instances.removePredecessor(ganttRecord);
+    public removePredecessor(id: Object | number): void {
+        return this.ej2Instances.removePredecessor(id);
     }
 
     public removeSortColumn(columnName: string): void {
@@ -196,8 +224,16 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.search(keyVal);
     }
 
-    public setSplitterPosition(value: string | number, valueType: string): void {
-        return this.ej2Instances.setSplitterPosition(value, valueType);
+    public selectCells(cellIndex: Object, isToggle?: boolean): void {
+        return this.ej2Instances.selectCells(cellIndex, isToggle);
+    }
+
+    public setScrollTop(scrollTop: number): void {
+        return this.ej2Instances.setScrollTop(scrollTop);
+    }
+
+    public setSplitterPosition(value: string | number, type: string): void {
+        return this.ej2Instances.setSplitterPosition(value, type);
     }
 
     public showSpinner(): void {
@@ -212,8 +248,8 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.updateChartScrollOffset(left, top);
     }
 
-    public updatePredecessor(ganttRecord: Object, predecessorString: string): void {
-        return this.ej2Instances.updatePredecessor(ganttRecord, predecessorString);
+    public updatePredecessor(id: Object | number, predecessorString: string): void {
+        return this.ej2Instances.updatePredecessor(id, predecessorString);
     }
 
     public updateProjectDates(startDate: Object, endDate: Object, isTimelineRoundOff: boolean): void {
@@ -222,6 +258,10 @@ export class GanttComponent extends ComponentBase {
 
     public updateRecordByID(data: Object): void {
         return this.ej2Instances.updateRecordByID(data);
+    }
+
+    public updateRecordByIndex(index: number, data: Object): void {
+        return this.ej2Instances.updateRecordByIndex(index, data);
     }
 }
 

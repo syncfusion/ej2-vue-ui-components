@@ -60,7 +60,7 @@ export class ChipListComponent extends ComponentBase {
         return this.ej2Instances.find(fields);
     }
 
-    public getSelectedChips(): undefined {
+    public getSelectedChips(): Object | Object {
         return this.ej2Instances.getSelectedChips();
     }
 

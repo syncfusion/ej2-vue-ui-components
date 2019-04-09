@@ -73,8 +73,8 @@ export class TreeGridComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public addRecord(data?: Object, index?: number): void {
-        return this.ej2Instances.addRecord(data, index);
+    public addRecord(data?: Object, index?: number, position?: Object): void {
+        return this.ej2Instances.addRecord(data, index, position);
     }
 
     public autoFitColumns(fieldNames?: string | string[]): void {
@@ -153,7 +153,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getCellFromIndex(rowIndex, columnIndex);
     }
 
-    public getCheckedRowIndexes(): undefined {
+    public getCheckedRowIndexes(): number[] {
         return this.ej2Instances.getCheckedRowIndexes();
     }
 
@@ -165,7 +165,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getColumnByUid(uid);
     }
 
-    public getColumnFieldNames(): undefined {
+    public getColumnFieldNames(): string[] {
         return this.ej2Instances.getColumnFieldNames();
     }
 
@@ -189,7 +189,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getColumnIndexByUid(uid);
     }
 
-    public getColumns(isRefresh?: boolean): undefined {
+    public getColumns(isRefresh?: boolean): Object[] {
         return this.ej2Instances.getColumns(isRefresh);
     }
 
@@ -201,11 +201,11 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getContentTable();
     }
 
-    public getDataModule(): undefined {
+    public getDataModule(): Object {
         return this.ej2Instances.getDataModule();
     }
 
-    public getDataRows(): undefined {
+    public getDataRows(): Object[] {
         return this.ej2Instances.getDataRows();
     }
 
@@ -229,7 +229,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getPager();
     }
 
-    public getPrimaryKeyFieldNames(): undefined {
+    public getPrimaryKeyFieldNames(): string[] {
         return this.ej2Instances.getPrimaryKeyFieldNames();
     }
 
@@ -241,23 +241,23 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getRowInfo(target);
     }
 
-    public getRows(): undefined {
+    public getRows(): Object[] {
         return this.ej2Instances.getRows();
     }
 
-    public getSelectedRecords(): undefined {
+    public getSelectedRecords(): Object[] {
         return this.ej2Instances.getSelectedRecords();
     }
 
-    public getSelectedRowCellIndexes(): undefined {
+    public getSelectedRowCellIndexes(): Object[] {
         return this.ej2Instances.getSelectedRowCellIndexes();
     }
 
-    public getSelectedRowIndexes(): undefined {
+    public getSelectedRowIndexes(): number[] {
         return this.ej2Instances.getSelectedRowIndexes();
     }
 
-    public getSelectedRows(): undefined {
+    public getSelectedRows(): Object[] {
         return this.ej2Instances.getSelectedRows();
     }
 
@@ -265,7 +265,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getUidByColumnField(field);
     }
 
-    public getVisibleColumns(): undefined {
+    public getVisibleColumns(): Object[] {
         return this.ej2Instances.getVisibleColumns();
     }
 

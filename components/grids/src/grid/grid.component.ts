@@ -145,7 +145,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getColumnByUid(uid);
     }
 
-    public getColumnFieldNames(): undefined {
+    public getColumnFieldNames(): string[] {
         return this.ej2Instances.getColumnFieldNames();
     }
 
@@ -169,7 +169,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getColumnIndexByUid(uid);
     }
 
-    public getColumns(isRefresh?: boolean): undefined {
+    public getColumns(isRefresh?: boolean): Object[] {
         return this.ej2Instances.getColumns(isRefresh);
     }
 
@@ -185,7 +185,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getDataModule();
     }
 
-    public getDataRows(): undefined {
+    public getDataRows(): Object[] {
         return this.ej2Instances.getDataRows();
     }
 
@@ -197,7 +197,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getFooterContentTable();
     }
 
-    public getForeignKeyColumns(): undefined {
+    public getForeignKeyColumns(): Object[] {
         return this.ej2Instances.getForeignKeyColumns();
     }
 
@@ -213,7 +213,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getMovableCellFromIndex(rowIndex, columnIndex);
     }
 
-    public getMovableDataRows(): undefined {
+    public getMovableDataRows(): Object[] {
         return this.ej2Instances.getMovableDataRows();
     }
 
@@ -221,7 +221,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getMovableRowByIndex(index);
     }
 
-    public getMovableRows(): undefined {
+    public getMovableRows(): Object[] {
         return this.ej2Instances.getMovableRows();
     }
 
@@ -229,7 +229,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getPager();
     }
 
-    public getPrimaryKeyFieldNames(): undefined {
+    public getPrimaryKeyFieldNames(): string[] {
         return this.ej2Instances.getPrimaryKeyFieldNames();
     }
 
@@ -237,27 +237,31 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getRowByIndex(index);
     }
 
+    public getRowIndexByPrimaryKey(value: string | Object): number {
+        return this.ej2Instances.getRowIndexByPrimaryKey(value);
+    }
+
     public getRowInfo(target: Object | Object): Object {
         return this.ej2Instances.getRowInfo(target);
     }
 
-    public getRows(): undefined {
+    public getRows(): Object[] {
         return this.ej2Instances.getRows();
     }
 
-    public getSelectedRecords(): undefined {
+    public getSelectedRecords(): Object[] {
         return this.ej2Instances.getSelectedRecords();
     }
 
-    public getSelectedRowCellIndexes(): undefined {
+    public getSelectedRowCellIndexes(): Object[] {
         return this.ej2Instances.getSelectedRowCellIndexes();
     }
 
-    public getSelectedRowIndexes(): undefined {
+    public getSelectedRowIndexes(): number[] {
         return this.ej2Instances.getSelectedRowIndexes();
     }
 
-    public getSelectedRows(): undefined {
+    public getSelectedRows(): Object[] {
         return this.ej2Instances.getSelectedRows();
     }
 
@@ -265,7 +269,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getUidByColumnField(field);
     }
 
-    public getVisibleColumns(): undefined {
+    public getVisibleColumns(): Object[] {
         return this.ej2Instances.getVisibleColumns();
     }
 

@@ -217,8 +217,8 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    addRecord(data, index) {
-        return this.ej2Instances.addRecord(data, index);
+    addRecord(data, index, position) {
+        return this.ej2Instances.addRecord(data, index, position);
     }
     autoFitColumns(fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);

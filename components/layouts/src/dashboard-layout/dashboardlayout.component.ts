@@ -72,7 +72,7 @@ export class DashboardLayoutComponent extends ComponentBase {
         return this.ej2Instances.resizePanel(id, sizeX, sizeY);
     }
 
-    public serialize(): undefined {
+    public serialize(): Object[] {
         return this.ej2Instances.serialize();
     }
 }

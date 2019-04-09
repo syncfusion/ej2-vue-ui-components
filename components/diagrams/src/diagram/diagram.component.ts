@@ -57,7 +57,7 @@ export class DiagramComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public add(obj: Object | Object, group?: boolean): undefined {
+    public add(obj: Object | Object, group?: boolean): Object | Object {
         return this.ej2Instances.add(obj, group);
     }
 
@@ -165,7 +165,7 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.endGroupAction();
     }
 
-    public exportDiagram(options: Object): undefined {
+    public exportDiagram(options: Object): string | Object {
         return this.ej2Instances.exportDiagram(options);
     }
 
@@ -181,7 +181,7 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.findObjectUnderMouse(objects, action, inAction);
     }
 
-    public findObjectsUnderMouse(position: Object, source?: Object): undefined {
+    public findObjectsUnderMouse(position: Object, source?: Object): Object[] {
         return this.ej2Instances.findObjectsUnderMouse(position, source);
     }
 

@@ -83,15 +83,15 @@ export class TreeViewComponent extends ComponentBase {
         return this.ej2Instances.expandAll(nodes, level, excludeHiddenNodes);
     }
 
-    public getAllCheckedNodes(): undefined {
+    public getAllCheckedNodes(): string[] {
         return this.ej2Instances.getAllCheckedNodes();
     }
 
-    public getNode(node: string | Object): undefined {
+    public getNode(node: string | Object): Object {
         return this.ej2Instances.getNode(node);
     }
 
-    public getTreeData(node?: string | Object): undefined {
+    public getTreeData(node?: string | Object): undefined[] {
         return this.ej2Instances.getTreeData(node);
     }
 

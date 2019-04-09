@@ -247,6 +247,9 @@ var RadioButtonComponent = /** @__PURE__ @class */ (function (_super) {
     RadioButtonComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
     };
+    RadioButtonComponent.prototype.getSelectedValue = function () {
+        return this.ej2Instances.getSelectedValue();
+    };
     RadioButtonComponent = __decorate$2([
         EJComponentDecorator({
             props: properties$2,

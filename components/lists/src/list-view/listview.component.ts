@@ -79,7 +79,7 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.findItem(obj);
     }
 
-    public getSelectedItems(): undefined {
+    public getSelectedItems(): Object | Object | Object | Object {
         return this.ej2Instances.getSelectedItems();
     }
 
@@ -99,7 +99,7 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.removeMultipleItems(obj);
     }
 
-    public requiredModules(): undefined {
+    public requiredModules(): Object[] {
         return this.ej2Instances.requiredModules();
     }
 

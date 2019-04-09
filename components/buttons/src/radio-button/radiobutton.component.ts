@@ -70,6 +70,9 @@ export class RadioButtonComponent extends ComponentBase {
         return createElement('input', (this as any).$slots.default);
     }
     
+    public getSelectedValue(): string {
+        return this.ej2Instances.getSelectedValue();
+    }
 }
 
 export const RadioButtonPlugin = {

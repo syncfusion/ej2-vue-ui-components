@@ -71,7 +71,7 @@ export class DialogComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public getButtons(index?: number): undefined {
+    public getButtons(index?: number): Object[] | Object {
         return this.ej2Instances.getButtons(index);
     }
 

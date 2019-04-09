@@ -197,6 +197,9 @@ let RadioButtonComponent = class RadioButtonComponent extends ComponentBase {
     render(createElement) {
         return createElement('input', this.$slots.default);
     }
+    getSelectedValue() {
+        return this.ej2Instances.getSelectedValue();
+    }
 };
 RadioButtonComponent = __decorate$2([
     EJComponentDecorator({

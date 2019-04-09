@@ -64,7 +64,7 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.clearAll();
     }
 
-    public getFilesData(): undefined {
+    public getFilesData(): Object[] {
         return this.ej2Instances.getFilesData();
     }
 
@@ -84,7 +84,7 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.retry(fileData, fromcanceledStage, custom);
     }
 
-    public sortFileList(filesData: Object): undefined {
+    public sortFileList(filesData: Object): Object[] {
         return this.ej2Instances.sortFileList(filesData);
     }
 
