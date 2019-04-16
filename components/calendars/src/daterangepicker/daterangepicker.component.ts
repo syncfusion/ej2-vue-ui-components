@@ -87,7 +87,7 @@ export class DateRangePickerComponent extends ComponentBase {
         return this.ej2Instances.hide(event);
     }
 
-    public requiredModules(): undefined {
+    public requiredModules(): Object[] {
         return this.ej2Instances.requiredModules();
     }
 

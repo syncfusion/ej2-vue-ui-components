@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.1.40 (2019-04-09)
+
+### Dialog
+
+#### Bug Fixes
+
+- The issue with preventing the dialog resize using `args.cancel` has been resolved.
+
 ## 17.1.38 (2019-03-29)
 
 ### Dialog
@@ -92,8 +100,6 @@
 #### New Features
 
 - Provided option to specify the type of the dialog's buttons such as submit, reset.
-
-- Provided two-way binding support to `visible` property of dialog.
 
 ## 16.3.21 (2018-09-22)
 

@@ -56,8 +56,8 @@ export class RangeNavigatorComponent extends ComponentBase {
         return this.ej2Instances.createSecondaryElement();
     }
 
-    public export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number): void {
-        return this.ej2Instances.export(type, fileName, orientation, controls, width, height);
+    public export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number, isVertical?: boolean): void {
+        return this.ej2Instances.export(type, fileName, orientation, controls, width, height, isVertical);
     }
 
     public print(id?: string[] | string | Object): void {

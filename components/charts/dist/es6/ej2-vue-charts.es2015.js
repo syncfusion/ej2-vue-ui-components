@@ -758,8 +758,8 @@ let RangeNavigatorComponent = class RangeNavigatorComponent extends ComponentBas
     createSecondaryElement() {
         return this.ej2Instances.createSecondaryElement();
     }
-    export(type, fileName, orientation, controls, width, height) {
-        return this.ej2Instances.export(type, fileName, orientation, controls, width, height);
+    export(type, fileName, orientation, controls, width, height, isVertical) {
+        return this.ej2Instances.export(type, fileName, orientation, controls, width, height, isVertical);
     }
     print(id) {
         return this.ej2Instances.print(id);

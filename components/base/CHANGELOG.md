@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.1.41 (2019-04-16)
+
+### Common
+
+#### New Features
+
+- #233125 Upgraded Vue Peer Dependency version from 2.5.21 to 2.6.10
+
 ## 17.1.38 (2019-03-29)
 
 ### Common

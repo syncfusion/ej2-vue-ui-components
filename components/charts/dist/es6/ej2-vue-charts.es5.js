@@ -1153,8 +1153,8 @@ var RangeNavigatorComponent = /** @__PURE__ @class */ (function (_super) {
     RangeNavigatorComponent.prototype.createSecondaryElement = function () {
         return this.ej2Instances.createSecondaryElement();
     };
-    RangeNavigatorComponent.prototype.export = function (type, fileName, orientation, controls, width, height) {
-        return this.ej2Instances.export(type, fileName, orientation, controls, width, height);
+    RangeNavigatorComponent.prototype.export = function (type, fileName, orientation, controls, width, height, isVertical) {
+        return this.ej2Instances.export(type, fileName, orientation, controls, width, height, isVertical);
     };
     RangeNavigatorComponent.prototype.print = function (id) {
         return this.ej2Instances.print(id);

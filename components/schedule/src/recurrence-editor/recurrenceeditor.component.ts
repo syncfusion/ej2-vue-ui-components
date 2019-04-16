@@ -55,7 +55,7 @@ export class RecurrenceEditorComponent extends ComponentBase {
         return this.ej2Instances.getCalendarMode();
     }
 
-    public getRecurrenceDates(startDate: Object, rule: string, excludeDate?: string, maximumCount?: number, viewDate?: Object): undefined {
+    public getRecurrenceDates(startDate: Object, rule: string, excludeDate?: string, maximumCount?: number, viewDate?: Object): number[] {
         return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
     }
 

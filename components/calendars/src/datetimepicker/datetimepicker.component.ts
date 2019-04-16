@@ -102,7 +102,7 @@ export class DateTimePickerComponent extends ComponentBase {
         return this.ej2Instances.removeDate(dates);
     }
 
-    public requiredModules(): undefined {
+    public requiredModules(): Object[] {
         return this.ej2Instances.requiredModules();
     }
 

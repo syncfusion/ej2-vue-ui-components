@@ -77,7 +77,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.addEvent(data);
     }
 
-    public addResource(resources: Object, name: string, index: number): void {
+    public addResource(resources: Object | Object[], name: string, index: number): void {
         return this.ej2Instances.addResource(resources, name, index);
     }
 
@@ -137,11 +137,11 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getCssProperties();
     }
 
-    public getCurrentViewDates(): undefined {
+    public getCurrentViewDates(): Object[] {
         return this.ej2Instances.getCurrentViewDates();
     }
 
-    public getCurrentViewEvents(): undefined {
+    public getCurrentViewEvents(): Object[] {
         return this.ej2Instances.getCurrentViewEvents();
     }
 
@@ -153,7 +153,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getDateHeaderTemplate();
     }
 
-    public getDayNames(type: string): undefined {
+    public getDayNames(type: string): string[] {
         return this.ej2Instances.getDayNames(type);
     }
 
@@ -169,7 +169,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getEventTooltipTemplate();
     }
 
-    public getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): undefined {
+    public getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[] {
         return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
     }
 
@@ -193,11 +193,11 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getNavigateView();
     }
 
-    public getOccurrencesByID(eventID: number | string): undefined {
+    public getOccurrencesByID(eventID: number | string): Object[] {
         return this.ej2Instances.getOccurrencesByID(eventID);
     }
 
-    public getOccurrencesByRange(startTime: Object, endTime: Object): undefined {
+    public getOccurrencesByRange(startTime: Object, endTime: Object): Object[] {
         return this.ej2Instances.getOccurrencesByRange(startTime, endTime);
     }
 
@@ -221,11 +221,11 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getResourcesByIndex(index);
     }
 
-    public getSelectedElements(): undefined {
+    public getSelectedElements(): Object[] {
         return this.ej2Instances.getSelectedElements();
     }
 
-    public getTableRows(): undefined {
+    public getTableRows(): Object[] {
         return this.ej2Instances.getTableRows();
     }
 
@@ -233,7 +233,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getTimeString(date);
     }
 
-    public getWorkCellElements(): undefined {
+    public getWorkCellElements(): Object[] {
         return this.ej2Instances.getWorkCellElements();
     }
 
@@ -253,7 +253,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.isSelectedDate(date);
     }
 
-    public isSlotAvailable(startTime: Object, endTime: Object, groupIndex?: number): boolean {
+    public isSlotAvailable(startTime: Object | Object, endTime?: Object, groupIndex?: number): boolean {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
     }
 
@@ -269,7 +269,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.removeNewEventElement();
     }
 
-    public removeResource(resourceId: string | number, name: string): void {
+    public removeResource(resourceId: string | string[] | number | number[], name: string): void {
         return this.ej2Instances.removeResource(resourceId, name);
     }
 
