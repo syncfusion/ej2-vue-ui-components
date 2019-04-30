@@ -237,6 +237,10 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.moveObjects(objects, targetLayer);
     }
 
+    public moveObjectsUp(node: Object | Object, currentLayer: Object): void {
+        return this.ej2Instances.moveObjectsUp(node, currentLayer);
+    }
+
     public nudge(direction: Object, x?: number, y?: number): void {
         return this.ej2Instances.nudge(direction, x, y);
     }

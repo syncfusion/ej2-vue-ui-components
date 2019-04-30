@@ -474,6 +474,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     moveObjects(objects, targetLayer) {
         return this.ej2Instances.moveObjects(objects, targetLayer);
     }
+    moveObjectsUp(node, currentLayer) {
+        return this.ej2Instances.moveObjectsUp(node, currentLayer);
+    }
     nudge(direction, x, y) {
         return this.ej2Instances.nudge(direction, x, y);
     }

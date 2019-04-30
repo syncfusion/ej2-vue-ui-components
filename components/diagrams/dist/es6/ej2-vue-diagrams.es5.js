@@ -628,6 +628,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.moveObjects = function (objects, targetLayer) {
         return this.ej2Instances.moveObjects(objects, targetLayer);
     };
+    DiagramComponent.prototype.moveObjectsUp = function (node, currentLayer) {
+        return this.ej2Instances.moveObjectsUp(node, currentLayer);
+    };
     DiagramComponent.prototype.nudge = function (direction, x, y) {
         return this.ej2Instances.nudge(direction, x, y);
     };

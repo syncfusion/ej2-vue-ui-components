@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 17.1.43 (2019-04-30)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- The Loading Indicator is now shown properly while loading a large page size document.
+- The pan interaction mode is now working properly when the toolbar is disabled.
+
 ## 17.1.42 (2019-04-23)
 
 ### PDF Viewer
