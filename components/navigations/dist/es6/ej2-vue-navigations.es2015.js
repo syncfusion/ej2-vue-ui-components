@@ -654,7 +654,7 @@ var __decorate$10 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+const properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hamburgerMode', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'title', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 const modelProps$6 = [];
 /**
  * Represents the Essential JS 2 VueJS Menu Component.
@@ -693,6 +693,9 @@ let MenuComponent = class MenuComponent extends ComponentBase {
     render(createElement) {
         return createElement('ul', this.$slots.default);
     }
+    close() {
+        return this.ej2Instances.close();
+    }
     enableItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     }
@@ -704,6 +707,9 @@ let MenuComponent = class MenuComponent extends ComponentBase {
     }
     insertBefore(items, text, isUniqueId) {
         return this.ej2Instances.insertBefore(items, text, isUniqueId);
+    }
+    open() {
+        return this.ej2Instances.open();
     }
     removeItems(items, isUniqueId) {
         return this.ej2Instances.removeItems(items, isUniqueId);

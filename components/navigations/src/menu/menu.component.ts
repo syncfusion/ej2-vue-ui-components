@@ -4,7 +4,7 @@ import { Menu } from '@syncfusion/ej2-navigations';
 import { MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+export const properties: string[] = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hamburgerMode', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'title', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 export const modelProps: string[] = [];
 
 /**
@@ -52,6 +52,10 @@ export class MenuComponent extends ComponentBase {
         return createElement('ul', (this as any).$slots.default);
     }
     
+    public close(): void {
+        return this.ej2Instances.close();
+    }
+
     public enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     }
@@ -66,6 +70,10 @@ export class MenuComponent extends ComponentBase {
 
     public insertBefore(items: Object[], text: string, isUniqueId?: boolean): void {
         return this.ej2Instances.insertBefore(items, text, isUniqueId);
+    }
+
+    public open(): void {
+        return this.ej2Instances.open();
     }
 
     public removeItems(items: string[], isUniqueId?: boolean): void {

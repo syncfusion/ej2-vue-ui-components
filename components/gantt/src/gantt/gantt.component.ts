@@ -248,6 +248,10 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.updateChartScrollOffset(left, top);
     }
 
+    public updateDataSource(dataSource: any[], args: object): void {
+        return this.ej2Instances.updateDataSource(dataSource, args);
+    }
+
     public updatePredecessor(id: Object | number, predecessorString: string): void {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     }

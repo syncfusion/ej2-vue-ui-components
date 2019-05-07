@@ -861,7 +861,7 @@ var __decorate$10 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+var properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hamburgerMode', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'title', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 var modelProps$6 = [];
 /**
  * Represents the Essential JS 2 VueJS Menu Component.
@@ -903,6 +903,9 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
     MenuComponent.prototype.render = function (createElement) {
         return createElement('ul', this.$slots.default);
     };
+    MenuComponent.prototype.close = function () {
+        return this.ej2Instances.close();
+    };
     MenuComponent.prototype.enableItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     };
@@ -914,6 +917,9 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
     };
     MenuComponent.prototype.insertBefore = function (items, text, isUniqueId) {
         return this.ej2Instances.insertBefore(items, text, isUniqueId);
+    };
+    MenuComponent.prototype.open = function () {
+        return this.ej2Instances.open();
     };
     MenuComponent.prototype.removeItems = function (items, isUniqueId) {
         return this.ej2Instances.removeItems(items, isUniqueId);

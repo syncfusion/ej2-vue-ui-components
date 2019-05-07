@@ -225,6 +225,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getSelectedElements();
     }
 
+    public getStartEndTime(startEndTime: string): Object {
+        return this.ej2Instances.getStartEndTime(startEndTime);
+    }
+
     public getTableRows(): Object[] {
         return this.ej2Instances.getTableRows();
     }

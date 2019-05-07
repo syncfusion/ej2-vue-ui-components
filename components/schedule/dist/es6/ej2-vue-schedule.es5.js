@@ -403,6 +403,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getSelectedElements = function () {
         return this.ej2Instances.getSelectedElements();
     };
+    ScheduleComponent.prototype.getStartEndTime = function (startEndTime) {
+        return this.ej2Instances.getStartEndTime(startEndTime);
+    };
     ScheduleComponent.prototype.getTableRows = function () {
         return this.ej2Instances.getTableRows();
     };

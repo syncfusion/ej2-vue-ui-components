@@ -318,6 +318,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getSelectedElements() {
         return this.ej2Instances.getSelectedElements();
     }
+    getStartEndTime(startEndTime) {
+        return this.ej2Instances.getStartEndTime(startEndTime);
+    }
     getTableRows() {
         return this.ej2Instances.getTableRows();
     }

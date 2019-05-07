@@ -627,6 +627,9 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.updateChartScrollOffset = function (left, top) {
         return this.ej2Instances.updateChartScrollOffset(left, top);
     };
+    GanttComponent.prototype.updateDataSource = function (dataSource, args) {
+        return this.ej2Instances.updateDataSource(dataSource, args);
+    };
     GanttComponent.prototype.updatePredecessor = function (id, predecessorString) {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     };

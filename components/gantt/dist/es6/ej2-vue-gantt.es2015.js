@@ -473,6 +473,9 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     updateChartScrollOffset(left, top) {
         return this.ej2Instances.updateChartScrollOffset(left, top);
     }
+    updateDataSource(dataSource, args) {
+        return this.ej2Instances.updateDataSource(dataSource, args);
+    }
     updatePredecessor(id, predecessorString) {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     }
