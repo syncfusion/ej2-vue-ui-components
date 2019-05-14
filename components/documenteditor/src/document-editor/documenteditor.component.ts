@@ -63,6 +63,10 @@ export class DocumentEditorComponent extends ComponentBase {
         return this.ej2Instances.focusIn();
     }
 
+    public getBookmarks(): string[] {
+        return this.ej2Instances.getBookmarks();
+    }
+
     public getStyleNames(styleType?: Object): string[] {
         return this.ej2Instances.getStyleNames(styleType);
     }

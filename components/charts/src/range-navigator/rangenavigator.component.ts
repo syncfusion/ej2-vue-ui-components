@@ -1,11 +1,12 @@
 import Vue from 'vue';
+import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { RangeNavigator } from '@syncfusion/ej2-charts';
 import { RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin } from './series.directive'
 
 
 export const properties: string[] = ['allowSnapping', 'animationDuration', 'dataSource', 'disableRangeSelector', 'enableDeferredUpdate', 'enableGrouping', 'enablePersistence', 'enableRtl', 'groupBy', 'height', 'interval', 'intervalType', 'labelFormat', 'labelIntersectAction', 'labelPosition', 'labelStyle', 'locale', 'logBase', 'majorGridLines', 'majorTickLines', 'margin', 'maximum', 'minimum', 'navigatorBorder', 'navigatorStyleSettings', 'periodSelectorSettings', 'query', 'secondaryLabelAlignment', 'series', 'skeleton', 'skeletonType', 'theme', 'tickPosition', 'tooltip', 'useGroupingSeparator', 'value', 'valueType', 'width', 'xName', 'yName', 'beforePrint', 'changed', 'labelRender', 'load', 'loaded', 'resized', 'selectorRender', 'tooltipRender'];
-export const modelProps: string[] = [];
+export const modelProps: string[] = ['dataSource'];
 
 /**
  * Represents Vuejs RangeNavigator Component
@@ -14,7 +15,10 @@ export const modelProps: string[] = [];
  * ```
  */
 @EJComponentDecorator({
-    props: properties
+    props: properties,
+    model: {
+        event: 'modelchanged'
+    }
 })
 export class RangeNavigatorComponent extends ComponentBase {
     
@@ -28,7 +32,9 @@ export class RangeNavigatorComponent extends ComponentBase {
     
     constructor() {
         super();
-        this.ej2Instances = new RangeNavigator({});
+        this.ej2Instances = new RangeNavigator({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
+
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -46,6 +52,19 @@ export class RangeNavigatorComponent extends ComponentBase {
                 });
             });
         }
+    }
+    public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key: string[] = this.models.toString().match(/checked|value/) || [];
+            let propKey: string = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                (this as any).$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
+        }            
     }
 
     public render(createElement: any) {

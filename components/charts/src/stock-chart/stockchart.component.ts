@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { StockChart } from '@syncfusion/ej2-charts';
 import { StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin } from './trendlines.directive'
@@ -14,7 +15,7 @@ import { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChart
 
 
 export const properties: string[] = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'stockEvents', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'rangeChange', 'selectorRender', 'seriesRender', 'stockEventRender', 'tooltipRender'];
-export const modelProps: string[] = [];
+export const modelProps: string[] = ['dataSource'];
 
 /**
  * Represents Vuejs chart Component
@@ -23,7 +24,10 @@ export const modelProps: string[] = [];
  * ```
  */
 @EJComponentDecorator({
-    props: properties
+    props: properties,
+    model: {
+        event: 'modelchanged'
+    }
 })
 export class StockChartComponent extends ComponentBase {
     
@@ -37,7 +41,9 @@ export class StockChartComponent extends ComponentBase {
     
     constructor() {
         super();
-        this.ej2Instances = new StockChart({});
+        this.ej2Instances = new StockChart({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
+
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -55,6 +61,19 @@ export class StockChartComponent extends ComponentBase {
                 });
             });
         }
+    }
+    public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key: string[] = this.models.toString().match(/checked|value/) || [];
+            let propKey: string = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                (this as any).$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
+        }            
     }
 
     public render(createElement: any) {

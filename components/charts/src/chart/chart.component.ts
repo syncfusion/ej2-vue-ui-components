@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Chart } from '@syncfusion/ej2-charts';
 import { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin } from './trendlines.directive'
@@ -16,7 +17,7 @@ import { IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlu
 
 
 export const properties: string[] = ['annotations', 'axes', 'background', 'border', 'chartArea', 'columns', 'crosshair', 'currencyCode', 'dataSource', 'description', 'enableAnimation', 'enableExport', 'enablePersistence', 'enableRtl', 'enableSideBySidePlacement', 'height', 'indicators', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRender', 'axisLabelRender', 'axisMultiLabelRender', 'axisRangeCalculated', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'dragComplete', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'scrollChanged', 'scrollEnd', 'scrollStart', 'seriesRender', 'textRender', 'tooltipRender', 'zoomComplete'];
-export const modelProps: string[] = [];
+export const modelProps: string[] = ['dataSource'];
 
 /**
  * Represents Vuejs chart Component
@@ -25,7 +26,10 @@ export const modelProps: string[] = [];
  * ```
  */
 @EJComponentDecorator({
-    props: properties
+    props: properties,
+    model: {
+        event: 'modelchanged'
+    }
 })
 export class ChartComponent extends ComponentBase {
     
@@ -39,7 +43,9 @@ export class ChartComponent extends ComponentBase {
     
     constructor() {
         super();
-        this.ej2Instances = new Chart({});
+        this.ej2Instances = new Chart({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
+
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -57,6 +63,19 @@ export class ChartComponent extends ComponentBase {
                 });
             });
         }
+    }
+    public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key: string[] = this.models.toString().match(/checked|value/) || [];
+            let propKey: string = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                (this as any).$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
+        }            
     }
 
     public render(createElement: any) {

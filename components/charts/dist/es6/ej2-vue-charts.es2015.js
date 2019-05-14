@@ -1,6 +1,7 @@
 import { AccumulationChart, Chart, RangeNavigator, Smithchart, Sparkline, StockChart } from '@syncfusion/ej2-charts';
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
+import { isUndefined } from '@syncfusion/ej2-base';
 
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -441,7 +442,7 @@ var __decorate$12 = (undefined && undefined.__decorate) || function (decorators,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const properties = ['annotations', 'axes', 'background', 'border', 'chartArea', 'columns', 'crosshair', 'currencyCode', 'dataSource', 'description', 'enableAnimation', 'enableExport', 'enablePersistence', 'enableRtl', 'enableSideBySidePlacement', 'height', 'indicators', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRender', 'axisLabelRender', 'axisMultiLabelRender', 'axisRangeCalculated', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'dragComplete', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'scrollChanged', 'scrollEnd', 'scrollStart', 'seriesRender', 'textRender', 'tooltipRender', 'zoomComplete'];
-const modelProps = [];
+const modelProps = ['dataSource'];
 /**
  * Represents Vuejs chart Component
  * ```vue
@@ -458,6 +459,8 @@ let ChartComponent = class ChartComponent extends ComponentBase {
         this.tagMapper = { "e-series-collection": { "e-series": { "e-trendlines": "e-trendline", "e-segments": "e-segment" } }, "e-axes": { "e-axis": { "e-striplines": "e-stripline", "e-multilevellabels": { "e-multilevellabel": { "e-categories": "e-category" } } } }, "e-rows": "e-row", "e-columns": "e-column", "e-annotations": "e-annotation", "e-selecteddataindexes": "e-selecteddataindex", "e-indicators": "e-indicator" };
         this.tagNameMapper = { "e-series-collection": "e-series", "e-striplines": "e-stripLines", "e-multilevellabels": "e-multiLevelLabels", "e-selecteddataindexes": "e-selectedDataIndexes" };
         this.ej2Instances = new Chart({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -474,6 +477,19 @@ let ChartComponent = class ChartComponent extends ComponentBase {
                     }
                 });
             });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -500,7 +516,10 @@ let ChartComponent = class ChartComponent extends ComponentBase {
 };
 ChartComponent = __decorate$12([
     EJComponentDecorator({
-        props: properties
+        props: properties,
+        model: {
+            event: 'modelchanged'
+        }
     })
 ], ChartComponent);
 const ChartPlugin = {
@@ -611,7 +630,7 @@ var __decorate$15 = (undefined && undefined.__decorate) || function (decorators,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const properties$1 = ['annotations', 'background', 'border', 'center', 'currencyCode', 'dataSource', 'enableAnimation', 'enableExport', 'enablePersistence', 'enableRtl', 'enableSmartLabels', 'height', 'isMultiSelect', 'legendSettings', 'locale', 'margin', 'selectedDataIndexes', 'selectionMode', 'series', 'subTitle', 'subTitleStyle', 'theme', 'title', 'titleStyle', 'tooltip', 'width', 'animationComplete', 'annotationRender', 'beforePrint', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'seriesRender', 'textRender', 'tooltipRender'];
-const modelProps$1 = [];
+const modelProps$1 = ['dataSource'];
 /**
  * Represents Vuejs AccumulationChart Component
  * ```vue
@@ -628,6 +647,8 @@ let AccumulationChartComponent = class AccumulationChartComponent extends Compon
         this.tagMapper = { "e-accumulation-series-collection": "e-accumulation-series", "e-accumulation-annotations": "e-accumulation-annotation" };
         this.tagNameMapper = { "e-accumulation-series-collection": "e-series", "e-accumulation-annotations": "e-annotations" };
         this.ej2Instances = new AccumulationChart({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -646,6 +667,19 @@ let AccumulationChartComponent = class AccumulationChartComponent extends Compon
             });
         }
     }
+    trigger(eventName, eventProp) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
+        }
+    }
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
@@ -661,7 +695,10 @@ let AccumulationChartComponent = class AccumulationChartComponent extends Compon
 };
 AccumulationChartComponent = __decorate$15([
     EJComponentDecorator({
-        props: properties$1
+        props: properties$1,
+        model: {
+            event: 'modelchanged'
+        }
     })
 ], AccumulationChartComponent);
 const AccumulationChartPlugin = {
@@ -717,7 +754,7 @@ var __decorate$17 = (undefined && undefined.__decorate) || function (decorators,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const properties$2 = ['allowSnapping', 'animationDuration', 'dataSource', 'disableRangeSelector', 'enableDeferredUpdate', 'enableGrouping', 'enablePersistence', 'enableRtl', 'groupBy', 'height', 'interval', 'intervalType', 'labelFormat', 'labelIntersectAction', 'labelPosition', 'labelStyle', 'locale', 'logBase', 'majorGridLines', 'majorTickLines', 'margin', 'maximum', 'minimum', 'navigatorBorder', 'navigatorStyleSettings', 'periodSelectorSettings', 'query', 'secondaryLabelAlignment', 'series', 'skeleton', 'skeletonType', 'theme', 'tickPosition', 'tooltip', 'useGroupingSeparator', 'value', 'valueType', 'width', 'xName', 'yName', 'beforePrint', 'changed', 'labelRender', 'load', 'loaded', 'resized', 'selectorRender', 'tooltipRender'];
-const modelProps$2 = [];
+const modelProps$2 = ['dataSource'];
 /**
  * Represents Vuejs RangeNavigator Component
  * ```vue
@@ -734,6 +771,8 @@ let RangeNavigatorComponent = class RangeNavigatorComponent extends ComponentBas
         this.tagMapper = { "e-rangenavigator-series-collection": "e-rangenavigator-series" };
         this.tagNameMapper = { "e-rangenavigator-series-collection": "e-series" };
         this.ej2Instances = new RangeNavigator({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -750,6 +789,19 @@ let RangeNavigatorComponent = class RangeNavigatorComponent extends ComponentBas
                     }
                 });
             });
+        }
+    }
+    trigger(eventName, eventProp) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -770,7 +822,10 @@ let RangeNavigatorComponent = class RangeNavigatorComponent extends ComponentBas
 };
 RangeNavigatorComponent = __decorate$17([
     EJComponentDecorator({
-        props: properties$2
+        props: properties$2,
+        model: {
+            event: 'modelchanged'
+        }
     })
 ], RangeNavigatorComponent);
 const RangeNavigatorPlugin = {
@@ -1362,7 +1417,7 @@ var __decorate$32 = (undefined && undefined.__decorate) || function (decorators,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const properties$5 = ['annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'stockEvents', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'load', 'loaded', 'rangeChange', 'selectorRender', 'seriesRender', 'stockEventRender', 'tooltipRender'];
-const modelProps$5 = [];
+const modelProps$5 = ['dataSource'];
 /**
  * Represents Vuejs chart Component
  * ```vue
@@ -1379,6 +1434,8 @@ let StockChartComponent = class StockChartComponent extends ComponentBase {
         this.tagMapper = { "e-stockchart-series-collection": { "e-stockchart-series": { "e-trendlines": "e-trendline" } }, "e-stockchart-axes": { "e-stockchart-axis": { "e-stockchart-striplines": "e-stockchart-stripline" } }, "e-stockchart-rows": "e-stockchart-row", "e-stockchart-annotations": "e-stockchart-annotation", "e-stockchart-selectedDataIndexes": "e-stockchart-selectedDataIndex", "e-stockchart-periods": "e-stockchart-period", "e-stockchart-stockevents": "e-stockchart-stockevent", "e-stockchart-indicators": "e-stockchart-indicator" };
         this.tagNameMapper = { "e-stockchart-series-collection": "e-series", "e-stockchart-striplines": "e-stripLines", "e-stockchart-axes": "e-axes", "e-stockchart-rows": "e-rows", "e-stockchart-annotations": "e-annotations", "e-stockchart-selectedDataIndexes": "e-selectedDataIndexes", "e-stockchart-periods": "e-periods", "e-stockchart-stockevents": "e-stockEvents", "e-stockchart-indicators": "e-indicators" };
         this.ej2Instances = new StockChart({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -1397,6 +1454,19 @@ let StockChartComponent = class StockChartComponent extends ComponentBase {
             });
         }
     }
+    trigger(eventName, eventProp) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp);
+        }
+    }
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
@@ -1412,7 +1482,10 @@ let StockChartComponent = class StockChartComponent extends ComponentBase {
 };
 StockChartComponent = __decorate$32([
     EJComponentDecorator({
-        props: properties$5
+        props: properties$5,
+        model: {
+            event: 'modelchanged'
+        }
     })
 ], StockChartComponent);
 const StockChartPlugin = {

@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { DocumentEditorContainer } from '@syncfusion/ej2-documenteditor';
 
 
-export const properties: string[] = ['enableLocalPaste', 'enablePersistence', 'enableRtl', 'enableToolbar', 'locale', 'restrictEditing', 'serviceUrl', 'showPropertiesPane', 'created', 'destroyed'];
+export const properties: string[] = ['enableLocalPaste', 'enablePersistence', 'enableRtl', 'enableToolbar', 'locale', 'restrictEditing', 'serviceUrl', 'showPropertiesPane', 'contentChange', 'created', 'destroyed', 'selectionChange'];
 export const modelProps: string[] = [];
 
 /**

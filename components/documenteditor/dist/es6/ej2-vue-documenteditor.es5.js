@@ -71,6 +71,9 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     DocumentEditorComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
+    DocumentEditorComponent.prototype.getBookmarks = function () {
+        return this.ej2Instances.getBookmarks();
+    };
     DocumentEditorComponent.prototype.getStyleNames = function (styleType) {
         return this.ej2Instances.getStyleNames(styleType);
     };
@@ -146,7 +149,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$1 = ['enableLocalPaste', 'enablePersistence', 'enableRtl', 'enableToolbar', 'locale', 'restrictEditing', 'serviceUrl', 'showPropertiesPane', 'created', 'destroyed'];
+var properties$1 = ['enableLocalPaste', 'enablePersistence', 'enableRtl', 'enableToolbar', 'locale', 'restrictEditing', 'serviceUrl', 'showPropertiesPane', 'contentChange', 'created', 'destroyed', 'selectionChange'];
 var modelProps$1 = [];
 /**
  * Represents the Essential JS 2 VueJS Document Editor Container
