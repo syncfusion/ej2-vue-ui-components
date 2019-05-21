@@ -21,37 +21,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var ButtonModelPropDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends(ButtonModelPropDirective, _super);
-    function ButtonModelPropDirective() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    ButtonModelPropDirective.prototype.render = function () {
-        return;
-    };
-    ButtonModelPropDirective = __decorate([
-        EJComponentDecorator({})
-    ], ButtonModelPropDirective);
-    return ButtonModelPropDirective;
-}(Vue));
-var ButtonModelPropPlugin = {
-    name: 'e-buttonmodelprop',
-    install: function (Vue$$1) {
-        Vue$$1.component(ButtonModelPropPlugin.name, ButtonModelPropDirective);
-    }
-};
-/**
- * 'e-button' directive represent a button of Vue toast
- * It must be contained in a Toast component(`ejs-toast`).
- * ```html
- * <ejs-toast id='toast' :showCloseIcon=true>
- *   <e-buttons>
- *    <e-button :content='Ok' :isPrimary=true></e-button>
- *    <e-button :content='Cancel'></e-button>
- *   </e-buttons>
- * </ejs-toast>
- * ```
- */
 var ButtonModelPropsDirective = /** @__PURE__ @class */ (function (_super) {
     __extends(ButtonModelPropsDirective, _super);
     function ButtonModelPropsDirective() {
@@ -69,6 +38,37 @@ var ButtonModelPropsPlugin = {
     name: 'e-buttonmodelprops',
     install: function (Vue$$1) {
         Vue$$1.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
+    }
+};
+/**
+ * 'e-button' directive represent a button of Vue toast
+ * It must be contained in a Toast component(`ejs-toast`).
+ * ```html
+ * <ejs-toast id='toast' :showCloseIcon=true>
+ *   <e-buttons>
+ *    <e-button :content='Ok' :isPrimary=true></e-button>
+ *    <e-button :content='Cancel'></e-button>
+ *   </e-buttons>
+ * </ejs-toast>
+ * ```
+ */
+var ButtonModelPropDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends(ButtonModelPropDirective, _super);
+    function ButtonModelPropDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ButtonModelPropDirective.prototype.render = function () {
+        return;
+    };
+    ButtonModelPropDirective = __decorate([
+        EJComponentDecorator({})
+    ], ButtonModelPropDirective);
+    return ButtonModelPropDirective;
+}(Vue));
+var ButtonModelPropPlugin = {
+    name: 'e-buttonmodelprop',
+    install: function (Vue$$1) {
+        Vue$$1.component(ButtonModelPropPlugin.name, ButtonModelPropDirective);
     }
 };
 
@@ -107,8 +107,8 @@ var ToastComponent = /** @__PURE__ @class */ (function (_super) {
         _this.models = modelProps;
         _this.hasChildDirective = true;
         _this.hasInjectedModules = false;
-        _this.tagMapper = { "e-buttonmodelprop": "e-buttonmodelprops" };
-        _this.tagNameMapper = { "e-buttonmodelprop": "e-buttons" };
+        _this.tagMapper = { "e-buttonmodelprops": "e-buttonmodelprop" };
+        _this.tagNameMapper = { "e-buttonmodelprops": "e-buttons" };
         _this.ej2Instances = new Toast({});
         _this.bindProperties();
         _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
@@ -150,11 +150,11 @@ var ToastPlugin = {
     name: 'ejs-toast',
     install: function (Vue$$1) {
         Vue$$1.component(ToastPlugin.name, ToastComponent);
-        Vue$$1.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
         Vue$$1.component(ButtonModelPropPlugin.name, ButtonModelPropDirective);
+        Vue$$1.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
     }
 };
 
-export { ButtonModelPropDirective, ButtonModelPropsDirective, ButtonModelPropPlugin, ButtonModelPropsPlugin, ToastComponent, ToastPlugin };
+export { ButtonModelPropsDirective, ButtonModelPropDirective, ButtonModelPropsPlugin, ButtonModelPropPlugin, ToastComponent, ToastPlugin };
 export * from '@syncfusion/ej2-notifications';
 //# sourceMappingURL=ej2-vue-notifications.es5.js.map

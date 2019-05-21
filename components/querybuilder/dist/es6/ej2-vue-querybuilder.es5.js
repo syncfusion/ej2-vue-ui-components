@@ -151,8 +151,14 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     QueryBuilderComponent.prototype.getFilteredRecords = function () {
         return this.ej2Instances.getFilteredRecords();
     };
+    QueryBuilderComponent.prototype.getGroup = function (target) {
+        return this.ej2Instances.getGroup(target);
+    };
     QueryBuilderComponent.prototype.getPredicate = function (rule) {
         return this.ej2Instances.getPredicate(rule);
+    };
+    QueryBuilderComponent.prototype.getRule = function (elem) {
+        return this.ej2Instances.getRule(elem);
     };
     QueryBuilderComponent.prototype.getRules = function () {
         return this.ej2Instances.getRules();

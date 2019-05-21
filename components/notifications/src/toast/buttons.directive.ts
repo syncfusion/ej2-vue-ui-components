@@ -2,15 +2,15 @@ import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 @EJComponentDecorator({})
-export class ButtonModelPropDirective extends Vue {
+export class ButtonModelPropsDirective extends Vue {
     public render(): void {
         return;
     }
 }
-export const ButtonModelPropPlugin = {
-    name: 'e-buttonmodelprop',
+export const ButtonModelPropsPlugin = {
+    name: 'e-buttonmodelprops',
     install(Vue: any) {
-        Vue.component(ButtonModelPropPlugin.name, ButtonModelPropDirective);
+        Vue.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
     }
 }
 
@@ -27,14 +27,14 @@ export const ButtonModelPropPlugin = {
  * ```
  */
 @EJComponentDecorator({})
-export class ButtonModelPropsDirective extends Vue {
+export class ButtonModelPropDirective extends Vue {
     public render(): void {
         return;
     }
 }
-export const ButtonModelPropsPlugin = {
-    name: 'e-buttonmodelprops',
+export const ButtonModelPropPlugin = {
+    name: 'e-buttonmodelprop',
     install(Vue: any) {
-        Vue.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
+        Vue.component(ButtonModelPropPlugin.name, ButtonModelPropDirective);
     }
 }

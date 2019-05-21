@@ -76,8 +76,16 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.getFilteredRecords();
     }
 
+    public getGroup(target: Object | string): Object {
+        return this.ej2Instances.getGroup(target);
+    }
+
     public getPredicate(rule: Object): Object {
         return this.ej2Instances.getPredicate(rule);
+    }
+
+    public getRule(elem: string | Object): Object {
+        return this.ej2Instances.getRule(elem);
     }
 
     public getRules(): Object {

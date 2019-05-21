@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Toast } from '@syncfusion/ej2-notifications';
-import { ButtonModelPropDirective, ButtonModelPropsDirective, ButtonModelPropPlugin, ButtonModelPropsPlugin } from './buttons.directive'
+import { ButtonModelPropsDirective, ButtonModelPropDirective, ButtonModelPropsPlugin, ButtonModelPropPlugin } from './buttons.directive'
 
 
 export const properties: string[] = ['animation', 'buttons', 'content', 'cssClass', 'enablePersistence', 'enableRtl', 'extendedTimeout', 'height', 'icon', 'locale', 'newestOnTop', 'position', 'showCloseButton', 'showProgressBar', 'target', 'template', 'timeOut', 'title', 'width', 'beforeOpen', 'click', 'close', 'created', 'destroyed', 'open'];
@@ -23,8 +23,8 @@ export class ToastComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = false;
-    public tagMapper: { [key: string]: Object } = {"e-buttonmodelprop":"e-buttonmodelprops"};
-    public tagNameMapper: Object = {"e-buttonmodelprop":"e-buttons"};
+    public tagMapper: { [key: string]: Object } = {"e-buttonmodelprops":"e-buttonmodelprop"};
+    public tagNameMapper: Object = {"e-buttonmodelprops":"e-buttons"};
     
     constructor() {
         super();
@@ -65,8 +65,8 @@ export const ToastPlugin = {
     name: 'ejs-toast',
     install(Vue: any) {
         Vue.component(ToastPlugin.name, ToastComponent);
-        Vue.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
         Vue.component(ButtonModelPropPlugin.name, ButtonModelPropDirective);
+        Vue.component(ButtonModelPropsPlugin.name, ButtonModelPropsDirective);
 
     }
 }

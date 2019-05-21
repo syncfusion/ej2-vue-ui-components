@@ -112,8 +112,14 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
     getFilteredRecords() {
         return this.ej2Instances.getFilteredRecords();
     }
+    getGroup(target) {
+        return this.ej2Instances.getGroup(target);
+    }
     getPredicate(rule) {
         return this.ej2Instances.getPredicate(rule);
+    }
+    getRule(elem) {
+        return this.ej2Instances.getRule(elem);
     }
     getRules() {
         return this.ej2Instances.getRules();
