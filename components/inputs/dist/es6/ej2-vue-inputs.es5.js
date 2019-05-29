@@ -82,6 +82,12 @@ var TextBoxComponent = /** @__PURE__ @class */ (function (_super) {
     TextBoxComponent.prototype.addAttributes = function (attributes) {
         return this.ej2Instances.addAttributes(attributes);
     };
+    TextBoxComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
+    TextBoxComponent.prototype.focusOut = function () {
+        return this.ej2Instances.focusOut();
+    };
     TextBoxComponent.prototype.removeAttributes = function (attributes) {
         return this.ej2Instances.removeAttributes(attributes);
     };
@@ -181,6 +187,12 @@ var NumericTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
     NumericTextBoxComponent.prototype.decrement = function (step) {
         return this.ej2Instances.decrement(step);
     };
+    NumericTextBoxComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
+    NumericTextBoxComponent.prototype.focusOut = function () {
+        return this.ej2Instances.focusOut();
+    };
     NumericTextBoxComponent.prototype.getText = function () {
         return this.ej2Instances.getText();
     };
@@ -279,6 +291,12 @@ var MaskedTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
     };
     MaskedTextBoxComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
+    };
+    MaskedTextBoxComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
+    MaskedTextBoxComponent.prototype.focusOut = function () {
+        return this.ej2Instances.focusOut();
     };
     MaskedTextBoxComponent.prototype.getMaskedValue = function () {
         return this.ej2Instances.getMaskedValue();

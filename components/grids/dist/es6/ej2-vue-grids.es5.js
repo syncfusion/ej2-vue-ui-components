@@ -326,6 +326,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.csvExport = function (excelExportProperties, isMultipleExport, workbook, isBlob) {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     };
+    GridComponent.prototype.dataReady = function () {
+        return this.ej2Instances.dataReady();
+    };
     GridComponent.prototype.deleteRecord = function (fieldname, data) {
         return this.ej2Instances.deleteRecord(fieldname, data);
     };

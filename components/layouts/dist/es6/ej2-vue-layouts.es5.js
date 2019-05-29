@@ -298,6 +298,9 @@ var DashboardLayoutComponent = /** @__PURE__ @class */ (function (_super) {
     DashboardLayoutComponent.prototype.movePanel = function (id, row, col) {
         return this.ej2Instances.movePanel(id, row, col);
     };
+    DashboardLayoutComponent.prototype.refresh = function () {
+        return this.ej2Instances.refresh();
+    };
     DashboardLayoutComponent.prototype.removeAll = function () {
         return this.ej2Instances.removeAll();
     };

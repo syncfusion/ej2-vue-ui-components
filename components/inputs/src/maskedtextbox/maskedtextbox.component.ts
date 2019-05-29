@@ -70,6 +70,14 @@ export class MaskedTextBoxComponent extends ComponentBase {
         return createElement('input', (this as any).$slots.default);
     }
     
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
+    public focusOut(): void {
+        return this.ej2Instances.focusOut();
+    }
+
     public getMaskedValue(): string {
         return this.ej2Instances.getMaskedValue();
     }

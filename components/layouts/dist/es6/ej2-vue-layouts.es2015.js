@@ -219,6 +219,9 @@ let DashboardLayoutComponent = class DashboardLayoutComponent extends ComponentB
     movePanel(id, row, col) {
         return this.ej2Instances.movePanel(id, row, col);
     }
+    refresh() {
+        return this.ej2Instances.refresh();
+    }
     removeAll() {
         return this.ej2Instances.removeAll();
     }

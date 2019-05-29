@@ -60,6 +60,10 @@ export class DashboardLayoutComponent extends ComponentBase {
         return this.ej2Instances.movePanel(id, row, col);
     }
 
+    public refresh(): void {
+        return this.ej2Instances.refresh();
+    }
+
     public removeAll(): void {
         return this.ej2Instances.removeAll();
     }

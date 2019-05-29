@@ -74,6 +74,14 @@ export class NumericTextBoxComponent extends ComponentBase {
         return this.ej2Instances.decrement(step);
     }
 
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
+    public focusOut(): void {
+        return this.ej2Instances.focusOut();
+    }
+
     public getText(): string {
         return this.ej2Instances.getText();
     }

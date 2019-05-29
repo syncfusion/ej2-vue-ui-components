@@ -105,6 +105,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
 
+    public dataReady(): void {
+        return this.ej2Instances.dataReady();
+    }
+
     public deleteRecord(fieldname?: string, data?: Object): void {
         return this.ej2Instances.deleteRecord(fieldname, data);
     }

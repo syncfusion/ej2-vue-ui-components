@@ -374,6 +374,12 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
+    focusOut() {
+        return this.ej2Instances.focusOut();
+    }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);
     }

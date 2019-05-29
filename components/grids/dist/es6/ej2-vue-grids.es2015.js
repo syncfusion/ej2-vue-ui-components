@@ -241,6 +241,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     csvExport(excelExportProperties, isMultipleExport, workbook, isBlob) {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
+    dataReady() {
+        return this.ej2Instances.dataReady();
+    }
     deleteRecord(fieldname, data) {
         return this.ej2Instances.deleteRecord(fieldname, data);
     }

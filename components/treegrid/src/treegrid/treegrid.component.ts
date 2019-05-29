@@ -301,7 +301,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.refreshHeader();
     }
 
-    public reorderColumns(fromFName: string, toFName: string): void {
+    public reorderColumns(fromFName: string | string[], toFName: string): void {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     }
 

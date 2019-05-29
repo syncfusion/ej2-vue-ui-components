@@ -74,6 +74,14 @@ export class MultiSelectComponent extends ComponentBase {
         return this.ej2Instances.addItem(items, itemIndex);
     }
 
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
+    public focusOut(): void {
+        return this.ej2Instances.focusOut();
+    }
+
     public getDataByValue(value: string | number | boolean): Object | string | number | boolean {
         return this.ej2Instances.getDataByValue(value);
     }

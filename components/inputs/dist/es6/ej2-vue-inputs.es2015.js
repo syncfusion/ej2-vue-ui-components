@@ -66,6 +66,12 @@ let TextBoxComponent = class TextBoxComponent extends ComponentBase {
     addAttributes(attributes) {
         return this.ej2Instances.addAttributes(attributes);
     }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
+    focusOut() {
+        return this.ej2Instances.focusOut();
+    }
     removeAttributes(attributes) {
         return this.ej2Instances.removeAttributes(attributes);
     }
@@ -148,6 +154,12 @@ let NumericTextBoxComponent = class NumericTextBoxComponent extends ComponentBas
     decrement(step) {
         return this.ej2Instances.decrement(step);
     }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
+    focusOut() {
+        return this.ej2Instances.focusOut();
+    }
     getText() {
         return this.ej2Instances.getText();
     }
@@ -229,6 +241,12 @@ let MaskedTextBoxComponent = class MaskedTextBoxComponent extends ComponentBase 
     }
     render(createElement) {
         return createElement('input', this.$slots.default);
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
+    focusOut() {
+        return this.ej2Instances.focusOut();
     }
     getMaskedValue() {
         return this.ej2Instances.getMaskedValue();

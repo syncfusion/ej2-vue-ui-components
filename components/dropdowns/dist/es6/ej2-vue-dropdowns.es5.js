@@ -441,6 +441,12 @@ var MultiSelectComponent = /** @__PURE__ @class */ (function (_super) {
     MultiSelectComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     };
+    MultiSelectComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
+    MultiSelectComponent.prototype.focusOut = function () {
+        return this.ej2Instances.focusOut();
+    };
     MultiSelectComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
     };

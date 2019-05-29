@@ -74,6 +74,14 @@ export class TextBoxComponent extends ComponentBase {
         return this.ej2Instances.addAttributes(attributes);
     }
 
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
+    public focusOut(): void {
+        return this.ej2Instances.focusOut();
+    }
+
     public removeAttributes(attributes: string[]): void {
         return this.ej2Instances.removeAttributes(attributes);
     }
