@@ -82,6 +82,10 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.enableItems(items, enable);
     }
 
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
     public getDataByValue(value: string | number | boolean): Object | string | number | boolean {
         return this.ej2Instances.getDataByValue(value);
     }

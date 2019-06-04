@@ -62,6 +62,12 @@ var DropDownButtonComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownButtonComponent.prototype.render = function (createElement) {
         return createElement('button', this.$slots.default);
     };
+    DropDownButtonComponent.prototype.click = function () {
+        return this.ej2Instances.click();
+    };
+    DropDownButtonComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
     DropDownButtonComponent.prototype.toggle = function () {
         return this.ej2Instances.toggle();
     };
@@ -140,6 +146,9 @@ var SplitButtonComponent = /** @__PURE__ @class */ (function (_super) {
     SplitButtonComponent.prototype.render = function (createElement) {
         return createElement('button', this.$slots.default);
     };
+    SplitButtonComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
     SplitButtonComponent.prototype.toggle = function () {
         return this.ej2Instances.toggle();
     };
@@ -217,6 +226,15 @@ var ProgressButtonComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ProgressButtonComponent.prototype.render = function (createElement) {
         return createElement('button', this.$slots.default);
+    };
+    ProgressButtonComponent.prototype.click = function () {
+        return this.ej2Instances.click();
+    };
+    ProgressButtonComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
+    ProgressButtonComponent.prototype.progressComplete = function () {
+        return this.ej2Instances.progressComplete();
     };
     ProgressButtonComponent.prototype.start = function (percent) {
         return this.ej2Instances.start(percent);

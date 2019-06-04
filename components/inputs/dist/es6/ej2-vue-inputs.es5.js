@@ -673,6 +673,9 @@ var ColorPickerComponent = /** @__PURE__ @class */ (function (_super) {
     ColorPickerComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
     };
+    ColorPickerComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
     ColorPickerComponent.prototype.getValue = function (value, type) {
         return this.ej2Instances.getValue(value, type);
     };

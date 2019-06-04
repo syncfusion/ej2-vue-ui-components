@@ -353,8 +353,8 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     addRecord(data, rowPosition, rowIndex) {
         return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
     }
-    cancelEdit(scrollTop) {
-        return this.ej2Instances.cancelEdit(scrollTop);
+    cancelEdit() {
+        return this.ej2Instances.cancelEdit();
     }
     clearFiltering() {
         return this.ej2Instances.clearFiltering();

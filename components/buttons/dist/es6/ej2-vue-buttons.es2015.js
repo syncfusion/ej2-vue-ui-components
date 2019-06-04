@@ -48,6 +48,12 @@ let ButtonComponent = class ButtonComponent extends ComponentBase {
     render(createElement) {
         return createElement('button', this.$slots.default);
     }
+    click() {
+        return this.ej2Instances.click();
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
 };
 ButtonComponent = __decorate([
     EJComponentDecorator({
@@ -120,6 +126,12 @@ let CheckBoxComponent = class CheckBoxComponent extends ComponentBase {
     }
     render(createElement) {
         return createElement('input', this.$slots.default);
+    }
+    click() {
+        return this.ej2Instances.click();
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
     }
 };
 CheckBoxComponent = __decorate$1([
@@ -196,6 +208,12 @@ let RadioButtonComponent = class RadioButtonComponent extends ComponentBase {
     }
     render(createElement) {
         return createElement('input', this.$slots.default);
+    }
+    click() {
+        return this.ej2Instances.click();
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
     }
     getSelectedValue() {
         return this.ej2Instances.getSelectedValue();
@@ -275,6 +293,12 @@ let SwitchComponent = class SwitchComponent extends ComponentBase {
     }
     render(createElement) {
         return createElement('input', this.$slots.default);
+    }
+    click() {
+        return this.ej2Instances.click();
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
     }
     toggle() {
         return this.ej2Instances.toggle();

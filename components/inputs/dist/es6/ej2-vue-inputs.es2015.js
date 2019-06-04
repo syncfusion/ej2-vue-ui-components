@@ -549,6 +549,9 @@ let ColorPickerComponent = class ColorPickerComponent extends ComponentBase {
     render(createElement) {
         return createElement('input', this.$slots.default);
     }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
     getValue(value, type) {
         return this.ej2Instances.getValue(value, type);
     }

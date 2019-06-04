@@ -51,6 +51,10 @@ export class SplitButtonComponent extends ComponentBase {
         return createElement('button', (this as any).$slots.default);
     }
     
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
     public toggle(): void {
         return this.ej2Instances.toggle();
     }

@@ -247,9 +247,6 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     csvExport(excelExportProperties, isMultipleExport, workbook, isBlob) {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
-    dataBind() {
-        return this.ej2Instances.dataBind();
-    }
     deleteRecord(fieldName, data) {
         return this.ej2Instances.deleteRecord(fieldName, data);
     }

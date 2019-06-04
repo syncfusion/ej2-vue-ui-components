@@ -113,10 +113,6 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
 
-    public dataBind(): void {
-        return this.ej2Instances.dataBind();
-    }
-
     public deleteRecord(fieldName?: string, data?: Object): void {
         return this.ej2Instances.deleteRecord(fieldName, data);
     }

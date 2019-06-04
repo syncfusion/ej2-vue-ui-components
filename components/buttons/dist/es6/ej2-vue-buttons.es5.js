@@ -64,6 +64,12 @@ var ButtonComponent = /** @__PURE__ @class */ (function (_super) {
     ButtonComponent.prototype.render = function (createElement) {
         return createElement('button', this.$slots.default);
     };
+    ButtonComponent.prototype.click = function () {
+        return this.ej2Instances.click();
+    };
+    ButtonComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
     ButtonComponent = __decorate([
         EJComponentDecorator({
             props: properties
@@ -153,6 +159,12 @@ var CheckBoxComponent = /** @__PURE__ @class */ (function (_super) {
     };
     CheckBoxComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
+    };
+    CheckBoxComponent.prototype.click = function () {
+        return this.ej2Instances.click();
+    };
+    CheckBoxComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
     };
     CheckBoxComponent = __decorate$1([
         EJComponentDecorator({
@@ -246,6 +258,12 @@ var RadioButtonComponent = /** @__PURE__ @class */ (function (_super) {
     };
     RadioButtonComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
+    };
+    RadioButtonComponent.prototype.click = function () {
+        return this.ej2Instances.click();
+    };
+    RadioButtonComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
     };
     RadioButtonComponent.prototype.getSelectedValue = function () {
         return this.ej2Instances.getSelectedValue();
@@ -342,6 +360,12 @@ var SwitchComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SwitchComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
+    };
+    SwitchComponent.prototype.click = function () {
+        return this.ej2Instances.click();
+    };
+    SwitchComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
     };
     SwitchComponent.prototype.toggle = function () {
         return this.ej2Instances.toggle();

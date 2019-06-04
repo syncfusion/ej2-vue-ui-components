@@ -70,6 +70,14 @@ export class RadioButtonComponent extends ComponentBase {
         return createElement('input', (this as any).$slots.default);
     }
     
+    public click(): void {
+        return this.ej2Instances.click();
+    }
+
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
     public getSelectedValue(): string {
         return this.ej2Instances.getSelectedValue();
     }

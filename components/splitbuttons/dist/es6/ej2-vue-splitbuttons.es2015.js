@@ -46,6 +46,12 @@ let DropDownButtonComponent = class DropDownButtonComponent extends ComponentBas
     render(createElement) {
         return createElement('button', this.$slots.default);
     }
+    click() {
+        return this.ej2Instances.click();
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
     toggle() {
         return this.ej2Instances.toggle();
     }
@@ -107,6 +113,9 @@ let SplitButtonComponent = class SplitButtonComponent extends ComponentBase {
     render(createElement) {
         return createElement('button', this.$slots.default);
     }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
     toggle() {
         return this.ej2Instances.toggle();
     }
@@ -167,6 +176,15 @@ let ProgressButtonComponent = class ProgressButtonComponent extends ComponentBas
     }
     render(createElement) {
         return createElement('button', this.$slots.default);
+    }
+    click() {
+        return this.ej2Instances.click();
+    }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
+    progressComplete() {
+        return this.ej2Instances.progressComplete();
     }
     start(percent) {
         return this.ej2Instances.start(percent);

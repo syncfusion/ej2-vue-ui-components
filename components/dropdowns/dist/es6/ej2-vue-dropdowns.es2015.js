@@ -489,6 +489,9 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     enableItems(items, enable) {
         return this.ej2Instances.enableItems(items, enable);
     }
+    focusIn() {
+        return this.ej2Instances.focusIn();
+    }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);
     }

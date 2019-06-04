@@ -70,6 +70,10 @@ export class ColorPickerComponent extends ComponentBase {
         return createElement('input', (this as any).$slots.default);
     }
     
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
     public getValue(value?: string, type?: string): string {
         return this.ej2Instances.getValue(value, type);
     }

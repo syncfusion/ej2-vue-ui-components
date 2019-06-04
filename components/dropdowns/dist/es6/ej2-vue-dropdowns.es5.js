@@ -573,6 +573,9 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.enableItems = function (items, enable) {
         return this.ej2Instances.enableItems(items, enable);
     };
+    ListBoxComponent.prototype.focusIn = function () {
+        return this.ej2Instances.focusIn();
+    };
     ListBoxComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
     };

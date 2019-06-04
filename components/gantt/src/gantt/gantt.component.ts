@@ -88,8 +88,8 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
     }
 
-    public cancelEdit(scrollTop: number): void {
-        return this.ej2Instances.cancelEdit(scrollTop);
+    public cancelEdit(): void {
+        return this.ej2Instances.cancelEdit();
     }
 
     public clearFiltering(): void {

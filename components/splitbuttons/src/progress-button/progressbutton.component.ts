@@ -51,6 +51,18 @@ export class ProgressButtonComponent extends ComponentBase {
         return createElement('button', (this as any).$slots.default);
     }
     
+    public click(): void {
+        return this.ej2Instances.click();
+    }
+
+    public focusIn(): void {
+        return this.ej2Instances.focusIn();
+    }
+
+    public progressComplete(): void {
+        return this.ej2Instances.progressComplete();
+    }
+
     public start(percent?: number): void {
         return this.ej2Instances.start(percent);
     }

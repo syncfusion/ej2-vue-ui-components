@@ -332,9 +332,6 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     TreeGridComponent.prototype.csvExport = function (excelExportProperties, isMultipleExport, workbook, isBlob) {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     };
-    TreeGridComponent.prototype.dataBind = function () {
-        return this.ej2Instances.dataBind();
-    };
     TreeGridComponent.prototype.deleteRecord = function (fieldName, data) {
         return this.ej2Instances.deleteRecord(fieldName, data);
     };

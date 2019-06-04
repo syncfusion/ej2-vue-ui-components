@@ -507,8 +507,8 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.addRecord = function (data, rowPosition, rowIndex) {
         return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
     };
-    GanttComponent.prototype.cancelEdit = function (scrollTop) {
-        return this.ej2Instances.cancelEdit(scrollTop);
+    GanttComponent.prototype.cancelEdit = function () {
+        return this.ej2Instances.cancelEdit();
     };
     GanttComponent.prototype.clearFiltering = function () {
         return this.ej2Instances.clearFiltering();
