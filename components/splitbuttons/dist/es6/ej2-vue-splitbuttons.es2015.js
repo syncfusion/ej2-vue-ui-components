@@ -46,9 +46,6 @@ let DropDownButtonComponent = class DropDownButtonComponent extends ComponentBas
     render(createElement) {
         return createElement('button', this.$slots.default);
     }
-    click() {
-        return this.ej2Instances.click();
-    }
     focusIn() {
         return this.ej2Instances.focusIn();
     }

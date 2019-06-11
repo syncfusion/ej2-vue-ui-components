@@ -62,9 +62,6 @@ var DropDownButtonComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownButtonComponent.prototype.render = function (createElement) {
         return createElement('button', this.$slots.default);
     };
-    DropDownButtonComponent.prototype.click = function () {
-        return this.ej2Instances.click();
-    };
     DropDownButtonComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
