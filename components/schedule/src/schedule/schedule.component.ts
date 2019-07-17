@@ -293,6 +293,14 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.renderElements(isLayoutOnly);
     }
 
+    public resetEventTemplates(): void {
+        return this.ej2Instances.resetEventTemplates();
+    }
+
+    public resetLayoutTemplates(): void {
+        return this.ej2Instances.resetLayoutTemplates();
+    }
+
     public resetWorkHours(dates: Object[], start?: string, end?: string, groupIndex?: number): void {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     }
@@ -319,6 +327,10 @@ export class ScheduleComponent extends ComponentBase {
 
     public templateParser(template: string): Object {
         return this.ej2Instances.templateParser(template);
+    }
+
+    public updateLayoutTemplates(): void {
+        return this.ej2Instances.updateLayoutTemplates();
     }
 }
 

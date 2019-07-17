@@ -369,6 +369,12 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     renderElements(isLayoutOnly) {
         return this.ej2Instances.renderElements(isLayoutOnly);
     }
+    resetEventTemplates() {
+        return this.ej2Instances.resetEventTemplates();
+    }
+    resetLayoutTemplates() {
+        return this.ej2Instances.resetLayoutTemplates();
+    }
     resetWorkHours(dates, start, end, groupIndex) {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     }
@@ -389,6 +395,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     }
     templateParser(template) {
         return this.ej2Instances.templateParser(template);
+    }
+    updateLayoutTemplates() {
+        return this.ej2Instances.updateLayoutTemplates();
     }
 };
 ScheduleComponent = __decorate$3([

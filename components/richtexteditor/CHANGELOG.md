@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## 17.2.35 (2019-07-17)
+
+### RichTextEditor
+
+#### Bug Fixes
+
+- `#241388` - The issue, "browser context menu is not shown on right click when enabling the showOnRightClick property" has been resolved.
+
+#### New Features
+
+- **Paste from Microsoft Word**
+- This feature allows users to paste clean-formatted HTML markup by removing all unnecessary elements, styles, and attributes from text while copying and pasting it from Microsoft Word.
+
 ## 17.2.34 (2019-07-11)
 
 ### RichTextEditor
@@ -15,11 +28,6 @@
 - `#240808` - The issue "opening a link in new window throws an error for auto generated link" has been fixed.
 - `#240024` - The issue, "spacing between words is removed when focus out the editor" has been resolved.
 - `#234519`, `#234586`, `#F138909` - The issues with table and its functionalities in IE11 has been resolved.
-
-#### New Features
-
-- **Paste from Microsoft Word**
-- This feature allows users to paste clean-formatted HTML markup by removing all unnecessary elements, styles, and attributes from text while copying and pasting it from Microsoft Word.
 
 ## 17.2.28-beta (2019-06-27)
 

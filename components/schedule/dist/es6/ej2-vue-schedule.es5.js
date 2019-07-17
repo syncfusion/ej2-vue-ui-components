@@ -454,6 +454,12 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.renderElements = function (isLayoutOnly) {
         return this.ej2Instances.renderElements(isLayoutOnly);
     };
+    ScheduleComponent.prototype.resetEventTemplates = function () {
+        return this.ej2Instances.resetEventTemplates();
+    };
+    ScheduleComponent.prototype.resetLayoutTemplates = function () {
+        return this.ej2Instances.resetLayoutTemplates();
+    };
     ScheduleComponent.prototype.resetWorkHours = function (dates, start, end, groupIndex) {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     };
@@ -474,6 +480,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ScheduleComponent.prototype.templateParser = function (template) {
         return this.ej2Instances.templateParser(template);
+    };
+    ScheduleComponent.prototype.updateLayoutTemplates = function () {
+        return this.ej2Instances.updateLayoutTemplates();
     };
     ScheduleComponent = __decorate$3([
         EJComponentDecorator({
