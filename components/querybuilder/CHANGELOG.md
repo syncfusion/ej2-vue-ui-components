@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.2.36 (2019-07-24)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- Date values are not properly filtered using DataManager.
+
 ## 17.2.35 (2019-07-17)
 
 ### QueryBuilder
@@ -95,7 +103,7 @@
 - The following events are renamed.
 
 | Existing Event Name | New Event Name | 
-|: ---------:| ---------:| 
+|---|---|
 | beforeConditionChange | beforeChange | 
 | beforeFieldChange | beforeChange | 
 | beforeOperatorChange | beforeChange | 
@@ -127,7 +135,7 @@
 - The following events are renamed.
 
 | Existing Event Name | New Event Name | 
-|: ---------:| ---------:| 
+|---|---|
 | beforeConditionChange | beforeChange | 
 | beforeFieldChange | beforeChange | 
 | beforeOperatorChange | beforeChange | 

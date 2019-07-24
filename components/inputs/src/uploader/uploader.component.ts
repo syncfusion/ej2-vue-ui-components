@@ -72,8 +72,8 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.pause(fileData, custom);
     }
 
-    public remove(fileData?: Object | Object[], customTemplate?: boolean, removeDirectly?: boolean, args?: Object | Object | Object): void {
-        return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, args);
+    public remove(fileData?: Object | Object[], customTemplate?: boolean, removeDirectly?: boolean, postRawFile?: boolean, args?: Object | Object | Object): void {
+        return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, postRawFile, args);
     }
 
     public resume(fileData: Object | Object[], custom?: boolean): void {

@@ -147,7 +147,7 @@
 - The following API namings are renamed.
 
 | Existing API Name | New API Name | 
-|: ---------:| ---------:| 
+|:-:|:-:|
 | unCheckAllItem | uncheckAllItems | 
 | unCheckItem | uncheckItem | 
 | checkAllItem | checkAllItems | 

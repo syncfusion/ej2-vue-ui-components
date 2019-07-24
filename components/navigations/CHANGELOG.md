@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.2.36 (2019-07-24)
+
+### Menu
+
+#### Bug Fixes
+
+- Issue with Submenu when the id contains special character.
+
 ## 17.2.34 (2019-07-11)
 
 ### Accordion
@@ -245,7 +253,7 @@
 - Type changes done for the following property.
 
 | Property Name | Old Type | New Type | 
-|: ---------:| ---------:| ---------:| 
+|---|---|---|
 | `animationSettings` | AnimationSettings | AnimationSettingsModel | 
 | `fields` | FieldSettings | FieldSettingsModel | 
 

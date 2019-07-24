@@ -1,6 +1,28 @@
+<!-- markdownlint-disable MD010 -->
+
+
+<!-- markdownlint-disable MD030 -->
+
+
+<!-- markdownlint-disable MD004 -->
+
+
+<!-- markdownlint-disable MD004 -->
+
+
 # Changelog
 
 ## [Unreleased]
+
+## 17.2.36 (2019-07-24)
+
+### Maps
+
+#### Bug Fixes
+
+- `#I240833` - Some labels disappear when you change "colorMapping" and refresh the map issue has been fixed
+- `I240804` - The issue with dynamically updating the zoom factor has been fixed
+- `I241873` - The issue with zooming the map component with a single click has been fixed
 
 ## 17.2.35 (2019-07-17)
 
@@ -72,7 +94,9 @@
 
 - `#F143717` - The div containing the maps component overlaps the div with inputs above it issue has                 been fixed
 - `#I233127` - The issue with the last interacted scaling is not maintained when refreshing the browser
-
+```
+       with the 'enablePersistence' API as true has been fixed.
+```
 
 ## 17.1.42 (2019-04-23)
 

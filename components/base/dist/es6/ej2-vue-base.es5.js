@@ -162,7 +162,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
                     ret = this.getMultiLevelDirValue(tagDirective.componentOptions.children, tagKey[dirTag], tagNameMapper);
                 }
                 if (tagDirective.data && tagDirective.data.attrs) {
-                    ret = extend(ret, tagDirective.data.attrs);
+                    ret = extend(ret, this.getCamelCaseProps(tagDirective.data.attrs));
                 }
             }
         }

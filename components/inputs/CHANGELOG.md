@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 17.2.36 (2019-07-24)
+
+### Uploader
+
+#### Bug Fixes
+
+- `#F145967`, `#242158` - Resolved removing event restricted while the `args.cancel` is enabled.
+- Now, provided `postRawFile` argument to the `remove` method for post either file/file name to the server.
+
 ## 17.2.35 (2019-07-17)
 
 ### Form Validator
@@ -560,7 +569,7 @@ undefinedNumericTextBox is used to get the number inputs from the user. The inpu
 - The following API namings are renamed.
 
 | Existing API Name | New API Name | 
-|: ---------:| ---------:| 
+|:-:|:-:|
 | readOnly | readonly | 
 
 ### ColorPicker
@@ -692,6 +701,10 @@ undefinedTextBox is an input element that allows to get input from the user. It 
 ## 16.1.24 (2018-02-22)
 
 ### Uploader
+
+```
+The Uploader component is useful to upload images, documents, and other files to server.
+```
 
 The component is extended version of HTML5 upload with multiple file selection, auto upload,
 drag and drop, progress bar, preload files, and validation.

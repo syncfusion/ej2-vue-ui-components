@@ -563,8 +563,8 @@ var UploaderComponent = /** @__PURE__ @class */ (function (_super) {
     UploaderComponent.prototype.pause = function (fileData, custom) {
         return this.ej2Instances.pause(fileData, custom);
     };
-    UploaderComponent.prototype.remove = function (fileData, customTemplate, removeDirectly, args) {
-        return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, args);
+    UploaderComponent.prototype.remove = function (fileData, customTemplate, removeDirectly, postRawFile, args) {
+        return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, postRawFile, args);
     };
     UploaderComponent.prototype.resume = function (fileData, custom) {
         return this.ej2Instances.resume(fileData, custom);

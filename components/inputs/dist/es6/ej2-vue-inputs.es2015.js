@@ -456,8 +456,8 @@ let UploaderComponent = class UploaderComponent extends ComponentBase {
     pause(fileData, custom) {
         return this.ej2Instances.pause(fileData, custom);
     }
-    remove(fileData, customTemplate, removeDirectly, args) {
-        return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, args);
+    remove(fileData, customTemplate, removeDirectly, postRawFile, args) {
+        return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, postRawFile, args);
     }
     resume(fileData, custom) {
         return this.ej2Instances.resume(fileData, custom);

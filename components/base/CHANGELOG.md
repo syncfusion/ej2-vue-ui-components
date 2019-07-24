@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.2.36 (2019-07-24)
+
+### Common
+
+#### Bug Fixes
+
+- `#I241634` Resolved Kebab case property issue in Vue component directive.
+
 ## 17.2.28-beta (2019-06-27)
 
 ### Common
