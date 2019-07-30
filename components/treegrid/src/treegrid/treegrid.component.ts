@@ -153,6 +153,10 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getCellFromIndex(rowIndex, columnIndex);
     }
 
+    public getCheckedRecords(): Object[] {
+        return this.ej2Instances.getCheckedRecords();
+    }
+
     public getCheckedRowIndexes(): number[] {
         return this.ej2Instances.getCheckedRowIndexes();
     }
@@ -199,6 +203,10 @@ export class TreeGridComponent extends ComponentBase {
 
     public getContentTable(): Object {
         return this.ej2Instances.getContentTable();
+    }
+
+    public getCurrentViewRecords(): Object[] {
+        return this.ej2Instances.getCurrentViewRecords();
     }
 
     public getDataModule(): Object {

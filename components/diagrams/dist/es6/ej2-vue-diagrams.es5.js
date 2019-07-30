@@ -511,6 +511,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.addLayer = function (layer, layerObject) {
         return this.ej2Instances.addLayer(layer, layerObject);
     };
+    DiagramComponent.prototype.addNodeToLane = function (node, swimLane, lane) {
+        return this.ej2Instances.addNodeToLane(node, swimLane, lane);
+    };
     DiagramComponent.prototype.addPhases = function (node, phases) {
         return this.ej2Instances.addPhases(node, phases);
     };

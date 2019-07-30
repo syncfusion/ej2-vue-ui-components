@@ -564,9 +564,6 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.render = function (createElement) {
         return createElement('input', this.$slots.default);
     };
-    ListBoxComponent.prototype.addItem = function (items, itemIndex) {
-        return this.ej2Instances.addItem(items, itemIndex);
-    };
     ListBoxComponent.prototype.addItems = function (items, itemIndex) {
         return this.ej2Instances.addItems(items, itemIndex);
     };

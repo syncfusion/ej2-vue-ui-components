@@ -362,6 +362,9 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     TreeGridComponent.prototype.getCellFromIndex = function (rowIndex, columnIndex) {
         return this.ej2Instances.getCellFromIndex(rowIndex, columnIndex);
     };
+    TreeGridComponent.prototype.getCheckedRecords = function () {
+        return this.ej2Instances.getCheckedRecords();
+    };
     TreeGridComponent.prototype.getCheckedRowIndexes = function () {
         return this.ej2Instances.getCheckedRowIndexes();
     };
@@ -397,6 +400,9 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     TreeGridComponent.prototype.getContentTable = function () {
         return this.ej2Instances.getContentTable();
+    };
+    TreeGridComponent.prototype.getCurrentViewRecords = function () {
+        return this.ej2Instances.getCurrentViewRecords();
     };
     TreeGridComponent.prototype.getDataModule = function () {
         return this.ej2Instances.getDataModule();

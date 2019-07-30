@@ -157,6 +157,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getDateHeaderTemplate();
     }
 
+    public getDateTime(date: Object): Object {
+        return this.ej2Instances.getDateTime(date);
+    }
+
     public getDayNames(type: string): string[] {
         return this.ej2Instances.getDayNames(type);
     }

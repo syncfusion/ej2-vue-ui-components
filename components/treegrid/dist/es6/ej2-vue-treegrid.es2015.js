@@ -277,6 +277,9 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     getCellFromIndex(rowIndex, columnIndex) {
         return this.ej2Instances.getCellFromIndex(rowIndex, columnIndex);
     }
+    getCheckedRecords() {
+        return this.ej2Instances.getCheckedRecords();
+    }
     getCheckedRowIndexes() {
         return this.ej2Instances.getCheckedRowIndexes();
     }
@@ -312,6 +315,9 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     }
     getContentTable() {
         return this.ej2Instances.getContentTable();
+    }
+    getCurrentViewRecords() {
+        return this.ej2Instances.getCurrentViewRecords();
     }
     getDataModule() {
         return this.ej2Instances.getDataModule();

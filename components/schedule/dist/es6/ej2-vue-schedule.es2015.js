@@ -267,6 +267,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getDateHeaderTemplate() {
         return this.ej2Instances.getDateHeaderTemplate();
     }
+    getDateTime(date) {
+        return this.ej2Instances.getDateTime(date);
+    }
     getDayNames(type) {
         return this.ej2Instances.getDayNames(type);
     }

@@ -480,9 +480,6 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     render(createElement) {
         return createElement('input', this.$slots.default);
     }
-    addItem(items, itemIndex) {
-        return this.ej2Instances.addItem(items, itemIndex);
-    }
     addItems(items, itemIndex) {
         return this.ej2Instances.addItems(items, itemIndex);
     }

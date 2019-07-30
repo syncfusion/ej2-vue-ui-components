@@ -8,12 +8,47 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ColorMappingsDirective = class ColorMappingsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+ColorMappingsDirective = __decorate([
+    EJComponentDecorator({})
+], ColorMappingsDirective);
+const ColorMappingsPlugin = {
+    name: 'e-colorMappings',
+    install(Vue$$1) {
+        Vue$$1.component(ColorMappingsPlugin.name, ColorMappingsDirective);
+    }
+};
+let ColorMappingDirective = class ColorMappingDirective extends Vue {
+    render() {
+        return;
+    }
+};
+ColorMappingDirective = __decorate([
+    EJComponentDecorator({})
+], ColorMappingDirective);
+const ColorMappingPlugin = {
+    name: 'e-colorMapping',
+    install(Vue$$1) {
+        Vue$$1.component(ColorMappingPlugin.name, ColorMappingDirective);
+    }
+};
+
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let LevelsDirective = class LevelsDirective extends Vue {
     render() {
         return;
     }
 };
-LevelsDirective = __decorate([
+LevelsDirective = __decorate$1([
     EJComponentDecorator({})
 ], LevelsDirective);
 const LevelsPlugin = {
@@ -37,7 +72,7 @@ let LevelDirective = class LevelDirective extends Vue {
         return;
     }
 };
-LevelDirective = __decorate([
+LevelDirective = __decorate$1([
     EJComponentDecorator({})
 ], LevelDirective);
 const LevelPlugin = {
@@ -47,7 +82,7 @@ const LevelPlugin = {
     }
 };
 
-var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -68,8 +103,8 @@ let TreeMapComponent = class TreeMapComponent extends ComponentBase {
         this.models = modelProps;
         this.hasChildDirective = true;
         this.hasInjectedModules = true;
-        this.tagMapper = { "e-levels": "e-level" };
-        this.tagNameMapper = {};
+        this.tagMapper = { "e-levels": { "e-level": { "e-colorMappings": "e-colorMapping" } } };
+        this.tagNameMapper = { "e-colorMappings": "e-colorMapping" };
         this.ej2Instances = new TreeMap({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -138,7 +173,7 @@ let TreeMapComponent = class TreeMapComponent extends ComponentBase {
         return this.ej2Instances.rightClickOnTreeMap(e);
     }
 };
-TreeMapComponent = __decorate$1([
+TreeMapComponent = __decorate$2([
     EJComponentDecorator({
         props: properties
     })
@@ -149,9 +184,11 @@ const TreeMapPlugin = {
         Vue$$1.component(TreeMapPlugin.name, TreeMapComponent);
         Vue$$1.component(LevelPlugin.name, LevelDirective);
         Vue$$1.component(LevelsPlugin.name, LevelsDirective);
+        Vue$$1.component(ColorMappingPlugin.name, ColorMappingDirective);
+        Vue$$1.component(ColorMappingsPlugin.name, ColorMappingsDirective);
     }
 };
 
-export { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin, TreeMapComponent, TreeMapPlugin };
+export { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin, LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin, TreeMapComponent, TreeMapPlugin };
 export * from '@syncfusion/ej2-treemap';
 //# sourceMappingURL=ej2-vue-treemap.es2015.js.map

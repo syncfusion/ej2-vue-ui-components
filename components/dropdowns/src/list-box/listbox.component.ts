@@ -70,10 +70,6 @@ export class ListBoxComponent extends ComponentBase {
         return createElement('input', (this as any).$slots.default);
     }
     
-    public addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void {
-        return this.ej2Instances.addItem(items, itemIndex);
-    }
-
     public addItems(items: Object[] | Object, itemIndex?: number): void {
         return this.ej2Instances.addItems(items, itemIndex);
     }

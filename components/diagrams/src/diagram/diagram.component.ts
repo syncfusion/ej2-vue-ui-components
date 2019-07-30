@@ -81,6 +81,10 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.addLayer(layer, layerObject);
     }
 
+    public addNodeToLane(node: Object, swimLane: string, lane: string): void {
+        return this.ej2Instances.addNodeToLane(node, swimLane, lane);
+    }
+
     public addPhases(node: Object, phases: Object[]): void {
         return this.ej2Instances.addPhases(node, phases);
     }

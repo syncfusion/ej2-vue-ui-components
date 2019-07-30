@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { TreeMap } from '@syncfusion/ej2-treemap';
+import { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin } from './colormapping.directive'
 import { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin } from './levels.directive'
 
 
@@ -23,8 +24,8 @@ export class TreeMapComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-levels":"e-level"};
-    public tagNameMapper: Object = {};
+    public tagMapper: { [key: string]: Object } = {"e-levels":{"e-level":{"e-colorMappings":"e-colorMapping"}}};
+    public tagNameMapper: Object = {"e-colorMappings":"e-colorMapping"};
     
     constructor() {
         super();
@@ -119,6 +120,8 @@ export const TreeMapPlugin = {
         Vue.component(TreeMapPlugin.name, TreeMapComponent);
         Vue.component(LevelPlugin.name, LevelDirective);
         Vue.component(LevelsPlugin.name, LevelsDirective);
+        Vue.component(ColorMappingPlugin.name, ColorMappingDirective);
+        Vue.component(ColorMappingsPlugin.name, ColorMappingsDirective);
 
     }
 }

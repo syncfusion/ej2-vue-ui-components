@@ -357,6 +357,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     addLayer(layer, layerObject) {
         return this.ej2Instances.addLayer(layer, layerObject);
     }
+    addNodeToLane(node, swimLane, lane) {
+        return this.ej2Instances.addNodeToLane(node, swimLane, lane);
+    }
     addPhases(node, phases) {
         return this.ej2Instances.addPhases(node, phases);
     }

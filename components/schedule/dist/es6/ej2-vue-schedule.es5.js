@@ -352,6 +352,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getDateHeaderTemplate = function () {
         return this.ej2Instances.getDateHeaderTemplate();
     };
+    ScheduleComponent.prototype.getDateTime = function (date) {
+        return this.ej2Instances.getDateTime(date);
+    };
     ScheduleComponent.prototype.getDayNames = function (type) {
         return this.ej2Instances.getDayNames(type);
     };
