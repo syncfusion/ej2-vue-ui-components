@@ -104,8 +104,8 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
     print() {
         return this.ej2Instances.print();
     }
-    refresh() {
-        return this.ej2Instances.refresh();
+    refreshUI() {
+        return this.ej2Instances.refreshUI();
     }
     removeToolbarItem(items) {
         return this.ej2Instances.removeToolbarItem(items);

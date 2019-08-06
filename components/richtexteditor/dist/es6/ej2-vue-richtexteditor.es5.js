@@ -120,8 +120,8 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.print = function () {
         return this.ej2Instances.print();
     };
-    RichTextEditorComponent.prototype.refresh = function () {
-        return this.ej2Instances.refresh();
+    RichTextEditorComponent.prototype.refreshUI = function () {
+        return this.ej2Instances.refreshUI();
     };
     RichTextEditorComponent.prototype.removeToolbarItem = function (items) {
         return this.ej2Instances.removeToolbarItem(items);

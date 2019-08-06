@@ -126,8 +126,8 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.print();
     }
 
-    public refresh(): void {
-        return this.ej2Instances.refresh();
+    public refreshUI(): void {
+        return this.ej2Instances.refreshUI();
     }
 
     public removeToolbarItem(items: string | string[]): void {

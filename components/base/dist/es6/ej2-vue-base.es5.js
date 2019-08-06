@@ -135,15 +135,17 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         var mulObj = {};
         for (var _i = 0, tagDirectories_1 = tagDirectories; _i < tagDirectories_1.length; _i++) {
             var tagDir = tagDirectories_1[_i];
-            var key = tagDir.componentOptions.tag;
-            var tagName = tagNameMapper[key] ? tagNameMapper[key] : key;
-            mulObj[tagName.replace('e-', '')] = [];
-            if (tagDir.componentOptions && tagDir.componentOptions.children) {
-                for (var _a = 0, _b = tagDir.componentOptions.children; _a < _b.length; _a++) {
-                    var tagDirChild = _b[_a];
-                    var mulLevObj = this.getVNodeValue(tagDirChild, tagKey[key], tagNameMapper);
-                    if (Object.keys(mulLevObj).length !== 0) {
-                        mulObj[tagName.replace('e-', '')].push(mulLevObj);
+            if (tagDir.componentOptions) {
+                var key = tagDir.componentOptions.tag;
+                var tagName = tagNameMapper[key] ? tagNameMapper[key] : key;
+                mulObj[tagName.replace('e-', '')] = [];
+                if (tagDir.componentOptions && tagDir.componentOptions.children) {
+                    for (var _a = 0, _b = tagDir.componentOptions.children; _a < _b.length; _a++) {
+                        var tagDirChild = _b[_a];
+                        var mulLevObj = this.getVNodeValue(tagDirChild, tagKey[key], tagNameMapper);
+                        if (Object.keys(mulLevObj).length !== 0) {
+                            mulObj[tagName.replace('e-', '')].push(mulLevObj);
+                        }
                     }
                 }
             }

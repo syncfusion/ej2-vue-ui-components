@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.2.40 (2019-08-06)
+
+### Common
+
+#### Bug Fixes
+
+- Resolved issue while using multiple multilevel Vue component directives.
+
 ## 17.2.36 (2019-07-24)
 
 ### Common

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.2.40 (2019-08-06)
+
+### TreeView
+
+#### Bug Fixes
+
+- #242925 - Issue with checked and unchecked the checkbox using keyboard interaction even disable the checkbox has been fixed.
+
 ## 17.2.39 (2019-07-30)
 
 ### TreeView

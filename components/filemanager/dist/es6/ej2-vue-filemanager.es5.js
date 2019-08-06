@@ -68,6 +68,9 @@ var FileManagerComponent = /** @__PURE__ @class */ (function (_super) {
     FileManagerComponent.prototype.enableToolbarItems = function (items) {
         return this.ej2Instances.enableToolbarItems(items);
     };
+    FileManagerComponent.prototype.getSelectedFiles = function () {
+        return this.ej2Instances.getSelectedFiles();
+    };
     FileManagerComponent.prototype.refreshFiles = function () {
         return this.ej2Instances.refreshFiles();
     };

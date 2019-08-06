@@ -52,6 +52,9 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     enableToolbarItems(items) {
         return this.ej2Instances.enableToolbarItems(items);
     }
+    getSelectedFiles() {
+        return this.ej2Instances.getSelectedFiles();
+    }
     refreshFiles() {
         return this.ej2Instances.refreshFiles();
     }

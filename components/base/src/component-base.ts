@@ -120,14 +120,16 @@ export class ComponentBase extends Vue {
     public getMultiLevelDirValue(tagDirectories: any, tagKey: string | Object, tagNameMapper: Object): Object {
         let mulObj: Object = {};
         for (let tagDir of tagDirectories) {
-            let key: string = tagDir.componentOptions.tag;
-            let tagName: string = tagNameMapper[key] ? tagNameMapper[key] : key;
-            mulObj[tagName.replace('e-', '')] = [];
-            if (tagDir.componentOptions && tagDir.componentOptions.children) {
-                for (let tagDirChild of tagDir.componentOptions.children) {
-                    let mulLevObj: Object = this.getVNodeValue(tagDirChild, tagKey[key], tagNameMapper);
-                    if (Object.keys(mulLevObj).length !== 0) {
-                        mulObj[tagName.replace('e-', '')].push(mulLevObj);
+            if (tagDir.componentOptions) {
+                let key: string = tagDir.componentOptions.tag;
+                let tagName: string = tagNameMapper[key] ? tagNameMapper[key] : key;
+                mulObj[tagName.replace('e-', '')] = [];
+                if (tagDir.componentOptions && tagDir.componentOptions.children) {
+                    for (let tagDirChild of tagDir.componentOptions.children) {
+                        let mulLevObj: Object = this.getVNodeValue(tagDirChild, tagKey[key], tagNameMapper);
+                        if (Object.keys(mulLevObj).length !== 0) {
+                            mulObj[tagName.replace('e-', '')].push(mulLevObj);
+                        }
                     }
                 }
             }
