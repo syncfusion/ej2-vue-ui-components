@@ -56,7 +56,7 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.bytesToSize(bytes);
     }
 
-    public cancel(fileData: Object[]): void {
+    public cancel(fileData?: Object[]): void {
         return this.ej2Instances.cancel(fileData);
     }
 
@@ -68,7 +68,7 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.getFilesData();
     }
 
-    public pause(fileData: Object | Object[], custom?: boolean): void {
+    public pause(fileData?: Object | Object[], custom?: boolean): void {
         return this.ej2Instances.pause(fileData, custom);
     }
 
@@ -76,15 +76,15 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.remove(fileData, customTemplate, removeDirectly, postRawFile, args);
     }
 
-    public resume(fileData: Object | Object[], custom?: boolean): void {
+    public resume(fileData?: Object | Object[], custom?: boolean): void {
         return this.ej2Instances.resume(fileData, custom);
     }
 
-    public retry(fileData: Object | Object[], fromcanceledStage?: boolean, custom?: boolean): void {
+    public retry(fileData?: Object | Object[], fromcanceledStage?: boolean, custom?: boolean): void {
         return this.ej2Instances.retry(fileData, fromcanceledStage, custom);
     }
 
-    public sortFileList(filesData: Object): Object[] {
+    public sortFileList(filesData?: Object): Object[] {
         return this.ej2Instances.sortFileList(filesData);
     }
 
@@ -92,7 +92,7 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.traverseFileTree(item, event);
     }
 
-    public upload(files: Object | Object[], custom?: boolean): void {
+    public upload(files?: Object | Object[], custom?: boolean): void {
         return this.ej2Instances.upload(files, custom);
     }
 }

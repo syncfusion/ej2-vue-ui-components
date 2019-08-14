@@ -81,8 +81,20 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.autoFitColumns(fieldNames);
     }
 
+    public clearCellSelection(): void {
+        return this.ej2Instances.clearCellSelection();
+    }
+
     public clearFiltering(): void {
         return this.ej2Instances.clearFiltering();
+    }
+
+    public clearGrouping(): void {
+        return this.ej2Instances.clearGrouping();
+    }
+
+    public clearRowSelection(): void {
+        return this.ej2Instances.clearRowSelection();
     }
 
     public clearSelection(): void {
@@ -119,6 +131,14 @@ export class GridComponent extends ComponentBase {
 
     public destroyTemplate(propertyNames?: string[], index?: any): void {
         return this.ej2Instances.destroyTemplate(propertyNames, index);
+    }
+
+    public detailCollapseAll(): void {
+        return this.ej2Instances.detailCollapseAll();
+    }
+
+    public detailExpandAll(): void {
+        return this.ej2Instances.detailExpandAll();
     }
 
     public editCell(index: number, field: string): void {
@@ -293,8 +313,16 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.goToPage(pageNo);
     }
 
+    public groupCollapseAll(): void {
+        return this.ej2Instances.groupCollapseAll();
+    }
+
     public groupColumn(columnName: string): void {
         return this.ej2Instances.groupColumn(columnName);
+    }
+
+    public groupExpandAll(): void {
+        return this.ej2Instances.groupExpandAll();
     }
 
     public hideColumns(keys: string | string[], hideBy?: string): void {
@@ -307,6 +335,10 @@ export class GridComponent extends ComponentBase {
 
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
+    }
+
+    public openColumnChooser(x?: number, y?: number): void {
+        return this.ej2Instances.openColumnChooser(x, y);
     }
 
     public pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object {
@@ -357,6 +389,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.selectCell(cellIndex, isToggle);
     }
 
+    public selectCells(rowCellIndexes: Object[]): void {
+        return this.ej2Instances.selectCells(rowCellIndexes);
+    }
+
     public selectCellsByRange(startIndex: Object, endIndex?: Object): void {
         return this.ej2Instances.selectCellsByRange(startIndex, endIndex);
     }
@@ -367,6 +403,10 @@ export class GridComponent extends ComponentBase {
 
     public selectRows(rowIndexes: number[]): void {
         return this.ej2Instances.selectRows(rowIndexes);
+    }
+
+    public selectRowsByRange(startIndex: number, endIndex?: number): void {
+        return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
     }
 
     public setCellValue(key: string | number, field: string, value: string | number | boolean | Object): void {

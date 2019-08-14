@@ -80,7 +80,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.ShowColumn(keys, showBy);
     }
 
-    public addPredecessor(id: Object | number, predecessorString: string): void {
+    public addPredecessor(id: number, predecessorString: string): void {
         return this.ej2Instances.addPredecessor(id, predecessorString);
     }
 
@@ -104,7 +104,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.collapseAll();
     }
 
-    public collapseByID(id: string | number): void {
+    public collapseByID(id: number): void {
         return this.ej2Instances.collapseByID(id);
     }
 
@@ -116,7 +116,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.expandAll();
     }
 
-    public expandByID(id: string | number): void {
+    public expandByID(id: number): void {
         return this.ej2Instances.expandByID(id);
     }
 
@@ -192,7 +192,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.openAddDialog();
     }
 
-    public openEditDialog(taskId: number | string | Object): void {
+    public openEditDialog(taskId: number): void {
         return this.ej2Instances.openEditDialog(taskId);
     }
 
@@ -200,7 +200,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.previousTimeSpan(mode);
     }
 
-    public removePredecessor(id: Object | number): void {
+    public removePredecessor(id: number): void {
         return this.ej2Instances.removePredecessor(id);
     }
 
@@ -252,7 +252,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.updateDataSource(dataSource, args);
     }
 
-    public updatePredecessor(id: Object | number, predecessorString: string): void {
+    public updatePredecessor(id: number, predecessorString: string): void {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     }
 

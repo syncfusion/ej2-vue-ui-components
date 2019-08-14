@@ -24,6 +24,7 @@ export class ComponentBase extends Vue {
     }
 
     public mounted(): void {
+        this.ej2Instances.isVue = true;
         this.ej2Instances.appendTo(this.$el);
     }
     public getInjectedServices(): Object[] {

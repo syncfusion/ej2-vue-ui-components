@@ -59,6 +59,10 @@ export class FileManagerComponent extends ComponentBase {
         return this.ej2Instances.enableToolbarItems(items);
     }
 
+    public filterFiles(filterData?: Object): void {
+        return this.ej2Instances.filterFiles(filterData);
+    }
+
     public getSelectedFiles(): Object[] {
         return this.ej2Instances.getSelectedFiles();
     }

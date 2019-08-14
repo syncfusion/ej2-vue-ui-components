@@ -513,8 +513,14 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     removeLabels(obj, labels) {
         return this.ej2Instances.removeLabels(obj, labels);
     }
+    removeLane(node, lane) {
+        return this.ej2Instances.removeLane(node, lane);
+    }
     removeLayer(layerId) {
         return this.ej2Instances.removeLayer(layerId);
+    }
+    removePhase(node, phase) {
+        return this.ej2Instances.removePhase(node, phase);
     }
     removePorts(obj, ports) {
         return this.ej2Instances.removePorts(obj, ports);

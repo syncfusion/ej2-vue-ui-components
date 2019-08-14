@@ -19,6 +19,7 @@ class ComponentBase extends Vue {
         }
     }
     mounted() {
+        this.ej2Instances.isVue = true;
         this.ej2Instances.appendTo(this.$el);
     }
     getInjectedServices() {

@@ -40,6 +40,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         }
     };
     ComponentBase.prototype.mounted = function () {
+        this.ej2Instances.isVue = true;
         this.ej2Instances.appendTo(this.$el);
     };
     ComponentBase.prototype.getInjectedServices = function () {

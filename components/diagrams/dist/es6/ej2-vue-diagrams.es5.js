@@ -667,8 +667,14 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.removeLabels = function (obj, labels) {
         return this.ej2Instances.removeLabels(obj, labels);
     };
+    DiagramComponent.prototype.removeLane = function (node, lane) {
+        return this.ej2Instances.removeLane(node, lane);
+    };
     DiagramComponent.prototype.removeLayer = function (layerId) {
         return this.ej2Instances.removeLayer(layerId);
+    };
+    DiagramComponent.prototype.removePhase = function (node, phase) {
+        return this.ej2Instances.removePhase(node, phase);
     };
     DiagramComponent.prototype.removePorts = function (obj, ports) {
         return this.ej2Instances.removePorts(obj, ports);

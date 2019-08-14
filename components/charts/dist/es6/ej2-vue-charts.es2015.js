@@ -1479,6 +1479,9 @@ let StockChartComponent = class StockChartComponent extends ComponentBase {
     chartModuleInjection() {
         return this.ej2Instances.chartModuleInjection();
     }
+    findCurrentData(totalData, xName) {
+        return this.ej2Instances.findCurrentData(totalData, xName);
+    }
     rangeChanged(updatedStart, updatedEnd) {
         return this.ej2Instances.rangeChanged(updatedStart, updatedEnd);
     }

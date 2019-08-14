@@ -289,8 +289,16 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.removeLabels(obj, labels);
     }
 
+    public removeLane(node: Object, lane: Object): void {
+        return this.ej2Instances.removeLane(node, lane);
+    }
+
     public removeLayer(layerId: string): void {
         return this.ej2Instances.removeLayer(layerId);
+    }
+
+    public removePhase(node: Object, phase: Object): void {
+        return this.ej2Instances.removePhase(node, phase);
     }
 
     public removePorts(obj: Object, ports: Object[]): void {

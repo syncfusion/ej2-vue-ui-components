@@ -308,8 +308,17 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.autoFitColumns = function (fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);
     };
+    GridComponent.prototype.clearCellSelection = function () {
+        return this.ej2Instances.clearCellSelection();
+    };
     GridComponent.prototype.clearFiltering = function () {
         return this.ej2Instances.clearFiltering();
+    };
+    GridComponent.prototype.clearGrouping = function () {
+        return this.ej2Instances.clearGrouping();
+    };
+    GridComponent.prototype.clearRowSelection = function () {
+        return this.ej2Instances.clearRowSelection();
     };
     GridComponent.prototype.clearSelection = function () {
         return this.ej2Instances.clearSelection();
@@ -337,6 +346,12 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.destroyTemplate = function (propertyNames, index) {
         return this.ej2Instances.destroyTemplate(propertyNames, index);
+    };
+    GridComponent.prototype.detailCollapseAll = function () {
+        return this.ej2Instances.detailCollapseAll();
+    };
+    GridComponent.prototype.detailExpandAll = function () {
+        return this.ej2Instances.detailExpandAll();
     };
     GridComponent.prototype.editCell = function (index, field) {
         return this.ej2Instances.editCell(index, field);
@@ -467,8 +482,14 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.goToPage = function (pageNo) {
         return this.ej2Instances.goToPage(pageNo);
     };
+    GridComponent.prototype.groupCollapseAll = function () {
+        return this.ej2Instances.groupCollapseAll();
+    };
     GridComponent.prototype.groupColumn = function (columnName) {
         return this.ej2Instances.groupColumn(columnName);
+    };
+    GridComponent.prototype.groupExpandAll = function () {
+        return this.ej2Instances.groupExpandAll();
     };
     GridComponent.prototype.hideColumns = function (keys, hideBy) {
         return this.ej2Instances.hideColumns(keys, hideBy);
@@ -478,6 +499,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
+    };
+    GridComponent.prototype.openColumnChooser = function (x, y) {
+        return this.ej2Instances.openColumnChooser(x, y);
     };
     GridComponent.prototype.pdfExport = function (pdfExportProperties, isMultipleExport, pdfDoc, isBlob) {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
@@ -515,6 +539,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.selectCell = function (cellIndex, isToggle) {
         return this.ej2Instances.selectCell(cellIndex, isToggle);
     };
+    GridComponent.prototype.selectCells = function (rowCellIndexes) {
+        return this.ej2Instances.selectCells(rowCellIndexes);
+    };
     GridComponent.prototype.selectCellsByRange = function (startIndex, endIndex) {
         return this.ej2Instances.selectCellsByRange(startIndex, endIndex);
     };
@@ -523,6 +550,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.selectRows = function (rowIndexes) {
         return this.ej2Instances.selectRows(rowIndexes);
+    };
+    GridComponent.prototype.selectRowsByRange = function (startIndex, endIndex) {
+        return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
     };
     GridComponent.prototype.setCellValue = function (key, field, value) {
         return this.ej2Instances.setCellValue(key, field, value);

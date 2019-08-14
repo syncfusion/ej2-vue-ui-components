@@ -52,6 +52,9 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     enableToolbarItems(items) {
         return this.ej2Instances.enableToolbarItems(items);
     }
+    filterFiles(filterData) {
+        return this.ej2Instances.filterFiles(filterData);
+    }
     getSelectedFiles() {
         return this.ej2Instances.getSelectedFiles();
     }

@@ -223,8 +223,17 @@ let GridComponent = class GridComponent extends ComponentBase {
     autoFitColumns(fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);
     }
+    clearCellSelection() {
+        return this.ej2Instances.clearCellSelection();
+    }
     clearFiltering() {
         return this.ej2Instances.clearFiltering();
+    }
+    clearGrouping() {
+        return this.ej2Instances.clearGrouping();
+    }
+    clearRowSelection() {
+        return this.ej2Instances.clearRowSelection();
     }
     clearSelection() {
         return this.ej2Instances.clearSelection();
@@ -252,6 +261,12 @@ let GridComponent = class GridComponent extends ComponentBase {
     }
     destroyTemplate(propertyNames, index) {
         return this.ej2Instances.destroyTemplate(propertyNames, index);
+    }
+    detailCollapseAll() {
+        return this.ej2Instances.detailCollapseAll();
+    }
+    detailExpandAll() {
+        return this.ej2Instances.detailExpandAll();
     }
     editCell(index, field) {
         return this.ej2Instances.editCell(index, field);
@@ -382,8 +397,14 @@ let GridComponent = class GridComponent extends ComponentBase {
     goToPage(pageNo) {
         return this.ej2Instances.goToPage(pageNo);
     }
+    groupCollapseAll() {
+        return this.ej2Instances.groupCollapseAll();
+    }
     groupColumn(columnName) {
         return this.ej2Instances.groupColumn(columnName);
+    }
+    groupExpandAll() {
+        return this.ej2Instances.groupExpandAll();
     }
     hideColumns(keys, hideBy) {
         return this.ej2Instances.hideColumns(keys, hideBy);
@@ -393,6 +414,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
+    }
+    openColumnChooser(x, y) {
+        return this.ej2Instances.openColumnChooser(x, y);
     }
     pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob) {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
@@ -430,6 +454,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     selectCell(cellIndex, isToggle) {
         return this.ej2Instances.selectCell(cellIndex, isToggle);
     }
+    selectCells(rowCellIndexes) {
+        return this.ej2Instances.selectCells(rowCellIndexes);
+    }
     selectCellsByRange(startIndex, endIndex) {
         return this.ej2Instances.selectCellsByRange(startIndex, endIndex);
     }
@@ -438,6 +465,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     }
     selectRows(rowIndexes) {
         return this.ej2Instances.selectRows(rowIndexes);
+    }
+    selectRowsByRange(startIndex, endIndex) {
+        return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
     }
     setCellValue(key, field, value) {
         return this.ej2Instances.setCellValue(key, field, value);

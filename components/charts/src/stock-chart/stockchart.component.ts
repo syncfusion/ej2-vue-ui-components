@@ -84,6 +84,10 @@ export class StockChartComponent extends ComponentBase {
         return this.ej2Instances.chartModuleInjection();
     }
 
+    public findCurrentData(totalData: Object, xName: string): Object {
+        return this.ej2Instances.findCurrentData(totalData, xName);
+    }
+
     public rangeChanged(updatedStart: number, updatedEnd: number): void {
         return this.ej2Instances.rangeChanged(updatedStart, updatedEnd);
     }

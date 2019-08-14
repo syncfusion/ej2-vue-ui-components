@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 17.2.40 (2019-08-06)
+## 17.2.41 (2019-08-14)
 
 ### TreeView
 
 #### Bug Fixes
 
-- #242925 - Issue with checked and unchecked the checkbox using keyboard interaction even disable the checkbox has been fixed.
+- Issue with custom icon size changed while double clicking the tree node has been fixed.
 
 ## 17.2.39 (2019-07-30)
 
@@ -770,4 +770,12 @@ TreeView component is used to represent hierarchical data in a tree like structu
 - **Template** - Allows you to customize the nodes in TreeView.
 - **Accessibility** - Provides built-in accessibility support that helps to access all the TreeView component features through the keyboard, on-screen readers, or other assistive technology devices.
 
+
+## 17.2.40 (2019-08-06)
+
+### TreeView
+
+#### Bug Fixes
+
+- #242925 - Issue with checked and unchecked the checkbox using keyboard interaction even disable the checkbox has been fixed.
 

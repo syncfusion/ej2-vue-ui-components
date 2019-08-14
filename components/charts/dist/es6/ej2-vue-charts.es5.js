@@ -2201,6 +2201,9 @@ var StockChartComponent = /** @__PURE__ @class */ (function (_super) {
     StockChartComponent.prototype.chartModuleInjection = function () {
         return this.ej2Instances.chartModuleInjection();
     };
+    StockChartComponent.prototype.findCurrentData = function (totalData, xName) {
+        return this.ej2Instances.findCurrentData(totalData, xName);
+    };
     StockChartComponent.prototype.rangeChanged = function (updatedStart, updatedEnd) {
         return this.ej2Instances.rangeChanged(updatedStart, updatedEnd);
     };
