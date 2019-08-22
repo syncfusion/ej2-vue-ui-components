@@ -55,6 +55,14 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.download();
     }
 
+    public exportAnnotations(): void {
+        return this.ej2Instances.exportAnnotations();
+    }
+
+    public importAnnotations(importData: any): void {
+        return this.ej2Instances.importAnnotations(importData);
+    }
+
     public load(document: string, password: string): void {
         return this.ej2Instances.load(document, password);
     }

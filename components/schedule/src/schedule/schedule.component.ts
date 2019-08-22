@@ -293,6 +293,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.removeSelectedClass();
     }
 
+    public renderCompleted(): void {
+        return this.ej2Instances.renderCompleted();
+    }
+
     public renderElements(isLayoutOnly: boolean): void {
         return this.ej2Instances.renderElements(isLayoutOnly);
     }

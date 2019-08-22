@@ -65,6 +65,12 @@ var PdfViewerComponent = /** @__PURE__ @class */ (function (_super) {
     PdfViewerComponent.prototype.download = function () {
         return this.ej2Instances.download();
     };
+    PdfViewerComponent.prototype.exportAnnotations = function () {
+        return this.ej2Instances.exportAnnotations();
+    };
+    PdfViewerComponent.prototype.importAnnotations = function (importData) {
+        return this.ej2Instances.importAnnotations(importData);
+    };
     PdfViewerComponent.prototype.load = function (document, password) {
         return this.ej2Instances.load(document, password);
     };

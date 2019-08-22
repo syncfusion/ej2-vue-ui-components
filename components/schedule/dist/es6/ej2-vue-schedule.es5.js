@@ -454,6 +454,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.removeSelectedClass = function () {
         return this.ej2Instances.removeSelectedClass();
     };
+    ScheduleComponent.prototype.renderCompleted = function () {
+        return this.ej2Instances.renderCompleted();
+    };
     ScheduleComponent.prototype.renderElements = function (isLayoutOnly) {
         return this.ej2Instances.renderElements(isLayoutOnly);
     };

@@ -369,6 +369,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     removeSelectedClass() {
         return this.ej2Instances.removeSelectedClass();
     }
+    renderCompleted() {
+        return this.ej2Instances.renderCompleted();
+    }
     renderElements(isLayoutOnly) {
         return this.ej2Instances.renderElements(isLayoutOnly);
     }

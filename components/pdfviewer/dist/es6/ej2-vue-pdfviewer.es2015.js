@@ -49,6 +49,12 @@ let PdfViewerComponent = class PdfViewerComponent extends ComponentBase {
     download() {
         return this.ej2Instances.download();
     }
+    exportAnnotations() {
+        return this.ej2Instances.exportAnnotations();
+    }
+    importAnnotations(importData) {
+        return this.ej2Instances.importAnnotations(importData);
+    }
     load(document, password) {
         return this.ej2Instances.load(document, password);
     }
