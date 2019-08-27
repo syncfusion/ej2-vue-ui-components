@@ -405,6 +405,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     updateLayoutTemplates() {
         return this.ej2Instances.updateLayoutTemplates();
     }
+    updateRecurrenceEditor(recurrenceEditor) {
+        return this.ej2Instances.updateRecurrenceEditor(recurrenceEditor);
+    }
 };
 ScheduleComponent = __decorate$3([
     EJComponentDecorator({

@@ -60,7 +60,7 @@ export class ToolbarComponent extends ComponentBase {
         return this.ej2Instances.disable(value);
     }
 
-    public enableItems(items: Object | Object, isEnable?: boolean): void {
+    public enableItems(items: number | Object | Object, isEnable?: boolean): void {
         return this.ej2Instances.enableItems(items, isEnable);
     }
 

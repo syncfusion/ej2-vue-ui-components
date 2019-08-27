@@ -612,6 +612,12 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.selectCells = function (cellIndex, isToggle) {
         return this.ej2Instances.selectCells(cellIndex, isToggle);
     };
+    GanttComponent.prototype.selectRow = function (index, isToggle) {
+        return this.ej2Instances.selectRow(index, isToggle);
+    };
+    GanttComponent.prototype.selectRows = function (records) {
+        return this.ej2Instances.selectRows(records);
+    };
     GanttComponent.prototype.setScrollTop = function (scrollTop) {
         return this.ej2Instances.setScrollTop(scrollTop);
     };

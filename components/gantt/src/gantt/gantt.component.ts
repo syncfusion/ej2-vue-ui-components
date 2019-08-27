@@ -228,6 +228,14 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.selectCells(cellIndex, isToggle);
     }
 
+    public selectRow(index: number, isToggle?: boolean): void {
+        return this.ej2Instances.selectRow(index, isToggle);
+    }
+
+    public selectRows(records: number[]): void {
+        return this.ej2Instances.selectRows(records);
+    }
+
     public setScrollTop(scrollTop: number): void {
         return this.ej2Instances.setScrollTop(scrollTop);
     }

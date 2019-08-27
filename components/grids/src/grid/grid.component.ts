@@ -81,6 +81,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.autoFitColumns(fieldNames);
     }
 
+    public blazorTemplate(): void {
+        return this.ej2Instances.blazorTemplate();
+    }
+
     public clearCellSelection(): void {
         return this.ej2Instances.clearCellSelection();
     }

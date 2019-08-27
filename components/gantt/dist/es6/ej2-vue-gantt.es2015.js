@@ -458,6 +458,12 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     selectCells(cellIndex, isToggle) {
         return this.ej2Instances.selectCells(cellIndex, isToggle);
     }
+    selectRow(index, isToggle) {
+        return this.ej2Instances.selectRow(index, isToggle);
+    }
+    selectRows(records) {
+        return this.ej2Instances.selectRows(records);
+    }
     setScrollTop(scrollTop) {
         return this.ej2Instances.setScrollTop(scrollTop);
     }

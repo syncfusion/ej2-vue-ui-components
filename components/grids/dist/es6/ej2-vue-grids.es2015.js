@@ -223,6 +223,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     autoFitColumns(fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);
     }
+    blazorTemplate() {
+        return this.ej2Instances.blazorTemplate();
+    }
     clearCellSelection() {
         return this.ej2Instances.clearCellSelection();
     }

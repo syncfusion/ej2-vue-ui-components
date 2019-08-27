@@ -340,6 +340,10 @@ export class ScheduleComponent extends ComponentBase {
     public updateLayoutTemplates(): void {
         return this.ej2Instances.updateLayoutTemplates();
     }
+
+    public updateRecurrenceEditor(recurrenceEditor: Object): void {
+        return this.ej2Instances.updateRecurrenceEditor(recurrenceEditor);
+    }
 }
 
 export const SchedulePlugin = {

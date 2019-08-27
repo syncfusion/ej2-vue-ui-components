@@ -51,8 +51,16 @@ export class FileManagerComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public deleteFiles(ids?: string[]): void {
+        return this.ej2Instances.deleteFiles(ids);
+    }
+
     public disableToolbarItems(items: string[]): void {
         return this.ej2Instances.disableToolbarItems(items);
+    }
+
+    public downloadFiles(ids?: string[]): void {
+        return this.ej2Instances.downloadFiles(ids);
     }
 
     public enableToolbarItems(items: string[]): void {
@@ -67,12 +75,20 @@ export class FileManagerComponent extends ComponentBase {
         return this.ej2Instances.getSelectedFiles();
     }
 
+    public openFile(id: string): void {
+        return this.ej2Instances.openFile(id);
+    }
+
     public refreshFiles(): void {
         return this.ej2Instances.refreshFiles();
     }
 
     public refreshLayout(): void {
         return this.ej2Instances.refreshLayout();
+    }
+
+    public renameFile(id?: string, name?: string): void {
+        return this.ej2Instances.renameFile(id, name);
     }
 }
 

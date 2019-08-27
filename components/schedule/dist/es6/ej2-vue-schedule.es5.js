@@ -490,6 +490,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.updateLayoutTemplates = function () {
         return this.ej2Instances.updateLayoutTemplates();
     };
+    ScheduleComponent.prototype.updateRecurrenceEditor = function (recurrenceEditor) {
+        return this.ej2Instances.updateRecurrenceEditor(recurrenceEditor);
+    };
     ScheduleComponent = __decorate$3([
         EJComponentDecorator({
             props: properties,
