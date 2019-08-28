@@ -62,8 +62,14 @@ var FileManagerComponent = /** @__PURE__ @class */ (function (_super) {
     FileManagerComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    FileManagerComponent.prototype.deleteFiles = function (ids) {
+        return this.ej2Instances.deleteFiles(ids);
+    };
     FileManagerComponent.prototype.disableToolbarItems = function (items) {
         return this.ej2Instances.disableToolbarItems(items);
+    };
+    FileManagerComponent.prototype.downloadFiles = function (ids) {
+        return this.ej2Instances.downloadFiles(ids);
     };
     FileManagerComponent.prototype.enableToolbarItems = function (items) {
         return this.ej2Instances.enableToolbarItems(items);
@@ -74,11 +80,17 @@ var FileManagerComponent = /** @__PURE__ @class */ (function (_super) {
     FileManagerComponent.prototype.getSelectedFiles = function () {
         return this.ej2Instances.getSelectedFiles();
     };
+    FileManagerComponent.prototype.openFile = function (id) {
+        return this.ej2Instances.openFile(id);
+    };
     FileManagerComponent.prototype.refreshFiles = function () {
         return this.ej2Instances.refreshFiles();
     };
     FileManagerComponent.prototype.refreshLayout = function () {
         return this.ej2Instances.refreshLayout();
+    };
+    FileManagerComponent.prototype.renameFile = function (id, name) {
+        return this.ej2Instances.renameFile(id, name);
     };
     FileManagerComponent = __decorate([
         EJComponentDecorator({

@@ -771,7 +771,7 @@ var ChartComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    ChartComponent.prototype.trigger = function (eventName, eventProp) {
+    ChartComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -781,7 +781,7 @@ var ChartComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     ChartComponent.prototype.render = function (createElement) {
@@ -1025,7 +1025,7 @@ var AccumulationChartComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    AccumulationChartComponent.prototype.trigger = function (eventName, eventProp) {
+    AccumulationChartComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -1035,7 +1035,7 @@ var AccumulationChartComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     AccumulationChartComponent.prototype.render = function (createElement) {
@@ -1192,7 +1192,7 @@ var RangeNavigatorComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    RangeNavigatorComponent.prototype.trigger = function (eventName, eventProp) {
+    RangeNavigatorComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -1202,7 +1202,7 @@ var RangeNavigatorComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     RangeNavigatorComponent.prototype.render = function (createElement) {
@@ -2182,7 +2182,7 @@ var StockChartComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    StockChartComponent.prototype.trigger = function (eventName, eventProp) {
+    StockChartComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -2192,7 +2192,7 @@ var StockChartComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     StockChartComponent.prototype.render = function (createElement) {

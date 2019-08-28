@@ -46,8 +46,14 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    deleteFiles(ids) {
+        return this.ej2Instances.deleteFiles(ids);
+    }
     disableToolbarItems(items) {
         return this.ej2Instances.disableToolbarItems(items);
+    }
+    downloadFiles(ids) {
+        return this.ej2Instances.downloadFiles(ids);
     }
     enableToolbarItems(items) {
         return this.ej2Instances.enableToolbarItems(items);
@@ -58,11 +64,17 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     getSelectedFiles() {
         return this.ej2Instances.getSelectedFiles();
     }
+    openFile(id) {
+        return this.ej2Instances.openFile(id);
+    }
     refreshFiles() {
         return this.ej2Instances.refreshFiles();
     }
     refreshLayout() {
         return this.ej2Instances.refreshLayout();
+    }
+    renameFile(id, name) {
+        return this.ej2Instances.renameFile(id, name);
     }
 };
 FileManagerComponent = __decorate([

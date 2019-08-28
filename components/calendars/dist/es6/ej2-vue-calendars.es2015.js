@@ -47,7 +47,7 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -57,7 +57,7 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -141,7 +141,7 @@ let DatePickerComponent = class DatePickerComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -151,7 +151,7 @@ let DatePickerComponent = class DatePickerComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -247,7 +247,7 @@ let TimePickerComponent = class TimePickerComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -257,7 +257,7 @@ let TimePickerComponent = class TimePickerComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -382,7 +382,7 @@ let DateRangePickerComponent = class DateRangePickerComponent extends ComponentB
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -392,7 +392,7 @@ let DateRangePickerComponent = class DateRangePickerComponent extends ComponentB
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -478,7 +478,7 @@ let DateTimePickerComponent = class DateTimePickerComponent extends ComponentBas
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -488,7 +488,7 @@ let DateTimePickerComponent = class DateTimePickerComponent extends ComponentBas
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {

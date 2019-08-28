@@ -46,7 +46,7 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -56,7 +56,7 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -149,7 +149,7 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -159,7 +159,7 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -252,7 +252,7 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -262,7 +262,7 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -355,7 +355,7 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -365,7 +365,7 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -464,7 +464,7 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -474,7 +474,7 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
