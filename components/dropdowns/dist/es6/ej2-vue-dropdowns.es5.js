@@ -62,7 +62,7 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    DropDownListComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    DropDownListComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -72,7 +72,7 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     DropDownListComponent.prototype.render = function (createElement) {
@@ -182,7 +182,7 @@ var ComboBoxComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    ComboBoxComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    ComboBoxComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -192,7 +192,7 @@ var ComboBoxComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     ComboBoxComponent.prototype.render = function (createElement) {
@@ -302,7 +302,7 @@ var AutoCompleteComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    AutoCompleteComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    AutoCompleteComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -312,7 +312,7 @@ var AutoCompleteComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     AutoCompleteComponent.prototype.render = function (createElement) {
@@ -422,7 +422,7 @@ var MultiSelectComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    MultiSelectComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    MultiSelectComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -432,7 +432,7 @@ var MultiSelectComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     MultiSelectComponent.prototype.render = function (createElement) {
@@ -548,7 +548,7 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    ListBoxComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    ListBoxComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -558,7 +558,7 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     ListBoxComponent.prototype.render = function (createElement) {

@@ -7,7 +7,7 @@ import { ResourcesDirective, ResourceDirective, ResourcesPlugin, ResourcePlugin 
 import { HeaderRowsDirective, HeaderRowDirective, HeaderRowsPlugin, HeaderRowPlugin } from './headerrows.directive'
 
 
-export const properties: string[] = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
+export const properties: string[] = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
 export const modelProps: string[] = ['currentView', 'selectedDate'];
 
 /**
@@ -55,7 +55,7 @@ export class ScheduleComponent extends ComponentBase {
             });
         }
     }
-    public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+    public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
@@ -65,7 +65,7 @@ export class ScheduleComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }            
     }
 
@@ -95,6 +95,14 @@ export class ScheduleComponent extends ComponentBase {
 
     public changeView(view: Object, event?: Object, muteOnChange?: boolean, index?: number): void {
         return this.ej2Instances.changeView(view, event, muteOnChange, index);
+    }
+
+    public closeEditor(): void {
+        return this.ej2Instances.closeEditor();
+    }
+
+    public closeQuickInfoPopup(): void {
+        return this.ej2Instances.closeQuickInfoPopup();
     }
 
     public deleteEvent(id: string | number | undefined | undefined[], currentAction?: Object): void {
@@ -339,10 +347,6 @@ export class ScheduleComponent extends ComponentBase {
 
     public updateLayoutTemplates(): void {
         return this.ej2Instances.updateLayoutTemplates();
-    }
-
-    public updateRecurrenceEditor(recurrenceEditor: Object): void {
-        return this.ej2Instances.updateRecurrenceEditor(recurrenceEditor);
     }
 }
 

@@ -55,7 +55,7 @@ export class TreeGridComponent extends ComponentBase {
             });
         }
     }
-    public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+    public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
@@ -65,7 +65,7 @@ export class TreeGridComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }            
     }
 

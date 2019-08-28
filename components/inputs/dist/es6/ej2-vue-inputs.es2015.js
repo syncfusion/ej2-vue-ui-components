@@ -47,7 +47,7 @@ let TextBoxComponent = class TextBoxComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp, successHandler) {
+    trigger(eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -57,7 +57,7 @@ let TextBoxComponent = class TextBoxComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -135,7 +135,7 @@ let NumericTextBoxComponent = class NumericTextBoxComponent extends ComponentBas
             });
         }
     }
-    trigger(eventName, eventProp, successHandler) {
+    trigger(eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -145,7 +145,7 @@ let NumericTextBoxComponent = class NumericTextBoxComponent extends ComponentBas
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -226,7 +226,7 @@ let MaskedTextBoxComponent = class MaskedTextBoxComponent extends ComponentBase 
             });
         }
     }
-    trigger(eventName, eventProp, successHandler) {
+    trigger(eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -236,7 +236,7 @@ let MaskedTextBoxComponent = class MaskedTextBoxComponent extends ComponentBase 
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -311,7 +311,7 @@ let SliderComponent = class SliderComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp, successHandler) {
+    trigger(eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -321,7 +321,7 @@ let SliderComponent = class SliderComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
@@ -533,7 +533,7 @@ let ColorPickerComponent = class ColorPickerComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp, successHandler) {
+    trigger(eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -543,7 +543,7 @@ let ColorPickerComponent = class ColorPickerComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {

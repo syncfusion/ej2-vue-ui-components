@@ -62,7 +62,7 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    RichTextEditorComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    RichTextEditorComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -72,7 +72,7 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     RichTextEditorComponent.prototype.render = function (createElement) {

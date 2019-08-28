@@ -144,7 +144,7 @@ var CheckBoxComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    CheckBoxComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    CheckBoxComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -154,7 +154,7 @@ var CheckBoxComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     CheckBoxComponent.prototype.render = function (createElement) {
@@ -243,7 +243,7 @@ var RadioButtonComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    RadioButtonComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    RadioButtonComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -253,7 +253,7 @@ var RadioButtonComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     RadioButtonComponent.prototype.render = function (createElement) {
@@ -345,7 +345,7 @@ var SwitchComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    SwitchComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+    SwitchComponent.prototype.trigger = function (eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -355,7 +355,7 @@ var SwitchComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     };
     SwitchComponent.prototype.render = function (createElement) {

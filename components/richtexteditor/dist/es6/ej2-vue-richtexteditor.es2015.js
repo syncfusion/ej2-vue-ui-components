@@ -46,7 +46,7 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
             });
         }
     }
-    trigger(eventName, eventProp, successHandler) {
+    trigger(eventName, eventProp) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -56,7 +56,7 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+            this.ej2Instances._trigger(eventName, eventProp);
         }
     }
     render(createElement) {
