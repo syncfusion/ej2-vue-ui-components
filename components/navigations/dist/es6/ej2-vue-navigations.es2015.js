@@ -157,7 +157,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+const properties$1 = ['enableCollision', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
 const modelProps$1 = [];
 /**
  * Represents the Essential JS 2 VueJS Toolbar Component.
@@ -353,7 +353,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$3 = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'locale', 'overflowMode', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
+const properties$3 = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'locale', 'overflowMode', 'scrollStep', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
 const modelProps$3 = [];
 /**
  * Represents the EJ2 VueJS Tab Component.
@@ -572,7 +572,7 @@ let SidebarComponent = class SidebarComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -582,7 +582,7 @@ let SidebarComponent = class SidebarComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {

@@ -2,7 +2,20 @@
 
 ## [Unreleased]
 
-## 17.2.48-beta (2019-08-28)
+## 17.2.49 (2019-09-04)
+
+### Document Editor
+
+#### Bug Fixes
+
+- `#245473` - Line spacing is now exported properly.
+- `#245469`, `#245470` - List level paragraph heading is now layout properly on page break.
+- `#243495` - width is now calculated properly for the tab element, if it has single tab stop.
+- `#244893` - Paste event is now triggered in safari browser.
+- `#246003` - Insert field is now updated based on current selection format.
+- `#243919` - Script error is fixed while pressing Ctrl + A.
+
+## 17.2.47 (2019-08-27)
 
 ### Document Editor
 
@@ -12,7 +25,7 @@
 - `#243878` - Copy and paste when the document contains page break character within control is now working.
 - `#243495` - Follow character width for list is now updated properly.
 
-- `243874` - Contextual Spacing property on paragraph is now exported properly.
+- `#243874` - Contextual Spacing property on paragraph is now exported properly.
 
 ## 17.2.41 (2019-08-14)
 

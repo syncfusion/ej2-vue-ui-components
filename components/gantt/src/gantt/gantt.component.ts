@@ -10,7 +10,7 @@ import { HolidaysDirective, HolidayDirective, HolidaysPlugin, HolidayPlugin } fr
 import { EventMarkersDirective, EventMarkerDirective, EventMarkersPlugin, EventMarkerPlugin } from './eventmarkers.directive'
 
 
-export const properties: string[] = ['addDialogFields', 'allowExcelExport', 'allowFiltering', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowUnscheduledTasks', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columnMenuItems', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'contextMenuItems', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationUnit', 'editDialogFields', 'editSettings', 'enableContextMenu', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'renderBaseline', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'sortSettings', 'splitterSettings', 'taskFields', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'width', 'workWeek', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeExcelExport', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'destroyed', 'endEdit', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'queryCellInfo', 'queryTaskbarInfo', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
+export const properties: string[] = ['addDialogFields', 'allowFiltering', 'allowReordering', 'allowResizing', 'allowSelection', 'allowSorting', 'allowUnscheduledTasks', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columnMenuItems', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'contextMenuItems', 'dataSource', 'dateFormat', 'dayWorkingTime', 'durationUnit', 'editDialogFields', 'editSettings', 'enableContextMenu', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'renderBaseline', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'sortSettings', 'splitterSettings', 'taskFields', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'width', 'workWeek', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'dataBound', 'endEdit', 'expanded', 'expanding', 'headerCellInfo', 'load', 'queryCellInfo', 'queryTaskbarInfo', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 /**
@@ -58,7 +58,7 @@ export class GanttComponent extends ComponentBase {
             });
         }
     }
-    public trigger(eventName: string, eventProp: {[key:string]:Object}): void {
+    public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
@@ -68,7 +68,7 @@ export class GanttComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }            
     }
 
@@ -112,12 +112,12 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.collapseByIndex(index);
     }
 
-    public csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object {
-        return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
+    public deleteRecord(taskDetail: number | string | number[] | string[] | Object | Object[]): void {
+        return this.ej2Instances.deleteRecord(taskDetail);
     }
 
-    public excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object {
-        return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
+    public enableItems(items: string[], isEnable: boolean): void {
+        return this.ej2Instances.enableItems(items, isEnable);
     }
 
     public expandAll(): void {
@@ -200,7 +200,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.openAddDialog();
     }
 
-    public openEditDialog(taskId: number): void {
+    public openEditDialog(taskId?: number): void {
         return this.ej2Instances.openEditDialog(taskId);
     }
 
@@ -216,7 +216,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.removeSortColumn(columnName);
     }
 
-    public reorderColumns(fromFName: string, toFName: string): void {
+    public reorderColumns(fromFName: string | string[], toFName: string): void {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     }
 
@@ -232,8 +232,12 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.search(keyVal);
     }
 
-    public selectCells(cellIndex: Object, isToggle?: boolean): void {
-        return this.ej2Instances.selectCells(cellIndex, isToggle);
+    public selectCell(cellIndex: Object, isToggle?: boolean): void {
+        return this.ej2Instances.selectCell(cellIndex, isToggle);
+    }
+
+    public selectCells(rowCellIndexes: Object[]): void {
+        return this.ej2Instances.selectCells(rowCellIndexes);
     }
 
     public selectRow(index: number, isToggle?: boolean): void {

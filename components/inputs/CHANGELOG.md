@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 17.2.48-beta (2019-08-28)
+## 17.2.49 (2019-09-04)
+
+### TextBox
+
+#### Bug Fixes
+
+- `#235177` - Issue with "change event triggers on every keypress when textbox rendered with two-way binding" has been resolved.
+
+## 17.2.47 (2019-08-27)
 
 ### NumericTextBox
 

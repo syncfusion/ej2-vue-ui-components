@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { FileManager } from '@syncfusion/ej2-filemanager';
 
 
-export const properties: string[] = ['ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enablePersistence', 'enableRtl', 'height', 'locale', 'navigationPaneSettings', 'path', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showThumbnail', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'menuClick', 'menuOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
+export const properties: string[] = ['ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enablePersistence', 'enableRtl', 'height', 'locale', 'navigationPaneSettings', 'path', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showThumbnail', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforePopupClose', 'beforePopupOpen', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'menuClick', 'menuOpen', 'popupClose', 'popupOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
 export const modelProps: string[] = [];
 
 /**
@@ -51,8 +51,28 @@ export class FileManagerComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public clearSelection(): void {
+        return this.ej2Instances.clearSelection();
+    }
+
+    public createFolder(name?: string): void {
+        return this.ej2Instances.createFolder(name);
+    }
+
+    public deleteFiles(ids?: string[]): void {
+        return this.ej2Instances.deleteFiles(ids);
+    }
+
+    public disableMenuItems(items: string[]): void {
+        return this.ej2Instances.disableMenuItems(items);
+    }
+
     public disableToolbarItems(items: string[]): void {
         return this.ej2Instances.disableToolbarItems(items);
+    }
+
+    public downloadFiles(ids?: string[]): void {
+        return this.ej2Instances.downloadFiles(ids);
     }
 
     public enableToolbarItems(items: string[]): void {
@@ -63,8 +83,20 @@ export class FileManagerComponent extends ComponentBase {
         return this.ej2Instances.filterFiles(filterData);
     }
 
+    public getMenuItemIndex(item: string): number {
+        return this.ej2Instances.getMenuItemIndex(item);
+    }
+
     public getSelectedFiles(): Object[] {
         return this.ej2Instances.getSelectedFiles();
+    }
+
+    public getToolbarItemIndex(item: string): number {
+        return this.ej2Instances.getToolbarItemIndex(item);
+    }
+
+    public openFile(id: string): void {
+        return this.ej2Instances.openFile(id);
     }
 
     public refreshFiles(): void {
@@ -73,6 +105,18 @@ export class FileManagerComponent extends ComponentBase {
 
     public refreshLayout(): void {
         return this.ej2Instances.refreshLayout();
+    }
+
+    public renameFile(id?: string, name?: string): void {
+        return this.ej2Instances.renameFile(id, name);
+    }
+
+    public selectAll(): void {
+        return this.ej2Instances.selectAll();
+    }
+
+    public uploadFiles(): void {
+        return this.ej2Instances.uploadFiles();
     }
 }
 

@@ -7,7 +7,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enablePersistence', 'enableRtl', 'height', 'locale', 'navigationPaneSettings', 'path', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showThumbnail', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'menuClick', 'menuOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
+const properties = ['ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enablePersistence', 'enableRtl', 'height', 'locale', 'navigationPaneSettings', 'path', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showThumbnail', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforePopupClose', 'beforePopupOpen', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'menuClick', 'menuOpen', 'popupClose', 'popupOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
 const modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS FileManager Component.
@@ -46,8 +46,23 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    clearSelection() {
+        return this.ej2Instances.clearSelection();
+    }
+    createFolder(name) {
+        return this.ej2Instances.createFolder(name);
+    }
+    deleteFiles(ids) {
+        return this.ej2Instances.deleteFiles(ids);
+    }
+    disableMenuItems(items) {
+        return this.ej2Instances.disableMenuItems(items);
+    }
     disableToolbarItems(items) {
         return this.ej2Instances.disableToolbarItems(items);
+    }
+    downloadFiles(ids) {
+        return this.ej2Instances.downloadFiles(ids);
     }
     enableToolbarItems(items) {
         return this.ej2Instances.enableToolbarItems(items);
@@ -55,14 +70,32 @@ let FileManagerComponent = class FileManagerComponent extends ComponentBase {
     filterFiles(filterData) {
         return this.ej2Instances.filterFiles(filterData);
     }
+    getMenuItemIndex(item) {
+        return this.ej2Instances.getMenuItemIndex(item);
+    }
     getSelectedFiles() {
         return this.ej2Instances.getSelectedFiles();
+    }
+    getToolbarItemIndex(item) {
+        return this.ej2Instances.getToolbarItemIndex(item);
+    }
+    openFile(id) {
+        return this.ej2Instances.openFile(id);
     }
     refreshFiles() {
         return this.ej2Instances.refreshFiles();
     }
     refreshLayout() {
         return this.ej2Instances.refreshLayout();
+    }
+    renameFile(id, name) {
+        return this.ej2Instances.renameFile(id, name);
+    }
+    selectAll() {
+        return this.ej2Instances.selectAll();
+    }
+    uploadFiles() {
+        return this.ej2Instances.uploadFiles();
     }
 };
 FileManagerComponent = __decorate([

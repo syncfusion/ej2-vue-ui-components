@@ -20,7 +20,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enablePersistence', 'enableRtl', 'height', 'locale', 'navigationPaneSettings', 'path', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showThumbnail', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'menuClick', 'menuOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
+var properties = ['ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enablePersistence', 'enableRtl', 'height', 'locale', 'navigationPaneSettings', 'path', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showThumbnail', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforePopupClose', 'beforePopupOpen', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'menuClick', 'menuOpen', 'popupClose', 'popupOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
 var modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS FileManager Component.
@@ -62,8 +62,23 @@ var FileManagerComponent = /** @__PURE__ @class */ (function (_super) {
     FileManagerComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    FileManagerComponent.prototype.clearSelection = function () {
+        return this.ej2Instances.clearSelection();
+    };
+    FileManagerComponent.prototype.createFolder = function (name) {
+        return this.ej2Instances.createFolder(name);
+    };
+    FileManagerComponent.prototype.deleteFiles = function (ids) {
+        return this.ej2Instances.deleteFiles(ids);
+    };
+    FileManagerComponent.prototype.disableMenuItems = function (items) {
+        return this.ej2Instances.disableMenuItems(items);
+    };
     FileManagerComponent.prototype.disableToolbarItems = function (items) {
         return this.ej2Instances.disableToolbarItems(items);
+    };
+    FileManagerComponent.prototype.downloadFiles = function (ids) {
+        return this.ej2Instances.downloadFiles(ids);
     };
     FileManagerComponent.prototype.enableToolbarItems = function (items) {
         return this.ej2Instances.enableToolbarItems(items);
@@ -71,14 +86,32 @@ var FileManagerComponent = /** @__PURE__ @class */ (function (_super) {
     FileManagerComponent.prototype.filterFiles = function (filterData) {
         return this.ej2Instances.filterFiles(filterData);
     };
+    FileManagerComponent.prototype.getMenuItemIndex = function (item) {
+        return this.ej2Instances.getMenuItemIndex(item);
+    };
     FileManagerComponent.prototype.getSelectedFiles = function () {
         return this.ej2Instances.getSelectedFiles();
+    };
+    FileManagerComponent.prototype.getToolbarItemIndex = function (item) {
+        return this.ej2Instances.getToolbarItemIndex(item);
+    };
+    FileManagerComponent.prototype.openFile = function (id) {
+        return this.ej2Instances.openFile(id);
     };
     FileManagerComponent.prototype.refreshFiles = function () {
         return this.ej2Instances.refreshFiles();
     };
     FileManagerComponent.prototype.refreshLayout = function () {
         return this.ej2Instances.refreshLayout();
+    };
+    FileManagerComponent.prototype.renameFile = function (id, name) {
+        return this.ej2Instances.renameFile(id, name);
+    };
+    FileManagerComponent.prototype.selectAll = function () {
+        return this.ej2Instances.selectAll();
+    };
+    FileManagerComponent.prototype.uploadFiles = function () {
+        return this.ej2Instances.uploadFiles();
     };
     FileManagerComponent = __decorate([
         EJComponentDecorator({

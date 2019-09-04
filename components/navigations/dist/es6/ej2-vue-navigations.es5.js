@@ -233,7 +233,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$1 = ['enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+var properties$1 = ['enableCollision', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
 var modelProps$1 = [];
 /**
  * Represents the Essential JS 2 VueJS Toolbar Component.
@@ -486,7 +486,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$3 = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'locale', 'overflowMode', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
+var properties$3 = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'locale', 'overflowMode', 'scrollStep', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
 var modelProps$3 = [];
 /**
  * Represents the EJ2 VueJS Tab Component.
@@ -742,7 +742,7 @@ var SidebarComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    SidebarComponent.prototype.trigger = function (eventName, eventProp) {
+    SidebarComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -752,7 +752,7 @@ var SidebarComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     SidebarComponent.prototype.render = function (createElement) {

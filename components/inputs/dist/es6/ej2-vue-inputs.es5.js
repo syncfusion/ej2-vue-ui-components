@@ -63,7 +63,7 @@ var TextBoxComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    TextBoxComponent.prototype.trigger = function (eventName, eventProp) {
+    TextBoxComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -73,7 +73,7 @@ var TextBoxComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     TextBoxComponent.prototype.render = function (createElement) {
@@ -168,7 +168,7 @@ var NumericTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    NumericTextBoxComponent.prototype.trigger = function (eventName, eventProp) {
+    NumericTextBoxComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -178,7 +178,7 @@ var NumericTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     NumericTextBoxComponent.prototype.render = function (createElement) {
@@ -276,7 +276,7 @@ var MaskedTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    MaskedTextBoxComponent.prototype.trigger = function (eventName, eventProp) {
+    MaskedTextBoxComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -286,7 +286,7 @@ var MaskedTextBoxComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     MaskedTextBoxComponent.prototype.render = function (createElement) {
@@ -378,7 +378,7 @@ var SliderComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    SliderComponent.prototype.trigger = function (eventName, eventProp) {
+    SliderComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -388,7 +388,7 @@ var SliderComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     SliderComponent.prototype.render = function (createElement) {
@@ -657,7 +657,7 @@ var ColorPickerComponent = /** @__PURE__ @class */ (function (_super) {
             });
         }
     };
-    ColorPickerComponent.prototype.trigger = function (eventName, eventProp) {
+    ColorPickerComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             var key = this.models.toString().match(/checked|value/) || [];
             var propKey = key[0];
@@ -667,7 +667,7 @@ var ColorPickerComponent = /** @__PURE__ @class */ (function (_super) {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     };
     ColorPickerComponent.prototype.render = function (createElement) {

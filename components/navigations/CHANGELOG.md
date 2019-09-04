@@ -2,7 +2,21 @@
 
 ## [Unreleased]
 
-## 17.2.48-beta (2019-08-28)
+## 17.2.49 (2019-09-04)
+
+### Menu
+
+#### Bug Fixes
+
+- Issue with modifying item in 'beforeOpen' event creates extra Item in Context Menu is fixed.
+
+## 17.2.47 (2019-08-27)
+
+### Sidebar
+
+#### Bug Fixes
+
+- Sidebar expand or collapse when scrolling in the landscape mode in chrome mobile browser is fixed.
 
 ### Toolbar
 
@@ -15,6 +29,30 @@
 #### Breaking Changes
 
 - The `expanded` event type changed from `ExpandEventArgs` to `ExpandedEventArgs`.
+
+## 17.2.41 (2019-08-14)
+
+### TreeView
+
+#### Bug Fixes
+
+- Issue with custom icon size changed while double clicking the tree node has been fixed.
+
+## 17.2.39 (2019-07-30)
+
+### TreeView
+
+#### Bug Fixes
+
+- #242589 - Issue with getting checked nodes value using `checkedNodes` property has been fixed.
+
+## 17.2.36 (2019-07-24)
+
+### Menu
+
+#### Bug Fixes
+
+- Issue with Submenu when the id contains special character.
 
 ## 17.2.34 (2019-07-11)
 
@@ -760,4 +798,12 @@ TreeView component is used to represent hierarchical data in a tree like structu
 - **Template** - Allows you to customize the nodes in TreeView.
 - **Accessibility** - Provides built-in accessibility support that helps to access all the TreeView component features through the keyboard, on-screen readers, or other assistive technology devices.
 
+
+## 17.2.40 (2019-08-06)
+
+### TreeView
+
+#### Bug Fixes
+
+- #242925 - Issue with checked and unchecked the checkbox using keyboard interaction even disable the checkbox has been fixed.
 

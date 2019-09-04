@@ -1,5 +1,6 @@
 export * from '@syncfusion/ej2-diagrams';
 export { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './diagram/layers.directive';
+export { CustomCursorsDirective, CustomCursorDirective, CustomCursorsPlugin, CustomCursorPlugin } from './diagram/customcursor.directive';
 export { ConnectorAnnotationsDirective, ConnectorAnnotationDirective, ConnectorAnnotationsPlugin, ConnectorAnnotationPlugin } from './diagram/connector-annotation.directive';
 export { ConnectorsDirective, ConnectorDirective, ConnectorsPlugin, ConnectorPlugin } from './diagram/connectors.directive';
 export { NodeAnnotationsDirective, NodeAnnotationDirective, NodeAnnotationsPlugin, NodeAnnotationPlugin } from './diagram/node-annotation.directive';

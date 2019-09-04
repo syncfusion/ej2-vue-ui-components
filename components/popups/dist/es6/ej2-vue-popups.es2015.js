@@ -94,7 +94,7 @@ let DialogComponent = class DialogComponent extends ComponentBase {
             });
         }
     }
-    trigger(eventName, eventProp) {
+    trigger(eventName, eventProp, successHandler) {
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key = this.models.toString().match(/checked|value/) || [];
             let propKey = key[0];
@@ -104,7 +104,7 @@ let DialogComponent = class DialogComponent extends ComponentBase {
             }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp);
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {

@@ -72,7 +72,7 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.getDataManagerQuery(rule);
     }
 
-    public getFilteredRecords(): Object {
+    public getFilteredRecords(): Object | any {
         return this.ej2Instances.getFilteredRecords();
     }
 
