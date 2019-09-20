@@ -150,7 +150,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'navigating', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
+const properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
 const modelProps = ['currentView', 'selectedDate'];
 /**
  * `ej-schedule` represents the VueJS Schedule Component.
@@ -222,6 +222,12 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     changeView(view, event, muteOnChange, index) {
         return this.ej2Instances.changeView(view, event, muteOnChange, index);
     }
+    closeEditor() {
+        return this.ej2Instances.closeEditor();
+    }
+    closeQuickInfoPopup() {
+        return this.ej2Instances.closeQuickInfoPopup();
+    }
     deleteEvent(id, currentAction) {
         return this.ej2Instances.deleteEvent(id, currentAction);
     }
@@ -237,11 +243,17 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getAppointmentTemplate() {
         return this.ej2Instances.getAppointmentTemplate();
     }
+    getBlockEvents(startDate, endDate, includeOccurrences) {
+        return this.ej2Instances.getBlockEvents(startDate, endDate, includeOccurrences);
+    }
     getCalendarMode() {
         return this.ej2Instances.getCalendarMode();
     }
     getCellDetails(tdCol) {
         return this.ej2Instances.getCellDetails(tdCol);
+    }
+    getCellHeaderTemplate() {
+        return this.ej2Instances.getCellHeaderTemplate();
     }
     getCellTemplate() {
         return this.ej2Instances.getCellTemplate();
@@ -393,6 +405,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     selectCell(element) {
         return this.ej2Instances.selectCell(element);
     }
+    setRecurrenceEditor(recurrenceEditor) {
+        return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
+    }
     setWorkHours(dates, start, end, groupIndex) {
         return this.ej2Instances.setWorkHours(dates, start, end, groupIndex);
     }
@@ -404,9 +419,6 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     }
     updateLayoutTemplates() {
         return this.ej2Instances.updateLayoutTemplates();
-    }
-    updateRecurrenceEditor(recurrenceEditor) {
-        return this.ej2Instances.updateRecurrenceEditor(recurrenceEditor);
     }
 };
 ScheduleComponent = __decorate$3([

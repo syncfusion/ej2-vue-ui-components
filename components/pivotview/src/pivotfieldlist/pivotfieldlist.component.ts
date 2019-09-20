@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { PivotFieldList } from '@syncfusion/ej2-pivotview';
 
 
-export const properties: string[] = ['allowCalculatedField', 'allowDeferLayoutUpdate', 'cssClass', 'dataSourceSettings', 'enablePersistence', 'enableRtl', 'locale', 'maxNodeLimitInMemberEditor', 'renderMode', 'showValuesButton', 'target', 'aggregateCellInfo', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
+export const properties: string[] = ['allowCalculatedField', 'allowDeferLayoutUpdate', 'cssClass', 'dataSourceSettings', 'enablePersistence', 'enableRtl', 'loadOnDemandInMemberEditor', 'locale', 'maxNodeLimitInMemberEditor', 'renderMode', 'showValuesButton', 'spinnerTemplate', 'target', 'aggregateCellInfo', 'created', 'dataBound', 'destroyed', 'enginePopulated', 'enginePopulating', 'load', 'onFieldDropped'];
 export const modelProps: string[] = [];
 
 /**
@@ -51,6 +51,13 @@ export class PivotFieldListComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public update(control: Object): void {
+        return this.ej2Instances.update(control);
+    }
+
+    public updateView(control: Object): void {
+        return this.ej2Instances.updateView(control);
+    }
 }
 
 export const PivotFieldListPlugin = {

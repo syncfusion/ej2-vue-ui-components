@@ -308,9 +308,6 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.autoFitColumns = function (fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);
     };
-    GridComponent.prototype.blazorTemplate = function () {
-        return this.ej2Instances.blazorTemplate();
-    };
     GridComponent.prototype.clearCellSelection = function () {
         return this.ej2Instances.clearCellSelection();
     };

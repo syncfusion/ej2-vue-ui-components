@@ -74,6 +74,10 @@ export class DropDownListComponent extends ComponentBase {
         return this.ej2Instances.addItem(items, itemIndex);
     }
 
+    public filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    }
+
     public focusIn(e?: Object | Object | Object | Object): void {
         return this.ej2Instances.focusIn(e);
     }

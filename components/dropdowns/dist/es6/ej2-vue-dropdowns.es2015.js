@@ -65,6 +65,9 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     }
+    filter(dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    }
     focusIn(e) {
         return this.ej2Instances.focusIn(e);
     }
@@ -167,6 +170,9 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
     }
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    }
+    filter(dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
     }
     focusIn() {
         return this.ej2Instances.focusIn();
@@ -271,6 +277,9 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     }
+    filter(dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    }
     focusIn() {
         return this.ej2Instances.focusIn();
     }
@@ -373,6 +382,9 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
     }
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    }
+    filter(dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
     }
     focusIn() {
         return this.ej2Instances.focusIn();

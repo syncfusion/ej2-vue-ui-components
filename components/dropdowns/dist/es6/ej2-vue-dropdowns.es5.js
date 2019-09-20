@@ -81,6 +81,9 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownListComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     };
+    DropDownListComponent.prototype.filter = function (dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    };
     DropDownListComponent.prototype.focusIn = function (e) {
         return this.ej2Instances.focusIn(e);
     };
@@ -200,6 +203,9 @@ var ComboBoxComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ComboBoxComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    };
+    ComboBoxComponent.prototype.filter = function (dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
     };
     ComboBoxComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
@@ -321,6 +327,9 @@ var AutoCompleteComponent = /** @__PURE__ @class */ (function (_super) {
     AutoCompleteComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     };
+    AutoCompleteComponent.prototype.filter = function (dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    };
     AutoCompleteComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
@@ -440,6 +449,9 @@ var MultiSelectComponent = /** @__PURE__ @class */ (function (_super) {
     };
     MultiSelectComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    };
+    MultiSelectComponent.prototype.filter = function (dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
     };
     MultiSelectComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();

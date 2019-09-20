@@ -51,6 +51,9 @@ export class OverviewComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public updateHtmlLayer(view: Object): void {
+        return this.ej2Instances.updateHtmlLayer(view);
+    }
 }
 
 export const OverviewPlugin = {
