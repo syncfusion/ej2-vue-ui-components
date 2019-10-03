@@ -582,11 +582,20 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.enableItems = function (items, enable) {
         return this.ej2Instances.enableItems(items, enable);
     };
+    ListBoxComponent.prototype.filter = function (dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    };
     ListBoxComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
     };
     ListBoxComponent.prototype.getItems = function () {
         return this.ej2Instances.getItems();
+    };
+    ListBoxComponent.prototype.removeItem = function (items, itemIndex) {
+        return this.ej2Instances.removeItem(items, itemIndex);
+    };
+    ListBoxComponent.prototype.removeItems = function (items, itemIndex) {
+        return this.ej2Instances.removeItems(items, itemIndex);
     };
     ListBoxComponent.prototype.requiredModules = function () {
         return this.ej2Instances.requiredModules();

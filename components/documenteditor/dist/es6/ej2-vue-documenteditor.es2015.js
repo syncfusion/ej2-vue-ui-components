@@ -158,6 +158,12 @@ let DocumentEditorContainerComponent = class DocumentEditorContainerComponent ex
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    setDefaultCharacterFormat(characterFormat) {
+        return this.ej2Instances.setDefaultCharacterFormat(characterFormat);
+    }
+    setDefaultParagraphFormat(paragraphFormat) {
+        return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
+    }
 };
 DocumentEditorContainerComponent = __decorate$1([
     EJComponentDecorator({

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.3.14 (2019-10-03)
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- `#F147384` - Issue with `!default` variable missed in the DateRangePicker SCSS file has been resolved.
+
 ## 17.2.49 (2019-09-04)
 
 ### DatePicker

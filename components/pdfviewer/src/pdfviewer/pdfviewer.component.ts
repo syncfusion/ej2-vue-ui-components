@@ -63,8 +63,20 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.exportAnnotationsAsObject();
     }
 
+    public exportFormFields(): void {
+        return this.ej2Instances.exportFormFields();
+    }
+
+    public exportFormFieldsAsObject(): Object {
+        return this.ej2Instances.exportFormFieldsAsObject();
+    }
+
     public importAnnotations(importData: any): void {
         return this.ej2Instances.importAnnotations(importData);
+    }
+
+    public importFormFields(formFields: any): void {
+        return this.ej2Instances.importFormFields(formFields);
     }
 
     public load(document: string, password: string): void {

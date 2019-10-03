@@ -498,9 +498,6 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    GanttComponent.prototype.ShowColumn = function (keys, showBy) {
-        return this.ej2Instances.ShowColumn(keys, showBy);
-    };
     GanttComponent.prototype.addPredecessor = function (id, predecessorString) {
         return this.ej2Instances.addPredecessor(id, predecessorString);
     };
@@ -512,6 +509,9 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GanttComponent.prototype.clearFiltering = function () {
         return this.ej2Instances.clearFiltering();
+    };
+    GanttComponent.prototype.clearSelection = function () {
+        return this.ej2Instances.clearSelection();
     };
     GanttComponent.prototype.clearSorting = function () {
         return this.ej2Instances.clearSorting();
@@ -636,6 +636,9 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.setSplitterPosition = function (value, type) {
         return this.ej2Instances.setSplitterPosition(value, type);
     };
+    GanttComponent.prototype.showColumn = function (keys, showBy) {
+        return this.ej2Instances.showColumn(keys, showBy);
+    };
     GanttComponent.prototype.showSpinner = function () {
         return this.ej2Instances.showSpinner();
     };
@@ -651,8 +654,8 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.updatePredecessor = function (id, predecessorString) {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     };
-    GanttComponent.prototype.updateProjectDates = function (startDate, endDate, isTimelineRoundOff) {
-        return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff);
+    GanttComponent.prototype.updateProjectDates = function (startDate, endDate, isTimelineRoundOff, isFrom) {
+        return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff, isFrom);
     };
     GanttComponent.prototype.updateRecordByID = function (data) {
         return this.ej2Instances.updateRecordByID(data);

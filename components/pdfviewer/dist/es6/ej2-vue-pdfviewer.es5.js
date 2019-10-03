@@ -71,8 +71,17 @@ var PdfViewerComponent = /** @__PURE__ @class */ (function (_super) {
     PdfViewerComponent.prototype.exportAnnotationsAsObject = function () {
         return this.ej2Instances.exportAnnotationsAsObject();
     };
+    PdfViewerComponent.prototype.exportFormFields = function () {
+        return this.ej2Instances.exportFormFields();
+    };
+    PdfViewerComponent.prototype.exportFormFieldsAsObject = function () {
+        return this.ej2Instances.exportFormFieldsAsObject();
+    };
     PdfViewerComponent.prototype.importAnnotations = function (importData) {
         return this.ej2Instances.importAnnotations(importData);
+    };
+    PdfViewerComponent.prototype.importFormFields = function (formFields) {
+        return this.ej2Instances.importFormFields(formFields);
     };
     PdfViewerComponent.prototype.load = function (document, password) {
         return this.ej2Instances.load(document, password);

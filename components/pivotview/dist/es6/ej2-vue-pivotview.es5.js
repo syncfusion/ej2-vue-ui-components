@@ -65,6 +65,9 @@ var PivotViewComponent = /** @__PURE__ @class */ (function (_super) {
     PivotViewComponent.prototype.chartExport = function (type, fileName, orientation, width, height) {
         return this.ej2Instances.chartExport(type, fileName, orientation, width, height);
     };
+    PivotViewComponent.prototype.createCalculatedFieldDialog = function () {
+        return this.ej2Instances.createCalculatedFieldDialog();
+    };
     PivotViewComponent.prototype.csvExport = function (excelExportProperties, isMultipleExport, workbook, isBlob) {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     };
@@ -85,6 +88,9 @@ var PivotViewComponent = /** @__PURE__ @class */ (function (_super) {
     };
     PivotViewComponent.prototype.refresh = function () {
         return this.ej2Instances.refresh();
+    };
+    PivotViewComponent.prototype.showConditionalFormattingDialog = function () {
+        return this.ej2Instances.showConditionalFormattingDialog();
     };
     PivotViewComponent.prototype.templateParser = function (template) {
         return this.ej2Instances.templateParser(template);

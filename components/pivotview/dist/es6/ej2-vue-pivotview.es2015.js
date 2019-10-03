@@ -49,6 +49,9 @@ let PivotViewComponent = class PivotViewComponent extends ComponentBase {
     chartExport(type, fileName, orientation, width, height) {
         return this.ej2Instances.chartExport(type, fileName, orientation, width, height);
     }
+    createCalculatedFieldDialog() {
+        return this.ej2Instances.createCalculatedFieldDialog();
+    }
     csvExport(excelExportProperties, isMultipleExport, workbook, isBlob) {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
@@ -69,6 +72,9 @@ let PivotViewComponent = class PivotViewComponent extends ComponentBase {
     }
     refresh() {
         return this.ej2Instances.refresh();
+    }
+    showConditionalFormattingDialog() {
+        return this.ej2Instances.showConditionalFormattingDialog();
     }
     templateParser(template) {
         return this.ej2Instances.templateParser(template);

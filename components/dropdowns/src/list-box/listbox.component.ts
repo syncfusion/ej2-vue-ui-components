@@ -78,12 +78,24 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.enableItems(items, enable);
     }
 
+    public filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    }
+
     public getDataByValue(value: string | number | boolean): Object | string | number | boolean {
         return this.ej2Instances.getDataByValue(value);
     }
 
     public getItems(): Object[] {
         return this.ej2Instances.getItems();
+    }
+
+    public removeItem(items?: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void {
+        return this.ej2Instances.removeItem(items, itemIndex);
+    }
+
+    public removeItems(items?: Object[] | Object, itemIndex?: number): void {
+        return this.ej2Instances.removeItems(items, itemIndex);
     }
 
     public requiredModules(): Object[] {

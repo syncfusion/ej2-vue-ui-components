@@ -51,6 +51,13 @@ export class DocumentEditorContainerComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public setDefaultCharacterFormat(characterFormat: Object): void {
+        return this.ej2Instances.setDefaultCharacterFormat(characterFormat);
+    }
+
+    public setDefaultParagraphFormat(paragraphFormat: Object): void {
+        return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
+    }
 }
 
 export const DocumentEditorContainerPlugin = {

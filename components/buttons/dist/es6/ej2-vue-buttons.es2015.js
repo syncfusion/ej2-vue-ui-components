@@ -73,7 +73,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
+const properties$1 = ['checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
 const modelProps$1 = ['checked', 'indeterminate'];
 /**
  * Represents the Essential JS 2 VueJS CheckBox Component

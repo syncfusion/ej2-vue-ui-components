@@ -55,8 +55,17 @@ let PdfViewerComponent = class PdfViewerComponent extends ComponentBase {
     exportAnnotationsAsObject() {
         return this.ej2Instances.exportAnnotationsAsObject();
     }
+    exportFormFields() {
+        return this.ej2Instances.exportFormFields();
+    }
+    exportFormFieldsAsObject() {
+        return this.ej2Instances.exportFormFieldsAsObject();
+    }
     importAnnotations(importData) {
         return this.ej2Instances.importAnnotations(importData);
+    }
+    importFormFields(formFields) {
+        return this.ej2Instances.importFormFields(formFields);
     }
     load(document, password) {
         return this.ej2Instances.load(document, password);

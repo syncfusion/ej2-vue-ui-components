@@ -344,9 +344,6 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    ShowColumn(keys, showBy) {
-        return this.ej2Instances.ShowColumn(keys, showBy);
-    }
     addPredecessor(id, predecessorString) {
         return this.ej2Instances.addPredecessor(id, predecessorString);
     }
@@ -358,6 +355,9 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     }
     clearFiltering() {
         return this.ej2Instances.clearFiltering();
+    }
+    clearSelection() {
+        return this.ej2Instances.clearSelection();
     }
     clearSorting() {
         return this.ej2Instances.clearSorting();
@@ -482,6 +482,9 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     setSplitterPosition(value, type) {
         return this.ej2Instances.setSplitterPosition(value, type);
     }
+    showColumn(keys, showBy) {
+        return this.ej2Instances.showColumn(keys, showBy);
+    }
     showSpinner() {
         return this.ej2Instances.showSpinner();
     }
@@ -497,8 +500,8 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     updatePredecessor(id, predecessorString) {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     }
-    updateProjectDates(startDate, endDate, isTimelineRoundOff) {
-        return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff);
+    updateProjectDates(startDate, endDate, isTimelineRoundOff, isFrom) {
+        return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff, isFrom);
     }
     updateRecordByID(data) {
         return this.ej2Instances.updateRecordByID(data);

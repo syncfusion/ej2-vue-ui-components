@@ -191,6 +191,12 @@ var DocumentEditorContainerComponent = /** @__PURE__ @class */ (function (_super
     DocumentEditorContainerComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    DocumentEditorContainerComponent.prototype.setDefaultCharacterFormat = function (characterFormat) {
+        return this.ej2Instances.setDefaultCharacterFormat(characterFormat);
+    };
+    DocumentEditorContainerComponent.prototype.setDefaultParagraphFormat = function (paragraphFormat) {
+        return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
+    };
     DocumentEditorContainerComponent = __decorate$1([
         EJComponentDecorator({
             props: properties$1

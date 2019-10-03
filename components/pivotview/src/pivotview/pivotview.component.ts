@@ -55,6 +55,10 @@ export class PivotViewComponent extends ComponentBase {
         return this.ej2Instances.chartExport(type, fileName, orientation, width, height);
     }
 
+    public createCalculatedFieldDialog(): void {
+        return this.ej2Instances.createCalculatedFieldDialog();
+    }
+
     public csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): void {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
@@ -81,6 +85,10 @@ export class PivotViewComponent extends ComponentBase {
 
     public refresh(): void {
         return this.ej2Instances.refresh();
+    }
+
+    public showConditionalFormattingDialog(): void {
+        return this.ej2Instances.showConditionalFormattingDialog();
     }
 
     public templateParser(template: string): Object {

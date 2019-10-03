@@ -498,11 +498,20 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     enableItems(items, enable) {
         return this.ej2Instances.enableItems(items, enable);
     }
+    filter(dataSource, query, fields) {
+        return this.ej2Instances.filter(dataSource, query, fields);
+    }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);
     }
     getItems() {
         return this.ej2Instances.getItems();
+    }
+    removeItem(items, itemIndex) {
+        return this.ej2Instances.removeItem(items, itemIndex);
+    }
+    removeItems(items, itemIndex) {
+        return this.ej2Instances.removeItems(items, itemIndex);
     }
     requiredModules() {
         return this.ej2Instances.requiredModules();

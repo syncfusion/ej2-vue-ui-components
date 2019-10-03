@@ -76,10 +76,6 @@ export class GanttComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public ShowColumn(keys: string | string[], showBy?: string): void {
-        return this.ej2Instances.ShowColumn(keys, showBy);
-    }
-
     public addPredecessor(id: number, predecessorString: string): void {
         return this.ej2Instances.addPredecessor(id, predecessorString);
     }
@@ -94,6 +90,10 @@ export class GanttComponent extends ComponentBase {
 
     public clearFiltering(): void {
         return this.ej2Instances.clearFiltering();
+    }
+
+    public clearSelection(): void {
+        return this.ej2Instances.clearSelection();
     }
 
     public clearSorting(): void {
@@ -260,6 +260,10 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.setSplitterPosition(value, type);
     }
 
+    public showColumn(keys: string | string[], showBy?: string): void {
+        return this.ej2Instances.showColumn(keys, showBy);
+    }
+
     public showSpinner(): void {
         return this.ej2Instances.showSpinner();
     }
@@ -280,8 +284,8 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     }
 
-    public updateProjectDates(startDate: Object, endDate: Object, isTimelineRoundOff: boolean): void {
-        return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff);
+    public updateProjectDates(startDate: Object, endDate: Object, isTimelineRoundOff: boolean, isFrom?: string): void {
+        return this.ej2Instances.updateProjectDates(startDate, endDate, isTimelineRoundOff, isFrom);
     }
 
     public updateRecordByID(data: Object): void {
