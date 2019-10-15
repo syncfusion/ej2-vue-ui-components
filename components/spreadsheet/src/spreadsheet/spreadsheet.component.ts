@@ -137,12 +137,16 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.showSpinner();
     }
 
-    public sort(sortOptions?: Object, range?: string): void {
+    public sort(sortOptions?: Object, range?: string): Object {
         return this.ej2Instances.sort(sortOptions, range);
     }
 
     public startEdit(): void {
         return this.ej2Instances.startEdit();
+    }
+
+    public updateCell(cell: Object, address?: string): void {
+        return this.ej2Instances.updateCell(cell, address);
     }
 }
 

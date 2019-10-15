@@ -565,6 +565,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.startEdit = function () {
         return this.ej2Instances.startEdit();
     };
+    SpreadsheetComponent.prototype.updateCell = function (cell, address) {
+        return this.ej2Instances.updateCell(cell, address);
+    };
     SpreadsheetComponent = __decorate$6([
         EJComponentDecorator({
             props: properties

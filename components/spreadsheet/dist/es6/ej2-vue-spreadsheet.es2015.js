@@ -411,6 +411,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     startEdit() {
         return this.ej2Instances.startEdit();
     }
+    updateCell(cell, address) {
+        return this.ej2Instances.updateCell(cell, address);
+    }
 };
 SpreadsheetComponent = __decorate$6([
     EJComponentDecorator({
