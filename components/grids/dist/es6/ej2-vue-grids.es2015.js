@@ -325,6 +325,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     getContentTable() {
         return this.ej2Instances.getContentTable();
     }
+    getCurrentViewRecords() {
+        return this.ej2Instances.getCurrentViewRecords();
+    }
     getDataModule() {
         return this.ej2Instances.getDataModule();
     }

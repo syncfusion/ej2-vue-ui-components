@@ -110,6 +110,9 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     DocumentEditorComponent.prototype.setDefaultParagraphFormat = function (paragraphFormat) {
         return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
     };
+    DocumentEditorComponent.prototype.setDefaultSectionFormat = function (sectionFormat) {
+        return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+    };
     DocumentEditorComponent.prototype.showDialog = function (dialogType) {
         return this.ej2Instances.showDialog(dialogType);
     };
@@ -196,6 +199,9 @@ var DocumentEditorContainerComponent = /** @__PURE__ @class */ (function (_super
     };
     DocumentEditorContainerComponent.prototype.setDefaultParagraphFormat = function (paragraphFormat) {
         return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
+    };
+    DocumentEditorContainerComponent.prototype.setDefaultSectionFormat = function (sectionFormat) {
+        return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
     };
     DocumentEditorContainerComponent = __decorate$1([
         EJComponentDecorator({

@@ -94,6 +94,9 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     setDefaultParagraphFormat(paragraphFormat) {
         return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
     }
+    setDefaultSectionFormat(sectionFormat) {
+        return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+    }
     showDialog(dialogType) {
         return this.ej2Instances.showDialog(dialogType);
     }
@@ -163,6 +166,9 @@ let DocumentEditorContainerComponent = class DocumentEditorContainerComponent ex
     }
     setDefaultParagraphFormat(paragraphFormat) {
         return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
+    }
+    setDefaultSectionFormat(sectionFormat) {
+        return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
     }
 };
 DocumentEditorContainerComponent = __decorate$1([

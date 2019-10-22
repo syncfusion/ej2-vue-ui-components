@@ -410,6 +410,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.getContentTable = function () {
         return this.ej2Instances.getContentTable();
     };
+    GridComponent.prototype.getCurrentViewRecords = function () {
+        return this.ej2Instances.getCurrentViewRecords();
+    };
     GridComponent.prototype.getDataModule = function () {
         return this.ej2Instances.getDataModule();
     };

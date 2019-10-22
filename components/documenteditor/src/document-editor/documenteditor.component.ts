@@ -115,6 +115,10 @@ export class DocumentEditorComponent extends ComponentBase {
         return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
     }
 
+    public setDefaultSectionFormat(sectionFormat: Object): void {
+        return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+    }
+
     public showDialog(dialogType: Object): void {
         return this.ej2Instances.showDialog(dialogType);
     }

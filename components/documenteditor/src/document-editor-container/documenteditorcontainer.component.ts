@@ -58,6 +58,10 @@ export class DocumentEditorContainerComponent extends ComponentBase {
     public setDefaultParagraphFormat(paragraphFormat: Object): void {
         return this.ej2Instances.setDefaultParagraphFormat(paragraphFormat);
     }
+
+    public setDefaultSectionFormat(sectionFormat: Object): void {
+        return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+    }
 }
 
 export const DocumentEditorContainerPlugin = {

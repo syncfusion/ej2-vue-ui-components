@@ -217,6 +217,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getContentTable();
     }
 
+    public getCurrentViewRecords(): Object[] {
+        return this.ej2Instances.getCurrentViewRecords();
+    }
+
     public getDataModule(): Object {
         return this.ej2Instances.getDataModule();
     }
