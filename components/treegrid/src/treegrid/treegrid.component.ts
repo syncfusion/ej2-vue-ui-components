@@ -317,8 +317,8 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.refresh();
     }
 
-    public refreshColumns(): void {
-        return this.ej2Instances.refreshColumns();
+    public refreshColumns(refreshUI?: boolean): void {
+        return this.ej2Instances.refreshColumns(refreshUI);
     }
 
     public refreshHeader(): void {

@@ -400,8 +400,8 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     refresh() {
         return this.ej2Instances.refresh();
     }
-    refreshColumns() {
-        return this.ej2Instances.refreshColumns();
+    refreshColumns(refreshUI) {
+        return this.ej2Instances.refreshColumns(refreshUI);
     }
     refreshHeader() {
         return this.ej2Instances.refreshHeader();

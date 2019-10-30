@@ -485,8 +485,8 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     TreeGridComponent.prototype.refresh = function () {
         return this.ej2Instances.refresh();
     };
-    TreeGridComponent.prototype.refreshColumns = function () {
-        return this.ej2Instances.refreshColumns();
+    TreeGridComponent.prototype.refreshColumns = function (refreshUI) {
+        return this.ej2Instances.refreshColumns(refreshUI);
     };
     TreeGridComponent.prototype.refreshHeader = function () {
         return this.ej2Instances.refreshHeader();
