@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-base",
-	"version": "17.2.48",
+	"version": "17.3.19",
 	"description": "A common package of Essential JS 2 base Vue libraries, methods and class definitions",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -24,7 +24,7 @@
 	"module": "./index.js",
 	"readme": "ReadMe.md",
 	"peerDependencies": {
-		"vue": "2.5.2 - 2.5.21"
+		"vue": "2.5.2 - 2.6.10"
 	},
 	"dependencies": {
 		"@syncfusion/ej2-base": "*"

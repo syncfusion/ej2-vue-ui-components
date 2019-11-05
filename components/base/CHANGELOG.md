@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.3.16 (2019-10-09)
+
+### Common
+
+#### Bug Fixes
+
+- `248589` -cleared peerDependencies warning. 
+
 ## 17.2.48-beta (2019-08-28)
 
 ### Common

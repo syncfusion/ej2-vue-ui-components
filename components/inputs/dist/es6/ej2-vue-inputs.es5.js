@@ -557,8 +557,11 @@ var UploaderComponent = /** @__PURE__ @class */ (function (_super) {
     UploaderComponent.prototype.clearAll = function () {
         return this.ej2Instances.clearAll();
     };
-    UploaderComponent.prototype.getFilesData = function () {
-        return this.ej2Instances.getFilesData();
+    UploaderComponent.prototype.createFileList = function (fileData) {
+        return this.ej2Instances.createFileList(fileData);
+    };
+    UploaderComponent.prototype.getFilesData = function (index) {
+        return this.ej2Instances.getFilesData(index);
     };
     UploaderComponent.prototype.pause = function (fileData, custom) {
         return this.ej2Instances.pause(fileData, custom);

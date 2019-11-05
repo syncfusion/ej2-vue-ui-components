@@ -91,7 +91,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'locale', 'matchCase', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created', 'ruleChange'];
+var properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enablePersistence', 'enableRtl', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created', 'ruleChange'];
 var modelProps = [];
 /**
  * Represents the VueJS QueryBuilder Component.
@@ -166,8 +166,8 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     QueryBuilderComponent.prototype.getRulesFromSql = function (sqlString) {
         return this.ej2Instances.getRulesFromSql(sqlString);
     };
-    QueryBuilderComponent.prototype.getSqlFromRules = function (rule) {
-        return this.ej2Instances.getSqlFromRules(rule);
+    QueryBuilderComponent.prototype.getSqlFromRules = function (rule, allowEscape) {
+        return this.ej2Instances.getSqlFromRules(rule, allowEscape);
     };
     QueryBuilderComponent.prototype.getValidRules = function (currentRule) {
         return this.ej2Instances.getValidRules(currentRule);

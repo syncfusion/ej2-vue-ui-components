@@ -96,7 +96,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         this.assignValueToWrapper(options);
     };
     ComponentBase.prototype.assignValueToWrapper = function (option, silent) {
-        this.ej2Instances.setProperties(option, isNullOrUndefined(silent) ? true : silent);
+        this.ej2Instances.setProperties(extend({}, {}, option, true), isNullOrUndefined(silent) ? true : silent);
     };
     ComponentBase.prototype.fetchChildPropValues = function (childOption) {
         var dirProps = this.getDirectiveValues(this.$slots.default, this.tagMapper || {}, this.tagNameMapper || {});

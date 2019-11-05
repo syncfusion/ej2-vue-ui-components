@@ -73,7 +73,7 @@ class ComponentBase extends Vue {
         this.assignValueToWrapper(options);
     }
     assignValueToWrapper(option, silent) {
-        this.ej2Instances.setProperties(option, isNullOrUndefined(silent) ? true : silent);
+        this.ej2Instances.setProperties(extend({}, {}, option, true), isNullOrUndefined(silent) ? true : silent);
     }
     fetchChildPropValues(childOption) {
         let dirProps = this.getDirectiveValues(this.$slots.default, this.tagMapper || {}, this.tagNameMapper || {});

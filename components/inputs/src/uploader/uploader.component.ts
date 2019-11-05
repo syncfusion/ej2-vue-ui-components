@@ -64,8 +64,12 @@ export class UploaderComponent extends ComponentBase {
         return this.ej2Instances.clearAll();
     }
 
-    public getFilesData(): Object[] {
-        return this.ej2Instances.getFilesData();
+    public createFileList(fileData: Object[]): void {
+        return this.ej2Instances.createFileList(fileData);
+    }
+
+    public getFilesData(index?: number): Object[] {
+        return this.ej2Instances.getFilesData(index);
     }
 
     public pause(fileData?: Object | Object[], custom?: boolean): void {

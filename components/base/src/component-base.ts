@@ -82,7 +82,7 @@ export class ComponentBase extends Vue {
     }
 
     public assignValueToWrapper(option: Object, silent?: boolean): void {
-        this.ej2Instances.setProperties(option, isNullOrUndefined(silent as any) ? true : silent);
+        this.ej2Instances.setProperties(extend({}, {}, option, true), isNullOrUndefined(silent as any) ? true : silent);
     }
 
     public fetchChildPropValues(childOption: Object): void {

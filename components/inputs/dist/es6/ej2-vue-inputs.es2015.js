@@ -450,8 +450,11 @@ let UploaderComponent = class UploaderComponent extends ComponentBase {
     clearAll() {
         return this.ej2Instances.clearAll();
     }
-    getFilesData() {
-        return this.ej2Instances.getFilesData();
+    createFileList(fileData) {
+        return this.ej2Instances.createFileList(fileData);
+    }
+    getFilesData(index) {
+        return this.ej2Instances.getFilesData(index);
     }
     pause(fileData, custom) {
         return this.ej2Instances.pause(fileData, custom);
