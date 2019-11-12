@@ -193,6 +193,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getEventDetails(element);
     }
 
+    public getEventMaxID(): number | string {
+        return this.ej2Instances.getEventMaxID();
+    }
+
     public getEventTooltipTemplate(): Object {
         return this.ej2Instances.getEventTooltipTemplate();
     }

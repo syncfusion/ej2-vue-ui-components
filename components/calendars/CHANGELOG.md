@@ -2,6 +2,34 @@
 
 ## [Unreleased]
 
+## 17.3.27 (2019-11-12)
+
+### DateTimePicker
+
+#### New Features
+
+- `#147796` - Now, you can get the cleared event when clear the DateTimePicker's value using clear button.
+
+- `#147796` - Now, you can get the cleared event when clear the DateRangePicker's value using clear button.
+
+### DatePicker
+
+#### New Features
+
+- `#147796` - Now, you can get the cleared event when clear the DatePicker's value using clear button.
+
+### TimePicker
+
+#### New Features
+
+- `#147796` - Now, you can get the cleared event when clear the TimePicker's value using clear button.
+
+### DateRangePicker
+
+#### New Features
+
+- `#147796` - Now, you can get the cleared event when clear the DateRangePicker's value using clear button.
+
 ## 17.3.26 (2019-11-05)
 
 ### DateTimePicker

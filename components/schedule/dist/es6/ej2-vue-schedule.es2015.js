@@ -294,6 +294,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getEventDetails(element) {
         return this.ej2Instances.getEventDetails(element);
     }
+    getEventMaxID() {
+        return this.ej2Instances.getEventMaxID();
+    }
     getEventTooltipTemplate() {
         return this.ej2Instances.getEventTooltipTemplate();
     }

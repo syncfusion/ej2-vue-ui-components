@@ -379,6 +379,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getEventDetails = function (element) {
         return this.ej2Instances.getEventDetails(element);
     };
+    ScheduleComponent.prototype.getEventMaxID = function () {
+        return this.ej2Instances.getEventMaxID();
+    };
     ScheduleComponent.prototype.getEventTooltipTemplate = function () {
         return this.ej2Instances.getEventTooltipTemplate();
     };
