@@ -66,6 +66,9 @@ let TextBoxComponent = class TextBoxComponent extends ComponentBase {
     addAttributes(attributes) {
         return this.ej2Instances.addAttributes(attributes);
     }
+    addIcon(position, icons) {
+        return this.ej2Instances.addIcon(position, icons);
+    }
     focusIn() {
         return this.ej2Instances.focusIn();
     }

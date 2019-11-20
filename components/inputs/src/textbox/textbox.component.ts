@@ -74,6 +74,10 @@ export class TextBoxComponent extends ComponentBase {
         return this.ej2Instances.addAttributes(attributes);
     }
 
+    public addIcon(position: string, icons: string | string[]): void {
+        return this.ej2Instances.addIcon(position, icons);
+    }
+
     public focusIn(): void {
         return this.ej2Instances.focusIn();
     }

@@ -229,6 +229,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getDataRows();
     }
 
+    public getFilteredRecords(): Object[] | Object {
+        return this.ej2Instances.getFilteredRecords();
+    }
+
     public getFooterContent(): Object {
         return this.ej2Instances.getFooterContent();
     }

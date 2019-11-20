@@ -419,6 +419,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.getDataRows = function () {
         return this.ej2Instances.getDataRows();
     };
+    GridComponent.prototype.getFilteredRecords = function () {
+        return this.ej2Instances.getFilteredRecords();
+    };
     GridComponent.prototype.getFooterContent = function () {
         return this.ej2Instances.getFooterContent();
     };

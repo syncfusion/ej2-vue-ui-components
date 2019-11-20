@@ -334,6 +334,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     getDataRows() {
         return this.ej2Instances.getDataRows();
     }
+    getFilteredRecords() {
+        return this.ej2Instances.getFilteredRecords();
+    }
     getFooterContent() {
         return this.ej2Instances.getFooterContent();
     }

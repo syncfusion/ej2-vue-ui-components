@@ -82,6 +82,9 @@ var TextBoxComponent = /** @__PURE__ @class */ (function (_super) {
     TextBoxComponent.prototype.addAttributes = function (attributes) {
         return this.ej2Instances.addAttributes(attributes);
     };
+    TextBoxComponent.prototype.addIcon = function (position, icons) {
+        return this.ej2Instances.addIcon(position, icons);
+    };
     TextBoxComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
