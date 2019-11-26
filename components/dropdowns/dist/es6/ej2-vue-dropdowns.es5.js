@@ -81,6 +81,9 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownListComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     };
+    DropDownListComponent.prototype.clear = function () {
+        return this.ej2Instances.clear();
+    };
     DropDownListComponent.prototype.filter = function (dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
     };
@@ -203,6 +206,9 @@ var ComboBoxComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ComboBoxComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    };
+    ComboBoxComponent.prototype.clear = function () {
+        return this.ej2Instances.clear();
     };
     ComboBoxComponent.prototype.filter = function (dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
@@ -327,6 +333,9 @@ var AutoCompleteComponent = /** @__PURE__ @class */ (function (_super) {
     AutoCompleteComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     };
+    AutoCompleteComponent.prototype.clear = function () {
+        return this.ej2Instances.clear();
+    };
     AutoCompleteComponent.prototype.filter = function (dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
     };
@@ -449,6 +458,9 @@ var MultiSelectComponent = /** @__PURE__ @class */ (function (_super) {
     };
     MultiSelectComponent.prototype.addItem = function (items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    };
+    MultiSelectComponent.prototype.clear = function () {
+        return this.ej2Instances.clear();
     };
     MultiSelectComponent.prototype.filter = function (dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
@@ -587,6 +599,9 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ListBoxComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
+    };
+    ListBoxComponent.prototype.getDataByValues = function (value) {
+        return this.ej2Instances.getDataByValues(value);
     };
     ListBoxComponent.prototype.getItems = function () {
         return this.ej2Instances.getItems();

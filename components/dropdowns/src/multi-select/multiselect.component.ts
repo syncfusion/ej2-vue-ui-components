@@ -74,6 +74,10 @@ export class MultiSelectComponent extends ComponentBase {
         return this.ej2Instances.addItem(items, itemIndex);
     }
 
+    public clear(): void {
+        return this.ej2Instances.clear();
+    }
+
     public filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
         return this.ej2Instances.filter(dataSource, query, fields);
     }

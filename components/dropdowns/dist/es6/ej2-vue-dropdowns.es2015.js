@@ -65,6 +65,9 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     }
+    clear() {
+        return this.ej2Instances.clear();
+    }
     filter(dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
     }
@@ -170,6 +173,9 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
     }
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    }
+    clear() {
+        return this.ej2Instances.clear();
     }
     filter(dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
@@ -277,6 +283,9 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
     }
+    clear() {
+        return this.ej2Instances.clear();
+    }
     filter(dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
     }
@@ -382,6 +391,9 @@ let MultiSelectComponent = class MultiSelectComponent extends ComponentBase {
     }
     addItem(items, itemIndex) {
         return this.ej2Instances.addItem(items, itemIndex);
+    }
+    clear() {
+        return this.ej2Instances.clear();
     }
     filter(dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
@@ -503,6 +515,9 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);
+    }
+    getDataByValues(value) {
+        return this.ej2Instances.getDataByValues(value);
     }
     getItems() {
         return this.ej2Instances.getItems();

@@ -596,6 +596,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     reset() {
         return this.ej2Instances.reset();
     }
+    resetSegments() {
+        return this.ej2Instances.resetSegments();
+    }
     rotate(obj, angle, pivot) {
         return this.ej2Instances.rotate(obj, angle, pivot);
     }

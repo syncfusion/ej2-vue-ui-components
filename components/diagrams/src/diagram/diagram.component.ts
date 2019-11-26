@@ -338,6 +338,10 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.reset();
     }
 
+    public resetSegments(): void {
+        return this.ej2Instances.resetSegments();
+    }
+
     public rotate(obj: Object | Object | Object, angle: number, pivot?: Object): boolean {
         return this.ej2Instances.rotate(obj, angle, pivot);
     }

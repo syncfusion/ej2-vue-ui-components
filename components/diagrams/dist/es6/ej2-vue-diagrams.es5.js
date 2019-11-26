@@ -773,6 +773,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.reset = function () {
         return this.ej2Instances.reset();
     };
+    DiagramComponent.prototype.resetSegments = function () {
+        return this.ej2Instances.resetSegments();
+    };
     DiagramComponent.prototype.rotate = function (obj, angle, pivot) {
         return this.ej2Instances.rotate(obj, angle, pivot);
     };

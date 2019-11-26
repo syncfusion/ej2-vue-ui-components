@@ -86,6 +86,10 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.getDataByValue(value);
     }
 
+    public getDataByValues(value: string[] | number[] | boolean[]): undefined[] {
+        return this.ej2Instances.getDataByValues(value);
+    }
+
     public getItems(): Object[] {
         return this.ej2Instances.getItems();
     }
