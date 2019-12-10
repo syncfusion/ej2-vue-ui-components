@@ -245,6 +245,14 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getForeignKeyColumns();
     }
 
+    public getFrozenDataRows(): Object[] {
+        return this.ej2Instances.getFrozenDataRows();
+    }
+
+    public getFrozenRowByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenRowByIndex(index);
+    }
+
     public getHeaderContent(): Object {
         return this.ej2Instances.getHeaderContent();
     }

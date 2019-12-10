@@ -346,6 +346,12 @@ let GridComponent = class GridComponent extends ComponentBase {
     getForeignKeyColumns() {
         return this.ej2Instances.getForeignKeyColumns();
     }
+    getFrozenDataRows() {
+        return this.ej2Instances.getFrozenDataRows();
+    }
+    getFrozenRowByIndex(index) {
+        return this.ej2Instances.getFrozenRowByIndex(index);
+    }
     getHeaderContent() {
         return this.ej2Instances.getHeaderContent();
     }

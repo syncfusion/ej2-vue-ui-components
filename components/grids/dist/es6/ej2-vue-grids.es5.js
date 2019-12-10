@@ -431,6 +431,12 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.getForeignKeyColumns = function () {
         return this.ej2Instances.getForeignKeyColumns();
     };
+    GridComponent.prototype.getFrozenDataRows = function () {
+        return this.ej2Instances.getFrozenDataRows();
+    };
+    GridComponent.prototype.getFrozenRowByIndex = function (index) {
+        return this.ej2Instances.getFrozenRowByIndex(index);
+    };
     GridComponent.prototype.getHeaderContent = function () {
         return this.ej2Instances.getHeaderContent();
     };
