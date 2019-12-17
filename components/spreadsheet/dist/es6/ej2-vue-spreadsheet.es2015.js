@@ -306,7 +306,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['activeSheetTab', 'allowCellFormatting', 'allowEditing', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'beforeCellFormat', 'beforeCellRender', 'beforeDataBound', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileItemSelect', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'openFailure', 'saveComplete', 'select', 'sortComplete'];
+const properties = ['activeSheetTab', 'allowCellFormatting', 'allowEditing', 'allowFiltering', 'allowHyperlink', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileItemSelect', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'openComplete', 'openFailure', 'saveComplete', 'select', 'sortComplete'];
 const modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -351,8 +351,17 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     addDefinedName(definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     }
+    addHyperlink(hyperlink, address) {
+        return this.ej2Instances.addHyperlink(hyperlink, address);
+    }
+    applyFilter(predicates, range) {
+        return this.ej2Instances.applyFilter(predicates, range);
+    }
     cellFormat(style, range) {
         return this.ej2Instances.cellFormat(style, range);
+    }
+    clearFilter(field) {
+        return this.ej2Instances.clearFilter(field);
     }
     closeEdit() {
         return this.ej2Instances.closeEdit();
@@ -369,8 +378,14 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     endEdit() {
         return this.ej2Instances.endEdit();
     }
+    filter(filterOptions, range) {
+        return this.ej2Instances.filter(filterOptions, range);
+    }
     getData(address) {
         return this.ej2Instances.getData(address);
+    }
+    getDisplayText(cell) {
+        return this.ej2Instances.getDisplayText(cell);
     }
     goTo(address) {
         return this.ej2Instances.goTo(address);
@@ -387,11 +402,17 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     paste(address, type) {
         return this.ej2Instances.paste(address, type);
     }
+    redo() {
+        return this.ej2Instances.redo();
+    }
     removeContextMenuItems(items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     }
     removeDefinedName(definedName, scope) {
         return this.ej2Instances.removeDefinedName(definedName, scope);
+    }
+    removeHyperlink(range) {
+        return this.ej2Instances.removeHyperlink(range);
     }
     resize() {
         return this.ej2Instances.resize();
@@ -402,6 +423,12 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     selectRange(address) {
         return this.ej2Instances.selectRange(address);
     }
+    setColWidth(width, colIndex, sheetIndex) {
+        return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
+    }
+    setRowHeight(height, rowIndex, sheetIndex) {
+        return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex);
+    }
     showSpinner() {
         return this.ej2Instances.showSpinner();
     }
@@ -411,8 +438,17 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     startEdit() {
         return this.ej2Instances.startEdit();
     }
+    undo() {
+        return this.ej2Instances.undo();
+    }
+    updateAction(options) {
+        return this.ej2Instances.updateAction(options);
+    }
     updateCell(cell, address) {
         return this.ej2Instances.updateCell(cell, address);
+    }
+    updateUndoRedoCollection(args) {
+        return this.ej2Instances.updateUndoRedoCollection(args);
     }
 };
 SpreadsheetComponent = __decorate$6([

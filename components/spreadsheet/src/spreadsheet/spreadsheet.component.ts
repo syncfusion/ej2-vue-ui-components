@@ -9,7 +9,7 @@ import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sh
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['activeSheetTab', 'allowCellFormatting', 'allowEditing', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'beforeCellFormat', 'beforeCellRender', 'beforeDataBound', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileItemSelect', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'openFailure', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['activeSheetTab', 'allowCellFormatting', 'allowEditing', 'allowFiltering', 'allowHyperlink', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileItemSelect', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'openComplete', 'openFailure', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 /**
@@ -65,19 +65,31 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.addDefinedName(definedName);
     }
 
+    public addHyperlink(hyperlink: string | Object, address: string): void {
+        return this.ej2Instances.addHyperlink(hyperlink, address);
+    }
+
+    public applyFilter(predicates?: Object[], range?: string): void {
+        return this.ej2Instances.applyFilter(predicates, range);
+    }
+
     public cellFormat(style: Object, range?: string): void {
         return this.ej2Instances.cellFormat(style, range);
+    }
+
+    public clearFilter(field?: string): void {
+        return this.ej2Instances.clearFilter(field);
     }
 
     public closeEdit(): void {
         return this.ej2Instances.closeEdit();
     }
 
-    public copy(address?: string): void {
+    public copy(address?: string): Object {
         return this.ej2Instances.copy(address);
     }
 
-    public cut(address?: string): void {
+    public cut(address?: string): Object {
         return this.ej2Instances.cut(address);
     }
 
@@ -89,8 +101,16 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.endEdit();
     }
 
+    public filter(filterOptions?: Object, range?: string): Object {
+        return this.ej2Instances.filter(filterOptions, range);
+    }
+
     public getData(address: string): Object {
         return this.ej2Instances.getData(address);
+    }
+
+    public getDisplayText(cell: Object): string {
+        return this.ej2Instances.getDisplayText(cell);
     }
 
     public goTo(address: string): void {
@@ -113,12 +133,20 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.paste(address, type);
     }
 
+    public redo(): void {
+        return this.ej2Instances.redo();
+    }
+
     public removeContextMenuItems(items: string[], isUniqueId?: boolean): void {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     }
 
     public removeDefinedName(definedName: string, scope: string): boolean {
         return this.ej2Instances.removeDefinedName(definedName, scope);
+    }
+
+    public removeHyperlink(range: string): void {
+        return this.ej2Instances.removeHyperlink(range);
     }
 
     public resize(): void {
@@ -133,6 +161,14 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.selectRange(address);
     }
 
+    public setColWidth(width: number | string, colIndex: number, sheetIndex: number): void {
+        return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
+    }
+
+    public setRowHeight(height: number | string, rowIndex: number, sheetIndex: number): void {
+        return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex);
+    }
+
     public showSpinner(): void {
         return this.ej2Instances.showSpinner();
     }
@@ -145,8 +181,20 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.startEdit();
     }
 
+    public undo(): void {
+        return this.ej2Instances.undo();
+    }
+
+    public updateAction(options: string): void {
+        return this.ej2Instances.updateAction(options);
+    }
+
     public updateCell(cell: Object, address?: string): void {
         return this.ej2Instances.updateCell(cell, address);
+    }
+
+    public updateUndoRedoCollection(args: undefined): void {
+        return this.ej2Instances.updateUndoRedoCollection(args);
     }
 }
 

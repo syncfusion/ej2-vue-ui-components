@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { ProgressButton } from '@syncfusion/ej2-splitbuttons';
 
 
-export const properties: string[] = ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
+export const properties: string[] = ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
 export const modelProps: string[] = [];
 
 /**

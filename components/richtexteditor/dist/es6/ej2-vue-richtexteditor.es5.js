@@ -21,7 +21,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['backgroundColor', 'cssClass', 'editorMode', 'enableAutoUrl', 'enableHtmlEncode', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enabled', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'inlineMode', 'insertImageSettings', 'keyConfig', 'locale', 'maxLength', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'showCharCount', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'beforeDialogOpen', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'toolbarClick', 'toolbarStatusUpdate'];
+var properties = ['backgroundColor', 'cssClass', 'editorMode', 'enableAutoUrl', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enableXhtml', 'enabled', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'inlineMode', 'insertImageSettings', 'keyConfig', 'locale', 'maxLength', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'showCharCount', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'beforeDialogOpen', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'toolbarClick', 'toolbarStatusUpdate'];
 var modelProps = ['value'];
 /**
  * `ejs-richtexteditor` represents the VueJS RichTextEditor Component.
@@ -102,9 +102,6 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.getHtml = function () {
         return this.ej2Instances.getHtml();
     };
-    RichTextEditorComponent.prototype.getID = function () {
-        return this.ej2Instances.getID();
-    };
     RichTextEditorComponent.prototype.getRange = function () {
         return this.ej2Instances.getRange();
     };
@@ -113,12 +110,6 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     };
     RichTextEditorComponent.prototype.getText = function () {
         return this.ej2Instances.getText();
-    };
-    RichTextEditorComponent.prototype.invokeChangeEvent = function () {
-        return this.ej2Instances.invokeChangeEvent();
-    };
-    RichTextEditorComponent.prototype.preventDefaultResize = function (e) {
-        return this.ej2Instances.preventDefaultResize(e);
     };
     RichTextEditorComponent.prototype.print = function () {
         return this.ej2Instances.print();
@@ -138,26 +129,11 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.selectRange = function (range) {
         return this.ej2Instances.selectRange(range);
     };
-    RichTextEditorComponent.prototype.setContentHeight = function (target, isExpand) {
-        return this.ej2Instances.setContentHeight(target, isExpand);
-    };
-    RichTextEditorComponent.prototype.setEnable = function () {
-        return this.ej2Instances.setEnable();
-    };
-    RichTextEditorComponent.prototype.setPlaceHolder = function () {
-        return this.ej2Instances.setPlaceHolder();
-    };
-    RichTextEditorComponent.prototype.setReadOnly = function (initial) {
-        return this.ej2Instances.setReadOnly(initial);
-    };
     RichTextEditorComponent.prototype.showFullScreen = function () {
         return this.ej2Instances.showFullScreen();
     };
     RichTextEditorComponent.prototype.showSourceCode = function () {
         return this.ej2Instances.showSourceCode();
-    };
-    RichTextEditorComponent.prototype.updateValue = function (value) {
-        return this.ej2Instances.updateValue(value);
     };
     RichTextEditorComponent = __decorate([
         EJComponentDecorator({

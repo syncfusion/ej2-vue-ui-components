@@ -68,6 +68,10 @@ export class TabComponent extends ComponentBase {
         return this.ej2Instances.hideTab(index, value);
     }
 
+    public refresh(): void {
+        return this.ej2Instances.refresh();
+    }
+
     public removeTab(index: number): void {
         return this.ej2Instances.removeTab(index);
     }

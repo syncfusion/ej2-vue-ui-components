@@ -4,7 +4,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { RichTextEditor } from '@syncfusion/ej2-richtexteditor';
 
 
-export const properties: string[] = ['backgroundColor', 'cssClass', 'editorMode', 'enableAutoUrl', 'enableHtmlEncode', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enabled', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'inlineMode', 'insertImageSettings', 'keyConfig', 'locale', 'maxLength', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'showCharCount', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'beforeDialogOpen', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'toolbarClick', 'toolbarStatusUpdate'];
+export const properties: string[] = ['backgroundColor', 'cssClass', 'editorMode', 'enableAutoUrl', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enableXhtml', 'enabled', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'inlineMode', 'insertImageSettings', 'keyConfig', 'locale', 'maxLength', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'showCharCount', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'beforeDialogOpen', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'toolbarClick', 'toolbarStatusUpdate'];
 export const modelProps: string[] = ['value'];
 
 /**
@@ -102,10 +102,6 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.getHtml();
     }
 
-    public getID(): string {
-        return this.ej2Instances.getID();
-    }
-
     public getRange(): Object {
         return this.ej2Instances.getRange();
     }
@@ -116,14 +112,6 @@ export class RichTextEditorComponent extends ComponentBase {
 
     public getText(): string {
         return this.ej2Instances.getText();
-    }
-
-    public invokeChangeEvent(): void {
-        return this.ej2Instances.invokeChangeEvent();
-    }
-
-    public preventDefaultResize(e: Object | Object): void {
-        return this.ej2Instances.preventDefaultResize(e);
     }
 
     public print(): void {
@@ -150,32 +138,12 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.selectRange(range);
     }
 
-    public setContentHeight(target?: string, isExpand?: boolean): void {
-        return this.ej2Instances.setContentHeight(target, isExpand);
-    }
-
-    public setEnable(): void {
-        return this.ej2Instances.setEnable();
-    }
-
-    public setPlaceHolder(): void {
-        return this.ej2Instances.setPlaceHolder();
-    }
-
-    public setReadOnly(initial?: boolean): void {
-        return this.ej2Instances.setReadOnly(initial);
-    }
-
     public showFullScreen(): void {
         return this.ej2Instances.showFullScreen();
     }
 
     public showSourceCode(): void {
         return this.ej2Instances.showSourceCode();
-    }
-
-    public updateValue(value?: string): void {
-        return this.ej2Instances.updateValue(value);
     }
 }
 

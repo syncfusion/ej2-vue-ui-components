@@ -233,7 +233,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$1 = ['enableCollision', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+var properties$1 = ['cssClass', 'enableCollision', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
 var modelProps$1 = [];
 /**
  * Represents the Essential JS 2 VueJS Toolbar Component.
@@ -328,7 +328,7 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$2 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+var properties$2 = ['animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'items', 'locale', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 var modelProps$2 = [];
 /**
  * Represents the Essential JS 2 VueJS ContextMenu Component.
@@ -540,6 +540,9 @@ var TabComponent = /** @__PURE__ @class */ (function (_super) {
     TabComponent.prototype.hideTab = function (index, value) {
         return this.ej2Instances.hideTab(index, value);
     };
+    TabComponent.prototype.refresh = function () {
+        return this.ej2Instances.refresh();
+    };
     TabComponent.prototype.removeTab = function (index) {
         return this.ej2Instances.removeTab(index);
     };
@@ -581,7 +584,7 @@ var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$4 = ['allowDragAndDrop', 'allowEditing', 'allowMultiSelection', 'animation', 'autoCheck', 'checkedNodes', 'cssClass', 'enablePersistence', 'enableRtl', 'expandOn', 'expandedNodes', 'fields', 'fullRowSelect', 'loadOnDemand', 'locale', 'nodeTemplate', 'selectedNodes', 'showCheckBox', 'sortOrder', 'created', 'dataBound', 'dataSourceChanged', 'destroyed', 'drawNode', 'keyPress', 'nodeChecked', 'nodeChecking', 'nodeClicked', 'nodeCollapsed', 'nodeCollapsing', 'nodeDragStart', 'nodeDragStop', 'nodeDragging', 'nodeDropped', 'nodeEdited', 'nodeEditing', 'nodeExpanded', 'nodeExpanding', 'nodeSelected', 'nodeSelecting'];
+var properties$4 = ['allowDragAndDrop', 'allowEditing', 'allowMultiSelection', 'animation', 'autoCheck', 'checkedNodes', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandOn', 'expandedNodes', 'fields', 'fullRowSelect', 'loadOnDemand', 'locale', 'nodeTemplate', 'selectedNodes', 'showCheckBox', 'sortOrder', 'actionFailure', 'created', 'dataBound', 'dataSourceChanged', 'destroyed', 'drawNode', 'keyPress', 'nodeChecked', 'nodeChecking', 'nodeClicked', 'nodeCollapsed', 'nodeCollapsing', 'nodeDragStart', 'nodeDragStop', 'nodeDragging', 'nodeDropped', 'nodeEdited', 'nodeEditing', 'nodeExpanded', 'nodeExpanding', 'nodeSelected', 'nodeSelecting'];
 var modelProps$4 = [];
 /**
  * Represents the EJ2 VueJS TreeView Component.
@@ -650,6 +653,9 @@ var TreeViewComponent = /** @__PURE__ @class */ (function (_super) {
     TreeViewComponent.prototype.getAllCheckedNodes = function () {
         return this.ej2Instances.getAllCheckedNodes();
     };
+    TreeViewComponent.prototype.getDisabledNodes = function () {
+        return this.ej2Instances.getDisabledNodes();
+    };
     TreeViewComponent.prototype.getNode = function (node) {
         return this.ej2Instances.getNode(node);
     };
@@ -658,6 +664,9 @@ var TreeViewComponent = /** @__PURE__ @class */ (function (_super) {
     };
     TreeViewComponent.prototype.moveNodes = function (sourceNodes, target, index, preventTargetExpand) {
         return this.ej2Instances.moveNodes(sourceNodes, target, index, preventTargetExpand);
+    };
+    TreeViewComponent.prototype.refreshNode = function (target, newData) {
+        return this.ej2Instances.refreshNode(target, newData);
     };
     TreeViewComponent.prototype.removeNodes = function (nodes) {
         return this.ej2Instances.removeNodes(nodes);
@@ -861,7 +870,7 @@ var __decorate$10 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$6 = ['animationSettings', 'cssClass', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hamburgerMode', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'title', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+var properties$6 = ['animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hamburgerMode', 'items', 'locale', 'orientation', 'showItemOnClick', 'target', 'template', 'title', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 var modelProps$6 = [];
 /**
  * Represents the Essential JS 2 VueJS Menu Component.

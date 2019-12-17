@@ -94,6 +94,22 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.getItems();
     }
 
+    public moveAllTo(targetId?: string, index?: number): void {
+        return this.ej2Instances.moveAllTo(targetId, index);
+    }
+
+    public moveDown(value?: string[] | number[] | boolean[]): void {
+        return this.ej2Instances.moveDown(value);
+    }
+
+    public moveTo(value?: string[] | number[] | boolean[], index?: number, targetId?: string): void {
+        return this.ej2Instances.moveTo(value, index, targetId);
+    }
+
+    public moveUp(value?: string[] | number[] | boolean[]): void {
+        return this.ej2Instances.moveUp(value);
+    }
+
     public removeItem(items?: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void {
         return this.ej2Instances.removeItem(items, itemIndex);
     }

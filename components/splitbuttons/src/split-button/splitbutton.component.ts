@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { SplitButton } from '@syncfusion/ej2-splitbuttons';
+import { SplitButtonItemsDirective, SplitButtonItemDirective, SplitButtonItemsPlugin, SplitButtonItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['content', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
+export const properties: string[] = ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
 export const modelProps: string[] = [];
 
 /**
@@ -20,10 +21,10 @@ export class SplitButtonComponent extends ComponentBase {
     public ej2Instances: any;
     public propKeys: string[] = properties;
     public models: string[] = modelProps;
-    public hasChildDirective: boolean = false;
+    public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = false;
-    public tagMapper: { [key: string]: Object } = {};
-    public tagNameMapper: Object = {};
+    public tagMapper: { [key: string]: Object } = {"e-splitbuttonitems":"e-splitbuttonitem"};
+    public tagNameMapper: Object = {"e-splitbuttonitems":"e-items"};
     
     constructor() {
         super();
@@ -51,8 +52,16 @@ export class SplitButtonComponent extends ComponentBase {
         return createElement('button', (this as any).$slots.default);
     }
     
+    public addItems(items: Object[], text?: string): void {
+        return this.ej2Instances.addItems(items, text);
+    }
+
     public focusIn(): void {
         return this.ej2Instances.focusIn();
+    }
+
+    public removeItems(items: string[]): void {
+        return this.ej2Instances.removeItems(items);
     }
 
     public toggle(): void {
@@ -64,6 +73,8 @@ export const SplitButtonPlugin = {
     name: 'ejs-splitbutton',
     install(Vue: any) {
         Vue.component(SplitButtonPlugin.name, SplitButtonComponent);
+        Vue.component(SplitButtonItemPlugin.name, SplitButtonItemDirective);
+        Vue.component(SplitButtonItemsPlugin.name, SplitButtonItemsDirective);
 
     }
 }

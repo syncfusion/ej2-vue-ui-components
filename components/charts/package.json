@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-charts",
-	"version": "17.3.30",
+	"version": "17.4.1",
 	"description": "Feature-rich chart control with built-in support for over 25 chart types, technical indictors, trendline, zooming, tooltip, selection, crosshair and trackball. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -22,6 +22,7 @@
 		"sparkline",
 		"Sparkline ej2-smithchart",
 		"smithchart",
+		"bulletchart",
 		"syncfusion",
 		"vue",
 		"vuejs",
@@ -34,7 +35,9 @@
 		"vue-sparkline",
 		"ej2-vue-sparkline",
 		"vue-smithchart",
-		"ej2-vue-smithchart"
+		"ej2-vue-smithchart",
+		"vue-bulletchart",
+		"ej2-vue-bulletchart"
 	],
 	"repository": {
 		"type": "git",

@@ -7,7 +7,7 @@ import { ResourcesDirective, ResourceDirective, ResourcesPlugin, ResourcePlugin 
 import { HeaderRowsDirective, HeaderRowDirective, HeaderRowsPlugin, HeaderRowPlugin } from './headerrows.directive'
 
 
-export const properties: string[] = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
+export const properties: string[] = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowMultiRowSelection', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
 export const modelProps: string[] = ['currentView', 'selectedDate'];
 
 /**
@@ -81,22 +81,6 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.addResource(resources, name, index);
     }
 
-    public addSelectedClass(cells: Object[], focusCell: Object): void {
-        return this.ej2Instances.addSelectedClass(cells, focusCell);
-    }
-
-    public boundaryValidation(pageY: number, pageX: number): Object {
-        return this.ej2Instances.boundaryValidation(pageY, pageX);
-    }
-
-    public changeDate(selectedDate: Object, event?: Object): void {
-        return this.ej2Instances.changeDate(selectedDate, event);
-    }
-
-    public changeView(view: Object, event?: Object, muteOnChange?: boolean, index?: number): void {
-        return this.ej2Instances.changeView(view, event, muteOnChange, index);
-    }
-
     public closeEditor(): void {
         return this.ej2Instances.closeEditor();
     }
@@ -113,48 +97,16 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.exportToExcel(excelExportOptions);
     }
 
-    public exportToICalendar(fileName?: string): void {
-        return this.ej2Instances.exportToICalendar(fileName);
-    }
-
-    public getAllDayRow(): Object {
-        return this.ej2Instances.getAllDayRow();
-    }
-
-    public getAppointmentTemplate(): Object {
-        return this.ej2Instances.getAppointmentTemplate();
+    public exportToICalendar(fileName?: string, customData?: Object[]): void {
+        return this.ej2Instances.exportToICalendar(fileName, customData);
     }
 
     public getBlockEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[] {
         return this.ej2Instances.getBlockEvents(startDate, endDate, includeOccurrences);
     }
 
-    public getCalendarMode(): string {
-        return this.ej2Instances.getCalendarMode();
-    }
-
     public getCellDetails(tdCol: Object | Object[]): Object {
         return this.ej2Instances.getCellDetails(tdCol);
-    }
-
-    public getCellHeaderTemplate(): Object {
-        return this.ej2Instances.getCellHeaderTemplate();
-    }
-
-    public getCellTemplate(): Object {
-        return this.ej2Instances.getCellTemplate();
-    }
-
-    public getContentTable(): Object {
-        return this.ej2Instances.getContentTable();
-    }
-
-    public getCssProperties(): Object {
-        return this.ej2Instances.getCssProperties();
-    }
-
-    public getCurrentTime(): Object {
-        return this.ej2Instances.getCurrentTime();
     }
 
     public getCurrentViewDates(): Object[] {
@@ -165,28 +117,8 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getCurrentViewEvents();
     }
 
-    public getDateFromElement(td: Object): Object {
-        return this.ej2Instances.getDateFromElement(td);
-    }
-
-    public getDateHeaderTemplate(): Object {
-        return this.ej2Instances.getDateHeaderTemplate();
-    }
-
-    public getDateTime(date: Object): Object {
-        return this.ej2Instances.getDateTime(date);
-    }
-
-    public getDayNames(type: string): string[] {
-        return this.ej2Instances.getDayNames(type);
-    }
-
     public getDeletedOccurrences(recurrenceData: string | number | undefined): Object[] {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
-    }
-
-    public getEditorTemplate(): Object {
-        return this.ej2Instances.getEditorTemplate();
     }
 
     public getEventDetails(element: Object): Object {
@@ -197,32 +129,8 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getEventMaxID();
     }
 
-    public getEventTooltipTemplate(): Object {
-        return this.ej2Instances.getEventTooltipTemplate();
-    }
-
     public getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[] {
         return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
-    }
-
-    public getHeaderTooltipTemplate(): Object {
-        return this.ej2Instances.getHeaderTooltipTemplate();
-    }
-
-    public getIndexOfDate(collection: Object[], date: Object): number {
-        return this.ej2Instances.getIndexOfDate(collection, date);
-    }
-
-    public getMajorSlotTemplate(): Object {
-        return this.ej2Instances.getMajorSlotTemplate();
-    }
-
-    public getMinorSlotTemplate(): Object {
-        return this.ej2Instances.getMinorSlotTemplate();
-    }
-
-    public getNavigateView(): Object {
-        return this.ej2Instances.getNavigateView();
     }
 
     public getOccurrencesByID(eventID: number | string): Object[] {
@@ -233,44 +141,12 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getOccurrencesByRange(startTime, endTime);
     }
 
-    public getQuickInfoTemplatesContent(): Object {
-        return this.ej2Instances.getQuickInfoTemplatesContent();
-    }
-
-    public getQuickInfoTemplatesFooter(): Object {
-        return this.ej2Instances.getQuickInfoTemplatesFooter();
-    }
-
-    public getQuickInfoTemplatesHeader(): Object {
-        return this.ej2Instances.getQuickInfoTemplatesHeader();
-    }
-
-    public getResourceHeaderTemplate(): Object {
-        return this.ej2Instances.getResourceHeaderTemplate();
+    public getResourceCollections(): Object[] {
+        return this.ej2Instances.getResourceCollections();
     }
 
     public getResourcesByIndex(index: number): Object {
         return this.ej2Instances.getResourcesByIndex(index);
-    }
-
-    public getSelectedElements(): Object[] {
-        return this.ej2Instances.getSelectedElements();
-    }
-
-    public getStartEndTime(startEndTime: string): Object {
-        return this.ej2Instances.getStartEndTime(startEndTime);
-    }
-
-    public getTableRows(): Object[] {
-        return this.ej2Instances.getTableRows();
-    }
-
-    public getTimeString(date: Object): string {
-        return this.ej2Instances.getTimeString(date);
-    }
-
-    public getWorkCellElements(): Object[] {
-        return this.ej2Instances.getWorkCellElements();
     }
 
     public hideSpinner(): void {
@@ -279,14 +155,6 @@ export class ScheduleComponent extends ComponentBase {
 
     public importICalendar(fileContent: Object): void {
         return this.ej2Instances.importICalendar(fileContent);
-    }
-
-    public isAllDayCell(td: Object): boolean {
-        return this.ej2Instances.isAllDayCell(td);
-    }
-
-    public isSelectedDate(date: Object): boolean {
-        return this.ej2Instances.isSelectedDate(date);
     }
 
     public isSlotAvailable(startTime: Object | Object, endTime?: Object, groupIndex?: number): boolean {
@@ -305,32 +173,8 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.refreshEvents();
     }
 
-    public removeNewEventElement(): void {
-        return this.ej2Instances.removeNewEventElement();
-    }
-
     public removeResource(resourceId: string | string[] | number | number[], name: string): void {
         return this.ej2Instances.removeResource(resourceId, name);
-    }
-
-    public removeSelectedClass(): void {
-        return this.ej2Instances.removeSelectedClass();
-    }
-
-    public renderCompleted(): void {
-        return this.ej2Instances.renderCompleted();
-    }
-
-    public renderElements(isLayoutOnly: boolean): void {
-        return this.ej2Instances.renderElements(isLayoutOnly);
-    }
-
-    public resetEventTemplates(): void {
-        return this.ej2Instances.resetEventTemplates();
-    }
-
-    public resetLayoutTemplates(): void {
-        return this.ej2Instances.resetLayoutTemplates();
     }
 
     public resetWorkHours(dates: Object[], start?: string, end?: string, groupIndex?: number): void {
@@ -345,10 +189,6 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.scrollTo(hour);
     }
 
-    public selectCell(element: undefined): void {
-        return this.ej2Instances.selectCell(element);
-    }
-
     public setRecurrenceEditor(recurrenceEditor: Object): void {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
     }
@@ -359,14 +199,6 @@ export class ScheduleComponent extends ComponentBase {
 
     public showSpinner(): void {
         return this.ej2Instances.showSpinner();
-    }
-
-    public templateParser(template: string): Object {
-        return this.ej2Instances.templateParser(template);
-    }
-
-    public updateLayoutTemplates(): void {
-        return this.ej2Instances.updateLayoutTemplates();
     }
 }
 

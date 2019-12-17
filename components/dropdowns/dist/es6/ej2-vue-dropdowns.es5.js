@@ -606,6 +606,18 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.getItems = function () {
         return this.ej2Instances.getItems();
     };
+    ListBoxComponent.prototype.moveAllTo = function (targetId, index) {
+        return this.ej2Instances.moveAllTo(targetId, index);
+    };
+    ListBoxComponent.prototype.moveDown = function (value) {
+        return this.ej2Instances.moveDown(value);
+    };
+    ListBoxComponent.prototype.moveTo = function (value, index, targetId) {
+        return this.ej2Instances.moveTo(value, index, targetId);
+    };
+    ListBoxComponent.prototype.moveUp = function (value) {
+        return this.ej2Instances.moveUp(value);
+    };
     ListBoxComponent.prototype.removeItem = function (items, itemIndex) {
         return this.ej2Instances.removeItem(items, itemIndex);
     };

@@ -232,7 +232,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
+var properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowMultiRowSelection', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
 var modelProps = ['currentView', 'selectedDate'];
 /**
  * `ej-schedule` represents the VueJS Schedule Component.
@@ -295,18 +295,6 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.addResource = function (resources, name, index) {
         return this.ej2Instances.addResource(resources, name, index);
     };
-    ScheduleComponent.prototype.addSelectedClass = function (cells, focusCell) {
-        return this.ej2Instances.addSelectedClass(cells, focusCell);
-    };
-    ScheduleComponent.prototype.boundaryValidation = function (pageY, pageX) {
-        return this.ej2Instances.boundaryValidation(pageY, pageX);
-    };
-    ScheduleComponent.prototype.changeDate = function (selectedDate, event) {
-        return this.ej2Instances.changeDate(selectedDate, event);
-    };
-    ScheduleComponent.prototype.changeView = function (view, event, muteOnChange, index) {
-        return this.ej2Instances.changeView(view, event, muteOnChange, index);
-    };
     ScheduleComponent.prototype.closeEditor = function () {
         return this.ej2Instances.closeEditor();
     };
@@ -319,38 +307,14 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.exportToExcel = function (excelExportOptions) {
         return this.ej2Instances.exportToExcel(excelExportOptions);
     };
-    ScheduleComponent.prototype.exportToICalendar = function (fileName) {
-        return this.ej2Instances.exportToICalendar(fileName);
-    };
-    ScheduleComponent.prototype.getAllDayRow = function () {
-        return this.ej2Instances.getAllDayRow();
-    };
-    ScheduleComponent.prototype.getAppointmentTemplate = function () {
-        return this.ej2Instances.getAppointmentTemplate();
+    ScheduleComponent.prototype.exportToICalendar = function (fileName, customData) {
+        return this.ej2Instances.exportToICalendar(fileName, customData);
     };
     ScheduleComponent.prototype.getBlockEvents = function (startDate, endDate, includeOccurrences) {
         return this.ej2Instances.getBlockEvents(startDate, endDate, includeOccurrences);
     };
-    ScheduleComponent.prototype.getCalendarMode = function () {
-        return this.ej2Instances.getCalendarMode();
-    };
     ScheduleComponent.prototype.getCellDetails = function (tdCol) {
         return this.ej2Instances.getCellDetails(tdCol);
-    };
-    ScheduleComponent.prototype.getCellHeaderTemplate = function () {
-        return this.ej2Instances.getCellHeaderTemplate();
-    };
-    ScheduleComponent.prototype.getCellTemplate = function () {
-        return this.ej2Instances.getCellTemplate();
-    };
-    ScheduleComponent.prototype.getContentTable = function () {
-        return this.ej2Instances.getContentTable();
-    };
-    ScheduleComponent.prototype.getCssProperties = function () {
-        return this.ej2Instances.getCssProperties();
-    };
-    ScheduleComponent.prototype.getCurrentTime = function () {
-        return this.ej2Instances.getCurrentTime();
     };
     ScheduleComponent.prototype.getCurrentViewDates = function () {
         return this.ej2Instances.getCurrentViewDates();
@@ -358,23 +322,8 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getCurrentViewEvents = function () {
         return this.ej2Instances.getCurrentViewEvents();
     };
-    ScheduleComponent.prototype.getDateFromElement = function (td) {
-        return this.ej2Instances.getDateFromElement(td);
-    };
-    ScheduleComponent.prototype.getDateHeaderTemplate = function () {
-        return this.ej2Instances.getDateHeaderTemplate();
-    };
-    ScheduleComponent.prototype.getDateTime = function (date) {
-        return this.ej2Instances.getDateTime(date);
-    };
-    ScheduleComponent.prototype.getDayNames = function (type) {
-        return this.ej2Instances.getDayNames(type);
-    };
     ScheduleComponent.prototype.getDeletedOccurrences = function (recurrenceData) {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
-    };
-    ScheduleComponent.prototype.getEditorTemplate = function () {
-        return this.ej2Instances.getEditorTemplate();
     };
     ScheduleComponent.prototype.getEventDetails = function (element) {
         return this.ej2Instances.getEventDetails(element);
@@ -382,26 +331,8 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getEventMaxID = function () {
         return this.ej2Instances.getEventMaxID();
     };
-    ScheduleComponent.prototype.getEventTooltipTemplate = function () {
-        return this.ej2Instances.getEventTooltipTemplate();
-    };
     ScheduleComponent.prototype.getEvents = function (startDate, endDate, includeOccurrences) {
         return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
-    };
-    ScheduleComponent.prototype.getHeaderTooltipTemplate = function () {
-        return this.ej2Instances.getHeaderTooltipTemplate();
-    };
-    ScheduleComponent.prototype.getIndexOfDate = function (collection, date) {
-        return this.ej2Instances.getIndexOfDate(collection, date);
-    };
-    ScheduleComponent.prototype.getMajorSlotTemplate = function () {
-        return this.ej2Instances.getMajorSlotTemplate();
-    };
-    ScheduleComponent.prototype.getMinorSlotTemplate = function () {
-        return this.ej2Instances.getMinorSlotTemplate();
-    };
-    ScheduleComponent.prototype.getNavigateView = function () {
-        return this.ej2Instances.getNavigateView();
     };
     ScheduleComponent.prototype.getOccurrencesByID = function (eventID) {
         return this.ej2Instances.getOccurrencesByID(eventID);
@@ -409,47 +340,17 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getOccurrencesByRange = function (startTime, endTime) {
         return this.ej2Instances.getOccurrencesByRange(startTime, endTime);
     };
-    ScheduleComponent.prototype.getQuickInfoTemplatesContent = function () {
-        return this.ej2Instances.getQuickInfoTemplatesContent();
-    };
-    ScheduleComponent.prototype.getQuickInfoTemplatesFooter = function () {
-        return this.ej2Instances.getQuickInfoTemplatesFooter();
-    };
-    ScheduleComponent.prototype.getQuickInfoTemplatesHeader = function () {
-        return this.ej2Instances.getQuickInfoTemplatesHeader();
-    };
-    ScheduleComponent.prototype.getResourceHeaderTemplate = function () {
-        return this.ej2Instances.getResourceHeaderTemplate();
+    ScheduleComponent.prototype.getResourceCollections = function () {
+        return this.ej2Instances.getResourceCollections();
     };
     ScheduleComponent.prototype.getResourcesByIndex = function (index) {
         return this.ej2Instances.getResourcesByIndex(index);
-    };
-    ScheduleComponent.prototype.getSelectedElements = function () {
-        return this.ej2Instances.getSelectedElements();
-    };
-    ScheduleComponent.prototype.getStartEndTime = function (startEndTime) {
-        return this.ej2Instances.getStartEndTime(startEndTime);
-    };
-    ScheduleComponent.prototype.getTableRows = function () {
-        return this.ej2Instances.getTableRows();
-    };
-    ScheduleComponent.prototype.getTimeString = function (date) {
-        return this.ej2Instances.getTimeString(date);
-    };
-    ScheduleComponent.prototype.getWorkCellElements = function () {
-        return this.ej2Instances.getWorkCellElements();
     };
     ScheduleComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
     };
     ScheduleComponent.prototype.importICalendar = function (fileContent) {
         return this.ej2Instances.importICalendar(fileContent);
-    };
-    ScheduleComponent.prototype.isAllDayCell = function (td) {
-        return this.ej2Instances.isAllDayCell(td);
-    };
-    ScheduleComponent.prototype.isSelectedDate = function (date) {
-        return this.ej2Instances.isSelectedDate(date);
     };
     ScheduleComponent.prototype.isSlotAvailable = function (startTime, endTime, groupIndex) {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
@@ -463,26 +364,8 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.refreshEvents = function () {
         return this.ej2Instances.refreshEvents();
     };
-    ScheduleComponent.prototype.removeNewEventElement = function () {
-        return this.ej2Instances.removeNewEventElement();
-    };
     ScheduleComponent.prototype.removeResource = function (resourceId, name) {
         return this.ej2Instances.removeResource(resourceId, name);
-    };
-    ScheduleComponent.prototype.removeSelectedClass = function () {
-        return this.ej2Instances.removeSelectedClass();
-    };
-    ScheduleComponent.prototype.renderCompleted = function () {
-        return this.ej2Instances.renderCompleted();
-    };
-    ScheduleComponent.prototype.renderElements = function (isLayoutOnly) {
-        return this.ej2Instances.renderElements(isLayoutOnly);
-    };
-    ScheduleComponent.prototype.resetEventTemplates = function () {
-        return this.ej2Instances.resetEventTemplates();
-    };
-    ScheduleComponent.prototype.resetLayoutTemplates = function () {
-        return this.ej2Instances.resetLayoutTemplates();
     };
     ScheduleComponent.prototype.resetWorkHours = function (dates, start, end, groupIndex) {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
@@ -493,9 +376,6 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.scrollTo = function (hour) {
         return this.ej2Instances.scrollTo(hour);
     };
-    ScheduleComponent.prototype.selectCell = function (element) {
-        return this.ej2Instances.selectCell(element);
-    };
     ScheduleComponent.prototype.setRecurrenceEditor = function (recurrenceEditor) {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
     };
@@ -504,12 +384,6 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ScheduleComponent.prototype.showSpinner = function () {
         return this.ej2Instances.showSpinner();
-    };
-    ScheduleComponent.prototype.templateParser = function (template) {
-        return this.ej2Instances.templateParser(template);
-    };
-    ScheduleComponent.prototype.updateLayoutTemplates = function () {
-        return this.ej2Instances.updateLayoutTemplates();
     };
     ScheduleComponent = __decorate$3([
         EJComponentDecorator({
@@ -595,9 +469,6 @@ var RecurrenceEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RecurrenceEditorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    RecurrenceEditorComponent.prototype.getCalendarMode = function () {
-        return this.ej2Instances.getCalendarMode();
-    };
     RecurrenceEditorComponent.prototype.getRecurrenceDates = function (startDate, rule, excludeDate, maximumCount, viewDate) {
         return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
     };
@@ -606,9 +477,6 @@ var RecurrenceEditorComponent = /** @__PURE__ @class */ (function (_super) {
     };
     RecurrenceEditorComponent.prototype.getRuleSummary = function (rule) {
         return this.ej2Instances.getRuleSummary(rule);
-    };
-    RecurrenceEditorComponent.prototype.resetFields = function () {
-        return this.ej2Instances.resetFields();
     };
     RecurrenceEditorComponent.prototype.setRecurrenceRule = function (rule, startDate) {
         return this.ej2Instances.setRecurrenceRule(rule, startDate);

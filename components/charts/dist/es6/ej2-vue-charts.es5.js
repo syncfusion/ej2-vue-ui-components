@@ -1,4 +1,4 @@
-import { AccumulationChart, Chart, RangeNavigator, Smithchart, Sparkline, StockChart } from '@syncfusion/ej2-charts';
+import { AccumulationChart, BulletChart, Chart, RangeNavigator, Smithchart, Sparkline, StockChart } from '@syncfusion/ej2-charts';
 import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { isUndefined } from '@syncfusion/ej2-base';
@@ -2250,6 +2250,165 @@ var StockChartPlugin = {
     }
 };
 
-export { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin, SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin, SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin, StripLinesDirective, StripLineDirective, StripLinesPlugin, StripLinePlugin, CategoriesDirective, CategoryDirective, CategoriesPlugin, CategoryPlugin, MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPlugin, MultiLevelLabelPlugin, AxesDirective, AxisDirective, AxesPlugin, AxisPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin, IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin, ChartComponent, ChartPlugin, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin, AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin, AccumulationChartComponent, AccumulationChartPlugin, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin, RangeNavigatorComponent, RangeNavigatorPlugin, RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin, SparklineComponent, SparklinePlugin, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin, SmithchartComponent, SmithchartPlugin, StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin, StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin, StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin, StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin, StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin, StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin, StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin, StockEventsDirective, StockEventDirective, StockEventsPlugin, StockEventPlugin, StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin, StockChartComponent, StockChartPlugin };
+var __extends$33 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$33 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var BulletRangeCollectionDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$33(BulletRangeCollectionDirective, _super);
+    function BulletRangeCollectionDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BulletRangeCollectionDirective.prototype.render = function () {
+        return;
+    };
+    BulletRangeCollectionDirective = __decorate$33([
+        EJComponentDecorator({})
+    ], BulletRangeCollectionDirective);
+    return BulletRangeCollectionDirective;
+}(Vue));
+var BulletRangeCollectionPlugin = {
+    name: 'e-bullet-range-collection',
+    install: function (Vue$$1) {
+        Vue$$1.component(BulletRangeCollectionPlugin.name, BulletRangeCollectionDirective);
+    }
+};
+var BulletRangeDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$33(BulletRangeDirective, _super);
+    function BulletRangeDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BulletRangeDirective.prototype.render = function () {
+        return;
+    };
+    BulletRangeDirective = __decorate$33([
+        EJComponentDecorator({})
+    ], BulletRangeDirective);
+    return BulletRangeDirective;
+}(Vue));
+var BulletRangePlugin = {
+    name: 'e-bullet-range',
+    install: function (Vue$$1) {
+        Vue$$1.component(BulletRangePlugin.name, BulletRangeDirective);
+    }
+};
+
+var __extends$34 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$34 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var properties$6 = ['animation', 'border', 'categoryField', 'categoryLabelStyle', 'dataLabel', 'dataSource', 'enableGroupSeparator', 'enablePersistence', 'enableRtl', 'height', 'interval', 'labelFormat', 'labelPosition', 'labelStyle', 'locale', 'majorTickLines', 'margin', 'maximum', 'minimum', 'minorTickLines', 'minorTicksPerInterval', 'opposedPosition', 'orientation', 'query', 'ranges', 'subtitle', 'subtitleStyle', 'tabIndex', 'targetColor', 'targetField', 'targetTypes', 'targetWidth', 'theme', 'tickPosition', 'title', 'titlePosition', 'titleStyle', 'tooltip', 'type', 'valueBorder', 'valueField', 'valueFill', 'valueHeight', 'width', 'load', 'tooltipRender'];
+var modelProps$6 = ['dataSource'];
+/**
+ * Represents Vuejs BulletChart Component
+ * ```vue
+ * <ejs-bulletchart></ejs-bulletchart>
+ * ```
+ */
+var BulletChartComponent = /** @__PURE__ @class */ (function (_super) {
+    __extends$34(BulletChartComponent, _super);
+    function BulletChartComponent() {
+        var _this = _super.call(this) || this;
+        _this.propKeys = properties$6;
+        _this.models = modelProps$6;
+        _this.hasChildDirective = true;
+        _this.hasInjectedModules = true;
+        _this.tagMapper = { "e-bullet-range-collection": "e-bullet-range" };
+        _this.tagNameMapper = { "e-bullet-range-collection": "e-ranges" };
+        _this.ej2Instances = new BulletChart({});
+        _this.ej2Instances._trigger = _this.ej2Instances.trigger;
+        _this.ej2Instances.trigger = _this.trigger;
+        _this.bindProperties();
+        _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
+        _this.ej2Instances.setProperties = _this.setProperties;
+        return _this;
+    }
+    BulletChartComponent.prototype.setProperties = function (prop, muteOnChange) {
+        var _this = this;
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map(function (key) {
+                _this.models.map(function (model) {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        _this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    };
+    BulletChartComponent.prototype.trigger = function (eventName, eventProp, successHandler) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/checked|value/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+        }
+    };
+    BulletChartComponent.prototype.render = function (createElement) {
+        return createElement('div', this.$slots.default);
+    };
+    BulletChartComponent.prototype.createSvg = function (chart) {
+        return this.ej2Instances.createSvg(chart);
+    };
+    BulletChartComponent.prototype.removeSvg = function () {
+        return this.ej2Instances.removeSvg();
+    };
+    BulletChartComponent = __decorate$34([
+        EJComponentDecorator({
+            props: properties$6,
+            model: {
+                event: 'modelchanged'
+            }
+        })
+    ], BulletChartComponent);
+    return BulletChartComponent;
+}(ComponentBase));
+var BulletChartPlugin = {
+    name: 'ejs-bulletchart',
+    install: function (Vue$$1) {
+        Vue$$1.component(BulletChartPlugin.name, BulletChartComponent);
+        Vue$$1.component(BulletRangePlugin.name, BulletRangeDirective);
+        Vue$$1.component(BulletRangeCollectionPlugin.name, BulletRangeCollectionDirective);
+    }
+};
+
+export { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin, SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin, SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin, StripLinesDirective, StripLineDirective, StripLinesPlugin, StripLinePlugin, CategoriesDirective, CategoryDirective, CategoriesPlugin, CategoryPlugin, MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPlugin, MultiLevelLabelPlugin, AxesDirective, AxisDirective, AxesPlugin, AxisPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin, IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin, ChartComponent, ChartPlugin, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin, AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin, AccumulationChartComponent, AccumulationChartPlugin, RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin, RangeNavigatorComponent, RangeNavigatorPlugin, RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin, SparklineComponent, SparklinePlugin, SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin, SmithchartComponent, SmithchartPlugin, StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin, StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin, StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin, StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin, StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin, StockChartSelectedDataIndexesDirective, StockChartSelectedDataIndexDirective, StockChartSelectedDataIndexesPlugin, StockChartSelectedDataIndexPlugin, StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriodsPlugin, StockChartPeriodPlugin, StockEventsDirective, StockEventDirective, StockEventsPlugin, StockEventPlugin, StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin, StockChartComponent, StockChartPlugin, BulletRangeCollectionDirective, BulletRangeDirective, BulletRangeCollectionPlugin, BulletRangePlugin, BulletChartComponent, BulletChartPlugin };
 export * from '@syncfusion/ej2-charts';
 //# sourceMappingURL=ej2-vue-charts.es5.js.map

@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Button } from '@syncfusion/ej2-buttons';
 
 
-export const properties: string[] = ['content', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
+export const properties: string[] = ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
 export const modelProps: string[] = [];
 
 /**

@@ -522,6 +522,18 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     getItems() {
         return this.ej2Instances.getItems();
     }
+    moveAllTo(targetId, index) {
+        return this.ej2Instances.moveAllTo(targetId, index);
+    }
+    moveDown(value) {
+        return this.ej2Instances.moveDown(value);
+    }
+    moveTo(value, index, targetId) {
+        return this.ej2Instances.moveTo(value, index, targetId);
+    }
+    moveUp(value) {
+        return this.ej2Instances.moveUp(value);
+    }
     removeItem(items, itemIndex) {
         return this.ej2Instances.removeItem(items, itemIndex);
     }

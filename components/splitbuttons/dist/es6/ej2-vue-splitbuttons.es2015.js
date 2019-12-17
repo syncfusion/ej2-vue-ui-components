@@ -1,4 +1,5 @@
 import { DropDownButton, ProgressButton, SplitButton } from '@syncfusion/ej2-splitbuttons';
+import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -7,7 +8,42 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['content', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'close', 'created', 'open', 'select'];
+let DropDownButtonItemsDirective = class DropDownButtonItemsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+DropDownButtonItemsDirective = __decorate([
+    EJComponentDecorator({})
+], DropDownButtonItemsDirective);
+const DropDownButtonItemsPlugin = {
+    name: 'e-dropdownbuttonitems',
+    install(Vue$$1) {
+        Vue$$1.component(DropDownButtonItemsPlugin.name, DropDownButtonItemsDirective);
+    }
+};
+let DropDownButtonItemDirective = class DropDownButtonItemDirective extends Vue {
+    render() {
+        return;
+    }
+};
+DropDownButtonItemDirective = __decorate([
+    EJComponentDecorator({})
+], DropDownButtonItemDirective);
+const DropDownButtonItemPlugin = {
+    name: 'e-dropdownbuttonitem',
+    install(Vue$$1) {
+        Vue$$1.component(DropDownButtonItemPlugin.name, DropDownButtonItemDirective);
+    }
+};
+
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties = ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'close', 'created', 'open', 'select'];
 const modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS DropDownButton Component
@@ -20,10 +56,10 @@ let DropDownButtonComponent = class DropDownButtonComponent extends ComponentBas
         super();
         this.propKeys = properties;
         this.models = modelProps;
-        this.hasChildDirective = false;
+        this.hasChildDirective = true;
         this.hasInjectedModules = false;
-        this.tagMapper = {};
-        this.tagNameMapper = {};
+        this.tagMapper = { "e-dropdownbuttonitems": "e-dropdownbuttonitem" };
+        this.tagNameMapper = { "e-dropdownbuttonitems": "e-items" };
         this.ej2Instances = new DropDownButton({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -46,32 +82,75 @@ let DropDownButtonComponent = class DropDownButtonComponent extends ComponentBas
     render(createElement) {
         return createElement('button', this.$slots.default);
     }
+    addItems(items, text) {
+        return this.ej2Instances.addItems(items, text);
+    }
     focusIn() {
         return this.ej2Instances.focusIn();
+    }
+    removeItems(items) {
+        return this.ej2Instances.removeItems(items);
     }
     toggle() {
         return this.ej2Instances.toggle();
     }
 };
-DropDownButtonComponent = __decorate([
+DropDownButtonComponent = __decorate$1([
     EJComponentDecorator({
         props: properties
     })
 ], DropDownButtonComponent);
 const DropDownButtonPlugin = {
     name: 'ejs-dropdownbutton',
-    install(Vue) {
-        Vue.component(DropDownButtonPlugin.name, DropDownButtonComponent);
+    install(Vue$$1) {
+        Vue$$1.component(DropDownButtonPlugin.name, DropDownButtonComponent);
+        Vue$$1.component(DropDownButtonItemPlugin.name, DropDownButtonItemDirective);
+        Vue$$1.component(DropDownButtonItemsPlugin.name, DropDownButtonItemsDirective);
     }
 };
 
-var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['content', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
+let SplitButtonItemsDirective = class SplitButtonItemsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+SplitButtonItemsDirective = __decorate$2([
+    EJComponentDecorator({})
+], SplitButtonItemsDirective);
+const SplitButtonItemsPlugin = {
+    name: 'e-splitbuttonitems',
+    install(Vue$$1) {
+        Vue$$1.component(SplitButtonItemsPlugin.name, SplitButtonItemsDirective);
+    }
+};
+let SplitButtonItemDirective = class SplitButtonItemDirective extends Vue {
+    render() {
+        return;
+    }
+};
+SplitButtonItemDirective = __decorate$2([
+    EJComponentDecorator({})
+], SplitButtonItemDirective);
+const SplitButtonItemPlugin = {
+    name: 'e-splitbuttonitem',
+    install(Vue$$1) {
+        Vue$$1.component(SplitButtonItemPlugin.name, SplitButtonItemDirective);
+    }
+};
+
+var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties$1 = ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
 const modelProps$1 = [];
 /**
  * Represents the Essential JS 2 VueJS SplitButton Component
@@ -84,10 +163,10 @@ let SplitButtonComponent = class SplitButtonComponent extends ComponentBase {
         super();
         this.propKeys = properties$1;
         this.models = modelProps$1;
-        this.hasChildDirective = false;
+        this.hasChildDirective = true;
         this.hasInjectedModules = false;
-        this.tagMapper = {};
-        this.tagNameMapper = {};
+        this.tagMapper = { "e-splitbuttonitems": "e-splitbuttonitem" };
+        this.tagNameMapper = { "e-splitbuttonitems": "e-items" };
         this.ej2Instances = new SplitButton({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -110,32 +189,40 @@ let SplitButtonComponent = class SplitButtonComponent extends ComponentBase {
     render(createElement) {
         return createElement('button', this.$slots.default);
     }
+    addItems(items, text) {
+        return this.ej2Instances.addItems(items, text);
+    }
     focusIn() {
         return this.ej2Instances.focusIn();
+    }
+    removeItems(items) {
+        return this.ej2Instances.removeItems(items);
     }
     toggle() {
         return this.ej2Instances.toggle();
     }
 };
-SplitButtonComponent = __decorate$1([
+SplitButtonComponent = __decorate$3([
     EJComponentDecorator({
         props: properties$1
     })
 ], SplitButtonComponent);
 const SplitButtonPlugin = {
     name: 'ejs-splitbutton',
-    install(Vue) {
-        Vue.component(SplitButtonPlugin.name, SplitButtonComponent);
+    install(Vue$$1) {
+        Vue$$1.component(SplitButtonPlugin.name, SplitButtonComponent);
+        Vue$$1.component(SplitButtonItemPlugin.name, SplitButtonItemDirective);
+        Vue$$1.component(SplitButtonItemsPlugin.name, SplitButtonItemsDirective);
     }
 };
 
-var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$2 = ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
+const properties$2 = ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
 const modelProps$2 = [];
 /**
  * Represents the Essential JS 2 VueJS ProgressButton Component
@@ -190,18 +277,18 @@ let ProgressButtonComponent = class ProgressButtonComponent extends ComponentBas
         return this.ej2Instances.stop();
     }
 };
-ProgressButtonComponent = __decorate$2([
+ProgressButtonComponent = __decorate$4([
     EJComponentDecorator({
         props: properties$2
     })
 ], ProgressButtonComponent);
 const ProgressButtonPlugin = {
     name: 'ejs-progressbutton',
-    install(Vue) {
-        Vue.component(ProgressButtonPlugin.name, ProgressButtonComponent);
+    install(Vue$$1) {
+        Vue$$1.component(ProgressButtonPlugin.name, ProgressButtonComponent);
     }
 };
 
-export { DropDownButtonComponent, DropDownButtonPlugin, SplitButtonComponent, SplitButtonPlugin, ProgressButtonComponent, ProgressButtonPlugin };
+export { DropDownButtonItemsDirective, DropDownButtonItemDirective, DropDownButtonItemsPlugin, DropDownButtonItemPlugin, DropDownButtonComponent, DropDownButtonPlugin, SplitButtonItemsDirective, SplitButtonItemDirective, SplitButtonItemsPlugin, SplitButtonItemPlugin, SplitButtonComponent, SplitButtonPlugin, ProgressButtonComponent, ProgressButtonPlugin };
 export * from '@syncfusion/ej2-splitbuttons';
 //# sourceMappingURL=ej2-vue-splitbuttons.es2015.js.map

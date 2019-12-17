@@ -32,3 +32,5 @@ export { StockChartPeriodsDirective, StockChartPeriodDirective, StockChartPeriod
 export { StockEventsDirective, StockEventDirective, StockEventsPlugin, StockEventPlugin } from './stock-chart/stockevents.directive';
 export { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin } from './stock-chart/indicators.directive';
 export { StockChartComponent, StockChartPlugin } from './stock-chart/stockchart.component';
+export { BulletRangeCollectionDirective, BulletRangeDirective, BulletRangeCollectionPlugin, BulletRangePlugin } from './bullet-chart/ranges.directive';
+export { BulletChartComponent, BulletChartPlugin } from './bullet-chart/bulletchart.component';

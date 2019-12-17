@@ -2,6 +2,7 @@ import Vue from 'vue';
 import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Maps } from '@syncfusion/ej2-maps';
+import { InitialShapeSelectionsDirective, InitialShapeSelectionDirective, InitialShapeSelectionsPlugin, InitialShapeSelectionPlugin } from './initialshapeselection.directive'
 import { MarkersDirective, MarkerDirective, MarkersPlugin, MarkerPlugin } from './markersettings.directive'
 import { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin } from './colormapping.directive'
 import { BubblesDirective, BubbleDirective, BubblesPlugin, BubblePlugin } from './bubblesettings.directive'
@@ -10,7 +11,7 @@ import { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './la
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom'];
+export const properties: string[] = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'legendRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom'];
 export const modelProps: string[] = ['dataSource'];
 
 /**
@@ -32,8 +33,8 @@ export class MapsComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-layers":{"e-layer":{"e-markerSettings":"e-markerSetting","e-bubbleSettings":{"e-bubbleSetting":{"e-colorMappings":"e-colorMapping"}},"e-navigationLineSettings":"e-navigationLineSetting"}},"e-maps-annotations":"e-maps-annotation"};
-    public tagNameMapper: Object = {"e-colorMappings":"e-colorMapping","e-maps-annotations":"e-annotations"};
+    public tagMapper: { [key: string]: Object } = {"e-layers":{"e-layer":{"e-initialShapeSelections":"e-initialShapeSelection","e-markerSettings":"e-markerSetting","e-bubbleSettings":{"e-bubbleSetting":{"e-colorMappings":"e-colorMapping"}},"e-navigationLineSettings":"e-navigationLineSetting"}},"e-maps-annotations":"e-maps-annotation"};
+    public tagNameMapper: Object = {"e-initialShapeSelections":"e-initialShapeSelection","e-colorMappings":"e-colorMapping","e-maps-annotations":"e-annotations"};
     
     constructor() {
         super();
@@ -152,6 +153,10 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.removeLayer(index);
     }
 
+    public shapeSelection(layerIndex: number, propertyName: string, name: string, enable?: boolean): void {
+        return this.ej2Instances.shapeSelection(layerIndex, propertyName, name, enable);
+    }
+
     public zoomByPosition(centerPosition: undefined, zoomFactor: number): void {
         return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
     }
@@ -163,6 +168,8 @@ export const MapsPlugin = {
         Vue.component(MapsPlugin.name, MapsComponent);
         Vue.component(LayerPlugin.name, LayerDirective);
         Vue.component(LayersPlugin.name, LayersDirective);
+        Vue.component(InitialShapeSelectionPlugin.name, InitialShapeSelectionDirective);
+        Vue.component(InitialShapeSelectionsPlugin.name, InitialShapeSelectionsDirective);
         Vue.component(MarkerPlugin.name, MarkerDirective);
         Vue.component(MarkersPlugin.name, MarkersDirective);
         Vue.component(BubblePlugin.name, BubbleDirective);

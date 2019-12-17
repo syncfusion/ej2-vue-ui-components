@@ -9,12 +9,62 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let InitialShapeSelectionsDirective = class InitialShapeSelectionsDirective extends Vue {
+    render() {
+        return;
+    }
+};
+InitialShapeSelectionsDirective = __decorate([
+    EJComponentDecorator({})
+], InitialShapeSelectionsDirective);
+const InitialShapeSelectionsPlugin = {
+    name: 'e-initialShapeSelections',
+    install(Vue$$1) {
+        Vue$$1.component(InitialShapeSelectionsPlugin.name, InitialShapeSelectionsDirective);
+    }
+};
+/**
+ * `InitialShapeSelectionsDirective` directive represent a selection settings of the Vuejs maps.
+ * ```vue
+ * <ejs-maps>
+ * <e-layers>
+ * <e-layer>
+ * <e-initialShapeSelections>
+ * <e-initialShapeSelection>
+ * </e-initialShapeSelection>
+ * </e-initialShapeSelections>
+ * </e-layer>
+ * </e-layers>
+ * </ejs-maps>
+ * ```
+ */
+let InitialShapeSelectionDirective = class InitialShapeSelectionDirective extends Vue {
+    render() {
+        return;
+    }
+};
+InitialShapeSelectionDirective = __decorate([
+    EJComponentDecorator({})
+], InitialShapeSelectionDirective);
+const InitialShapeSelectionPlugin = {
+    name: 'e-initialShapeSelection',
+    install(Vue$$1) {
+        Vue$$1.component(InitialShapeSelectionPlugin.name, InitialShapeSelectionDirective);
+    }
+};
+
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let MarkersDirective = class MarkersDirective extends Vue {
     render() {
         return;
     }
 };
-MarkersDirective = __decorate([
+MarkersDirective = __decorate$1([
     EJComponentDecorator({})
 ], MarkersDirective);
 const MarkersPlugin = {
@@ -43,7 +93,7 @@ let MarkerDirective = class MarkerDirective extends Vue {
         return;
     }
 };
-MarkerDirective = __decorate([
+MarkerDirective = __decorate$1([
     EJComponentDecorator({})
 ], MarkerDirective);
 const MarkerPlugin = {
@@ -53,7 +103,7 @@ const MarkerPlugin = {
     }
 };
 
-var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -64,7 +114,7 @@ let ColorMappingsDirective = class ColorMappingsDirective extends Vue {
         return;
     }
 };
-ColorMappingsDirective = __decorate$1([
+ColorMappingsDirective = __decorate$2([
     EJComponentDecorator({})
 ], ColorMappingsDirective);
 const ColorMappingsPlugin = {
@@ -93,7 +143,7 @@ let ColorMappingDirective = class ColorMappingDirective extends Vue {
         return;
     }
 };
-ColorMappingDirective = __decorate$1([
+ColorMappingDirective = __decorate$2([
     EJComponentDecorator({})
 ], ColorMappingDirective);
 const ColorMappingPlugin = {
@@ -103,7 +153,7 @@ const ColorMappingPlugin = {
     }
 };
 
-var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -114,7 +164,7 @@ let BubblesDirective = class BubblesDirective extends Vue {
         return;
     }
 };
-BubblesDirective = __decorate$2([
+BubblesDirective = __decorate$3([
     EJComponentDecorator({})
 ], BubblesDirective);
 const BubblesPlugin = {
@@ -143,7 +193,7 @@ let BubbleDirective = class BubbleDirective extends Vue {
         return;
     }
 };
-BubbleDirective = __decorate$2([
+BubbleDirective = __decorate$3([
     EJComponentDecorator({})
 ], BubbleDirective);
 const BubblePlugin = {
@@ -153,7 +203,7 @@ const BubblePlugin = {
     }
 };
 
-var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -164,7 +214,7 @@ let NavigationLinesDirective = class NavigationLinesDirective extends Vue {
         return;
     }
 };
-NavigationLinesDirective = __decorate$3([
+NavigationLinesDirective = __decorate$4([
     EJComponentDecorator({})
 ], NavigationLinesDirective);
 const NavigationLinesPlugin = {
@@ -193,7 +243,7 @@ let NavigationLineDirective = class NavigationLineDirective extends Vue {
         return;
     }
 };
-NavigationLineDirective = __decorate$3([
+NavigationLineDirective = __decorate$4([
     EJComponentDecorator({})
 ], NavigationLineDirective);
 const NavigationLinePlugin = {
@@ -203,7 +253,7 @@ const NavigationLinePlugin = {
     }
 };
 
-var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -214,7 +264,7 @@ let LayersDirective = class LayersDirective extends Vue {
         return;
     }
 };
-LayersDirective = __decorate$4([
+LayersDirective = __decorate$5([
     EJComponentDecorator({})
 ], LayersDirective);
 const LayersPlugin = {
@@ -238,7 +288,7 @@ let LayerDirective = class LayerDirective extends Vue {
         return;
     }
 };
-LayerDirective = __decorate$4([
+LayerDirective = __decorate$5([
     EJComponentDecorator({})
 ], LayerDirective);
 const LayerPlugin = {
@@ -248,7 +298,7 @@ const LayerPlugin = {
     }
 };
 
-var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -259,7 +309,7 @@ let AnnotationsDirective = class AnnotationsDirective extends Vue {
         return;
     }
 };
-AnnotationsDirective = __decorate$5([
+AnnotationsDirective = __decorate$6([
     EJComponentDecorator({})
 ], AnnotationsDirective);
 const AnnotationsPlugin = {
@@ -283,7 +333,7 @@ let AnnotationDirective = class AnnotationDirective extends Vue {
         return;
     }
 };
-AnnotationDirective = __decorate$5([
+AnnotationDirective = __decorate$6([
     EJComponentDecorator({})
 ], AnnotationDirective);
 const AnnotationPlugin = {
@@ -293,13 +343,13 @@ const AnnotationPlugin = {
     }
 };
 
-var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom'];
+const properties = ['annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'legendRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerMouseMove', 'markerRendering', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom'];
 const modelProps = ['dataSource'];
 /**
  * Represents Vuejs Maps Component
@@ -314,8 +364,8 @@ let MapsComponent = class MapsComponent extends ComponentBase {
         this.models = modelProps;
         this.hasChildDirective = true;
         this.hasInjectedModules = true;
-        this.tagMapper = { "e-layers": { "e-layer": { "e-markerSettings": "e-markerSetting", "e-bubbleSettings": { "e-bubbleSetting": { "e-colorMappings": "e-colorMapping" } }, "e-navigationLineSettings": "e-navigationLineSetting" } }, "e-maps-annotations": "e-maps-annotation" };
-        this.tagNameMapper = { "e-colorMappings": "e-colorMapping", "e-maps-annotations": "e-annotations" };
+        this.tagMapper = { "e-layers": { "e-layer": { "e-initialShapeSelections": "e-initialShapeSelection", "e-markerSettings": "e-markerSetting", "e-bubbleSettings": { "e-bubbleSetting": { "e-colorMappings": "e-colorMapping" } }, "e-navigationLineSettings": "e-navigationLineSetting" } }, "e-maps-annotations": "e-maps-annotation" };
+        this.tagNameMapper = { "e-initialShapeSelections": "e-initialShapeSelection", "e-colorMappings": "e-colorMapping", "e-maps-annotations": "e-annotations" };
         this.ej2Instances = new Maps({});
         this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
@@ -410,11 +460,14 @@ let MapsComponent = class MapsComponent extends ComponentBase {
     removeLayer(index) {
         return this.ej2Instances.removeLayer(index);
     }
+    shapeSelection(layerIndex, propertyName, name, enable) {
+        return this.ej2Instances.shapeSelection(layerIndex, propertyName, name, enable);
+    }
     zoomByPosition(centerPosition, zoomFactor) {
         return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
     }
 };
-MapsComponent = __decorate$6([
+MapsComponent = __decorate$7([
     EJComponentDecorator({
         props: properties,
         model: {
@@ -428,6 +481,8 @@ const MapsPlugin = {
         Vue$$1.component(MapsPlugin.name, MapsComponent);
         Vue$$1.component(LayerPlugin.name, LayerDirective);
         Vue$$1.component(LayersPlugin.name, LayersDirective);
+        Vue$$1.component(InitialShapeSelectionPlugin.name, InitialShapeSelectionDirective);
+        Vue$$1.component(InitialShapeSelectionsPlugin.name, InitialShapeSelectionsDirective);
         Vue$$1.component(MarkerPlugin.name, MarkerDirective);
         Vue$$1.component(MarkersPlugin.name, MarkersDirective);
         Vue$$1.component(BubblePlugin.name, BubbleDirective);
@@ -441,6 +496,6 @@ const MapsPlugin = {
     }
 };
 
-export { MarkersDirective, MarkerDirective, MarkersPlugin, MarkerPlugin, ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin, BubblesDirective, BubbleDirective, BubblesPlugin, BubblePlugin, NavigationLinesDirective, NavigationLineDirective, NavigationLinesPlugin, NavigationLinePlugin, LayersDirective, LayerDirective, LayersPlugin, LayerPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, MapsComponent, MapsPlugin };
+export { InitialShapeSelectionsDirective, InitialShapeSelectionDirective, InitialShapeSelectionsPlugin, InitialShapeSelectionPlugin, MarkersDirective, MarkerDirective, MarkersPlugin, MarkerPlugin, ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin, BubblesDirective, BubbleDirective, BubblesPlugin, BubblePlugin, NavigationLinesDirective, NavigationLineDirective, NavigationLinesPlugin, NavigationLinePlugin, LayersDirective, LayerDirective, LayersPlugin, LayerPlugin, AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin, MapsComponent, MapsPlugin };
 export * from '@syncfusion/ej2-maps';
 //# sourceMappingURL=ej2-vue-maps.es2015.js.map

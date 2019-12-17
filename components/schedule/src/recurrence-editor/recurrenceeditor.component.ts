@@ -51,10 +51,6 @@ export class RecurrenceEditorComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public getCalendarMode(): string {
-        return this.ej2Instances.getCalendarMode();
-    }
-
     public getRecurrenceDates(startDate: Object, rule: string, excludeDate?: string, maximumCount?: number, viewDate?: Object): number[] {
         return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
     }
@@ -65,10 +61,6 @@ export class RecurrenceEditorComponent extends ComponentBase {
 
     public getRuleSummary(rule: string): string {
         return this.ej2Instances.getRuleSummary(rule);
-    }
-
-    public resetFields(): void {
-        return this.ej2Instances.resetFields();
     }
 
     public setRecurrenceRule(rule: string, startDate: Object): void {

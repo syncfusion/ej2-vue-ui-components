@@ -150,7 +150,7 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
+const properties = ['agendaDaysCount', 'allowDragAndDrop', 'allowKeyboardInteraction', 'allowMultiRowSelection', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
 const modelProps = ['currentView', 'selectedDate'];
 /**
  * `ej-schedule` represents the VueJS Schedule Component.
@@ -210,18 +210,6 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     addResource(resources, name, index) {
         return this.ej2Instances.addResource(resources, name, index);
     }
-    addSelectedClass(cells, focusCell) {
-        return this.ej2Instances.addSelectedClass(cells, focusCell);
-    }
-    boundaryValidation(pageY, pageX) {
-        return this.ej2Instances.boundaryValidation(pageY, pageX);
-    }
-    changeDate(selectedDate, event) {
-        return this.ej2Instances.changeDate(selectedDate, event);
-    }
-    changeView(view, event, muteOnChange, index) {
-        return this.ej2Instances.changeView(view, event, muteOnChange, index);
-    }
     closeEditor() {
         return this.ej2Instances.closeEditor();
     }
@@ -234,38 +222,14 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     exportToExcel(excelExportOptions) {
         return this.ej2Instances.exportToExcel(excelExportOptions);
     }
-    exportToICalendar(fileName) {
-        return this.ej2Instances.exportToICalendar(fileName);
-    }
-    getAllDayRow() {
-        return this.ej2Instances.getAllDayRow();
-    }
-    getAppointmentTemplate() {
-        return this.ej2Instances.getAppointmentTemplate();
+    exportToICalendar(fileName, customData) {
+        return this.ej2Instances.exportToICalendar(fileName, customData);
     }
     getBlockEvents(startDate, endDate, includeOccurrences) {
         return this.ej2Instances.getBlockEvents(startDate, endDate, includeOccurrences);
     }
-    getCalendarMode() {
-        return this.ej2Instances.getCalendarMode();
-    }
     getCellDetails(tdCol) {
         return this.ej2Instances.getCellDetails(tdCol);
-    }
-    getCellHeaderTemplate() {
-        return this.ej2Instances.getCellHeaderTemplate();
-    }
-    getCellTemplate() {
-        return this.ej2Instances.getCellTemplate();
-    }
-    getContentTable() {
-        return this.ej2Instances.getContentTable();
-    }
-    getCssProperties() {
-        return this.ej2Instances.getCssProperties();
-    }
-    getCurrentTime() {
-        return this.ej2Instances.getCurrentTime();
     }
     getCurrentViewDates() {
         return this.ej2Instances.getCurrentViewDates();
@@ -273,23 +237,8 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getCurrentViewEvents() {
         return this.ej2Instances.getCurrentViewEvents();
     }
-    getDateFromElement(td) {
-        return this.ej2Instances.getDateFromElement(td);
-    }
-    getDateHeaderTemplate() {
-        return this.ej2Instances.getDateHeaderTemplate();
-    }
-    getDateTime(date) {
-        return this.ej2Instances.getDateTime(date);
-    }
-    getDayNames(type) {
-        return this.ej2Instances.getDayNames(type);
-    }
     getDeletedOccurrences(recurrenceData) {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
-    }
-    getEditorTemplate() {
-        return this.ej2Instances.getEditorTemplate();
     }
     getEventDetails(element) {
         return this.ej2Instances.getEventDetails(element);
@@ -297,26 +246,8 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getEventMaxID() {
         return this.ej2Instances.getEventMaxID();
     }
-    getEventTooltipTemplate() {
-        return this.ej2Instances.getEventTooltipTemplate();
-    }
     getEvents(startDate, endDate, includeOccurrences) {
         return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
-    }
-    getHeaderTooltipTemplate() {
-        return this.ej2Instances.getHeaderTooltipTemplate();
-    }
-    getIndexOfDate(collection, date) {
-        return this.ej2Instances.getIndexOfDate(collection, date);
-    }
-    getMajorSlotTemplate() {
-        return this.ej2Instances.getMajorSlotTemplate();
-    }
-    getMinorSlotTemplate() {
-        return this.ej2Instances.getMinorSlotTemplate();
-    }
-    getNavigateView() {
-        return this.ej2Instances.getNavigateView();
     }
     getOccurrencesByID(eventID) {
         return this.ej2Instances.getOccurrencesByID(eventID);
@@ -324,47 +255,17 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getOccurrencesByRange(startTime, endTime) {
         return this.ej2Instances.getOccurrencesByRange(startTime, endTime);
     }
-    getQuickInfoTemplatesContent() {
-        return this.ej2Instances.getQuickInfoTemplatesContent();
-    }
-    getQuickInfoTemplatesFooter() {
-        return this.ej2Instances.getQuickInfoTemplatesFooter();
-    }
-    getQuickInfoTemplatesHeader() {
-        return this.ej2Instances.getQuickInfoTemplatesHeader();
-    }
-    getResourceHeaderTemplate() {
-        return this.ej2Instances.getResourceHeaderTemplate();
+    getResourceCollections() {
+        return this.ej2Instances.getResourceCollections();
     }
     getResourcesByIndex(index) {
         return this.ej2Instances.getResourcesByIndex(index);
-    }
-    getSelectedElements() {
-        return this.ej2Instances.getSelectedElements();
-    }
-    getStartEndTime(startEndTime) {
-        return this.ej2Instances.getStartEndTime(startEndTime);
-    }
-    getTableRows() {
-        return this.ej2Instances.getTableRows();
-    }
-    getTimeString(date) {
-        return this.ej2Instances.getTimeString(date);
-    }
-    getWorkCellElements() {
-        return this.ej2Instances.getWorkCellElements();
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
     }
     importICalendar(fileContent) {
         return this.ej2Instances.importICalendar(fileContent);
-    }
-    isAllDayCell(td) {
-        return this.ej2Instances.isAllDayCell(td);
-    }
-    isSelectedDate(date) {
-        return this.ej2Instances.isSelectedDate(date);
     }
     isSlotAvailable(startTime, endTime, groupIndex) {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
@@ -378,26 +279,8 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     refreshEvents() {
         return this.ej2Instances.refreshEvents();
     }
-    removeNewEventElement() {
-        return this.ej2Instances.removeNewEventElement();
-    }
     removeResource(resourceId, name) {
         return this.ej2Instances.removeResource(resourceId, name);
-    }
-    removeSelectedClass() {
-        return this.ej2Instances.removeSelectedClass();
-    }
-    renderCompleted() {
-        return this.ej2Instances.renderCompleted();
-    }
-    renderElements(isLayoutOnly) {
-        return this.ej2Instances.renderElements(isLayoutOnly);
-    }
-    resetEventTemplates() {
-        return this.ej2Instances.resetEventTemplates();
-    }
-    resetLayoutTemplates() {
-        return this.ej2Instances.resetLayoutTemplates();
     }
     resetWorkHours(dates, start, end, groupIndex) {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
@@ -408,9 +291,6 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     scrollTo(hour) {
         return this.ej2Instances.scrollTo(hour);
     }
-    selectCell(element) {
-        return this.ej2Instances.selectCell(element);
-    }
     setRecurrenceEditor(recurrenceEditor) {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
     }
@@ -419,12 +299,6 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     }
     showSpinner() {
         return this.ej2Instances.showSpinner();
-    }
-    templateParser(template) {
-        return this.ej2Instances.templateParser(template);
-    }
-    updateLayoutTemplates() {
-        return this.ej2Instances.updateLayoutTemplates();
     }
 };
 ScheduleComponent = __decorate$3([
@@ -493,9 +367,6 @@ let RecurrenceEditorComponent = class RecurrenceEditorComponent extends Componen
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    getCalendarMode() {
-        return this.ej2Instances.getCalendarMode();
-    }
     getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate) {
         return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
     }
@@ -504,9 +375,6 @@ let RecurrenceEditorComponent = class RecurrenceEditorComponent extends Componen
     }
     getRuleSummary(rule) {
         return this.ej2Instances.getRuleSummary(rule);
-    }
-    resetFields() {
-        return this.ej2Instances.resetFields();
     }
     setRecurrenceRule(rule, startDate) {
         return this.ej2Instances.setRecurrenceRule(rule, startDate);
