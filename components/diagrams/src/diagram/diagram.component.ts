@@ -10,7 +10,7 @@ import { PortsDirective, PortDirective, PortsPlugin, PortPlugin } from './ports.
 import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.directive'
 
 
-export const properties: string[] = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'historyStateChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+export const properties: string[] = ['addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'historyStateChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
 /**
@@ -72,6 +72,10 @@ export class DiagramComponent extends ComponentBase {
 
     public addConstraints(constraintsType: number, constraintsValue: number): number {
         return this.ej2Instances.addConstraints(constraintsType, constraintsValue);
+    }
+
+    public addCustomHistoryEntry(entry: Object): void {
+        return this.ej2Instances.addCustomHistoryEntry(entry);
     }
 
     public addHistoryEntry(entry: Object): void {
@@ -166,7 +170,7 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.distribute(option, objects);
     }
 
-    public doLayout(): Object {
+    public doLayout(): Object | boolean {
         return this.ej2Instances.doLayout();
     }
 
@@ -234,12 +238,24 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.getDiagramContent(styleSheets);
     }
 
+    public getEdges(args: Object): string[] {
+        return this.ej2Instances.getEdges(args);
+    }
+
+    public getHistoryStack(isUndoStack: boolean): Object[] {
+        return this.ej2Instances.getHistoryStack(isUndoStack);
+    }
+
     public getNodeObject(id: string): Object {
         return this.ej2Instances.getNodeObject(id);
     }
 
     public getObject(name: string): Object {
         return this.ej2Instances.getObject(name);
+    }
+
+    public getParentId(id: string): string {
+        return this.ej2Instances.getParentId(id);
     }
 
     public getTool(action: string): Object {

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.4.41 (2020-01-07)
+
+### Common
+
+#### Bug Fixes
+
+- `#I252331` - Issue with object reference not maintained in Vue has been fixed.
+
 ## 17.2.48-beta (2019-08-28)
 
 ### Common

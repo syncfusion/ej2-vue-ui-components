@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 17.4.41 (2020-01-07)
+
+### Slider
+
+#### Bug Fixes
+
+- `#259186` - Now, the tooltip is displayed correctly for the slider component while rendering it inside the dialog component.
+
+### Uploader
+
+#### Bug Fixes
+
+- `#256144` - Issue with "script error throws while uploading file with custom template" has been resolved.
+
 ## 17.3.29 (2019-11-26)
 
 ### Form Validator

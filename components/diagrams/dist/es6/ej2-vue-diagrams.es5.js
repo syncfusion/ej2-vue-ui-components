@@ -521,7 +521,7 @@ var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['addInfo', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'historyStateChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+var properties = ['addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'historyStateChange', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 var modelProps = [];
 /**
  * Represents vue Diagram Component
@@ -574,6 +574,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DiagramComponent.prototype.addConstraints = function (constraintsType, constraintsValue) {
         return this.ej2Instances.addConstraints(constraintsType, constraintsValue);
+    };
+    DiagramComponent.prototype.addCustomHistoryEntry = function (entry) {
+        return this.ej2Instances.addCustomHistoryEntry(entry);
     };
     DiagramComponent.prototype.addHistoryEntry = function (entry) {
         return this.ej2Instances.addHistoryEntry(entry);
@@ -695,11 +698,20 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.getDiagramContent = function (styleSheets) {
         return this.ej2Instances.getDiagramContent(styleSheets);
     };
+    DiagramComponent.prototype.getEdges = function (args) {
+        return this.ej2Instances.getEdges(args);
+    };
+    DiagramComponent.prototype.getHistoryStack = function (isUndoStack) {
+        return this.ej2Instances.getHistoryStack(isUndoStack);
+    };
     DiagramComponent.prototype.getNodeObject = function (id) {
         return this.ej2Instances.getNodeObject(id);
     };
     DiagramComponent.prototype.getObject = function (name) {
         return this.ej2Instances.getObject(name);
+    };
+    DiagramComponent.prototype.getParentId = function (id) {
+        return this.ej2Instances.getParentId(id);
     };
     DiagramComponent.prototype.getTool = function (action) {
         return this.ej2Instances.getTool(action);

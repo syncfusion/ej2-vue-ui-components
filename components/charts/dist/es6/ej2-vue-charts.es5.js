@@ -2327,7 +2327,7 @@ var __decorate$34 = (undefined && undefined.__decorate) || function (decorators,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$6 = ['animation', 'border', 'categoryField', 'categoryLabelStyle', 'dataLabel', 'dataSource', 'enableGroupSeparator', 'enablePersistence', 'enableRtl', 'height', 'interval', 'labelFormat', 'labelPosition', 'labelStyle', 'locale', 'majorTickLines', 'margin', 'maximum', 'minimum', 'minorTickLines', 'minorTicksPerInterval', 'opposedPosition', 'orientation', 'query', 'ranges', 'subtitle', 'subtitleStyle', 'tabIndex', 'targetColor', 'targetField', 'targetTypes', 'targetWidth', 'theme', 'tickPosition', 'title', 'titlePosition', 'titleStyle', 'tooltip', 'type', 'valueBorder', 'valueField', 'valueFill', 'valueHeight', 'width', 'load', 'tooltipRender'];
+var properties$6 = ['animation', 'border', 'categoryField', 'categoryLabelStyle', 'dataLabel', 'dataSource', 'enableGroupSeparator', 'enablePersistence', 'enableRtl', 'height', 'interval', 'labelFormat', 'labelPosition', 'labelStyle', 'locale', 'majorTickLines', 'margin', 'maximum', 'minimum', 'minorTickLines', 'minorTicksPerInterval', 'opposedPosition', 'orientation', 'query', 'ranges', 'subtitle', 'subtitleStyle', 'tabIndex', 'targetColor', 'targetField', 'targetTypes', 'targetWidth', 'theme', 'tickPosition', 'title', 'titlePosition', 'titleStyle', 'tooltip', 'type', 'valueBorder', 'valueField', 'valueFill', 'valueHeight', 'width', 'beforePrint', 'load', 'loaded', 'tooltipRender'];
 var modelProps$6 = ['dataSource'];
 /**
  * Represents Vuejs BulletChart Component
@@ -2386,6 +2386,12 @@ var BulletChartComponent = /** @__PURE__ @class */ (function (_super) {
     };
     BulletChartComponent.prototype.createSvg = function (chart) {
         return this.ej2Instances.createSvg(chart);
+    };
+    BulletChartComponent.prototype.export = function (type, fileName, orientation, controls, width, height, isVertical) {
+        return this.ej2Instances.export(type, fileName, orientation, controls, width, height, isVertical);
+    };
+    BulletChartComponent.prototype.print = function (id) {
+        return this.ej2Instances.print(id);
     };
     BulletChartComponent.prototype.removeSvg = function () {
         return this.ej2Instances.removeSvg();
