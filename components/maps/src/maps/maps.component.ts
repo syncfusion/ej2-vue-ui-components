@@ -160,6 +160,10 @@ export class MapsComponent extends ComponentBase {
     public zoomByPosition(centerPosition: undefined, zoomFactor: number): void {
         return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
     }
+
+    public zoomToCoordinates(minLatitude: number, minLongitude: number, maxLatitude: number, maxLongitude: number): void {
+        return this.ej2Instances.zoomToCoordinates(minLatitude, minLongitude, maxLatitude, maxLongitude);
+    }
 }
 
 export const MapsPlugin = {

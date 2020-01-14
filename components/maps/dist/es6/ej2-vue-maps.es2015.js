@@ -466,6 +466,9 @@ let MapsComponent = class MapsComponent extends ComponentBase {
     zoomByPosition(centerPosition, zoomFactor) {
         return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
     }
+    zoomToCoordinates(minLatitude, minLongitude, maxLatitude, maxLongitude) {
+        return this.ej2Instances.zoomToCoordinates(minLatitude, minLongitude, maxLatitude, maxLongitude);
+    }
 };
 MapsComponent = __decorate$7([
     EJComponentDecorator({

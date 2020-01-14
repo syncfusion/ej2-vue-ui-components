@@ -643,6 +643,9 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
     MapsComponent.prototype.zoomByPosition = function (centerPosition, zoomFactor) {
         return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
     };
+    MapsComponent.prototype.zoomToCoordinates = function (minLatitude, minLongitude, maxLatitude, maxLongitude) {
+        return this.ej2Instances.zoomToCoordinates(minLatitude, minLongitude, maxLatitude, maxLongitude);
+    };
     MapsComponent = __decorate$7([
         EJComponentDecorator({
             props: properties,

@@ -358,6 +358,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     getHeaderTable() {
         return this.ej2Instances.getHeaderTable();
     }
+    getHiddenColumns() {
+        return this.ej2Instances.getHiddenColumns();
+    }
     getMediaColumns() {
         return this.ej2Instances.getMediaColumns();
     }

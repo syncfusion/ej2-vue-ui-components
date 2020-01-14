@@ -261,6 +261,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getHeaderTable();
     }
 
+    public getHiddenColumns(): Object[] {
+        return this.ej2Instances.getHiddenColumns();
+    }
+
     public getMediaColumns(): void {
         return this.ej2Instances.getMediaColumns();
     }

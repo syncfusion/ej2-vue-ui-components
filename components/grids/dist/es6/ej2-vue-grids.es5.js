@@ -443,6 +443,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.getHeaderTable = function () {
         return this.ej2Instances.getHeaderTable();
     };
+    GridComponent.prototype.getHiddenColumns = function () {
+        return this.ej2Instances.getHiddenColumns();
+    };
     GridComponent.prototype.getMediaColumns = function () {
         return this.ej2Instances.getMediaColumns();
     };
