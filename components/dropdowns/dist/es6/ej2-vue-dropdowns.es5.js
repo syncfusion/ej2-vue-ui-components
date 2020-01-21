@@ -609,6 +609,9 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.getItems = function () {
         return this.ej2Instances.getItems();
     };
+    ListBoxComponent.prototype.getSortedList = function () {
+        return this.ej2Instances.getSortedList();
+    };
     ListBoxComponent.prototype.moveAllTo = function (targetId, index) {
         return this.ej2Instances.moveAllTo(targetId, index);
     };

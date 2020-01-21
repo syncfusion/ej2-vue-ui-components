@@ -98,6 +98,10 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.getItems();
     }
 
+    public getSortedList(): undefined[] | string[] | boolean[] | number[] {
+        return this.ej2Instances.getSortedList();
+    }
+
     public moveAllTo(targetId?: string, index?: number): void {
         return this.ej2Instances.moveAllTo(targetId, index);
     }

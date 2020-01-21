@@ -525,6 +525,9 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     getItems() {
         return this.ej2Instances.getItems();
     }
+    getSortedList() {
+        return this.ej2Instances.getSortedList();
+    }
     moveAllTo(targetId, index) {
         return this.ej2Instances.moveAllTo(targetId, index);
     }

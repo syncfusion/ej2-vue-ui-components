@@ -78,7 +78,7 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
     }
 
-    public executeCommand(commandName: Object, value?: string | Object | Object | Object): void {
+    public executeCommand(commandName: Object, value?: string | Object | Object | Object | Object): void {
         return this.ej2Instances.executeCommand(commandName, value);
     }
 

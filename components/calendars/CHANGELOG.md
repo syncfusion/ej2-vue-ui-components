@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 17.4.44 (2021-01-21)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#259218` - Issue with "change event argument 'isinteracted' return as false while changing the value after given the same value twice" has been resolved.
+
 ## 17.4.43 (2020-01-14)
 
 ### Calendar
