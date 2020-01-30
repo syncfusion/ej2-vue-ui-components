@@ -389,6 +389,9 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     add(obj, group) {
         return this.ej2Instances.add(obj, group);
     }
+    addChildToGroup(group, child) {
+        return this.ej2Instances.addChildToGroup(group, child);
+    }
     addConnector(obj) {
         return this.ej2Instances.addConnector(obj);
     }

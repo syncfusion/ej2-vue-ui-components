@@ -89,6 +89,9 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
     getRange() {
         return this.ej2Instances.getRange();
     }
+    getSelectedHtml() {
+        return this.ej2Instances.getSelectedHtml();
+    }
     getSelection() {
         return this.ej2Instances.getSelection();
     }

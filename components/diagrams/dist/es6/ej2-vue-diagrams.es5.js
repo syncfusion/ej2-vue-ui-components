@@ -566,6 +566,9 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.add = function (obj, group) {
         return this.ej2Instances.add(obj, group);
     };
+    DiagramComponent.prototype.addChildToGroup = function (group, child) {
+        return this.ej2Instances.addChildToGroup(group, child);
+    };
     DiagramComponent.prototype.addConnector = function (obj) {
         return this.ej2Instances.addConnector(obj);
     };

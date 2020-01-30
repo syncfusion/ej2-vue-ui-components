@@ -81,6 +81,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.addResource(resources, name, index);
     }
 
+    public changeCurrentView(viewName: Object, viewIndex?: number): void {
+        return this.ej2Instances.changeCurrentView(viewName, viewIndex);
+    }
+
     public closeEditor(): void {
         return this.ej2Instances.closeEditor();
     }
@@ -149,6 +153,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getResourcesByIndex(index);
     }
 
+    public getSelectedElements(): Object[] {
+        return this.ej2Instances.getSelectedElements();
+    }
+
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
     }
@@ -185,8 +193,12 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.saveEvent(data, currentAction);
     }
 
-    public scrollTo(hour: string): void {
-        return this.ej2Instances.scrollTo(hour);
+    public scrollTo(hour: string, scrollDate?: Object): void {
+        return this.ej2Instances.scrollTo(hour, scrollDate);
+    }
+
+    public scrollToResource(resourceId: string | number, groupName?: string): void {
+        return this.ej2Instances.scrollToResource(resourceId, groupName);
     }
 
     public setRecurrenceEditor(recurrenceEditor: Object): void {

@@ -105,6 +105,9 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.getRange = function () {
         return this.ej2Instances.getRange();
     };
+    RichTextEditorComponent.prototype.getSelectedHtml = function () {
+        return this.ej2Instances.getSelectedHtml();
+    };
     RichTextEditorComponent.prototype.getSelection = function () {
         return this.ej2Instances.getSelection();
     };

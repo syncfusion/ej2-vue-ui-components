@@ -348,14 +348,26 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     addContextMenuItems(items, text, insertAfter, isUniqueId) {
         return this.ej2Instances.addContextMenuItems(items, text, insertAfter, isUniqueId);
     }
+    addCustomFunction(functionHandler, functionName) {
+        return this.ej2Instances.addCustomFunction(functionHandler, functionName);
+    }
     addDefinedName(definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     }
     addHyperlink(hyperlink, address) {
         return this.ej2Instances.addHyperlink(hyperlink, address);
     }
+    addRibbonTabs(items, insertBefore) {
+        return this.ej2Instances.addRibbonTabs(items, insertBefore);
+    }
+    addToolbarItems(tab, items, index) {
+        return this.ej2Instances.addToolbarItems(tab, items, index);
+    }
     applyFilter(predicates, range) {
         return this.ej2Instances.applyFilter(predicates, range);
+    }
+    autoFit(range) {
+        return this.ej2Instances.autoFit(range);
     }
     cellFormat(style, range) {
         return this.ej2Instances.cellFormat(style, range);
@@ -375,6 +387,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     enableContextMenuItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     }
+    enableFileMenuItems(items, enable) {
+        return this.ej2Instances.enableFileMenuItems(items, enable);
+    }
     endEdit() {
         return this.ej2Instances.endEdit();
     }
@@ -390,6 +405,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     goTo(address) {
         return this.ej2Instances.goTo(address);
     }
+    hideRibbonTabs(tabs, hide) {
+        return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
     }
@@ -398,6 +416,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     open(options) {
         return this.ej2Instances.open(options);
+    }
+    openFromJson(options) {
+        return this.ej2Instances.openFromJson(options);
     }
     paste(address, type) {
         return this.ej2Instances.paste(address, type);
@@ -419,6 +440,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     save(saveOptions) {
         return this.ej2Instances.save(saveOptions);
+    }
+    saveAsJson() {
+        return this.ej2Instances.saveAsJson();
     }
     selectRange(address) {
         return this.ej2Instances.selectRange(address);

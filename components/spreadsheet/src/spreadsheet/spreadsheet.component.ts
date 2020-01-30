@@ -61,6 +61,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.addContextMenuItems(items, text, insertAfter, isUniqueId);
     }
 
+    public addCustomFunction(functionHandler: string | Object, functionName?: string): void {
+        return this.ej2Instances.addCustomFunction(functionHandler, functionName);
+    }
+
     public addDefinedName(definedName: Object): boolean {
         return this.ej2Instances.addDefinedName(definedName);
     }
@@ -69,8 +73,20 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.addHyperlink(hyperlink, address);
     }
 
+    public addRibbonTabs(items: Object[], insertBefore?: string): void {
+        return this.ej2Instances.addRibbonTabs(items, insertBefore);
+    }
+
+    public addToolbarItems(tab: string, items: Object[], index?: number): void {
+        return this.ej2Instances.addToolbarItems(tab, items, index);
+    }
+
     public applyFilter(predicates?: Object[], range?: string): void {
         return this.ej2Instances.applyFilter(predicates, range);
+    }
+
+    public autoFit(range: string): void {
+        return this.ej2Instances.autoFit(range);
     }
 
     public cellFormat(style: Object, range?: string): void {
@@ -97,6 +113,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     }
 
+    public enableFileMenuItems(items: string[], enable: boolean): void {
+        return this.ej2Instances.enableFileMenuItems(items, enable);
+    }
+
     public endEdit(): void {
         return this.ej2Instances.endEdit();
     }
@@ -117,6 +137,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.goTo(address);
     }
 
+    public hideRibbonTabs(tabs: string[], hide: boolean): void {
+        return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    }
+
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
     }
@@ -127,6 +151,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public open(options: Object): void {
         return this.ej2Instances.open(options);
+    }
+
+    public openFromJson(options: undefined): void {
+        return this.ej2Instances.openFromJson(options);
     }
 
     public paste(address?: string, type?: Object): void {
@@ -155,6 +183,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public save(saveOptions: Object): void {
         return this.ej2Instances.save(saveOptions);
+    }
+
+    public saveAsJson(): Object {
+        return this.ej2Instances.saveAsJson();
     }
 
     public selectRange(address: string): void {

@@ -2,13 +2,15 @@
 
 ## [Unreleased]
 
-## 17.4.44 (2021-01-21)
+## 17.4.46 (2020-01-30)
 
 ### DatePicker
 
 #### Bug Fixes
 
-- `#259218` - Issue with "change event argument 'isinteracted' return as false while changing the value after given the same value twice" has been resolved.
+- `#260342` - Issue with "datepicker popup not closed while use `shift+tab`" has been resolved.
+
+- `#259218` - Issue with "change event is triggered twice when enable strict mode along with format property" has been resolved.
 
 ## 17.4.43 (2020-01-14)
 
@@ -1063,6 +1065,14 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.
 
+
+## 17.4.44 (2021-01-21)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#259218` - Issue with "change event argument 'isinteracted' return as false while changing the value after given the same value twice" has been resolved.
 
 ## 17.3.14 (2019-10-03)
 

@@ -210,6 +210,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     addResource(resources, name, index) {
         return this.ej2Instances.addResource(resources, name, index);
     }
+    changeCurrentView(viewName, viewIndex) {
+        return this.ej2Instances.changeCurrentView(viewName, viewIndex);
+    }
     closeEditor() {
         return this.ej2Instances.closeEditor();
     }
@@ -261,6 +264,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getResourcesByIndex(index) {
         return this.ej2Instances.getResourcesByIndex(index);
     }
+    getSelectedElements() {
+        return this.ej2Instances.getSelectedElements();
+    }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
     }
@@ -288,8 +294,11 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     saveEvent(data, currentAction) {
         return this.ej2Instances.saveEvent(data, currentAction);
     }
-    scrollTo(hour) {
-        return this.ej2Instances.scrollTo(hour);
+    scrollTo(hour, scrollDate) {
+        return this.ej2Instances.scrollTo(hour, scrollDate);
+    }
+    scrollToResource(resourceId, groupName) {
+        return this.ej2Instances.scrollToResource(resourceId, groupName);
     }
     setRecurrenceEditor(recurrenceEditor) {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);

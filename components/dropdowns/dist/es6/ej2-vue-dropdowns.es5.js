@@ -99,8 +99,8 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownListComponent.prototype.getItems = function () {
         return this.ej2Instances.getItems();
     };
-    DropDownListComponent.prototype.hidePopup = function () {
-        return this.ej2Instances.hidePopup();
+    DropDownListComponent.prototype.hidePopup = function (e) {
+        return this.ej2Instances.hidePopup(e);
     };
     DropDownListComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
@@ -225,8 +225,8 @@ var ComboBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ComboBoxComponent.prototype.getItems = function () {
         return this.ej2Instances.getItems();
     };
-    ComboBoxComponent.prototype.hidePopup = function () {
-        return this.ej2Instances.hidePopup();
+    ComboBoxComponent.prototype.hidePopup = function (e) {
+        return this.ej2Instances.hidePopup(e);
     };
     ComboBoxComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();

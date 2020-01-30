@@ -83,8 +83,8 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
     getItems() {
         return this.ej2Instances.getItems();
     }
-    hidePopup() {
-        return this.ej2Instances.hidePopup();
+    hidePopup(e) {
+        return this.ej2Instances.hidePopup(e);
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
@@ -192,8 +192,8 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
     getItems() {
         return this.ej2Instances.getItems();
     }
-    hidePopup() {
-        return this.ej2Instances.hidePopup();
+    hidePopup(e) {
+        return this.ej2Instances.hidePopup(e);
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();

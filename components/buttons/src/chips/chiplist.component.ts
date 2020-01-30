@@ -4,7 +4,7 @@ import { ChipList } from '@syncfusion/ej2-buttons';
 import { ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin } from './chips.directive'
 
 
-export const properties: string[] = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'click', 'created', 'delete'];
+export const properties: string[] = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'beforeClick', 'click', 'created', 'delete'];
 export const modelProps: string[] = [];
 
 /**
@@ -68,7 +68,7 @@ export class ChipListComponent extends ComponentBase {
         return this.ej2Instances.remove(fields);
     }
 
-    public select(fields: number | number[] | Object | Object[]): void {
+    public select(fields: number | number[] | Object | Object[] | string[]): void {
         return this.ej2Instances.select(fields);
     }
 }

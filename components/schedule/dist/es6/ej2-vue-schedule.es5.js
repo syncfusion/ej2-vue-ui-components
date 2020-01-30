@@ -295,6 +295,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.addResource = function (resources, name, index) {
         return this.ej2Instances.addResource(resources, name, index);
     };
+    ScheduleComponent.prototype.changeCurrentView = function (viewName, viewIndex) {
+        return this.ej2Instances.changeCurrentView(viewName, viewIndex);
+    };
     ScheduleComponent.prototype.closeEditor = function () {
         return this.ej2Instances.closeEditor();
     };
@@ -346,6 +349,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getResourcesByIndex = function (index) {
         return this.ej2Instances.getResourcesByIndex(index);
     };
+    ScheduleComponent.prototype.getSelectedElements = function () {
+        return this.ej2Instances.getSelectedElements();
+    };
     ScheduleComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
     };
@@ -373,8 +379,11 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.saveEvent = function (data, currentAction) {
         return this.ej2Instances.saveEvent(data, currentAction);
     };
-    ScheduleComponent.prototype.scrollTo = function (hour) {
-        return this.ej2Instances.scrollTo(hour);
+    ScheduleComponent.prototype.scrollTo = function (hour, scrollDate) {
+        return this.ej2Instances.scrollTo(hour, scrollDate);
+    };
+    ScheduleComponent.prototype.scrollToResource = function (resourceId, groupName) {
+        return this.ej2Instances.scrollToResource(resourceId, groupName);
     };
     ScheduleComponent.prototype.setRecurrenceEditor = function (recurrenceEditor) {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);

@@ -106,6 +106,10 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.getRange();
     }
 
+    public getSelectedHtml(): string {
+        return this.ej2Instances.getSelectedHtml();
+    }
+
     public getSelection(): string {
         return this.ej2Instances.getSelection();
     }

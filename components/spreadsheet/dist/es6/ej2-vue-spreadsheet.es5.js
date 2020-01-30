@@ -502,14 +502,26 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.addContextMenuItems = function (items, text, insertAfter, isUniqueId) {
         return this.ej2Instances.addContextMenuItems(items, text, insertAfter, isUniqueId);
     };
+    SpreadsheetComponent.prototype.addCustomFunction = function (functionHandler, functionName) {
+        return this.ej2Instances.addCustomFunction(functionHandler, functionName);
+    };
     SpreadsheetComponent.prototype.addDefinedName = function (definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     };
     SpreadsheetComponent.prototype.addHyperlink = function (hyperlink, address) {
         return this.ej2Instances.addHyperlink(hyperlink, address);
     };
+    SpreadsheetComponent.prototype.addRibbonTabs = function (items, insertBefore) {
+        return this.ej2Instances.addRibbonTabs(items, insertBefore);
+    };
+    SpreadsheetComponent.prototype.addToolbarItems = function (tab, items, index) {
+        return this.ej2Instances.addToolbarItems(tab, items, index);
+    };
     SpreadsheetComponent.prototype.applyFilter = function (predicates, range) {
         return this.ej2Instances.applyFilter(predicates, range);
+    };
+    SpreadsheetComponent.prototype.autoFit = function (range) {
+        return this.ej2Instances.autoFit(range);
     };
     SpreadsheetComponent.prototype.cellFormat = function (style, range) {
         return this.ej2Instances.cellFormat(style, range);
@@ -529,6 +541,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.enableContextMenuItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     };
+    SpreadsheetComponent.prototype.enableFileMenuItems = function (items, enable) {
+        return this.ej2Instances.enableFileMenuItems(items, enable);
+    };
     SpreadsheetComponent.prototype.endEdit = function () {
         return this.ej2Instances.endEdit();
     };
@@ -544,6 +559,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.goTo = function (address) {
         return this.ej2Instances.goTo(address);
     };
+    SpreadsheetComponent.prototype.hideRibbonTabs = function (tabs, hide) {
+        return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    };
     SpreadsheetComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
     };
@@ -552,6 +570,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.open = function (options) {
         return this.ej2Instances.open(options);
+    };
+    SpreadsheetComponent.prototype.openFromJson = function (options) {
+        return this.ej2Instances.openFromJson(options);
     };
     SpreadsheetComponent.prototype.paste = function (address, type) {
         return this.ej2Instances.paste(address, type);
@@ -573,6 +594,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.save = function (saveOptions) {
         return this.ej2Instances.save(saveOptions);
+    };
+    SpreadsheetComponent.prototype.saveAsJson = function () {
+        return this.ej2Instances.saveAsJson();
     };
     SpreadsheetComponent.prototype.selectRange = function (address) {
         return this.ej2Instances.selectRange(address);

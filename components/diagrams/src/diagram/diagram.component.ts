@@ -62,6 +62,10 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.add(obj, group);
     }
 
+    public addChildToGroup(group: Object, child: string | Object | Object): void {
+        return this.ej2Instances.addChildToGroup(group, child);
+    }
+
     public addConnector(obj: Object): Object {
         return this.ej2Instances.addConnector(obj);
     }
