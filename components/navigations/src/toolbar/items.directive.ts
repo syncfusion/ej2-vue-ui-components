@@ -14,7 +14,18 @@ export const ItemsPlugin = {
     }
 }
 
-
+/**
+ * 'e-item' directive represent a item of Vue Toolbar 
+ * It must be contained in a Toolbar component(`ejs-toolbar`). 
+ * ```html
+ * <ejs-toolbar> 
+ *   <e-items>
+ *    <e-item text='Cut'></e-item>
+ *    <e-item text='Copy'></e-item>
+ *   </e-items>
+ * </ejs-toolbar>
+ * ```
+ */
 @EJComponentDecorator({})
 export class ItemDirective extends Vue {
     public render(): void {

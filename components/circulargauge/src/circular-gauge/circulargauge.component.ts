@@ -7,7 +7,7 @@ import { PointersDirective, PointerDirective, PointersPlugin, PointerPlugin } fr
 import { AxesDirective, AxisDirective, AxesPlugin, AxisPlugin } from './axes.directive'
 
 
-export const properties: string[] = ['axes', 'background', 'border', 'centerX', 'centerY', 'description', 'enablePersistence', 'enablePointerDrag', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'moveToCenter', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'dragEnd', 'dragMove', 'dragStart', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'legendRender', 'load', 'loaded', 'radiusCalculate', 'resized', 'tooltipRender'];
+export const properties: string[] = ['axes', 'background', 'border', 'centerX', 'centerY', 'description', 'enablePersistence', 'enablePointerDrag', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'moveToCenter', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'beforePrint', 'dragEnd', 'dragMove', 'dragStart', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'legendRender', 'load', 'loaded', 'radiusCalculate', 'resized', 'tooltipRender'];
 export const modelProps: string[] = [];
 
 /**
@@ -55,6 +55,14 @@ export class CircularGaugeComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public export(type: Object, fileName: string, orientation?: Object): void {
+        return this.ej2Instances.export(type, fileName, orientation);
+    }
+
+    public print(id?: string[] | string | Object): void {
+        return this.ej2Instances.print(id);
+    }
+
     public setAnnotationValue(axisIndex: number, annotationIndex: number, content: string): void {
         return this.ej2Instances.setAnnotationValue(axisIndex, annotationIndex, content);
     }

@@ -69,6 +69,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.addDefinedName(definedName);
     }
 
+    public addFileMenuItems(items: Object[], text: string, insertAfter: boolean, isUniqueId?: boolean): void {
+        return this.ej2Instances.addFileMenuItems(items, text, insertAfter, isUniqueId);
+    }
+
     public addHyperlink(hyperlink: string | Object, address: string): void {
         return this.ej2Instances.addHyperlink(hyperlink, address);
     }
@@ -113,8 +117,16 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     }
 
-    public enableFileMenuItems(items: string[], enable: boolean): void {
-        return this.ej2Instances.enableFileMenuItems(items, enable);
+    public enableFileMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void {
+        return this.ej2Instances.enableFileMenuItems(items, enable, isUniqueId);
+    }
+
+    public enableRibbonTabs(tabs: string[], enable: boolean): void {
+        return this.ej2Instances.enableRibbonTabs(tabs, enable);
+    }
+
+    public enableToolbarItems(tab: string, items?: number[] | string[], enable?: boolean): void {
+        return this.ej2Instances.enableToolbarItems(tab, items, enable);
     }
 
     public endEdit(): void {
@@ -137,12 +149,20 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.goTo(address);
     }
 
+    public hideFileMenuItems(items: string[], hide: boolean, isUniqueId?: boolean): void {
+        return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
+    }
+
     public hideRibbonTabs(tabs: string[], hide: boolean): void {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
     }
 
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
+    }
+
+    public hideToolbarItems(tab: string, indexes: number[], hide: boolean): void {
+        return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     }
 
     public numberFormat(format: string, range?: string): void {

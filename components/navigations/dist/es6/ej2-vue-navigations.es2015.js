@@ -23,6 +23,18 @@ const AccordionItemsPlugin = {
         Vue$$1.component(AccordionItemsPlugin.name, AccordionItemsDirective);
     }
 };
+/**
+ * 'e-accordionitem' directive represent a item of Vue Accordion
+ * It must be contained in a Accordion component(`ejs-accordion`).
+ * ```html
+ * <ejs-accordion>
+ *   <e-accordionitems>
+ *    <e-accordionitem header='Header1'></e-accordionitem>
+ *    <e-accordionitem header='Header2' content='Content2'></e-accordionitem>
+ *   </e-accordionitems>
+ * </ejs-accordion>
+ * ```
+ */
 let AccordionItemDirective = class AccordionItemDirective extends Vue {
     render() {
         return;
@@ -47,9 +59,9 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
 const properties = ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
 const modelProps = [];
 /**
- * Represents the EJ2 VueJS Accordion Component.
+ * Represents the VueJS Accoridon Component.
  * ```html
- * <ejs-accordion  :items='accordionItems'></ejs-accordion>
+ * <ejs-accordion></ejs-accordion>
  * ```
  */
 let AccordionComponent = class AccordionComponent extends ComponentBase {
@@ -136,6 +148,18 @@ const ItemsPlugin = {
         Vue$$1.component(ItemsPlugin.name, ItemsDirective);
     }
 };
+/**
+ * 'e-item' directive represent a item of Vue Toolbar
+ * It must be contained in a Toolbar component(`ejs-toolbar`).
+ * ```html
+ * <ejs-toolbar>
+ *   <e-items>
+ *    <e-item text='Cut'></e-item>
+ *    <e-item text='Copy'></e-item>
+ *   </e-items>
+ * </ejs-toolbar>
+ * ```
+ */
 let ItemDirective = class ItemDirective extends Vue {
     render() {
         return;
@@ -157,12 +181,12 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$1 = ['cssClass', 'enableCollision', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+const properties$1 = ['cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
 const modelProps$1 = [];
 /**
- * Represents the Essential JS 2 VueJS Toolbar Component.
+ * Represents the VueJS Toolbar Component.
  * ```html
- * <ejs-toolbar  :items='toolbarItems'></ejs-toolbar>
+ * <ejs-toolbar></ejs-toolbar>
  * ```
  */
 let ToolbarComponent = class ToolbarComponent extends ComponentBase {
@@ -332,6 +356,18 @@ const TabItemsPlugin = {
         Vue$$1.component(TabItemsPlugin.name, TabItemsDirective);
     }
 };
+/**
+ * 'e-tabitem' directive represent a item of the Vue Tab
+ * It must be contained in a Tab component(`ejs-tab`).
+ * ```html
+ * <ejs-tab>
+ *  <e-tabitems>
+ *   <e-tabitem :header='Header 1' :content='Content 1'></e-tabitem>
+ *   <e-tabitem :header='Header 2' :content='Content 2'></e-tabitem>
+ *  <e-tabitems>
+ * </ejs-tab>
+ * ```
+ */
 let TabItemDirective = class TabItemDirective extends Vue {
     render() {
         return;
@@ -353,12 +389,12 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties$3 = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'locale', 'overflowMode', 'scrollStep', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
+const properties$3 = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'loadOn', 'locale', 'overflowMode', 'scrollStep', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
 const modelProps$3 = [];
 /**
- * Represents the EJ2 VueJS Tab Component.
+ * Represents the VueJS Tab Component.
  * ```html
- * <ejs-tab  :items='tabItems'></ejs-tab>
+ * <ejs-tab></ejs-tab>
  * ```
  */
 let TabComponent = class TabComponent extends ComponentBase {

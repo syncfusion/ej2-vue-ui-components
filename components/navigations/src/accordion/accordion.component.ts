@@ -8,9 +8,9 @@ export const properties: string[] = ['animation', 'dataSource', 'enablePersisten
 export const modelProps: string[] = [];
 
 /**
- * Represents the EJ2 VueJS Accordion Component.
+ * Represents the VueJS Accoridon Component.
  * ```html
- * <ejs-accordion  :items='accordionItems'></ejs-accordion>
+ * <ejs-accordion></ejs-accordion>
  * ```
  */
 @EJComponentDecorator({

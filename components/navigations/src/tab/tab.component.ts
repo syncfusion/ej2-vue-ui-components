@@ -4,13 +4,13 @@ import { Tab } from '@syncfusion/ej2-navigations';
 import { TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'locale', 'overflowMode', 'scrollStep', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
+export const properties: string[] = ['animation', 'cssClass', 'enablePersistence', 'enableRtl', 'headerPlacement', 'height', 'heightAdjustMode', 'items', 'loadOn', 'locale', 'overflowMode', 'scrollStep', 'selectedItem', 'showCloseButton', 'width', 'added', 'adding', 'created', 'destroyed', 'removed', 'removing', 'selected', 'selecting'];
 export const modelProps: string[] = [];
 
 /**
- * Represents the EJ2 VueJS Tab Component.
+ * Represents the VueJS Tab Component.
  * ```html
- * <ejs-tab  :items='tabItems'></ejs-tab>
+ * <ejs-tab></ejs-tab>
  * ```
  */
 @EJComponentDecorator({

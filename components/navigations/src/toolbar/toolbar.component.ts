@@ -4,13 +4,13 @@ import { Toolbar } from '@syncfusion/ej2-navigations';
 import { ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['cssClass', 'enableCollision', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+export const properties: string[] = ['cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
 export const modelProps: string[] = [];
 
 /**
- * Represents the Essential JS 2 VueJS Toolbar Component.
+ * Represents the VueJS Toolbar Component.
  * ```html
- * <ejs-toolbar  :items='toolbarItems'></ejs-toolbar>
+ * <ejs-toolbar></ejs-toolbar>
  * ```
  */
 @EJComponentDecorator({

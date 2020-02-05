@@ -293,7 +293,7 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['annotations', 'axes', 'background', 'border', 'container', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'locale', 'margin', 'orientation', 'rangePalettes', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'load', 'loaded', 'resized', 'tooltipRender', 'valueChange'];
+var properties = ['annotations', 'axes', 'background', 'border', 'container', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'locale', 'margin', 'orientation', 'rangePalettes', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'beforePrint', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'load', 'loaded', 'resized', 'tooltipRender', 'valueChange'];
 var modelProps = [];
 /**
  * Represents Vuejs Linear Gauge Component
@@ -334,6 +334,12 @@ var LinearGaugeComponent = /** @__PURE__ @class */ (function (_super) {
     };
     LinearGaugeComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
+    };
+    LinearGaugeComponent.prototype.export = function (type, fileName, orientation) {
+        return this.ej2Instances.export(type, fileName, orientation);
+    };
+    LinearGaugeComponent.prototype.print = function (id) {
+        return this.ej2Instances.print(id);
     };
     LinearGaugeComponent.prototype.setAnnotationValue = function (annotationIndex, content, axisValue) {
         return this.ej2Instances.setAnnotationValue(annotationIndex, content, axisValue);

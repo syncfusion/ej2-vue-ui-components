@@ -508,6 +508,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.addDefinedName = function (definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     };
+    SpreadsheetComponent.prototype.addFileMenuItems = function (items, text, insertAfter, isUniqueId) {
+        return this.ej2Instances.addFileMenuItems(items, text, insertAfter, isUniqueId);
+    };
     SpreadsheetComponent.prototype.addHyperlink = function (hyperlink, address) {
         return this.ej2Instances.addHyperlink(hyperlink, address);
     };
@@ -541,8 +544,14 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.enableContextMenuItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     };
-    SpreadsheetComponent.prototype.enableFileMenuItems = function (items, enable) {
-        return this.ej2Instances.enableFileMenuItems(items, enable);
+    SpreadsheetComponent.prototype.enableFileMenuItems = function (items, enable, isUniqueId) {
+        return this.ej2Instances.enableFileMenuItems(items, enable, isUniqueId);
+    };
+    SpreadsheetComponent.prototype.enableRibbonTabs = function (tabs, enable) {
+        return this.ej2Instances.enableRibbonTabs(tabs, enable);
+    };
+    SpreadsheetComponent.prototype.enableToolbarItems = function (tab, items, enable) {
+        return this.ej2Instances.enableToolbarItems(tab, items, enable);
     };
     SpreadsheetComponent.prototype.endEdit = function () {
         return this.ej2Instances.endEdit();
@@ -559,11 +568,17 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.goTo = function (address) {
         return this.ej2Instances.goTo(address);
     };
+    SpreadsheetComponent.prototype.hideFileMenuItems = function (items, hide, isUniqueId) {
+        return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
+    };
     SpreadsheetComponent.prototype.hideRibbonTabs = function (tabs, hide) {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
     };
     SpreadsheetComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
+    };
+    SpreadsheetComponent.prototype.hideToolbarItems = function (tab, indexes, hide) {
+        return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     };
     SpreadsheetComponent.prototype.numberFormat = function (format, range) {
         return this.ej2Instances.numberFormat(format, range);

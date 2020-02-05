@@ -276,6 +276,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     isSlotAvailable(startTime, endTime, groupIndex) {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
     }
+    onServerDataBind() {
+        return this.ej2Instances.onServerDataBind();
+    }
     openEditor(data, action, isEventData, repeatType) {
         return this.ej2Instances.openEditor(data, action, isEventData, repeatType);
     }

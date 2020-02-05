@@ -354,6 +354,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     addDefinedName(definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     }
+    addFileMenuItems(items, text, insertAfter, isUniqueId) {
+        return this.ej2Instances.addFileMenuItems(items, text, insertAfter, isUniqueId);
+    }
     addHyperlink(hyperlink, address) {
         return this.ej2Instances.addHyperlink(hyperlink, address);
     }
@@ -387,8 +390,14 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     enableContextMenuItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     }
-    enableFileMenuItems(items, enable) {
-        return this.ej2Instances.enableFileMenuItems(items, enable);
+    enableFileMenuItems(items, enable, isUniqueId) {
+        return this.ej2Instances.enableFileMenuItems(items, enable, isUniqueId);
+    }
+    enableRibbonTabs(tabs, enable) {
+        return this.ej2Instances.enableRibbonTabs(tabs, enable);
+    }
+    enableToolbarItems(tab, items, enable) {
+        return this.ej2Instances.enableToolbarItems(tab, items, enable);
     }
     endEdit() {
         return this.ej2Instances.endEdit();
@@ -405,11 +414,17 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     goTo(address) {
         return this.ej2Instances.goTo(address);
     }
+    hideFileMenuItems(items, hide, isUniqueId) {
+        return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
+    }
     hideRibbonTabs(tabs, hide) {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
+    }
+    hideToolbarItems(tab, indexes, hide) {
+        return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     }
     numberFormat(format, range) {
         return this.ej2Instances.numberFormat(format, range);

@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 17.4.46 (2020-01-30)
+## 17.4.47 (2020-02-05)
+
+### Common
+
+#### Bug Fixes
+
+-  `I260681`, `#I261593` - Resolved the peer dependency warning issues.
+
+## 17.4.41 (2020-01-07)
 
 ### Common
 
