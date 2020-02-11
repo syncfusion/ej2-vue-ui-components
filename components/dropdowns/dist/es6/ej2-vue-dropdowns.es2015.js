@@ -74,8 +74,8 @@ let DropDownListComponent = class DropDownListComponent extends ComponentBase {
     focusIn(e) {
         return this.ej2Instances.focusIn(e);
     }
-    focusOut() {
-        return this.ej2Instances.focusOut();
+    focusOut(e) {
+        return this.ej2Instances.focusOut(e);
     }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);
@@ -183,8 +183,8 @@ let ComboBoxComponent = class ComboBoxComponent extends ComponentBase {
     focusIn() {
         return this.ej2Instances.focusIn();
     }
-    focusOut() {
-        return this.ej2Instances.focusOut();
+    focusOut(e) {
+        return this.ej2Instances.focusOut(e);
     }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);
@@ -292,8 +292,8 @@ let AutoCompleteComponent = class AutoCompleteComponent extends ComponentBase {
     focusIn() {
         return this.ej2Instances.focusIn();
     }
-    focusOut() {
-        return this.ej2Instances.focusOut();
+    focusOut(e) {
+        return this.ej2Instances.focusOut(e);
     }
     getDataByValue(value) {
         return this.ej2Instances.getDataByValue(value);

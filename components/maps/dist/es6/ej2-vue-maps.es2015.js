@@ -409,8 +409,8 @@ let MapsComponent = class MapsComponent extends ComponentBase {
     addMarker(layerIndex, markerCollection) {
         return this.ej2Instances.addMarker(layerIndex, markerCollection);
     }
-    export(type, fileName, orientation) {
-        return this.ej2Instances.export(type, fileName, orientation);
+    export(type, fileName, orientation, isDownload) {
+        return this.ej2Instances.export(type, fileName, orientation, isDownload);
     }
     getGeoLocation(layerIndex, location) {
         return this.ej2Instances.getGeoLocation(layerIndex, location);

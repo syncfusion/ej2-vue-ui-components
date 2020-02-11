@@ -586,8 +586,8 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
     MapsComponent.prototype.addMarker = function (layerIndex, markerCollection) {
         return this.ej2Instances.addMarker(layerIndex, markerCollection);
     };
-    MapsComponent.prototype.export = function (type, fileName, orientation) {
-        return this.ej2Instances.export(type, fileName, orientation);
+    MapsComponent.prototype.export = function (type, fileName, orientation, isDownload) {
+        return this.ej2Instances.export(type, fileName, orientation, isDownload);
     };
     MapsComponent.prototype.getGeoLocation = function (layerIndex, location) {
         return this.ej2Instances.getGeoLocation(layerIndex, location);

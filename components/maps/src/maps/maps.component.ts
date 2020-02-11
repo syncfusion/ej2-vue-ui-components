@@ -85,8 +85,8 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.addMarker(layerIndex, markerCollection);
     }
 
-    public export(type: Object, fileName: string, orientation?: Object): void {
-        return this.ej2Instances.export(type, fileName, orientation);
+    public export(type: Object, fileName: string, orientation?: Object, isDownload?: boolean): Object {
+        return this.ej2Instances.export(type, fileName, orientation, isDownload);
     }
 
     public getGeoLocation(layerIndex: number, location: Object): Object {

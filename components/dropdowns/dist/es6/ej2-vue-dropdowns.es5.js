@@ -90,8 +90,8 @@ var DropDownListComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownListComponent.prototype.focusIn = function (e) {
         return this.ej2Instances.focusIn(e);
     };
-    DropDownListComponent.prototype.focusOut = function () {
-        return this.ej2Instances.focusOut();
+    DropDownListComponent.prototype.focusOut = function (e) {
+        return this.ej2Instances.focusOut(e);
     };
     DropDownListComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
@@ -216,8 +216,8 @@ var ComboBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ComboBoxComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
-    ComboBoxComponent.prototype.focusOut = function () {
-        return this.ej2Instances.focusOut();
+    ComboBoxComponent.prototype.focusOut = function (e) {
+        return this.ej2Instances.focusOut(e);
     };
     ComboBoxComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
@@ -342,8 +342,8 @@ var AutoCompleteComponent = /** @__PURE__ @class */ (function (_super) {
     AutoCompleteComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
-    AutoCompleteComponent.prototype.focusOut = function () {
-        return this.ej2Instances.focusOut();
+    AutoCompleteComponent.prototype.focusOut = function (e) {
+        return this.ej2Instances.focusOut(e);
     };
     AutoCompleteComponent.prototype.getDataByValue = function (value) {
         return this.ej2Instances.getDataByValue(value);
