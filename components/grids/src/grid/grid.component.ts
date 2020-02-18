@@ -81,6 +81,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.autoFitColumns(fieldNames);
     }
 
+    public calculatePageSizeByParentHeight(containerHeight: number | string): number {
+        return this.ej2Instances.calculatePageSizeByParentHeight(containerHeight);
+    }
+
     public clearCellSelection(): void {
         return this.ej2Instances.clearCellSelection();
     }

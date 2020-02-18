@@ -223,6 +223,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     autoFitColumns(fieldNames) {
         return this.ej2Instances.autoFitColumns(fieldNames);
     }
+    calculatePageSizeByParentHeight(containerHeight) {
+        return this.ej2Instances.calculatePageSizeByParentHeight(containerHeight);
+    }
     clearCellSelection() {
         return this.ej2Instances.clearCellSelection();
     }

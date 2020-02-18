@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 1.0 (2020-02-18)
+
+### Calendar
+
+#### Bug Fixes
+
+- Now, selection style is applied to the previous month selected date in the current month view.
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#261189` - Issue with "unable to select the value `1/1/1970` from datepicker popup in IE and Edge browser" has been resolved.
+
 ## 17.4.49 (2020-02-11)
 
 ### DateTimePicker
