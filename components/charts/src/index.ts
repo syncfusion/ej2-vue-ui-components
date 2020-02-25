@@ -23,7 +23,6 @@ export { SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, Smithch
 export { SmithchartComponent, SmithchartPlugin } from './smithchart/smithchart.component';
 export { StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin } from './stock-chart/trendlines.directive';
 export { StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin } from './stock-chart/series.directive';
-export { StockChartStripLinesDirective, StockChartStripLineDirective, StockChartStripLinesPlugin, StockChartStripLinePlugin } from './stock-chart/striplines.directive';
 export { StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin } from './stock-chart/axes.directive';
 export { StockChartRowsDirective, StockChartRowDirective, StockChartRowsPlugin, StockChartRowPlugin } from './stock-chart/rows.directive';
 export { StockChartAnnotationsDirective, StockChartAnnotationDirective, StockChartAnnotationsPlugin, StockChartAnnotationPlugin } from './stock-chart/annotations.directive';

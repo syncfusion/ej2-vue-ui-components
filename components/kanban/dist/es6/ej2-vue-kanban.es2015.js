@@ -156,8 +156,14 @@ let KanbanComponent = class KanbanComponent extends ComponentBase {
     getCardDetails(target) {
         return this.ej2Instances.getCardDetails(target);
     }
+    getColumnData(columnKey, dataSource) {
+        return this.ej2Instances.getColumnData(columnKey, dataSource);
+    }
     getSelectedCards() {
         return this.ej2Instances.getSelectedCards();
+    }
+    getSwimlaneData(keyField) {
+        return this.ej2Instances.getSwimlaneData(keyField);
     }
     hideColumn(key) {
         return this.ej2Instances.hideColumn(key);

@@ -161,7 +161,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.hideSpinner();
     }
 
-    public importICalendar(fileContent: Object): void {
+    public importICalendar(fileContent: Object | string): void {
         return this.ej2Instances.importICalendar(fileContent);
     }
 

@@ -73,8 +73,16 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.getCardDetails(target);
     }
 
+    public getColumnData(columnKey: string, dataSource?: Object[]): Object[] {
+        return this.ej2Instances.getColumnData(columnKey, dataSource);
+    }
+
     public getSelectedCards(): Object[] {
         return this.ej2Instances.getSelectedCards();
+    }
+
+    public getSwimlaneData(keyField: string): Object[] {
+        return this.ej2Instances.getSwimlaneData(keyField);
     }
 
     public hideColumn(key: string): void {

@@ -621,3 +621,11 @@ The PDF Viewer component enables you to view and print the PDF files.
 - An entire document or a specific page can be printed directly from the browser.
 
 
+## 1.0 (2020-02-18)
+
+### PDF Viewer
+
+#### New Features
+
+- `#262787` - Exposed the event to notify the getPDFDocumentTexts method completed for all the pages.
+

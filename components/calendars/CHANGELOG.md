@@ -4,17 +4,17 @@
 
 ## 17.4.50 (2020-02-18)
 
+### DateRangePicker
+
+#### Bug Fixes
+
+- `#256702` - Issue with "consecutive month is displayed while drill down the left or right calendar" has been resolved.
+
 ### Calendar
 
 #### Bug Fixes
 
 - Now, selection style is applied to the previous month selected date in the current month view.
-
-### DatePicker
-
-#### Bug Fixes
-
-- `#261189` - Issue with "unable to select the value `1/1/1970` from datepicker popup in IE and Edge browser" has been resolved.
 
 ## 17.4.49 (2020-02-11)
 
@@ -1095,6 +1095,14 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.
 
+
+## 1.0 (2020-02-18)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#261189` - Issue with "unable to select the value `1/1/1970` from datepicker popup in IE and Edge browser" has been resolved.
 
 ## 17.4.44 (2021-01-21)
 

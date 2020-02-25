@@ -218,8 +218,14 @@ var KanbanComponent = /** @__PURE__ @class */ (function (_super) {
     KanbanComponent.prototype.getCardDetails = function (target) {
         return this.ej2Instances.getCardDetails(target);
     };
+    KanbanComponent.prototype.getColumnData = function (columnKey, dataSource) {
+        return this.ej2Instances.getColumnData(columnKey, dataSource);
+    };
     KanbanComponent.prototype.getSelectedCards = function () {
         return this.ej2Instances.getSelectedCards();
+    };
+    KanbanComponent.prototype.getSwimlaneData = function (keyField) {
+        return this.ej2Instances.getSwimlaneData(keyField);
     };
     KanbanComponent.prototype.hideColumn = function (key) {
         return this.ej2Instances.hideColumn(key);
