@@ -544,6 +544,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     updateRow(index, data) {
         return this.ej2Instances.updateRow(index, data);
     }
+    updateRowValue(key, rowData) {
+        return this.ej2Instances.updateRowValue(key, rowData);
+    }
 };
 GridComponent = __decorate$3([
     EJComponentDecorator({

@@ -361,14 +361,14 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.isSlotAvailable = function (startTime, endTime, groupIndex) {
         return this.ej2Instances.isSlotAvailable(startTime, endTime, groupIndex);
     };
-    ScheduleComponent.prototype.onServerDataBind = function () {
-        return this.ej2Instances.onServerDataBind();
-    };
     ScheduleComponent.prototype.openEditor = function (data, action, isEventData, repeatType) {
         return this.ej2Instances.openEditor(data, action, isEventData, repeatType);
     };
     ScheduleComponent.prototype.print = function () {
         return this.ej2Instances.print();
+    };
+    ScheduleComponent.prototype.refresh = function () {
+        return this.ej2Instances.refresh();
     };
     ScheduleComponent.prototype.refreshEvents = function () {
         return this.ej2Instances.refreshEvents();

@@ -629,6 +629,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.updateRow = function (index, data) {
         return this.ej2Instances.updateRow(index, data);
     };
+    GridComponent.prototype.updateRowValue = function (key, rowData) {
+        return this.ej2Instances.updateRowValue(key, rowData);
+    };
     GridComponent = __decorate$3([
         EJComponentDecorator({
             props: properties,

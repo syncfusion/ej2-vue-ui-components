@@ -508,6 +508,10 @@ export class GridComponent extends ComponentBase {
     public updateRow(index: number, data: Object): void {
         return this.ej2Instances.updateRow(index, data);
     }
+
+    public updateRowValue(key: number, rowData: Object): void {
+        return this.ej2Instances.updateRowValue(key, rowData);
+    }
 }
 
 export const GridPlugin = {
