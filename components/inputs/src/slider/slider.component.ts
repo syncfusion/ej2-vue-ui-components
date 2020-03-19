@@ -74,8 +74,8 @@ export class SliderComponent extends ComponentBase {
         return this.ej2Instances.reposition();
     }
 
-    public setTooltip(): void {
-        return this.ej2Instances.setTooltip();
+    public setTooltip(args?: string): void {
+        return this.ej2Instances.setTooltip(args);
     }
 }
 

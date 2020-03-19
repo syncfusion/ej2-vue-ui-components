@@ -55,8 +55,16 @@ export class HeatMapComponent extends ComponentBase {
         return this.ej2Instances.clearSelection();
     }
 
+    public export(type: Object, fileName: string, orientation?: Object): void {
+        return this.ej2Instances.export(type, fileName, orientation);
+    }
+
     public heatMapMouseClick(e: Object): boolean {
         return this.ej2Instances.heatMapMouseClick(e);
+    }
+
+    public print(): void {
+        return this.ej2Instances.print();
     }
 
     public refresh(): void {

@@ -457,7 +457,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['activeSheetTab', 'allowCellFormatting', 'allowEditing', 'allowFiltering', 'allowHyperlink', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileItemSelect', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'openComplete', 'openFailure', 'saveComplete', 'select', 'sortComplete'];
+var properties = ['activeSheetTab', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 var modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -505,6 +505,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.addCustomFunction = function (functionHandler, functionName) {
         return this.ej2Instances.addCustomFunction(functionHandler, functionName);
     };
+    SpreadsheetComponent.prototype.addDataValidation = function (rules, range) {
+        return this.ej2Instances.addDataValidation(rules, range);
+    };
     SpreadsheetComponent.prototype.addDefinedName = function (definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     };
@@ -513,6 +516,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.addHyperlink = function (hyperlink, address) {
         return this.ej2Instances.addHyperlink(hyperlink, address);
+    };
+    SpreadsheetComponent.prototype.addInvalidHighlight = function (range) {
+        return this.ej2Instances.addInvalidHighlight(range);
     };
     SpreadsheetComponent.prototype.addRibbonTabs = function (items, insertBefore) {
         return this.ej2Instances.addRibbonTabs(items, insertBefore);
@@ -535,11 +541,17 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.closeEdit = function () {
         return this.ej2Instances.closeEdit();
     };
+    SpreadsheetComponent.prototype.computeExpression = function (formula) {
+        return this.ej2Instances.computeExpression(formula);
+    };
     SpreadsheetComponent.prototype.copy = function (address) {
         return this.ej2Instances.copy(address);
     };
     SpreadsheetComponent.prototype.cut = function (address) {
         return this.ej2Instances.cut(address);
+    };
+    SpreadsheetComponent.prototype.delete = function (startIndex, endIndex, model) {
+        return this.ej2Instances.delete(startIndex, endIndex, model);
     };
     SpreadsheetComponent.prototype.enableContextMenuItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
@@ -558,6 +570,12 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.filter = function (filterOptions, range) {
         return this.ej2Instances.filter(filterOptions, range);
+    };
+    SpreadsheetComponent.prototype.find = function (args) {
+        return this.ej2Instances.find(args);
+    };
+    SpreadsheetComponent.prototype.findHandler = function (args) {
+        return this.ej2Instances.findHandler(args);
     };
     SpreadsheetComponent.prototype.getData = function (address) {
         return this.ej2Instances.getData(address);
@@ -580,6 +598,15 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.hideToolbarItems = function (tab, indexes, hide) {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     };
+    SpreadsheetComponent.prototype.insertColumn = function (startColumn, endColumn) {
+        return this.ej2Instances.insertColumn(startColumn, endColumn);
+    };
+    SpreadsheetComponent.prototype.insertRow = function (startRow, endRow) {
+        return this.ej2Instances.insertRow(startRow, endRow);
+    };
+    SpreadsheetComponent.prototype.insertSheet = function (startSheet, endSheet) {
+        return this.ej2Instances.insertSheet(startSheet, endSheet);
+    };
     SpreadsheetComponent.prototype.numberFormat = function (format, range) {
         return this.ej2Instances.numberFormat(format, range);
     };
@@ -592,17 +619,32 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.paste = function (address, type) {
         return this.ej2Instances.paste(address, type);
     };
+    SpreadsheetComponent.prototype.protectSheet = function (protectSettings) {
+        return this.ej2Instances.protectSheet(protectSettings);
+    };
     SpreadsheetComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
     };
     SpreadsheetComponent.prototype.removeContextMenuItems = function (items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     };
+    SpreadsheetComponent.prototype.removeDataValidation = function (range) {
+        return this.ej2Instances.removeDataValidation(range);
+    };
     SpreadsheetComponent.prototype.removeDefinedName = function (definedName, scope) {
         return this.ej2Instances.removeDefinedName(definedName, scope);
     };
     SpreadsheetComponent.prototype.removeHyperlink = function (range) {
         return this.ej2Instances.removeHyperlink(range);
+    };
+    SpreadsheetComponent.prototype.removeInvalidHighlight = function (range) {
+        return this.ej2Instances.removeInvalidHighlight(range);
+    };
+    SpreadsheetComponent.prototype.replace = function (args) {
+        return this.ej2Instances.replace(args);
+    };
+    SpreadsheetComponent.prototype.replaceHandler = function (args) {
+        return this.ej2Instances.replaceHandler(args);
     };
     SpreadsheetComponent.prototype.resize = function () {
         return this.ej2Instances.resize();
@@ -615,6 +657,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.selectRange = function (address) {
         return this.ej2Instances.selectRange(address);
+    };
+    SpreadsheetComponent.prototype.setBorder = function (style, range, type) {
+        return this.ej2Instances.setBorder(style, range, type);
     };
     SpreadsheetComponent.prototype.setColWidth = function (width, colIndex, sheetIndex) {
         return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
@@ -642,6 +687,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.updateUndoRedoCollection = function (args) {
         return this.ej2Instances.updateUndoRedoCollection(args);
+    };
+    SpreadsheetComponent.prototype.wrap = function (address, wrap) {
+        return this.ej2Instances.wrap(address, wrap);
     };
     SpreadsheetComponent = __decorate$6([
         EJComponentDecorator({

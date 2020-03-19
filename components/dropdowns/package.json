@@ -13,13 +13,15 @@
 		"multiselect",
 		"combobox",
 		"select",
+		"dropdwontree",
 		"vue",
 		"vue-dropdown",
 		"ej2-vue-dropdown",
 		"vue-dropdownlist",
 		"vue-autocomplete",
 		"vue-multiselect",
-		"vue-combobox"
+		"vue-combobox",
+		"vue-dropdowntree"
 	],
 	"repository": {
 		"type": "git",

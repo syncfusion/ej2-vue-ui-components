@@ -68,8 +68,8 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
     enableToolbarItem(items, muteToolbarUpdate) {
         return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
     }
-    executeCommand(commandName, value) {
-        return this.ej2Instances.executeCommand(commandName, value);
+    executeCommand(commandName, value, option) {
+        return this.ej2Instances.executeCommand(commandName, value, option);
     }
     focusIn() {
         return this.ej2Instances.focusIn();

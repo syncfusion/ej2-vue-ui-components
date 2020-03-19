@@ -5,7 +5,7 @@ import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from '
 import { StackedHeadersDirective, StackedHeaderDirective, StackedHeadersPlugin, StackedHeaderPlugin } from './stackedheaders.directive'
 
 
-export const properties: string[] = ['allowDragAndDrop', 'allowKeyboard', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTooltip', 'height', 'keyField', 'locale', 'query', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'columnRendered', 'created', 'dataBinding', 'dataBound', 'drag', 'dragStart', 'dragStop'];
+export const properties: string[] = ['allowDragAndDrop', 'allowKeyboard', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'dialogSettings', 'enablePersistence', 'enableRtl', 'enableTooltip', 'height', 'keyField', 'locale', 'query', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'created', 'dataBinding', 'dataBound', 'dialogClose', 'dialogOpen', 'drag', 'dragStart', 'dragStop', 'queryCellInfo'];
 export const modelProps: string[] = [];
 
 /**
@@ -61,6 +61,10 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.addColumn(columnOptions, index);
     }
 
+    public closeDialog(): void {
+        return this.ej2Instances.closeDialog();
+    }
+
     public deleteCard(cardData: string | number | undefined | undefined[]): void {
         return this.ej2Instances.deleteCard(cardData);
     }
@@ -91,6 +95,10 @@ export class KanbanComponent extends ComponentBase {
 
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
+    }
+
+    public openDialog(action: Object, data?: Object): void {
+        return this.ej2Instances.openDialog(action, data);
     }
 
     public showColumn(key: string): void {

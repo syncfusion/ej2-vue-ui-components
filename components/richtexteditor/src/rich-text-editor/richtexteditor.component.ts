@@ -78,8 +78,8 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
     }
 
-    public executeCommand(commandName: Object, value?: string | Object | Object | Object | Object): void {
-        return this.ej2Instances.executeCommand(commandName, value);
+    public executeCommand(commandName: Object, value?: string | Object | Object | Object | Object, option?: Object): void {
+        return this.ej2Instances.executeCommand(commandName, value, option);
     }
 
     public focusIn(): void {

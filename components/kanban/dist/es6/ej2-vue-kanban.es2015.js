@@ -102,7 +102,7 @@ var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['allowDragAndDrop', 'allowKeyboard', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTooltip', 'height', 'keyField', 'locale', 'query', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'columnRendered', 'created', 'dataBinding', 'dataBound', 'drag', 'dragStart', 'dragStop'];
+const properties = ['allowDragAndDrop', 'allowKeyboard', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'dialogSettings', 'enablePersistence', 'enableRtl', 'enableTooltip', 'height', 'keyField', 'locale', 'query', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'created', 'dataBinding', 'dataBound', 'dialogClose', 'dialogOpen', 'drag', 'dragStart', 'dragStop', 'queryCellInfo'];
 const modelProps = [];
 /**
  * `ej-kanban` represents the VueJS Kanban Component.
@@ -147,6 +147,9 @@ let KanbanComponent = class KanbanComponent extends ComponentBase {
     addColumn(columnOptions, index) {
         return this.ej2Instances.addColumn(columnOptions, index);
     }
+    closeDialog() {
+        return this.ej2Instances.closeDialog();
+    }
     deleteCard(cardData) {
         return this.ej2Instances.deleteCard(cardData);
     }
@@ -170,6 +173,9 @@ let KanbanComponent = class KanbanComponent extends ComponentBase {
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
+    }
+    openDialog(action, data) {
+        return this.ej2Instances.openDialog(action, data);
     }
     showColumn(key) {
         return this.ej2Instances.showColumn(key);

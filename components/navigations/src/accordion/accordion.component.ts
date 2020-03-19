@@ -68,6 +68,10 @@ export class AccordionComponent extends ComponentBase {
         return this.ej2Instances.hideItem(index, isHidden);
     }
 
+    public refresh(): void {
+        return this.ej2Instances.refresh();
+    }
+
     public removeItem(index: number): void {
         return this.ej2Instances.removeItem(index);
     }

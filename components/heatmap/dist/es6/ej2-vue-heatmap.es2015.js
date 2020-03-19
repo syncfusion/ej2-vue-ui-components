@@ -49,8 +49,14 @@ let HeatMapComponent = class HeatMapComponent extends ComponentBase {
     clearSelection() {
         return this.ej2Instances.clearSelection();
     }
+    export(type, fileName, orientation) {
+        return this.ej2Instances.export(type, fileName, orientation);
+    }
     heatMapMouseClick(e) {
         return this.ej2Instances.heatMapMouseClick(e);
+    }
+    print() {
+        return this.ej2Instances.print();
     }
     refresh() {
         return this.ej2Instances.refresh();

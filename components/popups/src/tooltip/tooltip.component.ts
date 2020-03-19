@@ -51,11 +51,11 @@ export class TooltipComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public close(animation: Object): void {
+    public close(animation?: Object): void {
         return this.ej2Instances.close(animation);
     }
 
-    public open(element: Object, animation: Object): void {
+    public open(element?: Object, animation?: Object): void {
         return this.ej2Instances.open(element, animation);
     }
 

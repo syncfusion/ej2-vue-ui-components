@@ -306,7 +306,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['activeSheetTab', 'allowCellFormatting', 'allowEditing', 'allowFiltering', 'allowHyperlink', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileItemSelect', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'openComplete', 'openFailure', 'saveComplete', 'select', 'sortComplete'];
+const properties = ['activeSheetTab', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 const modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -351,6 +351,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     addCustomFunction(functionHandler, functionName) {
         return this.ej2Instances.addCustomFunction(functionHandler, functionName);
     }
+    addDataValidation(rules, range) {
+        return this.ej2Instances.addDataValidation(rules, range);
+    }
     addDefinedName(definedName) {
         return this.ej2Instances.addDefinedName(definedName);
     }
@@ -359,6 +362,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     addHyperlink(hyperlink, address) {
         return this.ej2Instances.addHyperlink(hyperlink, address);
+    }
+    addInvalidHighlight(range) {
+        return this.ej2Instances.addInvalidHighlight(range);
     }
     addRibbonTabs(items, insertBefore) {
         return this.ej2Instances.addRibbonTabs(items, insertBefore);
@@ -381,11 +387,17 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     closeEdit() {
         return this.ej2Instances.closeEdit();
     }
+    computeExpression(formula) {
+        return this.ej2Instances.computeExpression(formula);
+    }
     copy(address) {
         return this.ej2Instances.copy(address);
     }
     cut(address) {
         return this.ej2Instances.cut(address);
+    }
+    delete(startIndex, endIndex, model) {
+        return this.ej2Instances.delete(startIndex, endIndex, model);
     }
     enableContextMenuItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
@@ -404,6 +416,12 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     filter(filterOptions, range) {
         return this.ej2Instances.filter(filterOptions, range);
+    }
+    find(args) {
+        return this.ej2Instances.find(args);
+    }
+    findHandler(args) {
+        return this.ej2Instances.findHandler(args);
     }
     getData(address) {
         return this.ej2Instances.getData(address);
@@ -426,6 +444,15 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     hideToolbarItems(tab, indexes, hide) {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     }
+    insertColumn(startColumn, endColumn) {
+        return this.ej2Instances.insertColumn(startColumn, endColumn);
+    }
+    insertRow(startRow, endRow) {
+        return this.ej2Instances.insertRow(startRow, endRow);
+    }
+    insertSheet(startSheet, endSheet) {
+        return this.ej2Instances.insertSheet(startSheet, endSheet);
+    }
     numberFormat(format, range) {
         return this.ej2Instances.numberFormat(format, range);
     }
@@ -438,17 +465,32 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     paste(address, type) {
         return this.ej2Instances.paste(address, type);
     }
+    protectSheet(protectSettings) {
+        return this.ej2Instances.protectSheet(protectSettings);
+    }
     redo() {
         return this.ej2Instances.redo();
     }
     removeContextMenuItems(items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     }
+    removeDataValidation(range) {
+        return this.ej2Instances.removeDataValidation(range);
+    }
     removeDefinedName(definedName, scope) {
         return this.ej2Instances.removeDefinedName(definedName, scope);
     }
     removeHyperlink(range) {
         return this.ej2Instances.removeHyperlink(range);
+    }
+    removeInvalidHighlight(range) {
+        return this.ej2Instances.removeInvalidHighlight(range);
+    }
+    replace(args) {
+        return this.ej2Instances.replace(args);
+    }
+    replaceHandler(args) {
+        return this.ej2Instances.replaceHandler(args);
     }
     resize() {
         return this.ej2Instances.resize();
@@ -461,6 +503,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     selectRange(address) {
         return this.ej2Instances.selectRange(address);
+    }
+    setBorder(style, range, type) {
+        return this.ej2Instances.setBorder(style, range, type);
     }
     setColWidth(width, colIndex, sheetIndex) {
         return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
@@ -488,6 +533,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     updateUndoRedoCollection(args) {
         return this.ej2Instances.updateUndoRedoCollection(args);
+    }
+    wrap(address, wrap) {
+        return this.ej2Instances.wrap(address, wrap);
     }
 };
 SpreadsheetComponent = __decorate$6([

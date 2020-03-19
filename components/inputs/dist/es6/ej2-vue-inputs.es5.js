@@ -400,8 +400,8 @@ var SliderComponent = /** @__PURE__ @class */ (function (_super) {
     SliderComponent.prototype.reposition = function () {
         return this.ej2Instances.reposition();
     };
-    SliderComponent.prototype.setTooltip = function () {
-        return this.ej2Instances.setTooltip();
+    SliderComponent.prototype.setTooltip = function (args) {
+        return this.ej2Instances.setTooltip(args);
     };
     SliderComponent = __decorate$3([
         EJComponentDecorator({
@@ -560,8 +560,8 @@ var UploaderComponent = /** @__PURE__ @class */ (function (_super) {
     UploaderComponent.prototype.clearAll = function () {
         return this.ej2Instances.clearAll();
     };
-    UploaderComponent.prototype.createFileList = function (fileData) {
-        return this.ej2Instances.createFileList(fileData);
+    UploaderComponent.prototype.createFileList = function (fileData, isSelectedFile) {
+        return this.ej2Instances.createFileList(fileData, isSelectedFile);
     };
     UploaderComponent.prototype.getFilesData = function (index) {
         return this.ej2Instances.getFilesData(index);

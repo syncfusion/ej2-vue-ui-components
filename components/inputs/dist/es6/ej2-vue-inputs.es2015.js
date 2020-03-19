@@ -333,8 +333,8 @@ let SliderComponent = class SliderComponent extends ComponentBase {
     reposition() {
         return this.ej2Instances.reposition();
     }
-    setTooltip() {
-        return this.ej2Instances.setTooltip();
+    setTooltip(args) {
+        return this.ej2Instances.setTooltip(args);
     }
 };
 SliderComponent = __decorate$3([
@@ -453,8 +453,8 @@ let UploaderComponent = class UploaderComponent extends ComponentBase {
     clearAll() {
         return this.ej2Instances.clearAll();
     }
-    createFileList(fileData) {
-        return this.ej2Instances.createFileList(fileData);
+    createFileList(fileData, isSelectedFile) {
+        return this.ej2Instances.createFileList(fileData, isSelectedFile);
     }
     getFilesData(index) {
         return this.ej2Instances.getFilesData(index);

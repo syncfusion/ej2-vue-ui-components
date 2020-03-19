@@ -65,8 +65,14 @@ var HeatMapComponent = /** @__PURE__ @class */ (function (_super) {
     HeatMapComponent.prototype.clearSelection = function () {
         return this.ej2Instances.clearSelection();
     };
+    HeatMapComponent.prototype.export = function (type, fileName, orientation) {
+        return this.ej2Instances.export(type, fileName, orientation);
+    };
     HeatMapComponent.prototype.heatMapMouseClick = function (e) {
         return this.ej2Instances.heatMapMouseClick(e);
+    };
+    HeatMapComponent.prototype.print = function () {
+        return this.ej2Instances.print();
     };
     HeatMapComponent.prototype.refresh = function () {
         return this.ej2Instances.refresh();

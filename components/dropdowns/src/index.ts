@@ -4,3 +4,4 @@ export { ComboBoxComponent, ComboBoxPlugin } from './combo-box/combobox.componen
 export { AutoCompleteComponent, AutoCompletePlugin } from './auto-complete/autocomplete.component';
 export { MultiSelectComponent, MultiSelectPlugin } from './multi-select/multiselect.component';
 export { ListBoxComponent, ListBoxPlugin } from './list-box/listbox.component';
+export { DropDownTreeComponent, DropDownTreePlugin } from './drop-down-tree/dropdowntree.component';

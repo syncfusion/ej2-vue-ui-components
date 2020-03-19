@@ -84,8 +84,8 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.enableToolbarItem = function (items, muteToolbarUpdate) {
         return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
     };
-    RichTextEditorComponent.prototype.executeCommand = function (commandName, value) {
-        return this.ej2Instances.executeCommand(commandName, value);
+    RichTextEditorComponent.prototype.executeCommand = function (commandName, value, option) {
+        return this.ej2Instances.executeCommand(commandName, value, option);
     };
     RichTextEditorComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();

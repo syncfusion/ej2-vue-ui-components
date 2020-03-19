@@ -1,4 +1,4 @@
-import { AutoComplete, ComboBox, DropDownList, ListBox, MultiSelect } from '@syncfusion/ej2-dropdowns';
+import { AutoComplete, ComboBox, DropDownList, DropDownTree, ListBox, MultiSelect } from '@syncfusion/ej2-dropdowns';
 import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
@@ -571,6 +571,100 @@ const ListBoxPlugin = {
     }
 };
 
-export { DropDownListComponent, DropDownListPlugin, ComboBoxComponent, ComboBoxPlugin, AutoCompleteComponent, AutoCompletePlugin, MultiSelectComponent, MultiSelectPlugin, ListBoxComponent, ListBoxPlugin };
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+const properties$5 = ['actionFailureTemplate', 'allowMultiSelection', 'changeOnBlur', 'cssClass', 'delimiterChar', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'floatLabelType', 'footerTemplate', 'headerTemplate', 'htmlAttributes', 'itemTemplate', 'locale', 'mode', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'readonly', 'selectAllText', 'showCheckBox', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'treeSettings', 'unSelectAllText', 'value', 'width', 'zIndex', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'focus', 'open', 'select'];
+const modelProps$5 = ['value'];
+/**
+ * The DropDownTree component contains a list of predefined values from which you can choose a single or multiple values.
+ * ```html
+ * <ejs-dropdowntree></ejs-dropdowntree>
+ * ```
+ */
+let DropDownTreeComponent = class DropDownTreeComponent extends ComponentBase {
+    constructor() {
+        super();
+        this.propKeys = properties$5;
+        this.models = modelProps$5;
+        this.hasChildDirective = false;
+        this.hasInjectedModules = false;
+        this.tagMapper = {};
+        this.tagNameMapper = {};
+        this.ej2Instances = new DropDownTree({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
+        this.bindProperties();
+        this.ej2Instances._setProperties = this.ej2Instances.setProperties;
+        this.ej2Instances.setProperties = this.setProperties;
+    }
+    setProperties(prop, muteOnChange) {
+        if (this.ej2Instances && this.ej2Instances._setProperties) {
+            this.ej2Instances._setProperties(prop, muteOnChange);
+        }
+        if (prop && this.models && this.models.length) {
+            Object.keys(prop).map((key) => {
+                this.models.map((model) => {
+                    if ((key === model) && !(/datasource/i.test(key))) {
+                        this.$emit('update:' + key, prop[key]);
+                    }
+                });
+            });
+        }
+    }
+    trigger(eventName, eventProp, successHandler) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
+        }
+    }
+    render(createElement) {
+        return createElement('input', this.$slots.default);
+    }
+    clear() {
+        return this.ej2Instances.clear();
+    }
+    ensureVisible(item) {
+        return this.ej2Instances.ensureVisible(item);
+    }
+    getData(item) {
+        return this.ej2Instances.getData(item);
+    }
+    hidePopup() {
+        return this.ej2Instances.hidePopup();
+    }
+    selectAll(state) {
+        return this.ej2Instances.selectAll(state);
+    }
+    showPopup() {
+        return this.ej2Instances.showPopup();
+    }
+};
+DropDownTreeComponent = __decorate$5([
+    EJComponentDecorator({
+        props: properties$5,
+        model: {
+            event: 'modelchanged'
+        }
+    })
+], DropDownTreeComponent);
+const DropDownTreePlugin = {
+    name: 'ejs-dropdowntree',
+    install(Vue) {
+        Vue.component(DropDownTreePlugin.name, DropDownTreeComponent);
+    }
+};
+
+export { DropDownListComponent, DropDownListPlugin, ComboBoxComponent, ComboBoxPlugin, AutoCompleteComponent, AutoCompletePlugin, MultiSelectComponent, MultiSelectPlugin, ListBoxComponent, ListBoxPlugin, DropDownTreeComponent, DropDownTreePlugin };
 export * from '@syncfusion/ej2-dropdowns';
 //# sourceMappingURL=ej2-vue-dropdowns.es2015.js.map
