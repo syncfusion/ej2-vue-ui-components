@@ -96,11 +96,11 @@ export class QueryBuilderComponent extends ComponentBase {
         return this.ej2Instances.getRulesFromSql(sqlString);
     }
 
-    public getSqlFromRules(rule: Object, allowEscape?: boolean): string {
+    public getSqlFromRules(rule?: Object, allowEscape?: boolean): string {
         return this.ej2Instances.getSqlFromRules(rule, allowEscape);
     }
 
-    public getValidRules(currentRule: Object): Object {
+    public getValidRules(currentRule?: Object): Object {
         return this.ej2Instances.getValidRules(currentRule);
     }
 

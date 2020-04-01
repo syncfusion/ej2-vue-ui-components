@@ -20,7 +20,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['animation', 'checkBoxPosition', 'cssClass', 'dataSource', 'enable', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'groupTemplate', 'headerTemplate', 'headerTitle', 'height', 'htmlAttributes', 'locale', 'query', 'showCheckBox', 'showHeader', 'showIcon', 'sortOrder', 'template', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'select'];
+var properties = ['animation', 'checkBoxPosition', 'cssClass', 'dataSource', 'enable', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'groupTemplate', 'headerTemplate', 'headerTitle', 'height', 'htmlAttributes', 'locale', 'query', 'showCheckBox', 'showHeader', 'showIcon', 'sortOrder', 'template', 'virtualCheckBox', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'select'];
 var modelProps = [];
 /**
  * Represents VueJS ListView Component
@@ -74,41 +74,41 @@ var ListViewComponent = /** @__PURE__ @class */ (function (_super) {
     ListViewComponent.prototype.checkItem = function (item) {
         return this.ej2Instances.checkItem(item);
     };
-    ListViewComponent.prototype.disableItem = function (obj) {
-        return this.ej2Instances.disableItem(obj);
+    ListViewComponent.prototype.disableItem = function (item) {
+        return this.ej2Instances.disableItem(item);
     };
-    ListViewComponent.prototype.enableItem = function (obj) {
-        return this.ej2Instances.enableItem(obj);
+    ListViewComponent.prototype.enableItem = function (item) {
+        return this.ej2Instances.enableItem(item);
     };
-    ListViewComponent.prototype.findItem = function (obj) {
-        return this.ej2Instances.findItem(obj);
+    ListViewComponent.prototype.findItem = function (item) {
+        return this.ej2Instances.findItem(item);
     };
     ListViewComponent.prototype.getSelectedItems = function () {
         return this.ej2Instances.getSelectedItems();
     };
-    ListViewComponent.prototype.hideItem = function (obj) {
-        return this.ej2Instances.hideItem(obj);
+    ListViewComponent.prototype.hideItem = function (item) {
+        return this.ej2Instances.hideItem(item);
     };
     ListViewComponent.prototype.refreshItemHeight = function () {
         return this.ej2Instances.refreshItemHeight();
     };
-    ListViewComponent.prototype.removeItem = function (obj) {
-        return this.ej2Instances.removeItem(obj);
+    ListViewComponent.prototype.removeItem = function (item) {
+        return this.ej2Instances.removeItem(item);
     };
-    ListViewComponent.prototype.removeMultipleItems = function (obj) {
-        return this.ej2Instances.removeMultipleItems(obj);
+    ListViewComponent.prototype.removeMultipleItems = function (item) {
+        return this.ej2Instances.removeMultipleItems(item);
     };
     ListViewComponent.prototype.requiredModules = function () {
         return this.ej2Instances.requiredModules();
     };
-    ListViewComponent.prototype.selectItem = function (obj) {
-        return this.ej2Instances.selectItem(obj);
+    ListViewComponent.prototype.selectItem = function (item) {
+        return this.ej2Instances.selectItem(item);
     };
-    ListViewComponent.prototype.selectMultipleItems = function (obj) {
-        return this.ej2Instances.selectMultipleItems(obj);
+    ListViewComponent.prototype.selectMultipleItems = function (item) {
+        return this.ej2Instances.selectMultipleItems(item);
     };
-    ListViewComponent.prototype.showItem = function (obj) {
-        return this.ej2Instances.showItem(obj);
+    ListViewComponent.prototype.showItem = function (item) {
+        return this.ej2Instances.showItem(item);
     };
     ListViewComponent.prototype.uncheckAllItems = function () {
         return this.ej2Instances.uncheckAllItems();

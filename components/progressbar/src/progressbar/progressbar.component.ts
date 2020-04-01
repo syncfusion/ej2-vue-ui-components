@@ -4,7 +4,7 @@ import { ProgressBar } from '@syncfusion/ej2-progressbar';
 import { ProgressBarAnnotationsDirective, ProgressBarAnnotationDirective, ProgressBarAnnotationsPlugin, ProgressBarAnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isIndeterminate', 'label', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'progressCompleted', 'textRender', 'valueChanged'];
+export const properties: string[] = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isIndeterminate', 'label', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
 export const modelProps: string[] = [];
 
 /**
@@ -52,6 +52,22 @@ export class ProgressBarComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public calculateProgressRange(min: number, max: number, value: number): number {
+        return this.ej2Instances.calculateProgressRange(min, max, value);
+    }
+
+    public calculateSegmentSize(width: number, thickness: number): string {
+        return this.ej2Instances.calculateSegmentSize(width, thickness);
+    }
+
+    public createClipPath(clipPath?: Object, width?: number, d?: string, x?: number, refresh?: boolean, thickness?: number): Object {
+        return this.ej2Instances.createClipPath(clipPath, width, d, x, refresh, thickness);
+    }
+
+    public getPathLine(x: number, width: number, thickness: number): string {
+        return this.ej2Instances.getPathLine(x, width, thickness);
+    }
+
     public removeSvg(): void {
         return this.ej2Instances.removeSvg();
     }

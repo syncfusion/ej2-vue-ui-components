@@ -162,47 +162,47 @@ var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let RangeSettingsDirective = class RangeSettingsDirective extends Vue {
+let RangesDirective = class RangesDirective extends Vue {
     render() {
         return;
     }
 };
-RangeSettingsDirective = __decorate$3([
+RangesDirective = __decorate$3([
     EJComponentDecorator({})
-], RangeSettingsDirective);
-const RangeSettingsPlugin = {
-    name: 'e-rangesettings',
+], RangesDirective);
+const RangesPlugin = {
+    name: 'e-ranges',
     install(Vue$$1) {
-        Vue$$1.component(RangeSettingsPlugin.name, RangeSettingsDirective);
+        Vue$$1.component(RangesPlugin.name, RangesDirective);
     }
 };
 /**
- * `e-rangesetting` directive represent a range setting of the VueJS Spreadsheet.
+ * `e-range` directive represent a range of the VueJS Spreadsheet.
  * It must be contained in a `e-sheet` directive.
  * ```vue
  * <ejs-spreadsheet>
  *   <e-sheets>
  *    <e-sheet>
- *    <e-rangesettings>
- *    <e-rangesetting :dataSource='data'></e-rangesetting>
- *    </e-rangesettings>
+ *    <e-ranges>
+ *    <e-range :dataSource='data'></e-range>
+ *    </e-ranges>
  *    </e-sheet>
  *   </e-sheets>
  * </ejs-spreadsheet>
  * ```
  */
-let RangeSettingDirective = class RangeSettingDirective extends Vue {
+let RangeDirective = class RangeDirective extends Vue {
     render() {
         return;
     }
 };
-RangeSettingDirective = __decorate$3([
+RangeDirective = __decorate$3([
     EJComponentDecorator({})
-], RangeSettingDirective);
-const RangeSettingPlugin = {
-    name: 'e-rangesetting',
+], RangeDirective);
+const RangePlugin = {
+    name: 'e-range',
     install(Vue$$1) {
-        Vue$$1.component(RangeSettingPlugin.name, RangeSettingDirective);
+        Vue$$1.component(RangePlugin.name, RangeDirective);
     }
 };
 
@@ -306,7 +306,7 @@ var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['activeSheetTab', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+const properties = ['activeSheetIndex', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 const modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -321,8 +321,8 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
         this.models = modelProps;
         this.hasChildDirective = true;
         this.hasInjectedModules = true;
-        this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-rangesettings": "e-rangesetting" } }, "e-definednames": "e-definedname" };
-        this.tagNameMapper = { "e-rangesettings": "e-rangeSettings", "e-definednames": "e-definedNames" };
+        this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range" } }, "e-definednames": "e-definedname" };
+        this.tagNameMapper = { "e-ranges": "e-range", "e-definednames": "e-definedNames" };
         this.ej2Instances = new Spreadsheet({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -420,6 +420,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     find(args) {
         return this.ej2Instances.find(args);
     }
+    findAll(value, mode, isCSen, isEMatch, sheetIndex) {
+        return this.ej2Instances.findAll(value, mode, isCSen, isEMatch, sheetIndex);
+    }
     findHandler(args) {
         return this.ej2Instances.findHandler(args);
     }
@@ -453,6 +456,12 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     insertSheet(startSheet, endSheet) {
         return this.ej2Instances.insertSheet(startSheet, endSheet);
     }
+    lockCells(range, isLocked) {
+        return this.ej2Instances.lockCells(range, isLocked);
+    }
+    merge(range, type) {
+        return this.ej2Instances.merge(range, type);
+    }
     numberFormat(format, range) {
         return this.ej2Instances.numberFormat(format, range);
     }
@@ -465,8 +474,8 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     paste(address, type) {
         return this.ej2Instances.paste(address, type);
     }
-    protectSheet(protectSettings) {
-        return this.ej2Instances.protectSheet(protectSettings);
+    protectSheet(sheetIndex, protectSettings) {
+        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
     }
     redo() {
         return this.ej2Instances.redo();
@@ -555,13 +564,13 @@ const SpreadsheetPlugin = {
         Vue$$1.component(CellsPlugin.name, CellsDirective);
         Vue$$1.component(ColumnPlugin.name, ColumnDirective);
         Vue$$1.component(ColumnsPlugin.name, ColumnsDirective);
-        Vue$$1.component(RangeSettingPlugin.name, RangeSettingDirective);
-        Vue$$1.component(RangeSettingsPlugin.name, RangeSettingsDirective);
+        Vue$$1.component(RangePlugin.name, RangeDirective);
+        Vue$$1.component(RangesPlugin.name, RangesDirective);
         Vue$$1.component(DefinedNamePlugin.name, DefinedNameDirective);
         Vue$$1.component(DefinedNamesPlugin.name, DefinedNamesDirective);
     }
 };
 
-export { CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangeSettingsDirective, RangeSettingDirective, RangeSettingsPlugin, RangeSettingPlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
+export { CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
 export * from '@syncfusion/ej2-spreadsheet';
 //# sourceMappingURL=ej2-vue-spreadsheet.es2015.js.map

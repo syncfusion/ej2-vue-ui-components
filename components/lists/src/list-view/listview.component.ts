@@ -3,7 +3,7 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { ListView } from '@syncfusion/ej2-lists';
 
 
-export const properties: string[] = ['animation', 'checkBoxPosition', 'cssClass', 'dataSource', 'enable', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'groupTemplate', 'headerTemplate', 'headerTitle', 'height', 'htmlAttributes', 'locale', 'query', 'showCheckBox', 'showHeader', 'showIcon', 'sortOrder', 'template', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'select'];
+export const properties: string[] = ['animation', 'checkBoxPosition', 'cssClass', 'dataSource', 'enable', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'groupTemplate', 'headerTemplate', 'headerTitle', 'height', 'htmlAttributes', 'locale', 'query', 'showCheckBox', 'showHeader', 'showIcon', 'sortOrder', 'template', 'virtualCheckBox', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'select'];
 export const modelProps: string[] = [];
 
 /**
@@ -67,52 +67,52 @@ export class ListViewComponent extends ComponentBase {
         return this.ej2Instances.checkItem(item);
     }
 
-    public disableItem(obj: Object | Object | Object): void {
-        return this.ej2Instances.disableItem(obj);
+    public disableItem(item: Object | Object | Object): void {
+        return this.ej2Instances.disableItem(item);
     }
 
-    public enableItem(obj: Object | Object | Object): void {
-        return this.ej2Instances.enableItem(obj);
+    public enableItem(item: Object | Object | Object): void {
+        return this.ej2Instances.enableItem(item);
     }
 
-    public findItem(obj: Object | Object | Object): Object {
-        return this.ej2Instances.findItem(obj);
+    public findItem(item: Object | Object | Object): Object {
+        return this.ej2Instances.findItem(item);
     }
 
     public getSelectedItems(): Object | Object | Object | Object {
         return this.ej2Instances.getSelectedItems();
     }
 
-    public hideItem(obj: Object | Object | Object): void {
-        return this.ej2Instances.hideItem(obj);
+    public hideItem(item: Object | Object | Object): void {
+        return this.ej2Instances.hideItem(item);
     }
 
     public refreshItemHeight(): void {
         return this.ej2Instances.refreshItemHeight();
     }
 
-    public removeItem(obj: Object | Object | Object): void {
-        return this.ej2Instances.removeItem(obj);
+    public removeItem(item: Object | Object | Object): void {
+        return this.ej2Instances.removeItem(item);
     }
 
-    public removeMultipleItems(obj: Object[] | Object[] | Object[]): void {
-        return this.ej2Instances.removeMultipleItems(obj);
+    public removeMultipleItems(item: Object[] | Object[] | Object[]): void {
+        return this.ej2Instances.removeMultipleItems(item);
     }
 
     public requiredModules(): Object[] {
         return this.ej2Instances.requiredModules();
     }
 
-    public selectItem(obj: Object | Object | Object): void {
-        return this.ej2Instances.selectItem(obj);
+    public selectItem(item: Object | Object | Object): void {
+        return this.ej2Instances.selectItem(item);
     }
 
-    public selectMultipleItems(obj: Object[] | Object[] | Object[]): void {
-        return this.ej2Instances.selectMultipleItems(obj);
+    public selectMultipleItems(item: Object[] | Object[] | Object[]): void {
+        return this.ej2Instances.selectMultipleItems(item);
     }
 
-    public showItem(obj: Object | Object | Object): void {
-        return this.ej2Instances.showItem(obj);
+    public showItem(item: Object | Object | Object): void {
+        return this.ej2Instances.showItem(item);
     }
 
     public uncheckAllItems(): void {

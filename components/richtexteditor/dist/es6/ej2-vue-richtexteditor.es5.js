@@ -71,6 +71,14 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
                 this.$emit('modelchanged', eventProp[propKey]);
             }
         }
+        else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/currentView|selectedDate/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
         if (this.ej2Instances && this.ej2Instances._trigger) {
             this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }

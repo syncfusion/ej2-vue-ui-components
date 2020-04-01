@@ -79,7 +79,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isIndeterminate', 'label', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'progressCompleted', 'textRender', 'valueChanged'];
+var properties = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isIndeterminate', 'label', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
 var modelProps = [];
 /**
  * Represents Vuejs ProgressBar Component
@@ -120,6 +120,18 @@ var ProgressBarComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ProgressBarComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
+    };
+    ProgressBarComponent.prototype.calculateProgressRange = function (min, max, value) {
+        return this.ej2Instances.calculateProgressRange(min, max, value);
+    };
+    ProgressBarComponent.prototype.calculateSegmentSize = function (width, thickness) {
+        return this.ej2Instances.calculateSegmentSize(width, thickness);
+    };
+    ProgressBarComponent.prototype.createClipPath = function (clipPath, width, d, x, refresh, thickness) {
+        return this.ej2Instances.createClipPath(clipPath, width, d, x, refresh, thickness);
+    };
+    ProgressBarComponent.prototype.getPathLine = function (x, width, thickness) {
+        return this.ej2Instances.getPathLine(x, width, thickness);
     };
     ProgressBarComponent.prototype.removeSvg = function () {
         return this.ej2Instances.removeSvg();

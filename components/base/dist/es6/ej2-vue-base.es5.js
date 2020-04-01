@@ -41,6 +41,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
     };
     ComponentBase.prototype.mounted = function () {
         this.ej2Instances.isVue = true;
+        this.$el.style.visibility = '';
         this.ej2Instances.appendTo(this.$el);
     };
     ComponentBase.prototype.getInjectedServices = function () {
@@ -70,6 +71,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
     };
     ComponentBase.prototype.beforeDestroy = function () {
         this.ej2Instances.destroy();
+        this.$el.style.visibility = 'hidden';
     };
     ComponentBase.prototype.bindProperties = function () {
         var options = {};

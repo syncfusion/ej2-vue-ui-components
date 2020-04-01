@@ -60,6 +60,13 @@ export class RadioButtonComponent extends ComponentBase {
                 (this as any).$emit('update:'+ propKey, eventProp[propKey]);
                 (this as any).$emit('modelchanged', eventProp[propKey]);
             }
+        } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+            let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
+            let propKey: string = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                (this as any).$emit('modelchanged', eventProp[propKey]);
+            }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
             this.ej2Instances._trigger(eventName, eventProp, successHandler);

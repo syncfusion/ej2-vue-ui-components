@@ -573,6 +573,14 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
                 this.$emit('modelchanged', eventProp[propKey]);
             }
         }
+        else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+            var key = this.models.toString().match(/currentView|selectedDate/) || [];
+            var propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
         if (this.ej2Instances && this.ej2Instances._trigger) {
             this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
@@ -622,8 +630,8 @@ var MapsComponent = /** @__PURE__ @class */ (function (_super) {
     MapsComponent.prototype.onMouseMove = function (e) {
         return this.ej2Instances.onMouseMove(e);
     };
-    MapsComponent.prototype.panByDirection = function (direction) {
-        return this.ej2Instances.panByDirection(direction);
+    MapsComponent.prototype.panByDirection = function (direction, mouseLocation) {
+        return this.ej2Instances.panByDirection(direction, mouseLocation);
     };
     MapsComponent.prototype.pointToLatLong = function (pageX, pageY) {
         return this.ej2Instances.pointToLatLong(pageX, pageY);

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.1.42 (2020-04-01)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#261189`- Now, you can type the 01/01/1970 date value in Edge and IE browsers.
+
 ## 17.4.50 (2020-02-18)
 
 ### DateRangePicker

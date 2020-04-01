@@ -20,6 +20,7 @@ class ComponentBase extends Vue {
     }
     mounted() {
         this.ej2Instances.isVue = true;
+        this.$el.style.visibility = '';
         this.ej2Instances.appendTo(this.$el);
     }
     getInjectedServices() {
@@ -49,6 +50,7 @@ class ComponentBase extends Vue {
     }
     beforeDestroy() {
         this.ej2Instances.destroy();
+        this.$el.style.visibility = 'hidden';
     }
     bindProperties() {
         let options = {};

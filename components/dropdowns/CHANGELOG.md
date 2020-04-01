@@ -2,6 +2,27 @@
 
 ## [Unreleased]
 
+## 18.1.42 (2020-04-01)
+
+### ListBox
+
+#### Bug Fixes
+
+- `moveTo` method is not working properly when listbox have disabled items has been fixed.
+
+### MultiSelect
+
+#### Bug Fixes
+
+`#260127`- Issue with "floating label misalignment while selecting multiple values" has been resolved.
+
+
+### DropDownList
+
+#### Bug Fixes
+
+- `#266084` - Now, placeholder will display properly.
+
 ## 18.1.36-beta (2020-03-19)
 
 ### Common

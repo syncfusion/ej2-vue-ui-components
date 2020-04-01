@@ -25,6 +25,7 @@ export class ComponentBase extends Vue {
 
     public mounted(): void {
         this.ej2Instances.isVue = true;
+        (this.$el as any).style.visibility = '';
         this.ej2Instances.appendTo(this.$el);
     }
     public getInjectedServices(): Object[] {
@@ -55,6 +56,7 @@ export class ComponentBase extends Vue {
 
     public beforeDestroy(): void {
         this.ej2Instances.destroy();
+        (this.$el as any).style.visibility = 'hidden';
     }
 
     public bindProperties(): void {

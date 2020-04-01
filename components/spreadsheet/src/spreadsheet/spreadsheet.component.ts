@@ -4,12 +4,12 @@ import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './cells.directive'
 import { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
-import { RangeSettingsDirective, RangeSettingDirective, RangeSettingsPlugin, RangeSettingPlugin } from './rangesettings.directive'
+import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './range.directive'
 import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sheets.directive'
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['activeSheetTab', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 /**
@@ -28,8 +28,8 @@ export class SpreadsheetComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":"e-cell"}},"e-columns":"e-column","e-rangesettings":"e-rangesetting"}},"e-definednames":"e-definedname"};
-    public tagNameMapper: Object = {"e-rangesettings":"e-rangeSettings","e-definednames":"e-definedNames"};
+    public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":"e-cell"}},"e-columns":"e-column","e-ranges":"e-range"}},"e-definednames":"e-definedname"};
+    public tagNameMapper: Object = {"e-ranges":"e-range","e-definednames":"e-definedNames"};
     
     constructor() {
         super();
@@ -157,6 +157,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.find(args);
     }
 
+    public findAll(value: string, mode?: string, isCSen?: boolean, isEMatch?: boolean, sheetIndex?: number): string[] {
+        return this.ej2Instances.findAll(value, mode, isCSen, isEMatch, sheetIndex);
+    }
+
     public findHandler(args: Object): void {
         return this.ej2Instances.findHandler(args);
     }
@@ -201,6 +205,14 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.insertSheet(startSheet, endSheet);
     }
 
+    public lockCells(range?: string, isLocked?: boolean): void {
+        return this.ej2Instances.lockCells(range, isLocked);
+    }
+
+    public merge(range?: string, type?: Object): void {
+        return this.ej2Instances.merge(range, type);
+    }
+
     public numberFormat(format: string, range?: string): void {
         return this.ej2Instances.numberFormat(format, range);
     }
@@ -217,8 +229,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.paste(address, type);
     }
 
-    public protectSheet(protectSettings?: Object): void {
-        return this.ej2Instances.protectSheet(protectSettings);
+    public protectSheet(sheetIndex?: number | string, protectSettings?: Object): void {
+        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
     }
 
     public redo(): void {
@@ -273,11 +285,11 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.setBorder(style, range, type);
     }
 
-    public setColWidth(width: number | string, colIndex: number, sheetIndex: number): void {
+    public setColWidth(width: number | string, colIndex: number, sheetIndex?: number): void {
         return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
     }
 
-    public setRowHeight(height: number | string, rowIndex: number, sheetIndex: number): void {
+    public setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number): void {
         return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex);
     }
 
@@ -326,8 +338,8 @@ export const SpreadsheetPlugin = {
         Vue.component(CellsPlugin.name, CellsDirective);
         Vue.component(ColumnPlugin.name, ColumnDirective);
         Vue.component(ColumnsPlugin.name, ColumnsDirective);
-        Vue.component(RangeSettingPlugin.name, RangeSettingDirective);
-        Vue.component(RangeSettingsPlugin.name, RangeSettingsDirective);
+        Vue.component(RangePlugin.name, RangeDirective);
+        Vue.component(RangesPlugin.name, RangesDirective);
         Vue.component(DefinedNamePlugin.name, DefinedNameDirective);
         Vue.component(DefinedNamesPlugin.name, DefinedNamesDirective);
 

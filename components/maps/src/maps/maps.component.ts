@@ -67,6 +67,13 @@ export class MapsComponent extends ComponentBase {
                 (this as any).$emit('update:'+ propKey, eventProp[propKey]);
                 (this as any).$emit('modelchanged', eventProp[propKey]);
             }
+        } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+            let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
+            let propKey: string = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                (this as any).$emit('modelchanged', eventProp[propKey]);
+            }
         }
         if (this.ej2Instances && this.ej2Instances._trigger) {
             this.ej2Instances._trigger(eventName, eventProp, successHandler);
@@ -133,8 +140,8 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.onMouseMove(e);
     }
 
-    public panByDirection(direction: Object): void {
-        return this.ej2Instances.panByDirection(direction);
+    public panByDirection(direction: Object, mouseLocation?: Object | Object): void {
+        return this.ej2Instances.panByDirection(direction, mouseLocation);
     }
 
     public pointToLatLong(pageX: number, pageY: number): Object {

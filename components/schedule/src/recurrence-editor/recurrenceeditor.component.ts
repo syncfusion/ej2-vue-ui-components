@@ -66,6 +66,10 @@ export class RecurrenceEditorComponent extends ComponentBase {
     public setRecurrenceRule(rule: string, startDate: Object): void {
         return this.ej2Instances.setRecurrenceRule(rule, startDate);
     }
+
+    public updateRuleUntilDate(startDate: Object): void {
+        return this.ej2Instances.updateRuleUntilDate(startDate);
+    }
 }
 
 export const RecurrenceEditorPlugin = {
