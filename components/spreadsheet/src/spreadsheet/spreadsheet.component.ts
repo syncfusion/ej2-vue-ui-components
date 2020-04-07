@@ -4,7 +4,7 @@ import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './cells.directive'
 import { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
-import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './range.directive'
+import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './ranges.directive'
 import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sheets.directive'
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
@@ -29,7 +29,7 @@ export class SpreadsheetComponent extends ComponentBase {
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":"e-cell"}},"e-columns":"e-column","e-ranges":"e-range"}},"e-definednames":"e-definedname"};
-    public tagNameMapper: Object = {"e-ranges":"e-range","e-definednames":"e-definedNames"};
+    public tagNameMapper: Object = {"e-definednames":"e-definedNames"};
     
     constructor() {
         super();
@@ -229,8 +229,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.paste(address, type);
     }
 
-    public protectSheet(sheetIndex?: number | string, protectSettings?: Object): void {
-        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
+    public protectSheet(sheet?: number | string, protectSettings?: Object): void {
+        return this.ej2Instances.protectSheet(sheet, protectSettings);
     }
 
     public redo(): void {
@@ -307,6 +307,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public undo(): void {
         return this.ej2Instances.undo();
+    }
+
+    public unprotectSheet(sheet?: number | string): void {
+        return this.ej2Instances.unprotectSheet(sheet);
     }
 
     public updateAction(options: string): void {

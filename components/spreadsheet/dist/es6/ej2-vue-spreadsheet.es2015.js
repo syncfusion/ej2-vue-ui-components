@@ -322,7 +322,7 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
         this.hasChildDirective = true;
         this.hasInjectedModules = true;
         this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range" } }, "e-definednames": "e-definedname" };
-        this.tagNameMapper = { "e-ranges": "e-range", "e-definednames": "e-definedNames" };
+        this.tagNameMapper = { "e-definednames": "e-definedNames" };
         this.ej2Instances = new Spreadsheet({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -474,8 +474,8 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     paste(address, type) {
         return this.ej2Instances.paste(address, type);
     }
-    protectSheet(sheetIndex, protectSettings) {
-        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
+    protectSheet(sheet, protectSettings) {
+        return this.ej2Instances.protectSheet(sheet, protectSettings);
     }
     redo() {
         return this.ej2Instances.redo();
@@ -533,6 +533,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     undo() {
         return this.ej2Instances.undo();
+    }
+    unprotectSheet(sheet) {
+        return this.ej2Instances.unprotectSheet(sheet);
     }
     updateAction(options) {
         return this.ej2Instances.updateAction(options);

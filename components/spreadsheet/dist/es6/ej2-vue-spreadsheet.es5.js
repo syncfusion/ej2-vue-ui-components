@@ -474,7 +474,7 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
         _this.hasChildDirective = true;
         _this.hasInjectedModules = true;
         _this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range" } }, "e-definednames": "e-definedname" };
-        _this.tagNameMapper = { "e-ranges": "e-range", "e-definednames": "e-definedNames" };
+        _this.tagNameMapper = { "e-definednames": "e-definedNames" };
         _this.ej2Instances = new Spreadsheet({});
         _this.bindProperties();
         _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
@@ -628,8 +628,8 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.paste = function (address, type) {
         return this.ej2Instances.paste(address, type);
     };
-    SpreadsheetComponent.prototype.protectSheet = function (sheetIndex, protectSettings) {
-        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
+    SpreadsheetComponent.prototype.protectSheet = function (sheet, protectSettings) {
+        return this.ej2Instances.protectSheet(sheet, protectSettings);
     };
     SpreadsheetComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
@@ -687,6 +687,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.undo = function () {
         return this.ej2Instances.undo();
+    };
+    SpreadsheetComponent.prototype.unprotectSheet = function (sheet) {
+        return this.ej2Instances.unprotectSheet(sheet);
     };
     SpreadsheetComponent.prototype.updateAction = function (options) {
         return this.ej2Instances.updateAction(options);

@@ -2,6 +2,30 @@
 
 ## [Unreleased]
 
+## 18.1.43 (2020-04-07)
+
+### Spreadsheet
+
+#### Breaking Changes
+
+- API name changes.
+
+| Old Property | New Property | 
+|---|---|
+| `rangeSettings` | `ranges` | 
+
+- API name changes.
+
+| Old Property | New Property | 
+|---|---|
+| `rangeSettings` | `ranges` | 
+
+- Tag directive changed for rangeSettings property.
+
+| Old Tag Directive | New Tag Directive | 
+|---|---|
+| `<e-rangesettings>`<br/>`<e-rangesetting>` | `<e-ranges>`<br/>`<e-range>` | 
+
 ## 18.1.42 (2020-04-01)
 
 ### Spreadsheet

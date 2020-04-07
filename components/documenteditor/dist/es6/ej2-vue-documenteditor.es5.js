@@ -20,7 +20,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['acceptTab', 'currentUser', 'defaultPasteOption', 'documentEditorSettings', 'documentName', 'enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableComment', 'enableContextMenu', 'enableCursorOnReadOnly', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableLocalPaste', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableSpellCheck', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'headers', 'isReadOnly', 'layoutType', 'locale', 'pageGap', 'pageOutline', 'serverActionSettings', 'serviceUrl', 'showComments', 'useCtrlClickToFollowHyperlink', 'userColor', 'zIndex', 'zoomFactor', 'beforePaneSwitch', 'commentBegin', 'commentEnd', 'contentChange', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
+var properties = ['acceptTab', 'currentUser', 'defaultPasteOption', 'documentEditorSettings', 'documentName', 'enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableComment', 'enableContextMenu', 'enableCursorOnReadOnly', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableFormField', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableLocalPaste', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableSpellCheck', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'headers', 'isReadOnly', 'layoutType', 'locale', 'pageGap', 'pageOutline', 'serverActionSettings', 'serviceUrl', 'showComments', 'useCtrlClickToFollowHyperlink', 'userColor', 'zIndex', 'zoomFactor', 'afterFormFieldFill', 'beforeFormFieldFill', 'beforePaneSwitch', 'commentBegin', 'commentEnd', 'contentChange', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
 var modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS Document Editor Component
@@ -65,6 +65,9 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     DocumentEditorComponent.prototype.enableAllModules = function () {
         return this.ej2Instances.enableAllModules();
     };
+    DocumentEditorComponent.prototype.exportFormData = function () {
+        return this.ej2Instances.exportFormData();
+    };
     DocumentEditorComponent.prototype.fitPage = function (pageFitType) {
         return this.ej2Instances.fitPage(pageFitType);
     };
@@ -74,11 +77,20 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     DocumentEditorComponent.prototype.getBookmarks = function () {
         return this.ej2Instances.getBookmarks();
     };
+    DocumentEditorComponent.prototype.getFormFieldInfo = function (name) {
+        return this.ej2Instances.getFormFieldInfo(name);
+    };
+    DocumentEditorComponent.prototype.getFormFieldNames = function () {
+        return this.ej2Instances.getFormFieldNames();
+    };
     DocumentEditorComponent.prototype.getStyleNames = function (styleType) {
         return this.ej2Instances.getStyleNames(styleType);
     };
     DocumentEditorComponent.prototype.getStyles = function (styleType) {
         return this.ej2Instances.getStyles(styleType);
+    };
+    DocumentEditorComponent.prototype.importFormData = function (formData) {
+        return this.ej2Instances.importFormData(formData);
     };
     DocumentEditorComponent.prototype.open = function (sfdtText) {
         return this.ej2Instances.open(sfdtText);
@@ -88,6 +100,9 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DocumentEditorComponent.prototype.print = function (printWindow) {
         return this.ej2Instances.print(printWindow);
+    };
+    DocumentEditorComponent.prototype.resetFormFields = function (name) {
+        return this.ej2Instances.resetFormFields(name);
     };
     DocumentEditorComponent.prototype.resize = function (width, height) {
         return this.ej2Instances.resize(width, height);
@@ -112,6 +127,9 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DocumentEditorComponent.prototype.setDefaultSectionFormat = function (sectionFormat) {
         return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+    };
+    DocumentEditorComponent.prototype.setFormFieldInfo = function (name, formFieldInfo) {
+        return this.ej2Instances.setFormFieldInfo(name, formFieldInfo);
     };
     DocumentEditorComponent.prototype.showDialog = function (dialogType) {
         return this.ej2Instances.showDialog(dialogType);

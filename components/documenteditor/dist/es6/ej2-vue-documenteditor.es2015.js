@@ -7,7 +7,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['acceptTab', 'currentUser', 'defaultPasteOption', 'documentEditorSettings', 'documentName', 'enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableComment', 'enableContextMenu', 'enableCursorOnReadOnly', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableLocalPaste', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableSpellCheck', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'headers', 'isReadOnly', 'layoutType', 'locale', 'pageGap', 'pageOutline', 'serverActionSettings', 'serviceUrl', 'showComments', 'useCtrlClickToFollowHyperlink', 'userColor', 'zIndex', 'zoomFactor', 'beforePaneSwitch', 'commentBegin', 'commentEnd', 'contentChange', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
+const properties = ['acceptTab', 'currentUser', 'defaultPasteOption', 'documentEditorSettings', 'documentName', 'enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableComment', 'enableContextMenu', 'enableCursorOnReadOnly', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableFormField', 'enableHyperlinkDialog', 'enableImageResizer', 'enableListDialog', 'enableLocalPaste', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableSpellCheck', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableWordExport', 'headers', 'isReadOnly', 'layoutType', 'locale', 'pageGap', 'pageOutline', 'serverActionSettings', 'serviceUrl', 'showComments', 'useCtrlClickToFollowHyperlink', 'userColor', 'zIndex', 'zoomFactor', 'afterFormFieldFill', 'beforeFormFieldFill', 'beforePaneSwitch', 'commentBegin', 'commentEnd', 'contentChange', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'viewChange', 'zoomFactorChange'];
 const modelProps = [];
 /**
  * Represents the Essential JS 2 VueJS Document Editor Component
@@ -49,6 +49,9 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     enableAllModules() {
         return this.ej2Instances.enableAllModules();
     }
+    exportFormData() {
+        return this.ej2Instances.exportFormData();
+    }
     fitPage(pageFitType) {
         return this.ej2Instances.fitPage(pageFitType);
     }
@@ -58,11 +61,20 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     getBookmarks() {
         return this.ej2Instances.getBookmarks();
     }
+    getFormFieldInfo(name) {
+        return this.ej2Instances.getFormFieldInfo(name);
+    }
+    getFormFieldNames() {
+        return this.ej2Instances.getFormFieldNames();
+    }
     getStyleNames(styleType) {
         return this.ej2Instances.getStyleNames(styleType);
     }
     getStyles(styleType) {
         return this.ej2Instances.getStyles(styleType);
+    }
+    importFormData(formData) {
+        return this.ej2Instances.importFormData(formData);
     }
     open(sfdtText) {
         return this.ej2Instances.open(sfdtText);
@@ -72,6 +84,9 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     }
     print(printWindow) {
         return this.ej2Instances.print(printWindow);
+    }
+    resetFormFields(name) {
+        return this.ej2Instances.resetFormFields(name);
     }
     resize(width, height) {
         return this.ej2Instances.resize(width, height);
@@ -96,6 +111,9 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     }
     setDefaultSectionFormat(sectionFormat) {
         return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+    }
+    setFormFieldInfo(name, formFieldInfo) {
+        return this.ej2Instances.setFormFieldInfo(name, formFieldInfo);
     }
     showDialog(dialogType) {
         return this.ej2Instances.showDialog(dialogType);
