@@ -396,8 +396,8 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     cut(address) {
         return this.ej2Instances.cut(address);
     }
-    delete(startIndex, endIndex, model) {
-        return this.ej2Instances.delete(startIndex, endIndex, model);
+    delete(startIndex, endIndex, model, sheet) {
+        return this.ej2Instances.delete(startIndex, endIndex, model, sheet);
     }
     enableContextMenuItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
@@ -435,11 +435,17 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     goTo(address) {
         return this.ej2Instances.goTo(address);
     }
+    hideColumn(startIndex, endIndex, hide, sheet) {
+        return this.ej2Instances.hideColumn(startIndex, endIndex, hide, sheet);
+    }
     hideFileMenuItems(items, hide, isUniqueId) {
         return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
     }
     hideRibbonTabs(tabs, hide) {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    }
+    hideRow(startIndex, endIndex, hide, sheet) {
+        return this.ej2Instances.hideRow(startIndex, endIndex, hide, sheet);
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
@@ -447,11 +453,11 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     hideToolbarItems(tab, indexes, hide) {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     }
-    insertColumn(startColumn, endColumn) {
-        return this.ej2Instances.insertColumn(startColumn, endColumn);
+    insertColumn(startColumn, endColumn, sheet) {
+        return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
     }
-    insertRow(startRow, endRow) {
-        return this.ej2Instances.insertRow(startRow, endRow);
+    insertRow(startRow, endRow, sheet) {
+        return this.ej2Instances.insertRow(startRow, endRow, sheet);
     }
     insertSheet(startSheet, endSheet) {
         return this.ej2Instances.insertSheet(startSheet, endSheet);
@@ -530,6 +536,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     startEdit() {
         return this.ej2Instances.startEdit();
+    }
+    unMerge(range) {
+        return this.ej2Instances.unMerge(range);
     }
     undo() {
         return this.ej2Instances.undo();

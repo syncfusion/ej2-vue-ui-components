@@ -125,8 +125,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.cut(address);
     }
 
-    public delete(startIndex?: number, endIndex?: number, model?: Object): void {
-        return this.ej2Instances.delete(startIndex, endIndex, model);
+    public delete(startIndex?: number, endIndex?: number, model?: Object, sheet?: string | number): void {
+        return this.ej2Instances.delete(startIndex, endIndex, model, sheet);
     }
 
     public enableContextMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void {
@@ -177,12 +177,20 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.goTo(address);
     }
 
+    public hideColumn(startIndex: number, endIndex?: number, hide?: boolean, sheet?: string | number): void {
+        return this.ej2Instances.hideColumn(startIndex, endIndex, hide, sheet);
+    }
+
     public hideFileMenuItems(items: string[], hide: boolean, isUniqueId?: boolean): void {
         return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
     }
 
     public hideRibbonTabs(tabs: string[], hide: boolean): void {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    }
+
+    public hideRow(startIndex: number, endIndex?: number, hide?: boolean, sheet?: string | number): void {
+        return this.ej2Instances.hideRow(startIndex, endIndex, hide, sheet);
     }
 
     public hideSpinner(): void {
@@ -193,12 +201,12 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     }
 
-    public insertColumn(startColumn?: number | Object[], endColumn?: number): void {
-        return this.ej2Instances.insertColumn(startColumn, endColumn);
+    public insertColumn(startColumn?: number | Object[], endColumn?: number, sheet?: string | number): void {
+        return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
     }
 
-    public insertRow(startRow?: number | Object[], endRow?: number): void {
-        return this.ej2Instances.insertRow(startRow, endRow);
+    public insertRow(startRow?: number | Object[], endRow?: number, sheet?: string | number): void {
+        return this.ej2Instances.insertRow(startRow, endRow, sheet);
     }
 
     public insertSheet(startSheet?: number | Object[], endSheet?: number): void {
@@ -303,6 +311,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public startEdit(): void {
         return this.ej2Instances.startEdit();
+    }
+
+    public unMerge(range: string): void {
+        return this.ej2Instances.unMerge(range);
     }
 
     public undo(): void {

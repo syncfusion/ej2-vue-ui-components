@@ -150,6 +150,10 @@ export class DocumentEditorComponent extends ComponentBase {
     public showOptionsPane(): void {
         return this.ej2Instances.showOptionsPane();
     }
+
+    public updateFields(): void {
+        return this.ej2Instances.updateFields();
+    }
 }
 
 export const DocumentEditorPlugin = {

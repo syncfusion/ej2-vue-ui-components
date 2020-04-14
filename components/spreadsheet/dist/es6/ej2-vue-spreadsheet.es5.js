@@ -550,8 +550,8 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.cut = function (address) {
         return this.ej2Instances.cut(address);
     };
-    SpreadsheetComponent.prototype.delete = function (startIndex, endIndex, model) {
-        return this.ej2Instances.delete(startIndex, endIndex, model);
+    SpreadsheetComponent.prototype.delete = function (startIndex, endIndex, model, sheet) {
+        return this.ej2Instances.delete(startIndex, endIndex, model, sheet);
     };
     SpreadsheetComponent.prototype.enableContextMenuItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
@@ -589,11 +589,17 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.goTo = function (address) {
         return this.ej2Instances.goTo(address);
     };
+    SpreadsheetComponent.prototype.hideColumn = function (startIndex, endIndex, hide, sheet) {
+        return this.ej2Instances.hideColumn(startIndex, endIndex, hide, sheet);
+    };
     SpreadsheetComponent.prototype.hideFileMenuItems = function (items, hide, isUniqueId) {
         return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
     };
     SpreadsheetComponent.prototype.hideRibbonTabs = function (tabs, hide) {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    };
+    SpreadsheetComponent.prototype.hideRow = function (startIndex, endIndex, hide, sheet) {
+        return this.ej2Instances.hideRow(startIndex, endIndex, hide, sheet);
     };
     SpreadsheetComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
@@ -601,11 +607,11 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.hideToolbarItems = function (tab, indexes, hide) {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     };
-    SpreadsheetComponent.prototype.insertColumn = function (startColumn, endColumn) {
-        return this.ej2Instances.insertColumn(startColumn, endColumn);
+    SpreadsheetComponent.prototype.insertColumn = function (startColumn, endColumn, sheet) {
+        return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
     };
-    SpreadsheetComponent.prototype.insertRow = function (startRow, endRow) {
-        return this.ej2Instances.insertRow(startRow, endRow);
+    SpreadsheetComponent.prototype.insertRow = function (startRow, endRow, sheet) {
+        return this.ej2Instances.insertRow(startRow, endRow, sheet);
     };
     SpreadsheetComponent.prototype.insertSheet = function (startSheet, endSheet) {
         return this.ej2Instances.insertSheet(startSheet, endSheet);
@@ -684,6 +690,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.startEdit = function () {
         return this.ej2Instances.startEdit();
+    };
+    SpreadsheetComponent.prototype.unMerge = function (range) {
+        return this.ej2Instances.unMerge(range);
     };
     SpreadsheetComponent.prototype.undo = function () {
         return this.ej2Instances.undo();

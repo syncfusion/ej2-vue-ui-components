@@ -121,6 +121,9 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     showOptionsPane() {
         return this.ej2Instances.showOptionsPane();
     }
+    updateFields() {
+        return this.ej2Instances.updateFields();
+    }
 };
 DocumentEditorComponent = __decorate([
     EJComponentDecorator({

@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 18.1.44 (2020-04-14)
+
+### DatePicker
+
+#### Bug Fixes
+
+`#270247` - Issue with "script error throws while changing the min and max value dynamically" has been resolved.
+
+
 ## 18.1.43 (2020-04-07)
 
 ### TimePicker
