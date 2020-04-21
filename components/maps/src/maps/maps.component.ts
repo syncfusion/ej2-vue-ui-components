@@ -160,7 +160,7 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.removeLayer(index);
     }
 
-    public shapeSelection(layerIndex: number, propertyName: string, name: string, enable?: boolean): void {
+    public shapeSelection(layerIndex: number, propertyName: string | string[], name: string, enable?: boolean): void {
         return this.ej2Instances.shapeSelection(layerIndex, propertyName, name, enable);
     }
 

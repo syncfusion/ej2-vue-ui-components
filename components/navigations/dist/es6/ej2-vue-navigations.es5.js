@@ -404,6 +404,9 @@ var ContextMenuComponent = /** @__PURE__ @class */ (function (_super) {
     ContextMenuComponent.prototype.enableItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     };
+    ContextMenuComponent.prototype.getItemIndex = function (item, id, isUniqueId) {
+        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    };
     ContextMenuComponent.prototype.hideItems = function (items, isUniqueId) {
         return this.ej2Instances.hideItems(items, isUniqueId);
     };
@@ -418,6 +421,9 @@ var ContextMenuComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ContextMenuComponent.prototype.removeItems = function (items, isUniqueId) {
         return this.ej2Instances.removeItems(items, isUniqueId);
+    };
+    ContextMenuComponent.prototype.setItem = function (item, id, isUniqueId) {
+        return this.ej2Instances.setItem(item, id, isUniqueId);
     };
     ContextMenuComponent.prototype.showItems = function (items, isUniqueId) {
         return this.ej2Instances.showItems(items, isUniqueId);
@@ -965,6 +971,9 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
     MenuComponent.prototype.enableItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     };
+    MenuComponent.prototype.getItemIndex = function (item, id, isUniqueId) {
+        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    };
     MenuComponent.prototype.hideItems = function (items, isUniqueId) {
         return this.ej2Instances.hideItems(items, isUniqueId);
     };
@@ -979,6 +988,9 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
     };
     MenuComponent.prototype.removeItems = function (items, isUniqueId) {
         return this.ej2Instances.removeItems(items, isUniqueId);
+    };
+    MenuComponent.prototype.setItem = function (item, id, isUniqueId) {
+        return this.ej2Instances.setItem(item, id, isUniqueId);
     };
     MenuComponent.prototype.showItems = function (items, isUniqueId) {
         return this.ej2Instances.showItems(items, isUniqueId);

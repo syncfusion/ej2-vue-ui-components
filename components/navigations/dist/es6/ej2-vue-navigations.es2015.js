@@ -308,6 +308,9 @@ let ContextMenuComponent = class ContextMenuComponent extends ComponentBase {
     enableItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     }
+    getItemIndex(item, id, isUniqueId) {
+        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    }
     hideItems(items, isUniqueId) {
         return this.ej2Instances.hideItems(items, isUniqueId);
     }
@@ -322,6 +325,9 @@ let ContextMenuComponent = class ContextMenuComponent extends ComponentBase {
     }
     removeItems(items, isUniqueId) {
         return this.ej2Instances.removeItems(items, isUniqueId);
+    }
+    setItem(item, id, isUniqueId) {
+        return this.ej2Instances.setItem(item, id, isUniqueId);
     }
     showItems(items, isUniqueId) {
         return this.ej2Instances.showItems(items, isUniqueId);
@@ -755,6 +761,9 @@ let MenuComponent = class MenuComponent extends ComponentBase {
     enableItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     }
+    getItemIndex(item, id, isUniqueId) {
+        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    }
     hideItems(items, isUniqueId) {
         return this.ej2Instances.hideItems(items, isUniqueId);
     }
@@ -769,6 +778,9 @@ let MenuComponent = class MenuComponent extends ComponentBase {
     }
     removeItems(items, isUniqueId) {
         return this.ej2Instances.removeItems(items, isUniqueId);
+    }
+    setItem(item, id, isUniqueId) {
+        return this.ej2Instances.setItem(item, id, isUniqueId);
     }
     showItems(items, isUniqueId) {
         return this.ej2Instances.showItems(items, isUniqueId);

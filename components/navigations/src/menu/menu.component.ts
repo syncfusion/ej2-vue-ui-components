@@ -60,6 +60,10 @@ export class MenuComponent extends ComponentBase {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     }
 
+    public getItemIndex(item: Object, id?: string, isUniqueId?: boolean): number[] {
+        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    }
+
     public hideItems(items: string[], isUniqueId?: boolean): void {
         return this.ej2Instances.hideItems(items, isUniqueId);
     }
@@ -78,6 +82,10 @@ export class MenuComponent extends ComponentBase {
 
     public removeItems(items: string[], isUniqueId?: boolean): void {
         return this.ej2Instances.removeItems(items, isUniqueId);
+    }
+
+    public setItem(item: Object, id?: string, isUniqueId?: boolean): void {
+        return this.ej2Instances.setItem(item, id, isUniqueId);
     }
 
     public showItems(items: string[], isUniqueId?: boolean): void {

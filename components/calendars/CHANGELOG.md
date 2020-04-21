@@ -2,15 +2,6 @@
 
 ## [Unreleased]
 
-## 18.1.44 (2020-04-14)
-
-### DatePicker
-
-#### Bug Fixes
-
-`#270247` - Issue with "script error throws while changing the min and max value dynamically" has been resolved.
-
-
 ## 18.1.43 (2020-04-07)
 
 ### TimePicker
@@ -1123,6 +1114,15 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 - **Step** - Provides the option to increment/decrement time value in a popup list.
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.
+
+
+## 18.1.44 (2020-04-14)
+
+### DatePicker
+
+#### Bug Fixes
+
+`#270247` - Issue with "script error throws while changing the min and max value dynamically" has been resolved.
 
 
 ## 17.4.44 (2021-01-21)
