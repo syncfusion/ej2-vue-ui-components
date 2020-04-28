@@ -234,6 +234,9 @@ var TreeMapComponent = /** @__PURE__ @class */ (function (_super) {
     TreeMapComponent.prototype.rightClickOnTreeMap = function (e) {
         return this.ej2Instances.rightClickOnTreeMap(e);
     };
+    TreeMapComponent.prototype.selectItem = function (levelOrder, isSelected) {
+        return this.ej2Instances.selectItem(levelOrder, isSelected);
+    };
     TreeMapComponent = __decorate$2([
         EJComponentDecorator({
             props: properties

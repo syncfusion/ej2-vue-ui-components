@@ -60,8 +60,8 @@ export class ContextMenuComponent extends ComponentBase {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     }
 
-    public getItemIndex(item: Object, id?: string, isUniqueId?: boolean): number[] {
-        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    public getItemIndex(item: Object | string, isUniqueId?: boolean): number[] {
+        return this.ej2Instances.getItemIndex(item, isUniqueId);
     }
 
     public hideItems(items: string[], isUniqueId?: boolean): void {

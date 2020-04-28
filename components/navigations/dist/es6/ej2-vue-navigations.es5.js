@@ -404,8 +404,8 @@ var ContextMenuComponent = /** @__PURE__ @class */ (function (_super) {
     ContextMenuComponent.prototype.enableItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     };
-    ContextMenuComponent.prototype.getItemIndex = function (item, id, isUniqueId) {
-        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    ContextMenuComponent.prototype.getItemIndex = function (item, isUniqueId) {
+        return this.ej2Instances.getItemIndex(item, isUniqueId);
     };
     ContextMenuComponent.prototype.hideItems = function (items, isUniqueId) {
         return this.ej2Instances.hideItems(items, isUniqueId);
@@ -629,7 +629,7 @@ var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties$4 = ['allowDragAndDrop', 'allowEditing', 'allowMultiSelection', 'animation', 'autoCheck', 'checkedNodes', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandOn', 'expandedNodes', 'fields', 'fullRowNavigable', 'fullRowSelect', 'loadOnDemand', 'locale', 'nodeTemplate', 'selectedNodes', 'showCheckBox', 'sortOrder', 'actionFailure', 'created', 'dataBound', 'dataSourceChanged', 'destroyed', 'drawNode', 'keyPress', 'nodeChecked', 'nodeChecking', 'nodeClicked', 'nodeCollapsed', 'nodeCollapsing', 'nodeDragStart', 'nodeDragStop', 'nodeDragging', 'nodeDropped', 'nodeEdited', 'nodeEditing', 'nodeExpanded', 'nodeExpanding', 'nodeSelected', 'nodeSelecting'];
+var properties$4 = ['allowDragAndDrop', 'allowEditing', 'allowMultiSelection', 'animation', 'autoCheck', 'checkedNodes', 'cssClass', 'disabled', 'dragArea', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandOn', 'expandedNodes', 'fields', 'fullRowNavigable', 'fullRowSelect', 'loadOnDemand', 'locale', 'nodeTemplate', 'selectedNodes', 'showCheckBox', 'sortOrder', 'actionFailure', 'created', 'dataBound', 'dataSourceChanged', 'destroyed', 'drawNode', 'keyPress', 'nodeChecked', 'nodeChecking', 'nodeClicked', 'nodeCollapsed', 'nodeCollapsing', 'nodeDragStart', 'nodeDragStop', 'nodeDragging', 'nodeDropped', 'nodeEdited', 'nodeEditing', 'nodeExpanded', 'nodeExpanding', 'nodeSelected', 'nodeSelecting'];
 var modelProps$4 = [];
 /**
  * Represents the EJ2 VueJS TreeView Component.
@@ -971,8 +971,8 @@ var MenuComponent = /** @__PURE__ @class */ (function (_super) {
     MenuComponent.prototype.enableItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableItems(items, enable, isUniqueId);
     };
-    MenuComponent.prototype.getItemIndex = function (item, id, isUniqueId) {
-        return this.ej2Instances.getItemIndex(item, id, isUniqueId);
+    MenuComponent.prototype.getItemIndex = function (item, isUniqueId) {
+        return this.ej2Instances.getItemIndex(item, isUniqueId);
     };
     MenuComponent.prototype.hideItems = function (items, isUniqueId) {
         return this.ej2Instances.hideItems(items, isUniqueId);

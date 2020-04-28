@@ -172,6 +172,9 @@ let TreeMapComponent = class TreeMapComponent extends ComponentBase {
     rightClickOnTreeMap(e) {
         return this.ej2Instances.rightClickOnTreeMap(e);
     }
+    selectItem(levelOrder, isSelected) {
+        return this.ej2Instances.selectItem(levelOrder, isSelected);
+    }
 };
 TreeMapComponent = __decorate$2([
     EJComponentDecorator({

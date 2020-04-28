@@ -112,6 +112,10 @@ export class TreeMapComponent extends ComponentBase {
     public rightClickOnTreeMap(e: Object): void {
         return this.ej2Instances.rightClickOnTreeMap(e);
     }
+
+    public selectItem(levelOrder: string[], isSelected?: boolean): void {
+        return this.ej2Instances.selectItem(levelOrder, isSelected);
+    }
 }
 
 export const TreeMapPlugin = {
