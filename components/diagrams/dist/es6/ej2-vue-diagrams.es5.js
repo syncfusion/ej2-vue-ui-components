@@ -671,8 +671,8 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.exportImage = function (image, options) {
         return this.ej2Instances.exportImage(image, options);
     };
-    DiagramComponent.prototype.findElementUnderMouse = function (obj, position) {
-        return this.ej2Instances.findElementUnderMouse(obj, position);
+    DiagramComponent.prototype.findElementUnderMouse = function (obj, position, padding) {
+        return this.ej2Instances.findElementUnderMouse(obj, position, padding);
     };
     DiagramComponent.prototype.findObjectUnderMouse = function (objects, action, inAction) {
         return this.ej2Instances.findObjectUnderMouse(objects, action, inAction);

@@ -486,6 +486,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     redo() {
         return this.ej2Instances.redo();
     }
+    refresh(isNew) {
+        return this.ej2Instances.refresh(isNew);
+    }
     removeContextMenuItems(items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     }

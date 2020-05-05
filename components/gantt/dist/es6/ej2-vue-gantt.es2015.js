@@ -412,6 +412,9 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     fitToProject() {
         return this.ej2Instances.fitToProject();
     }
+    getDateFormat() {
+        return this.ej2Instances.getDateFormat();
+    }
     getDurationString(duration, durationUnit) {
         return this.ej2Instances.getDurationString(duration, durationUnit);
     }

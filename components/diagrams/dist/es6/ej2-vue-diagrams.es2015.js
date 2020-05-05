@@ -494,8 +494,8 @@ let DiagramComponent = class DiagramComponent extends ComponentBase {
     exportImage(image, options) {
         return this.ej2Instances.exportImage(image, options);
     }
-    findElementUnderMouse(obj, position) {
-        return this.ej2Instances.findElementUnderMouse(obj, position);
+    findElementUnderMouse(obj, position, padding) {
+        return this.ej2Instances.findElementUnderMouse(obj, position, padding);
     }
     findObjectUnderMouse(objects, action, inAction) {
         return this.ej2Instances.findObjectUnderMouse(objects, action, inAction);

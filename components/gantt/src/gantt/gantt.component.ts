@@ -163,6 +163,10 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.fitToProject();
     }
 
+    public getDateFormat(): string {
+        return this.ej2Instances.getDateFormat();
+    }
+
     public getDurationString(duration: number, durationUnit: string): string {
         return this.ej2Instances.getDurationString(duration, durationUnit);
     }

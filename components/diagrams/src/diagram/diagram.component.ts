@@ -202,8 +202,8 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.exportImage(image, options);
     }
 
-    public findElementUnderMouse(obj: Object, position: Object): Object {
-        return this.ej2Instances.findElementUnderMouse(obj, position);
+    public findElementUnderMouse(obj: Object, position: Object, padding?: number): Object {
+        return this.ej2Instances.findElementUnderMouse(obj, position, padding);
     }
 
     public findObjectUnderMouse(objects: undefined[], action: Object, inAction: boolean): Object {

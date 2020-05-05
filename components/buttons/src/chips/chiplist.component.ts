@@ -4,7 +4,7 @@ import { ChipList } from '@syncfusion/ej2-buttons';
 import { ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin } from './chips.directive'
 
 
-export const properties: string[] = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'beforeClick', 'click', 'created', 'delete'];
+export const properties: string[] = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'leadingIconUrl', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'trailingIconUrl', 'beforeClick', 'click', 'created', 'delete'];
 export const modelProps: string[] = [];
 
 /**

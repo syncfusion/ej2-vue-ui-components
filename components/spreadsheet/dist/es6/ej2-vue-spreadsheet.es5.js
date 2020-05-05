@@ -640,6 +640,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
     };
+    SpreadsheetComponent.prototype.refresh = function (isNew) {
+        return this.ej2Instances.refresh(isNew);
+    };
     SpreadsheetComponent.prototype.removeContextMenuItems = function (items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     };

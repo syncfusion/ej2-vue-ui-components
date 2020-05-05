@@ -566,6 +566,9 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.fitToProject = function () {
         return this.ej2Instances.fitToProject();
     };
+    GanttComponent.prototype.getDateFormat = function () {
+        return this.ej2Instances.getDateFormat();
+    };
     GanttComponent.prototype.getDurationString = function (duration, durationUnit) {
         return this.ej2Instances.getDurationString(duration, durationUnit);
     };

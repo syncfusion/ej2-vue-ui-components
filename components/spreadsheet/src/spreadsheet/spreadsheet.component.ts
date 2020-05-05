@@ -245,6 +245,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.redo();
     }
 
+    public refresh(isNew?: boolean): void {
+        return this.ej2Instances.refresh(isNew);
+    }
+
     public removeContextMenuItems(items: string[], isUniqueId?: boolean): void {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
     }
