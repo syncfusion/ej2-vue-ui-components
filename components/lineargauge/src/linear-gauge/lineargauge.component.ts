@@ -7,7 +7,7 @@ import { AxesDirective, AxisDirective, AxesPlugin, AxisPlugin } from './axes.dir
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['annotations', 'axes', 'background', 'border', 'container', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'locale', 'margin', 'orientation', 'rangePalettes', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'beforePrint', 'dragEnd', 'dragMove', 'dragStart', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'load', 'loaded', 'resized', 'tooltipRender', 'valueChange'];
+export const properties: string[] = ['allowImageExport', 'allowPdfExport', 'allowPrint', 'annotations', 'axes', 'background', 'border', 'container', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'locale', 'margin', 'orientation', 'rangePalettes', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'beforePrint', 'dragEnd', 'dragMove', 'dragStart', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'load', 'loaded', 'resized', 'tooltipRender', 'valueChange'];
 export const modelProps: string[] = [];
 
 /**
@@ -55,8 +55,8 @@ export class LinearGaugeComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public export(type: Object, fileName: string, orientation?: Object): void {
-        return this.ej2Instances.export(type, fileName, orientation);
+    public export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
+        return this.ej2Instances.export(type, fileName, orientation, allowDownload);
     }
 
     public print(id?: string[] | string | Object): void {

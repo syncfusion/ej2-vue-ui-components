@@ -5,7 +5,7 @@ import { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, Col
 import { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin } from './levels.directive'
 
 
-export const properties: string[] = ['background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
+export const properties: string[] = ['allowImageExport', 'allowPdfExport', 'allowPrint', 'background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
 export const modelProps: string[] = [];
 
 /**
@@ -73,8 +73,8 @@ export class TreeMapComponent extends ComponentBase {
         return this.ej2Instances.doubleClickOnTreeMap(e);
     }
 
-    public export(type: Object, fileName: string, orientation?: Object): void {
-        return this.ej2Instances.export(type, fileName, orientation);
+    public export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
+        return this.ej2Instances.export(type, fileName, orientation, allowDownload);
     }
 
     public findTotalWeight(processData: Object[], type: string): void {
