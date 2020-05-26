@@ -1011,8 +1011,14 @@ var SymbolPaletteComponent = /** @__PURE__ @class */ (function (_super) {
     SymbolPaletteComponent.prototype.addPaletteItem = function (paletteName, paletteSymbol) {
         return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol);
     };
+    SymbolPaletteComponent.prototype.addPalettes = function (palettes) {
+        return this.ej2Instances.addPalettes(palettes);
+    };
     SymbolPaletteComponent.prototype.removePaletteItem = function (paletteName, symbolId) {
         return this.ej2Instances.removePaletteItem(paletteName, symbolId);
+    };
+    SymbolPaletteComponent.prototype.removePalettes = function (palettes) {
+        return this.ej2Instances.removePalettes(palettes);
     };
     SymbolPaletteComponent = __decorate$9([
         EJComponentDecorator({

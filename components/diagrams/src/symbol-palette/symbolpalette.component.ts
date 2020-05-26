@@ -56,8 +56,16 @@ export class SymbolPaletteComponent extends ComponentBase {
         return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol);
     }
 
+    public addPalettes(palettes: Object[]): void {
+        return this.ej2Instances.addPalettes(palettes);
+    }
+
     public removePaletteItem(paletteName: string, symbolId: string): void {
         return this.ej2Instances.removePaletteItem(paletteName, symbolId);
+    }
+
+    public removePalettes(palettes: string[]): void {
+        return this.ej2Instances.removePalettes(palettes);
     }
 }
 

@@ -794,8 +794,14 @@ let SymbolPaletteComponent = class SymbolPaletteComponent extends ComponentBase 
     addPaletteItem(paletteName, paletteSymbol) {
         return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol);
     }
+    addPalettes(palettes) {
+        return this.ej2Instances.addPalettes(palettes);
+    }
     removePaletteItem(paletteName, symbolId) {
         return this.ej2Instances.removePaletteItem(paletteName, symbolId);
+    }
+    removePalettes(palettes) {
+        return this.ej2Instances.removePalettes(palettes);
     }
 };
 SymbolPaletteComponent = __decorate$9([
