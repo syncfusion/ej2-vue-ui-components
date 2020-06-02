@@ -364,8 +364,8 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     changeTaskMode(data) {
         return this.ej2Instances.changeTaskMode(data);
     }
-    clearFiltering() {
-        return this.ej2Instances.clearFiltering();
+    clearFiltering(fields) {
+        return this.ej2Instances.clearFiltering(fields);
     }
     clearSelection() {
         return this.ej2Instances.clearSelection();

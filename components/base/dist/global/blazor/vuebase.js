@@ -1,5 +1,8 @@
-import Vue from 'vue';
-import { createElement, detach, extend, getTemplateEngine, getUniqueID, getValue, isNullOrUndefined, setTemplateEngine } from '@syncfusion/ej2-base';
+window.sf = window.sf || {};
+window.sf.vuebase = (function (exports) {
+'use strict';
+
+Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
 
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -17,7 +20,7 @@ var __extends = (undefined && undefined.__extends) || (function () {
 /**
  * Vue Component Base
  */
-var ComponentBase = /** @__PURE__ @class */ (function (_super) {
+var ComponentBase = /** @class */ (function (_super) {
     __extends(ComponentBase, _super);
     function ComponentBase() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -46,7 +49,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
     };
     ComponentBase.prototype.getInjectedServices = function () {
         var ret = [];
-        var provide = getValue('$vnode.context.$options.provide', this);
+        var provide = sf.base.getValue('$vnode.context.$options.provide', this);
         if (provide) {
             // tslint:disable:no-any
             var injectables = provide;
@@ -79,7 +82,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         var options = {};
         for (var _i = 0, _a = this.propKeys; _i < _a.length; _i++) {
             var prop = _a[_i];
-            if (!isNullOrUndefined(this[prop])) {
+            if (!sf.base.isNullOrUndefined(this[prop])) {
                 options[prop] = this[prop];
             }
         }
@@ -100,7 +103,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         this.assignValueToWrapper(options);
     };
     ComponentBase.prototype.assignValueToWrapper = function (option, silent) {
-        this.ej2Instances.setProperties(extend({}, {}, option, true), isNullOrUndefined(silent) ? true : silent);
+        this.ej2Instances.setProperties(sf.base.extend({}, {}, option, true), sf.base.isNullOrUndefined(silent) ? true : silent);
     };
     ComponentBase.prototype.fetchChildPropValues = function (childOption) {
         var dirProps = this.getDirectiveValues(this.$slots.default, this.tagMapper || {}, this.tagNameMapper || {});
@@ -169,7 +172,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
                     ret = this.getMultiLevelDirValue(tagDirective.componentOptions.children, tagKey[dirTag], tagNameMapper);
                 }
                 if (tagDirective.data && tagDirective.data.attrs) {
-                    ret = extend(ret, this.getCamelCaseProps(tagDirective.data.attrs));
+                    ret = sf.base.extend(ret, this.getCamelCaseProps(tagDirective.data.attrs));
                 }
             }
         }
@@ -313,7 +316,7 @@ function collectDataFromConstructor(vm, Component) {
 }
 
 // tslint:disable:no-any
-var stringCompiler = getTemplateEngine();
+var stringCompiler = sf.base.getTemplateEngine();
 function compile(templateElement, helper) {
     var that = this;
     if (typeof templateElement === 'string') {
@@ -321,25 +324,35 @@ function compile(templateElement, helper) {
     }
     else {
         return function (data) {
-            var pid = getUniqueID('templateParentDiv');
-            var id = getUniqueID('templateDiv');
-            var ele = createElement('div', { id: pid, innerHTML: '<div id="' + id + '"></div>' });
+            var pid = sf.base.getUniqueID('templateParentDiv');
+            var id = sf.base.getUniqueID('templateDiv');
+            var ele = sf.base.createElement('div', { id: pid, innerHTML: '<div id="' + id + '"></div>' });
             document.body.appendChild(ele);
             var tempObj = templateElement.call(that, {});
             var templateVue = new Vue(tempObj.template);
-            templateVue.$data.data = extend(tempObj.data, data);
+            templateVue.$data.data = sf.base.extend(tempObj.data, data);
             templateVue.$mount('#' + id);
             var returnEle = ele.childNodes;
-            detach(ele);
+            sf.base.detach(ele);
             return returnEle;
         };
     }
 }
-setTemplateEngine({ compile: compile });
+sf.base.setTemplateEngine({ compile: compile });
 
 /**
  * index for component base
  */
 
-export { ComponentBase, $internalHooks, EJComponentDecorator, EJcomponentFactory, compile };
-//# sourceMappingURL=ej2-vue-base.es5.js.map
+exports.ComponentBase = ComponentBase;
+exports.$internalHooks = $internalHooks;
+exports.EJComponentDecorator = EJComponentDecorator;
+exports.EJcomponentFactory = EJcomponentFactory;
+exports.compile = compile;
+
+return exports;
+
+});
+sfBlazor.loadDependencies(["vue","base"], () => {
+    sf.vuebase = sf.vuebase({});
+});

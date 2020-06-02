@@ -518,8 +518,8 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.changeTaskMode = function (data) {
         return this.ej2Instances.changeTaskMode(data);
     };
-    GanttComponent.prototype.clearFiltering = function () {
-        return this.ej2Instances.clearFiltering();
+    GanttComponent.prototype.clearFiltering = function (fields) {
+        return this.ej2Instances.clearFiltering(fields);
     };
     GanttComponent.prototype.clearSelection = function () {
         return this.ej2Instances.clearSelection();

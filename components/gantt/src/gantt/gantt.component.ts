@@ -99,8 +99,8 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.changeTaskMode(data);
     }
 
-    public clearFiltering(): void {
-        return this.ej2Instances.clearFiltering();
+    public clearFiltering(fields?: string[]): void {
+        return this.ej2Instances.clearFiltering(fields);
     }
 
     public clearSelection(): void {
@@ -151,11 +151,11 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.expandByID(id);
     }
 
-    public expandByIndex(index: number): void {
+    public expandByIndex(index: number[] | number): void {
         return this.ej2Instances.expandByIndex(index);
     }
 
-    public filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean): void {
+    public filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[], predicate?: string, matchCase?: boolean, ignoreAccent?: boolean): void {
         return this.ej2Instances.filterByColumn(fieldName, filterOperator, filterValue, predicate, matchCase, ignoreAccent);
     }
 

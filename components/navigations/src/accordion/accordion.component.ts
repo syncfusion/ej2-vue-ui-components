@@ -4,7 +4,7 @@ import { Accordion } from '@syncfusion/ej2-navigations';
 import { AccordionItemsDirective, AccordionItemDirective, AccordionItemsPlugin, AccordionItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['animation', 'dataSource', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
+export const properties: string[] = ['animation', 'dataSource', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
 export const modelProps: string[] = [];
 
 /**
@@ -52,7 +52,7 @@ export class AccordionComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public addItem(item: Object | Object, index?: number): void {
+    public addItem(item: Object | Object[] | Object | Object[], index?: number): void {
         return this.ej2Instances.addItem(item, index);
     }
 
