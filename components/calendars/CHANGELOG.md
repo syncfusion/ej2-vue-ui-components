@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 18.1.57 (2020-06-16)
+
+### DatePicker
+
+#### Bug Fixes
+
+`#276845` - Issue with "disabled date is displayed in the input element when strict mode is enabled" has been resolved.
+
+
 ## 18.1.43 (2020-04-07)
 
 ### TimePicker
