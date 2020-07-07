@@ -41,7 +41,6 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
     };
     ComponentBase.prototype.mounted = function () {
         this.ej2Instances.isVue = true;
-        this.$el.style.visibility = '';
         this.ej2Instances.appendTo(this.$el);
     };
     ComponentBase.prototype.getInjectedServices = function () {
@@ -70,10 +69,7 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         }
     };
     ComponentBase.prototype.beforeDestroy = function () {
-        var tempBeforeDestroyThis = this;
-        tempBeforeDestroyThis.ej2Instances.destroy();
-        tempBeforeDestroyThis.$el.style.visibility = 'hidden';
-        tempBeforeDestroyThis = null;
+        this.ej2Instances.destroy();
     };
     ComponentBase.prototype.bindProperties = function () {
         var options = {};
@@ -228,6 +224,7 @@ function EJcomponentFactory(Component, options) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
+                this.dataBind();
             };
         };
         for (var _i = 0, _a = options.props; _i < _a.length; _i++) {

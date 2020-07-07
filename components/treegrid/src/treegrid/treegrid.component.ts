@@ -328,6 +328,10 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.hideSpinner();
     }
 
+    public openColumnChooser(x?: number, y?: number): void {
+        return this.ej2Instances.openColumnChooser(x, y);
+    }
+
     public paste(data: string, rowIndex: number, colIndex: number): void {
         return this.ej2Instances.paste(data, rowIndex, colIndex);
     }
@@ -388,7 +392,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.setCellValue(key, field, value);
     }
 
-    public setRowData(key: string | number, rowData?: object): void {
+    public setRowData(key: string | number, rowData?: Object): void {
         return this.ej2Instances.setRowData(key, rowData);
     }
 
@@ -418,10 +422,6 @@ export class TreeGridComponent extends ComponentBase {
 
     public updateRow(index: number, data: Object): void {
         return this.ej2Instances.updateRow(index, data);
-    }
-
-    public updateSelectionProperty(): void {
-        return this.ej2Instances.updateSelectionProperty();
     }
 }
 

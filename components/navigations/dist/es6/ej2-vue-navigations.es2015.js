@@ -56,8 +56,8 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['animation', 'dataSource', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandMode', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
-const modelProps = [];
+const properties = ['animation', 'dataSource', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandMode', 'expandedIndices', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
+const modelProps = ['expandedIndices'];
 /**
  * Represents the VueJS Accoridon Component.
  * ```html
@@ -74,6 +74,8 @@ let AccordionComponent = class AccordionComponent extends ComponentBase {
         this.tagMapper = { "e-accordionitems": "e-accordionitem" };
         this.tagNameMapper = { "e-accordionitems": "e-items" };
         this.ej2Instances = new Accordion({});
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -90,6 +92,27 @@ let AccordionComponent = class AccordionComponent extends ComponentBase {
                     }
                 });
             });
+        }
+    }
+    trigger(eventName, eventProp, successHandler) {
+        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/checked|value/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+            let key = this.models.toString().match(/currentView|selectedDate/) || [];
+            let propKey = key[0];
+            if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                this.$emit('update:' + propKey, eventProp[propKey]);
+                this.$emit('modelchanged', eventProp[propKey]);
+            }
+        }
+        if (this.ej2Instances && this.ej2Instances._trigger) {
+            this.ej2Instances._trigger(eventName, eventProp, successHandler);
         }
     }
     render(createElement) {
@@ -119,7 +142,10 @@ let AccordionComponent = class AccordionComponent extends ComponentBase {
 };
 AccordionComponent = __decorate$1([
     EJComponentDecorator({
-        props: properties
+        props: properties,
+        model: {
+            event: 'modelchanged'
+        }
     })
 ], AccordionComponent);
 const AccordionPlugin = {

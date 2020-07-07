@@ -76,6 +76,9 @@ let PivotViewComponent = class PivotViewComponent extends ComponentBase {
     showConditionalFormattingDialog() {
         return this.ej2Instances.showConditionalFormattingDialog();
     }
+    showNumberFormattingDialog() {
+        return this.ej2Instances.showNumberFormattingDialog();
+    }
     templateParser(template) {
         return this.ej2Instances.templateParser(template);
     }

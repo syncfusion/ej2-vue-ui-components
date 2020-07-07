@@ -55,7 +55,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'readonly', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created', 'ruleChange'];
+const properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'readonly', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'ruleChange'];
 const modelProps = [];
 /**
  * Represents the VueJS QueryBuilder Component.
@@ -115,6 +115,9 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
     getGroup(target) {
         return this.ej2Instances.getGroup(target);
     }
+    getOperators(field) {
+        return this.ej2Instances.getOperators(field);
+    }
     getPredicate(rule) {
         return this.ej2Instances.getPredicate(rule);
     }
@@ -133,8 +136,11 @@ let QueryBuilderComponent = class QueryBuilderComponent extends ComponentBase {
     getValidRules(currentRule) {
         return this.ej2Instances.getValidRules(currentRule);
     }
-    notifyChange(value, element) {
-        return this.ej2Instances.notifyChange(value, element);
+    getValues(field) {
+        return this.ej2Instances.getValues(field);
+    }
+    notifyChange(value, element, type) {
+        return this.ej2Instances.notifyChange(value, element, type);
     }
     reset() {
         return this.ej2Instances.reset();

@@ -411,6 +411,9 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
     }
+    openColumnChooser(x, y) {
+        return this.ej2Instances.openColumnChooser(x, y);
+    }
     paste(data, rowIndex, colIndex) {
         return this.ej2Instances.paste(data, rowIndex, colIndex);
     }
@@ -479,9 +482,6 @@ let TreeGridComponent = class TreeGridComponent extends ComponentBase {
     }
     updateRow(index, data) {
         return this.ej2Instances.updateRow(index, data);
-    }
-    updateSelectionProperty() {
-        return this.ej2Instances.updateSelectionProperty();
     }
 };
 TreeGridComponent = __decorate$3([

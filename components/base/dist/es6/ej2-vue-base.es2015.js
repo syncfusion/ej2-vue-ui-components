@@ -20,7 +20,6 @@ class ComponentBase extends Vue {
     }
     mounted() {
         this.ej2Instances.isVue = true;
-        this.$el.style.visibility = '';
         this.ej2Instances.appendTo(this.$el);
     }
     getInjectedServices() {
@@ -49,10 +48,7 @@ class ComponentBase extends Vue {
         }
     }
     beforeDestroy() {
-        let tempBeforeDestroyThis = this;
-        tempBeforeDestroyThis.ej2Instances.destroy();
-        tempBeforeDestroyThis.$el.style.visibility = 'hidden';
-        tempBeforeDestroyThis = null;
+        this.ej2Instances.destroy();
     }
     bindProperties() {
         let options = {};
@@ -197,6 +193,7 @@ function EJcomponentFactory(Component, options = {}) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
+                this.dataBind();
             };
         }
     }

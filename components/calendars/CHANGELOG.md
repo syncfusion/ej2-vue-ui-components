@@ -2,14 +2,31 @@
 
 ## [Unreleased]
 
-## 18.1.59 (2020-06-23)
+## 18.2.44 (2020-07-07)
 
 ### DatePicker
 
-#### Bug Fixes
+#### New Features
 
-`#276845` - Issue with "disabled date is displayed in the input element when strict mode is enabled" has been resolved.
+- `#274484`,`F145781` - Provided option to open the popup while focusing the input element.
 
+### DateTimePicker
+
+#### New Features
+
+- `#274484`,`F145781` - Provided option to open the popup while focusing the input element.
+
+### TimePicker
+
+#### New Features
+
+- `#274484`,`F145781` - Provided option to open the popup while focusing the input element.
+
+### DateRangePicker
+
+#### New Features
+
+- `#274484`,`F145781` - Provided option to open the popup while focusing the input element.
 
 ## 18.1.43 (2020-04-07)
 
@@ -1123,6 +1140,15 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 - **Step** - Provides the option to increment/decrement time value in a popup list.
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.
+
+
+## 18.1.57 (2020-06-16)
+
+### DatePicker
+
+#### Bug Fixes
+
+`#276845` - Issue with "disabled date is displayed in the input element when strict mode is enabled" has been resolved.
 
 
 ## 18.1.44 (2020-04-14)

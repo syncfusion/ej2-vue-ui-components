@@ -92,6 +92,9 @@ var PivotViewComponent = /** @__PURE__ @class */ (function (_super) {
     PivotViewComponent.prototype.showConditionalFormattingDialog = function () {
         return this.ej2Instances.showConditionalFormattingDialog();
     };
+    PivotViewComponent.prototype.showNumberFormattingDialog = function () {
+        return this.ej2Instances.showNumberFormattingDialog();
+    };
     PivotViewComponent.prototype.templateParser = function (template) {
         return this.ej2Instances.templateParser(template);
     };

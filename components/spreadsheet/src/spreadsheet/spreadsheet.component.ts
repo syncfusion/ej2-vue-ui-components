@@ -5,11 +5,12 @@ import { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './cells.
 import { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './ranges.directive'
+import { ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin } from './conditionalformats.directive'
 import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sheets.directive'
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 /**
@@ -28,8 +29,8 @@ export class SpreadsheetComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":"e-cell"}},"e-columns":"e-column","e-ranges":"e-range"}},"e-definednames":"e-definedname"};
-    public tagNameMapper: Object = {"e-definednames":"e-definedNames"};
+    public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":"e-cell"}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"};
+    public tagNameMapper: Object = {"e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"};
     
     constructor() {
         super();
@@ -105,6 +106,14 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.cellFormat(style, range);
     }
 
+    public clear(options: Object): void {
+        return this.ej2Instances.clear(options);
+    }
+
+    public clearConditionalFormat(range?: string): void {
+        return this.ej2Instances.clearConditionalFormat(range);
+    }
+
     public clearFilter(field?: string): void {
         return this.ej2Instances.clearFilter(field);
     }
@@ -117,6 +126,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.computeExpression(formula);
     }
 
+    public conditionalFormat(conditionalFormat: Object): void {
+        return this.ej2Instances.conditionalFormat(conditionalFormat);
+    }
+
     public copy(address?: string): Object {
         return this.ej2Instances.copy(address);
     }
@@ -125,8 +138,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.cut(address);
     }
 
-    public delete(startIndex?: number, endIndex?: number, model?: Object, sheet?: string | number): void {
-        return this.ej2Instances.delete(startIndex, endIndex, model, sheet);
+    public delete(startIndex?: number, endIndex?: number, model?: Object): void {
+        return this.ej2Instances.delete(startIndex, endIndex, model);
     }
 
     public enableContextMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void {
@@ -177,20 +190,12 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.goTo(address);
     }
 
-    public hideColumn(startIndex: number, endIndex?: number, hide?: boolean, sheet?: string | number): void {
-        return this.ej2Instances.hideColumn(startIndex, endIndex, hide, sheet);
-    }
-
     public hideFileMenuItems(items: string[], hide: boolean, isUniqueId?: boolean): void {
         return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
     }
 
     public hideRibbonTabs(tabs: string[], hide: boolean): void {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
-    }
-
-    public hideRow(startIndex: number, endIndex?: number, hide?: boolean, sheet?: string | number): void {
-        return this.ej2Instances.hideRow(startIndex, endIndex, hide, sheet);
     }
 
     public hideSpinner(): void {
@@ -201,12 +206,12 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     }
 
-    public insertColumn(startColumn?: number | Object[], endColumn?: number, sheet?: string | number): void {
-        return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
+    public insertColumn(startColumn?: number | Object[], endColumn?: number): void {
+        return this.ej2Instances.insertColumn(startColumn, endColumn);
     }
 
-    public insertRow(startRow?: number | Object[], endRow?: number, sheet?: string | number): void {
-        return this.ej2Instances.insertRow(startRow, endRow, sheet);
+    public insertRow(startRow?: number | Object[], endRow?: number): void {
+        return this.ej2Instances.insertRow(startRow, endRow);
     }
 
     public insertSheet(startSheet?: number | Object[], endSheet?: number): void {
@@ -237,16 +242,12 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.paste(address, type);
     }
 
-    public protectSheet(sheet?: number | string, protectSettings?: Object): void {
-        return this.ej2Instances.protectSheet(sheet, protectSettings);
+    public protectSheet(sheetIndex?: number | string, protectSettings?: Object): void {
+        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
     }
 
     public redo(): void {
         return this.ej2Instances.redo();
-    }
-
-    public refresh(isNew?: boolean): void {
-        return this.ej2Instances.refresh(isNew);
     }
 
     public removeContextMenuItems(items: string[], isUniqueId?: boolean): void {
@@ -317,16 +318,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.startEdit();
     }
 
-    public unMerge(range: string): void {
-        return this.ej2Instances.unMerge(range);
-    }
-
     public undo(): void {
         return this.ej2Instances.undo();
-    }
-
-    public unprotectSheet(sheet?: number | string): void {
-        return this.ej2Instances.unprotectSheet(sheet);
     }
 
     public updateAction(options: string): void {
@@ -360,6 +353,8 @@ export const SpreadsheetPlugin = {
         Vue.component(ColumnsPlugin.name, ColumnsDirective);
         Vue.component(RangePlugin.name, RangeDirective);
         Vue.component(RangesPlugin.name, RangesDirective);
+        Vue.component(ConditionalFormatPlugin.name, ConditionalFormatDirective);
+        Vue.component(ConditionalFormatsPlugin.name, ConditionalFormatsDirective);
         Vue.component(DefinedNamePlugin.name, DefinedNameDirective);
         Vue.component(DefinedNamesPlugin.name, DefinedNamesDirective);
 

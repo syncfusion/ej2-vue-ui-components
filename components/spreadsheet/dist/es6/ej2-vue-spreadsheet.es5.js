@@ -317,15 +317,88 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var ConditionalFormatsDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$4(ConditionalFormatsDirective, _super);
+    function ConditionalFormatsDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ConditionalFormatsDirective.prototype.render = function () {
+        return;
+    };
+    ConditionalFormatsDirective = __decorate$4([
+        EJComponentDecorator({})
+    ], ConditionalFormatsDirective);
+    return ConditionalFormatsDirective;
+}(Vue));
+var ConditionalFormatsPlugin = {
+    name: 'e-conditionalformats',
+    install: function (Vue$$1) {
+        Vue$$1.component(ConditionalFormatsPlugin.name, ConditionalFormatsDirective);
+    }
+};
+/**
+ * `e-conditionalformat` directive represent a conditionalformat of the VueJS Spreadsheet.
+ * It must be contained in a `e-sheet` directive.
+ * ```vue
+ * <ejs-spreadsheet>
+ *   <e-sheets>
+ *    <e-sheet>
+ *    <e-conditionalformats>
+ *    <e-conditionalformat></e-conditionalformat>
+ *    </e-conditionalformats>
+ *    </e-sheet>
+ *   </e-sheets>
+ * </ejs-spreadsheet>
+ * ```
+ */
+var ConditionalFormatDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$4(ConditionalFormatDirective, _super);
+    function ConditionalFormatDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ConditionalFormatDirective.prototype.render = function () {
+        return;
+    };
+    ConditionalFormatDirective = __decorate$4([
+        EJComponentDecorator({})
+    ], ConditionalFormatDirective);
+    return ConditionalFormatDirective;
+}(Vue));
+var ConditionalFormatPlugin = {
+    name: 'e-conditionalformat',
+    install: function (Vue$$1) {
+        Vue$$1.component(ConditionalFormatPlugin.name, ConditionalFormatDirective);
+    }
+};
+
+var __extends$5 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var SheetsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$4(SheetsDirective, _super);
+    __extends$5(SheetsDirective, _super);
     function SheetsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     SheetsDirective.prototype.render = function () {
         return;
     };
-    SheetsDirective = __decorate$4([
+    SheetsDirective = __decorate$5([
         EJComponentDecorator({})
     ], SheetsDirective);
     return SheetsDirective;
@@ -349,14 +422,14 @@ var SheetsPlugin = {
  * ```
  */
 var SheetDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$4(SheetDirective, _super);
+    __extends$5(SheetDirective, _super);
     function SheetDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     SheetDirective.prototype.render = function () {
         return;
     };
-    SheetDirective = __decorate$4([
+    SheetDirective = __decorate$5([
         EJComponentDecorator({})
     ], SheetDirective);
     return SheetDirective;
@@ -368,7 +441,7 @@ var SheetPlugin = {
     }
 };
 
-var __extends$5 = (undefined && undefined.__extends) || (function () {
+var __extends$6 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -381,21 +454,21 @@ var __extends$5 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var DefinedNamesDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$5(DefinedNamesDirective, _super);
+    __extends$6(DefinedNamesDirective, _super);
     function DefinedNamesDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     DefinedNamesDirective.prototype.render = function () {
         return;
     };
-    DefinedNamesDirective = __decorate$5([
+    DefinedNamesDirective = __decorate$6([
         EJComponentDecorator({})
     ], DefinedNamesDirective);
     return DefinedNamesDirective;
@@ -419,14 +492,14 @@ var DefinedNamesPlugin = {
  * ```
  */
 var DefinedNameDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$5(DefinedNameDirective, _super);
+    __extends$6(DefinedNameDirective, _super);
     function DefinedNameDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     DefinedNameDirective.prototype.render = function () {
         return;
     };
-    DefinedNameDirective = __decorate$5([
+    DefinedNameDirective = __decorate$6([
         EJComponentDecorator({})
     ], DefinedNameDirective);
     return DefinedNameDirective;
@@ -438,7 +511,7 @@ var DefinedNamePlugin = {
     }
 };
 
-var __extends$6 = (undefined && undefined.__extends) || (function () {
+var __extends$7 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -451,13 +524,13 @@ var __extends$6 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['activeSheetIndex', 'allowCellFormatting', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+var properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 var modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -466,15 +539,15 @@ var modelProps = [];
  * ```
  */
 var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$6(SpreadsheetComponent, _super);
+    __extends$7(SpreadsheetComponent, _super);
     function SpreadsheetComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties;
         _this.models = modelProps;
         _this.hasChildDirective = true;
         _this.hasInjectedModules = true;
-        _this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range" } }, "e-definednames": "e-definedname" };
-        _this.tagNameMapper = { "e-definednames": "e-definedNames" };
+        _this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range", "e-conditionalformats": "e-conditionalformat" } }, "e-definednames": "e-definedname" };
+        _this.tagNameMapper = { "e-conditionalformats": "e-conditionalFormats", "e-definednames": "e-definedNames" };
         _this.ej2Instances = new Spreadsheet({});
         _this.bindProperties();
         _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
@@ -535,6 +608,12 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.cellFormat = function (style, range) {
         return this.ej2Instances.cellFormat(style, range);
     };
+    SpreadsheetComponent.prototype.clear = function (options) {
+        return this.ej2Instances.clear(options);
+    };
+    SpreadsheetComponent.prototype.clearConditionalFormat = function (range) {
+        return this.ej2Instances.clearConditionalFormat(range);
+    };
     SpreadsheetComponent.prototype.clearFilter = function (field) {
         return this.ej2Instances.clearFilter(field);
     };
@@ -544,14 +623,17 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.computeExpression = function (formula) {
         return this.ej2Instances.computeExpression(formula);
     };
+    SpreadsheetComponent.prototype.conditionalFormat = function (conditionalFormat) {
+        return this.ej2Instances.conditionalFormat(conditionalFormat);
+    };
     SpreadsheetComponent.prototype.copy = function (address) {
         return this.ej2Instances.copy(address);
     };
     SpreadsheetComponent.prototype.cut = function (address) {
         return this.ej2Instances.cut(address);
     };
-    SpreadsheetComponent.prototype.delete = function (startIndex, endIndex, model, sheet) {
-        return this.ej2Instances.delete(startIndex, endIndex, model, sheet);
+    SpreadsheetComponent.prototype.delete = function (startIndex, endIndex, model) {
+        return this.ej2Instances.delete(startIndex, endIndex, model);
     };
     SpreadsheetComponent.prototype.enableContextMenuItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
@@ -589,17 +671,11 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.goTo = function (address) {
         return this.ej2Instances.goTo(address);
     };
-    SpreadsheetComponent.prototype.hideColumn = function (startIndex, endIndex, hide, sheet) {
-        return this.ej2Instances.hideColumn(startIndex, endIndex, hide, sheet);
-    };
     SpreadsheetComponent.prototype.hideFileMenuItems = function (items, hide, isUniqueId) {
         return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
     };
     SpreadsheetComponent.prototype.hideRibbonTabs = function (tabs, hide) {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
-    };
-    SpreadsheetComponent.prototype.hideRow = function (startIndex, endIndex, hide, sheet) {
-        return this.ej2Instances.hideRow(startIndex, endIndex, hide, sheet);
     };
     SpreadsheetComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
@@ -607,11 +683,11 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.hideToolbarItems = function (tab, indexes, hide) {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
     };
-    SpreadsheetComponent.prototype.insertColumn = function (startColumn, endColumn, sheet) {
-        return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
+    SpreadsheetComponent.prototype.insertColumn = function (startColumn, endColumn) {
+        return this.ej2Instances.insertColumn(startColumn, endColumn);
     };
-    SpreadsheetComponent.prototype.insertRow = function (startRow, endRow, sheet) {
-        return this.ej2Instances.insertRow(startRow, endRow, sheet);
+    SpreadsheetComponent.prototype.insertRow = function (startRow, endRow) {
+        return this.ej2Instances.insertRow(startRow, endRow);
     };
     SpreadsheetComponent.prototype.insertSheet = function (startSheet, endSheet) {
         return this.ej2Instances.insertSheet(startSheet, endSheet);
@@ -634,14 +710,11 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.paste = function (address, type) {
         return this.ej2Instances.paste(address, type);
     };
-    SpreadsheetComponent.prototype.protectSheet = function (sheet, protectSettings) {
-        return this.ej2Instances.protectSheet(sheet, protectSettings);
+    SpreadsheetComponent.prototype.protectSheet = function (sheetIndex, protectSettings) {
+        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
     };
     SpreadsheetComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
-    };
-    SpreadsheetComponent.prototype.refresh = function (isNew) {
-        return this.ej2Instances.refresh(isNew);
     };
     SpreadsheetComponent.prototype.removeContextMenuItems = function (items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
@@ -694,14 +767,8 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.startEdit = function () {
         return this.ej2Instances.startEdit();
     };
-    SpreadsheetComponent.prototype.unMerge = function (range) {
-        return this.ej2Instances.unMerge(range);
-    };
     SpreadsheetComponent.prototype.undo = function () {
         return this.ej2Instances.undo();
-    };
-    SpreadsheetComponent.prototype.unprotectSheet = function (sheet) {
-        return this.ej2Instances.unprotectSheet(sheet);
     };
     SpreadsheetComponent.prototype.updateAction = function (options) {
         return this.ej2Instances.updateAction(options);
@@ -715,7 +782,7 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.wrap = function (address, wrap) {
         return this.ej2Instances.wrap(address, wrap);
     };
-    SpreadsheetComponent = __decorate$6([
+    SpreadsheetComponent = __decorate$7([
         EJComponentDecorator({
             props: properties
         })
@@ -736,11 +803,13 @@ var SpreadsheetPlugin = {
         Vue$$1.component(ColumnsPlugin.name, ColumnsDirective);
         Vue$$1.component(RangePlugin.name, RangeDirective);
         Vue$$1.component(RangesPlugin.name, RangesDirective);
+        Vue$$1.component(ConditionalFormatPlugin.name, ConditionalFormatDirective);
+        Vue$$1.component(ConditionalFormatsPlugin.name, ConditionalFormatsDirective);
         Vue$$1.component(DefinedNamePlugin.name, DefinedNameDirective);
         Vue$$1.component(DefinedNamesPlugin.name, DefinedNamesDirective);
     }
 };
 
-export { CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
+export { CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
 export * from '@syncfusion/ej2-spreadsheet';
 //# sourceMappingURL=ej2-vue-spreadsheet.es5.js.map

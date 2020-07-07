@@ -496,6 +496,9 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     TreeGridComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
     };
+    TreeGridComponent.prototype.openColumnChooser = function (x, y) {
+        return this.ej2Instances.openColumnChooser(x, y);
+    };
     TreeGridComponent.prototype.paste = function (data, rowIndex, colIndex) {
         return this.ej2Instances.paste(data, rowIndex, colIndex);
     };
@@ -564,9 +567,6 @@ var TreeGridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     TreeGridComponent.prototype.updateRow = function (index, data) {
         return this.ej2Instances.updateRow(index, data);
-    };
-    TreeGridComponent.prototype.updateSelectionProperty = function () {
-        return this.ej2Instances.updateSelectionProperty();
     };
     TreeGridComponent = __decorate$3([
         EJComponentDecorator({

@@ -91,7 +91,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'readonly', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'beforeChange', 'change', 'created', 'ruleChange'];
+var properties = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'readonly', 'rule', 'showButtons', 'sortDirection', 'summaryView', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'ruleChange'];
 var modelProps = [];
 /**
  * Represents the VueJS QueryBuilder Component.
@@ -154,6 +154,9 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     QueryBuilderComponent.prototype.getGroup = function (target) {
         return this.ej2Instances.getGroup(target);
     };
+    QueryBuilderComponent.prototype.getOperators = function (field) {
+        return this.ej2Instances.getOperators(field);
+    };
     QueryBuilderComponent.prototype.getPredicate = function (rule) {
         return this.ej2Instances.getPredicate(rule);
     };
@@ -172,8 +175,11 @@ var QueryBuilderComponent = /** @__PURE__ @class */ (function (_super) {
     QueryBuilderComponent.prototype.getValidRules = function (currentRule) {
         return this.ej2Instances.getValidRules(currentRule);
     };
-    QueryBuilderComponent.prototype.notifyChange = function (value, element) {
-        return this.ej2Instances.notifyChange(value, element);
+    QueryBuilderComponent.prototype.getValues = function (field) {
+        return this.ej2Instances.getValues(field);
+    };
+    QueryBuilderComponent.prototype.notifyChange = function (value, element, type) {
+        return this.ej2Instances.notifyChange(value, element, type);
     };
     QueryBuilderComponent.prototype.reset = function () {
         return this.ej2Instances.reset();

@@ -91,6 +91,10 @@ export class PivotViewComponent extends ComponentBase {
         return this.ej2Instances.showConditionalFormattingDialog();
     }
 
+    public showNumberFormattingDialog(): void {
+        return this.ej2Instances.showNumberFormattingDialog();
+    }
+
     public templateParser(template: string): Object {
         return this.ej2Instances.templateParser(template);
     }

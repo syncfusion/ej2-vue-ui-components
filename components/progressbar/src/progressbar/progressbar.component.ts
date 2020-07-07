@@ -4,7 +4,7 @@ import { ProgressBar } from '@syncfusion/ej2-progressbar';
 import { ProgressBarAnnotationsDirective, ProgressBarAnnotationDirective, ProgressBarAnnotationsPlugin, ProgressBarAnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackSegmentDisable', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
+export const properties: string[] = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableProgressSegments', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
 export const modelProps: string[] = [];
 
 /**
@@ -60,12 +60,16 @@ export class ProgressBarComponent extends ComponentBase {
         return this.ej2Instances.calculateSegmentSize(width, thickness);
     }
 
-    public createClipPath(clipPath?: Object, range?: number, d?: string, refresh?: boolean, thickness?: number, isLabel?: boolean): Object {
-        return this.ej2Instances.createClipPath(clipPath, range, d, refresh, thickness, isLabel);
+    public createClipPath(clipPath?: Object, range?: number, d?: string, refresh?: boolean, thickness?: number, isLabel?: boolean, isMaximum?: boolean): Object {
+        return this.ej2Instances.createClipPath(clipPath, range, d, refresh, thickness, isLabel, isMaximum);
     }
 
     public getPathLine(x: number, width: number, thickness: number): string {
         return this.ej2Instances.getPathLine(x, width, thickness);
+    }
+
+    public hide(): void {
+        return this.ej2Instances.hide();
     }
 
     public removeSvg(): void {
@@ -74,6 +78,10 @@ export class ProgressBarComponent extends ComponentBase {
 
     public requiredModules(): Object[] {
         return this.ej2Instances.requiredModules();
+    }
+
+    public show(): void {
+        return this.ej2Instances.show();
     }
 }
 

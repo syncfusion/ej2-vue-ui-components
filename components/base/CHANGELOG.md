@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 18.1.59 (2020-06-23)
+## 18.2.44 (2020-07-07)
 
 ### Common
 
 #### Bug Fixes
 
-- `I262885` - Resolved the memory leak issue.
+- Resolved property change called after a certain timeout issue,
 
 ## 17.4.47 (2020-02-05)
 

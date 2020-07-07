@@ -43,7 +43,7 @@ var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackSegmentDisable', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
+const properties = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableProgressSegments', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
 const modelProps = [];
 /**
  * Represents Vuejs ProgressBar Component
@@ -88,17 +88,23 @@ let ProgressBarComponent = class ProgressBarComponent extends ComponentBase {
     calculateSegmentSize(width, thickness) {
         return this.ej2Instances.calculateSegmentSize(width, thickness);
     }
-    createClipPath(clipPath, range, d, refresh, thickness, isLabel) {
-        return this.ej2Instances.createClipPath(clipPath, range, d, refresh, thickness, isLabel);
+    createClipPath(clipPath, range, d, refresh, thickness, isLabel, isMaximum) {
+        return this.ej2Instances.createClipPath(clipPath, range, d, refresh, thickness, isLabel, isMaximum);
     }
     getPathLine(x, width, thickness) {
         return this.ej2Instances.getPathLine(x, width, thickness);
+    }
+    hide() {
+        return this.ej2Instances.hide();
     }
     removeSvg() {
         return this.ej2Instances.removeSvg();
     }
     requiredModules() {
         return this.ej2Instances.requiredModules();
+    }
+    show() {
+        return this.ej2Instances.show();
     }
 };
 ProgressBarComponent = __decorate$1([
