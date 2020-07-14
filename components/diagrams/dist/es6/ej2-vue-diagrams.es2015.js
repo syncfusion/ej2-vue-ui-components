@@ -791,8 +791,8 @@ let SymbolPaletteComponent = class SymbolPaletteComponent extends ComponentBase 
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
-    addPaletteItem(paletteName, paletteSymbol) {
-        return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol);
+    addPaletteItem(paletteName, paletteSymbol, isChild) {
+        return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol, isChild);
     }
     addPalettes(palettes) {
         return this.ej2Instances.addPalettes(palettes);

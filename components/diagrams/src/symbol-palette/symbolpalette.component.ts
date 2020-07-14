@@ -52,8 +52,8 @@ export class SymbolPaletteComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public addPaletteItem(paletteName: string, paletteSymbol: Object | Object): void {
-        return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol);
+    public addPaletteItem(paletteName: string, paletteSymbol: Object | Object, isChild?: boolean): void {
+        return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol, isChild);
     }
 
     public addPalettes(palettes: Object[]): void {

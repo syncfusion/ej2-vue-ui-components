@@ -1008,8 +1008,8 @@ var SymbolPaletteComponent = /** @__PURE__ @class */ (function (_super) {
     SymbolPaletteComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
-    SymbolPaletteComponent.prototype.addPaletteItem = function (paletteName, paletteSymbol) {
-        return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol);
+    SymbolPaletteComponent.prototype.addPaletteItem = function (paletteName, paletteSymbol, isChild) {
+        return this.ej2Instances.addPaletteItem(paletteName, paletteSymbol, isChild);
     };
     SymbolPaletteComponent.prototype.addPalettes = function (palettes) {
         return this.ej2Instances.addPalettes(palettes);

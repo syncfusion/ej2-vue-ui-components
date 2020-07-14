@@ -48,7 +48,10 @@ class ComponentBase extends Vue {
         }
     }
     beforeDestroy() {
-        this.ej2Instances.destroy();
+        let tempBeforeDestroyThis = this;
+        tempBeforeDestroyThis.ej2Instances.destroy();
+        tempBeforeDestroyThis.$el.style.visibility = 'hidden';
+        tempBeforeDestroyThis = null;
     }
     bindProperties() {
         let options = {};

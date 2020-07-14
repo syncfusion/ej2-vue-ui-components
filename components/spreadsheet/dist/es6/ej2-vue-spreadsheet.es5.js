@@ -530,7 +530,7 @@ var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+var properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 var modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -710,8 +710,8 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.paste = function (address, type) {
         return this.ej2Instances.paste(address, type);
     };
-    SpreadsheetComponent.prototype.protectSheet = function (sheetIndex, protectSettings) {
-        return this.ej2Instances.protectSheet(sheetIndex, protectSettings);
+    SpreadsheetComponent.prototype.protectSheet = function (sheet, protectSettings) {
+        return this.ej2Instances.protectSheet(sheet, protectSettings);
     };
     SpreadsheetComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
@@ -769,6 +769,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.undo = function () {
         return this.ej2Instances.undo();
+    };
+    SpreadsheetComponent.prototype.unprotectSheet = function (sheet) {
+        return this.ej2Instances.unprotectSheet(sheet);
     };
     SpreadsheetComponent.prototype.updateAction = function (options) {
         return this.ej2Instances.updateAction(options);

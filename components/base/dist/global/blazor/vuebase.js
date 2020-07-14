@@ -72,7 +72,10 @@ var ComponentBase = /** @class */ (function (_super) {
         }
     };
     ComponentBase.prototype.beforeDestroy = function () {
-        this.ej2Instances.destroy();
+        var tempBeforeDestroyThis = this;
+        tempBeforeDestroyThis.ej2Instances.destroy();
+        tempBeforeDestroyThis.$el.style.visibility = 'hidden';
+        tempBeforeDestroyThis = null;
     };
     ComponentBase.prototype.bindProperties = function () {
         var options = {};

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.2.45 (2020-07-14)
+
+### Common
+
+#### Bug Fixes
+
+- `I262885` - Resolved the memory leak issue.
+
 ## 18.2.44 (2020-07-07)
 
 ### Common
