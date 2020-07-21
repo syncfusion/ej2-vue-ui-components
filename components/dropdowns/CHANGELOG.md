@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.2.46 (2020-07-21)
+
+### DropDownList
+
+#### Bug Fixes
+
+- `#275281` - Now popup renders relative to the dropdown input element when position the control in the extreme right corner of the view port.
+
 ## 18.1.59 (2020-06-23)
 
 ### MultiSelect

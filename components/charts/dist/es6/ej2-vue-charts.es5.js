@@ -813,6 +813,9 @@ var ChartComponent = /** @__PURE__ @class */ (function (_super) {
     ChartComponent.prototype.print = function (id) {
         return this.ej2Instances.print(id);
     };
+    ChartComponent.prototype.processData = function (render) {
+        return this.ej2Instances.processData(render);
+    };
     ChartComponent.prototype.refreshLiveData = function () {
         return this.ej2Instances.refreshLiveData();
     };

@@ -151,6 +151,10 @@ export class DocumentEditorComponent extends ComponentBase {
         return this.ej2Instances.showOptionsPane();
     }
 
+    public showRestrictEditingPane(): void {
+        return this.ej2Instances.showRestrictEditingPane();
+    }
+
     public updateFields(): void {
         return this.ej2Instances.updateFields();
     }

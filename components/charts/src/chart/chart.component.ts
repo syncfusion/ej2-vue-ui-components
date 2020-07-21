@@ -113,6 +113,10 @@ export class ChartComponent extends ComponentBase {
         return this.ej2Instances.print(id);
     }
 
+    public processData(render: boolean): void {
+        return this.ej2Instances.processData(render);
+    }
+
     public refreshLiveData(): void {
         return this.ej2Instances.refreshLiveData();
     }

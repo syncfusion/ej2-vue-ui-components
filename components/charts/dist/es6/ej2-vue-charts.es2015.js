@@ -521,6 +521,9 @@ let ChartComponent = class ChartComponent extends ComponentBase {
     print(id) {
         return this.ej2Instances.print(id);
     }
+    processData(render) {
+        return this.ej2Instances.processData(render);
+    }
     refreshLiveData() {
         return this.ej2Instances.refreshLiveData();
     }

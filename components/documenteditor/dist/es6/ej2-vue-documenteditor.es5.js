@@ -137,6 +137,9 @@ var DocumentEditorComponent = /** @__PURE__ @class */ (function (_super) {
     DocumentEditorComponent.prototype.showOptionsPane = function () {
         return this.ej2Instances.showOptionsPane();
     };
+    DocumentEditorComponent.prototype.showRestrictEditingPane = function () {
+        return this.ej2Instances.showRestrictEditingPane();
+    };
     DocumentEditorComponent.prototype.updateFields = function () {
         return this.ej2Instances.updateFields();
     };

@@ -121,6 +121,9 @@ let DocumentEditorComponent = class DocumentEditorComponent extends ComponentBas
     showOptionsPane() {
         return this.ej2Instances.showOptionsPane();
     }
+    showRestrictEditingPane() {
+        return this.ej2Instances.showRestrictEditingPane();
+    }
     updateFields() {
         return this.ej2Instances.updateFields();
     }
