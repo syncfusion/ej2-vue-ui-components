@@ -2,13 +2,19 @@
 
 ## [Unreleased]
 
-## 18.2.46 (2020-07-21)
+## 18.2.47 (2020-07-28)
 
 ### DropDownList
 
 #### Bug Fixes
 
-- `#275281` - Now popup renders relative to the dropdown input element when position the control in the extreme right corner of the view port.
+- `#277503` - Issue with "sort order is not working for filtering dropdown after adding new item using addItem method" has been resolved.
+
+### ListBox
+
+#### Bug Fixes
+
+- Filtering is not working in IE browser has been fixed.
 
 ## 18.1.59 (2020-06-23)
 
@@ -1522,4 +1528,12 @@ DropDownList component contains a list of predefined values from which a single 
 - **Templates** - Allows customizing the list items, selected value, header, footer, category group header, and no records content.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the DropDownList component features through the keyboard, screen readers, or other assistive technology devices.
 
+
+## 18.2.46 (2020-07-21)
+
+### DropDownList
+
+#### Bug Fixes
+
+- `#275281` - Now popup renders relative to the dropdown input element when position the control in the extreme right corner of the view port.
 

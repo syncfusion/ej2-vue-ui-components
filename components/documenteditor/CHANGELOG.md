@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## 18.2.47 (2020-07-28)
+
+### Document Editor
+
+#### New Features
+
+- `#280089`, `#283427`, `#250760` - Added event to notify service failure.
+
+#### Bug Fixes
+
+- `#284775` - Resolved table resize enabled issue in protected mode.
+- `#282504` - Resolved footer content overlapping issue when inserting image and table in footer.
+
 ## 18.2.46 (2020-07-21)
 
 ### Document Editor
@@ -18,6 +31,12 @@
 - `#284412` - Comment mark is now deleted properly when comment is deleted.
 - `#281339` - Resolved RTL issue when editing a list content.
 - `#276616` - Paragraph maintained when inserting text in whole paragraph similar to MS Word.
+
+- `#284486` - Comment Tab in pane is removed when enable comment is false.
+- `#283344` - Resolved the initial delay in pasting images.
+- `#282707`,`#284035` - Resolved bullet list exporting issue in MAC devices.
+- `#284412` - Comment mark is now deleted properly when comment is deleted.
+- `#281339` - Resolved RTL issue when editing a list content.
 
 ## 18.2.45 (2020-07-14)
 
