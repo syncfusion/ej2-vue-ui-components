@@ -547,8 +547,8 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     addItems(items, itemIndex) {
         return this.ej2Instances.addItems(items, itemIndex);
     }
-    enableItems(items, enable) {
-        return this.ej2Instances.enableItems(items, enable);
+    enableItems(items, enable, isValue) {
+        return this.ej2Instances.enableItems(items, enable, isValue);
     }
     filter(dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
@@ -592,8 +592,8 @@ let ListBoxComponent = class ListBoxComponent extends ComponentBase {
     selectAll(state) {
         return this.ej2Instances.selectAll(state);
     }
-    selectItems(items, state) {
-        return this.ej2Instances.selectItems(items, state);
+    selectItems(items, state, isValue) {
+        return this.ej2Instances.selectItems(items, state, isValue);
     }
 };
 ListBoxComponent = __decorate$4([

@@ -51,6 +51,13 @@ export class QRCodeGeneratorComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public exportAsBase64Image(barcodeExportType: Object): Object {
+        return this.ej2Instances.exportAsBase64Image(barcodeExportType);
+    }
+
+    public exportImage(filename: string, barcodeExportType: Object): void {
+        return this.ej2Instances.exportImage(filename, barcodeExportType);
+    }
 }
 
 export const QRCodeGeneratorPlugin = {

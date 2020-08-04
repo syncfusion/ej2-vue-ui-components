@@ -46,6 +46,12 @@ let BarcodeGeneratorComponent = class BarcodeGeneratorComponent extends Componen
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    exportAsBase64Image(exportType) {
+        return this.ej2Instances.exportAsBase64Image(exportType);
+    }
+    exportImage(filename, exportType) {
+        return this.ej2Instances.exportImage(filename, exportType);
+    }
 };
 BarcodeGeneratorComponent = __decorate([
     EJComponentDecorator({
@@ -104,6 +110,12 @@ let QRCodeGeneratorComponent = class QRCodeGeneratorComponent extends ComponentB
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    exportAsBase64Image(barcodeExportType) {
+        return this.ej2Instances.exportAsBase64Image(barcodeExportType);
+    }
+    exportImage(filename, barcodeExportType) {
+        return this.ej2Instances.exportImage(filename, barcodeExportType);
+    }
 };
 QRCodeGeneratorComponent = __decorate$1([
     EJComponentDecorator({
@@ -161,6 +173,12 @@ let DataMatrixGeneratorComponent = class DataMatrixGeneratorComponent extends Co
     }
     render(createElement) {
         return createElement('div', this.$slots.default);
+    }
+    exportAsBase64Image(barcodeExportType) {
+        return this.ej2Instances.exportAsBase64Image(barcodeExportType);
+    }
+    exportImage(fileName, exportType) {
+        return this.ej2Instances.exportImage(fileName, exportType);
     }
 };
 DataMatrixGeneratorComponent = __decorate$2([

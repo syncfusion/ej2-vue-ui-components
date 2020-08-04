@@ -62,6 +62,12 @@ var BarcodeGeneratorComponent = /** @__PURE__ @class */ (function (_super) {
     BarcodeGeneratorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    BarcodeGeneratorComponent.prototype.exportAsBase64Image = function (exportType) {
+        return this.ej2Instances.exportAsBase64Image(exportType);
+    };
+    BarcodeGeneratorComponent.prototype.exportImage = function (filename, exportType) {
+        return this.ej2Instances.exportImage(filename, exportType);
+    };
     BarcodeGeneratorComponent = __decorate([
         EJComponentDecorator({
             props: properties
@@ -137,6 +143,12 @@ var QRCodeGeneratorComponent = /** @__PURE__ @class */ (function (_super) {
     QRCodeGeneratorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    QRCodeGeneratorComponent.prototype.exportAsBase64Image = function (barcodeExportType) {
+        return this.ej2Instances.exportAsBase64Image(barcodeExportType);
+    };
+    QRCodeGeneratorComponent.prototype.exportImage = function (filename, barcodeExportType) {
+        return this.ej2Instances.exportImage(filename, barcodeExportType);
+    };
     QRCodeGeneratorComponent = __decorate$1([
         EJComponentDecorator({
             props: properties$1
@@ -211,6 +223,12 @@ var DataMatrixGeneratorComponent = /** @__PURE__ @class */ (function (_super) {
     };
     DataMatrixGeneratorComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
+    };
+    DataMatrixGeneratorComponent.prototype.exportAsBase64Image = function (barcodeExportType) {
+        return this.ej2Instances.exportAsBase64Image(barcodeExportType);
+    };
+    DataMatrixGeneratorComponent.prototype.exportImage = function (fileName, exportType) {
+        return this.ej2Instances.exportImage(fileName, exportType);
     };
     DataMatrixGeneratorComponent = __decorate$2([
         EJComponentDecorator({

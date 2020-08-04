@@ -81,8 +81,8 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.addItems(items, itemIndex);
     }
 
-    public enableItems(items: string[], enable: boolean): void {
-        return this.ej2Instances.enableItems(items, enable);
+    public enableItems(items: string[], enable: boolean, isValue?: boolean): void {
+        return this.ej2Instances.enableItems(items, enable, isValue);
     }
 
     public filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
@@ -141,8 +141,8 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.selectAll(state);
     }
 
-    public selectItems(items: string[], state: boolean): void {
-        return this.ej2Instances.selectItems(items, state);
+    public selectItems(items: string[], state: boolean, isValue?: boolean): void {
+        return this.ej2Instances.selectItems(items, state, isValue);
     }
 }
 

@@ -51,6 +51,13 @@ export class BarcodeGeneratorComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public exportAsBase64Image(exportType: Object): Object {
+        return this.ej2Instances.exportAsBase64Image(exportType);
+    }
+
+    public exportImage(filename: string, exportType: Object): void {
+        return this.ej2Instances.exportImage(filename, exportType);
+    }
 }
 
 export const BarcodeGeneratorPlugin = {

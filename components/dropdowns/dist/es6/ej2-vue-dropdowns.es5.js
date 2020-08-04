@@ -631,8 +631,8 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.addItems = function (items, itemIndex) {
         return this.ej2Instances.addItems(items, itemIndex);
     };
-    ListBoxComponent.prototype.enableItems = function (items, enable) {
-        return this.ej2Instances.enableItems(items, enable);
+    ListBoxComponent.prototype.enableItems = function (items, enable, isValue) {
+        return this.ej2Instances.enableItems(items, enable, isValue);
     };
     ListBoxComponent.prototype.filter = function (dataSource, query, fields) {
         return this.ej2Instances.filter(dataSource, query, fields);
@@ -676,8 +676,8 @@ var ListBoxComponent = /** @__PURE__ @class */ (function (_super) {
     ListBoxComponent.prototype.selectAll = function (state) {
         return this.ej2Instances.selectAll(state);
     };
-    ListBoxComponent.prototype.selectItems = function (items, state) {
-        return this.ej2Instances.selectItems(items, state);
+    ListBoxComponent.prototype.selectItems = function (items, state, isValue) {
+        return this.ej2Instances.selectItems(items, state, isValue);
     };
     ListBoxComponent = __decorate$4([
         EJComponentDecorator({

@@ -51,6 +51,13 @@ export class DataMatrixGeneratorComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public exportAsBase64Image(barcodeExportType: Object): Object {
+        return this.ej2Instances.exportAsBase64Image(barcodeExportType);
+    }
+
+    public exportImage(fileName: string, exportType: Object): void {
+        return this.ej2Instances.exportImage(fileName, exportType);
+    }
 }
 
 export const DataMatrixGeneratorPlugin = {
