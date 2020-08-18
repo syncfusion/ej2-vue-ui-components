@@ -53,7 +53,7 @@ export class KanbanComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public addCard(cardData: undefined | undefined[]): void {
+    public addCard(cardData: Object | Object[] | undefined | undefined[]): void {
         return this.ej2Instances.addCard(cardData);
     }
 
@@ -65,7 +65,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.closeDialog();
     }
 
-    public deleteCard(cardData: string | number | undefined | undefined[]): void {
+    public deleteCard(cardData: string | number | Object | Object[] | undefined | undefined[]): void {
         return this.ej2Instances.deleteCard(cardData);
     }
 
@@ -73,7 +73,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.deleteColumn(index);
     }
 
-    public getCardDetails(target: Object): Object {
+    public getCardDetails(target: Object): Object | Object {
         return this.ej2Instances.getCardDetails(target);
     }
 
@@ -109,7 +109,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.showSpinner();
     }
 
-    public updateCard(cardData: undefined | undefined[]): void {
+    public updateCard(cardData: Object | Object[] | undefined | undefined[]): void {
         return this.ej2Instances.updateCard(cardData);
     }
 }
