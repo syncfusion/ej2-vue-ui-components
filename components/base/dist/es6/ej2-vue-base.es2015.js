@@ -196,7 +196,9 @@ function EJcomponentFactory(Component, options = {}) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
-                this.dataBind();
+                if (this.dataBind) {
+                    this.dataBind();
+                }
             };
         }
     }

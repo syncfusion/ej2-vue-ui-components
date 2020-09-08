@@ -227,7 +227,9 @@ function EJcomponentFactory(Component, options) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
-                this.dataBind();
+                if (this.dataBind) {
+                    this.dataBind();
+                }
             };
         };
         for (var _i = 0, _a = options.props; _i < _a.length; _i++) {

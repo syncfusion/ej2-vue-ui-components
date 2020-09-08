@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.2.57 (2020-09-08)
+
+### Common
+
+#### Bug Fixes
+
+- `I287706` - Resolved script error while changing value in test environment.
+
 ## 18.2.45 (2020-07-14)
 
 ### Common
