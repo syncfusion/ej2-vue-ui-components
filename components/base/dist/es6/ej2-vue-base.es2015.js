@@ -20,6 +20,7 @@ class ComponentBase extends Vue {
     }
     mounted() {
         this.ej2Instances.isVue = true;
+        this.ej2Instances.vueInstance = this;
         this.ej2Instances.appendTo(this.$el);
     }
     getInjectedServices() {
@@ -132,8 +133,8 @@ class ComponentBase extends Vue {
         let ret = {};
         if (tagDirective.componentOptions) {
             let dirTag = tagDirective.componentOptions.tag;
-            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data && tagDirective.data.attrs) {
-                ret = this.getCamelCaseProps(tagDirective.data.attrs);
+            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data) {
+                ret = tagDirective.data.attrs ? this.getCamelCaseProps(tagDirective.data.attrs) : this.getCamelCaseProps(tagDirective.data);
             }
             else if (typeof tagKey === 'object') {
                 if (tagDirective.componentOptions.children && (Object.keys(tagKey).indexOf(dirTag) !== -1)) {
@@ -287,18 +288,33 @@ function compile(templateElement, helper) {
         return stringCompiler(templateElement, helper);
     }
     else {
-        return (data) => {
+        return (data, context) => {
             let pid = getUniqueID('templateParentDiv');
             let id = getUniqueID('templateDiv');
             let ele = createElement('div', { id: pid, innerHTML: '<div id="' + id + '"></div>' });
             document.body.appendChild(ele);
             let tempObj = templateElement.call(that, {});
-            let templateVue = new Vue(tempObj.template);
-            templateVue.$data.data = extend(tempObj.data, data);
-            templateVue.$mount('#' + id);
-            let returnEle = ele.childNodes;
-            detach(ele);
-            return returnEle;
+            let returnEle;
+            if (context) {
+                let templateFunction = tempObj.template;
+                if (typeof templateFunction !== 'function') {
+                    templateFunction = Vue.extend(templateFunction);
+                }
+                let templateVue = new templateFunction({ 'data': { data: data }, parent: context.vueInstance });
+                //let templateVue: any = new Vue(tempObj.template);
+                //templateVue.$data.data = extend(tempObj.data, data);
+                templateVue.$mount('#' + id);
+                returnEle = ele.childNodes;
+                detach(ele);
+            }
+            else {
+                let templateVue = new Vue(tempObj.template);
+                templateVue.$data.data = extend(tempObj.data, data);
+                templateVue.$mount('#' + id);
+                returnEle = ele.childNodes;
+                detach(ele);
+            }
+            return returnEle || [];
         };
     }
 }

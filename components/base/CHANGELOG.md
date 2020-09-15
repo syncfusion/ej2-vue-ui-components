@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## 18.2.58 (2020-09-15)
+
+- `I231451` - Resolved the issue in child directives with no content or empty attributes.
+- `I287706` - Resolved script error while changing value in test environment.
+
 ## 18.2.57 (2020-09-08)
 
 ### Common

@@ -25,6 +25,7 @@ export class ComponentBase extends Vue {
 
     public mounted(): void {
         this.ej2Instances.isVue = true;
+        this.ej2Instances.vueInstance = this;
         this.ej2Instances.appendTo(this.$el);
     }
     public getInjectedServices(): Object[] {
@@ -145,8 +146,8 @@ export class ComponentBase extends Vue {
         let ret: Object = {};
         if (tagDirective.componentOptions) {
             let dirTag: string = tagDirective.componentOptions.tag;
-            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data && tagDirective.data.attrs) {
-                ret = this.getCamelCaseProps(tagDirective.data.attrs);
+            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data) {
+                ret = tagDirective.data.attrs ? this.getCamelCaseProps(tagDirective.data.attrs) : this.getCamelCaseProps(tagDirective.data);
             } else if (typeof tagKey === 'object') {
                 if (tagDirective.componentOptions.children && (Object.keys(tagKey).indexOf(dirTag) !== -1)) {
                     ret = this.getMultiLevelDirValue(tagDirective.componentOptions.children, tagKey[dirTag], tagNameMapper);
