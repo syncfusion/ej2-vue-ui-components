@@ -223,6 +223,10 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.indent();
     }
 
+    public keyActionHandler(e: Object): void {
+        return this.ej2Instances.keyActionHandler(e);
+    }
+
     public nextTimeSpan(mode?: string): void {
         return this.ej2Instances.nextTimeSpan(mode);
     }

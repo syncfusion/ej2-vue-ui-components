@@ -457,6 +457,9 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     indent() {
         return this.ej2Instances.indent();
     }
+    keyActionHandler(e) {
+        return this.ej2Instances.keyActionHandler(e);
+    }
     nextTimeSpan(mode) {
         return this.ej2Instances.nextTimeSpan(mode);
     }

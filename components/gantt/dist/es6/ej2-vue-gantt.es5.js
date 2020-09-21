@@ -611,6 +611,9 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.indent = function () {
         return this.ej2Instances.indent();
     };
+    GanttComponent.prototype.keyActionHandler = function (e) {
+        return this.ej2Instances.keyActionHandler(e);
+    };
     GanttComponent.prototype.nextTimeSpan = function (mode) {
         return this.ej2Instances.nextTimeSpan(mode);
     };
