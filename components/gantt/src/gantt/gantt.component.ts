@@ -259,12 +259,20 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.removeSortColumn(columnName);
     }
 
+    public renderTemplates(): void {
+        return this.ej2Instances.renderTemplates();
+    }
+
     public reorderColumns(fromFName: string | string[], toFName: string): void {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     }
 
     public reorderRows(fromIndexes: number[], toIndex: number, position: string): void {
         return this.ej2Instances.reorderRows(fromIndexes, toIndex, position);
+    }
+
+    public resetTemplates(): void {
+        return this.ej2Instances.resetTemplates();
     }
 
     public scrollToDate(date: string): void {

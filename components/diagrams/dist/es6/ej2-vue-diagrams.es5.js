@@ -161,15 +161,89 @@ var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var ConnectorFixedUserHandlesDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$2(ConnectorFixedUserHandlesDirective, _super);
+    function ConnectorFixedUserHandlesDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ConnectorFixedUserHandlesDirective.prototype.render = function () {
+        return;
+    };
+    ConnectorFixedUserHandlesDirective = __decorate$2([
+        EJComponentDecorator({})
+    ], ConnectorFixedUserHandlesDirective);
+    return ConnectorFixedUserHandlesDirective;
+}(Vue));
+var ConnectorFixedUserHandlesPlugin = {
+    name: 'e-connector-fixeduserhandles',
+    install: function (Vue$$1) {
+        Vue$$1.component(ConnectorFixedUserHandlesPlugin.name, ConnectorFixedUserHandlesDirective);
+    }
+};
+/**
+ * `e-connector` directive represent a annotation of the vue Diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-connectors>
+ * <e-connector>
+ * <e-connector-fixeduserhandles>
+ * <e-connector-fixeduserhandle>
+ * </e-connector-fixeduserhandle>
+ * </e-connector-fixeduserhandles>
+ * </e-connector>
+ * </e-connectors>
+ * </ejs-diagram>
+ * ```
+ */
+var ConnectorFixedUserHandleDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$2(ConnectorFixedUserHandleDirective, _super);
+    function ConnectorFixedUserHandleDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ConnectorFixedUserHandleDirective.prototype.render = function () {
+        return;
+    };
+    ConnectorFixedUserHandleDirective = __decorate$2([
+        EJComponentDecorator({})
+    ], ConnectorFixedUserHandleDirective);
+    return ConnectorFixedUserHandleDirective;
+}(Vue));
+var ConnectorFixedUserHandlePlugin = {
+    name: 'e-connector-fixeduserhandle',
+    install: function (Vue$$1) {
+        Vue$$1.component(ConnectorFixedUserHandlePlugin.name, ConnectorFixedUserHandleDirective);
+    }
+};
+
+var __extends$3 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var ConnectorAnnotationsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$2(ConnectorAnnotationsDirective, _super);
+    __extends$3(ConnectorAnnotationsDirective, _super);
     function ConnectorAnnotationsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ConnectorAnnotationsDirective.prototype.render = function () {
         return;
     };
-    ConnectorAnnotationsDirective = __decorate$2([
+    ConnectorAnnotationsDirective = __decorate$3([
         EJComponentDecorator({})
     ], ConnectorAnnotationsDirective);
     return ConnectorAnnotationsDirective;
@@ -197,14 +271,14 @@ var ConnectorAnnotationsPlugin = {
  * ```
  */
 var ConnectorAnnotationDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$2(ConnectorAnnotationDirective, _super);
+    __extends$3(ConnectorAnnotationDirective, _super);
     function ConnectorAnnotationDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ConnectorAnnotationDirective.prototype.render = function () {
         return;
     };
-    ConnectorAnnotationDirective = __decorate$2([
+    ConnectorAnnotationDirective = __decorate$3([
         EJComponentDecorator({})
     ], ConnectorAnnotationDirective);
     return ConnectorAnnotationDirective;
@@ -213,75 +287,6 @@ var ConnectorAnnotationPlugin = {
     name: 'e-connector-annotation',
     install: function (Vue$$1) {
         Vue$$1.component(ConnectorAnnotationPlugin.name, ConnectorAnnotationDirective);
-    }
-};
-
-var __extends$3 = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var ConnectorsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$3(ConnectorsDirective, _super);
-    function ConnectorsDirective() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    ConnectorsDirective.prototype.render = function () {
-        return;
-    };
-    ConnectorsDirective = __decorate$3([
-        EJComponentDecorator({})
-    ], ConnectorsDirective);
-    return ConnectorsDirective;
-}(Vue));
-var ConnectorsPlugin = {
-    name: 'e-connectors',
-    install: function (Vue$$1) {
-        Vue$$1.component(ConnectorsPlugin.name, ConnectorsDirective);
-    }
-};
-/**
- * `e-connectors` directive represent a connectors of the vue diagram.
- * It must be contained in a Diagram component(`ejs-diagram`).
- * ```html
- * <ejs-diagram>
- * <e-connectors>
- * <e-connector></e-connector>
- * </e-connectors>
- * </ejs-diagram>
- * ```
- */
-var ConnectorDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$3(ConnectorDirective, _super);
-    function ConnectorDirective() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    ConnectorDirective.prototype.render = function () {
-        return;
-    };
-    ConnectorDirective = __decorate$3([
-        EJComponentDecorator({})
-    ], ConnectorDirective);
-    return ConnectorDirective;
-}(Vue));
-var ConnectorPlugin = {
-    name: 'e-connector',
-    install: function (Vue$$1) {
-        Vue$$1.component(ConnectorPlugin.name, ConnectorDirective);
     }
 };
 
@@ -304,15 +309,158 @@ var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, 
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var ConnectorsDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$4(ConnectorsDirective, _super);
+    function ConnectorsDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ConnectorsDirective.prototype.render = function () {
+        return;
+    };
+    ConnectorsDirective = __decorate$4([
+        EJComponentDecorator({})
+    ], ConnectorsDirective);
+    return ConnectorsDirective;
+}(Vue));
+var ConnectorsPlugin = {
+    name: 'e-connectors',
+    install: function (Vue$$1) {
+        Vue$$1.component(ConnectorsPlugin.name, ConnectorsDirective);
+    }
+};
+/**
+ * `e-connectors` directive represent a connectors of the vue diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-connectors>
+ * <e-connector></e-connector>
+ * </e-connectors>
+ * </ejs-diagram>
+ * ```
+ */
+var ConnectorDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$4(ConnectorDirective, _super);
+    function ConnectorDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ConnectorDirective.prototype.render = function () {
+        return;
+    };
+    ConnectorDirective = __decorate$4([
+        EJComponentDecorator({})
+    ], ConnectorDirective);
+    return ConnectorDirective;
+}(Vue));
+var ConnectorPlugin = {
+    name: 'e-connector',
+    install: function (Vue$$1) {
+        Vue$$1.component(ConnectorPlugin.name, ConnectorDirective);
+    }
+};
+
+var __extends$5 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var NodeFixedUserHandlesDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$5(NodeFixedUserHandlesDirective, _super);
+    function NodeFixedUserHandlesDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    NodeFixedUserHandlesDirective.prototype.render = function () {
+        return;
+    };
+    NodeFixedUserHandlesDirective = __decorate$5([
+        EJComponentDecorator({})
+    ], NodeFixedUserHandlesDirective);
+    return NodeFixedUserHandlesDirective;
+}(Vue));
+var NodeFixedUserHandlesPlugin = {
+    name: 'e-node-fixeduserhandles',
+    install: function (Vue$$1) {
+        Vue$$1.component(NodeFixedUserHandlesPlugin.name, NodeFixedUserHandlesDirective);
+    }
+};
+/**
+ * `e-node` directive represent a annotation of the vue Diagram.
+ * It must be contained in a Diagram component(`ejs-diagram`).
+ * ```html
+ * <ejs-diagram>
+ * <e-nodes>
+ * <e-node>
+ * <e-node-fixeduserhandles>
+ * <e-node-fixeduserhandle>
+ * </e-node-fixeduserhandle>
+ * </e-node-fixeduserhandles>
+ * </e-node>
+ * </e-nodes>
+ * </ejs-diagram>
+ * ```
+ */
+var NodeFixedUserHandleDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends$5(NodeFixedUserHandleDirective, _super);
+    function NodeFixedUserHandleDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    NodeFixedUserHandleDirective.prototype.render = function () {
+        return;
+    };
+    NodeFixedUserHandleDirective = __decorate$5([
+        EJComponentDecorator({})
+    ], NodeFixedUserHandleDirective);
+    return NodeFixedUserHandleDirective;
+}(Vue));
+var NodeFixedUserHandlePlugin = {
+    name: 'e-node-fixeduserhandle',
+    install: function (Vue$$1) {
+        Vue$$1.component(NodeFixedUserHandlePlugin.name, NodeFixedUserHandleDirective);
+    }
+};
+
+var __extends$6 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var NodeAnnotationsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$4(NodeAnnotationsDirective, _super);
+    __extends$6(NodeAnnotationsDirective, _super);
     function NodeAnnotationsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     NodeAnnotationsDirective.prototype.render = function () {
         return;
     };
-    NodeAnnotationsDirective = __decorate$4([
+    NodeAnnotationsDirective = __decorate$6([
         EJComponentDecorator({})
     ], NodeAnnotationsDirective);
     return NodeAnnotationsDirective;
@@ -340,14 +488,14 @@ var NodeAnnotationsPlugin = {
  * ```
  */
 var NodeAnnotationDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$4(NodeAnnotationDirective, _super);
+    __extends$6(NodeAnnotationDirective, _super);
     function NodeAnnotationDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     NodeAnnotationDirective.prototype.render = function () {
         return;
     };
-    NodeAnnotationDirective = __decorate$4([
+    NodeAnnotationDirective = __decorate$6([
         EJComponentDecorator({})
     ], NodeAnnotationDirective);
     return NodeAnnotationDirective;
@@ -359,7 +507,7 @@ var NodeAnnotationPlugin = {
     }
 };
 
-var __extends$5 = (undefined && undefined.__extends) || (function () {
+var __extends$7 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -372,21 +520,21 @@ var __extends$5 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var PortsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$5(PortsDirective, _super);
+    __extends$7(PortsDirective, _super);
     function PortsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PortsDirective.prototype.render = function () {
         return;
     };
-    PortsDirective = __decorate$5([
+    PortsDirective = __decorate$7([
         EJComponentDecorator({})
     ], PortsDirective);
     return PortsDirective;
@@ -414,14 +562,14 @@ var PortsPlugin = {
  * ```
  */
 var PortDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$5(PortDirective, _super);
+    __extends$7(PortDirective, _super);
     function PortDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PortDirective.prototype.render = function () {
         return;
     };
-    PortDirective = __decorate$5([
+    PortDirective = __decorate$7([
         EJComponentDecorator({})
     ], PortDirective);
     return PortDirective;
@@ -433,7 +581,7 @@ var PortPlugin = {
     }
 };
 
-var __extends$6 = (undefined && undefined.__extends) || (function () {
+var __extends$8 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -446,21 +594,21 @@ var __extends$6 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$8 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var NodesDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$6(NodesDirective, _super);
+    __extends$8(NodesDirective, _super);
     function NodesDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     NodesDirective.prototype.render = function () {
         return;
     };
-    NodesDirective = __decorate$6([
+    NodesDirective = __decorate$8([
         EJComponentDecorator({})
     ], NodesDirective);
     return NodesDirective;
@@ -483,14 +631,14 @@ var NodesPlugin = {
  * ```
  */
 var NodeDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$6(NodeDirective, _super);
+    __extends$8(NodeDirective, _super);
     function NodeDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     NodeDirective.prototype.render = function () {
         return;
     };
-    NodeDirective = __decorate$6([
+    NodeDirective = __decorate$8([
         EJComponentDecorator({})
     ], NodeDirective);
     return NodeDirective;
@@ -502,7 +650,7 @@ var NodePlugin = {
     }
 };
 
-var __extends$7 = (undefined && undefined.__extends) || (function () {
+var __extends$9 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -515,13 +663,13 @@ var __extends$7 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$9 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+var properties = ['addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'fixedUserHandleClick', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 var modelProps = [];
 /**
  * Represents vue Diagram Component
@@ -530,15 +678,15 @@ var modelProps = [];
  * ```
  */
 var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$7(DiagramComponent, _super);
+    __extends$9(DiagramComponent, _super);
     function DiagramComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties;
         _this.models = modelProps;
         _this.hasChildDirective = true;
         _this.hasInjectedModules = true;
-        _this.tagMapper = { "e-layers": "e-layer", "e-cursormaps": "e-cursormap", "e-connectors": { "e-connector": { "e-connector-annotations": "e-connector-annotation" } }, "e-nodes": { "e-node": { "e-node-annotations": "e-node-annotation", "e-node-ports": "e-node-port" } } };
-        _this.tagNameMapper = { "e-cursormaps": "e-customCursor", "e-connector-annotations": "e-annotations", "e-node-annotations": "e-annotations", "e-node-ports": "e-ports" };
+        _this.tagMapper = { "e-layers": "e-layer", "e-cursormaps": "e-cursormap", "e-connectors": { "e-connector": { "e-connector-fixeduserhandles": "e-connector-fixeduserhandle", "e-connector-annotations": "e-connector-annotation" } }, "e-nodes": { "e-node": { "e-node-fixeduserhandles": "e-node-fixeduserhandle", "e-node-annotations": "e-node-annotation", "e-node-ports": "e-node-port" } } };
+        _this.tagNameMapper = { "e-cursormaps": "e-customCursor", "e-connector-fixeduserhandles": "e-fixedUserHandles", "e-connector-annotations": "e-annotations", "e-node-fixeduserhandles": "e-fixedUserHandles", "e-node-annotations": "e-annotations", "e-node-ports": "e-ports" };
         _this.ej2Instances = new Diagram({});
         _this.bindProperties();
         _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
@@ -854,7 +1002,7 @@ var DiagramComponent = /** @__PURE__ @class */ (function (_super) {
     DiagramComponent.prototype.zoomTo = function (options) {
         return this.ej2Instances.zoomTo(options);
     };
-    DiagramComponent = __decorate$7([
+    DiagramComponent = __decorate$9([
         EJComponentDecorator({
             props: properties
         })
@@ -871,10 +1019,14 @@ var DiagramPlugin = {
         Vue$$1.component(CustomCursorsPlugin.name, CustomCursorsDirective);
         Vue$$1.component(ConnectorPlugin.name, ConnectorDirective);
         Vue$$1.component(ConnectorsPlugin.name, ConnectorsDirective);
+        Vue$$1.component(ConnectorFixedUserHandlePlugin.name, ConnectorFixedUserHandleDirective);
+        Vue$$1.component(ConnectorFixedUserHandlesPlugin.name, ConnectorFixedUserHandlesDirective);
         Vue$$1.component(ConnectorAnnotationPlugin.name, ConnectorAnnotationDirective);
         Vue$$1.component(ConnectorAnnotationsPlugin.name, ConnectorAnnotationsDirective);
         Vue$$1.component(NodePlugin.name, NodeDirective);
         Vue$$1.component(NodesPlugin.name, NodesDirective);
+        Vue$$1.component(NodeFixedUserHandlePlugin.name, NodeFixedUserHandleDirective);
+        Vue$$1.component(NodeFixedUserHandlesPlugin.name, NodeFixedUserHandlesDirective);
         Vue$$1.component(NodeAnnotationPlugin.name, NodeAnnotationDirective);
         Vue$$1.component(NodeAnnotationsPlugin.name, NodeAnnotationsDirective);
         Vue$$1.component(PortPlugin.name, PortDirective);
@@ -882,7 +1034,7 @@ var DiagramPlugin = {
     }
 };
 
-var __extends$8 = (undefined && undefined.__extends) || (function () {
+var __extends$10 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -895,21 +1047,21 @@ var __extends$8 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$8 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$10 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var PalettesDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$8(PalettesDirective, _super);
+    __extends$10(PalettesDirective, _super);
     function PalettesDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PalettesDirective.prototype.render = function () {
         return;
     };
-    PalettesDirective = __decorate$8([
+    PalettesDirective = __decorate$10([
         EJComponentDecorator({})
     ], PalettesDirective);
     return PalettesDirective;
@@ -928,14 +1080,14 @@ var PalettesPlugin = {
  * ```
  */
 var PaletteDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$8(PaletteDirective, _super);
+    __extends$10(PaletteDirective, _super);
     function PaletteDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PaletteDirective.prototype.render = function () {
         return;
     };
-    PaletteDirective = __decorate$8([
+    PaletteDirective = __decorate$10([
         EJComponentDecorator({})
     ], PaletteDirective);
     return PaletteDirective;
@@ -947,7 +1099,7 @@ var PalettePlugin = {
     }
 };
 
-var __extends$9 = (undefined && undefined.__extends) || (function () {
+var __extends$11 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -960,7 +1112,7 @@ var __extends$9 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$9 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$11 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -975,7 +1127,7 @@ var modelProps$1 = [];
  * ```
  */
 var SymbolPaletteComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$9(SymbolPaletteComponent, _super);
+    __extends$11(SymbolPaletteComponent, _super);
     function SymbolPaletteComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties$1;
@@ -1020,7 +1172,7 @@ var SymbolPaletteComponent = /** @__PURE__ @class */ (function (_super) {
     SymbolPaletteComponent.prototype.removePalettes = function (palettes) {
         return this.ej2Instances.removePalettes(palettes);
     };
-    SymbolPaletteComponent = __decorate$9([
+    SymbolPaletteComponent = __decorate$11([
         EJComponentDecorator({
             props: properties$1
         })
@@ -1036,7 +1188,7 @@ var SymbolPalettePlugin = {
     }
 };
 
-var __extends$10 = (undefined && undefined.__extends) || (function () {
+var __extends$12 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1049,7 +1201,7 @@ var __extends$10 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$10 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$12 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -1064,7 +1216,7 @@ var modelProps$2 = [];
  * ```
  */
 var OverviewComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$10(OverviewComponent, _super);
+    __extends$12(OverviewComponent, _super);
     function OverviewComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties$2;
@@ -1100,7 +1252,7 @@ var OverviewComponent = /** @__PURE__ @class */ (function (_super) {
     OverviewComponent.prototype.updateHtmlLayer = function (view) {
         return this.ej2Instances.updateHtmlLayer(view);
     };
-    OverviewComponent = __decorate$10([
+    OverviewComponent = __decorate$12([
         EJComponentDecorator({
             props: properties$2
         })
@@ -1114,6 +1266,6 @@ var OverviewPlugin = {
     }
 };
 
-export { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin, CustomCursorsDirective, CustomCursorDirective, CustomCursorsPlugin, CustomCursorPlugin, ConnectorAnnotationsDirective, ConnectorAnnotationDirective, ConnectorAnnotationsPlugin, ConnectorAnnotationPlugin, ConnectorsDirective, ConnectorDirective, ConnectorsPlugin, ConnectorPlugin, NodeAnnotationsDirective, NodeAnnotationDirective, NodeAnnotationsPlugin, NodeAnnotationPlugin, PortsDirective, PortDirective, PortsPlugin, PortPlugin, NodesDirective, NodeDirective, NodesPlugin, NodePlugin, DiagramComponent, DiagramPlugin, PalettesDirective, PaletteDirective, PalettesPlugin, PalettePlugin, SymbolPaletteComponent, SymbolPalettePlugin, OverviewComponent, OverviewPlugin };
+export { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin, CustomCursorsDirective, CustomCursorDirective, CustomCursorsPlugin, CustomCursorPlugin, ConnectorFixedUserHandlesDirective, ConnectorFixedUserHandleDirective, ConnectorFixedUserHandlesPlugin, ConnectorFixedUserHandlePlugin, ConnectorAnnotationsDirective, ConnectorAnnotationDirective, ConnectorAnnotationsPlugin, ConnectorAnnotationPlugin, ConnectorsDirective, ConnectorDirective, ConnectorsPlugin, ConnectorPlugin, NodeFixedUserHandlesDirective, NodeFixedUserHandleDirective, NodeFixedUserHandlesPlugin, NodeFixedUserHandlePlugin, NodeAnnotationsDirective, NodeAnnotationDirective, NodeAnnotationsPlugin, NodeAnnotationPlugin, PortsDirective, PortDirective, PortsPlugin, PortPlugin, NodesDirective, NodeDirective, NodesPlugin, NodePlugin, DiagramComponent, DiagramPlugin, PalettesDirective, PaletteDirective, PalettesPlugin, PalettePlugin, SymbolPaletteComponent, SymbolPalettePlugin, OverviewComponent, OverviewPlugin };
 export * from '@syncfusion/ej2-diagrams';
 //# sourceMappingURL=ej2-vue-diagrams.es5.js.map

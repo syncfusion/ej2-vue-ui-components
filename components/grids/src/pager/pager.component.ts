@@ -51,6 +51,10 @@ export class PagerComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public destroyTemplate(propertyNames?: string[], index?: any): void {
+        return this.ej2Instances.destroyTemplate(propertyNames, index);
+    }
+
     public getLocalizedLabel(key: string): string {
         return this.ej2Instances.getLocalizedLabel(key);
     }

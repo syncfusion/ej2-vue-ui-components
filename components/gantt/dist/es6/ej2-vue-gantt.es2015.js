@@ -484,11 +484,17 @@ let GanttComponent = class GanttComponent extends ComponentBase {
     removeSortColumn(columnName) {
         return this.ej2Instances.removeSortColumn(columnName);
     }
+    renderTemplates() {
+        return this.ej2Instances.renderTemplates();
+    }
     reorderColumns(fromFName, toFName) {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     }
     reorderRows(fromIndexes, toIndex, position) {
         return this.ej2Instances.reorderRows(fromIndexes, toIndex, position);
+    }
+    resetTemplates() {
+        return this.ej2Instances.resetTemplates();
     }
     scrollToDate(date) {
         return this.ej2Instances.scrollToDate(date);

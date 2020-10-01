@@ -21,15 +21,73 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var ImagesDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends(ImagesDirective, _super);
+    function ImagesDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ImagesDirective.prototype.render = function () {
+        return;
+    };
+    ImagesDirective = __decorate([
+        EJComponentDecorator({})
+    ], ImagesDirective);
+    return ImagesDirective;
+}(Vue));
+var ImagesPlugin = {
+    name: 'e-images',
+    install: function (Vue$$1) {
+        Vue$$1.component(ImagesPlugin.name, ImagesDirective);
+    }
+};
+var ImageDirective = /** @__PURE__ @class */ (function (_super) {
+    __extends(ImageDirective, _super);
+    function ImageDirective() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ImageDirective.prototype.render = function () {
+        return;
+    };
+    ImageDirective = __decorate([
+        EJComponentDecorator({})
+    ], ImageDirective);
+    return ImageDirective;
+}(Vue));
+var ImagePlugin = {
+    name: 'e-image',
+    install: function (Vue$$1) {
+        Vue$$1.component(ImagePlugin.name, ImageDirective);
+    }
+};
+
+var __extends$1 = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var CellsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends(CellsDirective, _super);
+    __extends$1(CellsDirective, _super);
     function CellsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     CellsDirective.prototype.render = function () {
         return;
     };
-    CellsDirective = __decorate([
+    CellsDirective = __decorate$1([
         EJComponentDecorator({})
     ], CellsDirective);
     return CellsDirective;
@@ -60,14 +118,14 @@ var CellsPlugin = {
  * ```
  */
 var CellDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends(CellDirective, _super);
+    __extends$1(CellDirective, _super);
     function CellDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     CellDirective.prototype.render = function () {
         return;
     };
-    CellDirective = __decorate([
+    CellDirective = __decorate$1([
         EJComponentDecorator({})
     ], CellDirective);
     return CellDirective;
@@ -79,7 +137,7 @@ var CellPlugin = {
     }
 };
 
-var __extends$1 = (undefined && undefined.__extends) || (function () {
+var __extends$2 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -92,21 +150,21 @@ var __extends$1 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var RowsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$1(RowsDirective, _super);
+    __extends$2(RowsDirective, _super);
     function RowsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     RowsDirective.prototype.render = function () {
         return;
     };
-    RowsDirective = __decorate$1([
+    RowsDirective = __decorate$2([
         EJComponentDecorator({})
     ], RowsDirective);
     return RowsDirective;
@@ -133,14 +191,14 @@ var RowsPlugin = {
  * ```
  */
 var RowDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$1(RowDirective, _super);
+    __extends$2(RowDirective, _super);
     function RowDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     RowDirective.prototype.render = function () {
         return;
     };
-    RowDirective = __decorate$1([
+    RowDirective = __decorate$2([
         EJComponentDecorator({})
     ], RowDirective);
     return RowDirective;
@@ -152,7 +210,7 @@ var RowPlugin = {
     }
 };
 
-var __extends$2 = (undefined && undefined.__extends) || (function () {
+var __extends$3 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -165,21 +223,21 @@ var __extends$2 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var ColumnsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$2(ColumnsDirective, _super);
+    __extends$3(ColumnsDirective, _super);
     function ColumnsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ColumnsDirective.prototype.render = function () {
         return;
     };
-    ColumnsDirective = __decorate$2([
+    ColumnsDirective = __decorate$3([
         EJComponentDecorator({})
     ], ColumnsDirective);
     return ColumnsDirective;
@@ -206,14 +264,14 @@ var ColumnsPlugin = {
  * ```
  */
 var ColumnDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$2(ColumnDirective, _super);
+    __extends$3(ColumnDirective, _super);
     function ColumnDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ColumnDirective.prototype.render = function () {
         return;
     };
-    ColumnDirective = __decorate$2([
+    ColumnDirective = __decorate$3([
         EJComponentDecorator({})
     ], ColumnDirective);
     return ColumnDirective;
@@ -225,7 +283,7 @@ var ColumnPlugin = {
     }
 };
 
-var __extends$3 = (undefined && undefined.__extends) || (function () {
+var __extends$4 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -238,21 +296,21 @@ var __extends$3 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var RangesDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$3(RangesDirective, _super);
+    __extends$4(RangesDirective, _super);
     function RangesDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     RangesDirective.prototype.render = function () {
         return;
     };
-    RangesDirective = __decorate$3([
+    RangesDirective = __decorate$4([
         EJComponentDecorator({})
     ], RangesDirective);
     return RangesDirective;
@@ -279,14 +337,14 @@ var RangesPlugin = {
  * ```
  */
 var RangeDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$3(RangeDirective, _super);
+    __extends$4(RangeDirective, _super);
     function RangeDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     RangeDirective.prototype.render = function () {
         return;
     };
-    RangeDirective = __decorate$3([
+    RangeDirective = __decorate$4([
         EJComponentDecorator({})
     ], RangeDirective);
     return RangeDirective;
@@ -298,7 +356,7 @@ var RangePlugin = {
     }
 };
 
-var __extends$4 = (undefined && undefined.__extends) || (function () {
+var __extends$5 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -311,21 +369,21 @@ var __extends$4 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var ConditionalFormatsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$4(ConditionalFormatsDirective, _super);
+    __extends$5(ConditionalFormatsDirective, _super);
     function ConditionalFormatsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ConditionalFormatsDirective.prototype.render = function () {
         return;
     };
-    ConditionalFormatsDirective = __decorate$4([
+    ConditionalFormatsDirective = __decorate$5([
         EJComponentDecorator({})
     ], ConditionalFormatsDirective);
     return ConditionalFormatsDirective;
@@ -352,14 +410,14 @@ var ConditionalFormatsPlugin = {
  * ```
  */
 var ConditionalFormatDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$4(ConditionalFormatDirective, _super);
+    __extends$5(ConditionalFormatDirective, _super);
     function ConditionalFormatDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ConditionalFormatDirective.prototype.render = function () {
         return;
     };
-    ConditionalFormatDirective = __decorate$4([
+    ConditionalFormatDirective = __decorate$5([
         EJComponentDecorator({})
     ], ConditionalFormatDirective);
     return ConditionalFormatDirective;
@@ -371,7 +429,7 @@ var ConditionalFormatPlugin = {
     }
 };
 
-var __extends$5 = (undefined && undefined.__extends) || (function () {
+var __extends$6 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -384,21 +442,21 @@ var __extends$5 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var SheetsDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$5(SheetsDirective, _super);
+    __extends$6(SheetsDirective, _super);
     function SheetsDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     SheetsDirective.prototype.render = function () {
         return;
     };
-    SheetsDirective = __decorate$5([
+    SheetsDirective = __decorate$6([
         EJComponentDecorator({})
     ], SheetsDirective);
     return SheetsDirective;
@@ -422,14 +480,14 @@ var SheetsPlugin = {
  * ```
  */
 var SheetDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$5(SheetDirective, _super);
+    __extends$6(SheetDirective, _super);
     function SheetDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     SheetDirective.prototype.render = function () {
         return;
     };
-    SheetDirective = __decorate$5([
+    SheetDirective = __decorate$6([
         EJComponentDecorator({})
     ], SheetDirective);
     return SheetDirective;
@@ -441,7 +499,7 @@ var SheetPlugin = {
     }
 };
 
-var __extends$6 = (undefined && undefined.__extends) || (function () {
+var __extends$7 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -454,21 +512,21 @@ var __extends$6 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var DefinedNamesDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$6(DefinedNamesDirective, _super);
+    __extends$7(DefinedNamesDirective, _super);
     function DefinedNamesDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     DefinedNamesDirective.prototype.render = function () {
         return;
     };
-    DefinedNamesDirective = __decorate$6([
+    DefinedNamesDirective = __decorate$7([
         EJComponentDecorator({})
     ], DefinedNamesDirective);
     return DefinedNamesDirective;
@@ -492,14 +550,14 @@ var DefinedNamesPlugin = {
  * ```
  */
 var DefinedNameDirective = /** @__PURE__ @class */ (function (_super) {
-    __extends$6(DefinedNameDirective, _super);
+    __extends$7(DefinedNameDirective, _super);
     function DefinedNameDirective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     DefinedNameDirective.prototype.render = function () {
         return;
     };
-    DefinedNameDirective = __decorate$6([
+    DefinedNameDirective = __decorate$7([
         EJComponentDecorator({})
     ], DefinedNameDirective);
     return DefinedNameDirective;
@@ -511,7 +569,7 @@ var DefinedNamePlugin = {
     }
 };
 
-var __extends$7 = (undefined && undefined.__extends) || (function () {
+var __extends$8 = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -524,13 +582,13 @@ var __extends$7 = (undefined && undefined.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$8 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+var properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 var modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -539,15 +597,15 @@ var modelProps = [];
  * ```
  */
 var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
-    __extends$7(SpreadsheetComponent, _super);
+    __extends$8(SpreadsheetComponent, _super);
     function SpreadsheetComponent() {
         var _this = _super.call(this) || this;
         _this.propKeys = properties;
         _this.models = modelProps;
         _this.hasChildDirective = true;
         _this.hasInjectedModules = true;
-        _this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range", "e-conditionalformats": "e-conditionalformat" } }, "e-definednames": "e-definedname" };
-        _this.tagNameMapper = { "e-conditionalformats": "e-conditionalFormats", "e-definednames": "e-definedNames" };
+        _this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": { "e-cell": { "e-images": "e-image" } } } }, "e-columns": "e-column", "e-ranges": "e-range", "e-conditionalformats": "e-conditionalformat" } }, "e-definednames": "e-definedname" };
+        _this.tagNameMapper = { "e-images": "e-image", "e-conditionalformats": "e-conditionalFormats", "e-definednames": "e-definedNames" };
         _this.ej2Instances = new Spreadsheet({});
         _this.bindProperties();
         _this.ej2Instances._setProperties = _this.ej2Instances.setProperties;
@@ -635,6 +693,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.delete = function (startIndex, endIndex, model) {
         return this.ej2Instances.delete(startIndex, endIndex, model);
     };
+    SpreadsheetComponent.prototype.deleteImage = function (id, range) {
+        return this.ej2Instances.deleteImage(id, range);
+    };
     SpreadsheetComponent.prototype.enableContextMenuItems = function (items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     };
@@ -686,6 +747,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.insertColumn = function (startColumn, endColumn) {
         return this.ej2Instances.insertColumn(startColumn, endColumn);
     };
+    SpreadsheetComponent.prototype.insertImage = function (images, range) {
+        return this.ej2Instances.insertImage(images, range);
+    };
     SpreadsheetComponent.prototype.insertRow = function (startRow, endRow) {
         return this.ej2Instances.insertRow(startRow, endRow);
     };
@@ -715,6 +779,9 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.redo = function () {
         return this.ej2Instances.redo();
+    };
+    SpreadsheetComponent.prototype.refresh = function (isNew) {
+        return this.ej2Instances.refresh(isNew);
     };
     SpreadsheetComponent.prototype.removeContextMenuItems = function (items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
@@ -755,8 +822,8 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.setColWidth = function (width, colIndex, sheetIndex) {
         return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
     };
-    SpreadsheetComponent.prototype.setRowHeight = function (height, rowIndex, sheetIndex) {
-        return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex);
+    SpreadsheetComponent.prototype.setRowHeight = function (height, rowIndex, sheetIndex, edited) {
+        return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex, edited);
     };
     SpreadsheetComponent.prototype.showSpinner = function () {
         return this.ej2Instances.showSpinner();
@@ -785,7 +852,7 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.wrap = function (address, wrap) {
         return this.ej2Instances.wrap(address, wrap);
     };
-    SpreadsheetComponent = __decorate$7([
+    SpreadsheetComponent = __decorate$8([
         EJComponentDecorator({
             props: properties
         })
@@ -802,6 +869,8 @@ var SpreadsheetPlugin = {
         Vue$$1.component(RowsPlugin.name, RowsDirective);
         Vue$$1.component(CellPlugin.name, CellDirective);
         Vue$$1.component(CellsPlugin.name, CellsDirective);
+        Vue$$1.component(ImagePlugin.name, ImageDirective);
+        Vue$$1.component(ImagesPlugin.name, ImagesDirective);
         Vue$$1.component(ColumnPlugin.name, ColumnDirective);
         Vue$$1.component(ColumnsPlugin.name, ColumnsDirective);
         Vue$$1.component(RangePlugin.name, RangeDirective);
@@ -813,6 +882,6 @@ var SpreadsheetPlugin = {
     }
 };
 
-export { CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
+export { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin, CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
 export * from '@syncfusion/ej2-spreadsheet';
 //# sourceMappingURL=ej2-vue-spreadsheet.es5.js.map

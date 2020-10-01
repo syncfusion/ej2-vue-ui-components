@@ -29,14 +29,7 @@ export function compile(templateElement: any, helper?: Object):
                 templateVue.$mount('#' + id);
                 returnEle = ele.childNodes;
                 detach(ele);
-            } else {
-                let templateVue: any = new Vue(tempObj.template);
-                templateVue.$data.data = extend(tempObj.data, data);
-                templateVue.$mount('#' + id);
-                returnEle = ele.childNodes;
-                detach(ele);
-
-            }
+            } 
 
             return returnEle || [];
         };

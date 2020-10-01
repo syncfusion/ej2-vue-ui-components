@@ -8,12 +8,47 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+let ImagesDirective = class ImagesDirective extends Vue {
+    render() {
+        return;
+    }
+};
+ImagesDirective = __decorate([
+    EJComponentDecorator({})
+], ImagesDirective);
+const ImagesPlugin = {
+    name: 'e-images',
+    install(Vue$$1) {
+        Vue$$1.component(ImagesPlugin.name, ImagesDirective);
+    }
+};
+let ImageDirective = class ImageDirective extends Vue {
+    render() {
+        return;
+    }
+};
+ImageDirective = __decorate([
+    EJComponentDecorator({})
+], ImageDirective);
+const ImagePlugin = {
+    name: 'e-image',
+    install(Vue$$1) {
+        Vue$$1.component(ImagePlugin.name, ImageDirective);
+    }
+};
+
+var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 let CellsDirective = class CellsDirective extends Vue {
     render() {
         return;
     }
 };
-CellsDirective = __decorate([
+CellsDirective = __decorate$1([
     EJComponentDecorator({})
 ], CellsDirective);
 const CellsPlugin = {
@@ -46,7 +81,7 @@ let CellDirective = class CellDirective extends Vue {
         return;
     }
 };
-CellDirective = __decorate([
+CellDirective = __decorate$1([
     EJComponentDecorator({})
 ], CellDirective);
 const CellPlugin = {
@@ -56,7 +91,7 @@ const CellPlugin = {
     }
 };
 
-var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -67,7 +102,7 @@ let RowsDirective = class RowsDirective extends Vue {
         return;
     }
 };
-RowsDirective = __decorate$1([
+RowsDirective = __decorate$2([
     EJComponentDecorator({})
 ], RowsDirective);
 const RowsPlugin = {
@@ -96,7 +131,7 @@ let RowDirective = class RowDirective extends Vue {
         return;
     }
 };
-RowDirective = __decorate$1([
+RowDirective = __decorate$2([
     EJComponentDecorator({})
 ], RowDirective);
 const RowPlugin = {
@@ -106,7 +141,7 @@ const RowPlugin = {
     }
 };
 
-var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -117,7 +152,7 @@ let ColumnsDirective = class ColumnsDirective extends Vue {
         return;
     }
 };
-ColumnsDirective = __decorate$2([
+ColumnsDirective = __decorate$3([
     EJComponentDecorator({})
 ], ColumnsDirective);
 const ColumnsPlugin = {
@@ -146,7 +181,7 @@ let ColumnDirective = class ColumnDirective extends Vue {
         return;
     }
 };
-ColumnDirective = __decorate$2([
+ColumnDirective = __decorate$3([
     EJComponentDecorator({})
 ], ColumnDirective);
 const ColumnPlugin = {
@@ -156,7 +191,7 @@ const ColumnPlugin = {
     }
 };
 
-var __decorate$3 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -167,7 +202,7 @@ let RangesDirective = class RangesDirective extends Vue {
         return;
     }
 };
-RangesDirective = __decorate$3([
+RangesDirective = __decorate$4([
     EJComponentDecorator({})
 ], RangesDirective);
 const RangesPlugin = {
@@ -196,7 +231,7 @@ let RangeDirective = class RangeDirective extends Vue {
         return;
     }
 };
-RangeDirective = __decorate$3([
+RangeDirective = __decorate$4([
     EJComponentDecorator({})
 ], RangeDirective);
 const RangePlugin = {
@@ -206,7 +241,7 @@ const RangePlugin = {
     }
 };
 
-var __decorate$4 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -217,7 +252,7 @@ let ConditionalFormatsDirective = class ConditionalFormatsDirective extends Vue 
         return;
     }
 };
-ConditionalFormatsDirective = __decorate$4([
+ConditionalFormatsDirective = __decorate$5([
     EJComponentDecorator({})
 ], ConditionalFormatsDirective);
 const ConditionalFormatsPlugin = {
@@ -246,7 +281,7 @@ let ConditionalFormatDirective = class ConditionalFormatDirective extends Vue {
         return;
     }
 };
-ConditionalFormatDirective = __decorate$4([
+ConditionalFormatDirective = __decorate$5([
     EJComponentDecorator({})
 ], ConditionalFormatDirective);
 const ConditionalFormatPlugin = {
@@ -256,7 +291,7 @@ const ConditionalFormatPlugin = {
     }
 };
 
-var __decorate$5 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -267,7 +302,7 @@ let SheetsDirective = class SheetsDirective extends Vue {
         return;
     }
 };
-SheetsDirective = __decorate$5([
+SheetsDirective = __decorate$6([
     EJComponentDecorator({})
 ], SheetsDirective);
 const SheetsPlugin = {
@@ -293,7 +328,7 @@ let SheetDirective = class SheetDirective extends Vue {
         return;
     }
 };
-SheetDirective = __decorate$5([
+SheetDirective = __decorate$6([
     EJComponentDecorator({})
 ], SheetDirective);
 const SheetPlugin = {
@@ -303,7 +338,7 @@ const SheetPlugin = {
     }
 };
 
-var __decorate$6 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -314,7 +349,7 @@ let DefinedNamesDirective = class DefinedNamesDirective extends Vue {
         return;
     }
 };
-DefinedNamesDirective = __decorate$6([
+DefinedNamesDirective = __decorate$7([
     EJComponentDecorator({})
 ], DefinedNamesDirective);
 const DefinedNamesPlugin = {
@@ -340,7 +375,7 @@ let DefinedNameDirective = class DefinedNameDirective extends Vue {
         return;
     }
 };
-DefinedNameDirective = __decorate$6([
+DefinedNameDirective = __decorate$7([
     EJComponentDecorator({})
 ], DefinedNameDirective);
 const DefinedNamePlugin = {
@@ -350,13 +385,13 @@ const DefinedNamePlugin = {
     }
 };
 
-var __decorate$7 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$8 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-const properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+const properties = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 const modelProps = [];
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -371,8 +406,8 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
         this.models = modelProps;
         this.hasChildDirective = true;
         this.hasInjectedModules = true;
-        this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": "e-cell" } }, "e-columns": "e-column", "e-ranges": "e-range", "e-conditionalformats": "e-conditionalformat" } }, "e-definednames": "e-definedname" };
-        this.tagNameMapper = { "e-conditionalformats": "e-conditionalFormats", "e-definednames": "e-definedNames" };
+        this.tagMapper = { "e-sheets": { "e-sheet": { "e-rows": { "e-row": { "e-cells": { "e-cell": { "e-images": "e-image" } } } }, "e-columns": "e-column", "e-ranges": "e-range", "e-conditionalformats": "e-conditionalformat" } }, "e-definednames": "e-definedname" };
+        this.tagNameMapper = { "e-images": "e-image", "e-conditionalformats": "e-conditionalFormats", "e-definednames": "e-definedNames" };
         this.ej2Instances = new Spreadsheet({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -458,6 +493,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     delete(startIndex, endIndex, model) {
         return this.ej2Instances.delete(startIndex, endIndex, model);
     }
+    deleteImage(id, range) {
+        return this.ej2Instances.deleteImage(id, range);
+    }
     enableContextMenuItems(items, enable, isUniqueId) {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     }
@@ -509,6 +547,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     insertColumn(startColumn, endColumn) {
         return this.ej2Instances.insertColumn(startColumn, endColumn);
     }
+    insertImage(images, range) {
+        return this.ej2Instances.insertImage(images, range);
+    }
     insertRow(startRow, endRow) {
         return this.ej2Instances.insertRow(startRow, endRow);
     }
@@ -538,6 +579,9 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     redo() {
         return this.ej2Instances.redo();
+    }
+    refresh(isNew) {
+        return this.ej2Instances.refresh(isNew);
     }
     removeContextMenuItems(items, isUniqueId) {
         return this.ej2Instances.removeContextMenuItems(items, isUniqueId);
@@ -578,8 +622,8 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     setColWidth(width, colIndex, sheetIndex) {
         return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
     }
-    setRowHeight(height, rowIndex, sheetIndex) {
-        return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex);
+    setRowHeight(height, rowIndex, sheetIndex, edited) {
+        return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex, edited);
     }
     showSpinner() {
         return this.ej2Instances.showSpinner();
@@ -609,7 +653,7 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.wrap(address, wrap);
     }
 };
-SpreadsheetComponent = __decorate$7([
+SpreadsheetComponent = __decorate$8([
     EJComponentDecorator({
         props: properties
     })
@@ -624,6 +668,8 @@ const SpreadsheetPlugin = {
         Vue$$1.component(RowsPlugin.name, RowsDirective);
         Vue$$1.component(CellPlugin.name, CellDirective);
         Vue$$1.component(CellsPlugin.name, CellsDirective);
+        Vue$$1.component(ImagePlugin.name, ImageDirective);
+        Vue$$1.component(ImagesPlugin.name, ImagesDirective);
         Vue$$1.component(ColumnPlugin.name, ColumnDirective);
         Vue$$1.component(ColumnsPlugin.name, ColumnsDirective);
         Vue$$1.component(RangePlugin.name, RangeDirective);
@@ -635,6 +681,6 @@ const SpreadsheetPlugin = {
     }
 };
 
-export { CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
+export { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin, CellsDirective, CellDirective, CellsPlugin, CellPlugin, RowsDirective, RowDirective, RowsPlugin, RowPlugin, ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin, RangesDirective, RangeDirective, RangesPlugin, RangePlugin, ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin, SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin, DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin, SpreadsheetComponent, SpreadsheetPlugin };
 export * from '@syncfusion/ej2-spreadsheet';
 //# sourceMappingURL=ej2-vue-spreadsheet.es2015.js.map

@@ -390,6 +390,12 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.removeResource = function (resourceId, name) {
         return this.ej2Instances.removeResource(resourceId, name);
     };
+    ScheduleComponent.prototype.renderTemplates = function () {
+        return this.ej2Instances.renderTemplates();
+    };
+    ScheduleComponent.prototype.resetTemplates = function (templates) {
+        return this.ej2Instances.resetTemplates(templates);
+    };
     ScheduleComponent.prototype.resetWorkHours = function (dates, start, end, groupIndex) {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     };

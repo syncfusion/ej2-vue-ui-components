@@ -638,11 +638,17 @@ var GanttComponent = /** @__PURE__ @class */ (function (_super) {
     GanttComponent.prototype.removeSortColumn = function (columnName) {
         return this.ej2Instances.removeSortColumn(columnName);
     };
+    GanttComponent.prototype.renderTemplates = function () {
+        return this.ej2Instances.renderTemplates();
+    };
     GanttComponent.prototype.reorderColumns = function (fromFName, toFName) {
         return this.ej2Instances.reorderColumns(fromFName, toFName);
     };
     GanttComponent.prototype.reorderRows = function (fromIndexes, toIndex, position) {
         return this.ej2Instances.reorderRows(fromIndexes, toIndex, position);
+    };
+    GanttComponent.prototype.resetTemplates = function () {
+        return this.ej2Instances.resetTemplates();
     };
     GanttComponent.prototype.scrollToDate = function (date) {
         return this.ej2Instances.scrollToDate(date);

@@ -2,35 +2,6 @@
 
 ## [Unreleased]
 
-## 18.2.59 (2020-09-21)
-
-- `I231451` - Resolved the issue in child directives with no content or empty attributes.
-- `I287706` - Resolved script error while changing value in test environment.
-
-## 18.2.57 (2020-09-08)
-
-### Common
-
-#### Bug Fixes
-
-- `I287706` - Resolved script error while changing value in test environment.
-
-## 18.2.45 (2020-07-14)
-
-### Common
-
-#### Bug Fixes
-
-- `I262885` - Resolved the memory leak issue.
-
-## 18.2.44 (2020-07-07)
-
-### Common
-
-#### Bug Fixes
-
-- Resolved property change called after a certain timeout issue,
-
 ## 17.4.47 (2020-02-05)
 
 ### Common

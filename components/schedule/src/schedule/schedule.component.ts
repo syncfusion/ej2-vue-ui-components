@@ -204,6 +204,14 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.removeResource(resourceId, name);
     }
 
+    public renderTemplates(): void {
+        return this.ej2Instances.renderTemplates();
+    }
+
+    public resetTemplates(templates?: string[]): void {
+        return this.ej2Instances.resetTemplates(templates);
+    }
+
     public resetWorkHours(dates: Object[], start?: string, end?: string, groupIndex?: number): void {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     }

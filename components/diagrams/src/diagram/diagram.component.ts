@@ -3,14 +3,16 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Diagram } from '@syncfusion/ej2-diagrams';
 import { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './layers.directive'
 import { CustomCursorsDirective, CustomCursorDirective, CustomCursorsPlugin, CustomCursorPlugin } from './customcursor.directive'
+import { ConnectorFixedUserHandlesDirective, ConnectorFixedUserHandleDirective, ConnectorFixedUserHandlesPlugin, ConnectorFixedUserHandlePlugin } from './connector-fixeduserhandle.directive'
 import { ConnectorAnnotationsDirective, ConnectorAnnotationDirective, ConnectorAnnotationsPlugin, ConnectorAnnotationPlugin } from './connector-annotation.directive'
 import { ConnectorsDirective, ConnectorDirective, ConnectorsPlugin, ConnectorPlugin } from './connectors.directive'
+import { NodeFixedUserHandlesDirective, NodeFixedUserHandleDirective, NodeFixedUserHandlesPlugin, NodeFixedUserHandlePlugin } from './node-fixeduserhandle.directive'
 import { NodeAnnotationsDirective, NodeAnnotationDirective, NodeAnnotationsPlugin, NodeAnnotationPlugin } from './node-annotation.directive'
 import { PortsDirective, PortDirective, PortsPlugin, PortPlugin } from './ports.directive'
 import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.directive'
 
 
-export const properties: string[] = ['addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+export const properties: string[] = ['addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'expandStateChange', 'fixedUserHandleClick', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'mouseEnter', 'mouseLeave', 'mouseOver', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
 /**
@@ -29,8 +31,8 @@ export class DiagramComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-layers":"e-layer","e-cursormaps":"e-cursormap","e-connectors":{"e-connector":{"e-connector-annotations":"e-connector-annotation"}},"e-nodes":{"e-node":{"e-node-annotations":"e-node-annotation","e-node-ports":"e-node-port"}}};
-    public tagNameMapper: Object = {"e-cursormaps":"e-customCursor","e-connector-annotations":"e-annotations","e-node-annotations":"e-annotations","e-node-ports":"e-ports"};
+    public tagMapper: { [key: string]: Object } = {"e-layers":"e-layer","e-cursormaps":"e-cursormap","e-connectors":{"e-connector":{"e-connector-fixeduserhandles":"e-connector-fixeduserhandle","e-connector-annotations":"e-connector-annotation"}},"e-nodes":{"e-node":{"e-node-fixeduserhandles":"e-node-fixeduserhandle","e-node-annotations":"e-node-annotation","e-node-ports":"e-node-port"}}};
+    public tagNameMapper: Object = {"e-cursormaps":"e-customCursor","e-connector-fixeduserhandles":"e-fixedUserHandles","e-connector-annotations":"e-annotations","e-node-fixeduserhandles":"e-fixedUserHandles","e-node-annotations":"e-annotations","e-node-ports":"e-ports"};
     
     constructor() {
         super();
@@ -457,10 +459,14 @@ export const DiagramPlugin = {
         Vue.component(CustomCursorsPlugin.name, CustomCursorsDirective);
         Vue.component(ConnectorPlugin.name, ConnectorDirective);
         Vue.component(ConnectorsPlugin.name, ConnectorsDirective);
+        Vue.component(ConnectorFixedUserHandlePlugin.name, ConnectorFixedUserHandleDirective);
+        Vue.component(ConnectorFixedUserHandlesPlugin.name, ConnectorFixedUserHandlesDirective);
         Vue.component(ConnectorAnnotationPlugin.name, ConnectorAnnotationDirective);
         Vue.component(ConnectorAnnotationsPlugin.name, ConnectorAnnotationsDirective);
         Vue.component(NodePlugin.name, NodeDirective);
         Vue.component(NodesPlugin.name, NodesDirective);
+        Vue.component(NodeFixedUserHandlePlugin.name, NodeFixedUserHandleDirective);
+        Vue.component(NodeFixedUserHandlesPlugin.name, NodeFixedUserHandlesDirective);
         Vue.component(NodeAnnotationPlugin.name, NodeAnnotationDirective);
         Vue.component(NodeAnnotationsPlugin.name, NodeAnnotationsDirective);
         Vue.component(PortPlugin.name, PortDirective);

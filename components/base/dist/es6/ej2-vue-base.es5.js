@@ -161,8 +161,8 @@ var ComponentBase = /** @__PURE__ @class */ (function (_super) {
         var ret = {};
         if (tagDirective.componentOptions) {
             var dirTag = tagDirective.componentOptions.tag;
-            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data) {
-                ret = tagDirective.data.attrs ? this.getCamelCaseProps(tagDirective.data.attrs) : this.getCamelCaseProps(tagDirective.data);
+            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data && tagDirective.data.attrs) {
+                ret = this.getCamelCaseProps(tagDirective.data.attrs);
             }
             else if (typeof tagKey === 'object') {
                 if (tagDirective.componentOptions.children && (Object.keys(tagKey).indexOf(dirTag) !== -1)) {
@@ -338,13 +338,6 @@ function compile(templateElement, helper) {
                 var templateVue = new templateFunction({ 'data': { data: data }, parent: context.vueInstance });
                 //let templateVue: any = new Vue(tempObj.template);
                 //templateVue.$data.data = extend(tempObj.data, data);
-                templateVue.$mount('#' + id);
-                returnEle = ele.childNodes;
-                detach(ele);
-            }
-            else {
-                var templateVue = new Vue(tempObj.template);
-                templateVue.$data.data = extend(tempObj.data, data);
                 templateVue.$mount('#' + id);
                 returnEle = ele.childNodes;
                 detach(ele);

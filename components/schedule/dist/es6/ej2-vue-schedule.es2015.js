@@ -305,6 +305,12 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     removeResource(resourceId, name) {
         return this.ej2Instances.removeResource(resourceId, name);
     }
+    renderTemplates() {
+        return this.ej2Instances.renderTemplates();
+    }
+    resetTemplates(templates) {
+        return this.ej2Instances.resetTemplates(templates);
+    }
     resetWorkHours(dates, start, end, groupIndex) {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     }
