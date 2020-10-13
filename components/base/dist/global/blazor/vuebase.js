@@ -231,7 +231,7 @@ function EJcomponentFactory(Component, options) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
-                if (this.dataBind) {
+                if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
                     this.dataBind();
                 }
             };
@@ -364,7 +364,5 @@ exports.compile = compile;
 return exports;
 
 });
-sfBlazor.libs.push("vuebase")
-sfBlazor.loadDependencies(["vue","base"], () => {
+
     sf.vuebase = sf.vuebase({});
-});

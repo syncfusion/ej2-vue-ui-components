@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 18.3.40 (2020-10-13)
+
+### PDF Viewer
+
+#### New Features
+
+- `#F158073`, `#291648` - Exposed the annotation UnSelect event in PDF Viewer.
+
+- `#F158073`, `#291648`- Exposed the annotation UnSelect event in PDF Viewer.
+
 ## 18.2.56 (2020-09-01)
 
 ### PDF Viewer

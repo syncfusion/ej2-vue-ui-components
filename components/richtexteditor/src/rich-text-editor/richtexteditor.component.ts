@@ -125,6 +125,10 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.getText();
     }
 
+    public getXhtml(): string {
+        return this.ej2Instances.getXhtml();
+    }
+
     public hideInlineToolbar(): void {
         return this.ej2Instances.hideInlineToolbar();
     }

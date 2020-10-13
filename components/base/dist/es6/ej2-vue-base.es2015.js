@@ -197,7 +197,7 @@ function EJcomponentFactory(Component, options = {}) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
-                if (this.dataBind) {
+                if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
                     this.dataBind();
                 }
             };

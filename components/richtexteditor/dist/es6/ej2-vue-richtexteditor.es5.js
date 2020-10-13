@@ -122,6 +122,9 @@ var RichTextEditorComponent = /** @__PURE__ @class */ (function (_super) {
     RichTextEditorComponent.prototype.getText = function () {
         return this.ej2Instances.getText();
     };
+    RichTextEditorComponent.prototype.getXhtml = function () {
+        return this.ej2Instances.getXhtml();
+    };
     RichTextEditorComponent.prototype.hideInlineToolbar = function () {
         return this.ej2Instances.hideInlineToolbar();
     };

@@ -106,6 +106,9 @@ let RichTextEditorComponent = class RichTextEditorComponent extends ComponentBas
     getText() {
         return this.ej2Instances.getText();
     }
+    getXhtml() {
+        return this.ej2Instances.getXhtml();
+    }
     hideInlineToolbar() {
         return this.ej2Instances.hideInlineToolbar();
     }
