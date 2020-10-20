@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+## 18.3.42 (2020-10-20)
+
+### Dropdown Tree
+
+#### Bug Fixes
+
+- `F155642` - The issue with "the two-way binding is not working while enabling checkbox support in the Dropdown Tree component" has been resolved.
+
+### ListBox
+
+#### Bug Fixes
+
+- Issue with 'dragStart' event has been fixed.
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `#292734` - Issue with "script error occurs while updating the data source and value property dynamically" has been resolved.
+
 ## 18.3.40 (2020-10-13)
 
 ### MultiSelect
