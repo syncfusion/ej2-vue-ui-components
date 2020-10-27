@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 18.3.42 (2020-10-20)
+## 18.3.44 (2020-10-27)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- -The width set to specific columns using the `columRender` event is now working correctly.
+
+## 18.3.40 (2020-10-13)
 
 ### Pivot Table
 
