@@ -88,8 +88,8 @@ let DropDownButtonComponent = class DropDownButtonComponent extends ComponentBas
     focusIn() {
         return this.ej2Instances.focusIn();
     }
-    removeItems(items) {
-        return this.ej2Instances.removeItems(items);
+    removeItems(items, isUniqueId) {
+        return this.ej2Instances.removeItems(items, isUniqueId);
     }
     toggle() {
         return this.ej2Instances.toggle();
@@ -195,8 +195,8 @@ let SplitButtonComponent = class SplitButtonComponent extends ComponentBase {
     focusIn() {
         return this.ej2Instances.focusIn();
     }
-    removeItems(items) {
-        return this.ej2Instances.removeItems(items);
+    removeItems(items, isUniqueId) {
+        return this.ej2Instances.removeItems(items, isUniqueId);
     }
     toggle() {
         return this.ej2Instances.toggle();

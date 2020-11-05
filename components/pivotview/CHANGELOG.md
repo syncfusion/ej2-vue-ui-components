@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 18.3.44 (2020-10-27)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- -The width set to specific columns using the `columRender` event is now working correctly.
-
 ## 18.3.40 (2020-10-13)
 
 ### Pivot Table
@@ -313,6 +305,14 @@ The pivot grid is a multi-dimensional data visualization component built on top 
 - **Adaptive Rendering** - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
 - **Exporting** - Provides the option to exporting records to Excel, CSV and PDF formats.
 
+
+## 18.3.44 (2020-10-27)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- -The width set to specific columns using the `columRender` event is now working correctly.
 
 ## 18.1.54 (2020-05-26)
 

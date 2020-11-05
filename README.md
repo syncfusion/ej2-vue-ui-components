@@ -39,6 +39,6 @@
  ## License
  Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license).
  ## Changelog
- Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes/index/?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+ Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes?utm_source=npm&utm_campaign=ej2-vue-ui-components)
      © Copyright 2020 Syncfusion, Inc. All Rights Reserved.
     The Syncfusion Essential Studio license and copyright applies to this distribution.

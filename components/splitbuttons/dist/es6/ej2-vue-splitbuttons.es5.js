@@ -127,8 +127,8 @@ var DropDownButtonComponent = /** @__PURE__ @class */ (function (_super) {
     DropDownButtonComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
-    DropDownButtonComponent.prototype.removeItems = function (items) {
-        return this.ej2Instances.removeItems(items);
+    DropDownButtonComponent.prototype.removeItems = function (items, isUniqueId) {
+        return this.ej2Instances.removeItems(items, isUniqueId);
     };
     DropDownButtonComponent.prototype.toggle = function () {
         return this.ej2Instances.toggle();
@@ -274,8 +274,8 @@ var SplitButtonComponent = /** @__PURE__ @class */ (function (_super) {
     SplitButtonComponent.prototype.focusIn = function () {
         return this.ej2Instances.focusIn();
     };
-    SplitButtonComponent.prototype.removeItems = function (items) {
-        return this.ej2Instances.removeItems(items);
+    SplitButtonComponent.prototype.removeItems = function (items, isUniqueId) {
+        return this.ej2Instances.removeItems(items, isUniqueId);
     };
     SplitButtonComponent.prototype.toggle = function () {
         return this.ej2Instances.toggle();

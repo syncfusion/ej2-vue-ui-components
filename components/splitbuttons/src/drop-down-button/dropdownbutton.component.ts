@@ -60,8 +60,8 @@ export class DropDownButtonComponent extends ComponentBase {
         return this.ej2Instances.focusIn();
     }
 
-    public removeItems(items: string[]): void {
-        return this.ej2Instances.removeItems(items);
+    public removeItems(items: string[], isUniqueId?: boolean): void {
+        return this.ej2Instances.removeItems(items, isUniqueId);
     }
 
     public toggle(): void {
