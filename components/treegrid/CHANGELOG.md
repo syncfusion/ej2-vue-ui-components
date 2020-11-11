@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## 18.3.48 (2020-11-11)
+
+### TreeGrid
+
+#### Bug Fixes
+
+- `#F158886` - Cell editing with frozen columns works fine.
+- `#299761` - Treegrid column width renders fine in Internet Explorer when Virtualization is enabled.
+
+#### New Features
+
+- `#293514` - Provided the Cell Editing support for Remote Data Binding.
+
 ## 18.3.47 (2020-11-05)
 
 ### TreeGrid
@@ -10,8 +23,6 @@
 
 - `#F159016` - Expand / Collapse works properly, when we use template column as treecolumn
 - `#299693` - Template in tree column works fine.
-
-#### BugFixes
 
 - `#F159016` - Expand / Collapse works properly, when we use template column as treecolumn
 
@@ -23,8 +34,6 @@
 
 - `#F157882`- After editing the row using `updateRow` method, `getCurrentViewRecords` method updated properly.
 - `#297986` - Row Drag and drop within treegrid works fine with checkbox enabled.
-
-#### BugFixes
 
 - `#F157882`- After editing the row using `updateRow` method, `getCurrentViewRecords` method updated properly.
 
@@ -38,8 +47,6 @@
 - `#289600` - Records get expanded properly after collapsing all records using `collapseAtLevel` method in observable binding.
 - `#296233` - Row Drag and Drop within treegrid works fine.
 - `#F157099` - Virtualization with Aggregates works fine with large number of records.
-
-#### BugFixes
 
 - `#F157882`- When editing with a double click, it works fine when we only have one record.
 
