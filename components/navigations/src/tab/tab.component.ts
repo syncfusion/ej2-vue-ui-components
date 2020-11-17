@@ -72,6 +72,10 @@ export class TabComponent extends ComponentBase {
         return this.ej2Instances.refresh();
     }
 
+    public refreshActiveTab(): void {
+        return this.ej2Instances.refreshActiveTab();
+    }
+
     public removeTab(index: number): void {
         return this.ej2Instances.removeTab(index);
     }

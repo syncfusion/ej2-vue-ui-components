@@ -614,6 +614,9 @@ var TabComponent = /** @__PURE__ @class */ (function (_super) {
     TabComponent.prototype.refresh = function () {
         return this.ej2Instances.refresh();
     };
+    TabComponent.prototype.refreshActiveTab = function () {
+        return this.ej2Instances.refreshActiveTab();
+    };
     TabComponent.prototype.removeTab = function (index) {
         return this.ej2Instances.removeTab(index);
     };

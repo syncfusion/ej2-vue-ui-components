@@ -478,6 +478,9 @@ let TabComponent = class TabComponent extends ComponentBase {
     refresh() {
         return this.ej2Instances.refresh();
     }
+    refreshActiveTab() {
+        return this.ej2Instances.refreshActiveTab();
+    }
     removeTab(index) {
         return this.ej2Instances.removeTab(index);
     }

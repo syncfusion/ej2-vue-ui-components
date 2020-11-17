@@ -43,11 +43,13 @@ export class ComponentBase extends Vue {
         return ret;
     }
     public updated(): void {
-        if (this.hasChildDirective) {
+        if (this.hasChildDirective ) {
             let childKey: Object = {};
-            this.fetchChildPropValues(childKey);
+            if(this.fetchChildPropValues){
+                this.fetchChildPropValues(childKey);
+            }
             let curChildDir: string = JSON.stringify(childKey);
-            if (this.childDirObjects !== curChildDir) {
+            if (this.childDirObjects !== curChildDir && this.assignValueToWrapper) {
                 this.childDirObjects = curChildDir;
                 this.assignValueToWrapper(childKey, false);
             }
@@ -68,7 +70,7 @@ export class ComponentBase extends Vue {
                 options[prop] = this[prop];
             }
         }
-        if (this.hasChildDirective) {
+        if (this.hasChildDirective && this.fetchChildPropValues) {
             this.fetchChildPropValues(options);
         }
         if (this.hasInjectedModules) {
@@ -82,7 +84,10 @@ export class ComponentBase extends Vue {
             }
             this.ej2Instances.injectedModules = prevModule;
         }
-        this.assignValueToWrapper(options);
+        if(this.assignValueToWrapper)
+        {
+            this.assignValueToWrapper(options);
+        }
     }
 
     public assignValueToWrapper(option: Object, silent?: boolean): void {

@@ -64,9 +64,11 @@ var ComponentBase = /** @class */ (function (_super) {
     ComponentBase.prototype.updated = function () {
         if (this.hasChildDirective) {
             var childKey = {};
-            this.fetchChildPropValues(childKey);
+            if (this.fetchChildPropValues) {
+                this.fetchChildPropValues(childKey);
+            }
             var curChildDir = JSON.stringify(childKey);
-            if (this.childDirObjects !== curChildDir) {
+            if (this.childDirObjects !== curChildDir && this.assignValueToWrapper) {
                 this.childDirObjects = curChildDir;
                 this.assignValueToWrapper(childKey, false);
             }
@@ -86,7 +88,7 @@ var ComponentBase = /** @class */ (function (_super) {
                 options[prop] = this[prop];
             }
         }
-        if (this.hasChildDirective) {
+        if (this.hasChildDirective && this.fetchChildPropValues) {
             this.fetchChildPropValues(options);
         }
         if (this.hasInjectedModules) {
@@ -100,7 +102,9 @@ var ComponentBase = /** @class */ (function (_super) {
             }
             this.ej2Instances.injectedModules = prevModule;
         }
-        this.assignValueToWrapper(options);
+        if (this.assignValueToWrapper) {
+            this.assignValueToWrapper(options);
+        }
     };
     ComponentBase.prototype.assignValueToWrapper = function (option, silent) {
         this.ej2Instances.setProperties(sf.base.extend({}, {}, option, true), sf.base.isNullOrUndefined(silent) ? true : silent);

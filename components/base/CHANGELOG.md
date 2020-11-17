@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 18.3.48 (2020-11-11)
+## 18.3.50 (2020-11-17)
+
+### Common
+
+#### Bug Fixes
+
+-  `I295845` - Resolved the warning while running test cases
+
+## 18.3.40 (2020-10-13)
 
 ### Common
 
