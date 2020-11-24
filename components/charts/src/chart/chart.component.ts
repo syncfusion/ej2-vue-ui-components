@@ -89,6 +89,10 @@ export class ChartComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
+    public addAxes(axisCollection: Object[]): void {
+        return this.ej2Instances.addAxes(axisCollection);
+    }
+
     public addSeries(seriesCollection: Object[]): void {
         return this.ej2Instances.addSeries(seriesCollection);
     }
@@ -119,6 +123,10 @@ export class ChartComponent extends ComponentBase {
 
     public refreshLiveData(): void {
         return this.ej2Instances.refreshLiveData();
+    }
+
+    public removeAxis(index: number): void {
+        return this.ej2Instances.removeAxis(index);
     }
 
     public removeSeries(index: number): void {

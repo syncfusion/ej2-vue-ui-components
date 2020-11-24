@@ -503,6 +503,9 @@ let ChartComponent = class ChartComponent extends ComponentBase {
     render(createElement) {
         return createElement('div', this.$slots.default);
     }
+    addAxes(axisCollection) {
+        return this.ej2Instances.addAxes(axisCollection);
+    }
     addSeries(seriesCollection) {
         return this.ej2Instances.addSeries(seriesCollection);
     }
@@ -526,6 +529,9 @@ let ChartComponent = class ChartComponent extends ComponentBase {
     }
     refreshLiveData() {
         return this.ej2Instances.refreshLiveData();
+    }
+    removeAxis(index) {
+        return this.ej2Instances.removeAxis(index);
     }
     removeSeries(index) {
         return this.ej2Instances.removeSeries(index);

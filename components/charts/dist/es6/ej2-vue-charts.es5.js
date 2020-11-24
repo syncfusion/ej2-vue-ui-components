@@ -795,6 +795,9 @@ var ChartComponent = /** @__PURE__ @class */ (function (_super) {
     ChartComponent.prototype.render = function (createElement) {
         return createElement('div', this.$slots.default);
     };
+    ChartComponent.prototype.addAxes = function (axisCollection) {
+        return this.ej2Instances.addAxes(axisCollection);
+    };
     ChartComponent.prototype.addSeries = function (seriesCollection) {
         return this.ej2Instances.addSeries(seriesCollection);
     };
@@ -818,6 +821,9 @@ var ChartComponent = /** @__PURE__ @class */ (function (_super) {
     };
     ChartComponent.prototype.refreshLiveData = function () {
         return this.ej2Instances.refreshLiveData();
+    };
+    ChartComponent.prototype.removeAxis = function (index) {
+        return this.ej2Instances.removeAxis(index);
     };
     ChartComponent.prototype.removeSeries = function (index) {
         return this.ej2Instances.removeSeries(index);
