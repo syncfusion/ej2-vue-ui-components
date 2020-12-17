@@ -183,8 +183,8 @@ let KanbanComponent = class KanbanComponent extends ComponentBase {
     showSpinner() {
         return this.ej2Instances.showSpinner();
     }
-    updateCard(cardData) {
-        return this.ej2Instances.updateCard(cardData);
+    updateCard(cardData, index) {
+        return this.ej2Instances.updateCard(cardData, index);
     }
 };
 KanbanComponent = __decorate$2([

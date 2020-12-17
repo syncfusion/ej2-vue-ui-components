@@ -2,30 +2,16 @@
 
 ## [Unreleased]
 
-## 18.3.48 (2020-11-11)
+## 18.4.30 (2020-12-17)
 
 ### Pivot Table
 
 #### Bug Fixes
 
-- `#298311` - Issues in member editor in the dark theme have been resolved.
+- `#300162` - The pivot chart now works properly with height as a percentage..
 
-#### New Features
-
-- `#294553`,`#295251`,`#F158139` - The palette feature in the accumulation chart types is now supported.
-- `#293085` - The width of the component can now be adjusted on the basis of its columns.
-
-## 18.3.40 (2020-10-13)
-
-### Pivot Table
-
-#### New Features
-
-- `#F156978` - Provided additional cell information for cell template event.
-
-#### Bug Fixes
-
-- Delimiter issue in hyperlink feature has been fixed.
+- `#279083` - Performance lags have been fixed in calculated fields.
+- `#301136` - Performance lags have been fixed in static field list with virtual scrolling.
 
 ## 18.2.56 (2020-09-01)
 
@@ -318,14 +304,6 @@ The pivot grid is a multi-dimensional data visualization component built on top 
 - **Adaptive Rendering** - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
 - **Exporting** - Provides the option to exporting records to Excel, CSV and PDF formats.
 
-
-## 18.3.44 (2020-10-27)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- -The width set to specific columns using the `columRender` event is now working correctly.
 
 ## 18.1.54 (2020-05-26)
 

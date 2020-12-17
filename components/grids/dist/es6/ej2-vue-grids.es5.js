@@ -454,6 +454,30 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.getFrozenDataRows = function () {
         return this.ej2Instances.getFrozenDataRows();
     };
+    GridComponent.prototype.getFrozenLeftColumnHeaderByIndex = function (index) {
+        return this.ej2Instances.getFrozenLeftColumnHeaderByIndex(index);
+    };
+    GridComponent.prototype.getFrozenLeftCount = function () {
+        return this.ej2Instances.getFrozenLeftCount();
+    };
+    GridComponent.prototype.getFrozenMode = function () {
+        return this.ej2Instances.getFrozenMode();
+    };
+    GridComponent.prototype.getFrozenRightCellFromIndex = function (rowIndex, columnIndex) {
+        return this.ej2Instances.getFrozenRightCellFromIndex(rowIndex, columnIndex);
+    };
+    GridComponent.prototype.getFrozenRightColumnHeaderByIndex = function (index) {
+        return this.ej2Instances.getFrozenRightColumnHeaderByIndex(index);
+    };
+    GridComponent.prototype.getFrozenRightDataRows = function () {
+        return this.ej2Instances.getFrozenRightDataRows();
+    };
+    GridComponent.prototype.getFrozenRightRowByIndex = function (index) {
+        return this.ej2Instances.getFrozenRightRowByIndex(index);
+    };
+    GridComponent.prototype.getFrozenRightRows = function () {
+        return this.ej2Instances.getFrozenRightRows();
+    };
     GridComponent.prototype.getFrozenRowByIndex = function (index) {
         return this.ej2Instances.getFrozenRowByIndex(index);
     };
@@ -471,6 +495,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.getMovableCellFromIndex = function (rowIndex, columnIndex) {
         return this.ej2Instances.getMovableCellFromIndex(rowIndex, columnIndex);
+    };
+    GridComponent.prototype.getMovableColumnHeaderByIndex = function (index) {
+        return this.ej2Instances.getMovableColumnHeaderByIndex(index);
     };
     GridComponent.prototype.getMovableDataRows = function () {
         return this.ej2Instances.getMovableDataRows();
@@ -543,6 +570,9 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     };
     GridComponent.prototype.hideSpinner = function () {
         return this.ej2Instances.hideSpinner();
+    };
+    GridComponent.prototype.isFrozenGrid = function () {
+        return this.ej2Instances.isFrozenGrid();
     };
     GridComponent.prototype.openColumnChooser = function (x, y) {
         return this.ej2Instances.openColumnChooser(x, y);

@@ -109,8 +109,8 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.showSpinner();
     }
 
-    public updateCard(cardData: Object | Object[] | undefined | undefined[]): void {
-        return this.ej2Instances.updateCard(cardData);
+    public updateCard(cardData: Object | Object[] | undefined | undefined[], index?: number): void {
+        return this.ej2Instances.updateCard(cardData, index);
     }
 }
 

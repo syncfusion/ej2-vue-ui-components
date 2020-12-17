@@ -272,6 +272,38 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.getFrozenDataRows();
     }
 
+    public getFrozenLeftColumnHeaderByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenLeftColumnHeaderByIndex(index);
+    }
+
+    public getFrozenLeftCount(): number {
+        return this.ej2Instances.getFrozenLeftCount();
+    }
+
+    public getFrozenMode(): Object {
+        return this.ej2Instances.getFrozenMode();
+    }
+
+    public getFrozenRightCellFromIndex(rowIndex: number, columnIndex: number): Object {
+        return this.ej2Instances.getFrozenRightCellFromIndex(rowIndex, columnIndex);
+    }
+
+    public getFrozenRightColumnHeaderByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenRightColumnHeaderByIndex(index);
+    }
+
+    public getFrozenRightDataRows(): Object[] {
+        return this.ej2Instances.getFrozenRightDataRows();
+    }
+
+    public getFrozenRightRowByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenRightRowByIndex(index);
+    }
+
+    public getFrozenRightRows(): Object[] {
+        return this.ej2Instances.getFrozenRightRows();
+    }
+
     public getFrozenRowByIndex(index: number): Object {
         return this.ej2Instances.getFrozenRowByIndex(index);
     }
@@ -294,6 +326,10 @@ export class GridComponent extends ComponentBase {
 
     public getMovableCellFromIndex(rowIndex: number, columnIndex: number): Object {
         return this.ej2Instances.getMovableCellFromIndex(rowIndex, columnIndex);
+    }
+
+    public getMovableColumnHeaderByIndex(index: number): Object {
+        return this.ej2Instances.getMovableColumnHeaderByIndex(index);
     }
 
     public getMovableDataRows(): Object[] {
@@ -390,6 +426,10 @@ export class GridComponent extends ComponentBase {
 
     public hideSpinner(): void {
         return this.ej2Instances.hideSpinner();
+    }
+
+    public isFrozenGrid(): boolean {
+        return this.ej2Instances.isFrozenGrid();
     }
 
     public openColumnChooser(x?: number, y?: number): void {

@@ -2,6 +2,7 @@ import Vue from 'vue';
 import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin } from './image.directive'
+import { ChartsDirective, ChartDirective, ChartsPlugin, ChartPlugin } from './chart.directive'
 import { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './cells.directive'
 import { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
@@ -11,7 +12,7 @@ import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sh
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'locale', 'openUrl', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 /**
@@ -30,8 +31,8 @@ export class SpreadsheetComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"};
-    public tagNameMapper: Object = {"e-images":"e-image","e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"};
+    public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image","e-charts":"e-chart"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"};
+    public tagNameMapper: Object = {"e-images":"e-image","e-charts":"e-chart","e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"};
     
     constructor() {
         super();
@@ -143,6 +144,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.delete(startIndex, endIndex, model);
     }
 
+    public deleteChart(id?: string): void {
+        return this.ej2Instances.deleteChart(id);
+    }
+
     public deleteImage(id: string, range?: string): void {
         return this.ej2Instances.deleteImage(id, range);
     }
@@ -209,6 +214,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public hideToolbarItems(tab: string, indexes: number[], hide: boolean): void {
         return this.ej2Instances.hideToolbarItems(tab, indexes, hide);
+    }
+
+    public insertChart(chart?: Object[]): void {
+        return this.ej2Instances.insertChart(chart);
     }
 
     public insertColumn(startColumn?: number | Object[], endColumn?: number): void {
@@ -339,7 +348,7 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.unprotectSheet(sheet);
     }
 
-    public updateAction(options: string): void {
+    public updateAction(options: Object): void {
         return this.ej2Instances.updateAction(options);
     }
 
@@ -368,6 +377,8 @@ export const SpreadsheetPlugin = {
         Vue.component(CellsPlugin.name, CellsDirective);
         Vue.component(ImagePlugin.name, ImageDirective);
         Vue.component(ImagesPlugin.name, ImagesDirective);
+        Vue.component(ChartPlugin.name, ChartDirective);
+        Vue.component(ChartsPlugin.name, ChartsDirective);
         Vue.component(ColumnPlugin.name, ColumnDirective);
         Vue.component(ColumnsPlugin.name, ColumnsDirective);
         Vue.component(RangePlugin.name, RangeDirective);

@@ -64,11 +64,9 @@ var ComponentBase = /** @class */ (function (_super) {
     ComponentBase.prototype.updated = function () {
         if (this.hasChildDirective) {
             var childKey = {};
-            if (this.fetchChildPropValues) {
-                this.fetchChildPropValues(childKey);
-            }
+            this.fetchChildPropValues(childKey);
             var curChildDir = JSON.stringify(childKey);
-            if (this.childDirObjects !== curChildDir && this.assignValueToWrapper) {
+            if (this.childDirObjects !== curChildDir) {
                 this.childDirObjects = curChildDir;
                 this.assignValueToWrapper(childKey, false);
             }
@@ -88,7 +86,7 @@ var ComponentBase = /** @class */ (function (_super) {
                 options[prop] = this[prop];
             }
         }
-        if (this.hasChildDirective && this.fetchChildPropValues) {
+        if (this.hasChildDirective) {
             this.fetchChildPropValues(options);
         }
         if (this.hasInjectedModules) {
@@ -102,9 +100,7 @@ var ComponentBase = /** @class */ (function (_super) {
             }
             this.ej2Instances.injectedModules = prevModule;
         }
-        if (this.assignValueToWrapper) {
-            this.assignValueToWrapper(options);
-        }
+        this.assignValueToWrapper(options);
     };
     ComponentBase.prototype.assignValueToWrapper = function (option, silent) {
         this.ej2Instances.setProperties(sf.base.extend({}, {}, option, true), sf.base.isNullOrUndefined(silent) ? true : silent);
@@ -168,8 +164,8 @@ var ComponentBase = /** @class */ (function (_super) {
         var ret = {};
         if (tagDirective.componentOptions) {
             var dirTag = tagDirective.componentOptions.tag;
-            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data && tagDirective.data.attrs) {
-                ret = this.getCamelCaseProps(tagDirective.data.attrs);
+            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data) {
+                ret = tagDirective.data.attrs ? this.getCamelCaseProps(tagDirective.data.attrs) : this.getCamelCaseProps(tagDirective.data);
             }
             else if (typeof tagKey === 'object') {
                 if (tagDirective.componentOptions.children && (Object.keys(tagKey).indexOf(dirTag) !== -1)) {
@@ -235,7 +231,7 @@ function EJcomponentFactory(Component, options) {
             (options.props || (options.props = {}))[prop] = {};
             (options.watch || (options.watch = {}))[prop] = function (newVal) {
                 this.ej2Instances[prop] = newVal;
-                if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
+                if (this.dataBind) {
                     this.dataBind();
                 }
             };
@@ -339,10 +335,16 @@ function compile(templateElement, helper) {
             var returnEle;
             if (context) {
                 var templateFunction = tempObj.template;
+                var propsData = sf.base.getValue('template.propsData', tempObj);
+                var dataObj = { 'data': { data: data }, parent: context.vueInstance };
+                if (propsData) {
+                    templateFunction = tempObj.template.extends;
+                    dataObj.propsData = propsData;
+                }
                 if (typeof templateFunction !== 'function') {
                     templateFunction = Vue.extend(templateFunction);
                 }
-                var templateVue = new templateFunction({ 'data': { data: data }, parent: context.vueInstance });
+                var templateVue = new templateFunction(dataObj);
                 //let templateVue: any = new Vue(tempObj.template);
                 //templateVue.$data.data = extend(tempObj.data, data);
                 templateVue.$mount('#' + id);

@@ -40,7 +40,7 @@ export function EJcomponentFactory(
       };
       (options.watch || (options.watch = {}))[prop] = function (newVal: Object) { // watch it
         this.ej2Instances[prop] = newVal;
-        if (this.dataBind && (options.name !== 'DateRangePickerComponent') ) {
+        if (this.dataBind) {
             this.dataBind();    
         }
       };

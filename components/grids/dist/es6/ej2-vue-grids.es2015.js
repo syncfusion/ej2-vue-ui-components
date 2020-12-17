@@ -369,6 +369,30 @@ let GridComponent = class GridComponent extends ComponentBase {
     getFrozenDataRows() {
         return this.ej2Instances.getFrozenDataRows();
     }
+    getFrozenLeftColumnHeaderByIndex(index) {
+        return this.ej2Instances.getFrozenLeftColumnHeaderByIndex(index);
+    }
+    getFrozenLeftCount() {
+        return this.ej2Instances.getFrozenLeftCount();
+    }
+    getFrozenMode() {
+        return this.ej2Instances.getFrozenMode();
+    }
+    getFrozenRightCellFromIndex(rowIndex, columnIndex) {
+        return this.ej2Instances.getFrozenRightCellFromIndex(rowIndex, columnIndex);
+    }
+    getFrozenRightColumnHeaderByIndex(index) {
+        return this.ej2Instances.getFrozenRightColumnHeaderByIndex(index);
+    }
+    getFrozenRightDataRows() {
+        return this.ej2Instances.getFrozenRightDataRows();
+    }
+    getFrozenRightRowByIndex(index) {
+        return this.ej2Instances.getFrozenRightRowByIndex(index);
+    }
+    getFrozenRightRows() {
+        return this.ej2Instances.getFrozenRightRows();
+    }
     getFrozenRowByIndex(index) {
         return this.ej2Instances.getFrozenRowByIndex(index);
     }
@@ -386,6 +410,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     }
     getMovableCellFromIndex(rowIndex, columnIndex) {
         return this.ej2Instances.getMovableCellFromIndex(rowIndex, columnIndex);
+    }
+    getMovableColumnHeaderByIndex(index) {
+        return this.ej2Instances.getMovableColumnHeaderByIndex(index);
     }
     getMovableDataRows() {
         return this.ej2Instances.getMovableDataRows();
@@ -458,6 +485,9 @@ let GridComponent = class GridComponent extends ComponentBase {
     }
     hideSpinner() {
         return this.ej2Instances.hideSpinner();
+    }
+    isFrozenGrid() {
+        return this.ej2Instances.isFrozenGrid();
     }
     openColumnChooser(x, y) {
         return this.ej2Instances.openColumnChooser(x, y);

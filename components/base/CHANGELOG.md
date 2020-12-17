@@ -2,23 +2,6 @@
 
 ## [Unreleased]
 
-## 18.3.53 (2020-12-08)
-
-### Common
-
-#### Bug Fixes
-
--  `I295845` - Resolved the warning while running test cases
-
-## 18.3.40 (2020-10-13)
-
-### Common
-
-#### Bug Fixes
-
--  `F158454` - Resolved the peer dependency warning issues.
--  `I285745` - Resolved the StartDate returns null issue in vue.
-
 ## 17.4.47 (2020-02-05)
 
 ### Common

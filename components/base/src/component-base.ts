@@ -43,13 +43,11 @@ export class ComponentBase extends Vue {
         return ret;
     }
     public updated(): void {
-        if (this.hasChildDirective ) {
+        if (this.hasChildDirective) {
             let childKey: Object = {};
-            if(this.fetchChildPropValues){
-                this.fetchChildPropValues(childKey);
-            }
+            this.fetchChildPropValues(childKey);
             let curChildDir: string = JSON.stringify(childKey);
-            if (this.childDirObjects !== curChildDir && this.assignValueToWrapper) {
+            if (this.childDirObjects !== curChildDir) {
                 this.childDirObjects = curChildDir;
                 this.assignValueToWrapper(childKey, false);
             }
@@ -70,7 +68,7 @@ export class ComponentBase extends Vue {
                 options[prop] = this[prop];
             }
         }
-        if (this.hasChildDirective && this.fetchChildPropValues) {
+        if (this.hasChildDirective) {
             this.fetchChildPropValues(options);
         }
         if (this.hasInjectedModules) {
@@ -84,10 +82,7 @@ export class ComponentBase extends Vue {
             }
             this.ej2Instances.injectedModules = prevModule;
         }
-        if(this.assignValueToWrapper)
-        {
-            this.assignValueToWrapper(options);
-        }
+        this.assignValueToWrapper(options);
     }
 
     public assignValueToWrapper(option: Object, silent?: boolean): void {
@@ -151,8 +146,8 @@ export class ComponentBase extends Vue {
         let ret: Object = {};
         if (tagDirective.componentOptions) {
             let dirTag: string = tagDirective.componentOptions.tag;
-            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data && tagDirective.data.attrs) {
-                ret = this.getCamelCaseProps(tagDirective.data.attrs);
+            if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data) {
+                ret = tagDirective.data.attrs ? this.getCamelCaseProps(tagDirective.data.attrs) : this.getCamelCaseProps(tagDirective.data);
             } else if (typeof tagKey === 'object') {
                 if (tagDirective.componentOptions.children && (Object.keys(tagKey).indexOf(dirTag) !== -1)) {
                     ret = this.getMultiLevelDirValue(tagDirective.componentOptions.children, tagKey[dirTag], tagNameMapper);

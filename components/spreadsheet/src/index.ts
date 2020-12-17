@@ -1,5 +1,6 @@
 export * from '@syncfusion/ej2-spreadsheet';
 export { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin } from './spreadsheet/image.directive';
+export { ChartsDirective, ChartDirective, ChartsPlugin, ChartPlugin } from './spreadsheet/chart.directive';
 export { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './spreadsheet/cells.directive';
 export { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './spreadsheet/rows.directive';
 export { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './spreadsheet/columns.directive';

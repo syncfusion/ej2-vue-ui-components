@@ -245,8 +245,8 @@ var KanbanComponent = /** @__PURE__ @class */ (function (_super) {
     KanbanComponent.prototype.showSpinner = function () {
         return this.ej2Instances.showSpinner();
     };
-    KanbanComponent.prototype.updateCard = function (cardData) {
-        return this.ej2Instances.updateCard(cardData);
+    KanbanComponent.prototype.updateCard = function (cardData, index) {
+        return this.ej2Instances.updateCard(cardData, index);
     };
     KanbanComponent = __decorate$2([
         EJComponentDecorator({
