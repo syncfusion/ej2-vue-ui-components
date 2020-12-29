@@ -326,6 +326,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     setRecurrenceEditor(recurrenceEditor) {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
     }
+    setResourceCollections(resourceCol) {
+        return this.ej2Instances.setResourceCollections(resourceCol);
+    }
     setWorkHours(dates, start, end, groupIndex) {
         return this.ej2Instances.setWorkHours(dates, start, end, groupIndex);
     }

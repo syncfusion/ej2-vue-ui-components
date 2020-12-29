@@ -411,6 +411,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.setRecurrenceEditor = function (recurrenceEditor) {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
     };
+    ScheduleComponent.prototype.setResourceCollections = function (resourceCol) {
+        return this.ej2Instances.setResourceCollections(resourceCol);
+    };
     ScheduleComponent.prototype.setWorkHours = function (dates, start, end, groupIndex) {
         return this.ej2Instances.setWorkHours(dates, start, end, groupIndex);
     };

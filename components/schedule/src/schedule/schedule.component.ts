@@ -232,6 +232,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
     }
 
+    public setResourceCollections(resourceCol: Object[]): void {
+        return this.ej2Instances.setResourceCollections(resourceCol);
+    }
+
     public setWorkHours(dates: Object[], start: string, end: string, groupIndex?: number): void {
         return this.ej2Instances.setWorkHours(dates, start, end, groupIndex);
     }
