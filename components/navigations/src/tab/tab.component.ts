@@ -80,8 +80,8 @@ export class TabComponent extends ComponentBase {
         return this.ej2Instances.removeTab(index);
     }
 
-    public select(args: number | Object): void {
-        return this.ej2Instances.select(args);
+    public select(args: number | Object, event?: Object): void {
+        return this.ej2Instances.select(args, event);
     }
 }
 

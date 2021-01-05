@@ -620,8 +620,8 @@ var TabComponent = /** @__PURE__ @class */ (function (_super) {
     TabComponent.prototype.removeTab = function (index) {
         return this.ej2Instances.removeTab(index);
     };
-    TabComponent.prototype.select = function (args) {
-        return this.ej2Instances.select(args);
+    TabComponent.prototype.select = function (args, event) {
+        return this.ej2Instances.select(args, event);
     };
     TabComponent = __decorate$6([
         EJComponentDecorator({

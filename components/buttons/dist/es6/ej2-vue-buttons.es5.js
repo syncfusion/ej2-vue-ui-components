@@ -553,8 +553,8 @@ var ChipListComponent = /** @__PURE__ @class */ (function (_super) {
     ChipListComponent.prototype.remove = function (fields) {
         return this.ej2Instances.remove(fields);
     };
-    ChipListComponent.prototype.select = function (fields) {
-        return this.ej2Instances.select(fields);
+    ChipListComponent.prototype.select = function (fields, selectionType) {
+        return this.ej2Instances.select(fields, selectionType);
     };
     ChipListComponent = __decorate$5([
         EJComponentDecorator({

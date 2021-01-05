@@ -484,8 +484,8 @@ let TabComponent = class TabComponent extends ComponentBase {
     removeTab(index) {
         return this.ej2Instances.removeTab(index);
     }
-    select(args) {
-        return this.ej2Instances.select(args);
+    select(args, event) {
+        return this.ej2Instances.select(args, event);
     }
 };
 TabComponent = __decorate$6([

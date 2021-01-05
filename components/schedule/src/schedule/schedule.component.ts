@@ -136,6 +136,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getCurrentViewEvents();
     }
 
+    public getCurrentViewIndex(): number {
+        return this.ej2Instances.getCurrentViewIndex();
+    }
+
     public getDeletedOccurrences(recurrenceData: string | number | undefined): Object[] {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
     }

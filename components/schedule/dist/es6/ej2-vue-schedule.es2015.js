@@ -254,6 +254,9 @@ let ScheduleComponent = class ScheduleComponent extends ComponentBase {
     getCurrentViewEvents() {
         return this.ej2Instances.getCurrentViewEvents();
     }
+    getCurrentViewIndex() {
+        return this.ej2Instances.getCurrentViewIndex();
+    }
     getDeletedOccurrences(recurrenceData) {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
     }

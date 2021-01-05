@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.4.33 (2021-01-05)
+
+### TreeGrid
+
+#### Bug Fixes
+
+- `#308346` - `expandAll` and `collapseAll` works fine with Virtualization enabled.
+
 ## 18.4.31 (2020-12-22)
 
 ### TreeGrid

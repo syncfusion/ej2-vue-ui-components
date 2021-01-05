@@ -339,6 +339,9 @@ var ScheduleComponent = /** @__PURE__ @class */ (function (_super) {
     ScheduleComponent.prototype.getCurrentViewEvents = function () {
         return this.ej2Instances.getCurrentViewEvents();
     };
+    ScheduleComponent.prototype.getCurrentViewIndex = function () {
+        return this.ej2Instances.getCurrentViewIndex();
+    };
     ScheduleComponent.prototype.getDeletedOccurrences = function (recurrenceData) {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
     };

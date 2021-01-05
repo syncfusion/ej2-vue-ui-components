@@ -446,8 +446,8 @@ let ChipListComponent = class ChipListComponent extends ComponentBase {
     remove(fields) {
         return this.ej2Instances.remove(fields);
     }
-    select(fields) {
-        return this.ej2Instances.select(fields);
+    select(fields, selectionType) {
+        return this.ej2Instances.select(fields, selectionType);
     }
 };
 ChipListComponent = __decorate$5([

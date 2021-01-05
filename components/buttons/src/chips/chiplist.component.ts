@@ -68,8 +68,8 @@ export class ChipListComponent extends ComponentBase {
         return this.ej2Instances.remove(fields);
     }
 
-    public select(fields: number | number[] | Object | Object[] | string[]): void {
-        return this.ej2Instances.select(fields);
+    public select(fields: number | number[] | Object | Object[] | string[], selectionType?: Object): void {
+        return this.ej2Instances.select(fields, selectionType);
     }
 }
 
