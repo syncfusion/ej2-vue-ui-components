@@ -298,7 +298,7 @@ function compile(templateElement, helper) {
             if (context) {
                 let templateFunction = tempObj.template;
                 let propsData = getValue('template.propsData', tempObj);
-                let dataObj = { 'data': { data: data }, parent: context.vueInstance };
+                let dataObj = { 'data': { data: extend(tempObj.data || {}, data) }, parent: context.vueInstance };
                 if (propsData) {
                     templateFunction = tempObj.template.extends;
                     dataObj.propsData = propsData;

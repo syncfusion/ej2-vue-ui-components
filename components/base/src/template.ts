@@ -21,7 +21,7 @@ export function compile(templateElement: any, helper?: Object):
             if(context){
                 let templateFunction: any = tempObj.template;
                 let propsData: any = getValue('template.propsData',tempObj);
-                let dataObj: any = { 'data': { data: data }, parent: context.vueInstance};
+                let dataObj: any = { 'data': { data:  extend(tempObj.data || {}, data) }, parent: context.vueInstance};
                 if (propsData) {
                     templateFunction = tempObj.template.extends;
                     dataObj.propsData = propsData;

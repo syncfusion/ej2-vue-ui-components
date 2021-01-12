@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.4.34 (2021-01-12)
+
+### Common
+
+#### Bug Fixes
+
+- `I307971` - Resolved data accessing issue in templates.
+
 ## 17.4.47 (2020-02-05)
 
 ### Common
