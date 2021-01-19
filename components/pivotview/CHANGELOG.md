@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.4.35 (2021-01-19)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- `#303797` - You can now show field captions in legends.
+
 ## 18.4.34 (2021-01-12)
 
 ### Pivot Table
