@@ -4,8 +4,8 @@ import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 import { RadioButton } from '@syncfusion/ej2-buttons';
 
 
-export const properties: string[] = ['checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
-export const modelProps: string[] = ['checked'];
+export const properties: string[] = ['checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
+export const modelProps: string[] = ['value'];
 
 /**
  * Represents the Essential JS 2 VueJS RadioButton Component

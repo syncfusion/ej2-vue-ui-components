@@ -2,7 +2,21 @@
 
 ## [Unreleased]
 
-## 18.4.35 (2021-01-19)
+## 18.4.39 (2021-01-28)
+
+### RadioButton
+
+#### Bug Fixes
+
+- `#260887`, `#300238`, `F159600` - `v-model` property not updated issue resolved.
+
+### CheckBox
+
+#### New Features
+
+- `#241256` - Array model support provided.
+
+## 18.4.33 (2021-01-05)
 
 ### CheckBox
 

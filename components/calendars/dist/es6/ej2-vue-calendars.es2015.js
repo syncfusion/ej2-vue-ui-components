@@ -80,8 +80,8 @@ let CalendarComponent = class CalendarComponent extends ComponentBase {
     currentView() {
         return this.ej2Instances.currentView();
     }
-    navigateTo(view, date) {
-        return this.ej2Instances.navigateTo(view, date);
+    navigateTo(view, date, isCustomDate) {
+        return this.ej2Instances.navigateTo(view, date, isCustomDate);
     }
     removeDate(dates) {
         return this.ej2Instances.removeDate(dates);

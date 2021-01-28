@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 18.4.35 (2021-01-19)
+## 18.4.39 (2021-01-28)
 
 ### Pivot Table
 
-#### Bug Fixes
+#### Features
 
-- `#303797` - You can now show field captions in legends.
+- `#294982`,`#F157008` - "Median" aggregation is now supported.
 
 ## 18.4.34 (2021-01-12)
 
@@ -333,6 +333,14 @@ The pivot grid is a multi-dimensional data visualization component built on top 
 - **Adaptive Rendering** - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
 - **Exporting** - Provides the option to exporting records to Excel, CSV and PDF formats.
 
+
+## 18.4.35 (2021-01-19)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- `#303797` - You can now show field captions in legends.
 
 ## 18.1.54 (2020-05-26)
 

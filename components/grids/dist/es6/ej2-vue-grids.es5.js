@@ -628,6 +628,12 @@ var GridComponent = /** @__PURE__ @class */ (function (_super) {
     GridComponent.prototype.selectRowsByRange = function (startIndex, endIndex) {
         return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
     };
+    GridComponent.prototype.serverExcelExport = function (url) {
+        return this.ej2Instances.serverExcelExport(url);
+    };
+    GridComponent.prototype.serverPdfExport = function (url) {
+        return this.ej2Instances.serverPdfExport(url);
+    };
     GridComponent.prototype.setCellValue = function (key, field, value) {
         return this.ej2Instances.setCellValue(key, field, value);
     };

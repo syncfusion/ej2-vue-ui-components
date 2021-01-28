@@ -96,8 +96,8 @@ var CalendarComponent = /** @__PURE__ @class */ (function (_super) {
     CalendarComponent.prototype.currentView = function () {
         return this.ej2Instances.currentView();
     };
-    CalendarComponent.prototype.navigateTo = function (view, date) {
-        return this.ej2Instances.navigateTo(view, date);
+    CalendarComponent.prototype.navigateTo = function (view, date, isCustomDate) {
+        return this.ej2Instances.navigateTo(view, date, isCustomDate);
     };
     CalendarComponent.prototype.removeDate = function (dates) {
         return this.ej2Instances.removeDate(dates);

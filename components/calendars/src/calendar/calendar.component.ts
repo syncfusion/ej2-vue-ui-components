@@ -89,8 +89,8 @@ export class CalendarComponent extends ComponentBase {
         return this.ej2Instances.currentView();
     }
 
-    public navigateTo(view: Object, date: Object): void {
-        return this.ej2Instances.navigateTo(view, date);
+    public navigateTo(view: Object, date: Object, isCustomDate?: boolean): void {
+        return this.ej2Instances.navigateTo(view, date, isCustomDate);
     }
 
     public removeDate(dates: Object | Object[]): void {

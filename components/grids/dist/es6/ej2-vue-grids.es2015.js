@@ -543,6 +543,12 @@ let GridComponent = class GridComponent extends ComponentBase {
     selectRowsByRange(startIndex, endIndex) {
         return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
     }
+    serverExcelExport(url) {
+        return this.ej2Instances.serverExcelExport(url);
+    }
+    serverPdfExport(url) {
+        return this.ej2Instances.serverPdfExport(url);
+    }
     setCellValue(key, field, value) {
         return this.ej2Instances.setCellValue(key, field, value);
     }
