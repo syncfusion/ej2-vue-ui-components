@@ -772,17 +772,11 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     SpreadsheetComponent.prototype.endEdit = function () {
         return this.ej2Instances.endEdit();
     };
-    SpreadsheetComponent.prototype.filter = function (filterOptions, range) {
-        return this.ej2Instances.filter(filterOptions, range);
-    };
     SpreadsheetComponent.prototype.find = function (args) {
         return this.ej2Instances.find(args);
     };
     SpreadsheetComponent.prototype.findAll = function (value, mode, isCSen, isEMatch, sheetIndex) {
         return this.ej2Instances.findAll(value, mode, isCSen, isEMatch, sheetIndex);
-    };
-    SpreadsheetComponent.prototype.findHandler = function (args) {
-        return this.ej2Instances.findHandler(args);
     };
     SpreadsheetComponent.prototype.getData = function (address) {
         return this.ej2Instances.getData(address);
@@ -864,9 +858,6 @@ var SpreadsheetComponent = /** @__PURE__ @class */ (function (_super) {
     };
     SpreadsheetComponent.prototype.replace = function (args) {
         return this.ej2Instances.replace(args);
-    };
-    SpreadsheetComponent.prototype.replaceHandler = function (args) {
-        return this.ej2Instances.replaceHandler(args);
     };
     SpreadsheetComponent.prototype.resize = function () {
         return this.ej2Instances.resize();

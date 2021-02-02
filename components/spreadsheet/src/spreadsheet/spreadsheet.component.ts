@@ -172,20 +172,12 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.endEdit();
     }
 
-    public filter(filterOptions?: Object, range?: string): Object {
-        return this.ej2Instances.filter(filterOptions, range);
-    }
-
     public find(args: Object): void {
         return this.ej2Instances.find(args);
     }
 
     public findAll(value: string, mode?: string, isCSen?: boolean, isEMatch?: boolean, sheetIndex?: number): string[] {
         return this.ej2Instances.findAll(value, mode, isCSen, isEMatch, sheetIndex);
-    }
-
-    public findHandler(args: Object): void {
-        return this.ej2Instances.findHandler(args);
     }
 
     public getData(address: string): Object {
@@ -294,10 +286,6 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public replace(args: Object): void {
         return this.ej2Instances.replace(args);
-    }
-
-    public replaceHandler(args: Object): void {
-        return this.ej2Instances.replaceHandler(args);
     }
 
     public resize(): void {

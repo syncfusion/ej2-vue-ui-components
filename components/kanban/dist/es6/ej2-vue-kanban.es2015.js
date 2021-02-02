@@ -177,6 +177,9 @@ let KanbanComponent = class KanbanComponent extends ComponentBase {
     openDialog(action, data) {
         return this.ej2Instances.openDialog(action, data);
     }
+    renderHeader() {
+        return this.ej2Instances.renderHeader();
+    }
     showColumn(key) {
         return this.ej2Instances.showColumn(key);
     }

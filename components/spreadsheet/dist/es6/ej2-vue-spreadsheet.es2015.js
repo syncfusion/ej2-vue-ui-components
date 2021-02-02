@@ -549,17 +549,11 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     endEdit() {
         return this.ej2Instances.endEdit();
     }
-    filter(filterOptions, range) {
-        return this.ej2Instances.filter(filterOptions, range);
-    }
     find(args) {
         return this.ej2Instances.find(args);
     }
     findAll(value, mode, isCSen, isEMatch, sheetIndex) {
         return this.ej2Instances.findAll(value, mode, isCSen, isEMatch, sheetIndex);
-    }
-    findHandler(args) {
-        return this.ej2Instances.findHandler(args);
     }
     getData(address) {
         return this.ej2Instances.getData(address);
@@ -641,9 +635,6 @@ let SpreadsheetComponent = class SpreadsheetComponent extends ComponentBase {
     }
     replace(args) {
         return this.ej2Instances.replace(args);
-    }
-    replaceHandler(args) {
-        return this.ej2Instances.replaceHandler(args);
     }
     resize() {
         return this.ej2Instances.resize();

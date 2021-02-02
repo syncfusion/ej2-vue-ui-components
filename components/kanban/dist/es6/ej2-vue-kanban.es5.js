@@ -239,6 +239,9 @@ var KanbanComponent = /** @__PURE__ @class */ (function (_super) {
     KanbanComponent.prototype.openDialog = function (action, data) {
         return this.ej2Instances.openDialog(action, data);
     };
+    KanbanComponent.prototype.renderHeader = function () {
+        return this.ej2Instances.renderHeader();
+    };
     KanbanComponent.prototype.showColumn = function (key) {
         return this.ej2Instances.showColumn(key);
     };

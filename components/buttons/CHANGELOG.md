@@ -2,19 +2,13 @@
 
 ## [Unreleased]
 
-## 18.4.39 (2021-01-28)
-
-### RadioButton
-
-#### Bug Fixes
-
-- `#260887`, `#300238`, `F159600` - `v-model` property not updated issue resolved.
+## 18.4.41 (2021-02-02)
 
 ### CheckBox
 
-#### New Features
+#### Bug Fixes
 
-- `#241256` - Array model support provided.
+- Issue with click event has been fixed.
 
 ## 18.4.33 (2021-01-05)
 
@@ -386,4 +380,18 @@ RadioButton is a graphical user interface element that allows to select one opti
 - **Label** - Supports label and its positioning.
 - **Sizes** - Provided with different sizes of RadioButton.
 
+
+## 18.4.39 (2021-01-28)
+
+### RadioButton
+
+#### Bug Fixes
+
+- `#260887`, `#300238`, `F159600` - `v-model` property not updated issue resolved.
+
+### CheckBox
+
+#### New Features
+
+- `#241256` - Array model support provided.
 

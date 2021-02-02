@@ -101,6 +101,10 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.openDialog(action, data);
     }
 
+    public renderHeader(): void {
+        return this.ej2Instances.renderHeader();
+    }
+
     public showColumn(key: string): void {
         return this.ej2Instances.showColumn(key);
     }
