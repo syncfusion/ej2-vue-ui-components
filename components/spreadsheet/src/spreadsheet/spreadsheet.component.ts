@@ -140,8 +140,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.cut(address);
     }
 
-    public delete(startIndex?: number, endIndex?: number, model?: Object): void {
-        return this.ej2Instances.delete(startIndex, endIndex, model);
+    public delete(startIndex?: number, endIndex?: number, model?: Object, sheet?: number | string): void {
+        return this.ej2Instances.delete(startIndex, endIndex, model, sheet);
     }
 
     public deleteChart(id?: string): void {
@@ -212,16 +212,16 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.insertChart(chart);
     }
 
-    public insertColumn(startColumn?: number | Object[], endColumn?: number): void {
-        return this.ej2Instances.insertColumn(startColumn, endColumn);
+    public insertColumn(startColumn?: number | Object[], endColumn?: number, sheet?: number | string): void {
+        return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
     }
 
     public insertImage(images: Object[], range?: string): void {
         return this.ej2Instances.insertImage(images, range);
     }
 
-    public insertRow(startRow?: number | Object[], endRow?: number): void {
-        return this.ej2Instances.insertRow(startRow, endRow);
+    public insertRow(startRow?: number | Object[], endRow?: number, sheet?: number | string): void {
+        return this.ej2Instances.insertRow(startRow, endRow, sheet);
     }
 
     public insertSheet(startSheet?: number | Object[], endSheet?: number): void {

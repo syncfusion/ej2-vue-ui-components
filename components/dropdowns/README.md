@@ -1,3 +1,5 @@
+[![npm](http://ej2.syncfusion.com/github-badges?package=@syncfusion/ej2-vue-dropdowns)](https://www.npmjs.com/package/@syncfusion/ej2-vue-dropdowns)
+
 # ej2-vue-dropdowns
 
 Superset of HTML select box contains specific features such as data binding, grouping, sorting, filtering, and templates.

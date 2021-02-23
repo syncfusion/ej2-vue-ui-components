@@ -1,3 +1,5 @@
+[![npm](http://ej2.syncfusion.com/github-badges?package=@syncfusion/ej2-vue-richtexteditor)](https://www.npmjs.com/package/@syncfusion/ej2-vue-richtexteditor)
+
 # ej2-vue-richtexteditor
 
 The rich text editor component is a HTML and markdown editor that provides best user experience for creating and updating the content.

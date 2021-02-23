@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 18.4.41 (2021-02-02)
+## 18.4.44 (2021-02-23)
+
+### Common
+
+#### Bug Fixes
+
+- `I285745` - Resolved null date value while intial value assigned dynamically.
+
+## 18.4.34 (2021-01-12)
 
 ### Common
 

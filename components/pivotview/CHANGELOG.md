@@ -2,13 +2,15 @@
 
 ## [Unreleased]
 
-## 18.4.41 (2021-02-02)
+## 18.4.44 (2021-02-23)
 
 ### Pivot Table
 
 #### Bug Fixes
 
 - `#298311` - CSS issue of calculated field dialog in dark theme has been fixed.
+
+- The pivot chart is now rendered when the column axis has no fields.
 
 ## 18.4.39 (2021-01-28)
 
