@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 18.4.46 (2021-03-02)
+
+### DropDownList
+
+#### Bug Fixes
+
+- `#314548` - Issue with "list items are not generated properly while changing the `fields` property on dynamically" has been resolved.
+
 ## 18.4.44 (2021-02-23)
 
 ### MultiSelect
