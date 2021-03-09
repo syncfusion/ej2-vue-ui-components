@@ -1,3 +1,5 @@
+[![npm](http://ej2.syncfusion.com/github-badges?package=@syncfusion/ej2-vue-barcode-generator)](https://www.npmjs.com/package/@syncfusion/ej2-vue-barcode-generator)
+
 # Changelog
 
 ## [Unreleased]

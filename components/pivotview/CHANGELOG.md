@@ -2,44 +2,13 @@
 
 ## [Unreleased]
 
-## 18.4.43 (2021-02-16)
+## 18.4.46 (2021-03-02)
 
 ### Pivot Table
 
 #### Bug Fixes
 
-- `#298311` - CSS issue of calculated field dialog in dark theme has been fixed.
-
-- The pivot chart is now rendered when the column axis has no fields.
-
-## 18.4.39 (2021-01-28)
-
-### Pivot Table
-
-#### Features
-
-- `#294982`,`#F157008` - "Median" aggregation is now supported.
-
-## 18.4.34 (2021-01-12)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `#301448` - The pivot table now displays no unnecessary scrollbars when the browser is resized.
-
-#### New Features
-
-- `#298512` - The drill-through grid can now be exported, like the pivot table.
-
-## 18.4.31 (2020-12-22)
-
-### Pivot Table
-
-#### Bug Fixes
-
--`#298296` - Columns are now properly stretched when resizing the browser.
-
+- Border alignment issue in "Grouping Bar" UI has been fixed.
 
 ## 18.4.30 (2020-12-17)
 
@@ -47,7 +16,7 @@
 
 #### Bug Fixes
 
-- `#300162` - The pivot chart now works properly with height as a percentage..
+- `#300162` - The pivot chart now works properly with height as a percentage.
 
 - `#279083` - Performance lags have been fixed in calculated fields.
 - `#301136` - Performance lags have been fixed in static field list with virtual scrolling.
@@ -343,6 +312,22 @@ The pivot grid is a multi-dimensional data visualization component built on top 
 - **Adaptive Rendering** - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
 - **Exporting** - Provides the option to exporting records to Excel, CSV and PDF formats.
 
+
+## 18.4.43 (2021-02-16)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- The pivot chart is now rendered when the column axis has no fields.
+
+## 18.4.39 (2021-01-28)
+
+### Pivot Table
+
+#### Features
+
+- `#294982`,`#F157008` - "Median" aggregation is now supported.
 
 ## 18.4.35 (2021-01-19)
 
