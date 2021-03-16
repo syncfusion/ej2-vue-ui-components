@@ -144,7 +144,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.endEdit();
     }
 
-    public excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object {
+    public excelExport(excelExportProperties?: Object | Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object {
         return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
 
@@ -340,7 +340,7 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.paste(data, rowIndex, colIndex);
     }
 
-    public pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object {
+    public pdfExport(pdfExportProperties?: Object | Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object {
         return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
     }
 
