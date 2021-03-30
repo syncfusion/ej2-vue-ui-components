@@ -1,5 +1,3 @@
-[![npm](http://ej2.syncfusion.com/github-badges?package=@syncfusion/ej2-vue-navigations)](https://www.npmjs.com/package/@syncfusion/ej2-vue-navigations)
-
 
 # ej2-vue-navigations
 

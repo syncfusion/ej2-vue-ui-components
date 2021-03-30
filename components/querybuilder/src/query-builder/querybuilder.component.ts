@@ -4,7 +4,7 @@ import { QueryBuilder } from '@syncfusion/ej2-querybuilder';
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 
 
-export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'readonly', 'rule', 'separator', 'showButtons', 'sortDirection', 'summaryView', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'ruleChange'];
+export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'fieldModel', 'headerTemplate', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'operatorModel', 'readonly', 'rule', 'separator', 'showButtons', 'sortDirection', 'summaryView', 'valueModel', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'dataBound', 'ruleChange'];
 export const modelProps: string[] = [];
 
 /**
@@ -58,6 +58,10 @@ export class QueryBuilderComponent extends ComponentBase {
 
     public addRules(rule: Object[], groupID: string): void {
         return this.ej2Instances.addRules(rule, groupID);
+    }
+
+    public deleteGroup(target: Object | string): void {
+        return this.ej2Instances.deleteGroup(target);
     }
 
     public deleteGroups(groupIdColl: string[]): void {

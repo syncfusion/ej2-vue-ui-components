@@ -90,7 +90,7 @@ export class AccordionComponent extends ComponentBase {
         return this.ej2Instances.expandItem(isExpand, index);
     }
 
-    public hideItem(index: number, isHidden?: Object): void {
+    public hideItem(index: number, isHidden?: boolean): void {
         return this.ej2Instances.hideItem(index, isHidden);
     }
 

@@ -63,6 +63,10 @@ export class RecurrenceEditorComponent extends ComponentBase {
         return this.ej2Instances.getRuleSummary(rule);
     }
 
+    public resetFields(): void {
+        return this.ej2Instances.resetFields();
+    }
+
     public setRecurrenceRule(rule: string, startDate: Object): void {
         return this.ej2Instances.setRecurrenceRule(rule, startDate);
     }

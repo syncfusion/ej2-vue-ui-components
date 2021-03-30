@@ -2,7 +2,22 @@
 
 ## [Unreleased]
 
-## 18.4.46 (2021-03-02)
+## 19.1.54 (2021-03-30)
+
+### Pivot Table
+
+#### Breaking Changes
+
+- The `chartSettings.enableMultiAxis` property is deprecated and will no longer to be used. Use `chartSettings.enableMultipleAxis` to achieve the same.
+
+#### New Features
+
+- `#294982`,`#F157008` - In addition to existing aggregation types, a median type has been included.
+- `#293740`,`#294851`,`#295251`,`#310709`,`#F158140` - Multiple values (i.e. measures) can now be displayed in a single axis.
+- Hyperlink can now be set based on caption of measure field.
+- `#316689` - Data from the data manager can now be retrieved using a custom query.
+
+## 18.4.46
 
 ### Pivot Table
 
@@ -312,30 +327,6 @@ The pivot grid is a multi-dimensional data visualization component built on top 
 - **Adaptive Rendering** - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
 - **Exporting** - Provides the option to exporting records to Excel, CSV and PDF formats.
 
-
-## 18.4.43 (2021-02-16)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- The pivot chart is now rendered when the column axis has no fields.
-
-## 18.4.39 (2021-01-28)
-
-### Pivot Table
-
-#### Features
-
-- `#294982`,`#F157008` - "Median" aggregation is now supported.
-
-## 18.4.35 (2021-01-19)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `#303797` - You can now show field captions in legends.
 
 ## 18.1.54 (2020-05-26)
 

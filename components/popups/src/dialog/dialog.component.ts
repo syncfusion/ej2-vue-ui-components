@@ -90,6 +90,10 @@ export class DialogComponent extends ComponentBase {
         return this.ej2Instances.refreshPosition();
     }
 
+    public sanitizeHelper(value: string): string {
+        return this.ej2Instances.sanitizeHelper(value);
+    }
+
     public show(isFullScreen?: boolean): void {
         return this.ej2Instances.show(isFullScreen);
     }

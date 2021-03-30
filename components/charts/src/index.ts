@@ -8,6 +8,7 @@ export { MultiLevelLabelsDirective, MultiLevelLabelDirective, MultiLevelLabelsPl
 export { AxesDirective, AxisDirective, AxesPlugin, AxisPlugin } from './chart/axes.directive';
 export { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './chart/rows.directive';
 export { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './chart/columns.directive';
+export { RangeColorSettingsDirective, RangeColorSettingDirective, RangeColorSettingsPlugin, RangeColorSettingPlugin } from './chart/rangecolorsettings.directive';
 export { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './chart/annotations.directive';
 export { SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataIndexesPlugin, SelectedDataIndexPlugin } from './chart/selecteddataindexes.directive';
 export { IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin } from './chart/indicators.directive';

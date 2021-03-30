@@ -53,11 +53,11 @@ export class TreeMapComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public calculatePreviousLevelChildItems(labelText: Object, drillLevelValues: Object, item: Object, directLevel: boolean): boolean {
+    public calculatePreviousLevelChildItems(labelText: string, drillLevelValues: any, item: any, directLevel: boolean): boolean {
         return this.ej2Instances.calculatePreviousLevelChildItems(labelText, drillLevelValues, item, directLevel);
     }
 
-    public calculateSelectedTextLevels(labelText: Object, item: Object): Object {
+    public calculateSelectedTextLevels(labelText: string, item: any): any {
         return this.ej2Instances.calculateSelectedTextLevels(labelText, item);
     }
 
@@ -65,7 +65,7 @@ export class TreeMapComponent extends ComponentBase {
         return this.ej2Instances.clickOnTreeMap(e);
     }
 
-    public compareSelectedLabelWithDrillDownItems(drillLevelValues: Object, item: Object, i: number): Object {
+    public compareSelectedLabelWithDrillDownItems(drillLevelValues: any, item: any, i: number): any {
         return this.ej2Instances.compareSelectedLabelWithDrillDownItems(drillLevelValues, item, i);
     }
 
@@ -77,7 +77,7 @@ export class TreeMapComponent extends ComponentBase {
         return this.ej2Instances.export(type, fileName, orientation, allowDownload);
     }
 
-    public findTotalWeight(processData: Object[], type: string): void {
+    public findTotalWeight(processData: any[], type: string): void {
         return this.ej2Instances.findTotalWeight(processData, type);
     }
 

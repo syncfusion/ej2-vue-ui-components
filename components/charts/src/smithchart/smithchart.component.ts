@@ -72,8 +72,8 @@ export class SmithchartComponent extends ComponentBase {
         return this.ej2Instances.smithchartOnClick(e);
     }
 
-    public smithchartOnResize(e: Object): boolean {
-        return this.ej2Instances.smithchartOnResize(e);
+    public smithchartOnResize(): boolean {
+        return this.ej2Instances.smithchartOnResize();
     }
 }
 

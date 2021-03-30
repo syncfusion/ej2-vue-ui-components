@@ -1,5 +1,3 @@
-[![npm](http://ej2.syncfusion.com/github-badges?package=@syncfusion/ej2-vue-documenteditor)](https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor)
-
 # ej2-vue-documenteditor
 
 The Document Editor component is used to create, edit, view, and print Word documents in web applications. All the user interactions and editing operations that run purely in the client-side provides much faster editing experience to the users.

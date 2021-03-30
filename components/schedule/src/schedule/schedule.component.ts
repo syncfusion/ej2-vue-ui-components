@@ -7,7 +7,7 @@ import { ResourcesDirective, ResourceDirective, ResourcesPlugin, ResourcePlugin 
 import { HeaderRowsDirective, HeaderRowDirective, HeaderRowsPlugin, HeaderRowPlugin } from './headerrows.directive'
 
 
-export const properties: string[] = ['agendaDaysCount', 'allowDragAndDrop', 'allowInline', 'allowKeyboardInteraction', 'allowMultiCellSelection', 'allowMultiRowSelection', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeScale', 'timezone', 'views', 'weekRule', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
+export const properties: string[] = ['agendaDaysCount', 'allowDragAndDrop', 'allowInline', 'allowKeyboardInteraction', 'allowMultiCellSelection', 'allowMultiDrag', 'allowMultiRowSelection', 'allowResizing', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'editorTemplate', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'group', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeFormat', 'timeScale', 'timezone', 'views', 'weekRule', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select'];
 export const modelProps: string[] = ['currentView', 'selectedDate'];
 
 /**
@@ -104,7 +104,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.collapseResource(resourceId, name);
     }
 
-    public deleteEvent(id: string | number | undefined | undefined[], currentAction?: Object): void {
+    public deleteEvent(id: string | number | Object | Object[], currentAction?: Object): void {
         return this.ej2Instances.deleteEvent(id, currentAction);
     }
 
@@ -140,7 +140,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getCurrentViewIndex();
     }
 
-    public getDeletedOccurrences(recurrenceData: string | number | undefined): Object[] {
+    public getDeletedOccurrences(recurrenceData: string | number | Object): Object[] {
         return this.ej2Instances.getDeletedOccurrences(recurrenceData);
     }
 
@@ -196,10 +196,6 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.print();
     }
 
-    public refresh(): void {
-        return this.ej2Instances.refresh();
-    }
-
     public refreshEvents(): void {
         return this.ej2Instances.refreshEvents();
     }
@@ -208,19 +204,11 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.removeResource(resourceId, name);
     }
 
-    public renderTemplates(): void {
-        return this.ej2Instances.renderTemplates();
-    }
-
-    public resetTemplates(templates?: string[]): void {
-        return this.ej2Instances.resetTemplates(templates);
-    }
-
     public resetWorkHours(dates: Object[], start?: string, end?: string, groupIndex?: number): void {
         return this.ej2Instances.resetWorkHours(dates, start, end, groupIndex);
     }
 
-    public saveEvent(data: undefined | undefined[], currentAction?: Object): void {
+    public saveEvent(data: Object | Object[], currentAction?: Object): void {
         return this.ej2Instances.saveEvent(data, currentAction);
     }
 

@@ -83,10 +83,6 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.exportFormFieldsAsObject();
     }
 
-    public fireAnnotationUnSelect(id: string, pageNumber: number, annotation: any): void {
-        return this.ej2Instances.fireAnnotationUnSelect(id, pageNumber, annotation);
-    }
-
     public importAnnotation(importData: any, annotationDataFormat?: Object): void {
         return this.ej2Instances.importAnnotation(importData, annotationDataFormat);
     }

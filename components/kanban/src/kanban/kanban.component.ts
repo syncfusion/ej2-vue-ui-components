@@ -5,7 +5,7 @@ import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from '
 import { StackedHeadersDirective, StackedHeaderDirective, StackedHeadersPlugin, StackedHeaderPlugin } from './stackedheaders.directive'
 
 
-export const properties: string[] = ['allowDragAndDrop', 'allowKeyboard', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'dialogSettings', 'enablePersistence', 'enableRtl', 'enableTooltip', 'height', 'keyField', 'locale', 'query', 'showEmptyColumn', 'sortSettings', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'created', 'dataBinding', 'dataBound', 'dialogClose', 'dialogOpen', 'drag', 'dragStart', 'dragStop', 'queryCellInfo'];
+export const properties: string[] = ['allowDragAndDrop', 'allowKeyboard', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'dialogSettings', 'enablePersistence', 'enableRtl', 'enableTooltip', 'externalDropId', 'height', 'keyField', 'locale', 'query', 'showEmptyColumn', 'sortSettings', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'created', 'dataBinding', 'dataBound', 'dialogClose', 'dialogOpen', 'drag', 'dragStart', 'dragStop', 'queryCellInfo'];
 export const modelProps: string[] = [];
 
 /**
@@ -53,8 +53,8 @@ export class KanbanComponent extends ComponentBase {
         return createElement('div', (this as any).$slots.default);
     }
     
-    public addCard(cardData: Object | Object[] | undefined | undefined[]): void {
-        return this.ej2Instances.addCard(cardData);
+    public addCard(cardData: Object | Object[], index?: number): void {
+        return this.ej2Instances.addCard(cardData, index);
     }
 
     public addColumn(columnOptions: Object, index: number): void {
@@ -65,7 +65,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.closeDialog();
     }
 
-    public deleteCard(cardData: string | number | Object | Object[] | undefined | undefined[]): void {
+    public deleteCard(cardData: string | number | Object | Object[]): void {
         return this.ej2Instances.deleteCard(cardData);
     }
 
@@ -73,7 +73,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.deleteColumn(index);
     }
 
-    public getCardDetails(target: Object): Object | Object {
+    public getCardDetails(target: Object): Object {
         return this.ej2Instances.getCardDetails(target);
     }
 
@@ -105,6 +105,14 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.refreshHeader();
     }
 
+    public renderTemplates(): void {
+        return this.ej2Instances.renderTemplates();
+    }
+
+    public resetTemplates(templates?: string[]): void {
+        return this.ej2Instances.resetTemplates(templates);
+    }
+
     public showColumn(key: string): void {
         return this.ej2Instances.showColumn(key);
     }
@@ -113,7 +121,11 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.showSpinner();
     }
 
-    public updateCard(cardData: Object | Object[] | undefined | undefined[], index?: number): void {
+    public templateParser(template: string): any {
+        return this.ej2Instances.templateParser(template);
+    }
+
+    public updateCard(cardData: Object | Object[], index?: number): void {
         return this.ej2Instances.updateCard(cardData, index);
     }
 }

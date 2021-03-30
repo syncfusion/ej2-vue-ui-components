@@ -1,5 +1,3 @@
-[![npm](http://ej2.syncfusion.com/github-badges?package=@syncfusion/ej2-vue-buttons)](https://www.npmjs.com/package/@syncfusion/ej2-vue-buttons)
-
 # ej2-vue-buttons
 
 A package of Syncfusion Vue UI Components (Essential JS 2) Button, CheckBox, RadioButton and Switch.

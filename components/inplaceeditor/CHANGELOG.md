@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.1.54 (2021-03-30)
+
+### In-place Editor
+
+#### New Features
+
+- `#306178`- Provided two-way binding support to `value` property of the In-place editor.
+
 ## 18.4.30 (2020-12-17)
 
 ### In-place Editor
