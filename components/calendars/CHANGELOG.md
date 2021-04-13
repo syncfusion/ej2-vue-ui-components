@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.1.56 (2021-04-13)
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- `#I321491` - Issue with "popup does not close after selected the preset value when render component with `openOnFocus` value as true" has been resolved.
+
 ## 18.4.34 (2021-01-12)
 
 ### DateTimePicker
