@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.1.57 (2021-04-20)
+
+### Popup
+
+#### Bug Fixes
+
+- `#F160484` - The issue with "Popup is not positioned properly after collision" has been resolved.
+
 ## 19.1.56 (2021-04-13)
 
 ### Dialog

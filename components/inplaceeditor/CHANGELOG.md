@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 19.1.56 (2021-04-13)
+## 19.1.57 (2021-04-20)
 
 ### In-place Editor
 
 #### New Features
 
-- `#306178`- Provided two-way binding support to `value` property of the In-place editor.
+- `#I320740` - The `enableHtmlParse` new property provided to enable or disable the parsing of HTML string content as DOM elements.
 
 ## 18.4.30 (2020-12-17)
 
@@ -222,4 +222,12 @@ The In-place Editor component is used to edit and update the input value dynamic
 - **Template**  - Templates can be used to integrate custom controls to the In-place Editor.
 - **Globalization**  - Provides right to left and localization support.
 
+
+## 19.1.54 (2021-03-30)
+
+### In-place Editor
+
+#### New Features
+
+- `#306178`- Provided two-way binding support to `value` property of the In-place editor.
 
