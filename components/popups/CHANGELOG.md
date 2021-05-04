@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 19.1.58 (2021-04-27)
+## 19.1.59 (2021-05-04)
 
-### Popup
+### Spinner
 
 #### Bug Fixes
 
-- `#F160484` - The issue with "Popup is not positioned properly after collision" has been resolved.
+- `#I325477` - The issue with "Spinner label string is not rendered properly when HTML entity given as label" has been resolved.
 
 ## 19.1.56 (2021-04-13)
 
@@ -478,4 +478,12 @@ Dialog is a window that displays information to the user, and used to get the us
 - **Accessibility** - Built-in compliance with the WAI-ARIA specifications.
 - **Keyboard Interaction** - The Dialog can be intractable through keyboard.
 
+
+## 19.1.57 (2021-04-20)
+
+### Popup
+
+#### Bug Fixes
+
+- `#F160484` - The issue with "Popup is not positioned properly after collision" has been resolved.
 
