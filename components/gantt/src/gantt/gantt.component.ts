@@ -87,7 +87,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.addPredecessor(id, predecessorString);
     }
 
-    public addRecord(data?: Object | Object, rowPosition?: Object, rowIndex?: number): void {
+    public addRecord(data?: Object[] | Object | Object, rowPosition?: Object, rowIndex?: number): void {
         return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
     }
 
@@ -223,7 +223,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.keyActionHandler(e);
     }
 
-    public mergeTask(taskId: string, segmentIndexes: undefined[]): void {
+    public mergeTask(taskId: number | string, segmentIndexes: undefined[]): void {
         return this.ej2Instances.mergeTask(taskId, segmentIndexes);
     }
 
@@ -323,7 +323,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.sortColumn(columnName, direction, isMultiSort);
     }
 
-    public splitTask(taskId: string, splitDate: Object | Object[]): void {
+    public splitTask(taskId: number | string, splitDate: Object | Object[]): void {
         return this.ej2Instances.splitTask(taskId, splitDate);
     }
 

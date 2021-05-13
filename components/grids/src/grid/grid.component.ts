@@ -504,6 +504,10 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
     }
 
+    public serverCsvExport(url: string): void {
+        return this.ej2Instances.serverCsvExport(url);
+    }
+
     public serverExcelExport(url: string): void {
         return this.ej2Instances.serverExcelExport(url);
     }
