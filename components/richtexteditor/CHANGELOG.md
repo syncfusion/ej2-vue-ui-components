@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 19.1.64 (2021-05-19)
+
+### RichTextEditor
+
+#### Bug Fixes
+
+- `#I326887`- The issue with "Bold and other formats not working inside the table when the cell in empty" has been resolved.
+- `#I324041`- The issue with "When strong is applied more than one time for an element, `un-bold` doesn't remove all the bold tags" has been resolved.
+
 ## 19.1.63 (2021-05-13)
 
 ### RichTextEditor
@@ -15,7 +24,6 @@
 - The issue with "Pasting the table elements from `MSword` to the editor, removes the empty cells in table" has been resolved.
 - `#I324985`- The issue with "Pasting the link in the Rich Text Editor doesn't add the `target=_blank` in the link" has been resolved.
 - `#I324430`- The issue with "Rich Text Editor not rendered properly when ID is given as a number"  has been resolved.
-- `#I324041`- The issue with "When strong is applied more than one time for an element, `un-bold` doesn't remove all the bold tags" has been resolved.
 
 ## 19.1.59 (2021-05-04)
 

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.1.64 (2021-05-19)
+
+### Popup
+
+#### Bug Fixes
+
+- `#I317799` - The issue with "Script error is raised, when the `element` is not present" has been resolved.
+
 ## 19.1.63 (2021-05-13)
 
 ### Dialog
