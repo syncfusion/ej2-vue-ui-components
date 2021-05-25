@@ -18,7 +18,8 @@
     "allowJs": false,
     "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["node"]
   },
   "exclude": [
     "node_modules",

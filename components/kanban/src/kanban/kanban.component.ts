@@ -77,7 +77,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.getCardDetails(target);
     }
 
-    public getColumnData(columnKey: string, dataSource?: Object[]): Object[] {
+    public getColumnData(columnKey: string | number, dataSource?: Object[]): Object[] {
         return this.ej2Instances.getColumnData(columnKey, dataSource);
     }
 
@@ -89,7 +89,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.getSwimlaneData(keyField);
     }
 
-    public hideColumn(key: string): void {
+    public hideColumn(key: string | number): void {
         return this.ej2Instances.hideColumn(key);
     }
 
@@ -113,7 +113,7 @@ export class KanbanComponent extends ComponentBase {
         return this.ej2Instances.resetTemplates(templates);
     }
 
-    public showColumn(key: string): void {
+    public showColumn(key: string | number): void {
         return this.ej2Instances.showColumn(key);
     }
 
