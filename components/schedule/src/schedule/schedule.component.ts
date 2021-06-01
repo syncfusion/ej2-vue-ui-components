@@ -156,6 +156,10 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
     }
 
+    public getIndexFromResourceId(id: string | number, name?: string): number {
+        return this.ej2Instances.getIndexFromResourceId(id, name);
+    }
+
     public getOccurrencesByID(eventID: number | string): Object[] {
         return this.ej2Instances.getOccurrencesByID(eventID);
     }
@@ -218,6 +222,10 @@ export class ScheduleComponent extends ComponentBase {
 
     public scrollToResource(resourceId: string | number, groupName?: string): void {
         return this.ej2Instances.scrollToResource(resourceId, groupName);
+    }
+
+    public selectResourceByIndex(groupIndex: number): void {
+        return this.ej2Instances.selectResourceByIndex(groupIndex);
     }
 
     public setRecurrenceEditor(recurrenceEditor: Object): void {

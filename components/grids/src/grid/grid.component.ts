@@ -132,7 +132,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.copy(withHeader);
     }
 
-    public csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object {
+    public csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object {
         return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
 
@@ -172,7 +172,7 @@ export class GridComponent extends ComponentBase {
         return this.ej2Instances.endEdit();
     }
 
-    public excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object {
+    public excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object {
         return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
 

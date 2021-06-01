@@ -96,16 +96,16 @@ export class MapsComponent extends ComponentBase {
         return this.ej2Instances.export(type, fileName, orientation, allowDownload);
     }
 
-    public getGeoLocation(layerIndex: number, location: Object): Object {
-        return this.ej2Instances.getGeoLocation(layerIndex, location);
+    public getGeoLocation(layerIndex: number, x: number, y: number): Object {
+        return this.ej2Instances.getGeoLocation(layerIndex, x, y);
     }
 
     public getLocalizedLabel(key: string): string {
         return this.ej2Instances.getLocalizedLabel(key);
     }
 
-    public getTileGeoLocation(location: Object): Object {
-        return this.ej2Instances.getTileGeoLocation(location);
+    public getTileGeoLocation(x: number, y: number): Object {
+        return this.ej2Instances.getTileGeoLocation(x, y);
     }
 
     public mapsOnClick(e: Object): void {

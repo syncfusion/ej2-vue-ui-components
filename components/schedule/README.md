@@ -1,6 +1,6 @@
 # ej2-vue-schedule
 
-The schedule component is an event calendar that facilitates almost all the basic Outlook and Google Calendar features, allowing the user to plan and manage appointments and time efficiently. It receives data from a variety of data sources, such as an array of JSON objects, OData web services, RESTful or WCF services, and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/) with built-in load on demand support to reduce the data transfer and load time. Also, it is availed with the multiple resources support that allots an unique individual space for more than one resources on the same calendar.
+The [Vue Scheduler](https://www.syncfusion.com/vue-ui-components/vue-scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) component is an event calendar that facilitates almost all the basic Outlook and Google Calendar features, allowing the user to plan and manage appointments and time efficiently. It receives data from a variety of data sources, such as an array of JSON objects, OData web services, RESTful or WCF services, and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/) with built-in load on demand support to reduce the data transfer and load time. Also, it is availed with the multiple resources support that allots an unique individual space for more than one resources on the same calendar.
 
 ![Schedule](https://ej2.syncfusion.com/products/images/schedule/readme.png)
 
@@ -18,56 +18,56 @@ npm install @syncfusion/ej2-vue-schedule
 
 ## Resources
 
-* [Getting Started](https://ej2.syncfusion.com/vue/documentation/schedule/getting-started.html)
-* [View Online Demos](https://ej2.syncfusion.com/vue/demos/#/material/schedule/default.html)
-* [Product Page](https://www.syncfusion.com/vue-ui-components/scheduler)
+* [Getting Started](https://ej2.syncfusion.com/vue/documentation/schedule/getting-started.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
+* [View Online Demos](https://ej2.syncfusion.com/vue/demos/#/material/schedule/default.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
+* [Product Page](https://www.syncfusion.com/vue-ui-components/vue-scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
 
 ## Supported Frameworks
 
 Schedule component is also available in following list of frameworks.
 
-1. [Angular](https://github.com/syncfusion/ej2-angular-ui-components)
-2. [React](https://github.com/syncfusion/ej2-react-ui-components)
-3. [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler)
-4. [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler)
-5. [JavaScript](https://www.syncfusion.com/javascript-ui-controls/scheduler)
+1. [React Scheduler](https://www.syncfusion.com/react-ui-components/react-scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
+2. [Angular Scheduler](https://www.syncfusion.com/angular-ui-components/angular-scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
+3. [ASP.NET Core Scheduler](https://www.syncfusion.com/aspnet-core-ui-controls/scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
+4. [ASP.NET MVC Scheduler](https://www.syncfusion.com/aspnet-mvc-ui-controls/scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
+5. [JavaScript Scheduler](https://www.syncfusion.com/javascript-ui-controls/js-scheduler?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm)
 
 ## Showcase samples
 
-* Fare Calendar ([Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/schedule/resources.html))
+* [Fare calendar demo in Vue](https://ej2.syncfusion.com/vue/demos/#/material/schedule/resources.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm))
 
 ## Key Features
 
-* [**Views**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/views.html) - Schedule is now availed with 10 different view modes – day, week, work week, month, timeline day, timeline week, timeline work-week, timeline month, agenda and month agenda. It is possible to configure view-based settings on each view mode. The `Week` view is set as active view by default.
-* [**Data binding**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/remote-data.html) - Seamless data binding with various client-side and remote data sources thus allowing the data to load on demand by default to reduce the data transfer and loading time.
+* [**Views**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/views.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Schedule is now availed with 10 different view modes – day, week, work week, month, timeline day, timeline week, timeline work-week, timeline month, agenda and month agenda. It is possible to configure view-based settings on each view mode. The `Week` view is set as active view by default.
+* [**Data binding**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/remote-data.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Seamless data binding with various client-side and remote data sources thus allowing the data to load on demand by default to reduce the data transfer and loading time.
 * **Drag and drop** - Appointments can be easily rescheduled to another time by dragging and dropping them onto the required time slots.
 * **Appointment resize** - An appointment’s time can be easily extended by resizing its start or end handlers.
-* [**Multiple resources**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/resource-grouping.html) - Supports planning and management of events for multiple resources and allows to group them under appropriate resources. Also, supports date-wise grouping, linked appointments and other group related customizations.
-* [**Recurrence**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/recurrence-events.html) - Allows the user to repeat a set of events on a daily, weekly, monthly, or yearly basis.
-* [**Template**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/events-template.html) - The key elements like events, date header, work cells and event tooltip comes with the default template support which allows the flexible end-user customization to embed any kind of text, images, or styles to it.
-* [**Timezone**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/timezone.html) -  Regardless of whatever time zone your system follows, Schedule supports setting your own required time zone value to it as well as to each event – thus allowing the events to display on its exact local time.
-* [**Timescale**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/time-scale.html) - Allows to display customized time duration, with clear and accurate depiction of appointments across the appropriate time slots.
-* [**Customizable working days and hours**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/work-days.html) - Users can set specific [work hour](https://ej2.syncfusion.com/vue/demos/#/material/schedule/work-hours.html) range which is visually differentiated with active colour. Also, the working days collection can be customized with specific days, so that the remaining days will be considered as [weekend](https://ej2.syncfusion.com/vue/demos/#/material/schedule/hide-weekend.html).
-* [**Custom editor template**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/editor-template.html) - Template option is availed for event editor, thus allowing the users to add their own custom editor design and also provides option to add additional fields onto the default event editor.
-* [**Adaptive rendering**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/month-agenda.html) - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
-* [**Keyboard interaction**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/keyboard-interaction.html) - All the common actions such as traversing through the appointments, multiple cell selection, add/edit/delete the appointments, navigate to other views, dates and much more can be performed through keyboard inputs.
-* [**Localization**](https://ej2.syncfusion.com/vue/documentation/schedule/localization.html#localization) - All the static text and date content can be localized to any desired language. Also, it can be displayed with appropriate time mode and date-format as per the localized language.
-* [**RTL**](https://ej2.syncfusion.com/vue/documentation/schedule/localization.html#rtl) - Supports displaying the component to display in the direction from right to left.
+* [**Multiple resources**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/resource-grouping.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Supports planning and management of events for multiple resources and allows to group them under appropriate resources. Also, supports date-wise grouping, linked appointments and other group related customizations.
+* [**Recurrence**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/recurrence-events.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Allows the user to repeat a set of events on a daily, weekly, monthly, or yearly basis.
+* [**Template**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/events-template.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - The key elements like events, date header, work cells and event tooltip comes with the default template support which allows the flexible end-user customization to embed any kind of text, images, or styles to it.
+* [**Timezone**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/timezone.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) -  Regardless of whatever time zone your system follows, Schedule supports setting your own required time zone value to it as well as to each event – thus allowing the events to display on its exact local time.
+* [**Timescale**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/time-scale.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Allows to display customized time duration, with clear and accurate depiction of appointments across the appropriate time slots.
+* [**Customizable working days and hours**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/work-days.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Users can set specific [work hour](https://ej2.syncfusion.com/vue/demos/#/material/schedule/work-hours.html) range which is visually differentiated with active colour. Also, the working days collection can be customized with specific days, so that the remaining days will be considered as [weekend](https://ej2.syncfusion.com/vue/demos/#/material/schedule/hide-weekend.html).
+* [**Custom editor template**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/editor-template.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Template option is availed for event editor, thus allowing the users to add their own custom editor design and also provides option to add additional fields onto the default event editor.
+* [**Adaptive rendering**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/month-agenda.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
+* [**Keyboard interaction**](https://ej2.syncfusion.com/vue/demos/#/material/schedule/keyboard-interaction.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - All the common actions such as traversing through the appointments, multiple cell selection, add/edit/delete the appointments, navigate to other views, dates and much more can be performed through keyboard inputs.
+* [**Localization**](https://ej2.syncfusion.com/vue/documentation/schedule/localization.html#localization?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - All the static text and date content can be localized to any desired language. Also, it can be displayed with appropriate time mode and date-format as per the localized language.
+* [**RTL**](https://ej2.syncfusion.com/vue/documentation/schedule/localization.html#rtl?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) - Supports displaying the component to display in the direction from right to left.
 
 ## Support
 
 Product support is available through following mediums.
 
-* Creating incident through Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents) support system or [Community forum](https://www.syncfusion.com/forums/essential-js2).
-* New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/new).
+* Creating incident through Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm) support system or [Community forum](https://www.syncfusion.com/forums/essential-js2?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm).
+* New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/new?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm).
 * Ask your query in Stack Overflow with tag `syncfusion`, `ej2`.
 
 ## License
 
-Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license).
+Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm).
 
 ## Changelog
 
-Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes).
+Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes?utm_source=npm&utm_medium=listing&utm_campaign=vue-scheduler-npm).
 
 © Copyright 2019 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
