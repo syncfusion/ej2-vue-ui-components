@@ -55,6 +55,10 @@ export class DocumentEditorComponent extends ComponentBase {
         return this.ej2Instances.enableAllModules();
     }
 
+    public exportAsImage(pageNumber: number, format: Object): Object {
+        return this.ej2Instances.exportAsImage(pageNumber, format);
+    }
+
     public exportFormData(): Object[] {
         return this.ej2Instances.exportFormData();
     }

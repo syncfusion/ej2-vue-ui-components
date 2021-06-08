@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.1.67 (2021-06-08)
+
+### MaskedTextBox
+
+#### Bug Fixes
+
+- `#I330427` - Issue with "focus event is not triggered in the all masked characters filled textbox while focusing the control" has been resolved.
+
 ## 19.1.59 (2021-05-04)
 
 ### Range Slider
