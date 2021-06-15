@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 19.1.67 (2021-06-08)
-
-### MaskedTextBox
-
-#### Bug Fixes
-
-- `#I330427` - Issue with "focus event is not triggered in the all masked characters filled textbox while focusing the control" has been resolved.
-
 ## 19.1.59 (2021-05-04)
 
 ### Range Slider
@@ -1210,4 +1202,12 @@ MaskedTextBox allows the user to enter the valid input only based on the provide
 - **Regular Expression** - can be used as a mask element for each character of the MaskedTextBox.
 - **Accessibility** - provides built-in accessibility support which helps to access all the MaskedTextBox component features through keyboard, on-screen readers, or other assistive technology devices.
 
+
+## 19.1.67 (2021-06-08)
+
+### MaskedTextBox
+
+#### Bug Fixes
+
+- `#I330427` - Issue with "focus event is not triggered in the all masked characters filled textbox while focusing the control" has been resolved.
 

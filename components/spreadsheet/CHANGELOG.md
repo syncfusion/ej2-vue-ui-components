@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## 19.1.69 (2021-06-15)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#24686` - Undo for styles on externally pasted table is not working properly issue has been fixed.
+- `#F164024` - External pasting for date with applied locale culture is not working issue has been fixed.
+- `I328800` - `topLeftCell` property not updated properly in the non virtual mode issue resolved.
+- `I329562` - Formula dependent cells not updated, while clearing the value using `DELETE` key issue resolved.
+- `I328866` - Ignore blank option not working when the data validation type is `List` issue resolved.
+
 ## 19.1.67 (2021-06-08)
 
 ### Spreadsheet
@@ -9,14 +21,14 @@
 #### Bug Fixes
 
 - `#I328361` - Resizing row is not proper when the row contains `\n` in the data source issue has been fixed.
+- `I328869, I329122` - Nested `IF` formula and `SUMIF` formula negative value issues resolved.
+- `I328812` - Finite scrolling in virtual mode issue resolved.
+- `I328809` - Sheet content scrolls up on editing issue resolved.
 
 #### New Features
 
 - `#I307401` - Filter UI updating for insert and delete column actions.
-- `I328869, I329122` - Nested `IF` formula and `SUMIF` formula negative value issues resolved.
-- `I328812` - Finite scrolling in virtual mode issue resolved.
 - `I328800` - Provided option for updating the `paneTopLeftCell` property dynamically.
-- `I328809` - Sheet content scrolls up on editing issue resolved.
 
 ## 19.1.66 (2021-06-01)
 
