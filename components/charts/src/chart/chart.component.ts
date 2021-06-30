@@ -1,6 +1,8 @@
-import Vue from 'vue';
+import { Options } from 'vue-class-component';
 import { isUndefined } from '@syncfusion/ej2-base';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
+import { isNullOrUndefined } from '@syncfusion/ej2-base';
+
 import { Chart } from '@syncfusion/ej2-charts';
 import { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin } from './trendlines.directive'
 import { SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin } from './segments.directive'
@@ -17,8 +19,25 @@ import { SelectedDataIndexesDirective, SelectedDataIndexDirective, SelectedDataI
 import { IndicatorsDirective, IndicatorDirective, IndicatorsPlugin, IndicatorPlugin } from './indicators.directive'
 
 
+// {{VueImport}}
 export const properties: string[] = ['allowExport', 'allowMultiSelection', 'annotations', 'axes', 'background', 'backgroundImage', 'border', 'chartArea', 'columns', 'crosshair', 'currencyCode', 'dataSource', 'description', 'enableAnimation', 'enableAutoIntervalOnBothAxis', 'enableCanvas', 'enableExport', 'enablePersistence', 'enableRtl', 'enableSideBySidePlacement', 'height', 'highlightMode', 'highlightPattern', 'indicators', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'primaryXAxis', 'primaryYAxis', 'rangeColorSettings', 'rows', 'selectedDataIndexes', 'selectionMode', 'selectionPattern', 'series', 'subTitle', 'subTitleStyle', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'zoomSettings', 'afterExport', 'animationComplete', 'annotationRender', 'axisLabelClick', 'axisLabelRender', 'axisMultiLabelRender', 'axisRangeCalculated', 'beforeExport', 'beforePrint', 'beforeResize', 'chartMouseClick', 'chartMouseDown', 'chartMouseLeave', 'chartMouseMove', 'chartMouseUp', 'drag', 'dragComplete', 'dragEnd', 'dragStart', 'legendClick', 'legendRender', 'load', 'loaded', 'multiLevelLabelClick', 'onZooming', 'pointClick', 'pointDoubleClick', 'pointMove', 'pointRender', 'resized', 'scrollChanged', 'scrollEnd', 'scrollStart', 'selectionComplete', 'seriesRender', 'sharedTooltipRender', 'textRender', 'tooltipRender', 'zoomComplete'];
 export const modelProps: string[] = ['dataSource'];
+
+export const testProp: any = getProps({props: properties});
+export const props = testProp[0];
+export const watch = testProp[1];
+
+export const emitProbs: any = Object.keys(watch);
+emitProbs.push('modelchanged');
+for (let props of modelProps) {
+    emitProbs.push(
+        'update:'+props
+    );
+}
+
+export const isExecute: any = gh ? false : true;
+
+export let tempProxy: any;
 
 /**
  * Represents Vuejs chart Component
@@ -31,7 +50,14 @@ export const modelProps: string[] = ['dataSource'];
     model: {
         event: 'modelchanged'
     }
-})
+},isExecute)
+
+/* Start Options({
+    props: props,
+    watch: watch,
+    emits: emitProbs
+}) End */
+
 export class ChartComponent extends ComponentBase {
     
     public ej2Instances: any;
@@ -41,17 +67,23 @@ export class ChartComponent extends ComponentBase {
     protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {"e-series-collection":{"e-series":{"e-trendlines":"e-trendline","e-segments":"e-segment"}},"e-axes":{"e-axis":{"e-striplines":"e-stripline","e-multilevellabels":{"e-multilevellabel":{"e-categories":"e-category"}}}},"e-rows":"e-row","e-columns":"e-column","e-rangecolorsettings":"e-rangecolorsetting","e-annotations":"e-annotation","e-selecteddataindexes":"e-selecteddataindex","e-indicators":"e-indicator"};
     public tagNameMapper: Object = {"e-series-collection":"e-series","e-striplines":"e-stripLines","e-multilevellabels":"e-multiLevelLabels","e-rangecolorsettings":"e-rangeColorSettings","e-selecteddataindexes":"e-selectedDataIndexes"};
+    public isVue3: boolean;
     
     constructor() {
-        super();
+        super(arguments);
+        this.isVue3 = !isExecute;
         this.ej2Instances = new Chart({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
 
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
+        tempProxy = this;
     }
     public setProperties(prop: any, muteOnChange: boolean): void {
+        if(this.isVue3) {
+            this.models = !this.models ? this.ej2Instances.referModels : this.models;
+        }
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
@@ -59,35 +91,57 @@ export class ChartComponent extends ComponentBase {
             Object.keys(prop).map((key: string): void => {
                 this.models.map((model: string): void => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        this.$emit('update:' + key, prop[key]);
+                        if (this.isVue3) {
+                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
+                        } else {
+                            (this as any).$emit('update:' + key, prop[key]);
+                        }
                     }
                 });
             });
         }
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+        if(!isExecute) {
+            this.models = !this.models ? this.ej2Instances.referModels : this.models;
+        }
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                (this as any).$emit('modelchanged', eventProp[propKey]);
+                if (!isExecute) {
+                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                } else {
+                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                    (this as any).$emit('modelchanged', eventProp[propKey]);
+                }
             }
         } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                (this as any).$emit('modelchanged', eventProp[propKey]);
+                if (!isExecute) {
+                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                } else {
+                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                    (this as any).$emit('modelchanged', eventProp[propKey]);
+                }
             }
         }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
-        }            
+        if ((this.ej2Instances && this.ej2Instances._trigger)) {
+            this.ej2Instances._trigger(eventName, eventProp, successHandler); 
+        }
     }
 
     public render(createElement: any) {
-        return createElement('div', (this as any).$slots.default);
+        let h: any = gh || createElement;
+        let slots: any = null;
+        if(!isNullOrUndefined((this as any).$slots.default)) {
+            slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
+        }
+        return h('div', slots);
     }
     
     public addAxes(axisCollection: Object[]): void {

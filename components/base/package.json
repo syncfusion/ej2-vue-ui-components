@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-base",
-	"version": "17.4.51",
+	"version": "19.1.54",
 	"description": "A common package of Essential JS 2 base Vue libraries, methods and class definitions",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -24,13 +24,14 @@
 	"module": "./index.js",
 	"readme": "ReadMe.md",
 	"peerDependencies": {
-		"vue": "2.5.2 - 2.6.12"
+		"vue": "2.5.2 - 3.0.5",
+		"vue-class-component": "^8.0.0-rc.1"
 	},
 	"dependencies": {
-		"@syncfusion/ej2-base": "*"
+		"@syncfusion/ej2-base": "*",
+		"glob": "^7.0.5"
 	},
 	"devDependencies": {
-		"vue": "2.5.2 - 2.6.11",
 		"@types/chai": "^3.4.28",
 		"@types/es6-promise": "0.0.28",
 		"@types/jasmine": "^2.2.29",
@@ -38,12 +39,14 @@
 		"@types/react": "^15.0.24",
 		"@types/react-dom": "^15.5.0",
 		"@types/requirejs": "^2.1.26",
+		"typescript": "2.3.4",
+		"vue": "2.5.2 - 2.6.11",
+		"vue-class-component": "7.2.6",
 		"es6-promise": "^3.2.1",
 		"gulp": "^3.9.1",
 		"gulp-sass": "^3.1.0",
 		"gulp-typescript": "^3.1.6",
 		"requirejs": "^2.3.3",
-		"typescript": "2.3.4",
 		"canteen": "^1.0.5",
 		"jasmine-ajax": "^3.3.1",
 		"jasmine-core": "^2.6.1",

@@ -1,10 +1,23 @@
+import { ComponentBase, EJComponentDecorator, allVue, gh } from '@syncfusion/ej2-vue-base';
+import * as Vue3 from 'vue-class-component';
 import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
-@EJComponentDecorator({})
-export class ConnectorFixedUserHandlesDirective extends Vue {
+export const isExecute: any = gh ? false : true;
+
+let vueImport: any;
+if (!isExecute || parseInt(allVue.version) < 3) {
+    vueImport = (Vue3 as any).Vue;
+} else {
+    vueImport = Vue;
+}
+
+@EJComponentDecorator({}, isExecute)
+export class ConnectorFixedUserHandlesDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-connector-fixeduserhandles';
     }
 }
 export const ConnectorFixedUserHandlesPlugin = {
@@ -30,10 +43,13 @@ export const ConnectorFixedUserHandlesPlugin = {
  * </ejs-diagram>
  * ```
  */
-@EJComponentDecorator({})
-export class ConnectorFixedUserHandleDirective extends Vue {
+@EJComponentDecorator({}, isExecute)
+export class ConnectorFixedUserHandleDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-connector-fixeduserhandle';
     }
 }
 export const ConnectorFixedUserHandlePlugin = {

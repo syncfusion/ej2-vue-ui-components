@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## 19.1.69 (2021-06-15)
+## 19.1.57 (2021-04-20)
 
 ### QueryBuilder
 
@@ -27,9 +27,6 @@
 - Provided Complex data binding Support.
 - Provided Header Template Support.
 - Provided model support for fields, operators and values.
-
-- Provided Complex data binding Support
-- Provided Header Template Support
 
 #### Bug Fixes
 

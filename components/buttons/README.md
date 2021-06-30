@@ -99,4 +99,4 @@ Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-compone
 
 Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/buttons/CHANGELOG.md)
 
-© Copyright 2019 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+© Copyright 2021 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.

@@ -1,5 +1,7 @@
-import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
+import { Options } from 'vue-class-component';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
+import { isNullOrUndefined } from '@syncfusion/ej2-base';
+
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 import { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin } from './image.directive'
 import { ChartsDirective, ChartDirective, ChartsPlugin, ChartPlugin } from './chart.directive'
@@ -12,8 +14,25 @@ import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sh
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
+// {{VueImport}}
 export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
+
+export const testProp: any = getProps({props: properties});
+export const props = testProp[0];
+export const watch = testProp[1];
+
+export const emitProbs: any = Object.keys(watch);
+emitProbs.push('modelchanged');
+for (let props of modelProps) {
+    emitProbs.push(
+        'update:'+props
+    );
+}
+
+export const isExecute: any = gh ? false : true;
+
+export let tempProxy: any;
 
 /**
  * `ejs-spreadsheet` represents the VueJS Spreadsheet Component.
@@ -23,7 +42,14 @@ export const modelProps: string[] = [];
  */
 @EJComponentDecorator({
     props: properties
-})
+},isExecute)
+
+/* Start Options({
+    props: props,
+    watch: watch,
+    emits: emitProbs
+}) End */
+
 export class SpreadsheetComponent extends ComponentBase {
     
     public ej2Instances: any;
@@ -33,15 +59,21 @@ export class SpreadsheetComponent extends ComponentBase {
     protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image","e-charts":"e-chart"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"};
     public tagNameMapper: Object = {"e-images":"e-image","e-charts":"e-chart","e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"};
+    public isVue3: boolean;
     
     constructor() {
-        super();
+        super(arguments);
+        this.isVue3 = !isExecute;
         this.ej2Instances = new Spreadsheet({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
+        tempProxy = this;
     }
     public setProperties(prop: any, muteOnChange: boolean): void {
+        if(this.isVue3) {
+            this.models = !this.models ? this.ej2Instances.referModels : this.models;
+        }
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
@@ -49,7 +81,11 @@ export class SpreadsheetComponent extends ComponentBase {
             Object.keys(prop).map((key: string): void => {
                 this.models.map((model: string): void => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        this.$emit('update:' + key, prop[key]);
+                        if (this.isVue3) {
+                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
+                        } else {
+                            (this as any).$emit('update:' + key, prop[key]);
+                        }
                     }
                 });
             });
@@ -57,7 +93,12 @@ export class SpreadsheetComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-        return createElement('div', (this as any).$slots.default);
+        let h: any = gh || createElement;
+        let slots: any = null;
+        if(!isNullOrUndefined((this as any).$slots.default)) {
+            slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
+        }
+        return h('div', slots);
     }
     
     public Unfreeze(sheet?: number | string): void {
@@ -156,6 +197,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.deleteImage(id, range);
     }
 
+    public duplicateSheet(sheetIndex?: number): void {
+        return this.ej2Instances.duplicateSheet(sheetIndex);
+    }
+
     public enableContextMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void {
         return this.ej2Instances.enableContextMenuItems(items, enable, isUniqueId);
     }
@@ -246,6 +291,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public merge(range?: string, type?: Object): void {
         return this.ej2Instances.merge(range, type);
+    }
+
+    public moveSheet(position: number, sheetIndexes?: number[]): void {
+        return this.ej2Instances.moveSheet(position, sheetIndexes);
     }
 
     public numberFormat(format: string, range?: string): void {

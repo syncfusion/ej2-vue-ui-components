@@ -72,4 +72,3 @@ Base library provide options to enable following Vue functionalities in Essentia
 
 - The individual npm package will no longer bundle dependent component's style. The online web tool [CRG](https://crg.syncfusion.com/) can be used to combine specific set of component and its dependent component styles.
 
-

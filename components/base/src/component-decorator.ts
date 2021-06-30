@@ -1,8 +1,8 @@
 /**
  * Vue Component Base
  */
-import Vue, { ComponentOptions, PluginObject } from 'vue';
-import { Base, Component as EJ2Component, isNullOrUndefined } from '@syncfusion/ej2-base';
+import Vue from 'vue';
+// import { Base, Component as EJ2Component, isNullOrUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase } from './component-base';
 export let $internalHooks = [
   'data',
@@ -20,7 +20,29 @@ export let $internalHooks = [
   'errorCaptured' // 2.5
 ];
 
-export function EJComponentDecorator(options: any): any {
+export function getProps(
+  options: any = {}
+): any {
+  if (options.props) {
+    for (let prop of options.props) {
+      (options.newprops || (options.newprops = {}))[prop] = {
+
+      };
+      (options.watch || (options.watch = {}))[prop] = function (newVal: Object) { // watch it
+        this.ej2Instances[prop] = newVal;
+        if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
+            this.dataBind();    
+        }
+      };
+    }
+  }
+  return [options.newprops, options.watch];
+}
+
+export function EJComponentDecorator(options: any, isExecute?: any): any {
+  if(!isExecute) {
+        return;
+  }
   return function (Component: any) {
     return EJcomponentFactory(Component, options);
   }

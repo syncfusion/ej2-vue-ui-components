@@ -1,10 +1,23 @@
+import { ComponentBase, EJComponentDecorator, allVue, gh } from '@syncfusion/ej2-vue-base';
+import * as Vue3 from 'vue-class-component';
 import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
-@EJComponentDecorator({})
-export class AxesDirective extends Vue {
+export const isExecute: any = gh ? false : true;
+
+let vueImport: any;
+if (!isExecute || parseInt(allVue.version) < 3) {
+    vueImport = (Vue3 as any).Vue;
+} else {
+    vueImport = Vue;
+}
+
+@EJComponentDecorator({}, isExecute)
+export class AxesDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-axes';
     }
 }
 export const AxesPlugin = {
@@ -22,10 +35,13 @@ export const AxesPlugin = {
  * </ejs-circulargauge>
  * ```
  */
-@EJComponentDecorator({})
-export class AxisDirective extends Vue {
+@EJComponentDecorator({}, isExecute)
+export class AxisDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-axis';
     }
 }
 export const AxisPlugin = {

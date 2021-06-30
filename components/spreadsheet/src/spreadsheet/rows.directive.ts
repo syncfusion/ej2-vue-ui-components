@@ -1,10 +1,23 @@
+import { ComponentBase, EJComponentDecorator, allVue, gh } from '@syncfusion/ej2-vue-base';
+import * as Vue3 from 'vue-class-component';
 import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
-@EJComponentDecorator({})
-export class RowsDirective extends Vue {
+export const isExecute: any = gh ? false : true;
+
+let vueImport: any;
+if (!isExecute || parseInt(allVue.version) < 3) {
+    vueImport = (Vue3 as any).Vue;
+} else {
+    vueImport = Vue;
+}
+
+@EJComponentDecorator({}, isExecute)
+export class RowsDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-rows';
     }
 }
 export const RowsPlugin = {
@@ -29,10 +42,13 @@ export const RowsPlugin = {
  * </ejs-spreadsheet>
  * ```
  */
-@EJComponentDecorator({})
-export class RowDirective extends Vue {
+@EJComponentDecorator({}, isExecute)
+export class RowDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-row';
     }
 }
 export const RowPlugin = {

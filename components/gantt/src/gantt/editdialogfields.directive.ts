@@ -1,10 +1,23 @@
+import { ComponentBase, EJComponentDecorator, allVue, gh } from '@syncfusion/ej2-vue-base';
+import * as Vue3 from 'vue-class-component';
 import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
-@EJComponentDecorator({})
-export class EditDialogFieldsDirective extends Vue {
+export const isExecute: any = gh ? false : true;
+
+let vueImport: any;
+if (!isExecute || parseInt(allVue.version) < 3) {
+    vueImport = (Vue3 as any).Vue;
+} else {
+    vueImport = Vue;
+}
+
+@EJComponentDecorator({}, isExecute)
+export class EditDialogFieldsDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-edit-dialog-fields';
     }
 }
 export const EditDialogFieldsPlugin = {
@@ -26,10 +39,13 @@ export const EditDialogFieldsPlugin = {
  * </ejs-gantt>
  * ```
  */
-@EJComponentDecorator({})
-export class EditDialogFieldDirective extends Vue {
+@EJComponentDecorator({}, isExecute)
+export class EditDialogFieldDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-edit-dialog-field';
     }
 }
 export const EditDialogFieldPlugin = {

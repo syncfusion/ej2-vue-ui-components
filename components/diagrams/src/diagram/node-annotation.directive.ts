@@ -1,10 +1,23 @@
+import { ComponentBase, EJComponentDecorator, allVue, gh } from '@syncfusion/ej2-vue-base';
+import * as Vue3 from 'vue-class-component';
 import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
-@EJComponentDecorator({})
-export class NodeAnnotationsDirective extends Vue {
+export const isExecute: any = gh ? false : true;
+
+let vueImport: any;
+if (!isExecute || parseInt(allVue.version) < 3) {
+    vueImport = (Vue3 as any).Vue;
+} else {
+    vueImport = Vue;
+}
+
+@EJComponentDecorator({}, isExecute)
+export class NodeAnnotationsDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-node-annotations';
     }
 }
 export const NodeAnnotationsPlugin = {
@@ -30,10 +43,13 @@ export const NodeAnnotationsPlugin = {
  * </ejs-diagram>
  * ```
  */
-@EJComponentDecorator({})
-export class NodeAnnotationDirective extends Vue {
+@EJComponentDecorator({}, isExecute)
+export class NodeAnnotationDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-node-annotation';
     }
 }
 export const NodeAnnotationPlugin = {

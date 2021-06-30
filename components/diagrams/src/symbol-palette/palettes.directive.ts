@@ -1,10 +1,23 @@
+import { ComponentBase, EJComponentDecorator, allVue, gh } from '@syncfusion/ej2-vue-base';
+import * as Vue3 from 'vue-class-component';
 import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
 
-@EJComponentDecorator({})
-export class PalettesDirective extends Vue {
+export const isExecute: any = gh ? false : true;
+
+let vueImport: any;
+if (!isExecute || parseInt(allVue.version) < 3) {
+    vueImport = (Vue3 as any).Vue;
+} else {
+    vueImport = Vue;
+}
+
+@EJComponentDecorator({}, isExecute)
+export class PalettesDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-palettes';
     }
 }
 export const PalettesPlugin = {
@@ -21,10 +34,13 @@ export const PalettesPlugin = {
  * <e-palettes><e-palette></e-palette><e-palettes>
  * ```
  */
-@EJComponentDecorator({})
-export class PaletteDirective extends Vue {
+@EJComponentDecorator({}, isExecute)
+export class PaletteDirective extends vueImport {
     public render(): void {
         return;
+    }
+    public getTag(): string {
+        return 'e-palette';
     }
 }
 export const PalettePlugin = {
