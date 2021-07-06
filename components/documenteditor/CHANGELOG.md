@@ -2,16 +2,37 @@
 
 ## [Unreleased]
 
+## 19.2.46 (2021-07-06)
+
+### Document Editor
+
+#### Bug Fixes
+
+- `#I325741` - Resolved the footnote layouting issue when opening a document.
+- `#I331634` - Resolved the issue on updating the table cell width.
+- `#I331274` - Table positioning property is now preserved properly.
+- `#I331667` - Document with BuildingBlockGallery content control type is now exported properly.
+- `#I331452` - Resolved the layout issue on footnote inside the table.
+- `#I331606` - Document with content control block saving issue is now exported properly.
+- `#I331667`, `#I332223` - Shape in footer is now preserved properly.
+- `#I330686`, `#I331349`, `#I310463` - Shape fill is now preserved properly.
+- `#I332333` - Zoom value is now updated properly in status bar.
+- `#I330165`, `#I327647`, `#I324515` - Resolved the worst case scenario issues in comment editing and deleting.
+- `#I319210` - The changes and comment tab in the review pane will be visible only if at least one tracked change or comment is present respectively in the document.
+
 ## 19.2.44 (2021-06-30)
 
 ### Document Editor
 
 #### New Features
 
-- `#I278021`, `#I301809` – Added table paste options.
-- `#I165071`, `#I226674`, `#I229069`, `#I231373`, `#I241445`, `#I251719`, `#I251720`, `#I267474`, `#I284190`, `#I287633`, `#I291766`, `#I295055`, `#I295549`, `#I298036`, `#I297705`, `#I301313`, `#I291964`, `#I306274`, `#I305349`, `#I308409`, `#I310463`, `#I311260`, `#I312302`, `#I313526`, `#I314192`, `#I317340`, `#I319563` – Added support to preserve image position with square, in-front of text, behind text, top and bottom wrapping styles.
+- `#I278021`, `#I301809` - Added table paste options.
+- `#I165071`, `#I226674`, `#I229069`, `#I231373`, `#I241445`, `#I251719`, `#I251720`, `#I267474`, `#I284190`, `#I287633`, `#I291766`, `#I295055`, `#I295549`, `#I298036`, `#I297705`, `#I301313`, `#I291964`, `#I306274`, `#I305349`, `#I308409`, `#I310463`, `#I311260`, `#I312302`, `#I313526`, `#I314192`, `#I317340`, `#I319563` - Added support to preserve image position with square, in-front of text, behind text, top and bottom wrapping styles.
 - `#I165071`, `#I226674`, `#I229069`, `#I231373`, `#I241445`, `#I251719`, `#I251720`, `#I267474`, `#I284190`, `#I287633`, `#I291766`, `#I295055`, `#I295549`, `#I298036`, `#I297705`, `#I301313`, `#I291964`, `#I306274`, `#I305349`, `#I308409`, `#I310463`, `#I311260`, `#I312302`, `#I313526`, `#I314192`, `#I317340`, `#I319563` - Textbox shape with square, in-front of text, behind text, top and bottom wrapping styles.
 - `#I307321` - Added support to preserve table positioning properties.
+- `#I298019` - Added support for exporting the document pages as image.
+- `#I324911` - Provided support for inserting non-breaking space character on Ctrl + Shift + Space key combination.
+- `#I326184` - Added option to specify the device pixel ratio for the image generated while printing the document.
 
 #### Bug Fixes
 
@@ -37,14 +58,13 @@
 - `#I313465` - Image inserted using API is now displayed properly.
 - `#I308899` - Track changes is now listed properly in revision pane.
 - `#I320270` - Table changes are now tracked during paste operation.
-- `#I319403`, `#I317463` - Resolved file corruption issue while exporting the document with shapes.
 - `#I313821` - Table with preferred width type as auto is now displayed properly.
 - `#F162726` - Line spacing is now updated properly.
 - `#I319819` - Undo/Redo for multilevel list is now working properly.
 - `#I318381` - Comment is now added properly.
 - `#I317743` - Script error on accept track changes is now resolved.
 - `#I307321` - Checkbox with tab width is rendered properly.
-- `#FB23691` – Resolved changes pane visibility issue in read only mode.
+- `#FB23691` - Resolved changes pane visibility issue in read only mode.
 - `#I319397` - Spell checker now works properly for words ending with ‘ies’.
 - `#F164367` - Resolved the script error in npm run sass.
 - `#I319824` - Resolved the extra page rendering issue.
@@ -95,12 +115,12 @@
 - `#I322560` - Resolved the issue with duplication of page content.
 - `#I322560` - Font size is now parsed properly.
 - `#I323423` - Footnote is now displayed properly.
-- `#I325920` - Selection behavior is now working properly when mouse pointer goes outside the control.
+- `#I325920` - Selection behaviour is now working properly when mouse pointer goes outside the control.
 - `#I323608` - Textbox with fill color is now displayed properly.
 - `#I326144` - Resolved the issue with multi-line track changes.
 - `#I328063` - Document with checkbox form field applied is now displayed properly.
 - `#I328067` - Resolved the navigation issue when form filling mode is inline.
-- `#F164875, `#F163714` - Resolved the border issue when textbox has square border.
+- `#F164875`, `#F163714` - Resolved the border issue when textbox has square border.
 - `#I327817` - Resolved the script error when using insert footnote in custom toolbar.
 - `#I325320` - Page number is now updated properly.
 - `#FB25004` - Exported document with table is opened properly in Libre Office.
@@ -117,19 +137,20 @@
 - `#I329564` - Accept and reject changes are now disabled properly in read only mode.
 - `#F164814` - Character format is now applied properly for RTL text.
 - `#I328063` - Resolved script error while scrolling.
-- `#I327450` – Resolved the overlapping issue in footnote section when working with text.
-- `#I327606` – Font size is now updated properly for the cursor position.
-- `#I329354` – Resolved the exception while exporting documents in server-side.
-- `#I330375` – Updated the constants for locale constants.
-- `#I330047` – Resolved the script error with refresh API.
-- `#I329637` – Resoled the issue with deleting comment.
-- `#I330918`, `#I331136 – Resolved the issue with updating cursor.
-- `#I329954` – Resolved the overlapping issue in options pane.
-- `#I327635`, `#I330160 – Resolved the text overlapping when editing the footnote.
-- Resolved the issue with displaying document footer.
-- Resolved the script error related to Jest framework.
-- Resolved the script error with showRestrictEditingPane API.
-- Resolved the issue with document zooming.
+- `#I327450` - Resolved the overlapping issue in footnote section when working with text.
+- `#I327606` - Font size is now updated properly for the cursor position.
+- `#I329354` - Resolved the exception while exporting documents in server-side.
+- `#I330375` - Updated the constants for locale constants.
+- `#I330047` - Resolved the script error with refresh API.
+- `#I329637` - Resoled the issue with deleting comment.
+- `#I330918`, `#I331136` - Resolved the issue with updating cursor.
+- `#I329954` - Resolved the overlapping issue in options pane.
+- `#I327635`, `#I330160` - Resolved the text overlapping when editing the footnote.
+- `#I315396`, `#I316110` - Enhanced Word to SFDT conversion in Java server-side library.
+- `#I324042` - Resolved the issue with displaying document footer.
+- `#I315376` - Resolved the script error related to Jest framework.
+- `#I318321` - Resolved the script error with `showRestrictEditingPane` API.
+- `#I307321` - Resolved the issue with document zooming.
 
 ## 19.1.69 (2021-06-15)
 
@@ -211,6 +232,30 @@
 - `#I323824` - Resolved the document corruption issue in MS Office 2007.
 - Resolved the document rendering issue document footer.
 - Resolved the script error for Jest framework.
+
+## 19.1.63 (2021-05-13)
+
+### Document Editor
+
+#### Bug Fixes
+
+`#I326717` - Table border is preserved in the exported word document
+`#I325968` - New line changes are now tracked properly
+`#I325590` - Context menu behaviour for spell check is resolved.
+`#I325697` - Spell check in tracked changes is now updated properly.
+`#I324896` - List track changes are now applied properly.
+`#I322387` - DocumentEditorContainer disposing issue is resolved.
+`#I324622` - Resolved the chart parsing issue.
+`#I324911` - Console error when opening document with footnote is resolved.
+`#I324907` - Numbering list is copied with proper color.
+`#I323215` - Table is now layout properly after row delete.
+`#I322560` - Page content duplication issue is resolved.
+
+
+#### New Features
+
+- `#I324911` - Provided support for inserting non-breaking space character on Ctrl + Shift + Space key combination.
+- `#I326184` - Added option to specify the device pixel ratio for the image generated while printing the document.
 
 ## 19.1.59 (2021-05-04)
 
