@@ -221,7 +221,7 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.endEdit();
     }
 
-    public find(args: Object): void {
+    public find(args: Object): void | string {
         return this.ej2Instances.find(args);
     }
 

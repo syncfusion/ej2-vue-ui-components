@@ -163,6 +163,10 @@ export class ListBoxComponent extends ComponentBase {
         return this.ej2Instances.getSortedList();
     }
 
+    public hideSpinner(): void {
+        return this.ej2Instances.hideSpinner();
+    }
+
     public moveAllTo(targetId?: string, index?: number): void {
         return this.ej2Instances.moveAllTo(targetId, index);
     }
@@ -197,6 +201,10 @@ export class ListBoxComponent extends ComponentBase {
 
     public selectItems(items: string[], state: boolean, isValue?: boolean): void {
         return this.ej2Instances.selectItems(items, state, isValue);
+    }
+
+    public showSpinner(): void {
+        return this.ej2Instances.showSpinner();
     }
 }
 
