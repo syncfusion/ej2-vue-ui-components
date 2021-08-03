@@ -238,6 +238,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.getDisplayText(cell);
     }
 
+    public getRowData(index?: number, sheetIndex?: number): Object[] {
+        return this.ej2Instances.getRowData(index, sheetIndex);
+    }
+
     public getSelectAllContent(): Object {
         return this.ej2Instances.getSelectAllContent();
     }
