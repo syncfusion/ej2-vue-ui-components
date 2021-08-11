@@ -23,8 +23,6 @@ for (let props of modelProps) {
 
 export const isExecute: any = gh ? false : true;
 
-export let tempProxy: any;
-
 /**
  * Represents the Essential JS 2 VueJS ProgressButton Component
  * ```html
@@ -59,7 +57,6 @@ export class ProgressButtonComponent extends ComponentBase {
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
-        tempProxy = this;
     }
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {

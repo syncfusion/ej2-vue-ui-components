@@ -128,6 +128,10 @@ export class RichTextEditorComponent extends ComponentBase {
         return h('textarea', slots);
     }
     
+    public closeDialog(type: Object): void {
+        return this.ej2Instances.closeDialog(type);
+    }
+
     public disableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void {
         return this.ej2Instances.disableToolbarItem(items, muteToolbarUpdate);
     }
@@ -206,6 +210,10 @@ export class RichTextEditorComponent extends ComponentBase {
 
     public selectRange(range: Object): void {
         return this.ej2Instances.selectRange(range);
+    }
+
+    public showDialog(type: Object): void {
+        return this.ej2Instances.showDialog(type);
     }
 
     public showFullScreen(): void {
