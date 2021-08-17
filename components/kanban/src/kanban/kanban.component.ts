@@ -25,8 +25,6 @@ for (let props of modelProps) {
 
 export const isExecute: any = gh ? false : true;
 
-export let tempProxy: any;
-
 /**
  * `ej-kanban` represents the VueJS Kanban Component.
  * ```vue
@@ -61,7 +59,6 @@ export class KanbanComponent extends ComponentBase {
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
-        tempProxy = this;
     }
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {

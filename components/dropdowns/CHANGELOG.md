@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.2.56 (2021-08-17)
+
+### ComboBox
+
+#### Bug Fixes
+
+- `#FB26838` - Issue with "exception throws while rendering the component inside v-if and v-else" has been resolved.
+
 ## 19.2.55 (2021-08-11)
 
 ### ListBox
