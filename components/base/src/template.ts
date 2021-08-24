@@ -25,7 +25,7 @@ export function compile(
   if (typeof templateElement === "string") {
     return stringCompiler(templateElement, helper);
   } else {
-    return (data: any, context: any): any => {
+    return (data: any, context: any,propName: any): any => {
       let pid: string = getUniqueID("templateParentDiv");
       let id: string = getUniqueID("templateDiv");
       let ele: HTMLElement = createElement("div", {
@@ -64,6 +64,20 @@ export function compile(
             .createApp(templateCompRef)
             .mount("#" + id);
           returnEle = ele.childNodes;
+          if (context.vueInstance) {
+            let templateInstance: any = context.vueInstance.templateCollection;
+            if (!templateInstance) {
+                context.vueInstance.templateCollection = {};
+                templateInstance = context.vueInstance.templateCollection;
+            }
+            if (propName) {
+                if (!templateInstance[propName]) {
+                    templateInstance[propName] = [];
+                }
+                templateInstance[propName].push(returnEle[0]);
+            }
+        }
+
           detach(ele);
         } else {
           let templateFunction = tempObj.template;

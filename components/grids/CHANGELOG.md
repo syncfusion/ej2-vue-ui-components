@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 19.2.57 (2021-08-24)
+
+### Grid
+
+#### Bug Fixes
+
+- `#I338200` - Searching operation is not working properly in `foreignKeyColumn` issue has been fixed.
+
+- `#I333667` - DOM Nodes and JS Heap Size are increasing when we change the dataSource dynamically issue has been fixed.
+
 ## 19.2.56 (2021-08-17)
 
 ### Grid

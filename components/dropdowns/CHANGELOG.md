@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 19.2.56 (2021-08-17)
-
-### ComboBox
-
-#### Bug Fixes
-
-- `#FB26838` - Issue with "exception throws while rendering the component inside v-if and v-else" has been resolved.
-
 ## 19.2.55 (2021-08-11)
 
 ### ListBox
@@ -1845,6 +1837,14 @@ DropDownList component contains a list of predefined values from which a single 
 - **Templates** - Allows customizing the list items, selected value, header, footer, category group header, and no records content.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the DropDownList component features through the keyboard, screen readers, or other assistive technology devices.
 
+
+## 19.2.56 (2021-08-17)
+
+### ComboBox
+
+#### Bug Fixes
+
+- `#FB26838` - Issue with "exception throws while rendering the component inside v-if and v-else" has been resolved.
 
 ## 18.4.46 (2021-03-02)
 

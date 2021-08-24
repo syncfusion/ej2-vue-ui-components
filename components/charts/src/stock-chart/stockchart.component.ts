@@ -1,7 +1,7 @@
 import { Options } from 'vue-class-component';
 import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
-import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { StockChart } from '@syncfusion/ej2-charts';
 import { StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin } from './trendlines.directive'
@@ -62,7 +62,7 @@ export class StockChartComponent extends ComponentBase {
     public tagMapper: { [key: string]: Object } = {"e-stockchart-series-collection":{"e-stockchart-series":{"e-trendlines":"e-trendline"}},"e-stockchart-axes":"e-stockchart-axis","e-stockchart-rows":"e-stockchart-row","e-stockchart-annotations":"e-stockchart-annotation","e-stockchart-selectedDataIndexes":"e-stockchart-selectedDataIndex","e-stockchart-periods":"e-stockchart-period","e-stockchart-stockevents":"e-stockchart-stockevent","e-stockchart-indicators":"e-stockchart-indicator"};
     public tagNameMapper: Object = {"e-stockchart-series-collection":"e-series","e-stockchart-axes":"e-axes","e-stockchart-rows":"e-rows","e-stockchart-annotations":"e-annotations","e-stockchart-selectedDataIndexes":"e-selectedDataIndexes","e-stockchart-periods":"e-periods","e-stockchart-stockevents":"e-stockEvents","e-stockchart-indicators":"e-indicators"};
     public isVue3: boolean;
-    
+    public templateCollection: any;
     constructor() {
         super(arguments);
         this.isVue3 = !isExecute;
@@ -72,7 +72,32 @@ export class StockChartComponent extends ComponentBase {
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
+        this.ej2Instances.clearTemplate = this.clearTemplate;
     }
+
+ public clearTemplate(templateNames?: string[]): any {
+    if (!templateNames){
+       templateNames = Object.keys(this.templateCollection || {});
+    }
+    if (templateNames.length &&  this.templateCollection) {
+    for (let tempName of templateNames){
+       let elementCollection: any = this.templateCollection[tempName];
+       if(elementCollection && elementCollection.length) {
+       for(let ele of elementCollection) {
+           let destroy: any = getValue('__vue__.$destroy', ele);
+           if (destroy) {
+               ele.__vue__.$destroy();
+           }
+           if (ele.innerHTML){
+               ele.innerHTML = '';
+           }
+       }
+       delete this.templateCollection[tempName];
+       }
+    }
+}
+ }
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;

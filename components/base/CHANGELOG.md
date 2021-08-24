@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.2.57 (2021-08-24)
+
+### Common
+
+#### Bug Fixes
+
+-  `I236269`, `I333667`, `I336462`  Performance Improvements in `Template re-rendering`.
+
 ## 19.2.48 (2021-07-20)
 
 ### Common
