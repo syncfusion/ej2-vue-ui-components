@@ -64,20 +64,6 @@ export function compile(
             .createApp(templateCompRef)
             .mount("#" + id);
           returnEle = ele.childNodes;
-          if (context.vueInstance) {
-            let templateInstance: any = context.vueInstance.templateCollection;
-            if (!templateInstance) {
-                context.vueInstance.templateCollection = {};
-                templateInstance = context.vueInstance.templateCollection;
-            }
-            if (propName) {
-                if (!templateInstance[propName]) {
-                    templateInstance[propName] = [];
-                }
-                templateInstance[propName].push(returnEle[0]);
-            }
-        }
-
           detach(ele);
         } else {
           let templateFunction = tempObj.template;
@@ -98,10 +84,22 @@ export function compile(
           // templateVue.$data.data = extend(tempObj.data, data);
           templateVue.$mount("#" + id);
           returnEle = ele.childNodes;
+        if (context.vueInstance) {
+                let templateInstance: any = context.vueInstance.templateCollection;
+                if (!templateInstance) {
+                    context.vueInstance.templateCollection = {};
+                    templateInstance = context.vueInstance.templateCollection;
+                }
+                if (propName) {
+                    if (!templateInstance[propName]) {
+                        templateInstance[propName] = [];
+                    }
+                    templateInstance[propName].push(returnEle[0]);
+                }
+            }
           detach(ele);
         }
       }
-
       return returnEle || [];
     };
   }

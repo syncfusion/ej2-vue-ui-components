@@ -1,7 +1,7 @@
 import { Options } from 'vue-class-component';
 import { isUndefined } from '@syncfusion/ej2-base';
 import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
-import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { TreeGrid } from '@syncfusion/ej2-treegrid';
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
@@ -56,7 +56,7 @@ export class TreeGridComponent extends ComponentBase {
     public tagMapper: { [key: string]: Object } = {"e-columns":"e-column","e-aggregates":{"e-aggregate":{"e-columns":"e-column"}}};
     public tagNameMapper: Object = {};
     public isVue3: boolean;
-    
+    public templateCollection: any;
     constructor() {
         super(arguments);
         this.isVue3 = !isExecute;
@@ -66,7 +66,32 @@ export class TreeGridComponent extends ComponentBase {
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
+        this.ej2Instances.clearTemplate = this.clearTemplate;
     }
+
+ public clearTemplate(templateNames?: string[]): any {
+    if (!templateNames){
+       templateNames = Object.keys(this.templateCollection || {});
+    }
+    if (templateNames.length &&  this.templateCollection) {
+    for (let tempName of templateNames){
+       let elementCollection: any = this.templateCollection[tempName];
+       if(elementCollection && elementCollection.length) {
+       for(let ele of elementCollection) {
+           let destroy: any = getValue('__vue__.$destroy', ele);
+           if (destroy) {
+               ele.__vue__.$destroy();
+           }
+           if (ele.innerHTML){
+               ele.innerHTML = '';
+           }
+       }
+       delete this.templateCollection[tempName];
+       }
+    }
+}
+ }
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
