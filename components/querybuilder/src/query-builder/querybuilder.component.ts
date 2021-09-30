@@ -7,7 +7,7 @@ import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from '
 
 
 // {{VueImport}}
-export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'fieldModel', 'headerTemplate', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'operatorModel', 'readonly', 'rule', 'separator', 'showButtons', 'sortDirection', 'summaryView', 'valueModel', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'dataBound', 'ruleChange'];
+export const properties: string[] = ['allowValidation', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'fieldMode', 'fieldModel', 'headerTemplate', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'operatorModel', 'readonly', 'rule', 'separator', 'showButtons', 'sortDirection', 'summaryView', 'valueModel', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'dataBound', 'ruleChange'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -84,6 +84,8 @@ export class QueryBuilderComponent extends ComponentBase {
 }
  }
 
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -99,6 +101,7 @@ export class QueryBuilderComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });

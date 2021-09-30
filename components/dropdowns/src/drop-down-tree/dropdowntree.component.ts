@@ -7,7 +7,7 @@ import { DropDownTree } from '@syncfusion/ej2-dropdowns';
 
 
 // {{VueImport}}
-export const properties: string[] = ['actionFailureTemplate', 'allowFiltering', 'allowMultiSelection', 'changeOnBlur', 'cssClass', 'delimiterChar', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'mode', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'readonly', 'selectAllText', 'showCheckBox', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'treeSettings', 'unSelectAllText', 'value', 'width', 'wrapText', 'zIndex', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'keyPress', 'open', 'select'];
+export const properties: string[] = ['actionFailureTemplate', 'allowFiltering', 'allowMultiSelection', 'changeOnBlur', 'cssClass', 'customTemplate', 'delimiterChar', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'mode', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'readonly', 'selectAllText', 'showCheckBox', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'treeSettings', 'unSelectAllText', 'value', 'width', 'wrapText', 'zIndex', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'keyPress', 'open', 'select'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -89,6 +89,8 @@ export class DropDownTreeComponent extends ComponentBase {
 }
  }
 
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -104,6 +106,7 @@ export class DropDownTreeComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });

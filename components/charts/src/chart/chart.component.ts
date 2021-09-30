@@ -102,6 +102,8 @@ export class ChartComponent extends ComponentBase {
 }
  }
 
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -117,6 +119,7 @@ export class ChartComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });

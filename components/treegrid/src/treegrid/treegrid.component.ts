@@ -92,6 +92,8 @@ export class TreeGridComponent extends ComponentBase {
 }
  }
 
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -107,6 +109,7 @@ export class TreeGridComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });
@@ -324,6 +327,30 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.getFooterContentTable();
     }
 
+    public getFrozenLeftColumnHeaderByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenLeftColumnHeaderByIndex(index);
+    }
+
+    public getFrozenRightCellFromIndex(rowIndex: number, columnIndex: number): Object {
+        return this.ej2Instances.getFrozenRightCellFromIndex(rowIndex, columnIndex);
+    }
+
+    public getFrozenRightColumnHeaderByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenRightColumnHeaderByIndex(index);
+    }
+
+    public getFrozenRightDataRows(): Object[] {
+        return this.ej2Instances.getFrozenRightDataRows();
+    }
+
+    public getFrozenRightRowByIndex(index: number): Object {
+        return this.ej2Instances.getFrozenRightRowByIndex(index);
+    }
+
+    public getFrozenRightRows(): Object[] {
+        return this.ej2Instances.getFrozenRightRows();
+    }
+
     public getHeaderContent(): Object {
         return this.ej2Instances.getHeaderContent();
     }
@@ -334,6 +361,10 @@ export class TreeGridComponent extends ComponentBase {
 
     public getMovableCellFromIndex(rowIndex: number, columnIndex: number): Object {
         return this.ej2Instances.getMovableCellFromIndex(rowIndex, columnIndex);
+    }
+
+    public getMovableColumnHeaderByIndex(index: number): Object {
+        return this.ej2Instances.getMovableColumnHeaderByIndex(index);
     }
 
     public getMovableDataRows(): Object[] {

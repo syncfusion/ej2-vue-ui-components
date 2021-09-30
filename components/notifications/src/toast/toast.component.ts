@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
-import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { Toast } from '@syncfusion/ej2-notifications';
 import { ButtonModelPropsDirective, ButtonModelPropDirective, ButtonModelPropsPlugin, ButtonModelPropPlugin } from './buttons.directive'
@@ -23,8 +23,6 @@ for (let props of modelProps) {
 }
 
 export const isExecute: any = gh ? false : true;
-
-export let tempProxy: any;
 
 /**
  * Represents the Vue Toast Component
@@ -52,7 +50,7 @@ export class ToastComponent extends ComponentBase {
     public tagMapper: { [key: string]: Object } = {"e-buttonmodelprops":"e-buttonmodelprop"};
     public tagNameMapper: Object = {"e-buttonmodelprops":"e-buttons"};
     public isVue3: boolean;
-    
+    public templateCollection: any;
     constructor() {
         super(arguments);
         this.isVue3 = !isExecute;
@@ -60,8 +58,34 @@ export class ToastComponent extends ComponentBase {
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
-        tempProxy = this;
+        this.ej2Instances.clearTemplate = this.clearTemplate;
     }
+
+ public clearTemplate(templateNames?: string[]): any {
+    if (!templateNames){
+       templateNames = Object.keys(this.templateCollection || {});
+    }
+    if (templateNames.length &&  this.templateCollection) {
+    for (let tempName of templateNames){
+       let elementCollection: any = this.templateCollection[tempName];
+       if(elementCollection && elementCollection.length) {
+       for(let ele of elementCollection) {
+           let destroy: any = getValue('__vue__.$destroy', ele);
+           if (destroy) {
+               ele.__vue__.$destroy();
+           }
+           if (ele.innerHTML){
+               ele.innerHTML = '';
+           }
+       }
+       delete this.templateCollection[tempName];
+       }
+    }
+}
+ }
+
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -77,6 +101,7 @@ export class ToastComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });

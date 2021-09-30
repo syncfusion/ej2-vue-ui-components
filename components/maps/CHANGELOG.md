@@ -14,15 +14,13 @@
 
 ## [Unreleased]
 
-## 19.2.62 (2021-09-14)
+## 19.3.43 (2021-09-30)
 
 ### Maps
 
 #### Bug Fixes
 
-- `#I339811` - The zoom factor set by the `zoomToCoordinates` method is now correct.
-- `#I338403` - When the navigation lines are rendered outside the map area, the marker templates will now be rendered properly.
-- `#I339617` - The color and toggle visibility will now work properly when the legend is rendered for markers.
+- `#I342201` - When the `projectionType` is set to `Equirectangular`, data labels will now render correctly.
 
 ## 19.1.59 (2021-05-04)
 
@@ -297,9 +295,6 @@
 ### Maps
 
 #### Bug Fixes
-
-- Now map is rendering properly in universal applications.
-- Now panning works properly without freezing
 
 - Now map is rendering properly in universal applications
 - Now panning works properly without freezing

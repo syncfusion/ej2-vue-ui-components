@@ -2,13 +2,36 @@
 
 ## [Unreleased]
 
+## 19.3.43 (2021-09-30)
+
+### Gantt
+
+#### New Features
+
+- `#304621, #322659` - Provided percentage support for height and width of Gantt element.
+
+#### Bug Fixes
+
+- `#331618` - Issue in updating `dataSource` property has been fixed.
+- `#333672` - Issue in calculating duration across DST has been fixed.
+
 ## 19.2.62 (2021-09-14)
 
 ### Gantt
 
 #### Bug Fixes
 
+- `#340421` - In smaller resolution the splitter appeared in wrong position issue has been fixed.
+- `#341502` - Indicators disappear when datasource changed dynamically issue has been fixed.
+
+## 19.2.60 (2021-09-07)
+
+### Gantt
+
+#### Bug Fixes
+
 - `#340155` - Dialog closes when pressing insert key issue has been fixed.
+- `#333851` - Dynamically changing the holidays issue has been fixed.
 
 ## 19.2.59 (2021-08-31)
 
@@ -53,9 +76,6 @@
 - `#331618` - Issue in updating `dataSource` property has been fixed.
 - `#333672` - Issue in calculating duration across DST has been fixed.
 - Issue in tooltip position has been fixed.
-
-- `#331618` - Issue in updating `dataSource` property has been fixed.
-- `#333672` - Issue in calculating duration across DST has been fixed.
 
 ## 19.2.46 (2021-07-06)
 

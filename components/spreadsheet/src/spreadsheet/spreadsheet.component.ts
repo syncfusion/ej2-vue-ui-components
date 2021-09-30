@@ -15,7 +15,7 @@ import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, Define
 
 
 // {{VueImport}}
-export const properties: string[] = ['activeSheetIndex', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -92,6 +92,8 @@ export class SpreadsheetComponent extends ComponentBase {
 }
  }
 
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -107,6 +109,7 @@ export class SpreadsheetComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });
@@ -165,6 +168,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public applyFilter(predicates?: Object[], range?: string): void {
         return this.ej2Instances.applyFilter(predicates, range);
+    }
+
+    public autoFill(fillRange: string, dataRange?: string, direction?: Object, fillType?: Object): void {
+        return this.ej2Instances.autoFill(fillRange, dataRange, direction, fillType);
     }
 
     public autoFit(range: string): void {
@@ -339,8 +346,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.paste(address, type);
     }
 
-    public protectSheet(sheet?: number | string, protectSettings?: Object): void {
-        return this.ej2Instances.protectSheet(sheet, protectSettings);
+    public protectSheet(sheet?: number | string, protectSettings?: Object, password?: string): void {
+        return this.ej2Instances.protectSheet(sheet, protectSettings, password);
     }
 
     public redo(): void {
@@ -429,6 +436,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public updateCell(cell: Object, address?: string): void {
         return this.ej2Instances.updateCell(cell, address);
+    }
+
+    public updateRange(range: Object, sheetIdx?: number): void {
+        return this.ej2Instances.updateRange(range, sheetIdx);
     }
 
     public updateUndoRedoCollection(args: undefined): void {
