@@ -6,7 +6,7 @@ import { Pager } from '@syncfusion/ej2-grids';
 
 
 // {{VueImport}}
-export const properties: string[] = ['currentPage', 'customText', 'enableExternalMessage', 'enablePagerMessage', 'enablePersistence', 'enableQueryString', 'enableRtl', 'externalMessage', 'locale', 'pageCount', 'pageSize', 'pageSizes', 'template', 'totalRecordsCount', 'click', 'created', 'dropDownChanged'];
+export const properties: string[] = ['islazyUpdate', 'currentPage', 'customText', 'enableExternalMessage', 'enablePagerMessage', 'enablePersistence', 'enableQueryString', 'enableRtl', 'externalMessage', 'locale', 'pageCount', 'pageSize', 'pageSizes', 'template', 'totalRecordsCount', 'click', 'created', 'dropDownChanged'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

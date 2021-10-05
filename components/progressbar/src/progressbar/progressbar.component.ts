@@ -1,13 +1,13 @@
 import { Options } from 'vue-class-component';
 import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
-import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { ProgressBar } from '@syncfusion/ej2-progressbar';
 import { ProgressBarAnnotationsDirective, ProgressBarAnnotationDirective, ProgressBarAnnotationsPlugin, ProgressBarAnnotationPlugin } from './annotations.directive'
 
 
 // {{VueImport}}
-export const properties: string[] = ['animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableProgressSegments', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelOnTrack', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
+export const properties: string[] = ['islazyUpdate', 'animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableProgressSegments', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelOnTrack', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'valueChanged'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -50,7 +50,7 @@ export class ProgressBarComponent extends ComponentBase {
     public tagMapper: { [key: string]: Object } = {"e-progressbar-annotations":"e-progressbar-annotation"};
     public tagNameMapper: Object = {"e-progressbar-annotations":"e-annotations"};
     public isVue3: boolean;
-    
+    public templateCollection: any;
     constructor() {
         super(arguments);
         this.isVue3 = !isExecute;
@@ -58,7 +58,34 @@ export class ProgressBarComponent extends ComponentBase {
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
+        this.ej2Instances.clearTemplate = this.clearTemplate;
     }
+
+ public clearTemplate(templateNames?: string[]): any {
+    if (!templateNames){
+       templateNames = Object.keys(this.templateCollection || {});
+    }
+    if (templateNames.length &&  this.templateCollection) {
+    for (let tempName of templateNames){
+       let elementCollection: any = this.templateCollection[tempName];
+       if(elementCollection && elementCollection.length) {
+       for(let ele of elementCollection) {
+           let destroy: any = getValue('__vue__.$destroy', ele);
+           if (destroy) {
+               ele.__vue__.$destroy();
+           }
+           if (ele.innerHTML){
+               ele.innerHTML = '';
+           }
+       }
+       delete this.templateCollection[tempName];
+       }
+    }
+}
+ }
+
+
+
     public setProperties(prop: any, muteOnChange: boolean): void {
         if(this.isVue3) {
             this.models = !this.models ? this.ej2Instances.referModels : this.models;
@@ -74,6 +101,7 @@ export class ProgressBarComponent extends ComponentBase {
                             this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
                         } else {
                             (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
                         }
                     }
                 });

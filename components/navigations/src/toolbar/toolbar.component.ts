@@ -7,7 +7,7 @@ import { ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin } from './items.
 
 
 // {{VueImport}}
-export const properties: string[] = ['allowKeyboard', 'cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+export const properties: string[] = ['islazyUpdate', 'allowKeyboard', 'cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

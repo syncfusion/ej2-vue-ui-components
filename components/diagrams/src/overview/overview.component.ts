@@ -6,7 +6,7 @@ import { Overview } from '@syncfusion/ej2-diagrams';
 
 
 // {{VueImport}}
-export const properties: string[] = ['enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width', 'created'];
+export const properties: string[] = ['islazyUpdate', 'enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width', 'created'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

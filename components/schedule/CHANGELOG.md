@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.3.44 (2021-10-05)
+
+### Schedule
+
+#### Bug Fixes
+
+- `#FB29036` - An issue with the `renderCell` event arguments as `resourceGroupCells` has been fixed in the timeline year view with resources.
+
 ## 19.3.43 (2021-09-30)
 
 ### Schedule
