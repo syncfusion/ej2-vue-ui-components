@@ -7,7 +7,7 @@ import { DropDownButtonItemsDirective, DropDownButtonItemDirective, DropDownButt
 
 
 // {{VueImport}}
-export const properties: string[] = ['content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'close', 'created', 'open', 'select'];
+export const properties: string[] = ['islazyUpdate', 'content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'close', 'created', 'open', 'select'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

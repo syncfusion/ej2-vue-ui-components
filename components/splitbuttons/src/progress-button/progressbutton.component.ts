@@ -6,7 +6,7 @@ import { ProgressButton } from '@syncfusion/ej2-splitbuttons';
 
 
 // {{VueImport}}
-export const properties: string[] = ['animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
+export const properties: string[] = ['islazyUpdate', 'animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

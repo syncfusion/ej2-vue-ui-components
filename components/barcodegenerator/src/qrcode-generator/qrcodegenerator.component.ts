@@ -6,7 +6,7 @@ import { QRCodeGenerator } from '@syncfusion/ej2-barcode-generator';
 
 
 // {{VueImport}}
-export const properties: string[] = ['backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'errorCorrectionLevel', 'foreColor', 'height', 'locale', 'margin', 'mode', 'value', 'version', 'width', 'xDimension', 'invalid'];
+export const properties: string[] = ['islazyUpdate', 'backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'errorCorrectionLevel', 'foreColor', 'height', 'locale', 'margin', 'mode', 'value', 'version', 'width', 'xDimension', 'invalid'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

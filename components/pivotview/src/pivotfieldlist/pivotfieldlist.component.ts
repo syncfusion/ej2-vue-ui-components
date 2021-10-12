@@ -45,7 +45,7 @@ export class PivotFieldListComponent extends ComponentBase {
     public propKeys: string[] = properties;
     public models: string[] = modelProps;
     public hasChildDirective: boolean = false;
-    protected hasInjectedModules: boolean = false;
+    protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {};
     public tagNameMapper: Object = {};
     public isVue3: boolean;

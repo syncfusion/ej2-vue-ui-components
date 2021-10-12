@@ -7,7 +7,7 @@ import { SplitButtonItemsDirective, SplitButtonItemDirective, SplitButtonItemsPl
 
 
 // {{VueImport}}
-export const properties: string[] = ['content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
+export const properties: string[] = ['islazyUpdate', 'content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
