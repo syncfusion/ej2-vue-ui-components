@@ -7,7 +7,7 @@ import { InPlaceEditor } from '@syncfusion/ej2-inplace-editor';
 
 
 // {{VueImport}}
-export const properties: string[] = ['actionOnBlur', 'adaptor', 'cancelButton', 'cssClass', 'disabled', 'editableOn', 'emptyText', 'enableEditMode', 'enableHtmlParse', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'locale', 'mode', 'model', 'name', 'popupSettings', 'primaryKey', 'saveButton', 'showButtons', 'submitOnEnter', 'template', 'textOption', 'type', 'url', 'validationRules', 'value', 'actionBegin', 'actionFailure', 'actionSuccess', 'beforeSanitizeHtml', 'beginEdit', 'cancelClick', 'change', 'created', 'destroyed', 'endEdit', 'submitClick', 'validating'];
+export const properties: string[] = ['islazyUpdate', 'actionOnBlur', 'adaptor', 'cancelButton', 'cssClass', 'disabled', 'editableOn', 'emptyText', 'enableEditMode', 'enableHtmlParse', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'locale', 'mode', 'model', 'name', 'popupSettings', 'primaryKey', 'saveButton', 'showButtons', 'submitOnEnter', 'template', 'textOption', 'type', 'url', 'validationRules', 'value', 'actionBegin', 'actionFailure', 'actionSuccess', 'beforeSanitizeHtml', 'beginEdit', 'cancelClick', 'change', 'created', 'destroyed', 'endEdit', 'submitClick', 'validating'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -125,8 +125,10 @@ export class InPlaceEditorComponent extends ComponentBase {
                     this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
                     this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
                 } else {
-                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                    (this as any).$emit('modelchanged', eventProp[propKey]);
+                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.islazyUpdate)) {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
                 }
             }
         } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
