@@ -7,7 +7,7 @@ import { ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin } from './chips.
 
 
 // {{VueImport}}
-export const properties: string[] = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'leadingIconUrl', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'trailingIconUrl', 'beforeClick', 'click', 'created', 'delete'];
+export const properties: string[] = ['islazyUpdate', 'avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'leadingIconUrl', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'trailingIconUrl', 'beforeClick', 'click', 'created', 'delete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

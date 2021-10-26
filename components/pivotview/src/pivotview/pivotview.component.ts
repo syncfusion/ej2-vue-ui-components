@@ -137,6 +137,10 @@ export class PivotViewComponent extends ComponentBase {
         return this.ej2Instances.getCellTemplate();
     }
 
+    public getRowText(rowIndex: number, colIndex: number): string {
+        return this.ej2Instances.getRowText(rowIndex, colIndex);
+    }
+
     public loadPersistData(persistData: string): void {
         return this.ej2Instances.loadPersistData(persistData);
     }

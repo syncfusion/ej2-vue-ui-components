@@ -289,7 +289,7 @@ export class ScheduleComponent extends ComponentBase {
         return this.ej2Instances.refreshLayout();
     }
 
-    public refreshTemplates(templateName: string): void {
+    public refreshTemplates(templateName?: string): void {
         return this.ej2Instances.refreshTemplates(templateName);
     }
 
