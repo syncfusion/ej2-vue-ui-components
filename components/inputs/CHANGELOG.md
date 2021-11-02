@@ -2,6 +2,23 @@
 
 ## [Unreleased]
 
+## 19.3.48 (2021-11-02)
+
+### ColorPicker
+
+#### Bug Fixes
+
+- `createPopupOnClick` property scenario not handled properly in `ColorPicker` has been resolved.
+- `I344127` - Issue with ColorPicker value not updated properly if opacity is set to false has been resolved.
+
+## 19.3.44 (2021-10-05)
+
+### NumericTextBox
+
+#### Bug Fixes
+
+- `#I319166` - Issue with "lazy modifier not working" has been resolved.
+
 ## 19.2.59 (2021-08-31)
 
 ### Uploader

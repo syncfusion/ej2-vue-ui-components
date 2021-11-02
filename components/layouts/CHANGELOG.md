@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.3.48 (2021-11-02)
+
+### Dashboard Layout
+
+#### Bug Fixes
+
+- `#169467` - The issue with "Dashboard panel position changes on window resize" has been resolved
+
 ## 19.3.44 (2021-10-05)
 
 ### Splitter
