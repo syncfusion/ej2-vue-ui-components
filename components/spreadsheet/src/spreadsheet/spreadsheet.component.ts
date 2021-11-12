@@ -282,12 +282,20 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.goTo(address);
     }
 
+    public hideColumn(startIndex: number, endIndex: number, hide: boolean): void {
+        return this.ej2Instances.hideColumn(startIndex, endIndex, hide);
+    }
+
     public hideFileMenuItems(items: string[], hide: boolean, isUniqueId?: boolean): void {
         return this.ej2Instances.hideFileMenuItems(items, hide, isUniqueId);
     }
 
     public hideRibbonTabs(tabs: string[], hide: boolean): void {
         return this.ej2Instances.hideRibbonTabs(tabs, hide);
+    }
+
+    public hideRow(startIndex: number, endIndex: number, hide: boolean): void {
+        return this.ej2Instances.hideRow(startIndex, endIndex, hide);
     }
 
     public hideSpinner(): void {
