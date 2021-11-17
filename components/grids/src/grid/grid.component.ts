@@ -4,6 +4,7 @@ import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@sync
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { Grid } from '@syncfusion/ej2-grids';
+import { StackedColumnsDirective, StackedColumnDirective, StackedColumnsPlugin, StackedColumnPlugin } from './stacked-column.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPlugin, AggregateColumnPlugin } from './aggregate-columns.directive'
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
@@ -53,8 +54,8 @@ export class GridComponent extends ComponentBase {
     public models: string[] = modelProps;
     public hasChildDirective: boolean = true;
     protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-columns":"e-column","e-aggregates":{"e-aggregate":{"e-columns":"e-column"}}};
-    public tagNameMapper: Object = {};
+    public tagMapper: { [key: string]: Object } = {"e-columns":{"e-column":{"e-stacked-columns":"e-stacked-column"}},"e-aggregates":{"e-aggregate":{"e-columns":"e-column"}}};
+    public tagNameMapper: Object = {"e-stacked-columns":"e-columns"};
     public isVue3: boolean;
     public templateCollection: any;
     constructor() {
@@ -676,6 +677,8 @@ export const GridPlugin = {
         Vue.component(GridPlugin.name, GridComponent);
         Vue.component(ColumnPlugin.name, ColumnDirective);
         Vue.component(ColumnsPlugin.name, ColumnsDirective);
+        Vue.component(StackedColumnPlugin.name, StackedColumnDirective);
+        Vue.component(StackedColumnsPlugin.name, StackedColumnsDirective);
         Vue.component(AggregatePlugin.name, AggregateDirective);
         Vue.component(AggregatesPlugin.name, AggregatesDirective);
         Vue.component(AggregateColumnPlugin.name, AggregateColumnDirective);
