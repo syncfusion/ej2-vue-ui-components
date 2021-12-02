@@ -163,6 +163,10 @@ export class DialogComponent extends ComponentBase {
         return this.ej2Instances.getButtons(index);
     }
 
+    public getDimension(): Object {
+        return this.ej2Instances.getDimension();
+    }
+
     public hide(event?: Object): void {
         return this.ej2Instances.hide(event);
     }
