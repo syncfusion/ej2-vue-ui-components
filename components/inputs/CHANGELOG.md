@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 19.3.57 (2021-12-07)
+
+### NumericTextBox
+
+#### Bug Fixes
+
+- `#FB30370` - Issue with "typing decimal separator in the starting position is converted as 0 while binding the v-model property" has been resolved.
+
 ## 19.3.53 (2021-11-12)
 
 ### ColorPicker

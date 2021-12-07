@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 19.3.56 (2021-12-02)
-
-### Dashboard Layout
-
-#### Bug Fixes
-
-- `#169467` - The issue with "Dashboard panel position changes on window resize" has been resolved
-
 ## 19.3.44 (2021-10-05)
 
 ### Splitter
@@ -522,4 +514,12 @@ The available key features are
 - **Action Buttons**: Supports to add buttons within the card either in vertical or horizontal alignment.
 - **Horizontal Card**: Allows to align card elements horizontally and also allows to stack the content vertically within horizontal alignment.
 
+
+## 19.3.48 (2021-11-02)
+
+### Dashboard Layout
+
+#### Bug Fixes
+
+- `#169467` - The issue with "Dashboard panel position changes on window resize" has been resolved
 
