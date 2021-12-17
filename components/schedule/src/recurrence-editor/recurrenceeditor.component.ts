@@ -6,7 +6,7 @@ import { RecurrenceEditor } from '@syncfusion/ej2-schedule';
 
 
 // {{VueImport}}
-export const properties: string[] = ['islazyUpdate', 'calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
+export const properties: string[] = ['isLazyUpdate', 'calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

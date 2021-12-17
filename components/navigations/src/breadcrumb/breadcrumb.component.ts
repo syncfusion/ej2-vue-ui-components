@@ -8,7 +8,7 @@ import { BreadcrumbItemsDirective, BreadcrumbItemDirective, BreadcrumbItemsPlugi
 
 
 // {{VueImport}}
-export const properties: string[] = ['islazyUpdate', 'activeItem', 'cssClass', 'enableActiveItemNavigation', 'enableNavigation', 'enablePersistence', 'enableRtl', 'itemTemplate', 'items', 'locale', 'maxItems', 'overflowMode', 'separatorTemplate', 'url', 'width', 'beforeItemRender', 'created', 'itemClick'];
+export const properties: string[] = ['isLazyUpdate', 'activeItem', 'cssClass', 'disabled', 'enableActiveItemNavigation', 'enableNavigation', 'enablePersistence', 'enableRtl', 'itemTemplate', 'items', 'locale', 'maxItems', 'overflowMode', 'separatorTemplate', 'url', 'beforeItemRender', 'created', 'itemClick'];
 export const modelProps: string[] = ['activeItem'];
 
 export const testProp: any = getProps({props: properties});
@@ -126,7 +126,7 @@ export class BreadcrumbComponent extends ComponentBase {
                     this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
                     this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
                 } else {
-                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.islazyUpdate)) {
+                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
                         (this as any).$emit('update:'+ propKey, eventProp[propKey]);
                         (this as any).$emit('modelchanged', eventProp[propKey]);
                     }

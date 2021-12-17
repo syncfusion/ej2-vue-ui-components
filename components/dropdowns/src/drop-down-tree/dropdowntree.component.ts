@@ -7,7 +7,7 @@ import { DropDownTree } from '@syncfusion/ej2-dropdowns';
 
 
 // {{VueImport}}
-export const properties: string[] = ['islazyUpdate', 'actionFailureTemplate', 'allowFiltering', 'allowMultiSelection', 'changeOnBlur', 'cssClass', 'customTemplate', 'delimiterChar', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'mode', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'readonly', 'selectAllText', 'showCheckBox', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'treeSettings', 'unSelectAllText', 'value', 'width', 'wrapText', 'zIndex', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'keyPress', 'open', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'actionFailureTemplate', 'allowFiltering', 'allowMultiSelection', 'changeOnBlur', 'cssClass', 'customTemplate', 'delimiterChar', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'mode', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'readonly', 'selectAllText', 'showCheckBox', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'treeSettings', 'unSelectAllText', 'value', 'width', 'wrapText', 'zIndex', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'keyPress', 'open', 'select'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -125,7 +125,7 @@ export class DropDownTreeComponent extends ComponentBase {
                     this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
                     this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
                 } else {
-                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.islazyUpdate)) {
+                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
                         (this as any).$emit('update:'+ propKey, eventProp[propKey]);
                         (this as any).$emit('modelchanged', eventProp[propKey]);
                     }

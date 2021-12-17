@@ -2,13 +2,25 @@
 
 ## [Unreleased]
 
-## 19.3.59 (2021-12-14)
+## 19.4.38 (2021-12-17)
 
-### NumericTextBox
+### Signature
 
-#### Bug Fixes
+The Signature control allows user to draw smooth signatures as vector outline of strokes using variable width Bézier curve interpolation. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this Signature control.
 
-- `#FB30370` - Issue with "typing decimal separator in the starting position is converted as 0 while binding the v-model property" has been resolved.
+
+- **Customization** - Support various customization options like background color, background image, stroke color, stroke width, save with background, undo, redo, clear, readonly, and disabled.
+- **Load** - Support to load the signature as base64.
+- **Draw** - Support to draw the text with the different font family and font size.
+- **Save** - Support to save the signature as image like PNG, JPEG, and SVG.
+
+The Signature component allows user to draw smooth signatures as vector outline of strokes using variable width Bézier curve interpolation. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this Signature component.
+
+
+- **Customization** - Support various customization options like background color, background image, stroke color, stroke width, save with background, undo, redo, clear, readonly, and disabled.
+- **Load** - Support to load the signature as base64.
+- **Draw** - Support to draw the text with the different font family and font size.
+- **Save** - Support to save the signature as image like PNG, JPEG, and SVG.
 
 ## 19.3.53 (2021-11-12)
 
@@ -1257,6 +1269,14 @@ MaskedTextBox allows the user to enter the valid input only based on the provide
 - **Regular Expression** - can be used as a mask element for each character of the MaskedTextBox.
 - **Accessibility** - provides built-in accessibility support which helps to access all the MaskedTextBox component features through keyboard, on-screen readers, or other assistive technology devices.
 
+
+## 19.3.57 (2021-12-07)
+
+### NumericTextBox
+
+#### Bug Fixes
+
+- `#FB30370` - Issue with "typing decimal separator in the starting position is converted as 0 while binding the v-model property" has been resolved.
 
 ## 19.1.67 (2021-06-08)
 

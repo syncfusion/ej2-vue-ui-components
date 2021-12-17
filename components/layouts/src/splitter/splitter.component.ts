@@ -7,7 +7,7 @@ import { PanesDirective, PaneDirective, PanesPlugin, PanePlugin } from './panese
 
 
 // {{VueImport}}
-export const properties: string[] = ['islazyUpdate', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableReversePanes', 'enableRtl', 'enabled', 'height', 'locale', 'orientation', 'paneSettings', 'separatorSize', 'width', 'beforeCollapse', 'beforeExpand', 'beforeSanitizeHtml', 'collapsed', 'created', 'expanded', 'resizeStart', 'resizeStop', 'resizing'];
+export const properties: string[] = ['isLazyUpdate', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableReversePanes', 'enableRtl', 'enabled', 'height', 'locale', 'orientation', 'paneSettings', 'separatorSize', 'width', 'beforeCollapse', 'beforeExpand', 'beforeSanitizeHtml', 'collapsed', 'created', 'expanded', 'resizeStart', 'resizeStop', 'resizing'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

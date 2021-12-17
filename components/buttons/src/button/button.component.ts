@@ -6,7 +6,7 @@ import { Button } from '@syncfusion/ej2-buttons';
 
 
 // {{VueImport}}
-export const properties: string[] = ['islazyUpdate', 'content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
+export const properties: string[] = ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

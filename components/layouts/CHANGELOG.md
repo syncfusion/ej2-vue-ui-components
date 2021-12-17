@@ -2,21 +2,13 @@
 
 ## [Unreleased]
 
-## 19.3.44 (2021-10-05)
+## 19.3.43 (2021-09-30)
 
 ### Splitter
 
 #### Bug Fixes
 
 - `#I341650` - The issue with "Resize event handler is not properly un-wired, when destroying the splitter component" has been resolved.
-
-## 19.2.55 (2021-08-11)
-
-### Dashboard Layout
-
-#### Bug Fixes
-
-- `#I306072` - The Floating issue in Dashboard Layout when the scroll bar is in the middle of the page has been resolved.
 
 ## 19.2.48 (2021-07-20)
 
@@ -514,12 +506,4 @@ The available key features are
 - **Action Buttons**: Supports to add buttons within the card either in vertical or horizontal alignment.
 - **Horizontal Card**: Allows to align card elements horizontally and also allows to stack the content vertically within horizontal alignment.
 
-
-## 19.3.48 (2021-11-02)
-
-### Dashboard Layout
-
-#### Bug Fixes
-
-- `#169467` - The issue with "Dashboard panel position changes on window resize" has been resolved
 
