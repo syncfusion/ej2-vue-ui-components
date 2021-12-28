@@ -57,7 +57,17 @@ export function compile(
           if (propsData) {
               tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
           } else {
-              tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data)
+              tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+              if(templateCompRef.components){
+                let objkeys: any = Object.keys(templateCompRef.components) || [];
+                for(let objstring of objkeys){
+                   let intComponent: any = templateCompRef.components[objstring]
+                    if(intComponent && intComponent.data){
+                       let tempRef2: any =  (Object as any).assign(intComponent.data(), dataObj.data);
+                       intComponent.data = function() {return tempRef2};
+                    }
+                }
+            }
           }
           templateCompRef.data = function () { return tempRef; };
           allVue

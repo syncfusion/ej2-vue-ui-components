@@ -2,21 +2,22 @@
 
 ## [Unreleased]
 
-## 19.2.57 (2021-08-24)
+## 19.4.38 (2021-12-17)
 
 ### Common
 
 #### Bug Fixes
 
--  `I236269`, `I333667`, `I336462`  Performance Improvements in `Template re-rendering`.
+-  `I348114` - Peer dependencies issue has been resolved.
+-  `I334904`, `I347008` - Compatability support for Vue components in Vite js has been resolved.
 
-## 19.2.48 (2021-07-20)
+## 19.3.47 (2021-10-26)
 
 ### Common
 
-#### New Features
+#### Bug Fixes
 
-- Provided `v-for` supprot for array base directives.
+-  `I345561` - Resolved the data loading issue in the external template.
 
 ## 17.4.47 (2020-02-05)
 
