@@ -41,7 +41,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class RangeNavigatorComponent extends ComponentBase {
@@ -65,6 +70,7 @@ export class RangeNavigatorComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -158,6 +164,9 @@ export class RangeNavigatorComponent extends ComponentBase {
         }
         return h('div', slots);
     }
+    public custom(): void {
+        this.updated();
+    }
     
     public createSecondaryElement(): void {
         return this.ej2Instances.createSecondaryElement();
@@ -171,8 +180,8 @@ export class RangeNavigatorComponent extends ComponentBase {
         return this.ej2Instances.print(id);
     }
 
-    public renderChart(): void {
-        return this.ej2Instances.renderChart();
+    public renderChart(resize: boolean): void {
+        return this.ej2Instances.renderChart(resize);
     }
 }
 

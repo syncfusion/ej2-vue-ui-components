@@ -26,7 +26,7 @@ for (let props of modelProps) {
 export const isExecute: any = gh ? false : true;
 
 /**
- * Represents the VueJS Accoridon Component.
+ * Represents the VueJS Accordion Component.
  * ```html
  * <ejs-accordion></ejs-accordion>
  * ```
@@ -41,7 +41,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class AccordionComponent extends ComponentBase {
@@ -65,6 +70,7 @@ export class AccordionComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -157,6 +163,9 @@ export class AccordionComponent extends ComponentBase {
             slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
+    }
+    public custom(): void {
+        this.updated();
     }
     
     public addItem(item: Object | Object[] | Object | Object[], index?: number): void {

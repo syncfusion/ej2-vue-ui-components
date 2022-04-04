@@ -2,6 +2,44 @@
 
 ## [Unreleased]
 
+### Common
+
+#### New Features
+
+-  `F140652`, `F138394`, `F148391`, `I309881`, `F167735`, `I228458` - Provided slot template support for the Vue components.
+
+## 19.4.53 (2022-02-22)
+
+### Common
+
+#### Bug Fixes
+
+-  `I364613` - Object property templates are not working in production mode issue has been resolved.
+
+## 19.4.52 (2022-02-15)
+
+### Common
+
+#### Bug Fixes
+
+-  `I362388` - Modules in provider section not works properly issue has been resolved.
+
+## 19.4.47 (2022-01-25)
+
+### Common
+
+#### Bug Fixes
+
+-  `F171693` - The issue with "Vue components are not rendered with node version 16" has been resolved.
+
+## 19.4.40 (2021-12-28)
+
+### Common
+
+#### Bug Fixes
+
+-  `I334904`, `I347008` - Compatability support for Vue components in Vite js has been resolved.
+
 ## 19.4.38 (2021-12-17)
 
 ### Common
@@ -9,7 +47,6 @@
 #### Bug Fixes
 
 -  `I348114` - Peer dependencies issue has been resolved.
--  `I334904`, `I347008` - Compatability support for Vue components in Vite js has been resolved.
 
 ## 19.3.47 (2021-10-26)
 

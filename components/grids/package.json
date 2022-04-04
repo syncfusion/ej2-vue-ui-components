@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-grids",
-	"version": "1.101.1",
+	"version": "1.109.0",
 	"description": "Feature-rich JavaScript datagrid (datatable) control with built-in support for editing, filtering, grouping, paging, sorting, and exporting to Excel. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -42,7 +42,7 @@
 		"@types/jasmine": "^2.2.29",
 		"@types/jasmine-ajax": "^3.1.27",
 		"@types/requirejs": "^2.1.26",
-		"vue": "2.5.2 - 3.0.5",
+		"vue": "2.6.14",
 		"vue-class-component": "^8.0.0-rc.1",
 		"vue-loader-v16": "^16.0.0-beta.5.4",
 		"rollup": "^0.51.3",

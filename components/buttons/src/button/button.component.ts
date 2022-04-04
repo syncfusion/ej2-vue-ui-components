@@ -6,7 +6,7 @@ import { Button } from '@syncfusion/ej2-buttons';
 
 
 // {{VueImport}}
-export const properties: string[] = ['content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
+export const properties: string[] = ['isLazyUpdate', 'content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -36,7 +36,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class ButtonComponent extends ComponentBase {
@@ -58,6 +63,7 @@ export class ButtonComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -115,6 +121,9 @@ export class ButtonComponent extends ComponentBase {
             slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('button', slots);
+    }
+    public custom(): void {
+        this.updated();
     }
     
     public click(): void {

@@ -2,24 +2,6 @@
 
 ## [Unreleased]
 
-## 19.4.56 (2022-03-15)
-
-### ListBase
-
-#### Bug Fixes
-
-- `#I344581` - The issue with "ListView item is displayed as an anchor element when URL is present in data source" has been resolved.
-
-## 19.3.45 (2021-10-12)
-
-### ListView
-
-#### Bug Fixes
-
-- `#F152660` - The issue with "ListView is not rendered while using both checkbox and template" has been resolved.
-
-## 19.3.44 (2021-10-05)
-
 ### ListView
 
 #### Bug Fixes

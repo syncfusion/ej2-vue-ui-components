@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 19.4.56 (2022-03-15)
-
-### Chips
-
-#### New Features
-
-- `#I308047` - Provided the `deleted` event support for the Chips component.
-
 ## 19.2.47 (2021-07-13)
 
 ### Checkbox

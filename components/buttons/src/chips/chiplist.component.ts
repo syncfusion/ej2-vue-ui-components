@@ -7,7 +7,7 @@ import { ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin } from './chips.
 
 
 // {{VueImport}}
-export const properties: string[] = ['avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'leadingIconUrl', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'trailingIconUrl', 'beforeClick', 'click', 'created', 'delete', 'deleted'];
+export const properties: string[] = ['isLazyUpdate', 'avatarIconCss', 'avatarText', 'chips', 'cssClass', 'enableDelete', 'enablePersistence', 'enableRtl', 'enabled', 'leadingIconCss', 'leadingIconUrl', 'locale', 'selectedChips', 'selection', 'text', 'trailingIconCss', 'trailingIconUrl', 'beforeClick', 'click', 'created', 'delete', 'deleted'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -37,7 +37,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class ChipListComponent extends ComponentBase {
@@ -59,6 +64,7 @@ export class ChipListComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -116,6 +122,9 @@ export class ChipListComponent extends ComponentBase {
             slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
+    }
+    public custom(): void {
+        this.updated();
     }
     
     public add(chipsData: string[] | number[] | Object[] | string | number | Object): void {

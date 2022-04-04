@@ -8,7 +8,7 @@ import { ButtonsDirective, DialogButtonDirective, ButtonsPlugin, DialogButtonPlu
 
 
 // {{VueImport}}
-export const properties: string[] = ['allowDragging', 'animationSettings', 'buttons', 'closeOnEscape', 'content', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'footerTemplate', 'header', 'height', 'isModal', 'locale', 'minHeight', 'position', 'resizeHandles', 'showCloseIcon', 'target', 'visible', 'width', 'zIndex', 'beforeClose', 'beforeOpen', 'beforeSanitizeHtml', 'close', 'created', 'destroyed', 'drag', 'dragStart', 'dragStop', 'open', 'overlayClick', 'resizeStart', 'resizeStop', 'resizing'];
+export const properties: string[] = ['isLazyUpdate', 'allowDragging', 'animationSettings', 'buttons', 'closeOnEscape', 'content', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'footerTemplate', 'header', 'height', 'isModal', 'locale', 'minHeight', 'position', 'resizeHandles', 'showCloseIcon', 'target', 'visible', 'width', 'zIndex', 'beforeClose', 'beforeOpen', 'beforeSanitizeHtml', 'close', 'created', 'destroyed', 'drag', 'dragStart', 'dragStop', 'open', 'overlayClick', 'resizeStart', 'resizeStop', 'resizing'];
 export const modelProps: string[] = ['visible'];
 
 export const testProp: any = getProps({props: properties});
@@ -41,7 +41,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class DialogComponent extends ComponentBase {
@@ -65,6 +70,7 @@ export class DialogComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -126,8 +132,10 @@ export class DialogComponent extends ComponentBase {
                     this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
                     this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
                 } else {
-                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                    (this as any).$emit('modelchanged', eventProp[propKey]);
+                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
                 }
             }
         } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
@@ -155,6 +163,9 @@ export class DialogComponent extends ComponentBase {
             slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
+    }
+    public custom(): void {
+        this.updated();
     }
     
     public getButtons(index?: number): Object[] | Object {

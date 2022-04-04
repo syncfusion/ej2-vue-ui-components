@@ -15,7 +15,7 @@ import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, Define
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['isLazyUpdate', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -45,7 +45,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class SpreadsheetComponent extends ComponentBase {
@@ -67,6 +72,7 @@ export class SpreadsheetComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -125,6 +131,9 @@ export class SpreadsheetComponent extends ComponentBase {
         }
         return h('div', slots);
     }
+    public custom(): void {
+        this.updated();
+    }
     
     public Unfreeze(sheet?: number | string): void {
         return this.ej2Instances.Unfreeze(sheet);
@@ -150,8 +159,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.addFileMenuItems(items, text, insertAfter, isUniqueId);
     }
 
-    public addHyperlink(hyperlink: string | Object, address: string): void {
-        return this.ej2Instances.addHyperlink(hyperlink, address);
+    public addHyperlink(hyperlink: string | Object, address: string, displayText?: string): void {
+        return this.ej2Instances.addHyperlink(hyperlink, address, displayText);
     }
 
     public addInvalidHighlight(range?: string): void {
@@ -326,6 +335,10 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.insertSheet(startSheet, endSheet);
     }
 
+    public isValidCell(cellAddress?: string): boolean {
+        return this.ej2Instances.isValidCell(cellAddress);
+    }
+
     public lockCells(range?: string, isLocked?: boolean): void {
         return this.ej2Instances.lockCells(range, isLocked);
     }
@@ -432,6 +445,10 @@ export class SpreadsheetComponent extends ComponentBase {
 
     public undo(): void {
         return this.ej2Instances.undo();
+    }
+
+    public unfreezePanes(sheet?: number | string): void {
+        return this.ej2Instances.unfreezePanes(sheet);
     }
 
     public unprotectSheet(sheet?: number | string): void {

@@ -6,7 +6,7 @@ import { Tooltip } from '@syncfusion/ej2-popups';
 
 
 // {{VueImport}}
-export const properties: string[] = ['animation', 'closeDelay', 'container', 'content', 'cssClass', 'enableHtmlParse', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'isSticky', 'locale', 'mouseTrail', 'offsetX', 'offsetY', 'openDelay', 'opensOn', 'position', 'showTipPointer', 'target', 'tipPointerPosition', 'width', 'windowCollision', 'afterClose', 'afterOpen', 'beforeClose', 'beforeCollision', 'beforeOpen', 'beforeRender', 'created', 'destroyed'];
+export const properties: string[] = ['isLazyUpdate', 'animation', 'closeDelay', 'container', 'content', 'cssClass', 'enableHtmlParse', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'isSticky', 'locale', 'mouseTrail', 'offsetX', 'offsetY', 'openDelay', 'opensOn', 'position', 'showTipPointer', 'target', 'tipPointerPosition', 'width', 'windowCollision', 'afterClose', 'afterOpen', 'beforeClose', 'beforeCollision', 'beforeOpen', 'beforeRender', 'created', 'destroyed'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -36,7 +36,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class TooltipComponent extends ComponentBase {
@@ -58,6 +63,7 @@ export class TooltipComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -115,6 +121,9 @@ export class TooltipComponent extends ComponentBase {
             slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
+    }
+    public custom(): void {
+        this.updated();
     }
     
     public close(animation?: Object): void {

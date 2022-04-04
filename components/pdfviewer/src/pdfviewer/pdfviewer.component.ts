@@ -36,7 +36,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class PdfViewerComponent extends ComponentBase {
@@ -58,6 +63,7 @@ export class PdfViewerComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -116,6 +122,9 @@ export class PdfViewerComponent extends ComponentBase {
         }
         return h('div', slots);
     }
+    public custom(): void {
+        this.updated();
+    }
     
     public addAnnotation(annotation: any): void {
         return this.ej2Instances.addAnnotation(annotation);
@@ -137,6 +146,10 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.exportAnnotation(annotationDataFormat);
     }
 
+    public exportAnnotationsAsBase64String(annotationDataFormat: Object): Object {
+        return this.ej2Instances.exportAnnotationsAsBase64String(annotationDataFormat);
+    }
+
     public exportAnnotationsAsObject(): Object {
         return this.ej2Instances.exportAnnotationsAsObject();
     }
@@ -147,6 +160,10 @@ export class PdfViewerComponent extends ComponentBase {
 
     public exportFormFieldsAsObject(): Object {
         return this.ej2Instances.exportFormFieldsAsObject();
+    }
+
+    public focusFormField(field: any): void {
+        return this.ej2Instances.focusFormField(field);
     }
 
     public importAnnotation(importData: any, annotationDataFormat?: Object): void {

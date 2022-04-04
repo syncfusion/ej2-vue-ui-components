@@ -40,7 +40,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class RichTextEditorComponent extends ComponentBase {
@@ -64,6 +69,7 @@ export class RichTextEditorComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -157,7 +163,14 @@ export class RichTextEditorComponent extends ComponentBase {
         }
         return h('textarea', slots);
     }
+    public custom(): void {
+        this.updated();
+    }
     
+    public cleanList(e: Object): void {
+        return this.ej2Instances.cleanList(e);
+    }
+
     public closeDialog(type: Object): void {
         return this.ej2Instances.closeDialog(type);
     }

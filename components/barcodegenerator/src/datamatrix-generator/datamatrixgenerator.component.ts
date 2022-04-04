@@ -6,7 +6,7 @@ import { DataMatrixGenerator } from '@syncfusion/ej2-barcode-generator';
 
 
 // {{VueImport}}
-export const properties: string[] = ['islazyUpdate', 'backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'encoding', 'foreColor', 'height', 'locale', 'margin', 'mode', 'size', 'value', 'width', 'xDimension', 'invalid'];
+export const properties: string[] = ['isLazyUpdate', 'backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'encoding', 'foreColor', 'height', 'locale', 'margin', 'mode', 'size', 'value', 'width', 'xDimension', 'invalid'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

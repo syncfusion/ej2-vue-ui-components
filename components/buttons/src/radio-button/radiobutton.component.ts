@@ -7,7 +7,7 @@ import { RadioButton } from '@syncfusion/ej2-buttons';
 
 
 // {{VueImport}}
-export const properties: string[] = ['checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
+export const properties: string[] = ['isLazyUpdate', 'checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -40,7 +40,12 @@ export const isExecute: any = gh ? false : true;
 /* Start Options({
     props: props,
     watch: watch,
-    emits: emitProbs
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
 }) End */
 
 export class RadioButtonComponent extends ComponentBase {
@@ -64,6 +69,7 @@ export class RadioButtonComponent extends ComponentBase {
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
+        this.updated = this.updated;
     }
 
  public clearTemplate(templateNames?: string[]): any {
@@ -125,8 +131,10 @@ export class RadioButtonComponent extends ComponentBase {
                     this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
                     this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
                 } else {
-                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                    (this as any).$emit('modelchanged', eventProp[propKey]);
+                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
                 }
             }
         } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
@@ -154,6 +162,9 @@ export class RadioButtonComponent extends ComponentBase {
             slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('input', slots);
+    }
+    public custom(): void {
+        this.updated();
     }
     
     public click(): void {

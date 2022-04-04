@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-base",
-	"version": "19.4.38",
+	"version": "19.3.53",
 	"description": "A common package of Essential JS 2 base Vue libraries, methods and class definitions",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -23,9 +23,6 @@
 	"main": "./dist/ej2-vue-base.umd.min.js",
 	"module": "./index.js",
 	"readme": "ReadMe.md",
-	"peerDependencies": {
-		"vue-class-component": "^8.0.0-rc.1"
-	},
 	"dependencies": {
 		"@syncfusion/ej2-base": "*",
 		"glob": "^7.0.5"
