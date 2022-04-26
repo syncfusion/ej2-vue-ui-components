@@ -458,8 +458,16 @@ export class TreeGridComponent extends ComponentBase {
         return this.ej2Instances.hideSpinner();
     }
 
+    public indent(record?: Object): void {
+        return this.ej2Instances.indent(record);
+    }
+
     public openColumnChooser(x?: number, y?: number): void {
         return this.ej2Instances.openColumnChooser(x, y);
+    }
+
+    public outdent(record?: Object): void {
+        return this.ej2Instances.outdent(record);
     }
 
     public paste(data: string, rowIndex: number, colIndex: number): void {

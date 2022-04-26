@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.1.51 (2022-04-26)
+
+### Common
+
+#### Bug Fixes
+
+- `#I334904`, `#I347008` - The issue with "Script error in Vite + Vue application" has been resolved.
+
 ## 20.1.48 (2022-04-12)
 
 ### Common
