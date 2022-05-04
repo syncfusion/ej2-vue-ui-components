@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 20.1.51 (2022-04-26)
+## 20.1.52 (2022-05-04)
+
+### Switch
+
+#### Bug Fixes
+
+- `#I362372` - The issue with "Script error occurs while using the reactive method in the switch component in Vue 3" has been resolved.
+
+## 20.1.50 (2022-04-19)
 
 ### Radio Button
 

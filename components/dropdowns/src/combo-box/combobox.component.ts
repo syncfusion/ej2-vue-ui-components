@@ -130,6 +130,7 @@ export class ComboBoxComponent extends ComponentBase {
                 if (!isExecute) {
                     this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
                     this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                    this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
                 } else {
                     if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
                         (this as any).$emit('update:'+ propKey, eventProp[propKey]);

@@ -46,6 +46,7 @@
       protected hasChildDirective: boolean = false;
       protected childDirObjects: string = '';
       protected propKeys: any;
+      protected isDecorator: boolean = false;
   
      constructor() {
          super(arguments);
@@ -64,7 +65,10 @@
           let vueInjectables: any = getValue('$parent.$options.provide', this);
           if (this.hasInjectedModules && !isExecute) {
              let prevModule: Object[] = [];
-             if (injectables) {
+             if (injectables && injectables.managed) {
+                this.isDecorator = true;
+                prevModule = this.getInjectedServices() || [];   
+             } else if (injectables) {
                  prevModule = injectables[this.ej2Instances.getModuleName()] || [];
              } else if (vueInjectables) {
                  prevModule = this.getInjectedServices() || [];
@@ -97,7 +101,9 @@
       }
       public getInjectedServices(): Object[] {
          let ret = []; let provide: any;
-         if (this.$vnode) {
+         if (this.$root && this.isDecorator) {
+            provide = getValue('$root.$options.provide', this);
+         } else if (this.$vnode) {
              provide = getValue('$vnode.context.$options.provide', this);
          } else if (this.$parent) {
              provide = getValue('$parent.$options.provide', this);
@@ -106,8 +112,34 @@
              // tslint:disable:no-any
              let injectables: any = provide;
              if (typeof provide === 'function') {
+                if (provide.managed) {
+                    let provideKey: Object = provide.managed;
+                    let provideValue: string[] = Object.keys(provideKey);
+                    let key: string[];
+                    if (this.$root && this.isDecorator) {
+                        key = Object.keys(this.$root);
+                    } else if (this.$vnode) {
+                        key = Object.keys(this.$vnode.context);
+                    } else if (this.$parent) {
+                        key = Object.keys(this.$parent);
+                    }
+                    for (let i: number = 0; i < provideValue.length; i++) {
+                        for (let j: number = 0; j < key.length; j++) {
+                            if ((key[j].indexOf(provideValue[i])) !== -1) {
+                                if (this.$root && this.isDecorator) {
+                                    provideKey[provideValue[j]] = this.$root[key[i]];
+                                } else if (this.$vnode) {
+                                    provideKey[provideValue[i]] = this.$vnode.context[key[j]];
+                                } else if (this.$parent) {
+                                    provideKey[provideValue[i]] = this.$parent[key[j]];
+                                }
+                                injectables = provideKey;
+                            }
+                        }
+                    }  
+                }
                  // tslint:disable:no-any
-                 if (this.$vnode) {
+                 else if (this.$vnode) {
                      injectables = this.$vnode.context.$options.provide();
                  } else if(this.$parent) {
                      injectables = this.$parent.$options.provide();
@@ -115,6 +147,7 @@
              }
              ret = injectables[this.ej2Instances.getModuleName()] || [];
          }
+         this.isDecorator = false;
          return ret; 
       }
       public updated(): void {
