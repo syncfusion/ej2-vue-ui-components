@@ -2,21 +2,7 @@
 
 ## [Unreleased]
 
-## 20.1.52 (2022-05-04)
-
-### Switch
-
-#### Bug Fixes
-
-- `#I362372` - The issue with "Script error occurs while using the reactive method in the switch component in Vue 3" has been resolved.
-
 ## 20.1.50 (2022-04-19)
-
-### Radio Button
-
-#### Bug Fixes
-
-- `F171644` - Issue with Name attribute not updated properly in radio button and checkbox for components has been resolved.
 
 ### Checkbox
 
@@ -432,6 +418,14 @@ RadioButton is a graphical user interface element that allows to select one opti
 - **Label** - Supports label and its positioning.
 - **Sizes** - Provided with different sizes of RadioButton.
 
+
+## 20.1.52 (2022-05-04)
+
+### Switch
+
+#### Bug Fixes
+
+- `#I362372` - The issue with "Script error occurs while using the reactive method in the switch component in Vue 3" has been resolved.
 
 ## 18.4.39 (2021-01-28)
 

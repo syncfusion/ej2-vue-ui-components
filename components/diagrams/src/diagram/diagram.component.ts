@@ -455,8 +455,8 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.scale(obj, sx, sy, pivot);
     }
 
-    public select(objects: undefined[], multipleSelection?: boolean): void {
-        return this.ej2Instances.select(objects, multipleSelection);
+    public select(objects: undefined[], multipleSelection?: boolean, oldValue?: undefined[]): void {
+        return this.ej2Instances.select(objects, multipleSelection, oldValue);
     }
 
     public selectAll(): void {
