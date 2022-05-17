@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.1.56 (2022-05-17)
+
+### Common
+
+#### Bug Fixes
+
+- `#SF-377536` - The issue with "Facing an Warning error while running in development mode in Vue 3" has been resolved.
+
 ## 20.1.51 (2022-04-26)
 
 ### Common
