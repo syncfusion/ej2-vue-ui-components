@@ -42,7 +42,7 @@ export function compile(
                   return vue3Slots[templateElement]({ data: data });
                 }
             })
-            .mount("#" + id);
+            .mount((context.getModuleName() === 'grid') ? ("#" + pid ) : ("#" + id));
           returnEle = ele.childNodes;
           detach(ele);
         } else {
@@ -91,7 +91,7 @@ export function compile(
         templateCompRef.data = function () { return tempRef; };
         allVue
           .createApp(templateCompRef)
-          .mount("#" + id);
+          .mount((context.getModuleName() === 'grid') ? ("#" + pid ) : ("#" + id));
         returnEle = ele.childNodes;
         detach(ele);
       } else if (typeof templateElement === "string") {

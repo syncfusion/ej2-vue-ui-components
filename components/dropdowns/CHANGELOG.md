@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 20.1.57 (2022-05-24)
+
+### Dropdown Tree
+
+#### Bug Fixes
+
+- `#I374653` - The issue with "The filtering was not working properly when using a hierarchical data source for the Dropdown Tree component" has been resolved.
+
+### DropDownList
+
+#### Bug Fixes
+
+- `I375107` - Issue with "cascading dropdown list doesn't display the updated data while binding the remote data and filtering enabled" has been resolved.
+
 ## 20.1.56 (2022-05-17)
 
 ### ListBox
@@ -15,12 +29,6 @@
 #### Bug Fixes
 
 - `I372269` - Issue with "value is displayed instead of text while binding beyond the initial loading data values" has been resolved.
-
-### DropDownList
-
-#### Bug Fixes
-
-- `I375107` - Issue with "cascading dropdown list doesn't display the updated data while binding the remote data and filtering enabled" has been resolved.
 
 ## 20.1.52 (2022-05-04)
 

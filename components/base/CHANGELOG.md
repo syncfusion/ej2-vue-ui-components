@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.1.57 (2022-05-24)
+
+### Common
+
+#### Bug Fixes
+
+- `#I362337` - The issue with the "Row template in the Grid does not work properly in vue 3" has been resolved.
+
 ## 20.1.56 (2022-05-17)
 
 ### Common
