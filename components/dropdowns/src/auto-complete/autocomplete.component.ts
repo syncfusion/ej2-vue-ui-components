@@ -196,8 +196,8 @@ export class AutoCompleteComponent extends ComponentBase {
         return this.ej2Instances.getItems();
     }
 
-    public hidePopup(): void {
-        return this.ej2Instances.hidePopup();
+    public hidePopup(e?: Object): void {
+        return this.ej2Instances.hidePopup(e);
     }
 
     public hideSpinner(): void {

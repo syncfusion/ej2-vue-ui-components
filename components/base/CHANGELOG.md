@@ -18,7 +18,7 @@
 
 - `#SF-377536` - The issue with "Facing an Warning error while running in development mode in Vue 3" has been resolved.
 
-## 20.1.51 (2022-04-26)
+## 20.1.52 (2022-05-04)
 
 ### Common
 
