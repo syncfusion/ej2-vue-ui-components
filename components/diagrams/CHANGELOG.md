@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 20.1.58 (2022-05-31)
+## 20.1.59 (2022-06-07)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I378190` - Now, distribute commands will work properly.
+
+## 20.1.57 (2022-05-24)
 
 ### Diagram
 
