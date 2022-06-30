@@ -2,7 +2,19 @@
 
 ## [Unreleased]
 
-## 20.1.60 (2022-06-14)
+## 20.2.36 (2022-06-30)
+
+### Chart
+
+#### New Features
+
+- `#I362746` - Provided keyboard navigation support for interactive elements on the chart.
+- `#I353728` - Provided highlight and select support for the range and point color mapping.
+
+- `#I362746` - Provided keyboard navigation support for interactive elements on the chart.
+- `#I353728` - Provided highlight and selection support for the range and point color mapping.
+
+## 20.1.59 (2022-06-07)
 
 ### Chart
 

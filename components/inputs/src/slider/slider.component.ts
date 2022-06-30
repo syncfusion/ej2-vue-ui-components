@@ -7,7 +7,7 @@ import { Slider } from '@syncfusion/ej2-inputs';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'colorRange', 'cssClass', 'customValues', 'enableAnimation', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enabled', 'limits', 'locale', 'max', 'min', 'orientation', 'readonly', 'showButtons', 'step', 'ticks', 'tooltip', 'type', 'value', 'width', 'change', 'changed', 'created', 'renderedTicks', 'renderingTicks', 'tooltipChange'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'colorRange', 'cssClass', 'customValues', 'enableAnimation', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enabled', 'limits', 'locale', 'max', 'min', 'orientation', 'readonly', 'showButtons', 'step', 'ticks', 'tooltip', 'type', 'value', 'width', 'change', 'changed', 'created', 'renderedTicks', 'renderingTicks', 'tooltipChange'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});

@@ -2,6 +2,29 @@
 
 ## [Unreleased]
 
+## 20.2.36 (2022-06-30)
+
+### Common
+
+#### New Features
+
+- Provided the TypeScript 4.7 compatible support for the Vue components.
+
+- Provided option to register the license key by using the `npx` command. Follow these steps to register the license using the `npx` command:
+- - Install the Syncfusion packages from npm.
+- - Add the license key either in the environment variable `SYNCFUSION_LICENSE` or in the `syncfusion-license.txt` text file.
+- - Run the command `npx syncfusion-license activate` to register the license automatically.
+
+- `#I376821` - Provided support to compile the Sass files using [Dart Sass](https://sass-lang.com/dart-sass) instead of [node-sass](https://github.com/sass/node-sass). This change has been made since `node-sass` has been deprecated.
+
+## 20.1.61 (2022-06-21)
+
+### Common
+
+#### Bug Fixes
+
+- `#I343901`, `#I362728` - "The routing and i18n are not working within the Vue 3 template components" issue has been resolved.
+
 ## 20.1.57 (2022-05-24)
 
 ### Common
@@ -16,7 +39,7 @@
 
 #### Bug Fixes
 
-- `#SF-377536` - The issue with "Facing an Warning error while running in development mode in Vue 3" has been resolved.
+- `#I377536` - The issue with "Facing an Warning error while running in development mode in Vue 3" has been resolved.
 
 ## 20.1.52 (2022-05-04)
 
@@ -46,7 +69,7 @@
 
 #### New Features
 
--  `F140652`, `F138394`, `F148391`, `I309881`, `F167735`, `I228458` - Provided slot template support for the Vue components.
+-  `#F140652`, `#F138394`, `#F148391`, `#I309881`, `#F167735`, `#I228458` - Provided slot template support for the Vue components.
 
 ## 19.4.53 (2022-02-22)
 
@@ -54,7 +77,7 @@
 
 #### Bug Fixes
 
--  `I364613` - Object property templates are not working in production mode issue has been resolved.
+-  `#I364613` - Object property templates are not working in production mode issue has been resolved.
 
 ## 19.4.52 (2022-02-15)
 
@@ -62,7 +85,7 @@
 
 #### Bug Fixes
 
--  `I362388` - Modules in provider section not works properly issue has been resolved.
+-  `#I362388` - Modules in provider section not works properly issue has been resolved.
 
 ## 19.4.47 (2022-01-25)
 
@@ -70,7 +93,7 @@
 
 #### Bug Fixes
 
--  `F171693` - The issue with "Vue components are not rendered with node version 16" has been resolved.
+-  `#F171693` - The issue with "Vue components are not rendered with node version 16" has been resolved.
 
 ## 19.4.40 (2021-12-28)
 
@@ -78,7 +101,7 @@
 
 #### Bug Fixes
 
--  `I334904`, `I347008` - Compatability support for Vue components in Vite js has been resolved.
+-  `#I334904`, `#I347008` - Compatability support for Vue components in Vite js has been resolved.
 
 ## 19.4.38 (2021-12-17)
 
@@ -86,7 +109,7 @@
 
 #### Bug Fixes
 
--  `I348114` - Peer dependencies issue has been resolved.
+-  `#I348114` - Peer dependencies issue has been resolved.
 
 ## 19.3.47 (2021-10-26)
 
@@ -94,7 +117,7 @@
 
 #### Bug Fixes
 
--  `I345561` - Resolved the data loading issue in the external template.
+-  `#I345561` - Resolved the data loading issue in the external template.
 
 ## 17.4.47 (2020-02-05)
 
@@ -102,7 +125,7 @@
 
 #### Bug Fixes
 
--  `I260681`, `#I261593` - Resolved the peer dependency warning issues.
+-  `#I260681`, `#I261593` - Resolved the peer dependency warning issues.
 
 ## 17.4.41 (2020-01-07)
 

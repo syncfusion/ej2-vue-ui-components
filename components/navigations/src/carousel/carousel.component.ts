@@ -8,7 +8,7 @@ import { CarouselItemsDirective, CarouselItemDirective, CarouselItemsPlugin, Car
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'animation', 'autoPlay', 'buttonsVisibility', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTouchSwipe', 'height', 'htmlAttributes', 'indicatorsTemplate', 'interval', 'itemTemplate', 'items', 'locale', 'loop', 'nextButtonTemplate', 'playButtonTemplate', 'previousButtonTemplate', 'selectedIndex', 'showIndicators', 'showPlayButton', 'width', 'slideChanged', 'slideChanging'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationEffect', 'autoPlay', 'buttonsVisibility', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTouchSwipe', 'height', 'htmlAttributes', 'indicatorsTemplate', 'interval', 'itemTemplate', 'items', 'locale', 'loop', 'nextButtonTemplate', 'pauseOnHover', 'playButtonTemplate', 'previousButtonTemplate', 'selectedIndex', 'showIndicators', 'showPlayButton', 'width', 'slideChanged', 'slideChanging'];
 export const modelProps: string[] = ['selectedIndex'];
 
 export const testProp: any = getProps({props: properties});

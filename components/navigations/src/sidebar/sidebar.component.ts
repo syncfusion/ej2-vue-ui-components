@@ -7,7 +7,7 @@ import { Sidebar } from '@syncfusion/ej2-navigations';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'animate', 'closeOnDocumentClick', 'dockSize', 'enableDock', 'enableGestures', 'enablePersistence', 'enableRtl', 'height', 'isOpen', 'locale', 'mediaQuery', 'position', 'showBackdrop', 'target', 'type', 'width', 'zIndex', 'change', 'close', 'created', 'destroyed', 'open'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animate', 'closeOnDocumentClick', 'dockSize', 'enableDock', 'enableGestures', 'enablePersistence', 'enableRtl', 'height', 'isOpen', 'locale', 'mediaQuery', 'position', 'showBackdrop', 'target', 'type', 'width', 'zIndex', 'change', 'close', 'created', 'destroyed', 'open'];
 export const modelProps: string[] = ['isOpen'];
 
 export const testProp: any = getProps({props: properties});

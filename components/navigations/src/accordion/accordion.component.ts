@@ -8,7 +8,7 @@ import { AccordionItemsDirective, AccordionItemDirective, AccordionItemsPlugin, 
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'animation', 'dataSource', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandMode', 'expandedIndices', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animation', 'dataSource', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandMode', 'expandedIndices', 'headerTemplate', 'height', 'itemTemplate', 'items', 'locale', 'width', 'clicked', 'created', 'destroyed', 'expanded', 'expanding'];
 export const modelProps: string[] = ['expandedIndices'];
 
 export const testProp: any = getProps({props: properties});

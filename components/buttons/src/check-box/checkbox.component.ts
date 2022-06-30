@@ -7,7 +7,7 @@ import { CheckBox } from '@syncfusion/ej2-buttons';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
 export const modelProps: string[] = ['checked', 'indeterminate'];
 
 export const testProp: any = getProps({props: properties});

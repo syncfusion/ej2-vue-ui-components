@@ -7,7 +7,7 @@ import { Switch } from '@syncfusion/ej2-buttons';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'locale', 'name', 'offLabel', 'onLabel', 'value', 'change', 'created'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'locale', 'name', 'offLabel', 'onLabel', 'value', 'change', 'created'];
 export const modelProps: string[] = ['checked'];
 
 export const testProp: any = getProps({props: properties});

@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 20.1.50 (2022-04-19)
+## 20.2.36 (2022-06-30)
 
 ### Checkbox
 
 #### Bug Fixes
 
-- `F173431` - Issue with Checkbox validation state is incorrect issue has been resolved.
+- `F379986` - The issue with "Screen reader reads checkbox field twice for tab keypress" has been resolved.
 
 ## 19.2.47 (2021-07-13)
 
@@ -418,14 +418,6 @@ RadioButton is a graphical user interface element that allows to select one opti
 - **Label** - Supports label and its positioning.
 - **Sizes** - Provided with different sizes of RadioButton.
 
-
-## 20.1.52 (2022-05-04)
-
-### Switch
-
-#### Bug Fixes
-
-- `#I362372` - The issue with "Script error occurs while using the reactive method in the switch component in Vue 3" has been resolved.
 
 ## 18.4.39 (2021-01-28)
 

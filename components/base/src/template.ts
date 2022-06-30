@@ -25,6 +25,7 @@ export function compile(
   return (data: any, context: any, propName: any, element: any, root: any): any => {
     let returnEle: any;
     if (context) {
+      let plugins: any = context.vueInstance ? context.vueInstance.plugins : null;
       let pid: string = getUniqueID("templateParentDiv");
       let id: string = getUniqueID("templateDiv");
       let ele: HTMLElement = createElement("div", {
@@ -33,16 +34,20 @@ export function compile(
       });
       document.body.appendChild(ele);
       if (gh && typeof templateElement === "string") {
-        let vue3Slots: any = getVue3Slot(context.vueInstance, templateElement, root);
-        if (vue3Slots) {
+        let vueSlot: any = getCurrentVueSlot(context.vueInstance, templateElement, root);
+        if (vueSlot) {
           // Compilation for Vue 3 slot template
-          allVue
-            .createApp({
-                render () {
-                  return vue3Slots[templateElement]({ data: data });
-                }
-            })
-            .mount((context.getModuleName() === 'grid') ? ("#" + pid ) : ("#" + id));
+          let app: any = allVue.createApp({
+            render () {
+              return vueSlot[templateElement]({ data: data });
+            }
+          });
+          if (plugins) {
+            for (let i: number = 0; i < plugins.length; i++) {
+              app.use(plugins[i]);
+            }
+          }
+          app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
           returnEle = ele.childNodes;
           detach(ele);
         } else {
@@ -89,18 +94,22 @@ export function compile(
           }
         }
         templateCompRef.data = function () { return tempRef; };
-        allVue
-          .createApp(templateCompRef)
-          .mount((context.getModuleName() === 'grid') ? ("#" + pid ) : ("#" + id));
+        let app: any = allVue.createApp(templateCompRef);
+        if (plugins) {
+          for (let i: number = 0; i < plugins.length; i++) {
+            app.use(plugins[i]);
+          }
+        }
+        app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
         returnEle = ele.childNodes;
         detach(ele);
       } else if (typeof templateElement === "string") {
-        let vue2Slots: any = getVue2Slot(context.vueInstance, templateElement, root);
-        if (vue2Slots) {
+        let vueSlot: any = getVueSlot(context.vueInstance, templateElement, root);
+        if (vueSlot) {
           // Compilation for Vue 2 slot template
           let vueTemplate: any = new Vue({
             render () {
-              return vue2Slots[templateElement]({ data: data });
+              return vueSlot[templateElement]({ data: data });
             }
           });
           vueTemplate.$mount("#" + id);
@@ -155,15 +164,15 @@ export function compile(
 setTemplateEngine({ compile: compile as any });
 
 // Get the Vue2 slot template from the root or current Vue component.
-function getVue2Slot(vueInstance: any, templateElement: any, root: any): any {
+function getVueSlot(vueInstance: any, templateElement: any, root: any): any {
   if (!vueInstance && !(root && root.vueInstance)) {
     return undefined;
   }
   let instance: any = (root && root.vueInstance) ? root.vueInstance : vueInstance;
-  return getVue2ChildSlot(instance, templateElement);
+  return getVueChildSlot(instance, templateElement);
 }
 
-function getVue2ChildSlot(vueInstance: any, templateElement: any) {
+function getVueChildSlot(vueInstance: any, templateElement: any) {
   if (!vueInstance) {
     return undefined;
   }
@@ -176,7 +185,7 @@ function getVue2ChildSlot(vueInstance: any, templateElement: any) {
   } else if (slots && slots.default) {
     let childSlots: any = slots.default;
     for (let i: number = 0; i < childSlots.length; i++) {
-      let slot: any = getVue2ChildSlot(getSlot(childSlots[i]), templateElement);
+      let slot: any = getVueChildSlot(getSlot(childSlots[i]), templateElement);
       if (slot) {
         return slot;
       }
@@ -185,7 +194,7 @@ function getVue2ChildSlot(vueInstance: any, templateElement: any) {
     return vSlots;
   } else if (children) {
     for (let i: number = 0; i < children.length; i++) {
-      let slot: any = getVue2ChildSlot(getSlot(children[i]), templateElement);
+      let slot: any = getVueChildSlot(getSlot(children[i]), templateElement);
       if (slot) {
         return slot;
       }
@@ -200,21 +209,21 @@ function getSlot(vnode: any) {
 }
 
 // Get the Vue3 slot template from the root or current Vue component.
-function getVue3Slot(vueInstance: any, templateElement: any, root: any): any {
+function getCurrentVueSlot(vueInstance: any, templateElement: any, root: any): any {
   if (!vueInstance && !(root && root.vueInstance)) {
     return undefined;
   }
   let slots: any = (root && root.vueInstance) ? root.vueInstance.$slots : vueInstance.$slots;
-  return getVue3ChildSlot(slots, templateElement);
+  return getChildVueSlot(slots, templateElement);
 }
 
-function getVue3ChildSlot(slots: any, templateElement: any): any {
+function getChildVueSlot(slots: any, templateElement: any): any {
   if (slots && slots[templateElement]) {
     return slots;
   } else if (slots && slots.default) {
     let childSlots: any = slots.default();
     for (let i: number = 0; i < childSlots.length; i++) {
-      let slot: any = getVue3ChildSlot(childSlots[i].children, templateElement);
+      let slot: any = getChildVueSlot(childSlots[i].children, templateElement);
       if (slot) {
         return slot;
       }

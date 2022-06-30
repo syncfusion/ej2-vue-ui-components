@@ -8,7 +8,7 @@ import { BreadcrumbItemsDirective, BreadcrumbItemDirective, BreadcrumbItemsPlugi
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'activeItem', 'cssClass', 'disabled', 'enableActiveItemNavigation', 'enableNavigation', 'enablePersistence', 'enableRtl', 'itemTemplate', 'items', 'locale', 'maxItems', 'overflowMode', 'separatorTemplate', 'url', 'beforeItemRender', 'created', 'itemClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeItem', 'cssClass', 'disabled', 'enableActiveItemNavigation', 'enableNavigation', 'enablePersistence', 'enableRtl', 'itemTemplate', 'items', 'locale', 'maxItems', 'overflowMode', 'separatorTemplate', 'url', 'beforeItemRender', 'created', 'itemClick'];
 export const modelProps: string[] = ['activeItem'];
 
 export const testProp: any = getProps({props: properties});
