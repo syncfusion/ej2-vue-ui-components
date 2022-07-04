@@ -34,11 +34,11 @@
  ## Support
  Product support is available for through following mediums.
  * Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=ej2-vue-ui-components) support system or [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_campaign=ej2-vue-ui-components).
-* New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/issues/new).
+* New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/new).
 * Ask your query in [Stack Overflow](https://stackoverflow.com/) with tag `syncfusion` and `ej2`.
  ## License
  Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license).
  ## Changelog
- Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-     © Copyright 2020 Syncfusion, Inc. All Rights Reserved.
+ Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes/index/?utm_source=npm&utm_campaign=ej2-vue-ui-components)
+     © Copyright 2022 Syncfusion, Inc. All Rights Reserved.
     The Syncfusion Essential Studio license and copyright applies to this distribution.
