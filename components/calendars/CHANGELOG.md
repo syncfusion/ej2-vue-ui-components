@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 20.2.36 (2022-06-30)
-
-### DateRangePicker
-
-#### Bug Fixes
-
-- `#F171486` - Issue with "performance delay in the popup open while entering invalid start or end date value" has been resolved.
-
 ## 19.3.46 (2021-10-19)
 
 ### TimePicker
@@ -1233,6 +1225,14 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.
 
+
+## 20.2.36 (2022-06-30)
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- `#F171486` - Issue with "performance delay in the popup open while entering invalid start or end date value" has been resolved.
 
 ## 19.1.56 (2021-04-13)
 

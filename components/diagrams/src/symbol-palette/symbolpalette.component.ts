@@ -135,6 +135,10 @@ export class SymbolPaletteComponent extends ComponentBase {
         return this.ej2Instances.addPalettes(palettes);
     }
 
+    public defaultLocale(): Object {
+        return this.ej2Instances.defaultLocale();
+    }
+
     public removePaletteItem(paletteName: string, symbolId: string): void {
         return this.ej2Instances.removePaletteItem(paletteName, symbolId);
     }

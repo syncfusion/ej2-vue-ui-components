@@ -2,6 +2,47 @@
 
 ## [Unreleased]
 
+## 20.2.38 (2022-07-12)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#SF-383108` - Now,the custom stamp annotations are added properly in touch mode
+- `#SF-377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
+- `#SF-383385` - The delete key can be used to remove annotations added in touch mode.
+- `#SF-381030` - Unloading a PDF document from the first PDF Viewer component no longer affects the rendering of the PDF document in the second PDF Viewer component.
+- `#SF-385936` - The value of the Add Signature button will not extend outside the button and missing Portuguese tooltips have been translated.
+- `#SF-372855`, `#F173951` - An annotation can now be added and resized up to the edge of the PDF document.
+- `#SF-380996` - The `TextSearchComplete` event will be triggered when the text is searched in the PDF viewer.
+- `#SF-377035`,`#SF-379948` - A tooltip will be displayed in a form field even if the FormDesignerService is not injected.
+- `#SF-380472` - Added form fields after pressing escape no longer shades form fields.
+- `#SF-384112` - The `formFieldSelect` event will be triggered while selecting the first form field in the document.
+- `#SF-386568` - In the Bootstrap5 theme, the search icon will change to a clear icon after a search has been initiated.
+- `#SF-382999` - The type signature in the signature fields will be modified based on the height of the Signature field while resizing.
+- `#SF-379221` - Now, cache values (PDF_CONTENT) are updated in the `getCache()` method.
+- `#SF-385864` - Now, the dropdown values will be changed programmatically in the PDF Viewer.
+- `#SF-386545` - Now, the signature field color will appear while scrolling down long document.
+- `#SF-272377` - Now, the position and size of the arrow shapes in the shape annotation are same as in the downloaded document.
+- `#F173953` - Now, Script error have been resolved.
+- `#SF-378591` - The issue with the comment panel not opening after disabling and enabling again has been fixed.
+
+- `#SF-377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
+- `#SF-383385` - The delete key can be used to remove annotations added in touch mode.
+- `#SF-381030` - Unloading a PDF document from the first PDF Viewer component no longer affects the rendering of the PDF document in the second PDF Viewer component.
+- `#SF-385936` - The value of the Add Signature button will not extend outside the button and missing Portuguese tooltips have been translated.
+- `#SF-372855`, `#F173951` - An annotation can now be added and resized up to the edge of the PDF document.
+- `#SF-380996` - The `TextSearchComplete` event will be triggered when the text is searched in the PDF viewer.
+- `#SF-377035`,`#SF-379948` - A tooltip will be displayed in a form field even if the FormDesignerService is not injected.
+- `#SF-380472` - Added form fields after pressing escape no longer shades form fields.
+- `#SF-384112` - The `formFieldSelect` event will be triggered while selecting the first form field in the document.
+- `#SF-386568` - In the Bootstrap5 theme, the search icon will change to a clear icon after a search has been initiated.
+- `#SF-382999` - The type signature in the signature fields will be modified based on the height of the Signature field while resizing.
+- `#SF-379221` - Now, cache values (PDF_CONTENT) are updated in the `getCache()` method.
+- `#SF-385864` - Now, the dropdown values will be changed programmatically in the PDF Viewer.
+- `#SF-386545` - Now, the signature field color will appear while scrolling down long document.
+- `#SF-272377` - Now, the position and size of the arrow shapes in the shape annotation are same as in the downloaded document.
+
 ## 20.2.36 (2022-06-30)
 
 ### PDF Viewer
@@ -27,8 +68,6 @@
 - `#I369733`- The free text annotation is no longer rotated when it is added programmatically to rotated documents.
 - `#I383963` - Issue with cloned form field value is duplicated has been fixed.
 
-- `#SF-377367`- The Export and import action for free text annotation will be works properly in a rotated document.
-
 ## 20.1.60 (2022-06-14)
 
 ### PDF Viewer
@@ -42,8 +81,6 @@
 - `SF-368423` - Now, rotation for form elements is considered.
 - `SF-379205` - Drawing a freehand signature when switching between tabs in the Add signature dialogue is no longer possible.
 - `SF-379120` - The pixel quality of the handwritten signature has now improved.
-
-- `#F173061`- A `zoomToRect()` method is now used to zoom a particular area multiple times with different scroll positions in the viewport.
 
 ## 20.1.59 (2022-06-07)
 
@@ -441,8 +478,6 @@
 
 - `#F158073`, `#291648` - Exposed the annotation UnSelect event in PDF Viewer.
 
-- `#F158073`, `#291648`- Exposed the annotation UnSelect event in PDF Viewer.
-
 ## 18.2.56 (2020-09-01)
 
 ### PDF Viewer
@@ -611,8 +646,6 @@
 - `#F149148` - Provided the binding support for the enableFormFields property.
 - `#258769` - Provided the option to suppress the error dialog in PDF Viewer.
 - `#261269` - Provided the support to allow credential for XMLHttpRequest in PDF Viewer.
-- `#262787` - Exposed the event to notify the getPDFDocumentTexts method completed for all the pages.
-
 - `#262787` - Exposed the event to notify the getPDFDocumentTexts method completed for all the pages.
 
 #### Bug Fixes
@@ -800,9 +833,6 @@
 - `#252111` - Provided the support for handwritten signature.
 - `#251149` - Provided the support for customizing the text search highlight color.
 
-- `#252111` - Provided the support for handwritten signature.
-- `#251149` – Provided the support for customizing the text search highlight color.
-
 #### Bug Fixes
 
 - `#251864` - The pages in the landscape document will be rendered properly.
@@ -853,23 +883,9 @@
 - `#249725` - Provided the support to enable or disable the comment panel.
 - `#248609` -  Exposed the API for textSelectionStart and textSelectionEnd events in the PDF Viewer.
 
-- `#227046`, `#230887`, `#142366`, `#231973`, `#237847`, `#244849`, `#238686`, `#239233`, `#241638`, `#241638`, `#242232`, `#239221`, `#240051`, `#245255` – The support has been provided for filling the form fields.
-- `#233655`, `#236240`, `#236825`, `#238694`, `#241974`, `#243864`, `#245087` – The support has been provided for free text annotation.
-- `#246059` - Exposed the thumbnailClick event to identify the thumbnail clicks action.
-- `#246767` – The support has been provided to export the annotation details as JSON object in client-side.
-- `#245008` – The support has been provided to update the existing calibrate annotation if we modify the scale value.
-- Improved the scrolling performance in mobile devices.
-
 #### Bug Fixes
 
 - `#249017` - Multiline text markup annotation bounds will be returned properly in the annotationAdd event arguments.
-
-- `#247914` – The perimeter annotation will be rendered properly when the line is ended in the starting point.
-- `#248062` – Extra edge will not be added to the polygon shapes when rendered in the page.
-- `#248092` – Contents will not be swapped if you switch randomly between two documents.
-- `#248093` – Script error will no longer be thrown if you switch randomly between two documents.
-- `#247787` – The searched text will be highlighted properly in the provided document.
-- `#146785` – Script error will no longer be thrown when the PDF Viewer control is used in the React application.
 
 ## 17.3.14 (2019-10-03)
 
