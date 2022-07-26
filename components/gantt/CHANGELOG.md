@@ -9,6 +9,9 @@
 #### Bug Fixes
 
 - `#I389834` - Records position not updated properly in datasource when we drag and drop the records issue has been fixed.
+- `#I376455` - Unable to focus on chart element when editing is not enabled has been fixed.
+
+- `#I389834` - Records position not updated properly in datasource when we drag and drop the records issue has been fixed.
 
 ## 20.2.38 (2022-07-12)
 

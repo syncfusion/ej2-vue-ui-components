@@ -375,8 +375,8 @@ export class DiagramComponent extends ComponentBase {
         return this.ej2Instances.nudge(direction, x, y);
     }
 
-    public pan(horizontalOffset: number, verticalOffset: number, focusedPoint?: Object): void {
-        return this.ej2Instances.pan(horizontalOffset, verticalOffset, focusedPoint);
+    public pan(horizontalOffset: number, verticalOffset: number, focusedPoint?: Object, isInteractiveZoomPan?: boolean): void {
+        return this.ej2Instances.pan(horizontalOffset, verticalOffset, focusedPoint, isInteractiveZoomPan);
     }
 
     public paste(obj?: undefined[]): void {
