@@ -7,7 +7,7 @@ import { SplitButtonItemsDirective, SplitButtonItemDirective, SplitButtonItemsPl
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'closeActionEvents', 'content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -15,7 +15,7 @@ export const props = testProp[0];
 export const watch = testProp[1];
 
 export const emitProbs: any = Object.keys(watch);
-emitProbs.push('modelchanged');
+emitProbs.push('modelchanged', 'update:modelValue');
 for (let props of modelProps) {
     emitProbs.push(
         'update:'+props

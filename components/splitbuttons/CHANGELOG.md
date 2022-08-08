@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.2.43 (2022-08-08)
+
+### DropDownButton
+
+#### Bug Fixes
+
+- `#I388868` - Script error occurs while using `beforeOpen` event in DropDownButton issue has been resolved
+
 ## 19.4.40 (2021-12-28)
 
 ### DropDownButton

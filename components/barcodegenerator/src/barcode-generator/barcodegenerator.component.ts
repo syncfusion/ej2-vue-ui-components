@@ -6,7 +6,7 @@ import { BarcodeGenerator } from '@syncfusion/ej2-barcode-generator';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'backgroundColor', 'displayText', 'enableCheckSum', 'enablePersistence', 'enableRtl', 'foreColor', 'height', 'locale', 'margin', 'mode', 'type', 'value', 'width', 'invalid'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'displayText', 'enableCheckSum', 'enablePersistence', 'enableRtl', 'foreColor', 'height', 'locale', 'margin', 'mode', 'type', 'value', 'width', 'invalid'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -14,7 +14,7 @@ export const props = testProp[0];
 export const watch = testProp[1];
 
 export const emitProbs: any = Object.keys(watch);
-emitProbs.push('modelchanged');
+emitProbs.push('modelchanged', 'update:modelValue');
 for (let props of modelProps) {
     emitProbs.push(
         'update:'+props
