@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 20.2.43 (2022-08-08)
+## 20.2.44 (2022-08-16)
+
+### Tree Grid
+
+#### Bug fixes
+
+- `#I393339` - Resolved script error thrown When hierarchy mode is Both and performing an initial search in case of virtualization enabled.
+
+## 20.2.40 (2022-07-26)
 
 ### Tree Grid
 

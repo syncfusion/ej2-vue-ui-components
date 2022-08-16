@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.2.44 (2022-08-16)
+
+### Common
+
+#### Bug Fixes
+
+- `#I385176` - The issue with the `vue-class-component` is not removed in vue 2 has been resolved.
+
 ## 20.2.36 (2022-06-30)
 
 ### Common

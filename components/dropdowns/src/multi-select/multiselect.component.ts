@@ -212,8 +212,8 @@ export class MultiSelectComponent extends ComponentBase {
         return this.ej2Instances.selectAll(state);
     }
 
-    public showPopup(): void {
-        return this.ej2Instances.showPopup();
+    public showPopup(e?: Object | Object | Object): void {
+        return this.ej2Instances.showPopup(e);
     }
 
     public showSpinner(): void {

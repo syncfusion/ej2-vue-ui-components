@@ -143,8 +143,8 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.addContextMenuItems(items, text, insertAfter, isUniqueId);
     }
 
-    public addCustomFunction(functionHandler: string | Object, functionName?: string): void {
-        return this.ej2Instances.addCustomFunction(functionHandler, functionName);
+    public addCustomFunction(functionHandler: string | Object, functionName?: string, formulaDescription?: string): void {
+        return this.ej2Instances.addCustomFunction(functionHandler, functionName, formulaDescription);
     }
 
     public addDataValidation(rules: Object, range?: string): void {

@@ -196,7 +196,7 @@ export class AutoCompleteComponent extends ComponentBase {
         return this.ej2Instances.getItems();
     }
 
-    public hidePopup(e?: Object): void {
+    public hidePopup(e?: Object | Object | Object): void {
         return this.ej2Instances.hidePopup(e);
     }
 
@@ -204,8 +204,8 @@ export class AutoCompleteComponent extends ComponentBase {
         return this.ej2Instances.hideSpinner();
     }
 
-    public showPopup(): void {
-        return this.ej2Instances.showPopup();
+    public showPopup(e?: Object | Object | Object): void {
+        return this.ej2Instances.showPopup(e);
     }
 
     public showSpinner(): void {

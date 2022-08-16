@@ -346,6 +346,10 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.previousTimeSpan(mode);
     }
 
+    public removeCriticalPathStyles(): void {
+        return this.ej2Instances.removeCriticalPathStyles();
+    }
+
     public removePredecessor(id: number): void {
         return this.ej2Instances.removePredecessor(id);
     }

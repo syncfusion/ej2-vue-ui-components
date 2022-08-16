@@ -18,7 +18,7 @@ export const props = testProp[0];
 export const watch = testProp[1];
 
 export const emitProbs: any = Object.keys(watch);
-emitProbs.push('modelchanged');
+emitProbs.push('modelchanged', 'update:modelValue');
 for (let props of modelProps) {
     emitProbs.push(
         'update:'+props
