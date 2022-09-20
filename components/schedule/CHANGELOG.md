@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 20.2.49 (2022-09-13)
+## 20.2.50 (2022-09-20)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I405416` - An issue with next date navigation arrow shown when the upcoming date is greater than `maxDate` has been fixed.
+
+## 20.2.43 (2022-08-08)
 
 ### Schedule
 

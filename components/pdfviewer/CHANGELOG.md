@@ -2,55 +2,90 @@
 
 ## [Unreleased]
 
+## 20.2.50 (2022-09-20)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I397357` - Now, Radio button values update properly.
+- `#I401805` - Now, Form fields updates proper value on download.
+- `#I382837` - Now, Interaction on checkbox in mobile device is working fine.
+- `#I404631` - Now, `isFormDesignerToolbarVisible=true` property opens in the Form designer toolbar.
+- `#I385978` - Now, Free Text Annotations can be edited in iPhone, iPad and iPod Devices.
+- `#I403614` - Now, the annotation signature key not found error is resolved in the customer document.
+
+undefined- `#SF-382837` -  Now, Interaction on checkbox in mobile device is working fine.
+
 ## 20.2.49 (2022-09-13)
 
-- `#F176922` - Now, comments are not duplicated if a shape annotation is added inside an annotation.
-- `#SF-390997`,`#SF-392717`,`#SF-394607` - The signature is now displayed and properly positioned in change the width and height the document that was downloaded.
-- `#SF-398911` - Provided support for suppressing of the Digital signature without affecting download of the same.
-- `#SF-400958` - Now, Adding signature field programmatically and from UI level does not have same signature field name.
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I176922` - Now, comments are not duplicated if a shape annotation is added inside an annotation.
+- `#I390997`,`#I392717`,`#I394607` - The signature is now displayed and properly positioned in change the width and height the document that was downloaded.
+- `#I398911` - Provided support for suppressing of the Digital signature without affecting download of the same.
+- `#I400958` - Now, Adding signature field programmatically and from UI level does not have same signature field name.
 
 ## 20.2.48 (2022-09-06)
 
-- `#SF-398958` -  Now, Script error does not occurs while adding signature and initial fields when enable form field is false.
-- `#SF-397605` -  Now, If a portion of the free text annotation is outside the viewer, moving or resizing it will bring that annotation inside viewer.
-- `#SF-392269` -  Now, considered both GUID and description while importing the annotations .
-- `#SF-398972` -  Now, The Script error is not occurred while saving the PDF consecutively with Calibrate perimeter control .
-- `#SF-399220` -  Now, Some form fields are not removed on reloading the downloaded document .
-- `#SF-389566` -  Now, The Script error is not occurred while try to change PDF view to text view in sample .
-- `#SF-369895` -  When an image signature is added programmatically, the width is now properly maintained.
-- `#SF-388895` -  Now, stamp annotations comments displays valid time in comment panel for any culture.
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I398958` -  Now, Script error does not occurs while adding signature and initial fields when enable form field is false.
+- `#I397605` -  Now, If a portion of the free text annotation is outside the viewer, moving or resizing it will bring that annotation inside viewer.
+- `#I392269` -  Now, considered both GUID and description while importing the annotations .
+- `#I398972` -  Now, The Script error is not occurred while saving the PDF consecutively with Calibrate perimeter control .
+- `#I399220` -  Now, Some form fields are not removed on reloading the downloaded document .
+- `#I389566` -  Now, The Script error is not occurred while try to change PDF view to text view in sample .
+- `#I369895` -  When an image signature is added programmatically, the width is now properly maintained.
+- `#I388895` -  Now, stamp annotations comments displays valid time in comment panel for any culture.
 
 ## 20.2.46 (2022-08-30)
 
-- `#SF-391994` -  Now, Programmatically able to add a all form fields in read only mode .
-- `#SF-394117` -  Now, Tapping a page with signature field does not moves to another page on mobile devices.
-- `#SF-395979` -  Now, Deleted annotations are updated in the annotation collection properly.
-- `#SF-369895` -  Now, The selection and strike through is now aligned properly.
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I391994` -  Now, Programmatically able to add a all form fields in read only mode .
+- `#I394117` -  Now, Tapping a page with signature field does not moves to another page on mobile devices.
+- `#I395979` -  Now, Deleted annotations are updated in the annotation collection properly.
+- `#I369895` -  Now, The selection and strike through is now aligned properly.
 
 ## 20.2.45 (2022-08-23)
 
-- `#SF-389679` -  Now ,form fields color should not be changed on read only mode.
-- `#SF-390997`,`#SF-392717`,`#SF-394607` - The signature is now displayed and properly positioned in read only mode the document that was downloaded.
-- `#SF-383430` -   Now , form fields does not generate duplicates while using CTRL c and CRTL v.
-- `#SF-394763` -   Now , form fields is not deleted while trying to delete the text with delete key in property dialog.
-- `#SF-394979` -  The problem with continuously and programmatically adding a signature image disappearing has been resolved.
-- `#SF-397495` - Now the signature and Initial field is visible in chrome downloaded in the PDF Viewer.
-- `#F176687` - Now, markup text of Free Text annotation is proper for Arabic text.
-- `#SF-394979` -  The problem with continuously and programmatically adding a signature image disappearing has been resolved.
-- `#SF-386832` - Now if the `zoomMode` is set to `FitToWidth`, we can update or get the form field values properly.
-- `#SF-391994` - Now, The document download performance is improved if the PDF document contains above 1000 pages.
+### PDF Viewer
 
+#### Bug Fixes
+
+- `#I389679` -  Now ,form fields color should not be changed on read only mode.
+- `#I390997`,`#I392717`,`#I394607` - The signature is now displayed and properly positioned in read only mode the document that was downloaded.
+- `#I383430` -   Now , form fields does not generate duplicates while using CTRL c and CRTL v.
+- `#I394763` -   Now , form fields is not deleted while trying to delete the text with delete key in property dialog.
+- `#I394979` -  The problem with continuously and programmatically adding a signature image disappearing has been resolved.
+- `#I397495` - Now the signature and Initial field is visible in chrome downloaded in the PDF Viewer.
 - `#F176687` - Now, markup text of Free Text annotation is proper for Arabic text.
+- `#I394979` -  The problem with continuously and programmatically adding a signature image disappearing has been resolved.
+- `#I386832` - Now if the `zoomMode` is set to `FitToWidth`, we can update or get the form field values properly.
+- `#I391994` - Now, The document download performance is improved if the PDF document contains above 1000 pages.
+
+undefined- `#F176687` - Now, markup text of Free Text annotation is proper for Arabic text.
 - `#SF-397495` - Now the signature and Initial field is visible in chrome downloaded in the PDF Viewer.
 
 ## 20.2.44 (2022-08-16)
 
-- `#SF-394274`,`#SF-394827` -  Now ,The signature and initial is updated after the 10th page.
-- `#SF-395889` -  Now ,script error occurs without injecting annotation has been fixed.
-- `#F173061` - Now, we can able to zoom to specific annotation if the annotation is not visible in the viewport.
-- `#SF-396556` -  Now ,import and export for JSON and XFDF is document working properly.
+### PDF Viewer
 
+#### Bug Fixes
+
+- `#I394274`,`#I394827` -  Now ,The signature and initial is updated after the 10th page.
+- `#I395889` -  Now ,script error occurs without injecting annotation has been fixed.
 - `#F173061` - Now, we can able to zoom to specific annotation if the annotation is not visible in the viewport.
+- `#I396556` -  Now ,import and export for JSON and XFDF is document working properly.
+
+undefined- `#F173061` - Now, we can able to zoom to specific annotation if the annotation is not visible in the viewport.
 
 ## 20.2.43 (2022-08-08)
 
@@ -59,45 +94,45 @@
 #### Bug Fixes
 
 - `#F176277` - Context menus will now open all the pages that are visible in the viewport.
-- `#SF-3813` - The signature is now being downloaded without any pixel issue.
-- `#SF-390997`,`#SF-392717`,`#SF-394607` - The signature is now displayed and properly positioned in the document that was downloaded.
-- `#SF-383108` - Now,the custom stamp annotations are added properly in touch mode
-- `#SF-377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
-- `#SF-383385` - The delete key can be used to remove annotations added in touch mode.
-- `#SF-381030` - Unloading a PDF document from the first PDF Viewer component no longer affects the rendering of the PDF document in the second PDF Viewer component.
-- `#SF-385936` - The value of the Add Signature button will not extend outside the button and missing Portuguese tooltips have been translated.
-- `#SF-372855`, `#F173951` - An annotation can now be added and resized up to the edge of the PDF document.
-- `#SF-380996` - The `TextSearchComplete` event will be triggered when the text is searched in the PDF viewer.
-- `#SF-377035`,`#SF-379948` - A tooltip will be displayed in a form field even if the FormDesignerService is not injected.
-- `#SF-380472` - Added form fields after pressing escape no longer shades form fields.
-- `#SF-384112` - The `formFieldSelect` event will be triggered while selecting the first form field in the document.
-- `#SF-386568` - In the Bootstrap5 theme, the search icon will change to a clear icon after a search has been initiated.
-- `#SF-382999` - The type signature in the signature fields will be modified based on the height of the Signature field while resizing.
-- `#SF-379221` - Now, cache values (PDF_CONTENT) are updated in the `getCache()` method.
-- `#SF-385864` - Now, the dropdown values will be changed programmatically in the PDF Viewer.
-- `#SF-386545` - Now, the signature field color will appear while scrolling down long document.
-- `#SF-272377` - Now, the position and size of the arrow shapes in the shape annotation are same as in the downloaded document.
+- `#I3813` - The signature is now being downloaded without any pixel issue.
+- `#I390997`,`#I392717`,`#I394607` - The signature is now displayed and properly positioned in the document that was downloaded.
+- `#I383108` - Now,the custom stamp annotations are added properly in touch mode
+- `#I377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
+- `#I383385` - The delete key can be used to remove annotations added in touch mode.
+- `#I381030` - Unloading a PDF document from the first PDF Viewer component no longer affects the rendering of the PDF document in the second PDF Viewer component.
+- `#I385936` - The value of the Add Signature button will not extend outside the button and missing Portuguese tooltips have been translated.
+- `#I372855`, `#F173951` - An annotation can now be added and resized up to the edge of the PDF document.
+- `#I380996` - The `TextSearchComplete` event will be triggered when the text is searched in the PDF viewer.
+- `#I377035`,`#I379948` - A tooltip will be displayed in a form field even if the FormDesignerService is not injected.
+- `#I380472` - Added form fields after pressing escape no longer shades form fields.
+- `#I384112` - The `formFieldSelect` event will be triggered while selecting the first form field in the document.
+- `#I386568` - In the Bootstrap5 theme, the search icon will change to a clear icon after a search has been initiated.
+- `#I382999` - The type signature in the signature fields will be modified based on the height of the Signature field while resizing.
+- `#I379221` - Now, cache values (PDF_CONTENT) are updated in the `getCache()` method.
+- `#I385864` - Now, the dropdown values will be changed programmatically in the PDF Viewer.
+- `#I386545` - Now, the signature field color will appear while scrolling down long document.
+- `#I272377` - Now, the position and size of the arrow shapes in the shape annotation are same as in the downloaded document.
 - `#F173953` - Now, Script error have been resolved.
-- `#SF-378591` - The issue with the comment panel not opening after disabling and enabling again has been fixed.
-- `#SF-386545` - Now, the signature field color will appear with opacity while scrolling down long document.
-- `#SF-390764` - The issue of is document edited API is false while editing a document has been resolved.
-- `#SF-388086` - The issue of replied comments merging with other annotations has been resolved.
-- `#SF-379142`,`#SF-391296` - The x,y bounds of the form fields are proper while adding the form field.
-- `#SF-386887` - The issue with radio button alignment with different zoom settings has been resolved.
+- `#I378591` - The issue with the comment panel not opening after disabling and enabling again has been fixed.
+- `#I386545` - Now, the signature field color will appear with opacity while scrolling down long document.
+- `#I390764` - The issue of is document edited API is false while editing a document has been resolved.
+- `#I388086` - The issue of replied comments merging with other annotations has been resolved.
+- `#I379142`,`#I391296` - The x,y bounds of the form fields are proper while adding the form field.
+- `#I386887` - The issue with radio button alignment with different zoom settings has been resolved.
 - `#F175614` - For load failed and PDF file path not found errors, an error message is now displayed.
-- `#SF-379627` - formFieldMouseover and formFieldMouseLeave is now trigger properly.
-- `#SF-387260` - Now Signature Indicator Properties can be modified Programmatically in DOM.
-- `#SF-384670` - Now that the type has been fixed, the signature value for the second time has been updated using form field collections.
-- `#SF-382941`,`#SF-383132` - Now duplicate form fields able to select, move, delete and edit after deleting original form fields.
-- `#SF-389566` - Now, Script Error is not occurs while try to change Pdf view to text view in sample.
-- `#SF-376222` - Now, Annotation selector binds while dragging with right click and then clicking left click.
-- `#SF-382568` - Now text boxes with the same name are saved and preserved after downloading and loading the document.
-- `SF-387261` - The signature in the signature field is not visible on Adobe Reader's print preview has been resolved.
-- `#SF-380373` - Now the event triggering is fixed for Hand Written Signature only, if it is a Signature field, then the add and remove signature events are skipped.
-- `#SF-383430` - Now copy, cut and paste does not generate any duplicates while using key short cut.
-- `#SF-376526` - Now, Mobile device resizing of the Signature Form Field has been improved.
-- `#SF-392270` - Now Signature is not drawn few inches away from the cursor on signature dialog.
-- `#SF-389178` - If the target position is within the document, a form field will be added. As a result, adding Inaccessible Form fields is prevented.
+- `#I379627` - formFieldMouseover and formFieldMouseLeave is now trigger properly.
+- `#I387260` - Now Signature Indicator Properties can be modified Programmatically in DOM.
+- `#I384670` - Now that the type has been fixed, the signature value for the second time has been updated using form field collections.
+- `#I382941`,`#I383132` - Now duplicate form fields able to select, move, delete and edit after deleting original form fields.
+- `#I389566` - Now, Script Error is not occurs while try to change Pdf view to text view in sample.
+- `#I376222` - Now, Annotation selector binds while dragging with right click and then clicking left click.
+- `#I382568` - Now text boxes with the same name are saved and preserved after downloading and loading the document.
+- `#I387261` - The signature in the signature field is not visible on Adobe Reader's print preview has been resolved.
+- `#I380373` - Now the event triggering is fixed for Hand Written Signature only, if it is a Signature field, then the add and remove signature events are skipped.
+- `#I383430` - Now copy, cut and paste does not generate any duplicates while using key short cut.
+- `#I376526` - Now, Mobile device resizing of the Signature Form Field has been improved.
+- `#I392270` - Now Signature is not drawn few inches away from the cursor on signature dialog.
+- `#I389178` - If the target position is within the document, a form field will be added. As a result, adding Inaccessible Form fields is prevented.
 
 - `#F176277` - Context menus will now open all the pages that are visible in the viewport.
 - `#SF-3813` - The signature is now being downloaded without any pixel issues.
@@ -109,14 +144,14 @@
 
 #### Bug Fixes
 
-- `#SF-389566` - Now, Script Error is not occurs while try to change Pdf view to text view in sample.
-- `#SF-376222` - Now, Annotation selector binds while dragging with right click and then clicking left click.
-- `#SF-382568` - Now text boxes with the same name are saved and preserved after downloading and loading the document.
-- `SF-387261` - The signature in the signature field is not visible on Adobe Reader's print preview has been resolved.
-- `#SF-380373` - Now the event triggering is fixed for Hand Written Signature only, if it is a Signature field, then the add and remove signature events are skipped.
-- `#SF-383430` - Now copy, cut and paste does not generate any duplicates while using key short cut.
-- `#SF-376526` - Now, Mobile device resizing of the Signature Form Field has been improved.
-- `#SF-392270` - Now Signature is not drawn few inches away from the cursor on signature dialog.
+- `#I389566` - Now, Script Error is not occurs while try to change Pdf view to text view in sample.
+- `#I376222` - Now, Annotation selector binds while dragging with right click and then clicking left click.
+- `#I382568` - Now text boxes with the same name are saved and preserved after downloading and loading the document.
+- `#I387261` - The signature in the signature field is not visible on Adobe Reader's print preview has been resolved.
+- `#I380373` - Now the event triggering is fixed for Hand Written Signature only, if it is a Signature field, then the add and remove signature events are skipped.
+- `#I383430` - Now copy, cut and paste does not generate any duplicates while using key short cut.
+- `#I376526` - Now, Mobile device resizing of the Signature Form Field has been improved.
+- `#I392270` - Now Signature is not drawn few inches away from the cursor on signature dialog.
 
 - `#SF-382568` - Now text boxes with the same name are saved and preserved after downloading and loading the document.
 - `SF-387261` - The signature in the signature field is not visible on Adobe Reader's print preview has been resolved.
@@ -129,15 +164,15 @@
 
 #### Bug Fixes
 
-- `#SF-390764` - The issue of is document edited API is false while editing a document has been resolved.
-- `#SF-388086` - The issue of replied comments merging with other annotations has been resolved.
-- `#SF-379142`,`#SF-391296` - The x,y bounds of the form fields are proper while adding the form field.
-- `#SF-386887` - The issue with radio button alignment with different zoom settings has been resolved.
+- `#I390764` - The issue of is document edited API is false while editing a document has been resolved.
+- `#I388086` - The issue of replied comments merging with other annotations has been resolved.
+- `#I379142`,`#I391296` - The x,y bounds of the form fields are proper while adding the form field.
+- `#I386887` - The issue with radio button alignment with different zoom settings has been resolved.
 - `#F175614` - For load failed and PDF file path not found errors, an error message is now displayed.
-- `#SF-379627` - formFieldMouseover and formFieldMouseLeave is now trigger properly.
-- `#SF-387260` - Now Signature Indicator Properties can be modified Programmatically in DOM.
-- `#SF-384670` - Now that the type has been fixed, the signature value for the second time has been updated using form field collections.
-- `#SF-382941`,`#SF-383132` - Now duplicate form fields able to select, move, delete and edit after deleting original form fields.
+- `#I379627` - formFieldMouseover and formFieldMouseLeave is now trigger properly.
+- `#I387260` - Now Signature Indicator Properties can be modified Programmatically in DOM.
+- `#I384670` - Now that the type has been fixed, the signature value for the second time has been updated using form field collections.
+- `#I382941`,`#I383132` - Now duplicate form fields able to select, move, delete and edit after deleting original form fields.
 
 ## 20.2.38 (2022-07-12)
 
@@ -145,25 +180,25 @@
 
 #### Bug Fixes
 
-- `#SF-383108` - Now,the custom stamp annotations are added properly in touch mode
-- `#SF-377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
-- `#SF-383385` - The delete key can be used to remove annotations added in touch mode.
-- `#SF-381030` - Unloading a PDF document from the first PDF Viewer component no longer affects the rendering of the PDF document in the second PDF Viewer component.
-- `#SF-385936` - The value of the Add Signature button will not extend outside the button and missing Portuguese tooltips have been translated.
-- `#SF-372855`, `#F173951` - An annotation can now be added and resized up to the edge of the PDF document.
-- `#SF-380996` - The `TextSearchComplete` event will be triggered when the text is searched in the PDF viewer.
-- `#SF-377035`,`#SF-379948` - A tooltip will be displayed in a form field even if the FormDesignerService is not injected.
-- `#SF-380472` - Added form fields after pressing escape no longer shades form fields.
-- `#SF-384112` - The `formFieldSelect` event will be triggered while selecting the first form field in the document.
-- `#SF-386568` - In the Bootstrap5 theme, the search icon will change to a clear icon after a search has been initiated.
-- `#SF-382999` - The type signature in the signature fields will be modified based on the height of the Signature field while resizing.
-- `#SF-379221` - Now, cache values (PDF_CONTENT) are updated in the `getCache()` method.
-- `#SF-385864` - Now, the dropdown values will be changed programmatically in the PDF Viewer.
-- `#SF-386545` - Now, the signature field color will appear while scrolling down long document.
-- `#SF-272377` - Now, the position and size of the arrow shapes in the shape annotation are same as in the downloaded document.
+- `#I383108` - Now,the custom stamp annotations are added properly in touch mode
+- `#I377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
+- `#I383385` - The delete key can be used to remove annotations added in touch mode.
+- `#I381030` - Unloading a PDF document from the first PDF Viewer component no longer affects the rendering of the PDF document in the second PDF Viewer component.
+- `#I385936` - The value of the Add Signature button will not extend outside the button and missing Portuguese tooltips have been translated.
+- `#I372855`, `#F173951` - An annotation can now be added and resized up to the edge of the PDF document.
+- `#I380996` - The `TextSearchComplete` event will be triggered when the text is searched in the PDF viewer.
+- `#I377035`,`#I379948` - A tooltip will be displayed in a form field even if the FormDesignerService is not injected.
+- `#I380472` - Added form fields after pressing escape no longer shades form fields.
+- `#I384112` - The `formFieldSelect` event will be triggered while selecting the first form field in the document.
+- `#I386568` - In the Bootstrap5 theme, the search icon will change to a clear icon after a search has been initiated.
+- `#I382999` - The type signature in the signature fields will be modified based on the height of the Signature field while resizing.
+- `#I379221` - Now, cache values (PDF_CONTENT) are updated in the `getCache()` method.
+- `#I385864` - Now, the dropdown values will be changed programmatically in the PDF Viewer.
+- `#I386545` - Now, the signature field color will appear while scrolling down long document.
+- `#I272377` - Now, the position and size of the arrow shapes in the shape annotation are same as in the downloaded document.
 - `#F173953` - Now, Script error have been resolved.
-- `#SF-378591` - The issue with the comment panel not opening after disabling and enabling again has been fixed.
-- `#SF-386545` - Now, the signature field color will appear with opacity while scrolling down long document.
+- `#I378591` - The issue with the comment panel not opening after disabling and enabling again has been fixed.
+- `#I386545` - Now, the signature field color will appear with opacity while scrolling down long document.
 
 - `#SF-377362` - Annotations are now placed in the correct position in the download PDF document with crop value.
 - `#SF-383385` - The delete key can be used to remove annotations added in touch mode.
@@ -214,6 +249,14 @@
 
 #### Bug Fixes
 
+- `#I378257`- The issue with the checkbox printing multiple times has been resolved.
+- `#F173751` - Radio buttons that have been dynamically imported can now preserve its checked status.
+- `#F173061`- A `zoomToRect()` method is now used to zoom a particular area multiple times with different scroll positions in the viewport.
+- `#I371792` - Pan mode is now activated for all mobile devices by default.
+- `#I368423` - Now, rotation for form elements is considered.
+- `#I379205` - Drawing a freehand signature when switching between tabs in the Add signature dialogue is no longer possible.
+- `#I379120` - The pixel quality of the handwritten signature has now improved.
+
 - `#SF-378257`- The issue with the checkbox printing multiple times has been resolved.
 - `#F173751` - Radio buttons that have been dynamically imported can now preserve its checked status.
 - `#F173061`- A `zoomToRect()` method is now used to zoom a particular area multiple times with different scroll positions in the viewport.
@@ -229,6 +272,11 @@
 #### Bug Fixes
 
 - `#F174154`- Now, the signature value for all signature fields in the PDF document will be updated programmatically using the `updateFormFieldsValue()` method.
+- `#I376222`- Now, Annotation selector binds correctly to annotations when dragging.
+- `#I367416`- The `FindText()` method of PDF Base allows for finding the number.
+- `#I372876`- The `annotationSelect` and `commentAdd` events are triggered properly for the sticky notes annotation.
+
+- `#F174154`- Now, the signature value for all signature fields in the PDF document will be updated programmatically using the `updateFormFieldsValue()` method.
 - `#SF-376222`- Now, Annotation selector binds correctly to annotations when dragging.
 - `#SF-367416`- The `FindText()` method of PDF Base allows for finding the number.
 - `#SF-372876`- The `annotationSelect` and `commentAdd` events are triggered properly for the sticky notes annotation.
@@ -238,6 +286,10 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I377034`- Now, the existing form fields value can be retrieved using the `retrieveFormFields()` method.
+- `#I367416`- The radio buttons on the iPad are displayed properly after zooming in and out.
+- `#I374726`- Signatures will appear in the PDF viewer for the provided document.
 
 - `#SF-377034`- Now, the existing form fields value can be retrieved using the `retrieveFormFields()` method.
 - `#SF-367416`- The radio buttons on the iPad are displayed properly after zooming in and out.
@@ -249,6 +301,10 @@
 
 #### Bug Fixes
 
+- `#I376240`- Multiple words in the typed handwritten signature and signature fields are preserved correctly in the downloaded document.
+- `#F174506`- Improved the printing quality of the PDF viewer.
+- `#I372853`- Now, ink annotation will be added programmatically with path data available in the annotationAdd event.
+
 - `#SF-376240`- Multiple words in the typed handwritten signature and signature fields are preserved correctly in the downloaded document.
 - `#F174506`- Improved the printing quality of the PDF viewer.
 - `#SF-372853`- Now, ink annotation will be added programmatically with path data available in the annotationAdd event.
@@ -259,6 +315,8 @@
 
 #### Bug Fixes
 
+- `#I371824`- The properties of form fields will be updated properly using the `updateFormField` method while scrolling over pages.
+
 - `#SF-371824`- The properties of form fields will be updated properly using the `updateFormField` method while scrolling over pages.
 
 ## 20.1.55 (2022-05-12)
@@ -267,11 +325,37 @@
 
 #### New Features
 
+- `#I368647`, `#I366041`- Exposed a method to focus form fields on a document.
+- `#I362221`, `#I364814`, `#I368380`, `#I363379`- Provided the support for field Id and field Name for the Form Fields events.
+- `#I353301`- Implemented the `GetPageNumberFromClientPoint`, `ConvertClientPointToPagePoint`, `ConvertPagePointToClientPoint`, `ConvertPagePointToScrollingPoint` and `zoomToRect` methods.
+
 - `#SF-368647`, `#SF-366041`- Exposed a method to focus form fields on a document.
 - `#SF-362221`, `#SF-364814`, `#SF-368380`, `#SF-363379`- Provided the support for field Id and field Name for the Form Fields events.
 - `#SF-353301`- Implemented the `GetPageNumberFromClientPoint`, `ConvertClientPointToPagePoint`, `ConvertPagePointToClientPoint`, `ConvertPagePointToScrollingPoint` and `zoomToRect` methods.
 
 #### Bug Fixes
+
+- `#I372732`- A signature in the signature field will be displayed in the downloaded document when the form field properties have been updated using the `updateFormFields` method.
+- `#I361979`- Now, signature fields with the same value for the name property will be visible when the document is downloaded and reloaded.
+- `#I367560`, `#I367313`- Improved the pinch-zoom in and out responsiveness in the mobile device.
+- `#I368770`, `#I373344`, `#I372215`- Now, the properties of text box fields are changed properly using the `textFieldSettings` property.
+- `#I369002`- A signature will be downloaded in the correct position for rotated and scanned documents.
+- `#I369554`- The form fields are now added horizontally to the page, even for rotated documents.
+- `#I371560`- Form fields in a rotated document will be rendered according to the field rotation.
+- `#I373137`- The `ArgumentOutOfRangeException` exception will no longer occur when extracting the text for the provided document.
+- `#I375548`, `#I374826`, `#I375215`, `#I376171`, `#I376531`- The `Microsoft.Extensions.Caching.Memory` was changed into a stable version.
+- `#I364871`- Now, the handwritten signature images and custom stamps will be resized proportionally.
+- `#I368168`- PDF Viewer toolbar appeared properly from view on zooming in mobile mode.
+- `#I370140`- The label content of calibrating annotations is correctly updated when their properties are edited programmatically.
+- `#I370758`- The Script error will no longer be thrown while downloading the document after adding the handwritten type signature on a mobile device.
+- `#I370904`- The signature collection and some signature properties are properly defined in the `addSignature` event on a mobile device.
+- `#I377746`- The PDF Viewer download button no longer opens the blob URL in Firefox for downloading the document.
+- `#I367878`- The Script error will no longer be thrown while clicking the form field for the second time.
+- `#I373785`- The initial field will no longer be undefined after filling the field.
+- `#I363381`- The `formFieldPropertiesChange` event triggers on removing the signature from the signature field.
+- `#I371825`- Now, the form fields will appear while scrolling through the different pages.
+- `#I371838`- The Custom stamp annotation will be rendered correctly for the PDF document provided.
+- `#I365736`, `#I366420`- In mobile devices, the Script error will no longer occur when adding the signature.
 
 - `#SF-372732`- A signature in the signature field will be displayed in the downloaded document when the form field properties have been updated using the `updateFormFields` method.
 - `#SF-361979`- Now, signature fields with the same value for the name property will be visible when the document is downloaded and reloaded.
@@ -301,6 +385,8 @@
 
 #### Bug Fixes
 
+- `#I361979`- Now, signature fields with the same value for the name property will be visible when the document is downloaded and reloaded.
+
 - `#SF-361979`- Now, signature fields with the same value for the name property will be visible when the document is downloaded and reloaded.
 
 ## 20.1.51 (2022-04-26)
@@ -308,6 +394,10 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I369554`- The form fields are now added horizontally to the page, even for rotated documents.
+- `#I369733`- The free text annotation is no longer rotated when it is added programmatically to rotated documents.
+- `#I371560`- Form fields in a rotated document will be rendered according to the field rotation.
 
 - `#SF-369554`- The form fields are now added horizontally to the page, even for rotated documents.
 - `#SF-369733`- The free text annotation is no longer rotated when it is added programmatically to rotated documents.
@@ -319,10 +409,22 @@
 
 #### New Features
 
+- `#I362221`,`#I364814`,`#I368380`,`#I363379`- Provided the support for field Id and field Name for the Form Fields events.
+- `#I353301`- Implemented the `zoomTo` method.
+
 - `#SF-362221`,`#SF-364814`,`#SF-368380`,`#SF-363379`- Provided the support for field Id and field Name for the Form Fields events.
 - `#SF-353301`- Implemented the `zoomTo` method.
 
 #### Bug Fixes
+
+- `#I366955`- Now, the page can be scrolled in mobile mode when it is in fitToPage mode.
+- `#I368168`- PDF Viewer toolbar appeared properly from view on zooming in mobile mode.
+- `#I367878`- The Script error will no longer be thrown while clicking the form field for the second time.
+- `#I368770`,`#I373344`,`#I372215`- Now, the properties of text box fields are changed properly using the `textFieldSettings` property.
+- `#I370140`- The label content of calibrate annotations is correctly updated when their properties are edited programmatically.
+- `#I370758`- The Script error will no longer be thrown while downloading the document after adding the handwritten type signature in mobile device.
+- `#I370904`- The signature collection and some signature properties are properly defined in the `addSignature` event on mobile device.
+- `#I373344`,`#I372215`- The Script error will no longer be thrown while adding PDF Viewer to the Angular application.
 
 - `#SF-366955`- Now, the page can be scrolled in mobile mode when it is in fitToPage mode.
 - `#SF-368168`- PDF Viewer toolbar appeared properly from view on zooming in mobile mode.
@@ -339,9 +441,14 @@
 
 #### New Features
 
+- `#I368647`, `#I366041`- Exposed a method to focus form fields in a document.
+
 - `#SF-368647`, `#SF-366041`- Exposed a method to focus form fields in a document.
 
 #### Bug Fixes
+
+- `#I366679`- Selection is working properly for the overlapped stamp annotations.
+- `#I364656`- Now, the signature fields are read-only when the annotation and form designer modules are disabled.
 
 - `#SF-366679`- Selection is working properly for the overlapped stamp annotations.
 - `#SF-364656`- Now, the signature fields are read-only when the annotation and form designer modules are disabled.
@@ -352,6 +459,9 @@
 
 #### Bug Fixes
 
+- `#I365496`- In editable mode, the free text annotation remains in the same position during zooming.
+- `#I366345`- In mobile devices, context menus will not appear when moving annotations.
+
 - `#SF-365496`- In editable mode, the free text annotation remains in the same position during zooming.
 - `#SF-366345`- In mobile devices, context menus will not appear when moving annotations.
 
@@ -360,6 +470,15 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I362858`- The existing form fields are now cleared completely from the collections when loading another document.
+- `#F172325`- The Script error will no longer be thrown while scrolling the landscape PDF documents before loading.
+- `#I364909`- The Ink annotation curve is now smooth on mobile devices at higher zoom factors.
+- `#I364296`- The free text annotation is now not visible in the print preview when the `isPrint` property is set to false.
+- `#I364510`, `#I363938`- The signature is now drawn correctly in the signature field on switching the tabs.
+- `#I364296`- The PDF document is now downloaded properly when the form field background color is transparent.
+- `#I363381`- The `formFieldPropertiesChange` event triggers on removing the signature from the signature field.
+- `#I362811`, `#I364480`- The existing from field collections are now updated properly when loading the document.
 
 - `#SF-362858`- The existing form fields are now cleared completely from the collections when loading another document.
 - `#F172325`- The Script error will no longer be thrown while scrolling the landscape PDF documents before loading.
@@ -376,6 +495,15 @@
 
 #### Bug Fixes
 
+- `#I362122` - Now, the shape annotation bounds are updated properly in the `annotationResize` event.
+- `#I361850` - Now, the annotation toolbar icons are aligned correctly after resizing.
+- `#I363301` - The script error is no longer thrown while hovering the toolbar icons without using the `showTooltip` property.
+- `#I362647` - Now, the signature, and initial fields are unable to edit in the read-only mode.
+- `#I361801` - Script error is no longer thrown while destroying the viewer control in the IE browser.
+- `#I363899` - Now, the `annotationUnSelect` event triggers for custom stamp annotations.
+- `#I363936` - Now, the signature panel will not be opened on right-click of signature fields.
+- `#F168155` - The downloaded document displays Czech characters.
+
 - `#SF-362122` - Now, the shape annotation bounds are updated properly in the `annotationResize` event.
 - `#SF-361850` - Now, the annotation toolbar icons are aligned correctly after resizing.
 - `#SF-363301` - The script error is no longer thrown while hovering the toolbar icons without using the `showTooltip` property.
@@ -391,6 +519,14 @@
 
 #### Bug Fixes
 
+- `#I361967`- Copy and paste is now working properly for the signature field when it is added at the bottom of the page.
+- `#I361906`- The text position for the provided PDF document is now correct.
+- `#I361379`- While importing the annotations, the FontColor and FillColor properties are now updated properly.
+- `#I360076`- In the signature field, the drawn signature is not stretched now.
+- `#I364148`, `#F172304`- The Script error will no longer be thrown in the mobile view while destroying the PDF Viewer.
+- `#I362874`- The form field names are now added properly to the form fields.
+- `#I365411`, `#I360719`- The annotations are now properly added to the pages when enableDesktopMode is true on mobile devices.
+
 - `#SF-361967`- Copy and paste is now working properly for the signature field when it is added at the bottom of the page.
 - `#SF- 361906`- The text position for the provided PDF document is now correct.
 - `#SF-361379`- While importing the annotations, the FontColor and FillColor properties are now updated properly.
@@ -404,6 +540,20 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I360337`- Exception is thrown while downloading the empty list box field is now resolved.
+- `#I360635`,`#I361422`,`#I361359`- Now, the form field is hidden properly when setting the visible property to hidden.
+- `#I358375`- Now, the PDF document loaded properly in the PDF Viewer when you set the size limit for the memory cache.
+- `#I359388`- Now, the form fields position is correct for a rotated PDF document.
+- `#I354638`- Now, the free text annotation is not hidden when clicking outside of the free text annotation.
+- `#I360405`- Now, the Free text annotations and ink annotations are rendered properly in the lower zoom factors.
+- `#F171647`- Now, the annotationAdd event is triggered after adding the sticky notes annotation in the annotation collection.
+- `#I361639`- The Script error will no longer be thrown when loading the form-fields document without injecting the form field module.
+- `#I362311`- Now, the Move cursor is not showing above the custom stamp while the custom stamp annotation is selected.
+- `#I359233`- The hidden issue of free text characters is now resolved.
+- `#I363626`- The Script error will no longer be thrown while loading a PDF document when the enableHyperlink is set to false.
+- `#I363055`- Now, the free text becomes edited properly while clicking the selector.
+- `#I363411`- Now, the free text position on a downloaded document is accurate on the Chrome browser.
 
 - `#SF-360337`- Exception is thrown while downloading the empty list box field is now resolved.
 - `#SF-360635`,`#SF-361422`,`#SF-361359`- Now, the form field is hidden properly when setting the visible property to hidden.
@@ -425,6 +575,13 @@
 
 #### Bug Fixes
 
+`#I359772`,`#I359880`- Now, the form fields are editable on the mobile device.
+`#I359042`- Free text annotations are downloaded properly without hiding any last character.
+`#I358308`- Spinners are hidden properly while removing the display as none for the spinner.
+`#I360035`- The Script error will no longer be thrown while using the editAnnotation method in mobile mode.
+`#I358584`- Stamps are saved properly in the rotated PDF document.
+
+
 `#SF-359772`,`#SF-359880`- Now, the form fields are editable on the mobile device.
 `#SF-359042`- Free text annotations are downloaded properly without hiding any last character.
 `#SF-358308`- Spinners are hidden properly while removing the display as none for the spinner.
@@ -438,6 +595,11 @@
 
 #### Bug Fixes
 
+- `#I358006`- Overlapped stamp annotations are now placed at the exact position in the saved PDF document.
+- `#I357273`- Exception thrown while loading the provided PDF document due to an invalid key, is now resolved.
+- `#I357655`- The PDF pages are now exported to image in a multi-threaded environment.
+- `#I357060`- Now, the typed handwritten signature content does not exceed the text area.
+
 - `#SF-358006`- Overlapped stamp annotations are now placed at the exact position in the saved PDF document.
 - `#SF-357273`- Exception thrown while loading the provided PDF document due to an invalid key, is now resolved.
 - `#SF-357655`- The PDF pages are now exported to image in a multi-threaded environment.
@@ -449,6 +611,9 @@
 
 #### Bug Fixes
 
+- `#I357108` - Now, the annotations are displayed properly for the rotated documents.
+- `#I357489` - Now, the unnecessary thumbnail requests are restricted.
+
 - `#SF-357108` - Now, the annotations are displayed properly for the rotated documents.
 - `#SF-357489` - Now, the unnecessary thumbnail requests are restricted.
 
@@ -458,6 +623,8 @@
 
 #### Bug Fixes
 
+- `#I299110`, `#I348963` - Now, the font size is updated properly while export and import shape annotations.
+
 - `#299110`, `#348963` - Now, the font size is updated properly while export and import shape annotations.
 
 ## 19.4.38 (2021-12-17)
@@ -466,9 +633,13 @@
 
 #### New Features
 
+- `#I354638` - Provided auto fit support to the free text annotations.
+
 - `#354638` - Provided auto fit support to the free text annotations.
 
 #### Bug Fixes
+
+- `#I346343`- Now, the text wraps based on the word length regardless of character length in free-text annotation.
 
 - `346343`- Now, the text wraps based on the word length regardless of character length in free-text annotation.
 
@@ -478,9 +649,20 @@
 
 #### New Features
 
+- `#I336589`, `#I339329`, `#I346113` - Provided annotation toolbar settings support in mobile view.
+
 - `#336589`, `#339329`, `#346113` - Provided annotation toolbar settings support in mobile view.
 
 #### Bug Fixes
+
+- `#I347402`, `#I347555`- Now, the signature dialog is opened correctly on clicking the signature field in Firefox and Safari browser.
+- `#I344549`- The ink annotations are preserved correctly in the Adobe.
+- `#I346607`- Now, the signature dialog width is proper on resizing the browser window.
+- `#I345897`- The ink annotations are now drawn over the free-text annotations when the 'allowEditTextOnly' property is enabled.
+- `#I347427`- The form designer tooltip is now hidden when the 'showToolTip' property is set to FALSE.
+- `#I348023`- The 'isReadOnly' property is now updated correctly once we set the value to TRUE.
+- `#I345130`- Now, the exact shape of the image is maintained when added to the signature field.
+- `#I347558`- Now, the custom stamp position is added properly in mobile view.
 
 - `#347402`, `#347555`- Now, the signature dialog is opened correctly on clicking the signature field in Firefox and Safari browser.
 - `#344549`- The ink annotations are preserved correctly in the Adobe.
@@ -493,13 +675,24 @@
 
 ## 19.3.54 (2021-11-17)
 
-- `#346152`- The script error will not be thrown for the document which contains link annotation.
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I346152`- The script error will not be thrown for the document which contains link annotation.
+
+undefined- `#346152`- The script error will not be thrown for the document which contains link annotation.
 
 ## 19.3.48 (2021-11-02)
 
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I344888`, `#F169870` - Now, signature dialog settings is working properly for the handwritten signature dialog.
+- `#I346090`- Now, the primary toolbar should not hide if form designer toolbar is visible.
+- `#I344897`, `#I345574` - Now, the indicator text and required properties for signature fields settings are working properly.
+- `#I344082`- Now, signature text annotation is rendered properly on loading the document.
 
 - `#344888`, `#F169870` - Now, signature dialog settings is working properly for the handwritten signature dialog.
 - `#346090`- Now, the primary toolbar should not hide if form designer toolbar is visible.
@@ -512,6 +705,8 @@
 
 #### Bug Fixes
 
+- `#I344034` - The Script error will no longer be thrown if we select text markup annotation when text selection is disabled.
+
 - `#344034` - The Script error will no longer be thrown if we select text markup annotation when text selection is disabled.
 
 ## 19.3.46 (2021-10-19)
@@ -520,6 +715,8 @@
 
 #### Bug Fixes
 
+- `#I339329`, `#I341199` - Now, the default context menu of browser will no longer be shown on selecting the text in mobile view.
+
 - `#339329`, `#341199` - Now, the default context menu of browser will no longer be shown on selecting the text in mobile view.
 
 ## 19.3.45 (2021-10-12)
@@ -527,6 +724,10 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#F169102` - Now, the download action is working properly after importing the provided customer document.
+- `#I342951` - Now, the Bookmark navigation is working properly in mobile mode.
+- `#I343011` - Now, the download action is working properly after adding the text markup annotation.
 
 - `#F169102` - Now, the download action is working properly after importing the provided customer document.
 - `#342951` - Now, the Bookmark navigation is working properly in mobile mode.
@@ -538,6 +739,10 @@
 
 #### Bug Fixes
 
+- `#I297147`, `#I339056` - Now, the free text annotations with 90 and 270 rotated angle are rotated properly.
+- `#I341677` - Now, the opacity is applied properly for the custom stamps.
+- `#I341074` - Now, the search icon is visible to close the search dialog.
+
 - `#297147`, `#339056` - Now, the free text annotations with 90 and 270 rotated angle are rotated properly.
 - `#341677` - Now, the opacity is applied properly for the custom stamps.
 - `#341074` - Now, the search icon is visible to close the search dialog.
@@ -548,6 +753,9 @@
 
 #### Bug Fixes
 
+- `#I328989` - Now, the clear and create button in the signature panel is enabled only on drawing the signature.
+- `#I328499` - Now, the stamp annotations are downloaded correctly in the PDF document.
+
 - `#328989` - Now, the clear and create button in the signature panel is enabled only on drawing the signature.
 - `#328499` - Now, the stamp annotations are downloaded correctly in the PDF document.
 
@@ -557,6 +765,8 @@
 
 #### Bug Fixes
 
+- `#I328030` - The dynamic stamp annotation size is maintained properly while importing and exporting the stamp annotation in XFDF format.
+
 - `#328030` - The dynamic stamp annotation size is maintained properly while importing and exporting the stamp annotation in XFDF format.
 
 ## 19.1.65 (2021-05-25)
@@ -565,6 +775,8 @@
 
 #### New Features
 
+- `#I326021` - hyperlinkClick event must be handled to cancel the navigation or change the URL.
+
 - `#326021` - hyperlinkClick event must be handled to cancel the navigation or change the URL.
 
 ## 19.1.64 (2021-05-19)
@@ -572,6 +784,11 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I325096` - The Script error will no longer be thrown if we add form fields value by code behind.
+- `#I326083` - Now, the signature is appeared inside of the Signature Field in the PDF Viewer.
+- `#I326054` - The Script error will no longer be thrown while clicking the provided document hyperlink content.
+- `#I324660` - Now, the distance annotation can be added after deleting the incompletely drawn distance annotation.
 
 - `#325096` - The Script error will no longer be thrown if we add form fields value by code behind.
 - `#326083` - Now, the signature is appeared inside of the Signature Field in the PDF Viewer.
@@ -584,6 +801,8 @@
 
 #### Bug Fixes
 
+- `#I322039` - The Arrow icon is shown properly in the custom stamp dropdown.
+
 - `#322039` - The Arrow icon is shown properly in the custom stamp dropdown.
 
 ## 19.1.58 (2021-04-27)
@@ -591,6 +810,8 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I322799` - The imported stamp annotation position is updated correctly in the MVC platform.
 
 - `#322799` - The imported stamp annotation position is updated correctly in the MVC platform.
 
@@ -600,6 +821,8 @@
 
 #### Bug Fixes
 
+- `#I317344` - The Script error will no longer be thrown if we add the custom stamp image more than 4MB size.
+
 - `#317344` - The Script error will no longer be thrown if we add the custom stamp image more than 4MB size.
 
 ## 19.1.56 (2021-04-13)
@@ -607,6 +830,8 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I315264` - Now, the User names in comments are working properly.
 
 - `#315264` - Now, the User names in comments are working properly.
 
@@ -616,6 +841,8 @@
 
 #### New Features
 
+- `#F158073`, `#I291648` - Exposed the annotation UnSelect event in PDF Viewer.
+
 - `#F158073`, `#291648` - Exposed the annotation UnSelect event in PDF Viewer.
 
 ## 18.2.56 (2020-09-01)
@@ -624,9 +851,13 @@
 
 #### New Features
 
+- `#I289233` - Provided the support to add expiration timing for cache.
+
 - `#289233` - Provided the support to add expiration timing for cache.
 
 #### Bug Fixes
+
+- `#I289417` - Now, the annotation toolbar position is maintained correctly.
 
 - `#289417` - Now, the annotation toolbar position is maintained correctly.
 
@@ -636,9 +867,14 @@
 
 #### New Features
 
+- `#I267670` - Exposed the toolbar option to retrieve the form field data in JSON format.
+
 - `#267670` - Exposed the toolbar option to retrieve the form field data in JSON format.
 
 #### Bug Fixes
+
+- `#I282486` - Now, undo and redo is working properly for the freetext annotations.
+- `#F155593`- Exception will no longer be thrown while exporting the formfields.
 
 - `#282486` - Now, undo and redo is working properly for the freetext annotations.
 - `#F155593`- Exception will no longer be thrown while exporting the formfields.
@@ -649,6 +885,8 @@
 
 #### Bug Fixes
 
+- `#I282530` - The Script error will no longer be thrown if we select the handwritten signature in mobile devices.
+
 - `#282530` - The Script error will no longer be thrown if we select the handwritten signature in mobile devices.
 
 ## 18.2.45 (2020-07-14)
@@ -657,9 +895,13 @@
 
 #### New Features
 
+- `#I281898` - Provided the support to add comments programmatically for the newly added annotations.
+
 - `#281898` - Provided the support to add comments programmatically for the newly added annotations.
 
 #### Bug Fixes
+
+- `#F155593`, `#I283379` - Now, PDF Viewer control is working in IE.
 
 - `#F155593`, `#283379` - Now, PDF Viewer control is working in IE.
 
@@ -669,6 +911,8 @@
 
 #### Bug Fixes
 
+- `#I273237` - Now, Annotation comments are locked properly when locked the annotations.
+
 - `#273237` - Now, Annotation comments are locked properly when locked the annotations.
 
 ## 18.1.55 (2020-06-02)
@@ -676,6 +920,11 @@
 ### PDF Viewer
 
 #### New Features
+
+- `#F154248` - Provided the Support to show/hide the annotation toolbar in code behind.
+- `#F153946` - Provided the Options to disable AutoComplete options in form filling documents.
+- `#I273237` - Provided the Support to lock the text markup annotations.
+- `#I277143` - Provided the support for ink annotation.
 
 - `#F154248` - Provided the Support to show/hide the annotation toolbar in code behind.
 - `#F153946` - Provided the Options to disable AutoComplete options in form filling documents.
@@ -688,9 +937,19 @@
 
 #### New Features
 
+- `#I254075` , `#I266559` - Provided the support  to render the hyperlinks which are preserved as plain text
+
 - `#254075` , `#266559` - Provided the support  to render the hyperlinks which are preserved as plain text
 
 #### Bug Fixes
+
+- `#I274036` - Now, the page does not gets refreshed on clicking the import annotation button
+- `#I267062` - Size of the Stamp is rendered correctly after saving and loading the file in PDF Viewer.
+- `#I268505` - Download is working correctly For French Culture Environment.
+- `#F153465` - Digital Signature in the exported image is preserved correctly.
+- `#F153465` - Style of the form fields are preserved properly in PDF Viewer.
+- `#I274694` -Text highlight is working properly.
+- `#I276547` -Text selection is working properly for lower zoom factor.
 
 - `#274036` - Now, the page does not gets refreshed on clicking the import annotation button
 - `#267062` - Size of the Stamp is rendered correctly after saving and loading the file in PDF Viewer.
@@ -706,6 +965,8 @@
 
 #### New Features
 
+- `#I272985` - Provided the support to edit the annotation properties without selecting the annotation.
+
 - `#272985` - Provided the support to edit the annotation properties without selecting the annotation.
 
 ## 18.1.45 (2020-04-21)
@@ -714,11 +975,18 @@
 
 #### New Features
 
+- `#I267283` - Provided the support to identify the imported annotation and drawn annotation
+- `#I268736` - Exposed the text search events in PDF Viewer.
+- `#I258786` - Exposed the signature Select event in PDF Viewer.
+
 - `#267283` - Provided the support to identify the imported annotation and drawn annotation
 - `#268736` - Exposed the text search events in PDF Viewer.
 - `#258786` - Exposed the signature Select event in PDF Viewer.
 
 #### Bug Fixes
+
+- `#I272053` - The annotation bounds value is now preserved properly in annotation events.
+- `#I269001` - Improved the page rendering behaviour in PDF Viewer.
 
 - `#272053` - The annotation bounds value is now preserved properly in annotation events.
 - `#269001` - Improved the page rendering behaviour in PDF Viewer.
@@ -729,10 +997,16 @@
 
 #### New Features
 
+- `#I263306` - Provided the support for Meter Calibration ratio in PDF Viewer.
+- `#I271053` - Provided the support to enable and disable the multiline annotations in overlapping collections.
+
 - `#263306` - Provided the support for Meter Calibration ratio in PDF Viewer.
 - `#271053` - Provided the support to enable and disable the multiline annotations in overlapping collections.
 
 #### Bug Fixes
+
+- `#I271180` - Free Text Annotation and annotation label text position updated properly in downloaded rotational documents.
+- `#F153036` - Now, Annotation toolbar separator shown properly when hiding some annotation toolbar items.
 
 - `#271180` - Free Text Annotation and annotation label text position updated properly in downloaded rotational documents.
 - `#F153036` - Now, Annotation toolbar separator shown properly when hiding some annotation toolbar items.
@@ -743,12 +1017,20 @@
 
 #### New Features
 
+- `#I267524` - Provided the support for feet inch Calibration ratio in PDF Viewer.
+- `#I269003` - Exposed the non filled form fields value in the fireValidatedFailed event arguments.
+- `#I268276` - Provided the support to customize the annotation resize  cursor type in PDF Viewer.
+- `#I268715` - Exposed the 'Not Approved' stamp annotation under dynamic stamp type.
+
 - `#267524` - Provided the support for feet inch Calibration ratio in PDF Viewer.
 - `#269003` - Exposed the non filled form fields value in the fireValidatedFailed event arguments.
 - `#268276` - Provided the support to customize the annotation resize  cursor type in PDF Viewer.
 - `#268715` - Exposed the 'Not Approved' stamp annotation under dynamic stamp type.
 
 #### Bug Fixes
+
+- `#I271163` - Errors will no longer occur when the print module in disabled state.
+- `#I268829` - Now, the deleted annotations are removed properly from the PDF document.
 
 - `#271163` - Errors will no longer occur when the print module in disabled state.
 - `#268829` - Now, the deleted annotations are removed properly from the PDF document.
@@ -759,12 +1041,22 @@
 
 #### New Features
 
+- `#I268975` - Exposed the event for notifying page mouse over action.
+- `#I264529` - Exposed the volume calibrate annotation depth value in annotationSelect event arguments and provide options to edit the depth value.
+- `#I263297`, `#I268677` - Provided the options to enable and disable the tile rendering mode.
+- `#I263473` - Provided the isLock options to  individual annotation object level.
+
 - `#268975` - Exposed the event for notifying page mouse over action.
 - `#264529` - Exposed the volume calibrate annotation depth value in annotationSelect event arguments and provide options to edit the depth value.
 - `#263297`, `#268677` - Provided the options to enable and disable the tile rendering mode.
 - `#263473` - Provided the isLock options to  individual annotation object level.
 
 #### Bug Fixes
+
+- `#I269004` – The typo errors in PDF Viewer JSON objects has been resolved.
+- `#I266218`, `#I266559` - The import/export form fields are now working properly for the form fields data contains special characters.
+- `#I268505` - Download is now working properly for different culture settings.
+- `#I268109` - The updated label content is now preserved properly in the exported annotation data.
 
 - `#269004` – The typo errors in PDF Viewer JSON objects has been resolved.
 - `#266218`, `#266559` - The import/export form fields are now working properly for the form fields data contains special characters.
@@ -776,6 +1068,17 @@
 ### PDF Viewer
 
 #### New Features
+
+- `#I235592` - Provided the support for setting the lower zoomfactor value to the PDF Viewer control.
+- `#I259521` - Provided the support for importing the form fields data from JSON object.
+- `#I261558` - Provided the support for customizing the distance measurement annotation leader length property.
+- `#I256687` - Provided the support for setting the custom data for annotation objects.
+- `#I252340` - Provided the support for setting the minimum or maximum size and isLock properties at individual annotation level.
+- `#I262008` - Exposed the event for notifying annotation mouse over action.
+- `#F149148` - Provided the binding support for the enableFormFields property.
+- `#I258769` - Provided the option to suppress the error dialog in PDF Viewer.
+- `#I261269` - Provided the support to allow credential for XMLHttpRequest in PDF Viewer.
+- `#I262787` - Exposed the event to notify the getPDFDocumentTexts method completed for all the pages.
 
 - `#235592` - Provided the support for setting the lower zoomfactor value to the PDF Viewer control.
 - `#259521` - Provided the support for importing the form fields data from JSON object.
@@ -790,6 +1093,10 @@
 
 #### Bug Fixes
 
+- `#I262525` – The render PDF pages method triggers properly for the provided PDF document.
+- `#I262692` - The text markup resizer position is now updated properly for the provided document.
+- `#I262692` - The text content bounds are now rendered properly for the provided document.
+
 - `#262525` – The render PDF pages method triggers properly for the provided PDF document.
 - `#262692` - The text markup resizer position is now updated properly for the provided document.
 - `#262692` - The text content bounds are now rendered properly for the provided document.
@@ -800,6 +1107,8 @@
 
 #### New Features
 
+- `#I262787` - Exposed the event to notify the getPDFDocumentTexts method completed for all the pages.
+
 - `#262787` - Exposed the event to notify the getPDFDocumentTexts method completed for all the pages.
 
 ## 17.4.49 (2020-02-11)
@@ -807,6 +1116,9 @@
 ### PDF Viewer
 
 #### New Features
+
+- `#I258769` - Provided the option to suppress the error dialog in PDF Viewer.
+- `#I261269` - Provided the support to allow credential for XMLHttpRequest in PDF Viewer.
 
 - `258769` - Provided the option to suppress the error dialog in PDF Viewer.
 - `261269` - Provided the support to allow credential for XMLHttpRequest in PDF Viewer.
@@ -816,6 +1128,12 @@
 ### PDF Viewer
 
 #### New Features
+
+- `#I258172` - Provided the support to open the command panel while loading the PDF document if the isCommandPanelOpen property is set to true.
+- `#I259159` - Provided the support to open the thumbnail view panel while loading the PDF document if the isThumbnailViewOpen property is set to true.
+- `#I259961` - Exposed the annotation label settings value in the annotationAdd event arguments.
+- `#I259615` - Exposed the annotation label settings value in import/export JSON data.
+- `#I256596` - Exposed the annotation selector settings value for individual annotation objects and import/export JSON data.
 
 - `258172` - Provided the support to open the command panel while loading the PDF document if the isCommandPanelOpen property is set to true.
 - `259159` - Provided the support to open the thumbnail view panel while loading the PDF document if the isThumbnailViewOpen property is set to true.
@@ -829,9 +1147,16 @@
 
 #### New Features
 
+- `#I257519` - Provided Support to edit the free Text annotation value in code behind.
+
 - `#257519` - Provided Support to edit the free Text annotation value in code behind.
 
 #### Bug Fixes
+
+- `#I259848` – Now, the deleted annotations are removed properly from the PDF document.
+- `#I259734` - Custom Stamp annotations are drawn properly while importing the annotations.
+- `#I260512` - Errors will no longer occur while importing the annotations in the documentLoad event.
+- `#I260575` - The download file name is now set properly if we provide during the control initialization.
 
 - `#259848` – Now, the deleted annotations are removed properly from the PDF document.
 - `#259734` - Custom Stamp annotations are drawn properly while importing the annotations.
@@ -844,10 +1169,18 @@
 
 #### New Features
 
+- `#I255057` – Provided the support for validating the form fields value whether it is filled or not in the loaded PDF document.
+- `#I258786`, `#I259327` – Provided the support for exporting and importing the handwritten signature.
+
 - `#255057` – Provided the support for validating the form fields value whether it is filled or not in the loaded PDF document.
 - `#258786`, `#259327` – Provided the support for exporting and importing the handwritten signature.
 
 #### Bug Fixes
+
+- `#I149882` – The downloadEnd event triggers properly if we save the document in server side.
+- `#I257630` – The importSuccess event triggers properly if we save the document in server side.
+- `#I260295` – The distance calibrate annotation now resized properly.
+- `#I260128` – The volume and area calibrate annotation fill color is updated correctly on importing the annotations.
 
 - `#149882` – The downloadEnd event triggers properly if we save the document in server side.
 - `#257630` – The importSuccess event triggers properly if we save the document in server side.
@@ -860,11 +1193,24 @@
 
 #### New Features
 
+- `#I257514` – Provided the support for import/export the custom stamp annotations.
+- `#I257231` – Exposed the property to access the search count value.
+- `#I258386` – Exposed the API to retrieve the text content and bounds along with page size details.
+
 - `#257514` – Provided the support for import/export the custom stamp annotations.
 - `#257231` – Exposed the property to access the search count value.
 - `#258386` – Exposed the API to retrieve the text content and bounds along with page size details.
 
 #### Bug Fixes
+
+- `#I259524` – Annotations are rendered properly in the large page size document if the page rendered in fitToPage mode initially.
+- `#I259523` – Errors will no longer occur while exporting the annotation if the document contains text web link annotation.
+- `#I259134` – The annotationSelect event now triggers properly if we add the multiple annotations to a page.
+- `#I258949` – The opacity value is now applied properly if set it on annotation during initialization.
+- `#I259383` – The errors will no longer occur if we import the annotations after deleting the added annotations.
+- `#I259166` – The text content will be selected properly at the end of the page.
+- `#I259078` – The annotations will now be created if we resize the annotation through multipage.
+- `#I259564` – The Null reference error will no longer occur while loading the provided PDF document.
 
 - `#259524` – Annotations are rendered properly in the large page size document if the page rendered in fitToPage mode initially.
 - `#259523` – Errors will no longer occur while exporting the annotation if the document contains text web link annotation.
@@ -881,9 +1227,13 @@
 
 #### New Features
 
+- `#I256131` – Improved the rendering quality and performance for the large size PDF document.
+
 - `#256131` – Improved the rendering quality and performance for the large size PDF document.
 
 #### Bug Fixes
+
+- `#I258250` – The imported annotations are rendered properly if we import the annotation details in the documentLoad event.
 
 - `#258250` – The imported annotations are rendered properly if we import the annotation details in the documentLoad event.
 
@@ -893,6 +1243,12 @@
 
 #### New Features
 
+- `#I251150` – Provided the support to find the interlinked annotations while selecting the annotations.
+- `#I243077` , `#I241487`, `#I244802`, `#I252340` – Provided the support for setting the annotation UI properties.
+- `#I254634` – Provided the support to maintain the aspect ratio for custom stamp annotation.
+- `#I253745`, `#I256518` – Exposed the event to notify the annotation object being moved.
+- `#I254275` – Exposed the event to notify the download process in the PDF Viewer control.
+
 - `#251150` – Provided the support to find the interlinked annotations while selecting the annotations.
 - `#243077` , `#241487`, `#244802`, `#252340` – Provided the support for setting the annotation UI properties.
 - `#254634` – Provided the support to maintain the aspect ratio for custom stamp annotation.
@@ -900,6 +1256,22 @@
 - `#254275` – Exposed the event to notify the download process in the PDF Viewer control.
 
 #### Bug Fixes
+
+- `#I253751` – Resolved the typo error in annotation exported data.
+- `#I255345` – Errors will no longer occur while rendering the annotation in the Firefox browser.
+- `#I255137` – Errors will no longer occur in mobile view mode if we set the Pan interaction mode.
+- `#I253704` – The form fields are downloaded properly while loading the PDF document in tab control.
+- `#I253745` – The annotationAdd and annotationPropertiesChange events are triggered properly for the annotations.
+- `#I252881` – The toolbar settings property is working for mobile device.
+- `#I255042`, `#I255073` – Errors will no longer occur if the session storage exceeds the maximum limit.
+- `#I254115`, `#I254942` – The annotation modified date is preserved properly in different localization.
+- `#I256044` – The font family and text alignment are rendered properly from the exported FreeText annotation data.
+- `#I255124` – The text markup annotations are now added properly if the PDF Viewer element ID contains characters.
+- `#I256220` – The context menu will now be shown/hidden properly if we disable the default toolbar.
+- `#I256131` – The annotation toolbar will now be shown/hidden properly if we disable the annotation toolbar.
+- `#I256932` - Errors will no longer occur while resizing the text markup annotations.
+- `#I252805` – The annotationId value is now preserved properly for all annotation events.
+- `#I255647` - The form fields contents are rendered properly in the printed document, which has been printed in IE browser.
 
 - `#253751` – Resolved the typo error in annotation exported data.
 - `#255345` – Errors will no longer occur while rendering the annotation in the Firefox browser.
@@ -923,12 +1295,19 @@
 
 #### New Features
 
+- `#I251151`, `#I254032` – Improved the annotation selection behavior in code behind.
+- `#I254776`, `#I255304` – Provided the support to set the custom JSON data for AJAX request.
+- `#I253341` – Provided the support to customize the label content during initial rendering of annotations.
+- `#I252421` – Provided the support to set the zoom mode value during initial loading.
+
 - `#251151`, `#254032` – Improved the annotation selection behavior in code behind.
 - `#254776`, `#255304` – Provided the support to set the custom JSON data for AJAX request.
 - `#253341` – Provided the support to customize the label content during initial rendering of annotations.
 - `#252421` – Provided the support to set the zoom mode value during initial loading.
 
 #### Bug Fixes
+
+- `#I253926` – Resolved the memory leak while rendering the PDF documents.
 
 - `#253926` – Resolved the memory leak while rendering the PDF documents.
 
@@ -938,11 +1317,19 @@
 
 #### New Features
 
+- `#I251151`, `#I254032` – Provided the support for annotation selection in code behind.
+- `#I249245` – Provided the support for UI customization of annotation selector border and resizer.
+- Improved the PDF viewer mobile view performance.
+
 - `#251151`, `#254032` – Provided the support for annotation selection in code behind.
 - `#249245` – Provided the support for UI customization of annotation selector border and resizer.
 - Improved the PDF viewer mobile view performance.
 
 #### Bug Fixes
+
+- `#I253317` – The measured annotation value is updated properly in the label when you disable the default toolbar.
+- `#I253888` – The Script error will no longer be thrown if we load the PDF documents using ASP.NET MVC web service.
+- `#I253317` – The measured value is now update properly for the measured annotation.
 
 - `#253317` – The measured annotation value is updated properly in the label when you disable the default toolbar.
 - `#253888` – The Script error will no longer be thrown if we load the PDF documents using ASP.NET MVC web service.
@@ -954,9 +1341,17 @@
 
 #### New Features
 
+- `#I252805` - Exposed the annotation unique ID in the annotationAdd event arguments.
+
 - `#252805` - Exposed the annotation unique ID in the annotationAdd event arguments.
 
 #### Bug Fixes
+
+- `#I252806` - Annotation bounds are retrieved properly when importing and exporting the annotation details in rotated PDF documents.
+- `#I253016` - Free text annotation bounds are preserved properly in the rotated PDF document while saving the document.
+- `#I251152` - Text markup annotation resizer position will be updated properly in the doctype HTML pages.
+- `#I252879` - Script errors will no longer occur if we disable the magnification module.
+- `#I253504` - The character start and end indexes will be updated properly in the text markup annotationAdd event arguments.
 
 - `#252806` - Annotation bounds are retrieved properly when importing and exporting the annotation details in rotated PDF documents.
 - `#253016` - Free text annotation bounds are preserved properly in the rotated PDF document while saving the document.
@@ -970,10 +1365,19 @@
 
 #### New Features
 
+- `#I252111` - Provided the support for handwritten signature.
+- `#I251149` - Provided the support for customizing the text search highlight color.
+
 - `#252111` - Provided the support for handwritten signature.
 - `#251149` - Provided the support for customizing the text search highlight color.
 
 #### Bug Fixes
+
+- `#I251864` - The pages in the landscape document will be rendered properly.
+- `#I250902` - Now, the text Markup annotations are working properly inside the Tab control.
+- `#I250538` - The ajaxRequestFailed event will be triggered for all the possible ajax error codes.
+- `#I252269` – The mouse cursor has been updated properly after adding the free text annotation.
+- `#I251401` - The annotationSelect event will be triggered properly while selecting the annotations.
 
 - `#251864` - The pages in the landscape document will be rendered properly.
 - `#250902` - Now, the text Markup annotations are working properly inside the Tab control.
@@ -987,12 +1391,24 @@
 
 #### New Features
 
+- `#I249703` - The quality of the printed copy has been improved.
+- `#I147267`, `#I251146` - Provided the support to delete the annotations in code behind.
+- `#I248609` - Provided the support to customize the annotation selector.
+- `#I247224`, `#I248179` - Provided the support to resize the text markup annotation bounds.
+
 - `#249703` - The quality of the printed copy has been improved.
 - `#147267`, `#251146` - Provided the support to delete the annotations in code behind.
 - `#248609` - Provided the support to customize the annotation selector.
 - `#247224`, `#248179` - Provided the support to resize the text markup annotation bounds.
 
 #### Bug Fixes
+
+- `#I251577` - The value of the isDocumentEdited property now returned properly for shapes, measure, stamps annotation and form filling features.
+- `#I249588` - The PDF Viewer control size is updated properly while using in tab control.
+- `#I251729` - The text markup annotation selector is cleared properly when loading the another PDF document.
+- `#I251742` - The perimeter shape type has been updated properly when exporting the annotation details.
+- `#I251494` - The reference error will no longer be thrown if you render the PDF document in docker Linux container environment.
+- `#I251153` – The previously imported annotations are no more cleared when import the other set of annotations.
 
 - `#251577` - The value of the isDocumentEdited property now returned properly for shapes, measure, stamps annotation and form filling features.
 - `#249588` - The PDF Viewer control size is updated properly while using in tab control.
@@ -1007,9 +1423,14 @@
 
 #### New Features
 
+- `#I248585` - The start and end indexes of text markup annotation have been exposed in the annotationAdd event.
+
 - `#248585` - The start and end indexes of text markup annotation have been exposed in the annotationAdd event.
 
 #### Bug Fixes
+
+- `#I249742` - The annotationSelect event will be triggered properly after selecting another text markup annotation.
+- `#I245008` - Notes of the measure annotations will now be updated properly after modifying the scale values.
 
 - `#249742` - The annotationSelect event will be triggered properly after selecting another text markup annotation.
 - `#245008` - Notes of the measure annotations will now be updated properly after modifying the scale values.
@@ -1020,10 +1441,15 @@
 
 #### New Features
 
+- `#I249725` - Provided the support to enable or disable the comment panel.
+- `#I248609` -  Exposed the API for textSelectionStart and textSelectionEnd events in the PDF Viewer.
+
 - `#249725` - Provided the support to enable or disable the comment panel.
 - `#248609` -  Exposed the API for textSelectionStart and textSelectionEnd events in the PDF Viewer.
 
 #### Bug Fixes
+
+- `#I249017` - Multiline text markup annotation bounds will be returned properly in the annotationAdd event arguments.
 
 - `#249017` - Multiline text markup annotation bounds will be returned properly in the annotationAdd event arguments.
 
@@ -1033,6 +1459,13 @@
 
 #### New Features
 
+- `#I227046`, `#I230887`, `#I142366`, `#I231973`, `#I237847`, `#I244849`, `#I238686`, `#I239233`, `#I241638`, `#I241638`, `#I242232`, `#I239221`, `#I240051`, `#I245255` – The support has been provided for filling the form fields.
+- `#I233655`, `#I236240`, `#I236825`, `#I238694`, `#I241974`, `#I243864`, `#I245087` – The support has been provided for free text annotation.
+- `#I246059` - Exposed the thumbnailClick event to identify the thumbnail clicks action.
+- `#I246767` – The support has been provided to export the annotation details as JSON object in client-side.
+- `#I245008` – The support has been provided to update the existing calibrate annotation if we modify the scale value.
+- Improved the scrolling performance in mobile devices.
+
 - `#227046`, `#230887`, `#142366`, `#231973`, `#237847`, `#244849`, `#238686`, `#239233`, `#241638`, `#241638`, `#242232`, `#239221`, `#240051`, `#245255` – The support has been provided for filling the form fields.
 - `#233655`, `#236240`, `#236825`, `#238694`, `#241974`, `#243864`, `#245087` – The support has been provided for free text annotation.
 - `#246059` - Exposed the thumbnailClick event to identify the thumbnail clicks action.
@@ -1041,6 +1474,13 @@
 - Improved the scrolling performance in mobile devices.
 
 #### Bug Fixes
+
+- `#I247914` – The perimeter annotation will be rendered properly when the line is ended in the starting point.
+- `#I248062` – Extra edge will not be added to the polygon shapes when rendered in the page.
+- `#I248092` – Contents will not be swapped if you switch randomly between two documents.
+- `#I248093` – Script error will no longer be thrown if you switch randomly between two documents.
+- `#I247787` – The searched text will be highlighted properly in the provided document.
+- `#I146785` – Script error will no longer be thrown when the PDF Viewer control is used in the React application.
 
 - `#247914` – The perimeter annotation will be rendered properly when the line is ended in the starting point.
 - `#248062` – Extra edge will not be added to the polygon shapes when rendered in the page.
@@ -1055,6 +1495,13 @@
 
 #### New Features
 
+- `#I227046`, `#I230887`, `#I142366`, `#I231973`, `#I237847`, `#I244849`, `#I238686`, `#I239233`, `#I241638`, `#I241638`, `#I242232`, `#I239221`, `#I240051`, `#I245255` – The support has been provided for filling the form fields.
+- `#I233655`, `#I236240`, `#I236825`, `#I238694`, `#I241974`, `#I243864`, `#I245087` – The support has been provided for free text annotation.
+- `#I246059` - Exposed the thumbnailClick event to identify the thumbnail clicks action.
+- `#I246767` – The support has been provided to export the annotation details as JSON object in client-side.
+- `#I245008` – The support has been provided to update the existing calibrate annotation if we modify the scale value.
+- Improved the scrolling performance in mobile devices.
+
 - `#227046`, `#230887`, `#142366`, `#231973`, `#I237847`, `#244849`, `#238686`, `#239233`, `#241638`, `#241638`, `#242232`, `#239221`, `#240051`, `#245255` – The support has been provided for filling the form fields.
 - `#233655`, `#236240`, `#236825`, `#238694`, `#241974`, `#243864`, `#245087` – The support has been provided for free text annotation.
 - `#246059` - Exposed the thumbnailClick event to identify the thumbnail clicks action.
@@ -1068,6 +1515,12 @@
 
 #### Bug Fixes
 
+- `#I246044` – The assigned author name is now preserved properly while loading or saving the document in PDF Viewer.
+- `#I245087` – The Polygon, Perimeter, and Volume annotations will be drawn properly in the low zoom values.
+- `#I245820` - Magnification on double tap will no longer happen when the pinch zoom is disabled in the PDF Viewer control.
+- `#I244787` – The Comment panel is now opened properly while double clicking the annotation created from the code behind.
+- `#I246041` - The warning message will no longer be thrown when the web action method is executed.
+
 - `#246044` – The assigned author name is now preserved properly while loading or saving the document in PDF Viewer.
 - `#245087` – The Polygon, Perimeter, and Volume annotations will be drawn properly in the low zoom values.
 - `#245820` - Magnification on double tap will no longer happen when the pinch zoom is disabled in the PDF Viewer control.
@@ -1080,11 +1533,18 @@
 
 #### New Features
 
+- `#I243205`, `#I245009` - Provided the support to include Custom stamps in stamp dropdown.
+- `#I243133` - Provided the support to customize tooltip of the hyperlink on mouse hover.
+- `#I245007` - Provided the Feet unit support in measurement annotation.
+
 - `#243205`, `#245009` - Provided the support to include Custom stamps in stamp dropdown.
 - `#243133` - Provided the support to customize tooltip of the hyperlink on mouse hover.
 - `#245007` - Provided the Feet unit support in measurement annotation.
 
 #### Bug Fixes
+
+- `#I244499` - The shape and measurement annotations will now be rendered properly in the rotated documents.
+- `#I244481` - The script errors will no longer be thrown in PDF Viewer in IE browser.
 
 - `#244499` - The shape and measurement annotations will now be rendered properly in the rotated documents.
 - `#244481` - The script errors will no longer be thrown in PDF Viewer in IE browser.
@@ -1103,9 +1563,13 @@
 
 #### New Features
 
+- `#I223065`, `#I234860`, `#I241770`, `#I241487`, `#I229426`, `#I244801` – Provided the support for importing and exporting the annotation details as a JSON object.
+
 - `#223065`, `#234860`, `#241770`, `#241487`, `#229426`, `#244801` – Provided the support for importing and exporting the annotation details as a JSON object.
 
 #### Bug Fixes
+
+- `#I243837` – Exception will no longer be thrown while loading the PDF document as FileStream.
 
 - `#243837` – Exception will no longer be thrown while loading the PDF document as FileStream.
 
@@ -1114,6 +1578,13 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I241487`, `#I243077` - Annotation author name is now updated properly in the comment panel.
+- `#I242804` - The Bookmark's destination value is now maintained properly during navigation.
+- `#I241487` - The provided PDF document will now be loaded properly in the PDF Viewer control.
+- `#I244437` - Resolved the typo errors in the PDF Viewer toolbar content.
+- `#I244654` - The editAnnotation API is now working properly.
+- `#I243134` - The PDF documents load properly when render the PDF Viewer control under multiple tab with fitToPage view mode during initial loading.
 
 - `#241487`, `#243077` - Annotation author name is now updated properly in the comment panel.
 - `#242804` - The Bookmark's destination value is now maintained properly during navigation.
@@ -1128,10 +1599,18 @@
 
 #### New Features
 
+- `#I242329` - Provided the support to customize scale ratio value of measurement annotation.
+- `#I241886` - Provided the support to display context menu in mouse up action.
+
 - `#242329` - Provided the support to customize scale ratio value of measurement annotation.
 - `#241886` - Provided the support to display context menu in mouse up action.
 
 #### Bug Fixes
+
+- `#I242495`, `#I243160` – Hyperlink element is now rendered properly for the rotated page document.
+- `#I238064` – Searched target text is now highlighted properly for the provided document.
+- `#I241904`, `#I241294` – Converted PDF document is now rendered properly in IE browser.
+- `#I242282` – Text search is now working properly while using PDF Viewer control inside the Tab control.
 
 - `#242495`, `#243160` – Hyperlink element is now rendered properly for the rotated page document.
 - `#238064` – Searched target text is now highlighted properly for the provided document.
@@ -1144,11 +1623,17 @@
 
 #### New Features
 
+- `#I240440` - More details have been provided in the ajaxRequestfailure event.
+- `#I242375` – Now, the annotation edit toolbar is enabled by default using the enableAnnotationToolbar property.
+- `#I241715` - Support has been provided to render the annotation modified date and time in the comment panel.
+
 - `#240440` - More details have been provided in the ajaxRequestfailure event.
 - `#242375` – Now, the annotation edit toolbar is enabled by default using the enableAnnotationToolbar property.
 - `#241715` - Support has been provided to render the annotation modified date and time in the comment panel.
 
 #### Bug Fixes
+
+- `#I242803` - The request handling has been optimized for retrieving the comments details from the PDF document.
 
 - `#242803` - The request handling has been optimized for retrieving the comments details from the PDF document.
 
@@ -1165,6 +1650,8 @@
 ### PDF Viewer
 
 #### Bug Fixes
+
+- `#I229426` - Provided the API to select, edit, and delete the annotations.
 
 - `#229426` - Provided the API to select, edit, and delete the annotations.
 
@@ -1192,6 +1679,13 @@
 
 #### New Features
 
+- `#I208298`, `#I223253`, `#I224643`, `#I233655`, `#I238694` - Provided the supports for shape annotations.
+- `#I219446`, `#I224643`, `#I230115`, `#I233032`, `#F144297`, `#I236825`, `#I238694` - Provided the supports for stamp annotations.
+- `#I229426` - Provided the supports for calibrate annotations.
+- `#I223253`, `#I238694` - Provided the supports for sticky notes annotations.
+- `#I238812` – Provided support to restrict the hyperlink navigation.
+- `#I236995` – Provided support to restrict the pinch zooming using the ‘enablePinchZoom’ property.
+
 - `#208298`, `#223253`, `#224643`, `#233655`, `#238694` - Provided the supports for shape annotations.
 - `#219446`, `#224643`, `#230115`, `#233032`, `#F144297`, `#236825`, `#238694` - Provided the supports for stamp annotations.
 - `#229426` - Provided the supports for calibrate annotations.
@@ -1200,6 +1694,13 @@
 - `#236995` – Provided support to restrict the pinch zooming using the ‘enablePinchZoom’ property.
 
 #### Bug Fixes
+
+- `#I233161` – Now, loading Indicator will be shown properly while loading a large page size document.
+- `#I233035` - HyperlinkClick event is now triggered properly.
+- `#I234364` - Pan interaction mode is now working properly when the toolbar is disabled.
+- `#I231436` - PDF document is now rendered properly while using the PDF Viewer control inside Tab control.
+- `#I232104` - Cleared the warnings in css files.
+- `#I238761` - Height of the PDF Viewer control is now maintained properly when using inside the tab control.
 
 - `#233161` – Now, loading Indicator will be shown properly while loading a large page size document.
 - `#233035` - HyperlinkClick event is now triggered properly.
@@ -1232,12 +1733,23 @@
 
 #### New Features
 
+- `#I208298`, `#I223253`, `#I224643`, `#I233655`, `#I238694` - Provided the supports for shape annotations.
+- `#I219446`, `#I224643`, `#I230115`, `#I233032`, `#F144297`, `#I236825`, `#I238694` - Provided the supports for stamp annotations.
+- `#I229426` - Provided the supports for calibrate annotations.
+- `#I223253`, `#I238694` - Provided the supports for sticky notes annotations.
+
 - `#208298`, `#223253`, `#224643`, `#233655`, `#238694` - Provided the supports for shape annotations.
 - `#219446`, `#224643`, `#230115`, `#233032`, `#F144297`, `#236825`, `#238694` - Provided the supports for stamp annotations.
 - `#229426` - Provided the supports for calibrate annotations.
 - `#223253`, `#238694` - Provided the supports for sticky notes annotations.
 
 #### Bug Fixes
+
+- `#I233161` – Now, loading Indicator will be shown properly while loading a large page size document.
+- `#I233035` - HyperlinkClick event is now triggered properly.
+- `#I234364` - Pan interaction mode is now working properly when the toolbar is disabled.
+- `#I231436` - PDF document is now rendered properly while using the PDF Viewer control inside Tab control.
+- `#I232104` - Cleared the warnings in css files.
 
 - `#233161` – Now, loading Indicator will be shown properly while loading a large page size document.
 - `#233035` - HyperlinkClick event is now triggered properly.
@@ -1383,7 +1895,22 @@
 
 ### PDF Viewer
 
+#### Bug Fixes
+
 The PDF Viewer component enables you to view and print the PDF files.
+
+
+- Both normal and PDF files protected with AES and RC4 encryption can be opened and displayed.
+- Core interactions are included: scrolling, zooming, panning, and page navigation.
+- Built-in toolbar.
+- Text can be selected and copied from PDF files.
+- Text can be easily searched for across the PDF document.
+- Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and a table of contents.
+- Two view modes are included: fit-to-page and fit-to-width.
+- An entire document or a specific page can be printed directly from the browser.
+
+
+undefinedThe PDF Viewer component enables you to view and print the PDF files.
 
 
 - Both normal and PDF files protected with AES and RC4 encryption can be opened and displayed.
