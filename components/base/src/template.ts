@@ -9,7 +9,7 @@ import {
   getValue,
 } from "@syncfusion/ej2-base";
 
-import { aVue, allVue, gh } from "./component-base";
+import { aVue, allVue, isExecute } from "./component-base";
 
 // tslint:disable:no-any
 let stringCompiler: (
@@ -33,7 +33,7 @@ export function compile(
         innerHTML: '<div id="' + id + '"></div>',
       });
       document.body.appendChild(ele);
-      if (gh && typeof templateElement === "string") {
+      if (!isExecute && typeof templateElement === "string") {
         let vueSlot: any = getCurrentVueSlot(context.vueInstance, templateElement, root);
         if (vueSlot) {
           // Compilation for Vue 3 slot template
@@ -55,7 +55,7 @@ export function compile(
           detach(ele);
           return stringCompiler(templateElement, helper)(data);
         }
-      } else if (gh) {
+      } else if (!isExecute) {
         // Compilation for Vue 3 functional template
         let tempObj: any = templateElement.call(that, {});
         let object: any = tempObj;

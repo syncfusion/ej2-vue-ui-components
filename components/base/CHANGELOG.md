@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 20.2.44 (2022-08-16)
+## 20.3.47 (2022-09-29)
 
 ### Common
 
-#### Bug Fixes
+#### New Features
 
-- `#I385176` - The issue with the `vue-class-component` is not removed in vue 2 has been resolved.
+- `#I404540`, `#I403034`, `#F176393` - Provided the Vue 2.7 compatible support for the Vue components.
 
 ## 20.2.36 (2022-06-30)
 
@@ -19,10 +19,10 @@
 - Provided the TypeScript 4.7 compatible support for the Vue components.
 - Provided the option to register the license key by using the `npx` command. Follow these steps to register the license using the `npx` command:
 
-| The `npx` command |
+| The `npx` command | 
 |---|
-| Install the Syncfusion packages from `npm`. |
-| Add the license key either in the environment variable `SYNCFUSION_LICENSE` or in the `syncfusion-license.txt` text file. |
+| Install the Syncfusion packages from `npm`. | 
+| Add the license key either in the environment variable `SYNCFUSION_LICENSE` or in the `syncfusion-license.txt` text file. | 
 | Run the command `npx syncfusion-license activate` to automatically register the license. |
 
 ## 20.1.61 (2022-06-21)

@@ -1,5 +1,5 @@
 import { Options } from 'vue-class-component';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { TreeMap } from '@syncfusion/ej2-treemap';
@@ -16,14 +16,12 @@ export const props = testProp[0];
 export const watch = testProp[1];
 
 export const emitProbs: any = Object.keys(watch);
-emitProbs.push('modelchanged');
+emitProbs.push('modelchanged', 'update:modelValue');
 for (let props of modelProps) {
     emitProbs.push(
         'update:'+props
     );
 }
-
-export const isExecute: any = gh ? false : true;
 
 /**
  * Represents Vuejs TreeMap Component
@@ -117,10 +115,10 @@ export class TreeMapComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-        let h: any = gh || createElement;
+        let h: any = !isExecute ? gh : createElement;
         let slots: any = null;
         if(!isNullOrUndefined((this as any).$slots.default)) {
-            slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
+            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
     }

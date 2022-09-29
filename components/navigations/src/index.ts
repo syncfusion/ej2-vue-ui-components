@@ -14,3 +14,4 @@ export { TreeViewComponent, TreeViewPlugin } from './treeview/treeview.component
 export { SidebarComponent, SidebarPlugin } from './sidebar/sidebar.component';
 export { MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin } from './menu/items.directive';
 export { MenuComponent, MenuPlugin } from './menu/menu.component';
+export { AppBarComponent, AppBarPlugin } from './appbar/appbar.component';

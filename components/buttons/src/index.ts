@@ -5,3 +5,6 @@ export { RadioButtonComponent, RadioButtonPlugin } from './radio-button/radiobut
 export { SwitchComponent, SwitchPlugin } from './switch/switch.component';
 export { ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin } from './chips/chips.directive';
 export { ChipListComponent, ChipListPlugin } from './chips/chiplist.component';
+export { FabComponent, FabPlugin } from './floating-action-button/fab.component';
+export { SpeedDialItemsDirective, SpeedDialItemDirective, SpeedDialItemsPlugin, SpeedDialItemPlugin } from './speed-dial/items.directive';
+export { SpeedDialComponent, SpeedDialPlugin } from './speed-dial/speeddial.component';

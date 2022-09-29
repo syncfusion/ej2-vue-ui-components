@@ -5,3 +5,4 @@ export { AutoCompleteComponent, AutoCompletePlugin } from './auto-complete/autoc
 export { MultiSelectComponent, MultiSelectPlugin } from './multi-select/multiselect.component';
 export { ListBoxComponent, ListBoxPlugin } from './list-box/listbox.component';
 export { DropDownTreeComponent, DropDownTreePlugin } from './drop-down-tree/dropdowntree.component';
+export { MentionComponent, MentionPlugin } from './mention/mention.component';

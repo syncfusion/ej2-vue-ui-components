@@ -1,7 +1,7 @@
 {
 	"name": "@syncfusion/ej2-vue-inplace-editor",
-	"version": "20.2.38",
-	"description": "A package of Essential JS 2 Inplace editor components, which is used to edit and update the value dynamically in server. for Vue",
+	"version": "19.8.3",
+	"description": "A package of Essential JS 2 Inplace editor components, which is used to edit and update the value dynamically in server. for undefined",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
@@ -9,11 +9,7 @@
 		"Syncfusion",
 		"web-components",
 		"inplace-editor",
-		"editor",
-		"vue",
-		"vue-inplace-editor",
-		"vue-inplace-editor-component",
-		"ej2-vue-inplace-editor"
+		"editor"
 	],
 	"repository": {
 		"type": "git",

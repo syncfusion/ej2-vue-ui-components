@@ -26,7 +26,7 @@ import Vue from 'vue';
  
  export const allVue: any = aVue;
  export const gh: any = allVue.h;
- export const isExecute: any = gh ? false : true;
+ export const isExecute: any = (parseInt(allVue.version) > 2) ? false : true;
  
  let vueImport: any;
  
@@ -85,7 +85,7 @@ import Vue from 'vue';
  
      public mounted(): void {
          let cusEle: any = this.$el ? this.$el.querySelectorAll("div.e-directive") : null;
-         if (gh && cusEle) {
+         if (!isExecute && cusEle) {
              for (let i: number = 0; i < cusEle.length; i++) {
                  cusEle[i].parentElement && cusEle[i].parentElement.removeChild(cusEle[i]);
              }

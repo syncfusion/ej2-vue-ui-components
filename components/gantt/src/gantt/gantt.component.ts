@@ -1,6 +1,6 @@
 import { Options } from 'vue-class-component';
 import { isUndefined } from '@syncfusion/ej2-base';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { Gantt } from '@syncfusion/ej2-gantt';
@@ -27,8 +27,6 @@ for (let props of modelProps) {
         'update:'+props
     );
 }
-
-export const isExecute: any = gh ? false : true;
 
 /**
  * `ejs-gantt` represents the VueJS Gantt Component.
@@ -163,10 +161,10 @@ export class GanttComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-        let h: any = gh || createElement;
+        let h: any = !isExecute ? gh : createElement;
         let slots: any = null;
         if(!isNullOrUndefined((this as any).$slots.default)) {
-            slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
+            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
     }
@@ -174,7 +172,7 @@ export class GanttComponent extends ComponentBase {
         this.updated();
     }
     
-    public addPredecessor(id: number, predecessorString: string): void {
+    public addPredecessor(id: number | string, predecessorString: string): void {
         return this.ej2Instances.addPredecessor(id, predecessorString);
     }
 
@@ -206,7 +204,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.collapseAll();
     }
 
-    public collapseByID(id: number): void {
+    public collapseByID(id: number | string): void {
         return this.ej2Instances.collapseByID(id);
     }
 
@@ -238,7 +236,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.expandAll();
     }
 
-    public expandByID(id: number): void {
+    public expandByID(id: number | string): void {
         return this.ej2Instances.expandByID(id);
     }
 
@@ -330,7 +328,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.openAddDialog();
     }
 
-    public openEditDialog(taskId?: number): void {
+    public openEditDialog(taskId?: number | string): void {
         return this.ej2Instances.openEditDialog(taskId);
     }
 
@@ -350,7 +348,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.removeCriticalPathStyles();
     }
 
-    public removePredecessor(id: number): void {
+    public removePredecessor(id: number | string): void {
         return this.ej2Instances.removePredecessor(id);
     }
 
@@ -438,7 +436,7 @@ export class GanttComponent extends ComponentBase {
         return this.ej2Instances.updateDataSource(dataSource, args);
     }
 
-    public updatePredecessor(id: number, predecessorString: string): void {
+    public updatePredecessor(id: number | string, predecessorString: string): void {
         return this.ej2Instances.updatePredecessor(id, predecessorString);
     }
 
