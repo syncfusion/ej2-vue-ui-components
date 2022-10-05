@@ -267,15 +267,12 @@ import Vue from 'vue';
                        tempObj[key] = childSlot.props[key];
                    });
                  }
-                 if ((/[s]\b/).test(tagRef) && innerDirValues) {
-                    if (!(/[s]\b/).test(tagName) || innerDirValues.length) {
-                        items[tagName] = tempObj;
-                    } else {
-                        items[tagName].push(tempObj);
-                    }
-                } else {
+                 if (((/[s]\b/).test(tagRef) && innerDirValues) && (!(/[s]\b/).test(tagName) || innerDirValues.length)) {
+                    items[tagName] = tempObj;
+                 }
+                 else if (tempObj && Object.keys(tempObj).length !== 0) {
                     items[tagName].push(tempObj);
-                }
+                 }
               }
              return items;
       }

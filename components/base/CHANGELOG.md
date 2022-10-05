@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.3.48 (2022-10-05)
+
+### Common
+
+#### Bug Fixes
+
+- `#I400596` - The issue with "Tab throwing script error while enabling a tab item using `v-if`" has been resolved.
+
 ## 20.3.47 (2022-09-29)
 
 ### Common
