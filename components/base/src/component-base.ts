@@ -269,8 +269,7 @@ import Vue from 'vue';
                  }
                  if (((/[s]\b/).test(tagRef) && innerDirValues) && (!(/[s]\b/).test(tagName) || innerDirValues.length)) {
                     items[tagName] = tempObj;
-                 }
-                 else if (tempObj && Object.keys(tempObj).length !== 0) {
+                 } else (tempObj && Object.keys(tempObj).length !== 0) {
                     items[tagName].push(tempObj);
                  }
               }
