@@ -2,6 +2,29 @@
 
 ## [Unreleased]
 
+## 20.3.52 (2022-10-26)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I412377` - Axis labels are now rendering properly inside the chart.
+- `#F171844` - Console error while using shared tooltip has been fixed.
+
+## 20.3.50 (2022-10-18)
+
+### Chart
+
+#### Bug Fixes
+
+- `#F178096` - Chart axis range is now calculated properly after zooming the chart.
+
+### Bullet Chart
+
+#### Bug Fixes
+
+- `#F177357` - Data label gets cropped in Bullet Chart has been fixed.
+
 ## 20.3.49 (2022-10-11)
 
 ### Chart
