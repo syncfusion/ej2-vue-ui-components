@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 20.3.52 (2022-10-26)
+
+### Tree Grid
+
+#### Bug Fixes
+
+- `#I411501` - Checkbox-column selectAll behaviour works properly while clear searching.
+- `#I411372` - Confirmation dialog shows properly while expanding/collapsing actions on batch edit mode.
+
 ## 20.3.50 (2022-10-18)
 
 ### Tree Grid

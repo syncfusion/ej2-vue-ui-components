@@ -1,5 +1,5 @@
 import { Options } from 'vue-class-component';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { ProgressBar } from '@syncfusion/ej2-progressbar';
@@ -21,8 +21,6 @@ for (let props of modelProps) {
         'update:'+props
     );
 }
-
-export const isExecute: any = gh ? false : true;
 
 /**
  * Represents Vuejs ProgressBar Component
@@ -116,10 +114,10 @@ export class ProgressBarComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-        let h: any = gh || createElement;
+        let h: any = !isExecute ? gh : createElement;
         let slots: any = null;
         if(!isNullOrUndefined((this as any).$slots.default)) {
-            slots = gh ? (this as any).$slots.default() : (this as any).$slots.default;
+            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
     }

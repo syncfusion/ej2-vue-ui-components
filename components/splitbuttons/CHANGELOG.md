@@ -8,6 +8,14 @@
 
 #### Bug Fixes
 
+- `#I412776` - Select event is not triggered while using `closeActionEvents` in DropDownButton has been resolved.
+
+## 20.3.47 (2022-09-29)
+
+### DropDownButton
+
+#### Bug Fixes
+
 - `#I388868` - Script error occurs while using `beforeOpen` event in DropDownButton issue has been resolved
 
 ## 19.4.40 (2021-12-28)

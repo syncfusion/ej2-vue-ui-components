@@ -160,8 +160,8 @@ export class ImageEditorComponent extends ComponentBase {
         return this.ej2Instances.flip(direction);
     }
 
-    public freeHandDraw(value: boolean): void {
-        return this.ej2Instances.freeHandDraw(value);
+    public freehandDraw(value: boolean): void {
+        return this.ej2Instances.freehandDraw(value);
     }
 
     public getImageData(): Object {

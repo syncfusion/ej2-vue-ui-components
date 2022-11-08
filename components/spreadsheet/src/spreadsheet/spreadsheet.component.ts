@@ -425,8 +425,16 @@ export class SpreadsheetComponent extends ComponentBase {
         return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
     }
 
+    public setColumnsWidth(width: number, ranges?: string[]): void {
+        return this.ej2Instances.setColumnsWidth(width, ranges);
+    }
+
     public setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean): void {
         return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex, edited);
+    }
+
+    public setRowsHeight(height: number, ranges?: string[]): void {
+        return this.ej2Instances.setRowsHeight(height, ranges);
     }
 
     public showSpinner(): void {

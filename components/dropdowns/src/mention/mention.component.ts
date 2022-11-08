@@ -144,6 +144,10 @@ export class MentionComponent extends ComponentBase {
         return this.ej2Instances.hideSpinner();
     }
 
+    public renderTemplates(callBack?: any): void {
+        return this.ej2Instances.renderTemplates(callBack);
+    }
+
     public search(text: string, positionX: number, positionY: number): void {
         return this.ej2Instances.search(text, positionX, positionY);
     }
