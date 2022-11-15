@@ -203,6 +203,10 @@ export class ChartComponent extends ComponentBase {
         return this.ej2Instances.getLocalizedLabel(key);
     }
 
+    public isSecondaryAxis(axis: Object): boolean {
+        return this.ej2Instances.isSecondaryAxis(axis);
+    }
+
     public print(id?: string[] | string | Object): void {
         return this.ej2Instances.print(id);
     }

@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## 20.3.57 (2022-11-15)
+
+### NumericTextBox
+
+#### Bug Fixes
+
+- `#I417969` - The issue "Clear button does not working after the component is enabled" has been resolved.
+
+- `#I412717` - The issue "typing zero does not updated on two way binding numeric textbox" has been resolved.
+
+### TextBox
+
+#### Bug Fixes
+
+- `#I415324` - The issue "Refresh method is not working properly in TextBox component" has been resolved.
+
 ## 20.3.50 (2022-10-18)
 
 ### TextBox
