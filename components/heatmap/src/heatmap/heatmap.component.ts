@@ -1,25 +1,13 @@
-import { Options } from 'vue-class-component';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
+import Vue from 'vue';
+import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
+import { getValue } from '@syncfusion/ej2-base';
 
 import { HeatMap } from '@syncfusion/ej2-heatmap';
 
 
-// {{VueImport}}
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSelection', 'backgroundColor', 'cellSettings', 'dataSource', 'dataSourceSettings', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellRender', 'cellSelected', 'created', 'legendRender', 'load', 'loaded', 'resized', 'tooltipRender'];
 export const modelProps: string[] = [];
 
-export const testProp: any = getProps({props: properties});
-export const props = testProp[0];
-export const watch = testProp[1];
-
-export const emitProbs: any = Object.keys(watch);
-emitProbs.push('modelchanged', 'update:modelValue');
-for (let props of modelProps) {
-    emitProbs.push(
-        'update:'+props
-    );
-}
 
 /**
  * Represents Vuejs HeatMap Component
@@ -29,18 +17,7 @@ for (let props of modelProps) {
  */
 @EJComponentDecorator({
     props: properties
-},isExecute)
-
-/* Start Options({
-    props: props,
-    watch: watch,
-    emits: emitProbs,
-    provide: function provide() {
-        return {
-            custom: this.custom
-        };
-    }
-}) End */
+})
 
 export class HeatMapComponent extends ComponentBase {
     
@@ -51,11 +28,9 @@ export class HeatMapComponent extends ComponentBase {
     protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {};
     public tagNameMapper: Object = {};
-    public isVue3: boolean;
     public templateCollection: any;
     constructor() {
         super(arguments);
-        this.isVue3 = !isExecute;
         this.ej2Instances = new HeatMap({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -90,9 +65,6 @@ export class HeatMapComponent extends ComponentBase {
 
 
     public setProperties(prop: any, muteOnChange: boolean): void {
-        if(this.isVue3) {
-            this.models = !this.models ? this.ej2Instances.referModels : this.models;
-        }
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
@@ -100,12 +72,7 @@ export class HeatMapComponent extends ComponentBase {
             Object.keys(prop).map((key: string): void => {
                 this.models.map((model: string): void => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        if (this.isVue3) {
-                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
-                        } else {
-                            (this as any).$emit('update:' + key, prop[key]);
-                            (this as any).$emit('modelchanged', prop[key]);
-                        }
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
@@ -113,12 +80,7 @@ export class HeatMapComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-        let h: any = !isExecute ? gh : createElement;
-        let slots: any = null;
-        if(!isNullOrUndefined((this as any).$slots.default)) {
-            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
-        }
-        return h('div', slots);
+         return createElement('div', (this as any).$slots.default);
     }
     public custom(): void {
         this.updated();

@@ -1,7 +1,7 @@
 {
 	"name": "@syncfusion/ej2-vue-querybuilder",
-	"version": "20.3.50",
-	"description": "Essential JS 2 QueryBuilder for Vue",
+	"version": "20.3.56",
+	"description": "Essential JS 2 QueryBuilder for undefined",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
@@ -11,14 +11,7 @@
 		"ej2-query-builder",
 		"ej2-querybuilder",
 		"query-builder",
-		"querybuilder",
-		"vue",
-		"vuejs",
-		"vue-es5",
-		"ej2-vue-query-builder",
-		"ej2-vue-querybuilder",
-		"vue-query-builder",
-		"vue-querybuilder"
+		"querybuilder"
 	],
 	"repository": {
 		"type": "git",

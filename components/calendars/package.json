@@ -1,7 +1,7 @@
 {
 	"name": "@syncfusion/ej2-vue-calendars",
-	"version": "20.3.49",
-	"description": "A complete package of date or time components with built-in features such as date formatting, inline editing, multiple (range) selection, range restriction, month and year selection, strict mode, and globalization. for undefined",
+	"version": "20.3.56",
+	"description": "A complete package of date or time components with built-in features such as date formatting, inline editing, multiple (range) selection, range restriction, month and year selection, strict mode, and globalization. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
@@ -40,7 +40,10 @@
 		"end-date",
 		"time-format",
 		"rangepicker",
-		"month-picker"
+		"month-picker",
+		"vue",
+		"vue-calendars",
+		"ej2-vue-calendars"
 	],
 	"repository": {
 		"type": "git",
