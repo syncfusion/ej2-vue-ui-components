@@ -63,6 +63,7 @@ import Vue from 'vue';
          }
          let injectables: any = getValue('$root.$options.provide', this);
          let vueInjectables: any = getValue('$parent.$options.provide', this);
+         vueInjectables = !isNullOrUndefined(vueInjectables) ? vueInjectables : getValue('$.parent.provides', this);
          if (this.hasInjectedModules && !isExecute) {
             let prevModule: Object[] = [];
             if (injectables && injectables.managed) {
@@ -107,6 +108,9 @@ import Vue from 'vue';
             provide = getValue('$vnode.context.$options.provide', this);
         } else if (this.$parent) {
             provide = getValue('$parent.$options.provide', this);
+        }
+        if (isNullOrUndefined(provide) && !isNullOrUndefined(this.$)) {
+            provide = getValue('$.parent.provides', this);
         }
         if (provide) {
             // tslint:disable:no-any

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.3.59 (2022-11-29)
+
+### Common
+
+#### Bug Fixes
+
+- `#I415706` - The issue with "Schedule component module injection is not working in the Vue 3 script setup" has been resolved.
+
 ## 20.3.49 (2022-10-11)
 
 ### Common

@@ -1,7 +1,7 @@
 {
 	"name": "@syncfusion/ej2-vue-heatmap",
 	"version": "20.3.56",
-	"description": "Feature rich data visulization control used to visualize the matrix data where the individual values are represented as colors for undefined",
+	"description": "Feature rich data visulization control used to visualize the matrix data where the individual values are represented as colors for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
@@ -12,7 +12,10 @@
 		"matrix chart",
 		"grid chart",
 		"heat map",
-		"bubble heatmap"
+		"bubble heatmap",
+		"vue",
+		"vue-heatmap",
+		"ej2-vue-heatmap"
 	],
 	"repository": {
 		"type": "git",
