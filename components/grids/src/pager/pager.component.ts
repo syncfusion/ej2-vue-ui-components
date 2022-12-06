@@ -1,13 +1,25 @@
-import Vue from 'vue';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
-import { getValue } from '@syncfusion/ej2-base';
+import { Options } from 'vue-class-component';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
+import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { Pager } from '@syncfusion/ej2-grids';
 
 
+// {{VueImport}}
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'cssClass', 'currentPage', 'customText', 'enableExternalMessage', 'enablePagerMessage', 'enablePersistence', 'enableQueryString', 'enableRtl', 'externalMessage', 'locale', 'pageCount', 'pageSize', 'pageSizes', 'template', 'totalRecordsCount', 'click', 'created', 'dropDownChanged'];
 export const modelProps: string[] = [];
 
+export const testProp: any = getProps({props: properties});
+export const props = testProp[0];
+export const watch = testProp[1];
+
+export const emitProbs: any = Object.keys(watch);
+emitProbs.push('modelchanged', 'update:modelValue');
+for (let props of modelProps) {
+    emitProbs.push(
+        'update:'+props
+    );
+}
 
 /**
  * `ejs-pager` represents the VueJS Pager Component.
@@ -17,7 +29,18 @@ export const modelProps: string[] = [];
  */
 @EJComponentDecorator({
     props: properties
-})
+},isExecute)
+
+/* Start Options({
+    props: props,
+    watch: watch,
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
+}) End */
 
 export class PagerComponent extends ComponentBase {
     
@@ -28,9 +51,11 @@ export class PagerComponent extends ComponentBase {
     protected hasInjectedModules: boolean = false;
     public tagMapper: { [key: string]: Object } = {};
     public tagNameMapper: Object = {};
+    public isVue3: boolean;
     public templateCollection: any;
     constructor() {
         super(arguments);
+        this.isVue3 = !isExecute;
         this.ej2Instances = new Pager({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -65,6 +90,9 @@ export class PagerComponent extends ComponentBase {
 
 
     public setProperties(prop: any, muteOnChange: boolean): void {
+        if(this.isVue3) {
+            this.models = !this.models ? this.ej2Instances.referModels : this.models;
+        }
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
@@ -72,7 +100,12 @@ export class PagerComponent extends ComponentBase {
             Object.keys(prop).map((key: string): void => {
                 this.models.map((model: string): void => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        this.$emit('update:' + key, prop[key]);
+                        if (this.isVue3) {
+                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
+                        } else {
+                            (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
+                        }
                     }
                 });
             });
@@ -80,7 +113,12 @@ export class PagerComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-         return createElement('div', (this as any).$slots.default);
+        let h: any = !isExecute ? gh : createElement;
+        let slots: any = null;
+        if(!isNullOrUndefined((this as any).$slots.default)) {
+            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
+        }
+        return h('div', slots);
     }
     public custom(): void {
         this.updated();

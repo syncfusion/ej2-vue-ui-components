@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.3.60 (2022-12-06)
+
+### AutoComplete
+
+#### Bug Fixes
+
+- `#I420089` - The issue "API documentation broken on autocomplete Component" has been resolved.
+
 ## 20.3.59 (2022-11-29)
 
 ### ListBox
@@ -15,6 +23,7 @@
 #### Bug Fixes
 
 - `#I417583` - The issue "Selected value is not updated based on value when dynamically updating datasource" has been resolved.
+- `#I420115` - The issue "`autofill` property is not working with `itemTemplate` in the ComboBox component" has been resolved.
 
 ## 20.3.58 (2022-11-22)
 

@@ -1,7 +1,7 @@
-import Vue from 'vue';
+import { Options } from 'vue-class-component';
 import { isUndefined } from '@syncfusion/ej2-base';
-import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
-import { getValue } from '@syncfusion/ej2-base';
+import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
+import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { Grid } from '@syncfusion/ej2-grids';
 import { StackedColumnsDirective, StackedColumnDirective, StackedColumnsPlugin, StackedColumnPlugin } from './stacked-column.directive'
@@ -10,9 +10,21 @@ import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPl
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
 
 
+// {{VueImport}}
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'aggregates', 'allowExcelExport', 'allowFiltering', 'allowGrouping', 'allowKeyboard', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextWrap', 'childGrid', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'cssClass', 'currencyCode', 'currentAction', 'dataSource', 'detailTemplate', 'editSettings', 'ej2StatePersistenceVersion', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableColumnVirtualization', 'enableHeaderFocus', 'enableHover', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRtl', 'enableStickyHeader', 'enableVirtualMaskRow', 'enableVirtualization', 'filterSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'groupSettings', 'height', 'hierarchyPrintMode', 'infiniteScrollSettings', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentDetails', 'printMode', 'query', 'queryString', 'resizeSettings', 'rowDropSettings', 'rowHeight', 'rowRenderingMode', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnChooser', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'toolbarTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeAutoFill', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeDataBound', 'beforeExcelExport', 'beforeOpenAdaptiveDialog', 'beforeOpenColumnChooser', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkBoxChange', 'columnDataStateChange', 'columnDeselected', 'columnDeselecting', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'columnSelected', 'columnSelecting', 'commandClick', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'destroyed', 'detailDataBound', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'exportDetailDataBound', 'exportGroupCaption', 'headerCellInfo', 'keyPressed', 'lazyLoadGroupCollapse', 'lazyLoadGroupExpand', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordClick', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
+export const testProp: any = getProps({props: properties});
+export const props = testProp[0];
+export const watch = testProp[1];
+
+export const emitProbs: any = Object.keys(watch);
+emitProbs.push('modelchanged', 'update:modelValue');
+for (let props of modelProps) {
+    emitProbs.push(
+        'update:'+props
+    );
+}
 
 /**
  * `ejs-grid` represents the VueJS Grid Component.
@@ -25,7 +37,18 @@ export const modelProps: string[] = ['dataSource'];
     model: {
         event: 'modelchanged'
     }
-})
+},isExecute)
+
+/* Start Options({
+    props: props,
+    watch: watch,
+    emits: emitProbs,
+    provide: function provide() {
+        return {
+            custom: this.custom
+        };
+    }
+}) End */
 
 export class GridComponent extends ComponentBase {
     
@@ -36,9 +59,11 @@ export class GridComponent extends ComponentBase {
     protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {"e-columns":{"e-column":{"e-stacked-columns":"e-stacked-column"}},"e-aggregates":{"e-aggregate":{"e-columns":"e-column"}}};
     public tagNameMapper: Object = {"e-stacked-columns":"e-columns"};
+    public isVue3: boolean;
     public templateCollection: any;
     constructor() {
         super(arguments);
+        this.isVue3 = !isExecute;
         this.ej2Instances = new Grid({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
 
@@ -75,6 +100,9 @@ export class GridComponent extends ComponentBase {
 
 
     public setProperties(prop: any, muteOnChange: boolean): void {
+        if(this.isVue3) {
+            this.models = !this.models ? this.ej2Instances.referModels : this.models;
+        }
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
@@ -82,35 +110,61 @@ export class GridComponent extends ComponentBase {
             Object.keys(prop).map((key: string): void => {
                 this.models.map((model: string): void => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        this.$emit('update:' + key, prop[key]);
+                        if (this.isVue3) {
+                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
+                        } else {
+                            (this as any).$emit('update:' + key, prop[key]);
+                            (this as any).$emit('modelchanged', prop[key]);
+                        }
                     }
                 });
             });
         }
     }
     public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+        if(!isExecute) {
+            this.models = !this.models ? this.ej2Instances.referModels : this.models;
+        }
         if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/checked|value/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                (this as any).$emit('modelchanged', eventProp[propKey]);
+                if (!isExecute) {
+                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                    this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
+                } else {
+                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
+                }
             }
         } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
             let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
             let propKey: string = key[0];
             if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                (this as any).$emit('modelchanged', eventProp[propKey]);
+                if (!isExecute) {
+                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                } else {
+                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                    (this as any).$emit('modelchanged', eventProp[propKey]);
+                }
             }
         }
-        if (this.ej2Instances && this.ej2Instances._trigger) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler);
-        }            
+        if ((this.ej2Instances && this.ej2Instances._trigger)) {
+            this.ej2Instances._trigger(eventName, eventProp, successHandler); 
+        }
     }
 
     public render(createElement: any) {
-         return createElement('div', (this as any).$slots.default);
+        let h: any = !isExecute ? gh : createElement;
+        let slots: any = null;
+        if(!isNullOrUndefined((this as any).$slots.default)) {
+            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
+        }
+        return h('div', slots);
     }
     public custom(): void {
         this.updated();
