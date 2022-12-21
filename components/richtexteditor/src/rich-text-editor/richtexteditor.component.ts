@@ -242,6 +242,10 @@ export class RichTextEditorComponent extends ComponentBase {
         return this.ej2Instances.removeToolbarItem(items);
     }
 
+    public renderTemplates(callBack: any): void {
+        return this.ej2Instances.renderTemplates(callBack);
+    }
+
     public sanitizeHtml(value: string): string {
         return this.ej2Instances.sanitizeHtml(value);
     }

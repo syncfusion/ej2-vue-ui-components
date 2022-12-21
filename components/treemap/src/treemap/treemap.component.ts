@@ -126,10 +126,6 @@ export class TreeMapComponent extends ComponentBase {
         this.updated();
     }
     
-    public calculatePreviousLevelChildItems(labelText: string, drillLevelValues: any, item: any, directLevel: boolean): boolean {
-        return this.ej2Instances.calculatePreviousLevelChildItems(labelText, drillLevelValues, item, directLevel);
-    }
-
     public calculateSelectedTextLevels(labelText: string, item: any): any {
         return this.ej2Instances.calculateSelectedTextLevels(labelText, item);
     }

@@ -178,6 +178,10 @@ export class SpeedDialComponent extends ComponentBase {
     public refreshPosition(): void {
         return this.ej2Instances.refreshPosition();
     }
+
+    public show(): void {
+        return this.ej2Instances.show();
+    }
 }
 
 export const SpeedDialPlugin = {

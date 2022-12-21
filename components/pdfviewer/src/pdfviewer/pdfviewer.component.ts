@@ -164,12 +164,12 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.exportAnnotationsAsObject();
     }
 
-    public exportFormFields(path?: string): void {
-        return this.ej2Instances.exportFormFields(path);
+    public exportFormFields(data?: string, formFieldDataFormat?: Object): void {
+        return this.ej2Instances.exportFormFields(data, formFieldDataFormat);
     }
 
-    public exportFormFieldsAsObject(): Object {
-        return this.ej2Instances.exportFormFieldsAsObject();
+    public exportFormFieldsAsObject(formFieldDataFormat?: Object): Object {
+        return this.ej2Instances.exportFormFieldsAsObject(formFieldDataFormat);
     }
 
     public focusFormField(field: any): void {
@@ -184,8 +184,8 @@ export class PdfViewerComponent extends ComponentBase {
         return this.ej2Instances.importAnnotation(importData, annotationDataFormat);
     }
 
-    public importFormFields(formFields: any): void {
-        return this.ej2Instances.importFormFields(formFields);
+    public importFormFields(data?: string, formFieldDataFormat?: Object): void {
+        return this.ej2Instances.importFormFields(data, formFieldDataFormat);
     }
 
     public load(document: string, password: string): void {

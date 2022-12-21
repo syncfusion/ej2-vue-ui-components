@@ -2,22 +2,6 @@
 
 ## [Unreleased]
 
-## 20.3.59 (2022-11-29)
-
-### Common
-
-#### Bug Fixes
-
-- `#I415706` - The issue with "Schedule component module injection is not working in the Vue 3 script setup" has been resolved.
-
-## 20.3.49 (2022-10-11)
-
-### Common
-
-#### Bug Fixes
-
-- `#I400596` - The issue with "Tab throwing script error while enabling a tab item using `v-if`" has been resolved.
-
 ## 20.3.47 (2022-09-29)
 
 ### Common
@@ -212,4 +196,3 @@ Base library provide options to enable following Vue functionalities in Essentia
 #### Breaking Changes
 
 - The individual npm package will no longer bundle dependent component's style. The online web tool [CRG](https://crg.syncfusion.com/) can be used to combine specific set of component and its dependent component styles.
-

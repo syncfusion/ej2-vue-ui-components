@@ -25,11 +25,11 @@ export function getProps(
 ): any {
   if (options.props) {
     for (let prop of options.props) {
-      (options.newprops || (options.newprops = {}))[prop] = {
+      (options.newprops || (options.newprops = {}))[`${prop}`] = {
 
       };
-      (options.watch || (options.watch = {}))[prop] = function (newVal: Object) { // watch it
-        this.ej2Instances[prop] = newVal;
+      (options.watch || (options.watch = {}))[`${prop}`] = function (newVal: Object) { // watch it
+        this.ej2Instances[`${prop}`] = newVal;
         if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
             this.dataBind();    
         }
@@ -57,11 +57,11 @@ export function EJcomponentFactory(
   const proto = Component.prototype
   if (options.props) {
     for (let prop of options.props) {
-      (options.props || (options.props = {}))[prop] = {
+      (options.props || (options.props = {}))[`${prop}`] = {
 
       };
-      (options.watch || (options.watch = {}))[prop] = function (newVal: Object) { // watch it
-        this.ej2Instances[prop] = newVal;
+      (options.watch || (options.watch = {}))[`${prop}`] = function (newVal: Object) { // watch it
+        this.ej2Instances[`${prop}`] = newVal;
         if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
             this.dataBind();    
         }
@@ -74,16 +74,16 @@ export function EJcomponentFactory(
       return;
     }
     if ($internalHooks.indexOf(key) > -1) {
-      options[key] = proto[key]
+      options[`${key}`] = proto[`${key}`]
       return
     }
     const descriptor = Object.getOwnPropertyDescriptor(proto, key)!
     if (typeof descriptor.value === 'function') {
       // methods
-      (options.methods || (options.methods = {}))[key] = descriptor.value
+      (options.methods || (options.methods = {}))[`${key}`] = descriptor.value
     } else if (descriptor.get || descriptor.set) {
       // computed properties
-      (options.computed || (options.computed = {}))[key] = {
+      (options.computed || (options.computed = {}))[`${key}`] = {
         get: descriptor.get,
         set: descriptor.set
       }
@@ -91,7 +91,7 @@ export function EJcomponentFactory(
   });
   Object.getOwnPropertyNames(ComponentBase.prototype).forEach(function (key) {
     if ($internalHooks.indexOf(key) > -1) {
-      options[key] = proto[key]
+      options[`${key}`] = proto[`${key}`]
       return
     }
   });
@@ -131,8 +131,8 @@ function collectDataFromConstructor(vm: any, Component: any) {
       keys.forEach(function (key) {
           if (key.charAt(0) !== '_') {
               Object.defineProperty(_this, key, {
-                  get: function () { return vm[key]; },
-                  set: function (value) { return vm[key] = value; }
+                  get: function () { return vm[`${key}`]; },
+                  set: function (value) { return vm[`${key}`] = value; }
               });
           }
       });
@@ -140,8 +140,8 @@ function collectDataFromConstructor(vm: any, Component: any) {
   var data = new Component();
   var plainData = {};
   Object.keys(data).forEach(function (key) {
-      if (data[key] !== undefined) {
-          plainData[key] = data[key];
+      if (data[`${key}`] !== undefined) {
+          plainData[`${key}`] = data[`${key}`];
       }
   });
   return plainData;

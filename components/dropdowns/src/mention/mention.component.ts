@@ -24,7 +24,7 @@ for (let props of modelProps) {
 /**
  * The Mention contains a list of predefined values from which the user can choose
  * ```html
- * <ejs-mention :dataSource='data'></ejs-dropdownlist>
+ * <ejs-mention :dataSource='data'></ejs-mention>
  * ```
  */
 @EJComponentDecorator({
@@ -138,14 +138,6 @@ export class MentionComponent extends ComponentBase {
 
     public hidePopup(e?: Object | Object): void {
         return this.ej2Instances.hidePopup(e);
-    }
-
-    public hideSpinner(): void {
-        return this.ej2Instances.hideSpinner();
-    }
-
-    public renderTemplates(callBack?: any): void {
-        return this.ej2Instances.renderTemplates(callBack);
     }
 
     public search(text: string, positionX: number, positionY: number): void {

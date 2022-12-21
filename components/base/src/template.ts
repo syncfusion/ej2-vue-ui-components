@@ -39,12 +39,12 @@ export function compile(
           // Compilation for Vue 3 slot template
           let app: any = allVue.createApp({
             render () {
-              return vueSlot[templateElement]({ data: data });
+              return vueSlot[`${templateElement}`]({ data: data });
             }
           });
           if (plugins) {
             for (let i: number = 0; i < plugins.length; i++) {
-              app.use(plugins[i]);
+              app.use(plugins[parseInt(i.toString(), 10)]);
             }
           }
           app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
@@ -74,7 +74,7 @@ export function compile(
           templateCompRef = object.template._context.components[templateElement.name];
           if(!templateCompRef){
             let key: any = Object.keys(object.template._context.components)[0];
-            templateCompRef = object.template._context.components[key];
+            templateCompRef = object.template._context.components[`${key}`];
           }
         }
         let tempRef: any;
@@ -85,7 +85,7 @@ export function compile(
           if (templateCompRef.components) {
             let objkeys: any = Object.keys(templateCompRef.components) || [];
             for (let objstring of objkeys) {
-              let intComponent: any = templateCompRef.components[objstring]
+              let intComponent: any = templateCompRef.components[`${objstring}`]
               if (intComponent && intComponent.data) {
                 let tempRef2: any =  (Object as any).assign(intComponent.data(), dataObj.data);
                 intComponent.data = function() { return tempRef2 };
@@ -97,7 +97,7 @@ export function compile(
         let app: any = allVue.createApp(templateCompRef);
         if (plugins) {
           for (let i: number = 0; i < plugins.length; i++) {
-            app.use(plugins[i]);
+            app.use(plugins[parseInt(i.toString(), 10)]);
           }
         }
         app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
@@ -109,7 +109,7 @@ export function compile(
           // Compilation for Vue 2 slot template
           let vueTemplate: any = new Vue({
             render () {
-              return vueSlot[templateElement]({ data: data });
+              return vueSlot[`${templateElement}`]({ data: data });
             }
           });
           vueTemplate.$mount("#" + id);
@@ -148,10 +148,10 @@ export function compile(
             templateInstance = context.vueInstance.templateCollection;
           }
           if (propName) {
-            if (!templateInstance[propName]) {
-              templateInstance[propName] = [];
+            if (!templateInstance[`${propName}`]) {
+              templateInstance[`${propName}`] = [];
             }
-            templateInstance[propName].push(returnEle[0]);
+            templateInstance[`${propName}`].push(returnEle[0]);
           }
         }
         detach(ele);
@@ -180,21 +180,21 @@ function getVueChildSlot(vueInstance: any, templateElement: any) {
   let scopedSlots: any = vueInstance.$scopedSlots;
   let vSlots: any = vueInstance.scopedSlots;
   let children: any = vueInstance.children;
-  if (scopedSlots && scopedSlots[templateElement]) {
+  if (scopedSlots && scopedSlots[`${templateElement}`]) {
     return scopedSlots;
   } else if (slots && slots.default) {
     let childSlots: any = slots.default;
     for (let i: number = 0; i < childSlots.length; i++) {
-      let slot: any = getVueChildSlot(getSlot(childSlots[i]), templateElement);
+      let slot: any = getVueChildSlot(getSlot(childSlots[parseInt(i.toString(), 10)]), templateElement);
       if (slot) {
         return slot;
       }
     }
-  } else if (vSlots && vSlots[templateElement]) {
+  } else if (vSlots && vSlots[`${templateElement}`]) {
     return vSlots;
   } else if (children) {
     for (let i: number = 0; i < children.length; i++) {
-      let slot: any = getVueChildSlot(getSlot(children[i]), templateElement);
+      let slot: any = getVueChildSlot(getSlot(children[parseInt(i.toString(), 10)]), templateElement);
       if (slot) {
         return slot;
       }
@@ -204,7 +204,8 @@ function getVueChildSlot(vueInstance: any, templateElement: any) {
 }
 
 function getSlot(vnode: any) {
-  let slot: any = (vnode.componentOptions && vnode.componentOptions.children) ? vnode.componentOptions : vnode.data;
+  let slot: any = (vnode.componentOptions && vnode.componentOptions.children) ? vnode.componentOptions : 
+  (!vnode.data && (vnode.tag === 'e-markersettings' || vnode.tag === 'e-markersetting')) ? vnode : vnode.data;
   return vnode.componentInstance ? vnode.componentInstance : slot;
 }
 
@@ -218,12 +219,12 @@ function getCurrentVueSlot(vueInstance: any, templateElement: any, root: any): a
 }
 
 function getChildVueSlot(slots: any, templateElement: any): any {
-  if (slots && slots[templateElement]) {
+  if (slots && slots[`${templateElement}`]) {
     return slots;
   } else if (slots && slots.default) {
     let childSlots: any = slots.default();
     for (let i: number = 0; i < childSlots.length; i++) {
-      let slot: any = getChildVueSlot(childSlots[i].children, templateElement);
+      let slot: any = getChildVueSlot(childSlots[parseInt(i.toString(), 10)].children, templateElement);
       if (slot) {
         return slot;
       }

@@ -1,16 +1,14 @@
 {
 	"name": "@syncfusion/ej2-vue-filemanager",
-	"version": "20.3.56",
+	"version": "18.18.1",
 	"description": "Essential JS 2 FileManager Component for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
 		"ej2",
 		"syncfusion",
-		"web-components",
 		"typescript",
 		"javascript",
-		"ej2-filemanager",
 		"filemanager",
 		"fileexplorer",
 		"file-explorer",
@@ -18,7 +16,13 @@
 		"vue",
 		"vuejs",
 		"vue-filemanager",
-		"ej2-vue-filemanager"
+		"vue-file organizer",
+		"vue-file organizing tool",
+		"vue-file picker",
+		"vue-file viewer",
+		"vue-file browser",
+		"vue-file selector",
+		"vue-directory viewer"
 	],
 	"repository": {
 		"type": "git",

@@ -6,7 +6,7 @@ import { ImageEditor } from '@syncfusion/ej2-image-editor';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'backgroundImage', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'height', 'isReadOnly', 'maxStrokeWidth', 'minStrokeWidth', 'saveWithBackground', 'strokeColor', 'theme', 'toolbar', 'toolbarTemplate', 'velocity', 'width', 'beforeSave', 'created', 'cropping', 'destroyed', 'fileOpened', 'flipping', 'panning', 'rotating', 'saved', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'backgroundImage', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'maxStrokeWidth', 'minStrokeWidth', 'saveWithBackground', 'signatureValue', 'strokeColor', 'theme', 'toolbar', 'toolbarTemplate', 'velocity', 'width', 'beforeSave', 'created', 'cropping', 'destroyed', 'fileOpened', 'fineTuneValueChanging', 'flipping', 'imageFiltering', 'panning', 'rotating', 'saved', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -124,6 +124,10 @@ export class ImageEditorComponent extends ComponentBase {
         this.updated();
     }
     
+    public applyImageFilter(filterOption: Object): void {
+        return this.ej2Instances.applyImageFilter(filterOption);
+    }
+
     public clearSelection(): void {
         return this.ej2Instances.clearSelection();
     }
@@ -154,6 +158,10 @@ export class ImageEditorComponent extends ComponentBase {
 
     public export(type?: string, fileName?: string): void {
         return this.ej2Instances.export(type, fileName);
+    }
+
+    public finetuneImage(finetuneOption: Object, value: number): void {
+        return this.ej2Instances.finetuneImage(finetuneOption, value);
     }
 
     public flip(direction: Object): void {

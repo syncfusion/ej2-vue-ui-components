@@ -1,73 +1,145 @@
-# ej2-vue-maps
+# Vue Maps Component
 
-The maps control is used to visualize the geographical data and represent the statistical data of a particular geographical area on earth with user interactivity, and provides various customizing options. 
+The [Vue Maps](https://www.syncfusion.com/vue-components/vue-maps-library?utm_source=npm&utm_medium=listing&utm_campaign=vue-maps-npm) component is used to visualize geographical data and represent statistical data of a specific geographical area on earth with user interactivity, and it provides a wide range of customization options.
 
-![Maps](https://ej2.syncfusion.com/products/images/maps/readme.gif)
+<p align="center">
+    <a href="https://ej2.syncfusion.com/vue/documentation/maps/getting-started/">Getting started</a> . 
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-maps-npm#/bootstrap5/maps/default.html">Online demos</a> . 
+    <a href="https://www.syncfusion.com/vue-components/vue-maps-library?utm_source=npm&utm_medium=listing&utm_campaign=vue-maps-npm">Learn more</a>
+</p>
 
-> Maps is part of Syncfusion Essential JS 2 commercial program. License is available in two models Community and Paid. Please refer the license file for more information. License can be obtained by registering at [https://www.syncfusion.com/downloads/essential-js2](https://www.syncfusion.com/downloads/essential-js2?utm_source=npm&utm_campaign=maps)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-map.png" alt="Vue Maps Component">
+</a>
+
+<p align="center">
+Trusted by the world's leading companies
+  <a href="https://www.syncfusion.com">
+    <img src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/syncfusion/syncfusion-trusted-companies.webp" alt="Bootstrap logo">
+  </a>
+</p>
 
 ## Setup
 
-To install Maps and its dependent packages, use the following command
+### Create a Vue Application
 
-```sh
-npm install @syncfusion/ej2-maps
+You can use [Vue CLI](https://github.com/vuejs/vue-cli) to setup your Vue 2 applications. To install Vue CLI, use the following commands.
+
+```bash
+npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Resources
+Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-* [Getting Started](https://ej2.syncfusion.com/vue/documentation/maps/getting-started.html)
-* [View Online Demos](https://ej2.syncfusion.com/vue/demos/#/material/maps/default.html)
-* [Product Page](https://www.syncfusion.com/products/javascript/maps)
+### Add Syncfusion Maps package
 
-## Supported Frameworks
+All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue Maps package, use the following command.
 
-Maps component is also offered in following list of frameworks.
+```bash
+npm install @syncfusion/ej2-vue-maps --save
+```
 
-1. [Angular](https://www.npmjs.com/package/@syncfusion/ej2-ng-maps?utm_source=npm&utm_campaign=maps)
-2. [React](https://www.npmjs.com/package/@syncfusion/ej2-react-maps?utm_source=npm&utm_campaign=maps)
-3. [Vue.js](https://www.npmjs.com/package/@syncfusion/ej2-vue-maps?utm_source=npm&utm_campaign=maps)
-4. [ASP.NET Core](https://aspdotnetcore.syncfusion.com/Maps/Default#/material)
-5. [ASP.NET MVC](https://aspnetmvc.syncfusion.com/Maps/Default#/material)
-6. [JavaScript (ES5)](https://www.syncfusion.com/products/javascript/maps)
+### Register Maps Component
 
-## Use case samples
+You can register the Maps component in your application by using the **Vue.use()**. Refer to the code example given below.
 
-* Heat map ([Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/maps/heatmap.html))
-* Flight routes ([Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/maps/curvedlines.html))
-* Bus seat booking ([Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/maps/seatSelection.html))
+```typescript
+import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
 
-## Key Features
+Vue.use(MapsPlugin);
+```
 
-* [**Data sources**](https://ej2.syncfusion.com/vue/demos/#/material/maps/default.html) - Binds the maps component with an array of JSON objects or DataManager.
-* [**Projection**](https://ej2.syncfusion.com/vue/demos/#/material/maps/projection.html) - Maps can be rendered in eight types of projections.
-* [**Drill-down**](https://ej2.syncfusion.com/vue/demos/#/material/maps/drilldown.html) - Provides drill-down option to have a closer look at the lower level of a hierarchy.
-* [**Marker**](https://ej2.syncfusion.com/vue/demos/#/material/maps/marker.html) - Provides marker support to mark a specific place of interest in the map.
-* [**Data label**](https://ej2.syncfusion.com/vue/demos/#/material/maps/datalabel.html) - Provides additional information about the shapes.
-* [**Bubble**](https://ej2.syncfusion.com/vue/demos/#/material/maps/bubble.html) - Represents the underlying data values of the shapes.
-* [**Navigation line**](https://ej2.syncfusion.com/vue/demos/#/material/maps/lineapeninsular.html) - Denotes the path between two locations.
-* [**Color mapping**](https://ej2.syncfusion.com/vue/demos/#/material/maps/datalabel.html) - Applies colors to the shapes based on various conditions. Maps supports two types of color mapping: range color mapping and equal color mapping.
-* [**Legend**](https://ej2.syncfusion.com/vue/demos/#/material/maps/legend.html) - Denotes the color mapping categories.
-* [**Annotation**](https://ej2.syncfusion.com/vue/demos/#/material/maps/annotation.html) - Uses any custom HTML element as annotation and place it anywhere on the maps.
-* [**Selection and Highlight**](https://ej2.syncfusion.com/vue/demos/#/material/maps/selection.html) - Supports selecting or highlighting the shapes to bring center of attraction.
-* [**Zooming and Panning**](https://ej2.syncfusion.com/vue/demos/#/material/maps/zooming.html) - Allows to zoom in, out, and pan the map to show in-depth information.
-* [**Tooltip**](https://ej2.syncfusion.com/vue/demos/#/material/maps/tooltip.html) - Provides additonal information about the shapes on mouse hover.
-* [**Print and Export**](https://ej2.syncfusion.com/vue/demos/#/material/maps/print.html) - Provides options to print and export the rendered maps for future use.
+> Registering **MapsPlugin** in Vue, will register the Maps component along with its required child directives globally.
+
+### Add Maps Component
+
+Add the Vue Maps by using **ejs-maps** selector in **template** section of the **App.vue** file.
+
+```html
+<template>
+    <div id="map">
+        <ejs-maps>
+            <e-layers>
+                <e-layer :shapeData='shapeData'></e-layer>
+            </e-layers>
+        </ejs-maps>
+    </div>
+</template>
+<script>
+import Vue from 'vue';
+import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
+import { world_map } from './world-map.js';
+Vue.use(MapsPlugin);
+export default {
+  data() {
+    return {
+      shapeData: world_map
+    }
+  }
+}
+</script>
+```
+
+> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/maps/getting-started-vue-3/) topic for using Syncfusion Vue components in Vue 3 applications.
+
+## Supported frameworks
+
+Maps component is also offered in the following list of frameworks.
+
+| [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular.svg"  height="50" />](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg" height="50" />](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
+| :-----: | :-----: | :-----: | :-----: | :-----: |
+
+## Showcase samples
+
+* Heat map - [Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/maps/heatmap.html)
+* Flight routes - [Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/maps/curved-lines.html)
+* Bus seat booking - [Live Demo](https://ej2.syncfusion.com/vue/demos/#/material/maps/seat-selection.html)
+
+## Key features
+
+* [Data sources](https://ej2.syncfusion.com/vue/documentation/maps/populate-data/?utm_source=npm&utm_campaign=vue-maps-npm): Binds the maps control to an array of JSON objects containing GeoJSON data.
+* [Map providers](https://ej2.syncfusion.com/vue/documentation/maps/providers/other-maps/?utm_source=npm&utm_campaign=vue-maps-npm): Online map providers such as OpenStreetMap, Bing Maps and others can also be rendered.
+* [Layer](https://ej2.syncfusion.com/vue/documentation/maps/layers/?utm_source=npm&utm_campaign=vue-maps-npm): Layer represents the area which renders the map. Also, any number of layers can be added.
+* [Projection](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=vue-maps-npm#/material/maps/projection.html): Maps can be rendered in eight different types of projections.
+* [Drill-down](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=vue-maps-npm#/material/maps/drilldown.html): Provides drill-down option to have a closer look at the lower level of a hierarchy.
+* [Marker](https://ej2.syncfusion.com/vue/documentation/maps/markers/?utm_source=npm&utm_campaign=vue-maps-npm): Provides support to mark a specific place of interest in the map.
+* [Data label](https://ej2.syncfusion.com/vue/documentation/maps/data-labels/?utm_source=npm&utm_campaign=vue-maps-npm): Provides additional information about the shapes in the form of text over the shapes.
+* [Bubble](https://ej2.syncfusion.com/vue/documentation/maps/bubble/?utm_source=npm&utm_campaign=vue-maps-npm): Represents visually the underlying data values of the shapes.
+* [Navigation line](https://ej2.syncfusion.com/vue/documentation/maps/navigation-line/?utm_source=npm&utm_campaign=vue-maps-npm): Denotes the path between two locations.
+* [Color mapping](https://ej2.syncfusion.com/vue/documentation/maps/color-mapping/?utm_source=npm&utm_campaign=vue-maps-npm): Applies colors to the shapes based on various conditions. Maps supports three types of color mapping: range color mapping, equal color mapping and desaturation color mapping.
+* [Legend](https://ej2.syncfusion.com/vue/documentation/maps/legend/?utm_source=npm&utm_campaign=vue-maps-npm): Summarizes the information from the layers, markers and bubbles.
+* [Annotation](https://ej2.syncfusion.com/vue/documentation/maps/annotations/?utm_source=npm&utm_campaign=vue-maps-npm): Uses any custom HTML element as annotation and place it anywhere on the maps.
+* [Selection and highlight](https://ej2.syncfusion.com/vue/documentation/maps/user-interactions/?utm_source=npm&utm_campaign=vue-maps-npm#selection): Supports selecting or highlighting shapes to bring center of attraction.
+* [Zooming and panning](https://ej2.syncfusion.com/vue/documentation/maps/user-interactions/?utm_source=npm&utm_campaign=vue-maps-npm#zooming): Allows to zoom in, zoom out, and pan the map to show in-depth information.
+* [Tooltip](https://ej2.syncfusion.com/vue/documentation/maps/user-interactions/?utm_source=npm&utm_campaign=vue-maps-npm#tooltip): Provides additonal information about the shapes on hover.
+* [Print and Export](https://ej2.syncfusion.com/vue/documentation/maps/print/?utm_source=npm&utm_campaign=vue-maps-npm): Prints or exports the rendered maps to a desired format. Exporting supports four formats: PDF, PNG, JPEG and SVG.
+* [Templates](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=vue-maps-npm#/material/maps/marker-template.html): Templates can be used to create custom user experiences in the Maps.
+* [Globalization](https://ej2.syncfusion.com/vue/documentation/maps/internationalization/?utm_source=npm&utm_campaign=vue-maps-npm): Personalize the Maps component with different languages, as well as culture-specific number, date and time formatting.
+* [Accessibility](https://ej2.syncfusion.com/vue/documentation/maps/accessibility/?utm_source=npm&utm_campaign=vue-maps-npm): Provides with built-in accessibility support which helps to access all the Maps component features through the keyboard, screen readers, or other assistive technology devices.
 
 ## Support
 
-Product support is available for through following mediums.
+Product support is available through the following mediums.
 
-* Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=maps) support system or [Community forum](https://www.syncfusion.com/forums/essential-js2?utm_source=npm&utm_campaign=maps).
-* New [GitHub issues](https://github.com/syncfusion/ej2-vue-ui-components/issues).
-* Ask your query in Stack Overflow with tag `syncfusion`, `ej2`.
-
-## License
-
-Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_campaign=maps).
+* [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
+* [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-maps-npm)
+* [GitHub issues](https://github.com/syncfusion/ej2-vue-ui-components/issues/new)
+* [Request feature or report bug](https://www.syncfusion.com/feedback/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-maps-npm)
+* Live chat
 
 ## Changelog
 
-Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/maps/CHANGELOG.mdutm_source=npm&utm_campaign=maps)
+Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/maps/CHANGELOG.md?utm_source=npm&utm_campaign=vue-maps-npm). Get minor improvements and bug fixes every week to stay up to date with frequent updates.
 
-© Copyright 2019 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+## License and copyright
+
+> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 80+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
+
+> A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
+
+See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_campaign=vue-maps-npm) for more info.
+
+&copy; Copyright 2022 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.

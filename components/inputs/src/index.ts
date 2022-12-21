@@ -7,3 +7,4 @@ export { FilesDirective, UploadedFilesDirective, FilesPlugin, UploadedFilesPlugi
 export { UploaderComponent, UploaderPlugin } from './uploader/uploader.component';
 export { ColorPickerComponent, ColorPickerPlugin } from './color-picker/colorpicker.component';
 export { SignatureComponent, SignaturePlugin } from './signature/signature.component';
+export { RatingComponent, RatingPlugin } from './rating/rating.component';
