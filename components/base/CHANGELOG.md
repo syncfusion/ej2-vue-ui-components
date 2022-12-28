@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## 20.4.38 (2022-12-21)
+
+### Common
+
+#### New Features
+
+- `#FB34897` - Provided Vue 3 direct script support for Syncfusion Vue components.
+
+#### Bug Fixes
+
+- `#I409205` - The issue with the "Signature plugin missing in the latest Vue 2 direct script" has been resolved.
+- The issue with the "v-model support is not working for the textbox component in Vue 3" has been resolved.
+
 ## 20.3.47 (2022-09-29)
 
 ### Common

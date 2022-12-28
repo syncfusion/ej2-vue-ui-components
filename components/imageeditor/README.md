@@ -74,7 +74,7 @@ Add the Syncfusion Vue Image Editor by using **ejs-imageeditor** selector in **t
 
 ```html
 <template>
-    <div id="app">
+    <div id="app" style="width: 600px; height: 500px;">
         <ejs-imageeditor id="image-editor"></ejs-imageeditor>
     </div>
 </template>
@@ -101,7 +101,7 @@ Image Editor component is also offered in the following frameworks.
 ## Key features
 
 * [Load and save images in various formats](https://ej2.syncfusion.com/vue/documentation/image-editor/open-save): The Image Editor control allows users to load and edit existing images, as well as export the edited version in PNG, SVG, and JPG formats.
-* [Selection and cropping](https://ej2.syncfusion.com/documentation/vue/image-editor/selection-cropping): The control provides selection and cropping functionality, allowing users to crop images based on a customizable selection region with various aspect ratios and the ability to reposition the selection by dragging and resizing.
+* [Selection and cropping](https://ej2.syncfusion.com/vue/documentation/image-editor/selection-cropping): The control provides selection and cropping functionality, allowing users to crop images based on a customizable selection region with various aspect ratios and the ability to reposition the selection by dragging and resizing.
 * [Image transformations](https://ej2.syncfusion.com/vue/documentation/image-editor/transform): The control offers basic image editing features such as rotate, flip, zoom, and crop to adjust the appearance and composition of images.
 * [Image annotation](https://ej2.syncfusion.com/vue/documentation/image-editor/annotation): Users can insert annotations including text, rectangle, ellipse, freehand draw, and lines to mark up and annotate their images.
 * Image finetune: Includes support to adjust the brightness, contrast, saturation, hue, exposure, opacity, and blur of their images to achieve the desired look and feel.

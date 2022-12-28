@@ -3,9 +3,9 @@
 The [Vue Rich Text Editor](https://www.syncfusion.com/vue-ui-components/vue-wysiwyg-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) component is a feature-rich WYSIWYG HTML editor and WYSIWYG Markdown editor. The Rich Text Editor is widely used to create blogs, forum posts, notes sections, comment sections, messaging applications, and more. The control provides an efficient user interface for a better editing experience with mobile support. It has a variety of tools to edit and format rich content, and it return a valid HTML markup or Markdown (MD) content. It allows users to insert images, links, tables, media files and lists with modular architectures.
 
 <p align="center">
-    <a href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/tools.html">Online demos</a> .
-    <a href="https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor">Learn more</a>
+    <a href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm">Getting started</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/tools.html">Online demos</a> .
+    <a href="https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm">Learn more</a>
 </p>
 
 <p align="center">
@@ -104,7 +104,7 @@ Add the Vue Rich Text Editor by using **ejs-richtexteditor** selector in **templ
 @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/bootstrap5.css";
 </style>
 ```
-> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/get-started/#getting-started) for using Syncfusion Vue components in Vue 3 applications.
+> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/get-started/#getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) for using Syncfusion Vue components in Vue 3 applications.
 
 ## Supported frameworks
 

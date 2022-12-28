@@ -53,7 +53,7 @@ Vue.use(CircularGaugePlugin);
 
 > Registering **CircularGaugePlugin** in Vue, will register the Circular Gauge component along with its required child directives globally.
 
-## Add Circular Gauge Component
+### Add Circular Gauge Component
 
 Add the Vue Circular Gauge by using **ejs-circulargauge** selector in **template** section of the **App.vue** file.
 

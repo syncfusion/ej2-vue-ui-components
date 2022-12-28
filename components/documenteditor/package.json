@@ -5,16 +5,6 @@
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
-		"ej2",
-		"web-components",
-		"syncfusion",
-		"Javascript",
-		"TypeScript",
-		"js",
-		"documenteditor",
-		"document-editor",
-		"word-editor",
-		"ej2-documenteditor-container",
 		"vue",
 		"vue-documenteditor",
 		"ej2-vue-documenteditor"

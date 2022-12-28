@@ -1,15 +1,10 @@
 {
 	"name": "@syncfusion/ej2-vue-richtexteditor",
-	"version": "19.12.13",
+	"version": "20.4.38",
 	"description": "Essential JS 2 RichTextEditor component for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
-		"rich-text-editor",
-		"markdown-editor",
-		"HTML5-rich-text-editor",
-		"wysiwyg-html-editor",
-		"wysiwyg-markdown-editor",
 		"vue-rich-text-editor",
 		"vue-html-editor",
 		"vue-markdown-editor",

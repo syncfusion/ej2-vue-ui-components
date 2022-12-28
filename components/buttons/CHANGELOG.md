@@ -2,7 +2,13 @@
 
 ## [Unreleased]
 
-## 20.4.38 (2022-12-21)
+## 20.4.40 (2022-12-28)
+
+### Chips
+
+#### Bug Fixes
+
+- `#I422262` - Added the aria-disabled attribute to the disabled Chip items.
 
 ### Floating Action Button `Preview`
 

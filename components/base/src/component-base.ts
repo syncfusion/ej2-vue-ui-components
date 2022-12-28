@@ -424,7 +424,8 @@ import Vue from 'vue';
                      if (keyTags.indexOf(dirTag) !== -1) {
                          let tagName: string = tagNameMapper[`${dirTag}`] ? tagNameMapper[`${dirTag}`] : dirTag;
                          dir[tagName.replace('e-', '')] = [];
-                         for (let tagDirChild of tagDirective.componentOptions.children) {
+                         let children = tagDirective.componentOptions ? tagDirective.componentOptions.children : tagDirective.children;
+                         for (let tagDirChild of children) {
                              let retObj: Object = this.getVNodeValue(tagDirChild, tagMapper[`${dirTag}`], tagNameMapper);
                              if (Object.keys(retObj).length !== 0) {
                                  dir[tagName.replace('e-', '')].push(retObj);
