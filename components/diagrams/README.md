@@ -173,22 +173,22 @@ Diagram component is also offered in following list of frameworks.
 
 ## Key Features
 
-- [**Nodes**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/node.html)  - Nodes are used to host graphical objects (path or controls) that can be arranged and manipulated on a diagram page. Many predefined standard shapes are included. Custom shapes can also be created and added easily.
-- [**Connectors**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/connector.html) - The relationship between two nodes is represented using a connector.
-- [**Labels**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/annotation.html)- Labels are used to annotate nodes and connectors.
-* [**Ports**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/port.html) - Ports act as the connection points of the node and allows to create connections with only those specific points.
-- [**Interactive Features**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/drawing-tool.html) - Interactive features are used to improve the run time editing experience of a diagram.
-- [**Data Binding**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/local-data.html) - Generates diagram with nodes and connectors based on the information provided from an external data source.
-- [**Commands**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/keyboard-functions.html) - Supports a set of predefined commands that helps edit the diagram using keyboard. It is also possible to configure new commands and key combinations.
-- [**Automatic Layout**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/hierarchical-model.html) - Automatic layouts are used to arrange nodes automatically based on a predefined layout logic. There is built-in support for organizational chart layout, hierarchical tree layout, symmetric layout, radial tree layout, and mind map layout.
-- [**Overview Panel**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/overview.html) -  The overview panel is used to improve navigation experience when exploring large diagrams.
-- [**SymbolPalettes**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/symbol-palette.html) - The symbol palette is a gallery of reusable symbols and nodes that can be dragged and dropped on the surface of a diagram.
-- [**Rulers**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/drawing-tool.html) - The ruler provides horizontal and vertical guides for measuring diagram objects in diagram control.
-- [**Serialization**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/serialization.html) - When saved in JSON format a diagram’s state persists, and then it can be loaded back using serialization.
-- [**Exporting and Printing**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/print-export.html) - Diagrams can be exported as .png, .jpeg, .bmp, and .svg image files, and can also be printed as documents.
-- [**Gridlines**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/default-functionality.html) - Gridlines are the pattern of lines drawn behind diagram elements. It provides a visual guidance while dragging or arranging the objects on a diagram surface.
-- [**Page Layout**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/print-export.html)- The drawing surface can be configured to page-like appearance using page size, orientation, and margins.
-- [**Context Menu**](https://ej2.syncfusion.com/vue/demos/#/material/diagram/keyboard-functions.html) - Frequently used commands can easily be mapped to the context menu.
+- [Nodes](https://ej2.syncfusion.com/vue/demos/#/material/diagram/node.html)  - Nodes are used to host graphical objects (path or controls) that can be arranged and manipulated on a diagram page. Many predefined standard shapes are included. Custom shapes can also be created and added easily.
+- [Connectors](https://ej2.syncfusion.com/vue/demos/#/material/diagram/connector.html) - The relationship between two nodes is represented using a connector.
+- [Labels](https://ej2.syncfusion.com/vue/demos/#/material/diagram/annotation.html)- Labels are used to annotate nodes and connectors.
+* [Ports](https://ej2.syncfusion.com/vue/demos/#/material/diagram/port.html) - Ports act as the connection points of the node and allows to create connections with only those specific points.
+- [Interactive Features](https://ej2.syncfusion.com/vue/demos/#/material/diagram/drawing-tool.html) - Interactive features are used to improve the run time editing experience of a diagram.
+- [Data Binding](https://ej2.syncfusion.com/vue/demos/#/material/diagram/local-data.html) - Generates diagram with nodes and connectors based on the information provided from an external data source.
+- [Commands](https://ej2.syncfusion.com/vue/demos/#/material/diagram/keyboard-functions.html) - Supports a set of predefined commands that helps edit the diagram using keyboard. It is also possible to configure new commands and key combinations.
+- [Automatic Layout](https://ej2.syncfusion.com/vue/demos/#/material/diagram/hierarchical-model.html) - Automatic layouts are used to arrange nodes automatically based on a predefined layout logic. There is built-in support for organizational chart layout, hierarchical tree layout, symmetric layout, radial tree layout, and mind map layout.
+- [Overview Panel](https://ej2.syncfusion.com/vue/demos/#/material/diagram/overview.html) -  The overview panel is used to improve navigation experience when exploring large diagrams.
+- [SymbolPalettes](https://ej2.syncfusion.com/vue/demos/#/material/diagram/symbol-palette.html) - The symbol palette is a gallery of reusable symbols and nodes that can be dragged and dropped on the surface of a diagram.
+- [Rulers](https://ej2.syncfusion.com/vue/demos/#/material/diagram/drawing-tool.html) - The ruler provides horizontal and vertical guides for measuring diagram objects in diagram control.
+- [Serialization](https://ej2.syncfusion.com/vue/demos/#/material/diagram/serialization.html) - When saved in JSON format a diagram’s state persists, and then it can be loaded back using serialization.
+- [Exporting and Printing](https://ej2.syncfusion.com/vue/demos/#/material/diagram/print-export.html) - Diagrams can be exported as .png, .jpeg, .bmp, and .svg image files, and can also be printed as documents.
+- [Gridlines](https://ej2.syncfusion.com/vue/demos/#/material/diagram/default-functionality.html) - Gridlines are the pattern of lines drawn behind diagram elements. It provides a visual guidance while dragging or arranging the objects on a diagram surface.
+- [Page Layout](https://ej2.syncfusion.com/vue/demos/#/material/diagram/print-export.html)- The drawing surface can be configured to page-like appearance using page size, orientation, and margins.
+- [Context Menu](https://ej2.syncfusion.com/vue/demos/#/material/diagram/keyboard-functions.html) - Frequently used commands can easily be mapped to the context menu.
 
 ## Support
 

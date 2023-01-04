@@ -1,17 +1,10 @@
 {
 	"name": "@syncfusion/ej2-vue-gantt",
-	"version": "20.4.38",
+	"version": "20.4.40",
 	"description": "Essential JS 2 Gantt Component for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"keywords": [
-		"ej2",
-		"syncfusion",
-		"JavaScript",
-		"TypeScript",
-		"gantt",
-		"gantt-chart",
-		"project-management",
 		"vue",
 		"vuejs",
 		"vue-gantt",
