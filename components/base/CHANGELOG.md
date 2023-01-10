@@ -6,14 +6,20 @@
 
 ### Common
 
-#### New Features
-
-- `#FB34897` - Provided Vue 3 direct script support for Syncfusion Vue components.
-
 #### Bug Fixes
 
 - `#I409205` - The issue with the "Signature plugin missing in the latest Vue 2 direct script" has been resolved.
 - The issue with the "v-model support is not working for the textbox component in Vue 3" has been resolved.
+
+#### New Features
+
+- `#FB34897` - Provided Vue 3 direct script support for Syncfusion Vue components.
+- The new `Rating` component has been added to Vue.
+- The `AppBar`, `Floating Action Button (FAB)`, `Mention`, `Message` and `Speed Dial` components have been developed to meet industry standards and are now marked production-ready.
+
+#### Breaking Changes
+
+- If you are using Syncfusion's Vue components without first registering a license, a license dialog will appear after a certain limit of usage, preventing further interaction in the application. Please make sure to register a valid license in order to continue using the Syncfusion Vue components without interruption.
 
 ## 20.3.47 (2022-09-29)
 
