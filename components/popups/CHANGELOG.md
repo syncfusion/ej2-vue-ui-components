@@ -4,6 +4,14 @@
 
 ## 20.4.43 (2023-01-10)
 
+### Dialog
+
+#### Bug Fixes
+
+- `#I422249` - Now, Removed the "aria-describedby" attribute from Dialog element.
+
+## 20.4.40 (2022-12-28)
+
 ### Popup
 
 #### Bug Fixes

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.4.44 (2023-01-18)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I421164`  - Issue with "chart position is not updated properly while importing the excel with chart and perform dragging on chart" has been resolved.
+
 ## 20.4.40 (2022-12-28)
 
 ### Spreadsheet
