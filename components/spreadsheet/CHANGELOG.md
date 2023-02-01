@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 20.4.44 (2023-01-18)
+## 20.4.48 (2023-02-01)
 
 ### Spreadsheet
 
-#### Bug Fixes
+#### New Features
 
-- `#I421164`  - Issue with "chart position is not updated properly while importing the excel with chart and perform dragging on chart" has been resolved.
+- `#F178912` - Now, you can specify the `orientation` type for PDF export.
 
 ## 20.4.40 (2022-12-28)
 
@@ -1237,4 +1237,12 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
+
+## 20.4.44 (2023-01-18)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I421164`  - Issue with "chart position is not updated properly while importing the excel with chart and perform dragging on chart" has been resolved.
 

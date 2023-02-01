@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## 20.4.48 (2023-02-01)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I424071` - The issue of the Tooltip component throwing a script error when setting content as '${}' has been resolved.
+
+## 20.4.44 (2023-01-18)
+
+### Dialog
+
+#### Bug Fixes
+
+- `#I427261` - The Dialog component now closes properly when the escape key is pressed while the Rich Text Editor toolbar is extended and the Image Dialog is open.
+
 ## 20.4.43 (2023-01-10)
 
 ### Dialog

@@ -140,14 +140,6 @@ export class PivotViewComponent extends ComponentBase {
         return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
     }
 
-    public getCellTemplate(): Object {
-        return this.ej2Instances.getCellTemplate();
-    }
-
-    public getRowText(rowIndex: number, colIndex: number): string {
-        return this.ej2Instances.getRowText(rowIndex, colIndex);
-    }
-
     public loadPersistData(persistData: string): void {
         return this.ej2Instances.loadPersistData(persistData);
     }
@@ -170,10 +162,6 @@ export class PivotViewComponent extends ComponentBase {
 
     public showNumberFormattingDialog(): void {
         return this.ej2Instances.showNumberFormattingDialog();
-    }
-
-    public templateParser(template: string): Object {
-        return this.ej2Instances.templateParser(template);
     }
 }
 

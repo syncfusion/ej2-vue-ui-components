@@ -6,7 +6,7 @@ import { ImageEditor } from '@syncfusion/ej2-image-editor';
 
 
 // {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'backgroundImage', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'maxStrokeWidth', 'minStrokeWidth', 'saveWithBackground', 'signatureValue', 'strokeColor', 'theme', 'toolbar', 'toolbarTemplate', 'velocity', 'width', 'beforeSave', 'created', 'cropping', 'destroyed', 'fileOpened', 'fineTuneValueChanging', 'flipping', 'imageFiltering', 'panning', 'rotating', 'saved', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'locale', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'beforeSave', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'imageFiltering', 'panning', 'rotating', 'saved', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
