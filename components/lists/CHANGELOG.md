@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 20.4.49 (2023-02-07)
+## 20.4.50 (2023-02-14)
+
+### ListView
+
+#### Bug Fixes
+
+- `#I429567` - The issue of list items not rendering when virtualization is enabled and using a Vue external template has been resolved.
+
+## 20.4.48 (2023-02-01)
 
 ### ListView
 
