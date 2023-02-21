@@ -182,10 +182,18 @@ import Vue from 'vue';
      }
  
      public beforeDestroy(): void {
-         let tempBeforeDestroyThis: any = this;
-         tempBeforeDestroyThis.ej2Instances.destroy();
-         (tempBeforeDestroyThis.$el as any).style.visibility = 'hidden';
-         tempBeforeDestroyThis = null;
+         this.destroyComponent();
+     }
+
+     public beforeUnmount(): void {
+         this.destroyComponent();
+     }
+
+    public destroyComponent(): void {
+        let tempBeforeDestroyThis: any = this;
+        tempBeforeDestroyThis.ej2Instances.destroy();
+        (tempBeforeDestroyThis.$el as any).style.visibility = 'hidden';
+        tempBeforeDestroyThis = null;
      }
  
      public bindProperties(): void {

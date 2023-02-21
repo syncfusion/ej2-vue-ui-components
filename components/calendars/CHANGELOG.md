@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.4.51 (2023-02-21)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#F180084` - The issue "Unable to select the same date again in the DatePicker component" has been resolved.
+
 ## 20.4.48 (2023-02-01)
 
 - `#I426149` - The issue "show method target parameter not works as expected" has been resolved.

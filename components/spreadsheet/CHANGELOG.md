@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.4.51 (2023-02-21)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I438195` - Issue with "cell reference fails to update while referring another cell after typing the equal sign" has been resolved.
+
 ## 20.4.50 (2023-02-14)
 
 ### Spreadsheet

@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 20.4.50 (2023-02-14)
-
-### ListView
-
-#### Bug Fixes
-
-- `#I429567` - The issue of list items not rendering when virtualization is enabled and using a Vue external template has been resolved.
-
 ## 20.4.48 (2023-02-01)
 
 ### ListView
@@ -497,4 +489,12 @@ ListView component represent data in interactive hierarchical structure interfac
 - **Customizing templates** - Allows you to customize the list item, header and category group header.
 - **Accessibility** - Provides built-in accessibility support which helps to access all the ListView component features through the keyboard, on-screen readers, or other assistive technology devices.
 
+
+## 20.4.50 (2023-02-14)
+
+### ListView
+
+#### Bug Fixes
+
+- `#I429567` - The issue of list items not rendering when virtualization is enabled and using a Vue external template has been resolved.
 

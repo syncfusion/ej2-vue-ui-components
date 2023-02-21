@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 20.4.51 (2023-02-21)
+
+### Common
+
+#### Bug Fixes
+
+- `#I431571` - The issue with "Vue 3 components are not destroyed while routing" has been resolved.
+
 ## 20.4.38 (2022-12-21)
 
 ### Common
