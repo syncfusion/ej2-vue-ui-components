@@ -2,13 +2,15 @@
 
 ## [Unreleased]
 
-## 20.4.51 (2023-02-21)
+## 20.4.52 (2023-02-28)
 
 ### Spreadsheet
 
 #### Bug Fixes
 
-- `#I438195` - Issue with "cell reference fails to update while referring another cell after typing the equal sign" has been resolved.
+- `#I435982`, `#I434351` - Issue with "rendered cell template destroyed while updating the cell value using `updateCell` method" has been resolved.
+
+- `#I437422` - Issue with "exception throws while removing the context menu item that contains icons using `removeContextMenuItems` method" has been resolved.
 
 ## 20.4.50 (2023-02-14)
 
@@ -1261,6 +1263,14 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
+
+## 20.4.51 (2023-02-21)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I438195` - Issue with "cell reference fails to update while referring another cell after typing the equal sign" has been resolved.
 
 ## 20.4.44 (2023-01-18)
 

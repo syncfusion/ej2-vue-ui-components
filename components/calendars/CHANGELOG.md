@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 20.4.51 (2023-02-21)
-
-### DatePicker
-
-#### Bug Fixes
-
-- `#F180084` - The issue "Unable to select the same date again in the DatePicker component" has been resolved.
-
 ## 20.4.48 (2023-02-01)
 
 - `#I426149` - The issue "show method target parameter not works as expected" has been resolved.
@@ -1251,6 +1243,14 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 - **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.
 
+
+## 20.4.51 (2023-02-21)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#F180084` - The issue "Unable to select the same date again in the DatePicker component" has been resolved.
 
 ## 20.4.40 (2022-12-28)
 
