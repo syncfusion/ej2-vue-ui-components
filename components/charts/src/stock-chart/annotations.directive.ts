@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class StockChartAnnotationsDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let StockChartAnnotationsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class StockChartAnnotationsDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-stockchart-annotations';
         }
     }
-    public getTag(): string {
-        return 'e-stockchart-annotations';
-    }
-}
+});
 export const StockChartAnnotationsPlugin = {
     name: 'e-stockchart-annotations',
     install(Vue: any) {
@@ -64,15 +42,16 @@ export const StockChartAnnotationsPlugin = {
  * </ejs-chart>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class StockChartAnnotationDirective extends vueImport {
-    public render(): void {
+export let StockChartAnnotationDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-stockchart-annotation';
+        }
     }
-    public getTag(): string {
-        return 'e-stockchart-annotation';
-    }
-}
+});
 export const StockChartAnnotationPlugin = {
     name: 'e-stockchart-annotation',
     install(Vue: any) {

@@ -1,6 +1,6 @@
-import { Options } from 'vue-class-component';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
+import Vue from 'vue';
+import { ComponentBase, EJComponentDecorator } from '@syncfusion/ej2-vue-base';
+import { getValue } from '@syncfusion/ej2-base';
 
 import { CircularGauge } from '@syncfusion/ej2-circulargauge';
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
@@ -9,42 +9,19 @@ import { PointersDirective, PointerDirective, PointersPlugin, PointerPlugin } fr
 import { AxesDirective, AxisDirective, AxesPlugin, AxisPlugin } from './axes.directive'
 
 
-// {{VueImport}}
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowMargin', 'allowPdfExport', 'allowPrint', 'axes', 'background', 'border', 'centerX', 'centerY', 'description', 'enablePersistence', 'enablePointerDrag', 'enableRangeDrag', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'moveToCenter', 'tabIndex', 'theme', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'width', 'animationComplete', 'annotationRender', 'axisLabelRender', 'beforePrint', 'dragEnd', 'dragMove', 'dragStart', 'gaugeMouseDown', 'gaugeMouseLeave', 'gaugeMouseMove', 'gaugeMouseUp', 'legendRender', 'load', 'loaded', 'radiusCalculate', 'resized', 'tooltipRender'];
 export const modelProps: string[] = [];
 
-export const testProp: any = getProps({props: properties});
-export const props = testProp[0];
-export const watch = testProp[1];
-
-export const emitProbs: any = Object.keys(watch);
-emitProbs.push('modelchanged', 'update:modelValue');
-for (let props of modelProps) {
-    emitProbs.push(
-        'update:'+props
-    );
-}
 
 /**
- * Represents Vuejs Circular Gauge Component
+ * Represents the Vue Circular Gauge component. This tag is used to customize the properties of the circular gauge to visualize the data in circular scale.
  * ```vue
  * <ejs-circulargauge></ejs-circulargauge>
  * ```
  */
 @EJComponentDecorator({
     props: properties
-},isExecute)
-
-/* Start Options({
-    props: props,
-    watch: watch,
-    emits: emitProbs,
-    provide: function provide() {
-        return {
-            custom: this.custom
-        };
-    }
-}) End */
+})
 
 export class CircularGaugeComponent extends ComponentBase {
     
@@ -55,11 +32,9 @@ export class CircularGaugeComponent extends ComponentBase {
     protected hasInjectedModules: boolean = true;
     public tagMapper: { [key: string]: Object } = {"e-axes":{"e-axis":{"e-annotations":"e-annotation","e-ranges":"e-range","e-pointers":"e-pointer"}}};
     public tagNameMapper: Object = {};
-    public isVue3: boolean;
     public templateCollection: any;
     constructor() {
         super(arguments);
-        this.isVue3 = !isExecute;
         this.ej2Instances = new CircularGauge({});
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
@@ -94,9 +69,6 @@ export class CircularGaugeComponent extends ComponentBase {
 
 
     public setProperties(prop: any, muteOnChange: boolean): void {
-        if(this.isVue3) {
-            this.models = !this.models ? this.ej2Instances.referModels : this.models;
-        }
         if (this.ej2Instances && this.ej2Instances._setProperties) {
             this.ej2Instances._setProperties(prop, muteOnChange);
         }
@@ -104,12 +76,7 @@ export class CircularGaugeComponent extends ComponentBase {
             Object.keys(prop).map((key: string): void => {
                 this.models.map((model: string): void => {
                     if ((key === model) && !(/datasource/i.test(key))) {
-                        if (this.isVue3) {
-                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
-                        } else {
-                            (this as any).$emit('update:' + key, prop[key]);
-                            (this as any).$emit('modelchanged', prop[key]);
-                        }
+                        this.$emit('update:' + key, prop[key]);
                     }
                 });
             });
@@ -117,12 +84,7 @@ export class CircularGaugeComponent extends ComponentBase {
     }
 
     public render(createElement: any) {
-        let h: any = !isExecute ? gh : createElement;
-        let slots: any = null;
-        if(!isNullOrUndefined((this as any).$slots.default)) {
-            slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
-        }
-        return h('div', slots);
+         return createElement('div', (this as any).$slots.default);
     }
     public custom(): void {
         this.updated();

@@ -27,11 +27,6 @@ require.config({
             main: 'vue.js'
         },
         {
-            name: 'vue-class-component',
-            location: 'node_modules/vue-class-component/lib',
-            main: 'data.js'
-        },
-        {
             name: '@syncfusion/ej2-base',
             location: 'node_modules/@syncfusion/ej2-base',
             main: 'index.js'

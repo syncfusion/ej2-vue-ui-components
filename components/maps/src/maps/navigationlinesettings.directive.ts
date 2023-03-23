@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class NavigationLinesDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let NavigationLinesDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class NavigationLinesDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-navigationLineSettings';
         }
     }
-    public getTag(): string {
-        return 'e-navigationLineSettings';
-    }
-}
+});
 export const NavigationLinesPlugin = {
     name: 'e-navigationLineSettings',
     install(Vue: any) {
@@ -53,7 +31,7 @@ export const NavigationLinesPlugin = {
 }
 
 /**
- * `NavigationLinesDirective` directive represent a bubble settings of the Vuejs maps.
+ * Represents the directive to define the navigation lines in the maps.
  * ```vue
  * <ejs-maps>
  * <e-layers>
@@ -67,15 +45,16 @@ export const NavigationLinesPlugin = {
  * </ejs-maps>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class NavigationLineDirective extends vueImport {
-    public render(): void {
+export let NavigationLineDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-navigationLineSetting';
+        }
     }
-    public getTag(): string {
-        return 'e-navigationLineSetting';
-    }
-}
+});
 export const NavigationLinePlugin = {
     name: 'e-navigationLineSetting',
     install(Vue: any) {

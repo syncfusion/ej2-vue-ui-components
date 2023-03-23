@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-barcode-generator",
-	"version": "19.3.0",
+	"version": "19.4.0",
 	"description": "Barcode generator component is a pure JavaScript library which will convert a string to Barcode and show it to the user. This supports major 1D and 2D barcodes including coda bar, code 128, QR Code. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -31,7 +31,6 @@
 		"@types/jasmine-ajax": "^3.1.27",
 		"@types/requirejs": "^2.1.26",
 		"vue": "2.6.14",
-		"vue-class-component": "^8.0.0-rc.1",
 		"vue-loader-v16": "^16.0.0-beta.5.4",
 		"rollup": "^0.51.3",
 		"rollup-plugin-commonjs": "^8.2.6",

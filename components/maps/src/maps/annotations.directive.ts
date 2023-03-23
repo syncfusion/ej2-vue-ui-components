@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class AnnotationsDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let AnnotationsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class AnnotationsDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-maps-annotations';
         }
     }
-    public getTag(): string {
-        return 'e-maps-annotations';
-    }
-}
+});
 export const AnnotationsPlugin = {
     name: 'e-maps-annotations',
     install(Vue: any) {
@@ -53,7 +31,7 @@ export const AnnotationsPlugin = {
 }
 
 /**
- * `AnnotationsDirective` directive represent a annotation of the Vuejs maps.
+ * Represents the directive to define the annotations in the maps.
  * ```vue
  * <ejs-maps>
  * <e-maps-annotations>
@@ -62,15 +40,16 @@ export const AnnotationsPlugin = {
  * </ejs-maps>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class AnnotationDirective extends vueImport {
-    public render(): void {
+export let AnnotationDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-maps-annotation';
+        }
     }
-    public getTag(): string {
-        return 'e-maps-annotation';
-    }
-}
+});
 export const AnnotationPlugin = {
     name: 'e-maps-annotation',
     install(Vue: any) {

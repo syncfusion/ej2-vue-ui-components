@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-navigations",
-	"version": "20.4.53",
+	"version": "19.91.2",
 	"description": "A package of Essential JS 2 navigation components such as Tree-view, Tab, Toolbar, Context-menu, and Accordion which is used to navigate from one page to another for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -43,7 +43,6 @@
 		"@types/jasmine-ajax": "^3.1.27",
 		"@types/requirejs": "^2.1.26",
 		"vue": "2.6.14",
-		"vue-class-component": "^8.0.0-rc.1",
 		"vue-loader-v16": "^16.0.0-beta.5.4",
 		"rollup": "^0.51.3",
 		"rollup-plugin-commonjs": "^8.2.6",

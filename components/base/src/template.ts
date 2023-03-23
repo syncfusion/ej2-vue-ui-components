@@ -1,21 +1,8 @@
-import Vue from "vue";
-import {
-  setTemplateEngine,
-  getTemplateEngine,
-  getUniqueID,
-  createElement,
-  detach,
-  extend,
-  getValue,
-} from "@syncfusion/ej2-base";
-
-import { aVue, allVue, isExecute } from "./component-base";
+import { setTemplateEngine, getTemplateEngine, getUniqueID, createElement, detach, extend, getValue } from "@syncfusion/ej2-base";
+import { aVue as Vue, isExecute } from "./component-base";
 
 // tslint:disable:no-any
-let stringCompiler: (
-  template: string,
-  helper?: object
-) => (data: Object | JSON) => string = getTemplateEngine(); 
+let stringCompiler: (template: string, helper?: object) => (data: Object | JSON) => string = getTemplateEngine(); 
 
 export function compile(
   templateElement: any,
@@ -37,7 +24,7 @@ export function compile(
         let vueSlot: any = getCurrentVueSlot(context.vueInstance, templateElement, root);
         if (vueSlot) {
           // Compilation for Vue 3 slot template
-          let app: any = allVue.createApp({
+          let app: any = Vue.createApp({
             render () {
               return vueSlot[`${templateElement}`]({ data: data });
             }
@@ -47,6 +34,8 @@ export function compile(
               app.use(plugins[parseInt(i.toString(), 10)]);
             }
           }
+          // Get values for Vue 3 slot template
+          getValues(app, context.vueInstance, root);
           app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
           returnEle = ele.childNodes;
           detach(ele);
@@ -94,20 +83,35 @@ export function compile(
           }
         }
         templateCompRef.data = function () { return tempRef; };
-        let app: any = allVue.createApp(templateCompRef);
+        let app: any = Vue.createApp(templateCompRef);
         if (plugins) {
           for (let i: number = 0; i < plugins.length; i++) {
             app.use(plugins[parseInt(i.toString(), 10)]);
           }
         }
+        // Get values for Vue 3 functional template
+        getValues(app, context.vueInstance, root);
         app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
         returnEle = ele.childNodes;
         detach(ele);
       } else if (typeof templateElement === "string") {
         let vueSlot: any = getVueSlot(context.vueInstance, templateElement, root);
         if (vueSlot) {
+          // Get provide values for Vue 2 slot template
+          let provided: any = {};
+          let getProvideValues: any = (vueinstance: any) => {
+            if (vueinstance['$parent']) getProvideValues(vueinstance.$parent);
+            if (vueinstance['_provided'] && Object.keys(vueinstance['_provided']).length > 0) {
+              provided = {...provided, ...vueinstance._provided};
+            }
+          };
+          let vueInstance: any = context.vueInstance ? context.vueInstance : ((root && root.vueInstance) ? root.vueInstance : null);
+          if (vueInstance) {
+            getProvideValues(vueInstance);
+          }
           // Compilation for Vue 2 slot template
           let vueTemplate: any = new Vue({
+            provide: { ...provided },
             render () {
               return vueSlot[`${templateElement}`]({ data: data });
             }
@@ -162,6 +166,37 @@ export function compile(
 }
 
 setTemplateEngine({ compile: compile as any });
+
+function getValues(app: any, cInstance: any, root: any): any {
+  let vueInstance: any = cInstance ? cInstance : ((root && root.vueInstance) ? root.vueInstance : null);
+  if (!vueInstance) {
+    return;
+  }
+  // Get globally defined variables.
+  let globalVariables: string[] = ['components', 'mixins', 'provides'];
+  for (let i: number = 0; i < globalVariables.length; i++) {
+    let gVariable: string = globalVariables[i];
+    if (app['_context'][gVariable] && vueInstance['$']['appContext'][gVariable]) {
+      app['_context'][gVariable] = vueInstance['$']['appContext'][gVariable];
+    }
+  }
+  // Get provide value from child component.
+  let provided: any = {};
+  let getProvideValue: any = (vueinstance: any) => {
+    if (vueinstance['$'] && vueinstance['$']['parent']) getProvideValue(vueinstance.$.parent);
+    if (vueinstance['provides'] && Object.keys(vueinstance['provides']).length > 0) {
+      provided = {...provided, ...vueinstance.provides };
+    }
+  };
+  getProvideValue(vueInstance);
+  if (app['_context']['provides']) {
+    app._context.provides = {...app._context.provides, ...provided};
+  }
+  // Get globally defined properties.
+  if (app['_context']['config']['globalProperties'] && vueInstance['$']['appContext']['config']['globalProperties']) {
+    app['_context']['config']['globalProperties'] = vueInstance['$']['appContext']['config']['globalProperties'];
+  }
+}
 
 // Get the Vue2 slot template from the root or current Vue component.
 function getVueSlot(vueInstance: any, templateElement: any, root: any): any {

@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class ConditionalFormatsDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let ConditionalFormatsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class ConditionalFormatsDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-conditionalformats';
         }
     }
-    public getTag(): string {
-        return 'e-conditionalformats';
-    }
-}
+});
 export const ConditionalFormatsPlugin = {
     name: 'e-conditionalformats',
     install(Vue: any) {
@@ -67,15 +45,16 @@ export const ConditionalFormatsPlugin = {
  * </ejs-spreadsheet>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class ConditionalFormatDirective extends vueImport {
-    public render(): void {
+export let ConditionalFormatDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-conditionalformat';
+        }
     }
-    public getTag(): string {
-        return 'e-conditionalformat';
-    }
-}
+});
 export const ConditionalFormatPlugin = {
     name: 'e-conditionalformat',
     install(Vue: any) {

@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class ItemsDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let ItemsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class ItemsDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-items';
         }
     }
-    public getTag(): string {
-        return 'e-items';
-    }
-}
+});
 export const ItemsPlugin = {
     name: 'e-items',
     install(Vue: any) {
@@ -64,15 +42,16 @@ export const ItemsPlugin = {
  * </ejs-toolbar>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class ItemDirective extends vueImport {
-    public render(): void {
+export let ItemDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-item';
+        }
     }
-    public getTag(): string {
-        return 'e-item';
-    }
-}
+});
 export const ItemPlugin = {
     name: 'e-item',
     install(Vue: any) {

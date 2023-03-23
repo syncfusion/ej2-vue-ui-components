@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class PointersDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let PointersDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class PointersDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-pointers';
         }
     }
-    public getTag(): string {
-        return 'e-pointers';
-    }
-}
+});
 export const PointersPlugin = {
     name: 'e-pointers',
     install(Vue: any) {
@@ -53,7 +31,7 @@ export const PointersPlugin = {
 }
 
 /**
- * `Pointers` directive represent a pointers of the VueJS linear gauge.
+ * Represents the directive to render and customize the pointers in an axis of linear gauge.
  * ```vue
  * <ejs-lineargauge>
  * <e-axes>
@@ -64,15 +42,16 @@ export const PointersPlugin = {
  * </ejs-lineargauge>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class PointerDirective extends vueImport {
-    public render(): void {
+export let PointerDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-pointer';
+        }
     }
-    public getTag(): string {
-        return 'e-pointer';
-    }
-}
+});
 export const PointerPlugin = {
     name: 'e-pointer',
     install(Vue: any) {

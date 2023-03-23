@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class ConnectorAnnotationsDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let ConnectorAnnotationsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class ConnectorAnnotationsDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-connector-annotations';
         }
     }
-    public getTag(): string {
-        return 'e-connector-annotations';
-    }
-}
+});
 export const ConnectorAnnotationsPlugin = {
     name: 'e-connector-annotations',
     install(Vue: any) {
@@ -68,15 +46,16 @@ export const ConnectorAnnotationsPlugin = {
  * </ejs-diagram>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class ConnectorAnnotationDirective extends vueImport {
-    public render(): void {
+export let ConnectorAnnotationDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-connector-annotation';
+        }
     }
-    public getTag(): string {
-        return 'e-connector-annotation';
-    }
-}
+});
 export const ConnectorAnnotationPlugin = {
     name: 'e-connector-annotation',
     install(Vue: any) {

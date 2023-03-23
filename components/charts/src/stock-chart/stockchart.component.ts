@@ -1,7 +1,6 @@
-import { Options } from 'vue-class-component';
-import { isUndefined } from '@syncfusion/ej2-base';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
+import { isUndefined } from '@syncfusion/ej2-base';
 
 import { StockChart } from '@syncfusion/ej2-charts';
 import { StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin } from './trendlines.directive'
@@ -15,21 +14,13 @@ import { StockEventsDirective, StockEventDirective, StockEventsPlugin, StockEven
 import { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChartIndicatorsPlugin, StockChartIndicatorPlugin } from './indicators.directive'
 
 
-// {{VueImport}}
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'annotations', 'axes', 'background', 'border', 'chartArea', 'crosshair', 'dataSource', 'enableCustomRange', 'enablePeriodSelector', 'enablePersistence', 'enableRtl', 'enableSelector', 'exportType', 'height', 'indicatorType', 'indicators', 'isMultiSelect', 'isSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'periods', 'primaryXAxis', 'primaryYAxis', 'rows', 'selectedDataIndexes', 'selectionMode', 'series', 'seriesType', 'stockEvents', 'theme', 'title', 'titleStyle', 'tooltip', 'trendlineType', 'width', 'zoomSettings', 'axisLabelRender', 'legendClick', 'legendRender', 'load', 'loaded', 'onZooming', 'pointClick', 'pointMove', 'rangeChange', 'selectorRender', 'seriesRender', 'stockChartMouseClick', 'stockChartMouseDown', 'stockChartMouseLeave', 'stockChartMouseMove', 'stockChartMouseUp', 'stockEventRender', 'tooltipRender'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
-export const props = testProp[0];
-export const watch = testProp[1];
-
-export const emitProbs: any = Object.keys(watch);
+export const props = testProp[0], watch = testProp[1], emitProbs: any = Object.keys(watch);
 emitProbs.push('modelchanged', 'update:modelValue');
-for (let props of modelProps) {
-    emitProbs.push(
-        'update:'+props
-    );
-}
+for (let props of modelProps) { emitProbs.push('update:'+props) }
 
 /**
  * Represents Vuejs chart Component
@@ -37,164 +28,138 @@ for (let props of modelProps) {
  * <ejs-stockchart></ejs-stockchart>
  * ```
  */
-@EJComponentDecorator({
-    props: properties,
-    model: {
-        event: 'modelchanged'
-    }
-},isExecute)
-
-/* Start Options({
+export let StockChartComponent =  vueDefineComponent({
+    name: 'StockChartComponent',
+    mixins: [ComponentBase],
     props: props,
     watch: watch,
     emits: emitProbs,
-    provide: function provide() {
+    model: { event: 'modelchanged' },
+    provide() { return { custom: this.custom } },
+    data() {
         return {
-            custom: this.custom
-        };
-    }
-}) End */
-
-export class StockChartComponent extends ComponentBase {
-    
-    public ej2Instances: any;
-    public propKeys: string[] = properties;
-    public models: string[] = modelProps;
-    public hasChildDirective: boolean = true;
-    protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-stockchart-series-collection":{"e-stockchart-series":{"e-trendlines":"e-trendline"}},"e-stockchart-axes":"e-stockchart-axis","e-stockchart-rows":"e-stockchart-row","e-stockchart-annotations":"e-stockchart-annotation","e-stockchart-selectedDataIndexes":"e-stockchart-selectedDataIndex","e-stockchart-periods":"e-stockchart-period","e-stockchart-stockevents":"e-stockchart-stockevent","e-stockchart-indicators":"e-stockchart-indicator"};
-    public tagNameMapper: Object = {"e-stockchart-series-collection":"e-series","e-stockchart-axes":"e-axes","e-stockchart-rows":"e-rows","e-stockchart-annotations":"e-annotations","e-stockchart-selectedDataIndexes":"e-selectedDataIndexes","e-stockchart-periods":"e-periods","e-stockchart-stockevents":"e-stockEvents","e-stockchart-indicators":"e-indicators"};
-    public isVue3: boolean;
-    public templateCollection: any;
-    constructor() {
-        super(arguments);
-        this.isVue3 = !isExecute;
-        this.ej2Instances = new StockChart({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
+            ej2Instances: new StockChart({}) as any,
+            propKeys: properties as string[],
+            models: modelProps as string[],
+            hasChildDirective: true as boolean,
+            hasInjectedModules: true as boolean,
+            tagMapper: {"e-stockchart-series-collection":{"e-stockchart-series":{"e-trendlines":"e-trendline"}},"e-stockchart-axes":"e-stockchart-axis","e-stockchart-rows":"e-stockchart-row","e-stockchart-annotations":"e-stockchart-annotation","e-stockchart-selectedDataIndexes":"e-stockchart-selectedDataIndex","e-stockchart-periods":"e-stockchart-period","e-stockchart-stockevents":"e-stockchart-stockevent","e-stockchart-indicators":"e-stockchart-indicator"} as { [key: string]: Object },
+            tagNameMapper: {"e-stockchart-series-collection":"e-series","e-stockchart-axes":"e-axes","e-stockchart-rows":"e-rows","e-stockchart-annotations":"e-annotations","e-stockchart-selectedDataIndexes":"e-selectedDataIndexes","e-stockchart-periods":"e-periods","e-stockchart-stockevents":"e-stockEvents","e-stockchart-indicators":"e-indicators"} as Object,
+            isVue3: !isExecute as boolean,
+            templateCollection: {} as any,
+        }
+    },
+    created() {
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
         this.updated = this.updated;
-    }
-
- public clearTemplate(templateNames?: string[]): any {
-    if (!templateNames){
-       templateNames = Object.keys(this.templateCollection || {});
-    }
-    if (templateNames.length &&  this.templateCollection) {
-    for (let tempName of templateNames){
-       let elementCollection: any = this.templateCollection[tempName];
-       if(elementCollection && elementCollection.length) {
-       for(let ele of elementCollection) {
-           let destroy: any = getValue('__vue__.$destroy', ele);
-           if (destroy) {
-               ele.__vue__.$destroy();
-           }
-           if (ele.innerHTML){
-               ele.innerHTML = '';
-           }
-       }
-       delete this.templateCollection[tempName];
-       }
-    }
-}
- }
-
-
-
-    public setProperties(prop: any, muteOnChange: boolean): void {
-        if(this.isVue3) {
-            this.models = !this.models ? this.ej2Instances.referModels : this.models;
-        }
-        if (this.ej2Instances && this.ej2Instances._setProperties) {
-            this.ej2Instances._setProperties(prop, muteOnChange);
-        }
-        if (prop && this.models && this.models.length) {
-            Object.keys(prop).map((key: string): void => {
-                this.models.map((model: string): void => {
-                    if ((key === model) && !(/datasource/i.test(key))) {
-                        if (this.isVue3) {
-                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
-                        } else {
-                            (this as any).$emit('update:' + key, prop[key]);
-                            (this as any).$emit('modelchanged', prop[key]);
-                        }
-                    }
-                });
-            });
-        }
-    }
-    public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
-        if(!isExecute) {
-            this.models = !this.models ? this.ej2Instances.referModels : this.models;
-        }
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key: string[] = this.models.toString().match(/checked|value/) || [];
-            let propKey: string = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                if (!isExecute) {
-                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
-                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
-                    this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
-                } else {
-                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
-                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                        (this as any).$emit('modelchanged', eventProp[propKey]);
-                    }
-                }
-            }
-        } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
-            let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
-            let propKey: string = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                if (!isExecute) {
-                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
-                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
-                } else {
-                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                    (this as any).$emit('modelchanged', eventProp[propKey]);
-                }
-            }
-        }
-        if ((this.ej2Instances && this.ej2Instances._trigger)) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler); 
-        }
-    }
-
-    public render(createElement: any) {
+    },
+    render(createElement: any) {
         let h: any = !isExecute ? gh : createElement;
         let slots: any = null;
         if(!isNullOrUndefined((this as any).$slots.default)) {
             slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
-    }
-    public custom(): void {
-        this.updated();
-    }
-    
-    public chartModuleInjection(): void {
-        return this.ej2Instances.chartModuleInjection();
-    }
+    },
+    methods: {
+        clearTemplate(templateNames?: string[]): any {
+            if (!templateNames){ templateNames = Object.keys(this.templateCollection || {}) }
+            if (templateNames.length &&  this.templateCollection) {
+                for (let tempName of templateNames){
+                    let elementCollection: any = this.templateCollection[tempName];
+                    if(elementCollection && elementCollection.length) {
+                        for(let ele of elementCollection) {
+                            let destroy: any = getValue('__vue__.$destroy', ele);
+                            if (destroy) { ele.__vue__.$destroy() }
+                            if (ele.innerHTML) { ele.innerHTML = '' }
+                        }
+                        delete this.templateCollection[tempName];
+                    }
+                }
+            }
+        },
+        setProperties(prop: any, muteOnChange: boolean): void {
+            if(this.isVue3) { this.models = !this.models ? this.ej2Instances.referModels : this.models }
+            if (this.ej2Instances && this.ej2Instances._setProperties) {
+                this.ej2Instances._setProperties(prop, muteOnChange);
+            }
+            if (prop && this.models && this.models.length) {
+                Object.keys(prop).map((key: string): void => {
+                    this.models.map((model: string): void => {
+                        if ((key === model) && !(/datasource/i.test(key))) {
+                            if (this.isVue3) {
+                                this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
+                            } else {
+                                (this as any).$emit('update:' + key, prop[key]);
+                                (this as any).$emit('modelchanged', prop[key]);
+                            }
+                        }
+                    });
+                });
+            }
+        },        
+        trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+            if(!isExecute) { this.models = !this.models ? this.ej2Instances.referModels : this.models }
+            if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+                let key: string[] = this.models.toString().match(/checked|value/) || [];
+                let propKey: string = key[0];
+                if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                    if (!isExecute) {
+                        this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
+                    } else {
+                        if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
+                            (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                            (this as any).$emit('modelchanged', eventProp[propKey]);
+                        }
+                    }
+                }
+            } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+                let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
+                let propKey: string = key[0];
+                if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                    if (!isExecute) {
+                        this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                    } else {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
+                }
+            }
+            if ((this.ej2Instances && this.ej2Instances._trigger)) {
+                this.ej2Instances._trigger(eventName, eventProp, successHandler); 
+            }
+        },
 
-    public findCurrentData(totalData: Object, xName: string): Object {
-        return this.ej2Instances.findCurrentData(totalData, xName);
+        custom(): void {
+            this.updated();
+        },
+        chartModuleInjection(): void {
+            return this.ej2Instances.chartModuleInjection();
+        },
+        findCurrentData(totalData: Object, xName: string): Object {
+            return this.ej2Instances.findCurrentData(totalData, xName);
+        },
+        rangeChanged(updatedStart: number, updatedEnd: number): void {
+            return this.ej2Instances.rangeChanged(updatedStart, updatedEnd);
+        },
+        renderPeriodSelector(): void {
+            return this.ej2Instances.renderPeriodSelector();
+        },
+        stockChartDataManagerSuccess(): void {
+            return this.ej2Instances.stockChartDataManagerSuccess();
+        },
     }
+});
 
-    public rangeChanged(updatedStart: number, updatedEnd: number): void {
-        return this.ej2Instances.rangeChanged(updatedStart, updatedEnd);
-    }
-
-    public renderPeriodSelector(): void {
-        return this.ej2Instances.renderPeriodSelector();
-    }
-
-    public stockChartDataManagerSuccess(): void {
-        return this.ej2Instances.stockChartDataManagerSuccess();
-    }
-}
+export type StockChartComponent = InstanceType<typeof StockChartComponent>;
 
 export const StockChartPlugin = {
     name: 'ejs-stockchart',

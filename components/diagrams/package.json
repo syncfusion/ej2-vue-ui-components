@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-diagrams",
-	"version": "20.4.53",
+	"version": "19.14.9",
 	"description": "Feature-rich diagram control to create diagrams like flow charts, organizational charts, mind maps, and BPMN diagrams. Its rich feature set includes built-in shapes, editing, serializing, exporting, printing, overview, data binding, and automatic layouts. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -31,7 +31,6 @@
 		"@types/jasmine-ajax": "^3.1.27",
 		"@types/requirejs": "^2.1.26",
 		"vue": "2.6.14",
-		"vue-class-component": "^8.0.0-rc.1",
 		"vue-loader-v16": "^16.0.0-beta.5.4",
 		"rollup": "^0.51.3",
 		"rollup-plugin-commonjs": "^8.2.6",

@@ -1,7 +1,6 @@
-import { Options } from 'vue-class-component';
-import { isUndefined } from '@syncfusion/ej2-base';
-import { ComponentBase, EJComponentDecorator, getProps, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
+import { isUndefined } from '@syncfusion/ej2-base';
 
 import { Maps } from '@syncfusion/ej2-maps';
 import { InitialShapeSelectionsDirective, InitialShapeSelectionDirective, InitialShapeSelectionsPlugin, InitialShapeSelectionPlugin } from './initialshapeselection.directive'
@@ -13,258 +12,180 @@ import { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './la
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
 
 
-// {{VueImport}}
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowPdfExport', 'allowPrint', 'annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'legendRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerMouseMove', 'markerRendering', 'onclick', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowPdfExport', 'allowPrint', 'annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'legendRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerDragEnd', 'markerDragStart', 'markerMouseMove', 'markerRendering', 'onclick', 'pan', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
-export const props = testProp[0];
-export const watch = testProp[1];
-
-export const emitProbs: any = Object.keys(watch);
+export const props = testProp[0], watch = testProp[1], emitProbs: any = Object.keys(watch);
 emitProbs.push('modelchanged', 'update:modelValue');
-for (let props of modelProps) {
-    emitProbs.push(
-        'update:'+props
-    );
-}
+for (let props of modelProps) { emitProbs.push('update:'+props) }
 
 /**
- * Represents Vuejs Maps Component
+ * Represents the Vue Maps component.
+ * It is ideal for rendering maps from GeoJSON data or other map providers like OpenStreetMap, Google Maps, Bing Maps, etc that has rich feature set that includes markers, labels, bubbles and much more. 
  * ```vue
  * <ejs-maps></ejs-maps>
  * ```
  */
-@EJComponentDecorator({
-    props: properties,
-    model: {
-        event: 'modelchanged'
-    }
-},isExecute)
-
-/* Start Options({
+export let MapsComponent =  vueDefineComponent({
+    name: 'MapsComponent',
+    mixins: [ComponentBase],
     props: props,
     watch: watch,
     emits: emitProbs,
-    provide: function provide() {
+    model: { event: 'modelchanged' },
+    provide() { return { custom: this.custom } },
+    data() {
         return {
-            custom: this.custom
-        };
-    }
-}) End */
-
-export class MapsComponent extends ComponentBase {
-    
-    public ej2Instances: any;
-    public propKeys: string[] = properties;
-    public models: string[] = modelProps;
-    public hasChildDirective: boolean = true;
-    protected hasInjectedModules: boolean = true;
-    public tagMapper: { [key: string]: Object } = {"e-layers":{"e-layer":{"e-initialShapeSelections":"e-initialShapeSelection","e-markerSettings":"e-markerSetting","e-bubbleSettings":{"e-bubbleSetting":{"e-colorMappings":"e-colorMapping"}},"e-navigationLineSettings":"e-navigationLineSetting"}},"e-maps-annotations":"e-maps-annotation"};
-    public tagNameMapper: Object = {"e-initialShapeSelections":"e-initialShapeSelection","e-colorMappings":"e-colorMapping","e-maps-annotations":"e-annotations"};
-    public isVue3: boolean;
-    public templateCollection: any;
-    constructor() {
-        super(arguments);
-        this.isVue3 = !isExecute;
-        this.ej2Instances = new Maps({});        this.ej2Instances._trigger = this.ej2Instances.trigger;
+            ej2Instances: new Maps({}) as any,
+            propKeys: properties as string[],
+            models: modelProps as string[],
+            hasChildDirective: true as boolean,
+            hasInjectedModules: true as boolean,
+            tagMapper: {"e-layers":{"e-layer":{"e-initialShapeSelections":"e-initialShapeSelection","e-markerSettings":"e-markerSetting","e-bubbleSettings":{"e-bubbleSetting":{"e-colorMappings":"e-colorMapping"}},"e-navigationLineSettings":"e-navigationLineSetting"}},"e-maps-annotations":"e-maps-annotation"} as { [key: string]: Object },
+            tagNameMapper: {"e-initialShapeSelections":"e-initialShapeSelection","e-colorMappings":"e-colorMapping","e-maps-annotations":"e-annotations"} as Object,
+            isVue3: !isExecute as boolean,
+            templateCollection: {} as any,
+        }
+    },
+    created() {
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
         this.ej2Instances.trigger = this.trigger;
-
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
         this.ej2Instances.clearTemplate = this.clearTemplate;
         this.updated = this.updated;
-    }
-
- public clearTemplate(templateNames?: string[]): any {
-    if (!templateNames){
-       templateNames = Object.keys(this.templateCollection || {});
-    }
-    if (templateNames.length &&  this.templateCollection) {
-    for (let tempName of templateNames){
-       let elementCollection: any = this.templateCollection[tempName];
-       if(elementCollection && elementCollection.length) {
-       for(let ele of elementCollection) {
-           let destroy: any = getValue('__vue__.$destroy', ele);
-           if (destroy) {
-               ele.__vue__.$destroy();
-           }
-           if (ele.innerHTML){
-               ele.innerHTML = '';
-           }
-       }
-       delete this.templateCollection[tempName];
-       }
-    }
-}
- }
-
-
-
-    public setProperties(prop: any, muteOnChange: boolean): void {
-        if(this.isVue3) {
-            this.models = !this.models ? this.ej2Instances.referModels : this.models;
-        }
-        if (this.ej2Instances && this.ej2Instances._setProperties) {
-            this.ej2Instances._setProperties(prop, muteOnChange);
-        }
-        if (prop && this.models && this.models.length) {
-            Object.keys(prop).map((key: string): void => {
-                this.models.map((model: string): void => {
-                    if ((key === model) && !(/datasource/i.test(key))) {
-                        if (this.isVue3) {
-                            this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
-                        } else {
-                            (this as any).$emit('update:' + key, prop[key]);
-                            (this as any).$emit('modelchanged', prop[key]);
-                        }
-                    }
-                });
-            });
-        }
-    }
-    public trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
-        if(!isExecute) {
-            this.models = !this.models ? this.ej2Instances.referModels : this.models;
-        }
-        if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
-            let key: string[] = this.models.toString().match(/checked|value/) || [];
-            let propKey: string = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                if (!isExecute) {
-                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
-                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
-                    this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
-                } else {
-                    if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
-                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                        (this as any).$emit('modelchanged', eventProp[propKey]);
-                    }
-                }
-            }
-        } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
-            let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
-            let propKey: string = key[0];
-            if (eventProp && key && !isUndefined(eventProp[propKey])) {
-                if (!isExecute) {
-                    this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
-                    this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
-                } else {
-                    (this as any).$emit('update:'+ propKey, eventProp[propKey]);
-                    (this as any).$emit('modelchanged', eventProp[propKey]);
-                }
-            }
-        }
-        if ((this.ej2Instances && this.ej2Instances._trigger)) {
-            this.ej2Instances._trigger(eventName, eventProp, successHandler); 
-        }
-    }
-
-    public render(createElement: any) {
+    },
+    render(createElement: any) {
         let h: any = !isExecute ? gh : createElement;
         let slots: any = null;
         if(!isNullOrUndefined((this as any).$slots.default)) {
             slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
         }
         return h('div', slots);
-    }
-    public custom(): void {
-        this.updated();
-    }
-    
-    public addLayer(layer: Object): void {
-        return this.ej2Instances.addLayer(layer);
-    }
+    },
+    methods: {
+        clearTemplate(templateNames?: string[]): any {
+            if (!templateNames){ templateNames = Object.keys(this.templateCollection || {}) }
+            if (templateNames.length &&  this.templateCollection) {
+                for (let tempName of templateNames){
+                    let elementCollection: any = this.templateCollection[tempName];
+                    if(elementCollection && elementCollection.length) {
+                        for(let ele of elementCollection) {
+                            let destroy: any = getValue('__vue__.$destroy', ele);
+                            if (destroy) { ele.__vue__.$destroy() }
+                            if (ele.innerHTML) { ele.innerHTML = '' }
+                        }
+                        delete this.templateCollection[tempName];
+                    }
+                }
+            }
+        },
+        setProperties(prop: any, muteOnChange: boolean): void {
+            if(this.isVue3) { this.models = !this.models ? this.ej2Instances.referModels : this.models }
+            if (this.ej2Instances && this.ej2Instances._setProperties) {
+                this.ej2Instances._setProperties(prop, muteOnChange);
+            }
+            if (prop && this.models && this.models.length) {
+                Object.keys(prop).map((key: string): void => {
+                    this.models.map((model: string): void => {
+                        if ((key === model) && !(/datasource/i.test(key))) {
+                            if (this.isVue3) {
+                                this.ej2Instances.vueInstance.$emit('update:' + key, prop[key]);
+                            } else {
+                                (this as any).$emit('update:' + key, prop[key]);
+                                (this as any).$emit('modelchanged', prop[key]);
+                            }
+                        }
+                    });
+                });
+            }
+        },        
+        trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+            if(!isExecute) { this.models = !this.models ? this.ej2Instances.referModels : this.models }
+            if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+                let key: string[] = this.models.toString().match(/checked|value/) || [];
+                let propKey: string = key[0];
+                if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                    if (!isExecute) {
+                        this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
+                    } else {
+                        if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
+                            (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                            (this as any).$emit('modelchanged', eventProp[propKey]);
+                        }
+                    }
+                }
+            } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+                let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
+                let propKey: string = key[0];
+                if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                    if (!isExecute) {
+                        this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                    } else {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
+                }
+            }
+            if ((this.ej2Instances && this.ej2Instances._trigger)) {
+                this.ej2Instances._trigger(eventName, eventProp, successHandler); 
+            }
+        },
 
-    public addMarker(layerIndex: number, markerCollection: Object[]): void {
-        return this.ej2Instances.addMarker(layerIndex, markerCollection);
+        custom(): void {
+            this.updated();
+        },
+        addLayer(layer: Object): void {
+            return this.ej2Instances.addLayer(layer);
+        },
+        addMarker(layerIndex: number, markerCollection: Object[]): void {
+            return this.ej2Instances.addMarker(layerIndex, markerCollection);
+        },
+        export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
+            return this.ej2Instances.export(type, fileName, orientation, allowDownload);
+        },
+        getBingUrlTemplate(url: string): Object {
+            return this.ej2Instances.getBingUrlTemplate(url);
+        },
+        getGeoLocation(layerIndex: number, x: number, y: number): Object {
+            return this.ej2Instances.getGeoLocation(layerIndex, x, y);
+        },
+        getTileGeoLocation(x: number, y: number): Object {
+            return this.ej2Instances.getTileGeoLocation(x, y);
+        },
+        mapsOnResize(e: Object): boolean {
+            return this.ej2Instances.mapsOnResize(e);
+        },
+        panByDirection(direction: Object, mouseLocation?: Object | Object): void {
+            return this.ej2Instances.panByDirection(direction, mouseLocation);
+        },
+        pointToLatLong(pageX: number, pageY: number): Object {
+            return this.ej2Instances.pointToLatLong(pageX, pageY);
+        },
+        print(id?: string[] | string | Object): void {
+            return this.ej2Instances.print(id);
+        },
+        removeLayer(index: number): void {
+            return this.ej2Instances.removeLayer(index);
+        },
+        shapeSelection(layerIndex: number, propertyName: string | string[], name: string, enable?: boolean): void {
+            return this.ej2Instances.shapeSelection(layerIndex, propertyName, name, enable);
+        },
+        zoomByPosition(centerPosition: undefined, zoomFactor: number): void {
+            return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
+        },
+        zoomToCoordinates(minLatitude: number, minLongitude: number, maxLatitude: number, maxLongitude: number): void {
+            return this.ej2Instances.zoomToCoordinates(minLatitude, minLongitude, maxLatitude, maxLongitude);
+        },
     }
+});
 
-    public export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
-        return this.ej2Instances.export(type, fileName, orientation, allowDownload);
-    }
-
-    public getBingUrlTemplate(url: string): Object {
-        return this.ej2Instances.getBingUrlTemplate(url);
-    }
-
-    public getGeoLocation(layerIndex: number, x: number, y: number): Object {
-        return this.ej2Instances.getGeoLocation(layerIndex, x, y);
-    }
-
-    public getLocalizedLabel(key: string): string {
-        return this.ej2Instances.getLocalizedLabel(key);
-    }
-
-    public getTileGeoLocation(x: number, y: number): Object {
-        return this.ej2Instances.getTileGeoLocation(x, y);
-    }
-
-    public mapsOnClick(e: Object): void {
-        return this.ej2Instances.mapsOnClick(e);
-    }
-
-    public mapsOnDoubleClick(e: Object): void {
-        return this.ej2Instances.mapsOnDoubleClick(e);
-    }
-
-    public mapsOnResize(e: Object): boolean {
-        return this.ej2Instances.mapsOnResize(e);
-    }
-
-    public mouseDownOnMap(e: Object): void {
-        return this.ej2Instances.mouseDownOnMap(e);
-    }
-
-    public mouseEndOnMap(e: Object): boolean {
-        return this.ej2Instances.mouseEndOnMap(e);
-    }
-
-    public mouseLeaveOnMap(e: Object): void {
-        return this.ej2Instances.mouseLeaveOnMap(e);
-    }
-
-    public mouseMoveOnMap(e: Object): void {
-        return this.ej2Instances.mouseMoveOnMap(e);
-    }
-
-    public onMouseMove(e: Object): boolean {
-        return this.ej2Instances.onMouseMove(e);
-    }
-
-    public panByDirection(direction: Object, mouseLocation?: Object | Object): void {
-        return this.ej2Instances.panByDirection(direction, mouseLocation);
-    }
-
-    public pointToLatLong(pageX: number, pageY: number): Object {
-        return this.ej2Instances.pointToLatLong(pageX, pageY);
-    }
-
-    public print(id?: string[] | string | Object): void {
-        return this.ej2Instances.print(id);
-    }
-
-    public processResponseJsonData(processType: string, data?: any | string, layer?: Object, dataType?: string): void {
-        return this.ej2Instances.processResponseJsonData(processType, data, layer, dataType);
-    }
-
-    public removeLayer(index: number): void {
-        return this.ej2Instances.removeLayer(index);
-    }
-
-    public shapeSelection(layerIndex: number, propertyName: string | string[], name: string, enable?: boolean): void {
-        return this.ej2Instances.shapeSelection(layerIndex, propertyName, name, enable);
-    }
-
-    public zoomByPosition(centerPosition: undefined, zoomFactor: number): void {
-        return this.ej2Instances.zoomByPosition(centerPosition, zoomFactor);
-    }
-
-    public zoomToCoordinates(minLatitude: number, minLongitude: number, maxLatitude: number, maxLongitude: number): void {
-        return this.ej2Instances.zoomToCoordinates(minLatitude, minLongitude, maxLatitude, maxLongitude);
-    }
-}
+export type MapsComponent = InstanceType<typeof MapsComponent>;
 
 export const MapsPlugin = {
     name: 'ejs-maps',

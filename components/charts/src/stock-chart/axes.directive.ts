@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class StockChartAxesDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let StockChartAxesDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class StockChartAxesDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-stockchart-axes';
         }
     }
-    public getTag(): string {
-        return 'e-stockchart-axes';
-    }
-}
+});
 export const StockChartAxesPlugin = {
     name: 'e-stockchart-axes',
     install(Vue: any) {
@@ -53,15 +31,16 @@ export const StockChartAxesPlugin = {
 }
 
 
-@EJComponentDecorator({}, isExecute)
-export class StockChartAxisDirective extends vueImport {
-    public render(): void {
+export let StockChartAxisDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-stockchart-axis';
+        }
     }
-    public getTag(): string {
-        return 'e-stockchart-axis';
-    }
-}
+});
 export const StockChartAxisPlugin = {
     name: 'e-stockchart-axis',
     install(Vue: any) {

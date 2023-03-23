@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## 21.1.35 (2023-03-23)
+
+### Common
+
+#### New Features
+
+- `#I396062`, `#F166897`, `#I412247` - Provided the provide/inject support for Vue template components.
+- `#FB38812` - Provided the `Nuxt 3` framework compatible support for the Vue components.
+- `#F178140` - Provided the `pnpm` framework compatible support for the Vue components.
+- `#F176652` - Provided the `Vitest` testing framework compatible support for the Vue components.
+- `#FB38517` - Provided the support to use the Vue components in Vue applications without requiring the `vue-class-component` package.
+
 ## 20.4.51 (2023-02-21)
 
 ### Common

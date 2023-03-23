@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class RangesDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let RangesDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class RangesDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-ranges';
         }
     }
-    public getTag(): string {
-        return 'e-ranges';
-    }
-}
+});
 export const RangesPlugin = {
     name: 'e-ranges',
     install(Vue: any) {
@@ -53,7 +31,7 @@ export const RangesPlugin = {
 }
 
 /**
- * `Ranges` directive represent a ranges of the VueJS linear gauge. 
+ * Represents the directive to render and customize the ranges in an axis of linear gauge.
  * ```vue
  * <ejs-lineargauge>
  * <e-axes>
@@ -64,15 +42,16 @@ export const RangesPlugin = {
  * </ejs-lineargauge>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class RangeDirective extends vueImport {
-    public render(): void {
+export let RangeDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-range';
+        }
     }
-    public getTag(): string {
-        return 'e-range';
-    }
-}
+});
 export const RangePlugin = {
     name: 'e-range',
     install(Vue: any) {

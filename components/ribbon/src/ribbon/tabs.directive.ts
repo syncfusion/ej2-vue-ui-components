@@ -1,0 +1,60 @@
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { isNullOrUndefined } from '@syncfusion/ej2-base';
+
+export let RibbonTabsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
+        if (!isExecute) {
+            let h: any = !isExecute ? gh : createElement;
+            let slots: any = null;
+            if(!isNullOrUndefined((this as any).$slots.default)) {
+                slots = !isExecute ? (this as any).$slots.default() : (this as any).$slots.default;
+            }
+            return h('div', { class: 'e-directive' }, slots);
+        }
+        return;
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-ribbon-tabs';
+        }
+    }
+});
+export const RibbonTabsPlugin = {
+    name: 'e-ribbon-tabs',
+    install(Vue: any) {
+        Vue.component(RibbonTabsPlugin.name, RibbonTabsDirective);
+    }
+}
+
+/**
+ * `e-ribbon-tab` directive represent a column of the VueJS Ribbon. 
+ * It must be contained in a Ribbon component(`ejs-ribbon`). 
+ * ```vue
+ * <ejs-ribbon>
+ *   <e-ribbon-tabs>
+ *    <e-ribbon-tab></e-ribbon-tab>
+ *    <e-ribbon-tab></e-ribbon-tab>
+ *   </e-ribbon-tabs>
+ * </ejs-ribbon>
+ * ```
+ */
+export let RibbonTabDirective =  vueDefineComponent({
+    render(): void {
+        return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-ribbon-tab';
+        }
+    }
+});
+export const RibbonTabPlugin = {
+    name: 'e-ribbon-tab',
+    install(Vue: any) {
+        Vue.component(RibbonTabPlugin.name, RibbonTabDirective);
+    }
+}

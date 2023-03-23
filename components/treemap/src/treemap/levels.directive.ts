@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class LevelsDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let LevelsDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class LevelsDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-levels';
         }
     }
-    public getTag(): string {
-        return 'e-levels';
-    }
-}
+});
 export const LevelsPlugin = {
     name: 'e-levels',
     install(Vue: any) {
@@ -53,7 +31,7 @@ export const LevelsPlugin = {
 }
 
 /**
- * `LevelsDirective` directive represent a levels of the react treemap.
+ * Represents the directive to configure and render level leaf items in the treemap.
  * ```vue
  * <ejs-treemap>
  * <e-levels>
@@ -62,15 +40,16 @@ export const LevelsPlugin = {
  * </ejs-treemap>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class LevelDirective extends vueImport {
-    public render(): void {
+export let LevelDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-level';
+        }
     }
-    public getTag(): string {
-        return 'e-level';
-    }
-}
+});
 export const LevelPlugin = {
     name: 'e-level',
     install(Vue: any) {

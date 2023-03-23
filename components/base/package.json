@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-base",
-	"version": "20.4.51",
+	"version": "19.3.53",
 	"description": "A common package of Essential JS 2 base Vue libraries, methods and class definitions",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -24,8 +24,7 @@
 	"module": "./index.js",
 	"readme": "ReadMe.md",
 	"dependencies": {
-		"@syncfusion/ej2-base": "*",
-		"glob": "^7.0.5"
+		"@syncfusion/ej2-base": "*"
 	},
 	"devDependencies": {
 		"@types/chai": "^3.4.28",
@@ -37,7 +36,6 @@
 		"@types/requirejs": "^2.1.26",
 		"typescript": "2.3.4",
 		"vue": "2.5.2 - 2.6.11",
-		"vue-class-component": "7.2.6",
 		"es6-promise": "^3.2.1",
 		"gulp": "^3.9.1",
 		"gulp-sass": "^3.1.0",

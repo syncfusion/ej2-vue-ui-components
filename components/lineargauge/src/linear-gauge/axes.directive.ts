@@ -1,31 +1,9 @@
-import { ComponentBase, EJComponentDecorator, allVue, gh, isExecute } from '@syncfusion/ej2-vue-base';
-import * as Vue3 from 'vue-class-component';
-import { Options } from 'vue-class-component';
+import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
-import Vue from 'vue';
-// {{VueImport}}
 
-let vueImport: any;
-if (!isExecute || parseInt(allVue.version) < 3) {
-    vueImport = (Vue3 as any).Vue;
-} else {
-    vueImport = Vue;
-}
-
-@EJComponentDecorator({}, isExecute)
-/* Start Options({
-    inject: {
-        custom: {
-            default: null
-        }
-    }
-}) End */
-
-export class AxesDirective extends vueImport {
-    constructor() {
-        super(arguments);
-    }
-    public render(createElement: any): void {
+export let AxesDirective =  vueDefineComponent({
+    inject: { custom: { default: null } },
+    render(createElement: any): void {
         if (!isExecute) {
             let h: any = !isExecute ? gh : createElement;
             let slots: any = null;
@@ -35,16 +13,16 @@ export class AxesDirective extends vueImport {
             return h('div', { class: 'e-directive' }, slots);
         }
         return;
-    }
-    public updated(): void {
-        if (!isExecute && this.custom) {
-            this.custom();
+    },
+    updated(): void {
+        if (!isExecute && this.custom) { this.custom() }
+    },
+    methods: {
+        getTag(): string {
+            return 'e-axes';
         }
     }
-    public getTag(): string {
-        return 'e-axes';
-    }
-}
+});
 export const AxesPlugin = {
     name: 'e-axes',
     install(Vue: any) {
@@ -53,22 +31,23 @@ export const AxesPlugin = {
 }
 
 /**
- * Axes directive represent a axes of the VueJS linear gauge.
+ * Represents the directive to render the axes in the Linear Gauge.
  * ```vue
  * <ejs-lineargauge>
  * <e-axes><e-axis></e-axis></e-axes>
  * </ejs-lineargauge>
  * ```
  */
-@EJComponentDecorator({}, isExecute)
-export class AxisDirective extends vueImport {
-    public render(): void {
+export let AxisDirective =  vueDefineComponent({
+    render(): void {
         return;
+    },
+    methods: {
+        getTag(): string {
+            return 'e-axis';
+        }
     }
-    public getTag(): string {
-        return 'e-axis';
-    }
-}
+});
 export const AxisPlugin = {
     name: 'e-axis',
     install(Vue: any) {

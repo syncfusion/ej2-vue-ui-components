@@ -2,50 +2,13 @@
 
 ## [Unreleased]
 
-## 20.4.52 (2023-02-28)
+## 21.1.35 (2023-03-23)
 
 ### Spreadsheet
 
 #### Bug Fixes
 
-- `#I435982`, `#I434351` - Issue with "rendered cell template destroyed while updating the cell value using `updateCell` method" has been resolved.
-
-- `#I437422` - Issue with "exception throws while removing the context menu item that contains icons using `removeContextMenuItems` method" has been resolved.
-
-## 20.4.50 (2023-02-14)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I434077` - Issue with "after deleting rows beyond the rendered region, the edited cell value is not updated to the expected cell in finite mode" has been resolved.
-
-## 20.4.49 (2023-02-07)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I432121` - Issue with "editing cell data is not updated on the cell while scrolling the sheet before save the edited cell value" has been resolved.
-
-## 20.4.48 (2023-02-01)
-
-### Spreadsheet
-
-#### New Features
-
-- `#F178912` - Now, you can specify the `orientation` type for PDF export.
-
-## 20.4.40 (2022-12-28)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I422232` - Issue with "`SUMIFS` formula is not working properly while providing as nested formula to the `SUM` formula" has been resolved.
-- `#F179330` - Issue with "custom function reference is removed from the control instance while calling the `refresh` method" has been resolved.
-
-- `#I422288` - Issue with "custom formula values are not updated properly while exporting the workbook" has been resolved.
+- `#I442925` - Issue with "spreadsheet hangs while navigating the cells in the protected sheet with the arrow keys" has been resolved.
 
 ## 20.3.60 (2022-12-06)
 
@@ -1263,20 +1226,4 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
-
-## 20.4.51 (2023-02-21)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I438195` - Issue with "cell reference fails to update while referring another cell after typing the equal sign" has been resolved.
-
-## 20.4.44 (2023-01-18)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I421164`  - Issue with "chart position is not updated properly while importing the excel with chart and perform dragging on chart" has been resolved.
 
