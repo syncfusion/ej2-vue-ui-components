@@ -1,7 +1,7 @@
 import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 
-export let PanesDirective =  vueDefineComponent({
+export let RangeColorsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
     render(createElement: any): void {
         if (!isExecute) {
@@ -19,42 +19,31 @@ export let PanesDirective =  vueDefineComponent({
     },
     methods: {
         getTag(): string {
-            return 'e-panes';
+            return 'e-rangecolors';
         }
     }
 });
-export const PanesPlugin = {
-    name: 'e-panes',
+export const RangeColorsPlugin = {
+    name: 'e-rangecolors',
     install(Vue: any) {
-        Vue.component(PanesPlugin.name, PanesDirective);
+        Vue.component(RangeColorsPlugin.name, RangeColorsDirective);
     }
 }
 
-/**
- * 'e-pane' directive represent a pane of Vue Splitter 
- * It must be contained in a Splitter component(`ejs-splitter`). 
- * ```html
- * <ejs-splitter id='splitter'> 
- *   <e-panes>
- *    <e-pane size='150px'></e-pane>
- *    <e-pane size='150px'></e-pane>
- *   </e-panes>
- * </ejs-splitter>
- * ```
- */
-export let PaneDirective =  vueDefineComponent({
+
+export let RangeColorDirective =  vueDefineComponent({
     render(): void {
         return;
     },
     methods: {
         getTag(): string {
-            return 'e-pane';
+            return 'e-rangecolor';
         }
     }
 });
-export const PanePlugin = {
-    name: 'e-pane',
+export const RangeColorPlugin = {
+    name: 'e-rangecolor',
     install(Vue: any) {
-        Vue.component(PanePlugin.name, PaneDirective);
+        Vue.component(RangeColorPlugin.name, RangeColorDirective);
     }
 }

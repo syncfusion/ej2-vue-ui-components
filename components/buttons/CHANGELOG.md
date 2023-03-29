@@ -2,6 +2,42 @@
 
 ## [Unreleased]
 
+## 21.1.37 (2023-03-29)
+
+### Checkbox
+
+#### Bug Fixes
+
+- `#I436942` - The issue with "Validation rule not display properly when we use Checkbox within form validator" has been resolved.
+
+### Chip
+
+#### New Features
+
+- `#I422263` - The Chip component now supports htmlAttributes, which enables users to add required attributes such as 'aria-label', 'title', 'class', and more to the Chip item.
+
+### Floating Action Button `Preview`
+
+The Floating Action Button (FAB) component performs the primary action that appears in front of all screen contents. It can be positioned in relation to a page or a target container.
+
+
+- **Rendering** - The FAB component can be rendered as Icon only, Icon with Label, Label only, or in a disabled state.
+- **Positioning** - Supports to place various built-in positions on the target element.
+- **Styles** - The appearance of the FAB can be customized using predefined styles.
+- **Accessibility** - The FAB provides built-in compliance with the `WAI-ARIA` specifications and it is achieved through attributes.
+
+### Speed Dial `Preview`
+
+The Speed Dial component is an extension of the floating action button that displays a list of action buttons when clicked. It is useful when there is more than one primary action for the page.
+
+
+- **Rendering** - The Speed Dial component can be rendered in two display modes: Linear and Radial.
+- **Positioning** - Supports to place various built-in positions on the target element.
+- **Styles** - The appearance of the Speed Dial can be customized using predefined styles.
+- **Template Support** - The Speed Dial component action items and popup container can also be rendered with custom templates.
+- **Modal Support** - Supports showing a modal overlay behind the Speed Dial.
+- **Accessibility** - The Speed Dial provides built-in compliance with the `WAI-ARIA` specifications and it is achieved through attributes.
+
 ## 21.1.35 (2023-03-23)
 
 ### Checkbox
@@ -27,28 +63,6 @@
 #### Bug Fixes
 
 - `#I427994` - Provided the `htmlAttributes` support to the switch component.
-
-### Floating Action Button `Preview`
-
-The Floating Action Button (FAB) component performs the primary action that appears in front of all screen contents. It can be positioned in relation to a page or a target container.
-
-
-- **Rendering** - The FAB component can be rendered as Icon only, Icon with Label, Label only, or in a disabled state.
-- **Positioning** - Supports to place various built-in positions on the target element.
-- **Styles** - The appearance of the FAB can be customized using predefined styles.
-- **Accessibility** - The FAB provides built-in compliance with the `WAI-ARIA` specifications and it is achieved through attributes.
-
-### Speed Dial `Preview`
-
-The Speed Dial component is an extension of the floating action button that displays a list of action buttons when clicked. It is useful when there is more than one primary action for the page.
-
-
-- **Rendering** - The Speed Dial component can be rendered in two display modes: Linear and Radial.
-- **Positioning** - Supports to place various built-in positions on the target element.
-- **Styles** - The appearance of the Speed Dial can be customized using predefined styles.
-- **Template Support** - The Speed Dial component action items and popup container can also be rendered with custom templates.
-- **Modal Support** - Supports showing a modal overlay behind the Speed Dial.
-- **Accessibility** - The Speed Dial provides built-in compliance with the `WAI-ARIA` specifications and it is achieved through attributes.
 
 ## 20.3.47 (2022-10-11)
 

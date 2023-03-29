@@ -4,7 +4,7 @@
 import * as Vue from 'vue';
 import { isNullOrUndefined, extend, getValue } from '@syncfusion/ej2-base';
 
-function _interopRequireWildcard(obj: any) { if (obj && obj.__esModule) { return obj; } else { let newObj: any = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[`${key}`] = obj[`${key}`]; } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj: any) { if (obj && obj.__esModule) { return obj; } else { let newObj: any = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[`${key}`] = obj[`${key}`]; } } return newObj; } }
 
 const curVue: any = _interopRequireWildcard(Vue);
 export const isExecute: boolean = (parseInt(curVue['version']) > 2) ? false : true,
@@ -102,6 +102,20 @@ export let ComponentBase = vueDefineComponent({
                 const propKey: string = key[0];
                 if (!isNullOrUndefined(propKey)) {
                     this.ej2Instances[`${propKey}`] = !isNullOrUndefined(this.modelValue) ? this.modelValue : this.$attrs.modelValue;
+                }
+            }
+        },
+        updated(): void {
+            if (this.isVue3) {
+                this.setModelValue();
+            }
+            if (this.hasChildDirective) {
+                let childKey: Object = {};
+                this.fetchChildPropValues(childKey);
+                let curChildDir: string = JSON.stringify(childKey);
+                if (this.childDirObjects !== curChildDir) {
+                    this.childDirObjects = curChildDir;
+                    this.assignValueToWrapper(childKey, false);
                 }
             }
         },
@@ -267,7 +281,7 @@ export let ComponentBase = vueDefineComponent({
                 });
                 }
                 if (((/[s]\b/).test(tagRef) && innerDirValues) && (!(/[s]\b/).test(tagName) || innerDirValues.length)) {
-                    items[`${tagName}`] = tempObj;
+                    Array.isArray(tempObj) ? tempObj.forEach((item: any) => { items[`${tagName}`].push(item) }) : items[`${tagName}`].push(tempObj);
                 } 
                 else if (tempObj && Object.keys(tempObj).length !== 0) {
                     items[`${tagName}`].push(tempObj);

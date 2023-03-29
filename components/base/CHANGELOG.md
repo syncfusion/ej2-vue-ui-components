@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 21.1.37 (2023-03-29)
+
+### Common
+
+#### Bug Fixes
+
+- `#I443747` - The issue with "Grid static columns are not rendered in Vue 3" has been resolved.
+- `#I450995` - The issue with "Vite with Vue 2.7 sample is not working" has been resolved.
+- `#I451413` - The issue with "Script error is occurred while changing the reactive variable value" has been resolved.
+
 ## 21.1.35 (2023-03-23)
 
 ### Common

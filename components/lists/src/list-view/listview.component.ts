@@ -151,6 +151,8 @@ export let ListViewComponent =  vueDefineComponent({
     }
 });
 
+export type ListViewComponent = InstanceType<typeof ListViewComponent>;
+
 export const ListViewPlugin = {
     name: 'ejs-listview',
     install(Vue: any) {

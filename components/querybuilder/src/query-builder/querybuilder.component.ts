@@ -161,6 +161,8 @@ export let QueryBuilderComponent =  vueDefineComponent({
     }
 });
 
+export type QueryBuilderComponent = InstanceType<typeof QueryBuilderComponent>;
+
 export const QueryBuilderPlugin = {
     name: 'ejs-querybuilder',
     install(Vue: any) {

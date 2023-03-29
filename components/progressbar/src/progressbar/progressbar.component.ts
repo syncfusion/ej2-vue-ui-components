@@ -3,6 +3,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { ProgressBar } from '@syncfusion/ej2-progressbar';
 import { ProgressBarAnnotationsDirective, ProgressBarAnnotationDirective, ProgressBarAnnotationsPlugin, ProgressBarAnnotationPlugin } from './annotations.directive'
+import { RangeColorsDirective, RangeColorDirective, RangeColorsPlugin, RangeColorPlugin } from './rangecolors.directive'
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'animation', 'annotations', 'cornerRadius', 'enablePersistence', 'enablePieProgress', 'enableProgressSegments', 'enableRtl', 'endAngle', 'gapWidth', 'height', 'innerRadius', 'isActive', 'isGradient', 'isIndeterminate', 'isStriped', 'labelOnTrack', 'labelStyle', 'locale', 'margin', 'maximum', 'minimum', 'progressColor', 'progressThickness', 'radius', 'rangeColors', 'role', 'secondaryProgress', 'secondaryProgressColor', 'secondaryProgressThickness', 'segmentColor', 'segmentCount', 'showProgressValue', 'startAngle', 'theme', 'tooltip', 'trackColor', 'trackThickness', 'type', 'value', 'width', 'animationComplete', 'load', 'loaded', 'mouseClick', 'mouseDown', 'mouseLeave', 'mouseMove', 'mouseUp', 'progressCompleted', 'textRender', 'tooltipRender', 'valueChanged'];
@@ -33,8 +34,8 @@ export let ProgressBarComponent =  vueDefineComponent({
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: true as boolean,
-            tagMapper: {"e-progressbar-annotations":"e-progressbar-annotation"} as { [key: string]: Object },
-            tagNameMapper: {"e-progressbar-annotations":"e-annotations"} as Object,
+            tagMapper: {"e-progressbar-annotations":"e-progressbar-annotation","e-rangecolors":"e-rangecolor"} as { [key: string]: Object },
+            tagNameMapper: {"e-progressbar-annotations":"e-annotations","e-rangecolors":"e-rangeColors"} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -122,12 +123,16 @@ export let ProgressBarComponent =  vueDefineComponent({
     }
 });
 
+export type ProgressBarComponent = InstanceType<typeof ProgressBarComponent>;
+
 export const ProgressBarPlugin = {
     name: 'ejs-progressbar',
     install(Vue: any) {
         Vue.component(ProgressBarPlugin.name, ProgressBarComponent);
         Vue.component(ProgressBarAnnotationPlugin.name, ProgressBarAnnotationDirective);
         Vue.component(ProgressBarAnnotationsPlugin.name, ProgressBarAnnotationsDirective);
+        Vue.component(RangeColorPlugin.name, RangeColorDirective);
+        Vue.component(RangeColorsPlugin.name, RangeColorsDirective);
 
     }
 }

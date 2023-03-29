@@ -147,6 +147,8 @@ export let InPlaceEditorComponent =  vueDefineComponent({
     }
 });
 
+export type InPlaceEditorComponent = InstanceType<typeof InPlaceEditorComponent>;
+
 export const InPlaceEditorPlugin = {
     name: 'ejs-inplaceeditor',
     install(Vue: any) {

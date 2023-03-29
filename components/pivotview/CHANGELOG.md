@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## 21.1.37 (2023-03-29)
+
+### Pivot Table
+
+#### Breaking changes
+
+- The property type of [`toolbar`](https://ej2.syncfusion.com/documentation/api/pivotview#toolbar) has been changed from `(ToolbarItems | ItemModel)[]` to `ToolbarItems[] | ItemModel[]`.
+- In the server side controller, the imported namespace name has been changed from `Syncfusion.Blazor.PivotView` to `Syncfusion.EJ2.Pivot`.
+
+#### Bug fixes
+
+- `#I438098` - Events are now properly bound to the element that is rendered using the cell template.
+
 ## 21.1.35 (2023-03-23)
 
 ### Pivot Table
