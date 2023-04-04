@@ -4,11 +4,11 @@
 import * as Vue from 'vue';
 import { isNullOrUndefined, extend, getValue } from '@syncfusion/ej2-base';
 
-function _interopRequireWildcard(obj: any) { if (obj && obj.__esModule) { return obj; } else { let newObj: any = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[`${key}`] = obj[`${key}`]; } } return newObj; } }
+function _interopRequireWildcard(obj: any) { if (obj && obj.__esModule) { return obj; } else { let newObj: any = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[`${key}`] = obj[`${key}`]; } } newObj.default = obj; return newObj; } }
 
 const curVue: any = _interopRequireWildcard(Vue);
 export const isExecute: boolean = (parseInt(curVue['version']) > 2) ? false : true,
-    aVue: any = !isExecute ? curVue : curVue['default'],
+    aVue: any = !isExecute ? curVue : (curVue['default']['default'] ? curVue['default']['default'] : curVue['default']),
     gh: any = curVue['h'];
 
 export let vueDefineComponent = (options: any) => { return !isExecute? aVue['defineComponent'](options) : aVue['extend'](options) };

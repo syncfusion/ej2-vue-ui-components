@@ -36,7 +36,7 @@ export function compile(
           }
           // Get values for Vue 3 slot template
           getValues(app, context.vueInstance, root);
-          app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
+          app.mount("#" + pid);
           returnEle = ele.childNodes;
           detach(ele);
         } else {
@@ -91,7 +91,7 @@ export function compile(
         }
         // Get values for Vue 3 functional template
         getValues(app, context.vueInstance, root);
-        app.mount((context.getModuleName() === 'grid') ? ("#" + pid) : ("#" + id));
+        app.mount("#" + pid);
         returnEle = ele.childNodes;
         detach(ele);
       } else if (typeof templateElement === "string") {
