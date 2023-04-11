@@ -98,6 +98,8 @@ export let SkeletonComponent =  vueDefineComponent({
     }
 });
 
+export type SkeletonComponent = InstanceType<typeof SkeletonComponent>;
+
 export const SkeletonPlugin = {
     name: 'ejs-skeleton',
     install(Vue: any) {

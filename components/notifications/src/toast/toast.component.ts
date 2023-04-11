@@ -104,6 +104,8 @@ export let ToastComponent =  vueDefineComponent({
     }
 });
 
+export type ToastComponent = InstanceType<typeof ToastComponent>;
+
 export const ToastPlugin = {
     name: 'ejs-toast',
     install(Vue: any) {

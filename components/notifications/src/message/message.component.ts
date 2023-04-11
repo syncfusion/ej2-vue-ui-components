@@ -98,6 +98,8 @@ export let MessageComponent =  vueDefineComponent({
     }
 });
 
+export type MessageComponent = InstanceType<typeof MessageComponent>;
+
 export const MessagePlugin = {
     name: 'ejs-message',
     install(Vue: any) {

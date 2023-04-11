@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## 21.1.39 (2023-04-11)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I447489` - Issue with "localization keys are missing for icon sets under conditional formatting" has been resolved.
+
+## 21.1.38 (2023-04-04)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I447298` - Issue with "IF formula does not return the expected result while providing the argument with value as true or false" has been resolved.
+
 ## 20.3.60 (2022-12-06)
 
 ### Spreadsheet
