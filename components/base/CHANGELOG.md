@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 21.1.41 (2023-04-18)
+
+### Common
+
+#### Bug Fixes
+
+- `#I450987`, `#I446640`, `#I181430`, `#FB42508` - The issue with "DocumentEditor performance lag in Vue 3 applications" has been resolved.
+- `#I445940` - The issue with "Can't initialize data with a prop value in the Vue 3 template" has been resolved.
+
 ## 21.1.38 (2023-04-04)
 
 ### Common

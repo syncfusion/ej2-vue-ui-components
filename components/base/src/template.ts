@@ -76,8 +76,8 @@ export function compile(
             for (let objstring of objkeys) {
               let intComponent: any = templateCompRef.components[`${objstring}`]
               if (intComponent && intComponent.data) {
-                let tempRef2: any =  (Object as any).assign(intComponent.data(), dataObj.data);
-                intComponent.data = function() { return tempRef2 };
+                if (!intComponent.__data) intComponent.__data = intComponent.data;
+                intComponent.data = function(proxy: any) { return (Object as any).assign(intComponent.__data.call(proxy), dataObj.data) };
               }
             }
           }

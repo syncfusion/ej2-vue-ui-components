@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 21.1.39 (2023-04-11)
+## 21.1.41 (2023-04-18)
 
 ### Spreadsheet
 
 #### Bug Fixes
 
-- `#I447489` - Issue with "localization keys are missing for icon sets under conditional formatting" has been resolved.
+- `#I452434` - Issue with "hyphen symbol converts into `NaN` when typing hyphen alone and saving the cell" has been resolved.
 
 ## 21.1.38 (2023-04-04)
 
@@ -1234,6 +1234,14 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
+
+## 21.1.39 (2023-04-11)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I447489` - Issue with "localization keys are missing for icon sets under conditional formatting" has been resolved.
 
 ## 21.1.35 (2023-03-23)
 

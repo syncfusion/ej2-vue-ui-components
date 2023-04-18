@@ -110,6 +110,8 @@ export let SplitButtonComponent =  vueDefineComponent({
     }
 });
 
+export type SplitButtonComponent = InstanceType<typeof SplitButtonComponent>;
+
 export const SplitButtonPlugin = {
     name: 'ejs-splitbutton',
     install(Vue: any) {

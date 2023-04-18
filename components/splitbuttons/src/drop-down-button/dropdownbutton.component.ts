@@ -110,6 +110,8 @@ export let DropDownButtonComponent =  vueDefineComponent({
     }
 });
 
+export type DropDownButtonComponent = InstanceType<typeof DropDownButtonComponent>;
+
 export const DropDownButtonPlugin = {
     name: 'ejs-dropdownbutton',
     install(Vue: any) {

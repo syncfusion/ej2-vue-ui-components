@@ -2,7 +2,29 @@
 
 ## [Unreleased]
 
+## 21.1.41 (2023-04-18)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I451521` - Now, the border is proper in the funnel and pyramid series.
+- `#I453698` - Cross shape marker now displays correctly in Scatter Series.
+- `#I439673` - The `enableTextWrap` property of the tooltip is now working properly in the pie chart.
+- `#I452390` - Fixed the issue where the axis label was not properly visible.
+- `#I447639` - Tooltip format now displays properly when using the axis label format.
+- `#I453698` - The legend shape now reflects the marker shape in scatter series.
+
 ## 21.1.39 (2023-04-11)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I451537` - Now, the column chart rectangle is properly rendering for OnTicks.
+- `#I452148` - The chart now renders correctly even when the x value is set to an empty string in the data source.
+
+## 21.1.38 (2023-04-04)
 
 ### Chart
 

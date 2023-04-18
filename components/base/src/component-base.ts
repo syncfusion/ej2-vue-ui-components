@@ -17,7 +17,6 @@ export let ComponentBase = vueDefineComponent({
     name: 'ComponentBase',
     data() {
         return {
-            ej2Instances: {} as any,
             tagMapper: {} as any,
             tagNameMapper: {} as any,
             hasInjectedModules: false as boolean,
@@ -28,6 +27,9 @@ export let ComponentBase = vueDefineComponent({
         }
     },
     created(): void {
+        if (this.ej2Instance) {
+            this.ej2Instances = this.isVue3 ? aVue.toRaw(this.ej2Instance) : this.ej2Instance;
+        }
         if (!this.propKeys) {
             return
         }

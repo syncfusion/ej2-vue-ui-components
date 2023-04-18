@@ -112,6 +112,8 @@ export let ProgressButtonComponent =  vueDefineComponent({
     }
 });
 
+export type ProgressButtonComponent = InstanceType<typeof ProgressButtonComponent>;
+
 export const ProgressButtonPlugin = {
     name: 'ejs-progressbutton',
     install(Vue: any) {
