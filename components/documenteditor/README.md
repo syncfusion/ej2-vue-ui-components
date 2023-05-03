@@ -13,7 +13,7 @@ Syncfusion provides a predefined [Word Processor server docker image](https://hu
 </p>
 
 <p align="center">
-![Vue Word Processor Component](https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-word-processor.png)
+  <img src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-word-processor.png" alt="Vue Word Processor Component">
 </p>
 
 <p align="center">
