@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 21.2.6 (2023-05-23)
+
+### Common
+
+#### Bug Fixes
+
+- `#I453141` - The issue with "Unable to access the template data inside the external template while using Composition API" has been resolved.
+
 ## 21.1.41 (2023-04-18)
 
 ### Common

@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 21.2.6 (2023-05-23)
+
+### Uploader
+
+#### Bug Fixes
+
+- `#I460888` - Issue with "Console error occurs when deleting files after data load" has been resolved.
+
+### MaskedTextBox
+
+#### Bug Fixes
+
+- `#SF-456074` - Issue with "MaskedTextbox fails to clear the value after setting value of model to empty string"
+
 ## 21.1.38 (2023-04-04)
 
 ### Range Slider

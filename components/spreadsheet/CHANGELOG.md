@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 21.2.6 (2023-05-23)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I459732` - Issue with "Unprotect sheet dialog appears instead of the Protect sheet dialog after importing the file and going to protect the sheet" has been resolved.
+
 ## 21.2.3 (2023-05-03)
 
 ### Spreadsheet
