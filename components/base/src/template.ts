@@ -68,9 +68,18 @@ export function compile(
         }
         let tempRef: any;
         if (propsData) {
-          tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
-        } else {
-          tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+          if (templateCompRef.setup) {
+            tempRef = (<any>Object).assign(templateCompRef.setup(null, { expose: function () {}}), propsData);
+          } else {
+            tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
+          }
+        }
+        else {
+          if (templateCompRef.setup) {
+            tempRef = (<any>Object).assign(templateCompRef.setup(null, { expose: function () {}}), dataObj.data);
+          } else {
+            tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+          }
           if (templateCompRef.components) {
             let objkeys: any = Object.keys(templateCompRef.components) || [];
             for (let objstring of objkeys) {
@@ -80,6 +89,14 @@ export function compile(
                 intComponent.data = function(proxy: any) { return (Object as any).assign(intComponent.__data.call(proxy), dataObj.data) };
               }
             }
+          }
+        }
+        if (templateCompRef.setup) {
+          templateCompRef.setup = function (__props: any, { expose: __expose }: any) {
+            __expose();
+            const __returned__ = tempRef;
+            Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true });
+            return __returned__;
           }
         }
         templateCompRef.data = function () { return tempRef; };
@@ -139,6 +156,12 @@ export function compile(
         }
         if (typeof templateFunction !== "function") {
           templateFunction = Vue.extend(templateFunction);
+        }
+        if (templateFunction.options.setup) {
+          var variables: any = (<any>Object).assign(templateFunction.options.setup(), dataObj.data);
+          templateFunction.options.setup = function(__props: any) {
+            return variables;
+          };
         }
         let templateVue: any = new templateFunction(dataObj);
         // let templateVue = new Vue(tempObj.template);
