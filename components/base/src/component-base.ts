@@ -257,6 +257,7 @@ export let ComponentBase = vueDefineComponent({
             let slot: any = [];
             let innerDirValues: any;
             slot = slots.default ? slots.default() : slots;
+            slot = slot.flatMap((item: any) => Array.isArray(item.children) ? item.children : item);
             let items: any = {};
             items[`${tagName}`] = [];
             for (const childSlot of slot) {
