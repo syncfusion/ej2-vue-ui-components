@@ -68,9 +68,18 @@ export function compile(
         }
         let tempRef: any;
         if (propsData) {
-          tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
-        } else {
-          tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+          if (templateCompRef.setup) {
+            tempRef = (<any>Object).assign(templateCompRef.setup(null, { expose: function () {}}), propsData);
+          } else {
+            tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
+          }
+        }
+        else {
+          if (templateCompRef.setup) {
+            tempRef = (<any>Object).assign(templateCompRef.setup(null, { expose: function () {}}), dataObj.data);
+          } else {
+            tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+          }
           if (templateCompRef.components) {
             let objkeys: any = Object.keys(templateCompRef.components) || [];
             for (let objstring of objkeys) {
@@ -80,6 +89,14 @@ export function compile(
                 intComponent.data = function(proxy: any) { return (Object as any).assign(intComponent.__data.call(proxy), dataObj.data) };
               }
             }
+          }
+        }
+        if (templateCompRef.setup) {
+          templateCompRef.setup = function (__props: any, { expose: __expose }: any) {
+            __expose();
+            const __returned__ = tempRef;
+            Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true });
+            return __returned__;
           }
         }
         templateCompRef.data = function () { return tempRef; };
@@ -140,6 +157,12 @@ export function compile(
         if (typeof templateFunction !== "function") {
           templateFunction = Vue.extend(templateFunction);
         }
+        if (templateFunction.options.setup) {
+          var variables: any = (<any>Object).assign(templateFunction.options.setup(), dataObj.data);
+          templateFunction.options.setup = function(__props: any) {
+            return variables;
+          };
+        }
         let templateVue: any = new templateFunction(dataObj);
         // let templateVue = new Vue(tempObj.template);
         // templateVue.$data.data = extend(tempObj.data, data);
@@ -173,7 +196,7 @@ function getValues(app: any, cInstance: any, root: any): any {
     return;
   }
   // Get globally defined variables.
-  let globalVariables: string[] = ['components', 'mixins', 'provides'];
+  let globalVariables: string[] = ['components', 'mixins', 'provides', 'directives'];
   for (let i: number = 0; i < globalVariables.length; i++) {
     let gVariable: string = globalVariables[i];
     if (app['_context'][gVariable] && vueInstance['$']['appContext'][gVariable]) {
@@ -258,6 +281,7 @@ function getChildVueSlot(slots: any, templateElement: any): any {
     return slots;
   } else if (slots && slots.default) {
     let childSlots: any = slots.default();
+    childSlots = childSlots.flatMap((item: any) => Array.isArray(item.children) ? item.children : item);
     for (let i: number = 0; i < childSlots.length; i++) {
       let slot: any = getChildVueSlot(childSlots[parseInt(i.toString(), 10)].children, templateElement);
       if (slot) {
