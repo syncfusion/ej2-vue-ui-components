@@ -27,7 +27,7 @@ export let PivotViewComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new PivotView({}) as any,
+            ej2Instance: new PivotView({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -100,11 +100,11 @@ export let PivotViewComponent =  vueDefineComponent({
         createCalculatedFieldDialog(): void {
             return this.ej2Instances.createCalculatedFieldDialog();
         },
-        csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): void {
-            return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
+        csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean, isServerExport?: boolean): void {
+            return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob, isServerExport);
         },
-        excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): void {
-            return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
+        excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean, isServerExport?: boolean): void {
+            return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob, isServerExport);
         },
         loadPersistData(persistData: string): void {
             return this.ej2Instances.loadPersistData(persistData);

@@ -6,7 +6,7 @@ import { Carousel } from '@syncfusion/ej2-navigations';
 import { CarouselItemsDirective, CarouselItemDirective, CarouselItemsPlugin, CarouselItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationEffect', 'autoPlay', 'buttonsVisibility', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTouchSwipe', 'height', 'htmlAttributes', 'indicatorsTemplate', 'interval', 'itemTemplate', 'items', 'locale', 'loop', 'nextButtonTemplate', 'partialVisible', 'pauseOnHover', 'playButtonTemplate', 'previousButtonTemplate', 'selectedIndex', 'showIndicators', 'showPlayButton', 'width', 'slideChanged', 'slideChanging'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationEffect', 'autoPlay', 'buttonsVisibility', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTouchSwipe', 'height', 'htmlAttributes', 'indicatorsTemplate', 'indicatorsType', 'interval', 'itemTemplate', 'items', 'locale', 'loop', 'nextButtonTemplate', 'partialVisible', 'pauseOnHover', 'playButtonTemplate', 'previousButtonTemplate', 'selectedIndex', 'showIndicators', 'showPlayButton', 'swipeMode', 'width', 'slideChanged', 'slideChanging'];
 export const modelProps: string[] = ['selectedIndex'];
 
 export const testProp: any = getProps({props: properties});
@@ -30,7 +30,7 @@ export let CarouselComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Carousel({}) as any,
+            ej2Instance: new Carousel({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

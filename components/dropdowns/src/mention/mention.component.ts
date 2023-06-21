@@ -27,7 +27,7 @@ export let MentionComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Mention({}) as any,
+            ej2Instance: new Mention({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

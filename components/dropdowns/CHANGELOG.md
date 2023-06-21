@@ -2,6 +2,86 @@
 
 ## [Unreleased]
 
+## 22.1.34 (2023-06-21)
+
+### DropDownList
+
+#### Bug Fixes
+
+- `I462021` - Issue with "Value template not working properly" has been resolved.
+
+## 21.2.10 (2023-06-13)
+
+### ListBox
+
+#### Bug Fixes
+
+- `#F43705` - Issue with "Dropping selected items does not work correctly while enabling the checkbox in listbox component." has been resolved.
+- `#I462373` - Issue with "Double quotes value not submitted while using the listbox component within the form." has been resolved.
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `#I467953` - Issue with "Query construct incorrectly when preselect the value second time beyond the data source value" has been resolved.
+
+### DropDownList
+
+#### Bug Fixes
+
+- `I469452` - Issue with "A console error is thrown when the datasource value field has a null value in the dropdown list" has been resolved.
+
+## 21.2.8 (2023-05-30)
+
+### ListBox
+
+#### Bug Fixes
+
+- `#I462373` - Issue with "Double quotes value not submitted while using the listbox component within the form." has been resolved.
+
+### AutoComplete
+
+#### Bug Fixes
+
+- `#I460876` - Issue with "The header and footer template are not working" has been resolved.
+
+## 21.2.6 (2023-05-23)
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `#I451885` - Resolved the performance issue when multiselect component is rendered with large number of data.
+
+### DropDownList
+
+#### Bug Fixes
+
+- `I460077` - Issue with "The popup is not closing properly when the focus is moved between two dropdowns" has been resolved.
+
+## 21.2.5 (2023-05-16)
+
+### ListBox
+
+#### Bug Fixes
+
+- `#I461307` - Issue with "No Records Template not renders properly when we set the default string in listbox" has been resolved.
+
+### ComboBox
+
+#### Bug Fixes
+
+- `#I452948` - "The memory leak issue detected in the combobox component within the detach element tab of the Edge browser" has been resolved.
+
+## 21.2.4 (2023-05-09)
+
+### ListBox
+
+#### Bug Fixes
+
+- `#I453746` - Issue with "Selected items not focusing properly in listbox while using selectItems method" has been resolved.
+- `#I461307` - Issue with "No Records Template not renders properly when we set the default string in listbox" has been resolved.
+
 ## 21.2.3 (2023-05-03)
 
 ### ListBox
@@ -24,12 +104,6 @@
 
 - `#I451965` - While performing filtering multiple times, the checked node state is cleared in the Dropdown Tree component has been resolved.
 
-### Multiselect
-
-#### Bug Fixes
-
-- `#I452519` - The issue regarding "Grouping Header not being updated properly when a set of items in a group is selected or removed" has been resolved.
-
 ## 21.1.39 (2023-04-11)
 
 ### ListBox
@@ -38,12 +112,6 @@
 
 - `#F181131` - Issue with "No Record Found text disappears while hovering the drag item on list box without drop" has been resolved.
 - `#F181311` - Issue with "Scrolling is not working while drag and drop the list box with item Template" has been resolved.
-
-### MultiSelect
-
-#### Bug Fixes
-
-- `I455155` - The issue of "Browser hanging when focusing on the multiselect component in checkbox mode" has been resolved.
 
 ## 21.1.38 (2023-04-04)
 

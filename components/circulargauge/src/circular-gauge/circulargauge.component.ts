@@ -31,7 +31,7 @@ export let CircularGaugeComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new CircularGauge({}) as any,
+            ej2Instance: new CircularGauge({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -104,7 +104,7 @@ export let CircularGaugeComponent =  vueDefineComponent({
         print(id?: string[] | string | Object): void {
             return this.ej2Instances.print(id);
         },
-        setAnnotationValue(axisIndex: number, annotationIndex: number, content: string): void {
+        setAnnotationValue(axisIndex: number, annotationIndex: number, content: string | Object): void {
             return this.ej2Instances.setAnnotationValue(axisIndex, annotationIndex, content);
         },
         setPointerValue(axisIndex: number, pointerIndex: number, value: number): void {
