@@ -3,6 +3,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
 import { TreeGrid } from '@syncfusion/ej2-treegrid';
+import { StackedColumnsDirective, StackedColumnDirective, StackedColumnsPlugin, StackedColumnPlugin } from './stacked-column.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPlugin, AggregateColumnPlugin } from './aggregate-columns.directive'
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
@@ -32,13 +33,13 @@ export let TreeGridComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new TreeGrid({}) as any,
+            ej2Instance: new TreeGrid({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: true as boolean,
-            tagMapper: {"e-columns":"e-column","e-aggregates":{"e-aggregate":{"e-columns":"e-column"}}} as { [key: string]: Object },
-            tagNameMapper: {} as Object,
+            tagMapper: {"e-columns":{"e-column":{"e-stacked-columns":"e-stacked-column"}},"e-aggregates":{"e-aggregate":{"e-columns":"e-column"}}} as { [key: string]: Object },
+            tagNameMapper: {"e-stacked-columns":"e-columns"} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -440,6 +441,8 @@ export const TreeGridPlugin = {
         Vue.component(TreeGridPlugin.name, TreeGridComponent);
         Vue.component(ColumnPlugin.name, ColumnDirective);
         Vue.component(ColumnsPlugin.name, ColumnsDirective);
+        Vue.component(StackedColumnPlugin.name, StackedColumnDirective);
+        Vue.component(StackedColumnsPlugin.name, StackedColumnsDirective);
         Vue.component(AggregatePlugin.name, AggregateDirective);
         Vue.component(AggregatesPlugin.name, AggregatesDirective);
         Vue.component(AggregateColumnPlugin.name, AggregateColumnDirective);

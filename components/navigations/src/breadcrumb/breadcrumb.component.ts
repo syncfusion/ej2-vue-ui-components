@@ -30,7 +30,7 @@ export let BreadcrumbComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Breadcrumb({}) as any,
+            ej2Instance: new Breadcrumb({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { ImageEditor } from '@syncfusion/ej2-image-editor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'imageFiltering', 'panning', 'quickAccessToolbarOpening', 'rotating', 'saved', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'rotating', 'saved', 'selectionChanging', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -27,7 +27,7 @@ export let ImageEditorComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new ImageEditor({}) as any,
+            ej2Instance: new ImageEditor({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -106,11 +106,17 @@ export let ImageEditorComponent =  vueDefineComponent({
         deleteShape(id: string): void {
             return this.ej2Instances.deleteShape(id);
         },
+        drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object): boolean {
+            return this.ej2Instances.drawArrow(startX, startY, endX, endY, strokeWidth, strokeColor, arrowStart, arrowEnd);
+        },
         drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string): boolean {
             return this.ej2Instances.drawEllipse(x, y, radiusX, radiusY, strokeWidth, strokeColor, fillColor);
         },
         drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string): boolean {
             return this.ej2Instances.drawLine(startX, startY, endX, endY, strokeWidth, strokeColor);
+        },
+        drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string): boolean {
+            return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor);
         },
         drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string): boolean {
             return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor);

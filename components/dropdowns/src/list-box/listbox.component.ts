@@ -29,7 +29,7 @@ export let ListBoxComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new ListBox({}) as any,
+            ej2Instance: new ListBox({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -162,11 +162,17 @@ export let ListBoxComponent =  vueDefineComponent({
         moveAllTo(targetId?: string, index?: number): void {
             return this.ej2Instances.moveAllTo(targetId, index);
         },
+        moveBottom(value?: string[] | number[] | boolean[]): void {
+            return this.ej2Instances.moveBottom(value);
+        },
         moveDown(value?: string[] | number[] | boolean[]): void {
             return this.ej2Instances.moveDown(value);
         },
         moveTo(value?: string[] | number[] | boolean[], index?: number, targetId?: string): void {
             return this.ej2Instances.moveTo(value, index, targetId);
+        },
+        moveTop(value?: string[] | number[] | boolean[]): void {
+            return this.ej2Instances.moveTop(value);
         },
         moveUp(value?: string[] | number[] | boolean[]): void {
             return this.ej2Instances.moveUp(value);
