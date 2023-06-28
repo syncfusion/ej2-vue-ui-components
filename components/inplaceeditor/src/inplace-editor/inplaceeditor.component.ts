@@ -29,7 +29,7 @@ export let InPlaceEditorComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new InPlaceEditor({}) as any,
+            ej2Instance: new InPlaceEditor({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

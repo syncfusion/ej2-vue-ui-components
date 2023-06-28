@@ -27,7 +27,7 @@ export let AppBarComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new AppBar({}) as any,
+            ej2Instance: new AppBar({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

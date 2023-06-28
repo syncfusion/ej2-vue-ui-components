@@ -28,7 +28,7 @@ export let SplitButtonComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new SplitButton({}) as any,
+            ej2Instance: new SplitButton({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

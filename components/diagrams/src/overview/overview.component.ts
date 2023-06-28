@@ -27,7 +27,7 @@ export let OverviewComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Overview({}) as any,
+            ej2Instance: new Overview({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

@@ -31,7 +31,7 @@ export let RibbonComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Ribbon({}) as any,
+            ej2Instance: new Ribbon({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -133,6 +133,18 @@ export let RibbonComponent =  vueDefineComponent({
         },
         selectTab(tabId: string): void {
             return this.ej2Instances.selectTab(tabId);
+        },
+        updateCollection(collection: Object): void {
+            return this.ej2Instances.updateCollection(collection);
+        },
+        updateGroup(group: Object): void {
+            return this.ej2Instances.updateGroup(group);
+        },
+        updateItem(item: Object): void {
+            return this.ej2Instances.updateItem(item);
+        },
+        updateTab(tab: Object): void {
+            return this.ej2Instances.updateTab(tab);
         },
     }
 });
