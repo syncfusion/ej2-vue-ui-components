@@ -30,7 +30,7 @@ export let DialogComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Dialog({}) as any,
+            ej2Instance: new Dialog({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

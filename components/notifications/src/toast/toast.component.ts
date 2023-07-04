@@ -28,7 +28,7 @@ export let ToastComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Toast({}) as any,
+            ej2Instance: new Toast({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

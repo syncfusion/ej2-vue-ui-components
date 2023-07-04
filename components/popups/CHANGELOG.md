@@ -2,6 +2,30 @@
 
 ## [Unreleased]
 
+## 22.1.37 (2023-07-04)
+
+### Dialog
+
+#### Bug Fixes
+
+- `#F44869` - The issue with "Header displayed as “information” when we set header as null" has been resolved.
+
+## 22.1.36 (2023-06-28)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I466814` - The Tooltip fit alignment issue when hovering over the last element has been resolved
+
+## 21.2.10 (2023-06-13)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I466814` - The Tooltip alignment issue when hovering over the last element has been resolved.
+
 ## 21.2.3 (2023-05-03)
 
 ### Tooltip

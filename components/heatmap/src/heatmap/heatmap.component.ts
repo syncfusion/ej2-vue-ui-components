@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { HeatMap } from '@syncfusion/ej2-heatmap';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSelection', 'backgroundColor', 'cellSettings', 'dataSource', 'dataSourceSettings', 'enableMultiSelect', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellRender', 'cellSelected', 'created', 'legendRender', 'load', 'loaded', 'resized', 'tooltipRender'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSelection', 'backgroundColor', 'cellSettings', 'dataSource', 'dataSourceSettings', 'enableMultiSelect', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellDoubleClick', 'cellRender', 'cellSelected', 'created', 'legendRender', 'load', 'loaded', 'resized', 'tooltipRender'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -28,7 +28,7 @@ export let HeatMapComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new HeatMap({}) as any,
+            ej2Instance: new HeatMap({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -100,9 +100,6 @@ export let HeatMapComponent =  vueDefineComponent({
         },
         export(type: Object, fileName: string, orientation?: Object): void {
             return this.ej2Instances.export(type, fileName, orientation);
-        },
-        heatMapMouseClick(e: Object): boolean {
-            return this.ej2Instances.heatMapMouseClick(e);
         },
         print(): void {
             return this.ej2Instances.print();
