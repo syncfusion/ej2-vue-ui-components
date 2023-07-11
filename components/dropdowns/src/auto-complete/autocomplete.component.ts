@@ -29,7 +29,7 @@ export let AutoCompleteComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new AutoComplete({}) as any,
+            ej2Instance: new AutoComplete({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

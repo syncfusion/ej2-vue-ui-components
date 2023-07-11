@@ -31,7 +31,7 @@ export let LinearGaugeComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new LinearGauge({}) as any,
+            ej2Instance: new LinearGauge({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -104,7 +104,7 @@ export let LinearGaugeComponent =  vueDefineComponent({
         print(id?: string[] | string | Object): void {
             return this.ej2Instances.print(id);
         },
-        setAnnotationValue(annotationIndex: number, content: string, axisValue?: number): void {
+        setAnnotationValue(annotationIndex: number, content: string | Object, axisValue?: number): void {
             return this.ej2Instances.setAnnotationValue(annotationIndex, content, axisValue);
         },
         setPointerValue(axisIndex: number, pointerIndex: number, value: number): void {

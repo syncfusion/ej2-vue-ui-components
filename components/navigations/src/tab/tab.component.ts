@@ -28,7 +28,7 @@ export let TabComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Tab({}) as any,
+            ej2Instance: new Tab({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

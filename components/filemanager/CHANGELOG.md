@@ -2,6 +2,31 @@
 
 ## [Unreleased]
 
+## 22.1.38 (2023-07-11)
+
+### File Manager
+
+#### Bug fixes
+
+- `#I473871` - The issue with renaming folders or files in the Navigation Pane of the File Manager component has been resolved.
+
+## 22.1.34 (2023-06-21)
+
+### File Manager
+
+#### Features
+
+- Provided the `ShowItemCheckBoxes` property to control the visibility of checkboxes.
+
+## 21.2.5 (2023-05-16)
+
+### File Manager
+
+#### Bug fixes
+
+- `#I458668` - The issue, replace dialog shows when uploading the same file to different directories in File Manager with the SQL File Provider has been resolved.
+- `#I464322` - The issue with `fileOpen` event in the File Manager component has been resolved.
+
 ## 21.2.3 (2023-05-03)
 
 ### File Manager

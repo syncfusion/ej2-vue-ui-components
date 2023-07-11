@@ -28,7 +28,7 @@ export let QueryBuilderComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new QueryBuilder({}) as any,
+            ej2Instance: new QueryBuilder({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

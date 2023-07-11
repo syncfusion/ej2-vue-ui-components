@@ -78,18 +78,7 @@ export let ComponentBase = vueDefineComponent({
         this.ej2Instances.appendTo(this.$el);
     },
     updated(): void {
-        if (this.isVue3) {
-            this.setModelValue();
-        }
-        if (this.hasChildDirective) {
-            let childKey: Object = {};
-            this.fetchChildPropValues(childKey);
-            let curChildDir: string = JSON.stringify(childKey);
-            if (this.childDirObjects !== curChildDir) {
-                this.childDirObjects = curChildDir;
-                this.assignValueToWrapper(childKey, false);
-            }
-        }
+        this.updated();
     },
     beforeDestroy(): void {
         this.destroyComponent();
@@ -257,6 +246,7 @@ export let ComponentBase = vueDefineComponent({
             let slot: any = [];
             let innerDirValues: any;
             slot = slots.default ? slots.default() : slots;
+            slot = slot.flatMap((item: any) => Array.isArray(item.children) ? item.children : item);
             let items: any = {};
             items[`${tagName}`] = [];
             for (const childSlot of slot) {

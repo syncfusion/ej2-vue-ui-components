@@ -33,7 +33,7 @@ export let GridComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Grid({}) as any,
+            ej2Instance: new Grid({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -472,7 +472,7 @@ export let GridComponent =  vueDefineComponent({
         serverPdfExport(url: string): void {
             return this.ej2Instances.serverPdfExport(url);
         },
-        setCellValue(key: string | number, field: string, value: string | number | boolean | Object): void {
+        setCellValue(key: string | number, field: string, value: string | number | boolean | Object | null): void {
             return this.ej2Instances.setCellValue(key, field, value);
         },
         setGridContent(element: Object): void {
