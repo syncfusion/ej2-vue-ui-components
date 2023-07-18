@@ -31,7 +31,7 @@ export let AccumulationChartComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new AccumulationChart({}) as any,
+            ej2Instance: new AccumulationChart({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

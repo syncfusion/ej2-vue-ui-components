@@ -28,7 +28,7 @@ export let UploaderComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Uploader({}) as any,
+            ej2Instance: new Uploader({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -104,8 +104,8 @@ export let UploaderComponent =  vueDefineComponent({
         clearAll(): void {
             return this.ej2Instances.clearAll();
         },
-        createFileList(fileData: Object[], isSelectedFile?: boolean): void {
-            return this.ej2Instances.createFileList(fileData, isSelectedFile);
+        createFileList(fileData: Object[]): void {
+            return this.ej2Instances.createFileList(fileData);
         },
         getFilesData(index?: number): Object[] {
             return this.ej2Instances.getFilesData(index);

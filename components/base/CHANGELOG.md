@@ -2,6 +2,31 @@
 
 ## [Unreleased]
 
+## 22.1.39 (2023-07-18)
+
+### Common
+
+#### New Features
+
+- Provided the TypeScript 5 compatible support for the Vue components.
+
+## 21.2.9 (2023-06-06)
+
+### Common
+
+#### Bug Fixes
+
+- `#I457123` - The issue with "Unable to render Grid component using v-for and a slot template in Vue 3" has been resolved.
+- `#I468694` - The issue with "Unable to access the global directives in Vue 3 slot templates" has been resolved.
+
+## 21.2.6 (2023-05-23)
+
+### Common
+
+#### Bug Fixes
+
+- `#I453141` - The issue with "Unable to access the template data inside the external template while using Composition API" has been resolved.
+
 ## 21.1.41 (2023-04-18)
 
 ### Common

@@ -29,7 +29,7 @@ export let ComboBoxComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new ComboBox({}) as any,
+            ej2Instance: new ComboBox({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
