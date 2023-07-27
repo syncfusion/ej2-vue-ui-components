@@ -20,23 +20,19 @@ export function compile(
         innerHTML: '<div id="' + id + '"></div>',
       });
       document.body.appendChild(ele);
-      if (!isExecute && typeof templateElement === "string") {
+      if (!isExecute && (typeof templateElement === "string" || (templateElement.prototype && templateElement.prototype.CSPTemplate && typeof templateElement === 'function'))) {
         let vueSlot: any = getCurrentVueSlot(context.vueInstance, templateElement, root);
         if (vueSlot) {
           // Compilation for Vue 3 slot template
-          let app: any = Vue.createApp({
+          let app: any = Vue.createVNode({
             render () {
               return vueSlot[`${templateElement}`]({ data: data });
             }
-          });
-          if (plugins) {
-            for (let i: number = 0; i < plugins.length; i++) {
-              app.use(plugins[parseInt(i.toString(), 10)]);
-            }
-          }
+          }, plugins);
+          ele.innerHTML = '';
           // Get values for Vue 3 slot template
           getValues(app, context.vueInstance, root);
-          app.mount("#" + pid);
+          Vue.render(app, ele);
           returnEle = ele.childNodes;
           detach(ele);
         } else {
@@ -68,9 +64,18 @@ export function compile(
         }
         let tempRef: any;
         if (propsData) {
-          tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
-        } else {
-          tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+          if (templateCompRef.setup) {
+            tempRef = (<any>Object).assign(templateCompRef.setup(null, { expose: function () {}}), propsData);
+          } else {
+            tempRef = (<any>Object).assign(templateCompRef.data(), propsData);
+          }
+        }
+        else {
+          if (templateCompRef.setup) {
+            tempRef = (<any>Object).assign(templateCompRef.setup(null, { expose: function () {}}), dataObj.data);
+          } else {
+            tempRef = (<any>Object).assign(templateCompRef.data(), dataObj.data);
+          }
           if (templateCompRef.components) {
             let objkeys: any = Object.keys(templateCompRef.components) || [];
             for (let objstring of objkeys) {
@@ -82,19 +87,23 @@ export function compile(
             }
           }
         }
-        templateCompRef.data = function () { return tempRef; };
-        let app: any = Vue.createApp(templateCompRef);
-        if (plugins) {
-          for (let i: number = 0; i < plugins.length; i++) {
-            app.use(plugins[parseInt(i.toString(), 10)]);
+        if (templateCompRef.setup) {
+          templateCompRef.setup = function (__props: any, { expose: __expose }: any) {
+            __expose();
+            const __returned__ = tempRef;
+            Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true });
+            return __returned__;
           }
         }
+        templateCompRef.data = function () { return tempRef; };
+        let app: any = Vue.createVNode(templateCompRef, plugins);
+        ele.innerHTML = '';
         // Get values for Vue 3 functional template
         getValues(app, context.vueInstance, root);
-        app.mount("#" + pid);
+        Vue.render(app, ele);
         returnEle = ele.childNodes;
         detach(ele);
-      } else if (typeof templateElement === "string") {
+      } else if (typeof templateElement === "string" || (templateElement.prototype && templateElement.prototype.CSPTemplate && typeof templateElement === 'function')) {
         let vueSlot: any = getVueSlot(context.vueInstance, templateElement, root);
         if (vueSlot) {
           // Get provide values for Vue 2 slot template
@@ -140,6 +149,12 @@ export function compile(
         if (typeof templateFunction !== "function") {
           templateFunction = Vue.extend(templateFunction);
         }
+        if (templateFunction.options.setup) {
+          var variables: any = (<any>Object).assign(templateFunction.options.setup(), dataObj.data);
+          templateFunction.options.setup = function(__props: any) {
+            return variables;
+          };
+        }
         let templateVue: any = new templateFunction(dataObj);
         // let templateVue = new Vue(tempObj.template);
         // templateVue.$data.data = extend(tempObj.data, data);
@@ -173,13 +188,7 @@ function getValues(app: any, cInstance: any, root: any): any {
     return;
   }
   // Get globally defined variables.
-  let globalVariables: string[] = ['components', 'mixins', 'provides'];
-  for (let i: number = 0; i < globalVariables.length; i++) {
-    let gVariable: string = globalVariables[i];
-    if (app['_context'][gVariable] && vueInstance['$']['appContext'][gVariable]) {
-      app['_context'][gVariable] = vueInstance['$']['appContext'][gVariable];
-    }
-  }
+  app['appContext'] = vueInstance['$']['appContext'];
   // Get provide value from child component.
   let provided: any = {};
   let getProvideValue: any = (vueinstance: any) => {
@@ -189,12 +198,8 @@ function getValues(app: any, cInstance: any, root: any): any {
     }
   };
   getProvideValue(vueInstance);
-  if (app['_context']['provides']) {
-    app._context.provides = {...app._context.provides, ...provided};
-  }
-  // Get globally defined properties.
-  if (app['_context']['config']['globalProperties'] && vueInstance['$']['appContext']['config']['globalProperties']) {
-    app['_context']['config']['globalProperties'] = vueInstance['$']['appContext']['config']['globalProperties'];
+  if (app['appContext']['provides']) {
+    app.appContext.provides = {...app.appContext.provides, ...provided};
   }
 }
 
@@ -258,6 +263,7 @@ function getChildVueSlot(slots: any, templateElement: any): any {
     return slots;
   } else if (slots && slots.default) {
     let childSlots: any = slots.default();
+    childSlots = childSlots.flatMap((item: any) => Array.isArray(item.children) ? item.children : item);
     for (let i: number = 0; i < childSlots.length; i++) {
       let slot: any = getChildVueSlot(childSlots[parseInt(i.toString(), 10)].children, templateElement);
       if (slot) {

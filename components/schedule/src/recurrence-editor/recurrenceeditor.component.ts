@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { RecurrenceEditor } from '@syncfusion/ej2-schedule';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'endTypes', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -27,7 +27,7 @@ export let RecurrenceEditorComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new RecurrenceEditor({}) as any,
+            ej2Instance: new RecurrenceEditor({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

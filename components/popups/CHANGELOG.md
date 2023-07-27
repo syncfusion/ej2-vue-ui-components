@@ -2,6 +2,38 @@
 
 ## [Unreleased]
 
+## 22.2.5 (2023-07-27)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I473286` - Resolved the incorrect positioning of Tooltip when page is scaled.
+
+## 22.1.38 (2023-07-11)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I477278` - The issue, when enabling the sticky mode the Tooltip component does not stick to its target when page is scrolled has been resolved.
+
+## 22.1.36 (2023-06-28)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I466814` - The Tooltip fit alignment issue when hovering over the last element has been resolved
+
+## 21.2.10 (2023-06-13)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I466814` - The Tooltip alignment issue when hovering over the last element has been resolved.
+
 ## 21.2.3 (2023-05-03)
 
 ### Tooltip
@@ -681,6 +713,14 @@ Dialog is a window that displays information to the user, and used to get the us
 - **Accessibility** - Built-in compliance with the WAI-ARIA specifications.
 - **Keyboard Interaction** - The Dialog can be intractable through keyboard.
 
+
+## 22.1.37 (2023-07-04)
+
+### Dialog
+
+#### Bug Fixes
+
+- `#F44869` - The issue with "Header displayed as “information” when we set header as null" has been resolved.
 
 ## 19.1.57 (2021-04-20)
 

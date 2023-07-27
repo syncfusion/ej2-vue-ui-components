@@ -6,7 +6,7 @@ import { SpeedDial } from '@syncfusion/ej2-buttons';
 import { SpeedDialItemsDirective, SpeedDialItemDirective, SpeedDialItemsPlugin, SpeedDialItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'animation', 'closeIconCss', 'content', 'cssClass', 'direction', 'disabled', 'enablePersistence', 'enableRtl', 'iconPosition', 'itemTemplate', 'items', 'locale', 'modal', 'mode', 'openIconCss', 'opensOnHover', 'popupTemplate', 'position', 'radialSettings', 'target', 'visible', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'clicked', 'created', 'onClose', 'onOpen'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animation', 'closeIconCss', 'content', 'cssClass', 'direction', 'disabled', 'enablePersistence', 'enableRtl', 'iconPosition', 'isPrimary', 'itemTemplate', 'items', 'locale', 'modal', 'mode', 'openIconCss', 'opensOnHover', 'popupTemplate', 'position', 'radialSettings', 'target', 'visible', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'clicked', 'created', 'onClose', 'onOpen'];
 export const modelProps: string[] = ['visible'];
 
 export const testProp: any = getProps({props: properties});
@@ -30,7 +30,7 @@ export let SpeedDialComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new SpeedDial({}) as any,
+            ej2Instance: new SpeedDial({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

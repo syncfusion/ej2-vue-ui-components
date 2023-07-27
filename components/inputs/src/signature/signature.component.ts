@@ -27,7 +27,7 @@ export let SignatureComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Signature({}) as any,
+            ej2Instance: new Signature({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -103,8 +103,8 @@ export let SignatureComponent =  vueDefineComponent({
         clear(): void {
             return this.ej2Instances.clear();
         },
-        draw(text: string, fontFamily?: string, fontSize?: number): void {
-            return this.ej2Instances.draw(text, fontFamily, fontSize);
+        draw(text: string, fontFamily?: string, fontSize?: number, x?: number, y?: number): void {
+            return this.ej2Instances.draw(text, fontFamily, fontSize, x, y);
         },
         getBlob(url: string): Object {
             return this.ej2Instances.getBlob(url);

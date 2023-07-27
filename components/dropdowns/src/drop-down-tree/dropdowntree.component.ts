@@ -29,7 +29,7 @@ export let DropDownTreeComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new DropDownTree({}) as any,
+            ej2Instance: new DropDownTree({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

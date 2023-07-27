@@ -27,7 +27,7 @@ export let FabComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Fab({}) as any,
+            ej2Instance: new Fab({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

@@ -36,7 +36,7 @@ export let DiagramComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Diagram({}) as any,
+            ej2Instance: new Diagram({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -271,8 +271,8 @@ export let DiagramComponent =  vueDefineComponent({
         insertData(node?: Object | Object): object {
             return this.ej2Instances.insertData(node);
         },
-        loadDiagram(data: string): Object {
-            return this.ej2Instances.loadDiagram(data);
+        loadDiagram(data: string, isEJ1Data?: boolean): Object {
+            return this.ej2Instances.loadDiagram(data, isEJ1Data);
         },
         moveForward(): void {
             return this.ej2Instances.moveForward();
@@ -283,8 +283,8 @@ export let DiagramComponent =  vueDefineComponent({
         moveObjectsUp(node: Object | Object, currentLayer: Object): void {
             return this.ej2Instances.moveObjectsUp(node, currentLayer);
         },
-        nudge(direction: Object, x?: number, y?: number): void {
-            return this.ej2Instances.nudge(direction, x, y);
+        nudge(direction: Object, x?: number, y?: number, type?: string): void {
+            return this.ej2Instances.nudge(direction, x, y, type);
         },
         pan(horizontalOffset: number, verticalOffset: number, focusedPoint?: Object, isInteractiveZoomPan?: boolean): void {
             return this.ej2Instances.pan(horizontalOffset, verticalOffset, focusedPoint, isInteractiveZoomPan);
