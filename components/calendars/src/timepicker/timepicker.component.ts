@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { TimePicker } from '@syncfusion/ej2-calendars';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowEdit', 'cssClass', 'enableMask', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'fullScreenMode', 'htmlAttributes', 'keyConfigs', 'locale', 'maskPlaceholder', 'max', 'min', 'openOnFocus', 'placeholder', 'readonly', 'scrollTo', 'showClearButton', 'step', 'strictMode', 'value', 'width', 'zIndex', 'blur', 'change', 'cleared', 'close', 'created', 'destroyed', 'focus', 'itemRender', 'open'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowEdit', 'cssClass', 'enableMask', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'fullScreenMode', 'htmlAttributes', 'keyConfigs', 'locale', 'maskPlaceholder', 'max', 'min', 'openOnFocus', 'placeholder', 'readonly', 'scrollTo', 'serverTimezoneOffset', 'showClearButton', 'step', 'strictMode', 'value', 'width', 'zIndex', 'blur', 'change', 'cleared', 'close', 'created', 'destroyed', 'focus', 'itemRender', 'open'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
