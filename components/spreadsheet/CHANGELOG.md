@@ -1279,6 +1279,14 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
 
+## 22.2.9 (2023-08-15)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I489622` - Issue with "used range calculated wrongly while calling the `setColumnsWidth` method without a range argument" has been resolved.
+
 ## 22.2.5 (2023-07-27)
 
 ### Spreadsheet

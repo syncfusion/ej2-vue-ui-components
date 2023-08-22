@@ -316,8 +316,8 @@ export let SpreadsheetComponent =  vueDefineComponent({
         selectRange(address: string): void {
             return this.ej2Instances.selectRange(address);
         },
-        setBorder(style: Object, range?: string, type?: Object): void {
-            return this.ej2Instances.setBorder(style, range, type);
+        setBorder(style: Object, range?: string, type?: Object, isUndoRedo?: boolean): void {
+            return this.ej2Instances.setBorder(style, range, type, isUndoRedo);
         },
         setColWidth(width: number | string, colIndex: number, sheetIndex?: number): void {
             return this.ej2Instances.setColWidth(width, colIndex, sheetIndex);
