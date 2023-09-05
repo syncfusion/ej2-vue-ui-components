@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 22.2.12 (2023-09-05)
+
+### Grid
+
+#### Bug fixes
+
+- `#I490067` - Fixed the issue where all checkboxes should be checked when selecting a row and clicking the header checkbox.
+
 ## 22.2.11 (2023-08-29)
 
 ### Grid

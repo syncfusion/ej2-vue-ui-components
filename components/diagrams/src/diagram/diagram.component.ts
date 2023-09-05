@@ -334,8 +334,8 @@ export let DiagramComponent =  vueDefineComponent({
         resetSegments(): void {
             return this.ej2Instances.resetSegments();
         },
-        rotate(obj: Object | Object | Object, angle: number, pivot?: Object): boolean {
-            return this.ej2Instances.rotate(obj, angle, pivot);
+        rotate(obj: Object | Object | Object, angle: number, pivot?: Object, rotateUsingHandle?: boolean): boolean {
+            return this.ej2Instances.rotate(obj, angle, pivot, rotateUsingHandle);
         },
         sameSize(option: Object, objects?: undefined[]): void {
             return this.ej2Instances.sameSize(option, objects);
