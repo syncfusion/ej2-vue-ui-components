@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Sidebar } from '@syncfusion/ej2-navigations';
+import { Sidebar, SidebarModel } from '@syncfusion/ej2-navigations';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'animate', 'closeOnDocumentClick', 'dockSize', 'enableDock', 'enableGestures', 'enablePersistence', 'enableRtl', 'height', 'isOpen', 'locale', 'mediaQuery', 'position', 'showBackdrop', 'target', 'type', 'width', 'zIndex', 'change', 'close', 'created', 'destroyed', 'open'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-sidebar></ejs-sidebar>
  * ```
  */
-export let SidebarComponent =  vueDefineComponent({
+export let SidebarComponent: DefineVueComponent<SidebarModel> =  vueDefineComponent({
     name: 'SidebarComponent',
     mixins: [ComponentBase],
     props: props,

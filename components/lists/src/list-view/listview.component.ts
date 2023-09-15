@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { ListView } from '@syncfusion/ej2-lists';
+import { ListView, ListViewModel } from '@syncfusion/ej2-lists';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'animation', 'checkBoxPosition', 'cssClass', 'dataSource', 'enable', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'groupTemplate', 'headerTemplate', 'headerTitle', 'height', 'htmlAttributes', 'locale', 'query', 'showCheckBox', 'showHeader', 'showIcon', 'sortOrder', 'template', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'select'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-listview :dataSource='data'></ejs-listview>
  * ```
  */
-export let ListViewComponent =  vueDefineComponent({
+export let ListViewComponent: DefineVueComponent<ListViewModel> =  vueDefineComponent({
     name: 'ListViewComponent',
     mixins: [ComponentBase],
     props: props,

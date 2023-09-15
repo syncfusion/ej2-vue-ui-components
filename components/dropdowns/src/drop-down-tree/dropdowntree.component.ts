@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { DropDownTree } from '@syncfusion/ej2-dropdowns';
+import { DropDownTree, DropDownTreeModel } from '@syncfusion/ej2-dropdowns';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'allowMultiSelection', 'changeOnBlur', 'cssClass', 'customTemplate', 'delimiterChar', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'mode', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'readonly', 'selectAllText', 'showCheckBox', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'treeSettings', 'unSelectAllText', 'value', 'width', 'wrapText', 'zIndex', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'keyPress', 'open', 'select'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-dropdowntree></ejs-dropdowntree>
  * ```
  */
-export let DropDownTreeComponent =  vueDefineComponent({
+export let DropDownTreeComponent: DefineVueComponent<DropDownTreeModel> =  vueDefineComponent({
     name: 'DropDownTreeComponent',
     mixins: [ComponentBase],
     props: props,

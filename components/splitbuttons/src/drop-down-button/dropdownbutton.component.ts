@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
+import { DropDownButton, DropDownButtonModel } from '@syncfusion/ej2-splitbuttons';
 import { DropDownButtonItemsDirective, DropDownButtonItemDirective, DropDownButtonItemsPlugin, DropDownButtonItemPlugin } from './items.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-dropdownbutton>DropDownButton</ejs-dropdownbutton>
  * ```
  */
-export let DropDownButtonComponent =  vueDefineComponent({
+export let DropDownButtonComponent: DefineVueComponent<DropDownButtonModel> =  vueDefineComponent({
     name: 'DropDownButtonComponent',
     mixins: [ComponentBase],
     props: props,

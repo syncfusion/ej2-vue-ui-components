@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ItemModel } from '@syncfusion/ej2-splitbuttons';
 
 export let SplitButtonItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const SplitButtonItemsPlugin = {
 }
 
 
-export let SplitButtonItemDirective =  vueDefineComponent({
+export let SplitButtonItemDirective: DefineVueDirective<ItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { CarouselItemModel } from '@syncfusion/ej2-navigations';
 
 export let CarouselItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const CarouselItemsPlugin = {
  * </ejs-carousel>
  * ```
  */
-export let CarouselItemDirective =  vueDefineComponent({
+export let CarouselItemDirective: DefineVueDirective<CarouselItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

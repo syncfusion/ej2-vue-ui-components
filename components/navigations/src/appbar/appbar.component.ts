@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { AppBar } from '@syncfusion/ej2-navigations';
+import { AppBar, AppBarModel } from '@syncfusion/ej2-navigations';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'colorMode', 'cssClass', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'isSticky', 'locale', 'mode', 'position', 'created', 'destroyed'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-appbar></ejs-appbar>
  * ```
  */
-export let AppBarComponent =  vueDefineComponent({
+export let AppBarComponent: DefineVueComponent<AppBarModel> =  vueDefineComponent({
     name: 'AppBarComponent',
     mixins: [ComponentBase],
     props: props,

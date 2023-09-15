@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Sparkline } from '@syncfusion/ej2-charts';
+import { Sparkline, SparklineModel } from '@syncfusion/ej2-charts';
 import { RangeBandSettingsDirective, RangeBandSettingDirective, RangeBandSettingsPlugin, RangeBandSettingPlugin } from './rangebandsettings.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-sparkline></ejs-sparkline>
  * ```
  */
-export let SparklineComponent =  vueDefineComponent({
+export let SparklineComponent: DefineVueComponent<SparklineModel> =  vueDefineComponent({
     name: 'SparklineComponent',
     mixins: [ComponentBase],
     props: props,

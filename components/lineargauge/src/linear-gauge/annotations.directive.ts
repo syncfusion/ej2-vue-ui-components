@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { AnnotationModel } from '@syncfusion/ej2-lineargauge';
 
 export let AnnotationsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -38,7 +39,7 @@ export const AnnotationsPlugin = {
  * </ejs-lineargauge>
  * ```
  */
-export let AnnotationDirective =  vueDefineComponent({
+export let AnnotationDirective: DefineVueDirective<AnnotationModel> =  vueDefineComponent({
     render(): void {
         return;
     },

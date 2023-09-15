@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { DateTimePicker } from '@syncfusion/ej2-calendars';
+import { DateTimePicker, DateTimePickerModel } from '@syncfusion/ej2-calendars';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowEdit', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enableMask', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'floatLabelType', 'format', 'fullScreenMode', 'htmlAttributes', 'isMultiSelection', 'keyConfigs', 'locale', 'maskPlaceholder', 'max', 'min', 'openOnFocus', 'placeholder', 'readonly', 'scrollTo', 'serverTimezoneOffset', 'showClearButton', 'showTodayButton', 'start', 'step', 'strictMode', 'timeFormat', 'value', 'values', 'weekNumber', 'weekRule', 'width', 'zIndex', 'blur', 'change', 'cleared', 'close', 'created', 'destroyed', 'focus', 'navigated', 'open', 'renderDayCell'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-datetimepicker v-bind:value='dateTime'></ejs-datetimepicker>
  * ```
  */
-export let DateTimePickerComponent =  vueDefineComponent({
+export let DateTimePickerComponent: DefineVueComponent<DateTimePickerModel> =  vueDefineComponent({
     name: 'DateTimePickerComponent',
     mixins: [ComponentBase],
     props: props,

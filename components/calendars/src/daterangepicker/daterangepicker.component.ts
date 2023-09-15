@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { DateRangePicker } from '@syncfusion/ej2-calendars';
+import { DateRangePicker, DateRangePickerModel } from '@syncfusion/ej2-calendars';
 import { PresetsDirective, PresetDirective, PresetsPlugin, PresetPlugin } from './presets.directive'
 
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-daterangepicker v-bind:startDate='date' v-bind:endDate='date'></ejs-daterangepicker>
  * ```
  */
-export let DateRangePickerComponent =  vueDefineComponent({
+export let DateRangePickerComponent: DefineVueComponent<DateRangePickerModel> =  vueDefineComponent({
     name: 'DateRangePickerComponent',
     mixins: [ComponentBase],
     props: props,

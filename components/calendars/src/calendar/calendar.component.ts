@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Calendar } from '@syncfusion/ej2-calendars';
+import { Calendar, CalendarModel } from '@syncfusion/ej2-calendars';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'calendarMode', 'cssClass', 'dayHeaderFormat', 'depth', 'enablePersistence', 'enableRtl', 'enabled', 'firstDayOfWeek', 'isMultiSelection', 'keyConfigs', 'locale', 'max', 'min', 'serverTimezoneOffset', 'showTodayButton', 'start', 'value', 'values', 'weekNumber', 'weekRule', 'change', 'created', 'destroyed', 'navigated', 'renderDayCell'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-calendar v-bind:value='date'></ejs-calendar>
  * ```
  */
-export let CalendarComponent =  vueDefineComponent({
+export let CalendarComponent: DefineVueComponent<CalendarModel> =  vueDefineComponent({
     name: 'CalendarComponent',
     mixins: [ComponentBase],
     props: props,

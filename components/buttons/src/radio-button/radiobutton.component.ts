@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { RadioButton } from '@syncfusion/ej2-buttons';
+import { RadioButton, RadioButtonModel } from '@syncfusion/ej2-buttons';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-radiobutton label='Default'></ejs-radiobutton>
  * ```
  */
-export let RadioButtonComponent =  vueDefineComponent({
+export let RadioButtonComponent: DefineVueComponent<RadioButtonModel> =  vueDefineComponent({
     name: 'RadioButtonComponent',
     mixins: [ComponentBase],
     props: props,

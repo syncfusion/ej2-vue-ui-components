@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Splitter } from '@syncfusion/ej2-layouts';
+import { Splitter, SplitterModel } from '@syncfusion/ej2-layouts';
 import { PanesDirective, PaneDirective, PanesPlugin, PanePlugin } from './panesettings.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-splitter></ejs-splitter>
  * ```
  */
-export let SplitterComponent =  vueDefineComponent({
+export let SplitterComponent: DefineVueComponent<SplitterModel> =  vueDefineComponent({
     name: 'SplitterComponent',
     mixins: [ComponentBase],
     props: props,

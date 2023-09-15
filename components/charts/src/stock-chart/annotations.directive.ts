@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { StockChartAnnotationSettingsModel } from '@syncfusion/ej2-charts';
 
 export let StockChartAnnotationsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const StockChartAnnotationsPlugin = {
  * </ejs-chart>
  * ```
  */
-export let StockChartAnnotationDirective =  vueDefineComponent({
+export let StockChartAnnotationDirective: DefineVueDirective<StockChartAnnotationSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

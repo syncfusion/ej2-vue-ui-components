@@ -2,17 +2,19 @@
 
 ## [Unreleased]
 
-## 22.1.37 (2023-07-04)
+## 23.1.36 (2023-09-15)
 
 ### Spreadsheet
 
-#### Bug Fixes
+#### Features
 
-- `#I472639` - Issue with "merged cells become mixed up with one another while scrolling over the frozen column applied sheet" has been resolved.
+- `#339651` - Now, provided support for displaying the error alert dialog when an invalid formula is typed, or the wrong number of arguments is supplied to the formula.
+- `#369492` - Now, you can experience cut and paste actions in the Spreadsheet faster compared to earlier versions.
+- `#476502` - Now, you can experience smooth scrolling with multiple conditional formatting set in the Spreadsheet, which is faster compared to earlier versions.
 
 #### Bug fixes
 
-- `#I469389` - Issue with "automatic page scrolling occurs and spreadsheet ribbon UI is scrolled to the hidden state while importing the excel file" has been resolved.
+- `#I496230` - Issue with "row height is not updated properly when importing an excel file with rows height of 1 or 2 pixels" has been resolved.
 
 ## 22.1.34 (2023-06-21)
 
@@ -1278,22 +1280,6 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
-
-## 22.2.9 (2023-08-15)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I489622` - Issue with "used range calculated wrongly while calling the `setColumnsWidth` method without a range argument" has been resolved.
-
-## 22.2.5 (2023-07-27)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I477594` - Issue with "scrolling is not working properly with hidden rows while setting the `enableVirtualization` and `isFinite` properties as true" has been resolved.
 
 ## 21.2.10 (2023-06-13)
 

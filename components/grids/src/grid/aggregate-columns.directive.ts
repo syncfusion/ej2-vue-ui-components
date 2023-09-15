@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { AggregateColumnModel } from '@syncfusion/ej2-grids';
 
 export let AggregateColumnsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -48,7 +49,7 @@ export const AggregateColumnsPlugin = {
  * </ejs-grid>
  * ```
  */
-export let AggregateColumnDirective =  vueDefineComponent({
+export let AggregateColumnDirective: DefineVueDirective<AggregateColumnModel> =  vueDefineComponent({
     render(): void {
         return;
     },

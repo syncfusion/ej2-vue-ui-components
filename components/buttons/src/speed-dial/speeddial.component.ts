@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { SpeedDial } from '@syncfusion/ej2-buttons';
+import { SpeedDial, SpeedDialModel } from '@syncfusion/ej2-buttons';
 import { SpeedDialItemsDirective, SpeedDialItemDirective, SpeedDialItemsPlugin, SpeedDialItemPlugin } from './items.directive'
 
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-speeddial content='Edit'></ejs-speeddial>
  * ```
  */
-export let SpeedDialComponent =  vueDefineComponent({
+export let SpeedDialComponent: DefineVueComponent<SpeedDialModel> =  vueDefineComponent({
     name: 'SpeedDialComponent',
     mixins: [ComponentBase],
     props: props,

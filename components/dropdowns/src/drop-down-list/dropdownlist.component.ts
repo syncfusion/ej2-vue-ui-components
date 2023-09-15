@@ -1,11 +1,11 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { DropDownList, DropDownListModel } from '@syncfusion/ej2-dropdowns';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'text', 'value', 'valueTemplate', 'width', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'open', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'text', 'value', 'valueTemplate', 'width', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'open', 'select'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-dropdownlist :dataSource='data'></ejs-dropdownlist>
  * ```
  */
-export let DropDownListComponent =  vueDefineComponent({
+export let DropDownListComponent: DefineVueComponent<DropDownListModel> =  vueDefineComponent({
     name: 'DropDownListComponent',
     mixins: [ComponentBase],
     props: props,
@@ -33,7 +33,7 @@ export let DropDownListComponent =  vueDefineComponent({
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
-            hasInjectedModules: false as boolean,
+            hasInjectedModules: true as boolean,
             tagMapper: {} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,
@@ -158,6 +158,9 @@ export let DropDownListComponent =  vueDefineComponent({
         },
         hideSpinner(): void {
             return this.ej2Instances.hideSpinner();
+        },
+        requiredModules(): Object[] {
+            return this.ej2Instances.requiredModules();
         },
         showPopup(e?: Object | Object | Object): void {
             return this.ej2Instances.showPopup(e);

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { TrendlineModel } from '@syncfusion/ej2-charts';
 
 export let TrendlinesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const TrendlinesPlugin = {
 }
 
 
-export let TrendlineDirective =  vueDefineComponent({
+export let TrendlineDirective: DefineVueDirective<TrendlineModel> =  vueDefineComponent({
     render(): void {
         return;
     },

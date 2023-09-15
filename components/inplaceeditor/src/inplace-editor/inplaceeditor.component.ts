@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { InPlaceEditor } from '@syncfusion/ej2-inplace-editor';
+import { InPlaceEditor, InPlaceEditorModel } from '@syncfusion/ej2-inplace-editor';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionOnBlur', 'adaptor', 'cancelButton', 'cssClass', 'disabled', 'editableOn', 'emptyText', 'enableEditMode', 'enableHtmlParse', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'locale', 'mode', 'model', 'name', 'popupSettings', 'primaryKey', 'saveButton', 'showButtons', 'submitOnEnter', 'template', 'textOption', 'type', 'url', 'validationRules', 'value', 'actionBegin', 'actionFailure', 'actionSuccess', 'beforeSanitizeHtml', 'beginEdit', 'cancelClick', 'change', 'created', 'destroyed', 'endEdit', 'submitClick', 'validating'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-inplaceeditor></ejs-inplaceeditor>
  * ```
  */
-export let InPlaceEditorComponent =  vueDefineComponent({
+export let InPlaceEditorComponent: DefineVueComponent<InPlaceEditorModel> =  vueDefineComponent({
     name: 'InPlaceEditorComponent',
     mixins: [ComponentBase],
     props: props,

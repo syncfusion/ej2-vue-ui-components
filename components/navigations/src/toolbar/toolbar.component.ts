@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Toolbar } from '@syncfusion/ej2-navigations';
+import { Toolbar, ToolbarModel } from '@syncfusion/ej2-navigations';
 import { ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin } from './items.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-toolbar></ejs-toolbar>
  * ```
  */
-export let ToolbarComponent =  vueDefineComponent({
+export let ToolbarComponent: DefineVueComponent<ToolbarModel> =  vueDefineComponent({
     name: 'ToolbarComponent',
     mixins: [ComponentBase],
     props: props,

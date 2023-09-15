@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { SplitButton } from '@syncfusion/ej2-splitbuttons';
+import { SplitButton, SplitButtonModel } from '@syncfusion/ej2-splitbuttons';
 import { SplitButtonItemsDirective, SplitButtonItemDirective, SplitButtonItemsPlugin, SplitButtonItemPlugin } from './items.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-splitbutton content='Split Button'></ejs-splitbutton>
  * ```
  */
-export let SplitButtonComponent =  vueDefineComponent({
+export let SplitButtonComponent: DefineVueComponent<SplitButtonModel> =  vueDefineComponent({
     name: 'SplitButtonComponent',
     mixins: [ComponentBase],
     props: props,

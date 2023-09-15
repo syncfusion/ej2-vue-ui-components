@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, SpreadsheetModel } from '@syncfusion/ej2-spreadsheet';
 import { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin } from './image.directive'
 import { ChartsDirective, ChartDirective, ChartsPlugin, ChartPlugin } from './chart.directive'
 import { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './cells.directive'
@@ -27,7 +27,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-spreadsheet></ejs-spreadsheet>
  * ```
  */
-export let SpreadsheetComponent =  vueDefineComponent({
+export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefineComponent({
     name: 'SpreadsheetComponent',
     mixins: [ComponentBase],
     props: props,

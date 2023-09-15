@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Maps } from '@syncfusion/ej2-maps';
+import { Maps, MapsModel } from '@syncfusion/ej2-maps';
 import { InitialShapeSelectionsDirective, InitialShapeSelectionDirective, InitialShapeSelectionsPlugin, InitialShapeSelectionPlugin } from './initialshapeselection.directive'
 import { MarkersDirective, MarkerDirective, MarkersPlugin, MarkerPlugin } from './markersettings.directive'
 import { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin } from './colormapping.directive'
@@ -27,7 +27,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-maps></ejs-maps>
  * ```
  */
-export let MapsComponent =  vueDefineComponent({
+export let MapsComponent: DefineVueComponent<MapsModel> =  vueDefineComponent({
     name: 'MapsComponent',
     mixins: [ComponentBase],
     props: props,

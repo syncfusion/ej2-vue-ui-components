@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { RibbonItemModel } from '@syncfusion/ej2-ribbon';
 
 export let RibbonItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -54,7 +55,7 @@ export const RibbonItemsPlugin = {
  * </ejs-ribbon>
  * ```
  */
-export let RibbonItemDirective =  vueDefineComponent({
+export let RibbonItemDirective: DefineVueDirective<RibbonItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

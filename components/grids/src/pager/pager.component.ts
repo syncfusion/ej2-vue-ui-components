@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Pager } from '@syncfusion/ej2-grids';
+import { Pager, PagerModel } from '@syncfusion/ej2-grids';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'cssClass', 'currentPage', 'customText', 'enableExternalMessage', 'enablePagerMessage', 'enablePersistence', 'enableQueryString', 'enableRtl', 'externalMessage', 'locale', 'pageCount', 'pageSize', 'pageSizes', 'template', 'totalRecordsCount', 'click', 'created', 'dropDownChanged'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-pager></ejs-pager>
  * ```
  */
-export let PagerComponent =  vueDefineComponent({
+export let PagerComponent: DefineVueComponent<PagerModel> =  vueDefineComponent({
     name: 'PagerComponent',
     mixins: [ComponentBase],
     props: props,

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { BubbleSettingsModel } from '@syncfusion/ej2-maps';
 
 export let BubblesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -45,7 +46,7 @@ export const BubblesPlugin = {
  * </ejs-maps>
  * ```
  */
-export let BubbleDirective =  vueDefineComponent({
+export let BubbleDirective: DefineVueDirective<BubbleSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { MenuItemModel } from '@syncfusion/ej2-navigations';
 
 export let MenuItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const MenuItemsPlugin = {
 }
 
 
-export let MenuItemDirective =  vueDefineComponent({
+export let MenuItemDirective: DefineVueDirective<MenuItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

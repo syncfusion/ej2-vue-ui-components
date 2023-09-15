@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { PointPortModel } from '@syncfusion/ej2-diagrams';
 
 export let PortsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -46,7 +47,7 @@ export const PortsPlugin = {
  * </ejs-diagram>
  * ```
  */
-export let PortDirective =  vueDefineComponent({
+export let PortDirective: DefineVueDirective<PointPortModel> =  vueDefineComponent({
     render(): void {
         return;
     },

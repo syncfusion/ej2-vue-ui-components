@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Skeleton } from '@syncfusion/ej2-notifications';
+import { Skeleton, SkeletonModel } from '@syncfusion/ej2-notifications';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'cssClass', 'enablePersistence', 'enableRtl', 'height', 'label', 'locale', 'shape', 'shimmerEffect', 'visible', 'width'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-skeleton></ejs-skeleton>
  * ```
  */
-export let SkeletonComponent =  vueDefineComponent({
+export let SkeletonComponent: DefineVueComponent<SkeletonModel> =  vueDefineComponent({
     name: 'SkeletonComponent',
     mixins: [ComponentBase],
     props: props,

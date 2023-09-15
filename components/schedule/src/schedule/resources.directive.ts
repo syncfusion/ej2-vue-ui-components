@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ResourcesModel } from '@syncfusion/ej2-schedule';
 
 export let ResourcesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const ResourcesPlugin = {
  * </ejs-schedule>
  * ```
  */
-export let ResourceDirective =  vueDefineComponent({
+export let ResourceDirective: DefineVueDirective<ResourcesModel> =  vueDefineComponent({
     render(): void {
         return;
     },

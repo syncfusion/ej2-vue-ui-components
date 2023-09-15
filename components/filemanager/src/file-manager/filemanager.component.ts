@@ -1,10 +1,11 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { FileManager } from '@syncfusion/ej2-filemanager';
+import { FileManager, FileManagerModel } from '@syncfusion/ej2-filemanager';
+import { ToolbarItemsDirective, ToolbarItemDirective, ToolbarItemsPlugin, ToolbarItemPlugin } from './toolbaritems.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'height', 'locale', 'navigationPaneSettings', 'path', 'popupTarget', 'rootAliasName', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showItemCheckBoxes', 'showThumbnail', 'sortBy', 'sortOrder', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforeDownload', 'beforeImageLoad', 'beforePopupClose', 'beforePopupOpen', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'fileSelection', 'menuClick', 'menuOpen', 'popupClose', 'popupOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'ajaxSettings', 'allowDragAndDrop', 'allowMultiSelection', 'contextMenuSettings', 'cssClass', 'detailsViewSettings', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'height', 'locale', 'navigationPaneSettings', 'path', 'popupTarget', 'rootAliasName', 'searchSettings', 'selectedItems', 'showFileExtension', 'showHiddenItems', 'showItemCheckBoxes', 'showThumbnail', 'sortBy', 'sortOrder', 'toolbarItems', 'toolbarSettings', 'uploadSettings', 'view', 'width', 'beforeDownload', 'beforeImageLoad', 'beforePopupClose', 'beforePopupOpen', 'beforeSend', 'created', 'destroyed', 'failure', 'fileDragStart', 'fileDragStop', 'fileDragging', 'fileDropped', 'fileLoad', 'fileOpen', 'fileSelect', 'fileSelection', 'menuClick', 'menuOpen', 'popupClose', 'popupOpen', 'success', 'toolbarClick', 'toolbarCreate', 'uploadListCreate'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -18,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-filemanager showThumbnail='false'></ejs-filemanager>
  * ```
  */
-export let FileManagerComponent =  vueDefineComponent({
+export let FileManagerComponent: DefineVueComponent<FileManagerModel> =  vueDefineComponent({
     name: 'FileManagerComponent',
     mixins: [ComponentBase],
     props: props,
@@ -30,10 +31,10 @@ export let FileManagerComponent =  vueDefineComponent({
             ej2Instance: new FileManager({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
-            hasChildDirective: false as boolean,
+            hasChildDirective: true as boolean,
             hasInjectedModules: true as boolean,
-            tagMapper: {} as { [key: string]: Object },
-            tagNameMapper: {} as Object,
+            tagMapper: {"e-toolbaritems":"e-toolbaritem"} as { [key: string]: Object },
+            tagNameMapper: {"e-toolbaritems":"e-toolbarItems"} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -154,6 +155,8 @@ export const FileManagerPlugin = {
     name: 'ejs-filemanager',
     install(Vue: any) {
         Vue.component(FileManagerPlugin.name, FileManagerComponent);
+        Vue.component(ToolbarItemPlugin.name, ToolbarItemDirective);
+        Vue.component(ToolbarItemsPlugin.name, ToolbarItemsDirective);
 
     }
 }

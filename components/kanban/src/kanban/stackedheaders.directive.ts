@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { StackedHeadersModel } from '@syncfusion/ej2-kanban';
 
 export let StackedHeadersDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const StackedHeadersPlugin = {
  * </ejs-kanban>
  * ```
  */
-export let StackedHeaderDirective =  vueDefineComponent({
+export let StackedHeaderDirective: DefineVueDirective<StackedHeadersModel> =  vueDefineComponent({
     render(): void {
         return;
     },

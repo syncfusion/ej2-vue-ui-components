@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { SpeedDialItemModel } from '@syncfusion/ej2-buttons';
 
 export let SpeedDialItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const SpeedDialItemsPlugin = {
  * </ejs-speeddial>
  * ```
  */
-export let SpeedDialItemDirective =  vueDefineComponent({
+export let SpeedDialItemDirective: DefineVueDirective<SpeedDialItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

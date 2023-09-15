@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { TimePicker } from '@syncfusion/ej2-calendars';
+import { TimePicker, TimePickerModel } from '@syncfusion/ej2-calendars';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowEdit', 'cssClass', 'enableMask', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'fullScreenMode', 'htmlAttributes', 'keyConfigs', 'locale', 'maskPlaceholder', 'max', 'min', 'openOnFocus', 'placeholder', 'readonly', 'scrollTo', 'serverTimezoneOffset', 'showClearButton', 'step', 'strictMode', 'value', 'width', 'zIndex', 'blur', 'change', 'cleared', 'close', 'created', 'destroyed', 'focus', 'itemRender', 'open'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-timepicker v-bind:value='value'></ejs-timepicker>
  * ```
  */
-export let TimePickerComponent =  vueDefineComponent({
+export let TimePickerComponent: DefineVueComponent<TimePickerModel> =  vueDefineComponent({
     name: 'TimePickerComponent',
     mixins: [ComponentBase],
     props: props,

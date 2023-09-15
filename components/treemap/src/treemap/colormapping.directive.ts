@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ColorMappingModel } from '@syncfusion/ej2-treemap';
 
 export let ColorMappingsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const ColorMappingsPlugin = {
 }
 
 
-export let ColorMappingDirective =  vueDefineComponent({
+export let ColorMappingDirective: DefineVueDirective<ColorMappingModel> =  vueDefineComponent({
     render(): void {
         return;
     },

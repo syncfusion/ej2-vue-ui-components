@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Menu } from '@syncfusion/ej2-navigations';
+import { Menu, MenuModel } from '@syncfusion/ej2-navigations';
 import { MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin } from './items.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-menu :items='menuItems'></ejs-menu>
  * ```
  */
-export let MenuComponent =  vueDefineComponent({
+export let MenuComponent: DefineVueComponent<MenuModel> =  vueDefineComponent({
     name: 'MenuComponent',
     mixins: [ComponentBase],
     props: props,

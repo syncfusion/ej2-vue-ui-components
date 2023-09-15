@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { LayerSettingsModel } from '@syncfusion/ej2-maps';
 
 export let LayersDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -40,7 +41,7 @@ export const LayersPlugin = {
  * </ejs-maps>
  * ```
  */
-export let LayerDirective =  vueDefineComponent({
+export let LayerDirective: DefineVueDirective<LayerSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

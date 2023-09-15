@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { BreadcrumbItemModel } from '@syncfusion/ej2-navigations';
 
 export let BreadcrumbItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const BreadcrumbItemsPlugin = {
  * </ejs-breadcrumb>
  * ```
  */
-export let BreadcrumbItemDirective =  vueDefineComponent({
+export let BreadcrumbItemDirective: DefineVueDirective<BreadcrumbItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { HolidayModel } from '@syncfusion/ej2-gantt';
 
 export let HolidaysDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const HolidaysPlugin = {
  * </ejs-gantt>
  * ```
  */
-export let HolidayDirective =  vueDefineComponent({
+export let HolidayDirective: DefineVueDirective<HolidayModel> =  vueDefineComponent({
     render(): void {
         return;
     },

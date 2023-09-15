@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { CircularGauge } from '@syncfusion/ej2-circulargauge';
+import { CircularGauge, CircularGaugeModel } from '@syncfusion/ej2-circulargauge';
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
 import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './ranges.directive'
 import { PointersDirective, PointerDirective, PointersPlugin, PointerPlugin } from './pointers.directive'
@@ -22,7 +22,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-circulargauge></ejs-circulargauge>
  * ```
  */
-export let CircularGaugeComponent =  vueDefineComponent({
+export let CircularGaugeComponent: DefineVueComponent<CircularGaugeModel> =  vueDefineComponent({
     name: 'CircularGaugeComponent',
     mixins: [ComponentBase],
     props: props,

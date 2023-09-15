@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Diagram } from '@syncfusion/ej2-diagrams';
+import { Diagram, DiagramModel } from '@syncfusion/ej2-diagrams';
 import { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './layers.directive'
 import { CustomCursorsDirective, CustomCursorDirective, CustomCursorsPlugin, CustomCursorPlugin } from './customcursor.directive'
 import { ConnectorFixedUserHandlesDirective, ConnectorFixedUserHandleDirective, ConnectorFixedUserHandlesPlugin, ConnectorFixedUserHandlePlugin } from './connector-fixeduserhandle.directive'
@@ -27,7 +27,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-diagram></ejs-diagram>
  * ```
  */
-export let DiagramComponent =  vueDefineComponent({
+export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineComponent({
     name: 'DiagramComponent',
     mixins: [ComponentBase],
     props: props,
@@ -145,7 +145,7 @@ export let DiagramComponent =  vueDefineComponent({
         addPhases(node: Object, phases: Object[]): void {
             return this.ej2Instances.addPhases(node, phases);
         },
-        addPorts(obj: Object, ports: Object[]): void {
+        addPorts(obj: Object | Object, ports: Object[] | Object[]): void {
             return this.ej2Instances.addPorts(obj, ports);
         },
         addProcess(process: Object, parentId: string): void {
@@ -201,6 +201,9 @@ export let DiagramComponent =  vueDefineComponent({
         },
         dragTargetEnd(obj: Object, tx: number, ty: number): void {
             return this.ej2Instances.dragTargetEnd(obj, tx, ty);
+        },
+        editSegment(editOptions: Object): void {
+            return this.ej2Instances.editSegment(editOptions);
         },
         endGroupAction(): void {
             return this.ej2Instances.endGroupAction();
@@ -322,7 +325,7 @@ export let DiagramComponent =  vueDefineComponent({
         removePhase(node: Object, phase: Object): void {
             return this.ej2Instances.removePhase(node, phase);
         },
-        removePorts(obj: Object, ports: Object[]): void {
+        removePorts(obj: Object | Object, ports: Object[] | Object[]): void {
             return this.ej2Instances.removePorts(obj, ports);
         },
         removeProcess(id: string): void {

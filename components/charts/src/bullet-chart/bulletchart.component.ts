@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { BulletChart } from '@syncfusion/ej2-charts';
+import { BulletChart, BulletChartModel } from '@syncfusion/ej2-charts';
 import { BulletRangeCollectionDirective, BulletRangeDirective, BulletRangeCollectionPlugin, BulletRangePlugin } from './ranges.directive'
 
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-bulletchart></ejs-bulletchart>
  * ```
  */
-export let BulletChartComponent =  vueDefineComponent({
+export let BulletChartComponent: DefineVueComponent<BulletChartModel> =  vueDefineComponent({
     name: 'BulletChartComponent',
     mixins: [ComponentBase],
     props: props,

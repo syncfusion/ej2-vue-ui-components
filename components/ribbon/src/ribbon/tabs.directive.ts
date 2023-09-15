@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { RibbonTabModel } from '@syncfusion/ej2-ribbon';
 
 export let RibbonTabsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const RibbonTabsPlugin = {
  * </ejs-ribbon>
  * ```
  */
-export let RibbonTabDirective =  vueDefineComponent({
+export let RibbonTabDirective: DefineVueDirective<RibbonTabModel> =  vueDefineComponent({
     render(): void {
         return;
     },

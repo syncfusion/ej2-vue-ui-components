@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Fab } from '@syncfusion/ej2-buttons';
+import { Fab, FabModel } from '@syncfusion/ej2-buttons';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'position', 'target', 'visible', 'created'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-fab></ejs-fab>
  * ```
  */
-export let FabComponent =  vueDefineComponent({
+export let FabComponent: DefineVueComponent<FabModel> =  vueDefineComponent({
     name: 'FabComponent',
     mixins: [ComponentBase],
     props: props,

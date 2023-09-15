@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { CheckBox } from '@syncfusion/ej2-buttons';
+import { CheckBox, CheckBoxModel } from '@syncfusion/ej2-buttons';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'indeterminate', 'label', 'labelPosition', 'locale', 'name', 'value', 'change', 'created'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-checkbox label='Default'></ejs-checkbox>
  * ```
  */
-export let CheckBoxComponent =  vueDefineComponent({
+export let CheckBoxComponent: DefineVueComponent<CheckBoxModel> =  vueDefineComponent({
     name: 'CheckBoxComponent',
     mixins: [ComponentBase],
     props: props,

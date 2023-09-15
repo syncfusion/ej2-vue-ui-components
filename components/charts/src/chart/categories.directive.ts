@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { MultiLevelCategoriesModel } from '@syncfusion/ej2-charts';
 
 export let CategoriesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const CategoriesPlugin = {
 }
 
 
-export let CategoryDirective =  vueDefineComponent({
+export let CategoryDirective: DefineVueDirective<MultiLevelCategoriesModel> =  vueDefineComponent({
     render(): void {
         return;
     },

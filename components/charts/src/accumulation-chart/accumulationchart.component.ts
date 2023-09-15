@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { AccumulationChart } from '@syncfusion/ej2-charts';
+import { AccumulationChart, AccumulationChartModel } from '@syncfusion/ej2-charts';
 import { AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationSeriesCollectionPlugin, AccumulationSeriesPlugin } from './series.directive'
 import { AccumulationAnnotationsDirective, AccumulationAnnotationDirective, AccumulationAnnotationsPlugin, AccumulationAnnotationPlugin } from './annotations.directive'
 
@@ -21,7 +21,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-accumulationchart></ejs-accumulationchart>
  * ```
  */
-export let AccumulationChartComponent =  vueDefineComponent({
+export let AccumulationChartComponent: DefineVueComponent<AccumulationChartModel> =  vueDefineComponent({
     name: 'AccumulationChartComponent',
     mixins: [ComponentBase],
     props: props,

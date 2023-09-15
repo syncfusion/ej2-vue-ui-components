@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { AccumulationSeriesModel } from '@syncfusion/ej2-charts';
 
 export let AccumulationSeriesCollectionDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const AccumulationSeriesCollectionPlugin = {
 }
 
 
-export let AccumulationSeriesDirective =  vueDefineComponent({
+export let AccumulationSeriesDirective: DefineVueDirective<AccumulationSeriesModel> =  vueDefineComponent({
     render(): void {
         return;
     },

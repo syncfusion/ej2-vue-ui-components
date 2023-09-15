@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { EventMarkerModel } from '@syncfusion/ej2-gantt';
 
 export let EventMarkersDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -41,7 +42,7 @@ export const EventMarkersPlugin = {
  * </ejs-gantt>
  * ```
  */
-export let EventMarkerDirective =  vueDefineComponent({
+export let EventMarkerDirective: DefineVueDirective<EventMarkerModel> =  vueDefineComponent({
     render(): void {
         return;
     },
