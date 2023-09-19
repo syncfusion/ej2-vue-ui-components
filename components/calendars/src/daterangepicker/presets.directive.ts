@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { PresetsModel } from '@syncfusion/ej2-calendars';
 
 export let PresetsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const PresetsPlugin = {
  * </ejs-daterangepicker>
  * ```
  */
-export let PresetDirective =  vueDefineComponent({
+export let PresetDirective: DefineVueDirective<PresetsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

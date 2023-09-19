@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { RangeNavigator } from '@syncfusion/ej2-charts';
+import { RangeNavigator, RangeNavigatorModel } from '@syncfusion/ej2-charts';
 import { RangenavigatorSeriesCollectionDirective, RangenavigatorSeriesDirective, RangenavigatorSeriesCollectionPlugin, RangenavigatorSeriesPlugin } from './series.directive'
 
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-rangenavigator></ejs-rangenavigator>
  * ```
  */
-export let RangeNavigatorComponent =  vueDefineComponent({
+export let RangeNavigatorComponent: DefineVueComponent<RangeNavigatorModel> =  vueDefineComponent({
     name: 'RangeNavigatorComponent',
     mixins: [ComponentBase],
     props: props,

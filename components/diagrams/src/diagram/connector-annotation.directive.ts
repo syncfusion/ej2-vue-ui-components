@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { PathAnnotationModel } from '@syncfusion/ej2-diagrams';
 
 export let ConnectorAnnotationsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -46,7 +47,7 @@ export const ConnectorAnnotationsPlugin = {
  * </ejs-diagram>
  * ```
  */
-export let ConnectorAnnotationDirective =  vueDefineComponent({
+export let ConnectorAnnotationDirective: DefineVueDirective<PathAnnotationModel> =  vueDefineComponent({
     render(): void {
         return;
     },

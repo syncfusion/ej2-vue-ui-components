@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ConnectorFixedUserHandleModel } from '@syncfusion/ej2-diagrams';
 
 export let ConnectorFixedUserHandlesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -46,7 +47,7 @@ export const ConnectorFixedUserHandlesPlugin = {
  * </ejs-diagram>
  * ```
  */
-export let ConnectorFixedUserHandleDirective =  vueDefineComponent({
+export let ConnectorFixedUserHandleDirective: DefineVueDirective<ConnectorFixedUserHandleModel> =  vueDefineComponent({
     render(): void {
         return;
     },

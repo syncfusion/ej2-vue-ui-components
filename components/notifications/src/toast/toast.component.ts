@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Toast } from '@syncfusion/ej2-notifications';
+import { Toast, ToastModel } from '@syncfusion/ej2-notifications';
 import { ButtonModelPropsDirective, ButtonModelPropDirective, ButtonModelPropsPlugin, ButtonModelPropPlugin } from './buttons.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-toast></ejs-toast>
  * ```
  */
-export let ToastComponent =  vueDefineComponent({
+export let ToastComponent: DefineVueComponent<ToastModel> =  vueDefineComponent({
     name: 'ToastComponent',
     mixins: [ComponentBase],
     props: props,

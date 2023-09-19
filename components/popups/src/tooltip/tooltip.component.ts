@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Tooltip } from '@syncfusion/ej2-popups';
+import { Tooltip, TooltipModel } from '@syncfusion/ej2-popups';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'animation', 'closeDelay', 'container', 'content', 'cssClass', 'enableHtmlParse', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'htmlAttributes', 'isSticky', 'locale', 'mouseTrail', 'offsetX', 'offsetY', 'openDelay', 'opensOn', 'position', 'showTipPointer', 'target', 'tipPointerPosition', 'width', 'windowCollision', 'afterClose', 'afterOpen', 'beforeClose', 'beforeCollision', 'beforeOpen', 'beforeRender', 'created', 'destroyed'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-tooltip content='Tooltip content'>Show Tooltip</ejs-tooltip>
  * ```
  */
-export let TooltipComponent =  vueDefineComponent({
+export let TooltipComponent: DefineVueComponent<TooltipModel> =  vueDefineComponent({
     name: 'TooltipComponent',
     mixins: [ComponentBase],
     props: props,

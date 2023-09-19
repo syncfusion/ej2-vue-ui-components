@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 23.1.36 (2023-09-15)
+
+### Common
+
+#### New Features
+
+- The Vue sample browser has been upgraded to the Vue 3 version.
+- Added the StackBlitz option to the Vue sample browser.
+- `#I469488`, `#I490441`, `#I491649` - Provided Intellisense support for Vue 3 components using the Volar extension within Visual Studio Code.
+
 ## 22.2.5 (2023-07-27)
 
 ### Common

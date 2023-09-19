@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { RibbonGroupModel } from '@syncfusion/ej2-ribbon';
 
 export let RibbonGroupsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -46,7 +47,7 @@ export const RibbonGroupsPlugin = {
  * </ejs-ribbon>
  * ```
  */
-export let RibbonGroupDirective =  vueDefineComponent({
+export let RibbonGroupDirective: DefineVueDirective<RibbonGroupModel> =  vueDefineComponent({
     render(): void {
         return;
     },

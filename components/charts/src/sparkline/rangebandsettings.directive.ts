@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { RangeBandSettingsModel } from '@syncfusion/ej2-charts';
 
 export let RangeBandSettingsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const RangeBandSettingsPlugin = {
 }
 
 
-export let RangeBandSettingDirective =  vueDefineComponent({
+export let RangeBandSettingDirective: DefineVueDirective<RangeBandSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

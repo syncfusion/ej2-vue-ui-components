@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { ChipList } from '@syncfusion/ej2-buttons';
+import { ChipList, ChipListModel } from '@syncfusion/ej2-buttons';
 import { ChipsDirective, ChipDirective, ChipsPlugin, ChipPlugin } from './chips.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-chiplist></ejs-chiplist>
  * ```
  */
-export let ChipListComponent =  vueDefineComponent({
+export let ChipListComponent: DefineVueComponent<ChipListModel> =  vueDefineComponent({
     name: 'ChipListComponent',
     mixins: [ComponentBase],
     props: props,

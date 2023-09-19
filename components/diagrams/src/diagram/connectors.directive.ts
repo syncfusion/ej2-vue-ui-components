@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ConnectorModel } from '@syncfusion/ej2-diagrams';
 
 export let ConnectorsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -41,7 +42,7 @@ export const ConnectorsPlugin = {
  * </ejs-diagram>
  * ```
  */
-export let ConnectorDirective =  vueDefineComponent({
+export let ConnectorDirective: DefineVueDirective<ConnectorModel> =  vueDefineComponent({
     render(): void {
         return;
     },

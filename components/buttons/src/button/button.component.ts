@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Button } from '@syncfusion/ej2-buttons';
+import { Button, ButtonModel } from '@syncfusion/ej2-buttons';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-button>Button</ejs-button>
  * ```
  */
-export let ButtonComponent =  vueDefineComponent({
+export let ButtonComponent: DefineVueComponent<ButtonModel> =  vueDefineComponent({
     name: 'ButtonComponent',
     mixins: [ComponentBase],
     props: props,

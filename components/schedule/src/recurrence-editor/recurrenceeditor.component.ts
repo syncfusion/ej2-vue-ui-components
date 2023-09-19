@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { RecurrenceEditor } from '@syncfusion/ej2-schedule';
+import { RecurrenceEditor, RecurrenceEditorModel } from '@syncfusion/ej2-schedule';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'calendarMode', 'cssClass', 'dateFormat', 'enablePersistence', 'enableRtl', 'endTypes', 'firstDayOfWeek', 'frequencies', 'locale', 'maxDate', 'minDate', 'selectedType', 'startDate', 'value', 'change'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-recurrenceeditor></ejs-recurrenceeditor>
  * ```
  */
-export let RecurrenceEditorComponent =  vueDefineComponent({
+export let RecurrenceEditorComponent: DefineVueComponent<RecurrenceEditorModel> =  vueDefineComponent({
     name: 'RecurrenceEditorComponent',
     mixins: [ComponentBase],
     props: props,

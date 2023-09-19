@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { HeaderRowsModel } from '@syncfusion/ej2-schedule';
 
 export let HeaderRowsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const HeaderRowsPlugin = {
  * </ejs-schedule>
  * ```
  */
-export let HeaderRowDirective =  vueDefineComponent({
+export let HeaderRowDirective: DefineVueDirective<HeaderRowsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Smithchart } from '@syncfusion/ej2-charts';
+import { Smithchart, SmithchartModel } from '@syncfusion/ej2-charts';
 import { SmithchartSeriesCollectionDirective, SmithchartSeriesDirective, SmithchartSeriesCollectionPlugin, SmithchartSeriesPlugin } from './series.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-smithchart></ejs-smithchart>
  * ```
  */
-export let SmithchartComponent =  vueDefineComponent({
+export let SmithchartComponent: DefineVueComponent<SmithchartModel> =  vueDefineComponent({
     name: 'SmithchartComponent',
     mixins: [ComponentBase],
     props: props,

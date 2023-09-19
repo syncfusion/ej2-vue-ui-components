@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { ProgressButton } from '@syncfusion/ej2-splitbuttons';
+import { ProgressButton, ProgressButtonModel } from '@syncfusion/ej2-splitbuttons';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationSettings', 'content', 'cssClass', 'disabled', 'duration', 'enableHtmlSanitizer', 'enableProgress', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'spinSettings', 'begin', 'created', 'end', 'fail', 'progress'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-progressbutton content='Progress Button'></ejs-progressbutton>
  * ```
  */
-export let ProgressButtonComponent =  vueDefineComponent({
+export let ProgressButtonComponent: DefineVueComponent<ProgressButtonModel> =  vueDefineComponent({
     name: 'ProgressButtonComponent',
     mixins: [ComponentBase],
     props: props,

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { AddDialogFieldSettingsModel } from '@syncfusion/ej2-gantt';
 
 export let AddDialogFieldsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const AddDialogFieldsPlugin = {
  * </ejs-gantt>
  * ```
  */
-export let AddDialogFieldDirective =  vueDefineComponent({
+export let AddDialogFieldDirective: DefineVueDirective<AddDialogFieldSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

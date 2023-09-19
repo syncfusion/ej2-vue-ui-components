@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { StockChartTrendlineModel } from '@syncfusion/ej2-charts';
 
 export let StockChartTrendlinesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const StockChartTrendlinesPlugin = {
 }
 
 
-export let StockChartTrendlineDirective =  vueDefineComponent({
+export let StockChartTrendlineDirective: DefineVueDirective<StockChartTrendlineModel> =  vueDefineComponent({
     render(): void {
         return;
     },

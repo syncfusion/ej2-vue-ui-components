@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { DataMatrixGenerator } from '@syncfusion/ej2-barcode-generator';
+import { DataMatrixGenerator, DataMatrixGeneratorModel } from '@syncfusion/ej2-barcode-generator';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'encoding', 'foreColor', 'height', 'locale', 'margin', 'mode', 'size', 'value', 'width', 'xDimension', 'invalid'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-datamatrix-generator></ejs-datamatrix-generator>
  * ```
  */
-export let DataMatrixGeneratorComponent =  vueDefineComponent({
+export let DataMatrixGeneratorComponent: DefineVueComponent<DataMatrixGeneratorModel> =  vueDefineComponent({
     name: 'DataMatrixGeneratorComponent',
     mixins: [ComponentBase],
     props: props,
@@ -27,7 +27,7 @@ export let DataMatrixGeneratorComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new DataMatrixGenerator({}) as any,
+            ej2Instance: new DataMatrixGenerator({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

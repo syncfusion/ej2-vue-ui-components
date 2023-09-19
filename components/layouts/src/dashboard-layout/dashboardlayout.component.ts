@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { DashboardLayout } from '@syncfusion/ej2-layouts';
+import { DashboardLayout, DashboardLayoutModel } from '@syncfusion/ej2-layouts';
 import { PanelsDirective, PanelDirective, PanelsPlugin, PanelPlugin } from './panels.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-dashboardlayout></ejs-dashboardlayout>
  * ```
  */
-export let DashboardLayoutComponent =  vueDefineComponent({
+export let DashboardLayoutComponent: DefineVueComponent<DashboardLayoutModel> =  vueDefineComponent({
     name: 'DashboardLayoutComponent',
     mixins: [ComponentBase],
     props: props,

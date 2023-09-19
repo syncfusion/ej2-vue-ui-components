@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { RowModel } from '@syncfusion/ej2-charts';
 
 export let RowsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const RowsPlugin = {
 }
 
 
-export let RowDirective =  vueDefineComponent({
+export let RowDirective: DefineVueDirective<RowModel> =  vueDefineComponent({
     render(): void {
         return;
     },

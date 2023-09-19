@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { QRCodeGenerator } from '@syncfusion/ej2-barcode-generator';
+import { QRCodeGenerator, QRCodeGeneratorModel } from '@syncfusion/ej2-barcode-generator';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'errorCorrectionLevel', 'foreColor', 'height', 'locale', 'margin', 'mode', 'value', 'version', 'width', 'xDimension', 'invalid'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-qrcode-generator></ejs-qrcode-generator>
  * ```
  */
-export let QRCodeGeneratorComponent =  vueDefineComponent({
+export let QRCodeGeneratorComponent: DefineVueComponent<QRCodeGeneratorModel> =  vueDefineComponent({
     name: 'QRCodeGeneratorComponent',
     mixins: [ComponentBase],
     props: props,
@@ -27,7 +27,7 @@ export let QRCodeGeneratorComponent =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new QRCodeGenerator({}) as any,
+            ej2Instance: new QRCodeGenerator({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { SymbolPalette } from '@syncfusion/ej2-diagrams';
+import { SymbolPalette, SymbolPaletteModel } from '@syncfusion/ej2-diagrams';
 import { PalettesDirective, PaletteDirective, PalettesPlugin, PalettePlugin } from './palettes.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ej-symbol-palette></ej-symbol-palette>
  * ```
  */
-export let SymbolPaletteComponent =  vueDefineComponent({
+export let SymbolPaletteComponent: DefineVueComponent<SymbolPaletteModel> =  vueDefineComponent({
     name: 'SymbolPaletteComponent',
     mixins: [ComponentBase],
     props: props,

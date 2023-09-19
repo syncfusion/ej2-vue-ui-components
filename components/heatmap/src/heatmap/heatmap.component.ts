@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { HeatMap } from '@syncfusion/ej2-heatmap';
+import { HeatMap, HeatMapModel } from '@syncfusion/ej2-heatmap';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSelection', 'backgroundColor', 'cellSettings', 'dataSource', 'dataSourceSettings', 'enableMultiSelect', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellDoubleClick', 'cellRender', 'cellSelected', 'created', 'legendRender', 'load', 'loaded', 'resized', 'tooltipRender'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-heatmap></ejs-heatmap>
  * ```
  */
-export let HeatMapComponent =  vueDefineComponent({
+export let HeatMapComponent: DefineVueComponent<HeatMapModel> =  vueDefineComponent({
     name: 'HeatMapComponent',
     mixins: [ComponentBase],
     props: props,

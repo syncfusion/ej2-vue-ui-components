@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { RangeModel } from '@syncfusion/ej2-spreadsheet';
 
 export let RangesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -45,7 +46,7 @@ export const RangesPlugin = {
  * </ejs-spreadsheet>
  * ```
  */
-export let RangeDirective =  vueDefineComponent({
+export let RangeDirective: DefineVueDirective<RangeModel> =  vueDefineComponent({
     render(): void {
         return;
     },

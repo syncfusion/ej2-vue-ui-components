@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { StockChart } from '@syncfusion/ej2-charts';
+import { StockChart, StockChartModel } from '@syncfusion/ej2-charts';
 import { StockChartTrendlinesDirective, StockChartTrendlineDirective, StockChartTrendlinesPlugin, StockChartTrendlinePlugin } from './trendlines.directive'
 import { StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChartSeriesCollectionPlugin, StockChartSeriesPlugin } from './series.directive'
 import { StockChartAxesDirective, StockChartAxisDirective, StockChartAxesPlugin, StockChartAxisPlugin } from './axes.directive'
@@ -28,7 +28,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-stockchart></ejs-stockchart>
  * ```
  */
-export let StockChartComponent =  vueDefineComponent({
+export let StockChartComponent: DefineVueComponent<StockChartModel> =  vueDefineComponent({
     name: 'StockChartComponent',
     mixins: [ComponentBase],
     props: props,

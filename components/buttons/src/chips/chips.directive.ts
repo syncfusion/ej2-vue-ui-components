@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ChipModel } from '@syncfusion/ej2-buttons';
 
 export let ChipsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -41,7 +42,7 @@ export const ChipsPlugin = {
  * </ejs-chiplist>
  * ```
  */
-export let ChipDirective =  vueDefineComponent({
+export let ChipDirective: DefineVueDirective<ChipModel> =  vueDefineComponent({
     render(): void {
         return;
     },

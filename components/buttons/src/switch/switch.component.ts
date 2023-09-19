@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Switch } from '@syncfusion/ej2-buttons';
+import { Switch, SwitchModel } from '@syncfusion/ej2-buttons';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'locale', 'name', 'offLabel', 'onLabel', 'value', 'change', 'created'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-switch></ejs-switch>
  * ```
  */
-export let SwitchComponent =  vueDefineComponent({
+export let SwitchComponent: DefineVueComponent<SwitchModel> =  vueDefineComponent({
     name: 'SwitchComponent',
     mixins: [ComponentBase],
     props: props,

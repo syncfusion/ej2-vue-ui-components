@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ColumnModel } from '@syncfusion/ej2-gantt';
 
 export let ColumnsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const ColumnsPlugin = {
  * </ejs-gantt>
  * ```
  */
-export let ColumnDirective =  vueDefineComponent({
+export let ColumnDirective: DefineVueDirective<ColumnModel> =  vueDefineComponent({
     render(): void {
         return;
     },

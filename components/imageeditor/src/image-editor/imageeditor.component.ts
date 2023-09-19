@@ -1,10 +1,10 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { ImageEditor } from '@syncfusion/ej2-image-editor';
+import { ImageEditor, ImageEditorModel } from '@syncfusion/ej2-image-editor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'rotating', 'saved', 'selectionChanging', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'frameChange', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'resizing', 'rotating', 'saved', 'selectionChanging', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-imageeditor></ejs-imageeditor>
  * ```
  */
-export let ImageEditorComponent =  vueDefineComponent({
+export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefineComponent({
     name: 'ImageEditorComponent',
     mixins: [ComponentBase],
     props: props,
@@ -109,8 +109,14 @@ export let ImageEditorComponent =  vueDefineComponent({
         drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object): boolean {
             return this.ej2Instances.drawArrow(startX, startY, endX, endY, strokeWidth, strokeColor, arrowStart, arrowEnd);
         },
-        drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string): boolean {
-            return this.ej2Instances.drawEllipse(x, y, radiusX, radiusY, strokeWidth, strokeColor, fillColor);
+        drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number): boolean {
+            return this.ej2Instances.drawEllipse(x, y, radiusX, radiusY, strokeWidth, strokeColor, fillColor, degree);
+        },
+        drawFrame(frameType: Object, color: string, gradientColor: string, size: number, inset: number, offset: number, borderRadius: number, frameLineStyle: Object, lineCount: number): boolean {
+            return this.ej2Instances.drawFrame(frameType, color, gradientColor, size, inset, offset, borderRadius, frameLineStyle, lineCount);
+        },
+        drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number): boolean {
+            return this.ej2Instances.drawImage(data, x, y, width, height, isAspectRatio, degree);
         },
         drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string): boolean {
             return this.ej2Instances.drawLine(startX, startY, endX, endY, strokeWidth, strokeColor);
@@ -118,8 +124,8 @@ export let ImageEditorComponent =  vueDefineComponent({
         drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string): boolean {
             return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor);
         },
-        drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string): boolean {
-            return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor);
+        drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number): boolean {
+            return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree);
         },
         drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string): boolean {
             return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color);
@@ -162,6 +168,9 @@ export let ImageEditorComponent =  vueDefineComponent({
         },
         reset(): void {
             return this.ej2Instances.reset();
+        },
+        resize(width: number, height: number, isAspectRatio?: boolean): boolean {
+            return this.ej2Instances.resize(width, height, isAspectRatio);
         },
         rotate(degree: number): boolean {
             return this.ej2Instances.rotate(degree);

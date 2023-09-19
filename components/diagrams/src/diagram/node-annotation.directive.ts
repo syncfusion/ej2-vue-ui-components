@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ShapeAnnotationModel } from '@syncfusion/ej2-diagrams';
 
 export let NodeAnnotationsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -46,7 +47,7 @@ export const NodeAnnotationsPlugin = {
  * </ejs-diagram>
  * ```
  */
-export let NodeAnnotationDirective =  vueDefineComponent({
+export let NodeAnnotationDirective: DefineVueDirective<ShapeAnnotationModel> =  vueDefineComponent({
     render(): void {
         return;
     },

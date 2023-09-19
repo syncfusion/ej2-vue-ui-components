@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Chart } from '@syncfusion/ej2-charts';
+import { Chart, ChartModel } from '@syncfusion/ej2-charts';
 import { TrendlinesDirective, TrendlineDirective, TrendlinesPlugin, TrendlinePlugin } from './trendlines.directive'
 import { SegmentsDirective, SegmentDirective, SegmentsPlugin, SegmentPlugin } from './segments.directive'
 import { SeriesCollectionDirective, SeriesDirective, SeriesCollectionPlugin, SeriesPlugin } from './series.directive'
@@ -32,7 +32,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-chart></ejs-chart>
  * ```
  */
-export let ChartComponent =  vueDefineComponent({
+export let ChartComponent: DefineVueComponent<ChartModel> =  vueDefineComponent({
     name: 'ChartComponent',
     mixins: [ComponentBase],
     props: props,
@@ -163,6 +163,12 @@ export let ChartComponent =  vueDefineComponent({
         getLocalizedLabel(key: string): string {
             return this.ej2Instances.getLocalizedLabel(key);
         },
+        hideCrosshair(): void {
+            return this.ej2Instances.hideCrosshair();
+        },
+        hideTooltip(): void {
+            return this.ej2Instances.hideTooltip();
+        },
         isSecondaryAxis(axis: Object): boolean {
             return this.ej2Instances.isSecondaryAxis(axis);
         },
@@ -183,6 +189,12 @@ export let ChartComponent =  vueDefineComponent({
         },
         setAnnotationValue(annotationIndex: number, content: string): void {
             return this.ej2Instances.setAnnotationValue(annotationIndex, content);
+        },
+        showCrosshair(x: number, y: number): void {
+            return this.ej2Instances.showCrosshair(x, y);
+        },
+        showTooltip(x: number | string | Object, y: number, isPoint: boolean): void {
+            return this.ej2Instances.showTooltip(x, y, isPoint);
         },
     }
 });

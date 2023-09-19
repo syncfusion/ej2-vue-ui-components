@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { ContextMenu } from '@syncfusion/ej2-navigations';
+import { ContextMenu, ContextMenuModel } from '@syncfusion/ej2-navigations';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hoverDelay', 'items', 'locale', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
  * ```
  */
-export let ContextMenuComponent =  vueDefineComponent({
+export let ContextMenuComponent: DefineVueComponent<ContextMenuModel> =  vueDefineComponent({
     name: 'ContextMenuComponent',
     mixins: [ComponentBase],
     props: props,

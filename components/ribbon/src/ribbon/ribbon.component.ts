@@ -1,14 +1,14 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Ribbon } from '@syncfusion/ej2-ribbon';
+import { Ribbon, RibbonModel } from '@syncfusion/ej2-ribbon';
 import { RibbonItemsDirective, RibbonItemDirective, RibbonItemsPlugin, RibbonItemPlugin } from './items.directive'
 import { RibbonCollectionsDirective, RibbonCollectionDirective, RibbonCollectionsPlugin, RibbonCollectionPlugin } from './collections.directive'
 import { RibbonGroupsDirective, RibbonGroupDirective, RibbonGroupsPlugin, RibbonGroupPlugin } from './groups.directive'
 import { RibbonTabsDirective, RibbonTabDirective, RibbonTabsPlugin, RibbonTabPlugin } from './tabs.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeLayout', 'cssClass', 'enablePersistence', 'enableRtl', 'fileMenu', 'helpPaneTemplate', 'isMinimized', 'launcherIconCss', 'locale', 'selectedTab', 'tabAnimation', 'tabs', 'width', 'launcherIconClick', 'ribbonCollapsing', 'ribbonExpanding', 'tabSelected', 'tabSelecting'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeLayout', 'backStageMenu', 'cssClass', 'enablePersistence', 'enableRtl', 'fileMenu', 'helpPaneTemplate', 'hideLayoutSwitcher', 'isMinimized', 'launcherIconCss', 'locale', 'selectedTab', 'tabAnimation', 'tabs', 'width', 'created', 'launcherIconClick', 'ribbonCollapsing', 'ribbonExpanding', 'tabSelected', 'tabSelecting'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -22,7 +22,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-ribbon></ejs-ribbon>
  * ```
  */
-export let RibbonComponent =  vueDefineComponent({
+export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponent({
     name: 'RibbonComponent',
     mixins: [ComponentBase],
     props: props,
@@ -110,11 +110,32 @@ export let RibbonComponent =  vueDefineComponent({
         addTab(tab: Object, targetId?: string, isAfter?: boolean): void {
             return this.ej2Instances.addTab(tab, targetId, isAfter);
         },
+        disableGroup(groupID: string): void {
+            return this.ej2Instances.disableGroup(groupID);
+        },
         disableItem(itemId: string): void {
             return this.ej2Instances.disableItem(itemId);
         },
+        disableTab(tabId: string): void {
+            return this.ej2Instances.disableTab(tabId);
+        },
+        enableGroup(groupID: string): void {
+            return this.ej2Instances.enableGroup(groupID);
+        },
         enableItem(itemId: string): void {
             return this.ej2Instances.enableItem(itemId);
+        },
+        enableTab(tabId: string): void {
+            return this.ej2Instances.enableTab(tabId);
+        },
+        hideGroup(groupID: string): void {
+            return this.ej2Instances.hideGroup(groupID);
+        },
+        hideItem(itemId: string): void {
+            return this.ej2Instances.hideItem(itemId);
+        },
+        hideTab(tabId: string): void {
+            return this.ej2Instances.hideTab(tabId);
         },
         refreshLayout(): void {
             return this.ej2Instances.refreshLayout();
@@ -133,6 +154,15 @@ export let RibbonComponent =  vueDefineComponent({
         },
         selectTab(tabId: string): void {
             return this.ej2Instances.selectTab(tabId);
+        },
+        showGroup(groupID: string): void {
+            return this.ej2Instances.showGroup(groupID);
+        },
+        showItem(itemId: string): void {
+            return this.ej2Instances.showItem(itemId);
+        },
+        showTab(tabId: string): void {
+            return this.ej2Instances.showTab(tabId);
         },
         updateCollection(collection: Object): void {
             return this.ej2Instances.updateCollection(collection);

@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { InitialShapeSelectionSettingsModel } from '@syncfusion/ej2-maps';
 
 export let InitialShapeSelectionsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -45,7 +46,7 @@ export const InitialShapeSelectionsPlugin = {
  * </ejs-maps>
  * ```
  */
-export let InitialShapeSelectionDirective =  vueDefineComponent({
+export let InitialShapeSelectionDirective: DefineVueDirective<InitialShapeSelectionSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

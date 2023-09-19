@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Dialog } from '@syncfusion/ej2-popups';
+import { Dialog, DialogModel } from '@syncfusion/ej2-popups';
 import { ButtonsDirective, DialogButtonDirective, ButtonsPlugin, DialogButtonPlugin } from './buttons.directive'
 
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-dialog></ejs-dialog>
  * ```
  */
-export let DialogComponent =  vueDefineComponent({
+export let DialogComponent: DefineVueComponent<DialogModel> =  vueDefineComponent({
     name: 'DialogComponent',
     mixins: [ComponentBase],
     props: props,

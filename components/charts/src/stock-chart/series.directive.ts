@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { StockSeriesModel } from '@syncfusion/ej2-charts';
 
 export let StockChartSeriesCollectionDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const StockChartSeriesCollectionPlugin = {
 }
 
 
-export let StockChartSeriesDirective =  vueDefineComponent({
+export let StockChartSeriesDirective: DefineVueDirective<StockSeriesModel> =  vueDefineComponent({
     render(): void {
         return;
     },

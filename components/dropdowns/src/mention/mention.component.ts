@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Mention } from '@syncfusion/ej2-dropdowns';
+import { Mention, MentionModel } from '@syncfusion/ej2-dropdowns';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSpaces', 'cssClass', 'dataSource', 'displayTemplate', 'fields', 'filterType', 'highlight', 'ignoreCase', 'itemTemplate', 'locale', 'mentionChar', 'minLength', 'noRecordsTemplate', 'popupHeight', 'popupWidth', 'query', 'showMentionChar', 'sortOrder', 'spinnerTemplate', 'suffixText', 'suggestionCount', 'target', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'change', 'closed', 'created', 'destroyed', 'filtering', 'opened', 'select'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-mention :dataSource='data'></ejs-mention>
  * ```
  */
-export let MentionComponent =  vueDefineComponent({
+export let MentionComponent: DefineVueComponent<MentionModel> =  vueDefineComponent({
     name: 'MentionComponent',
     mixins: [ComponentBase],
     props: props,

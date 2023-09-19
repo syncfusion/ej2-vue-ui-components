@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Overview } from '@syncfusion/ej2-diagrams';
+import { Overview, OverviewModel } from '@syncfusion/ej2-diagrams';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'enablePersistence', 'enableRtl', 'height', 'locale', 'sourceID', 'width', 'created'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ej-overview></ej-overview>
  * ```
  */
-export let OverviewComponent =  vueDefineComponent({
+export let OverviewComponent: DefineVueComponent<OverviewModel> =  vueDefineComponent({
     name: 'OverviewComponent',
     mixins: [ComponentBase],
     props: props,

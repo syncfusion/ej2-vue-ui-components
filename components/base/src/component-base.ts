@@ -221,6 +221,7 @@ export let ComponentBase = vueDefineComponent({
                             let controlName: string = this.ej2Instances.getModuleName().toLowerCase();
                             let keyRef: string = (splitKeys.length > 1 && controlName.indexOf(splitKeys[0])>-1) ? splitKeys[1]: splitKeys[0];
                             keyRef = keyRef.replace(controlName,'');
+                            keyRef = this.tagNameMapper['e-' + key] ? this.tagNameMapper['e-' + key].replace('e-', '') : keyRef;
                             if (controlName == "splitter" && keyRef == "panes") {
                                 keyRef = "paneSettings"
                             } else if (controlName == "bulletchart" && keyRef == "range") {
@@ -297,9 +298,8 @@ export let ComponentBase = vueDefineComponent({
                         childSlot.type.methods.getTag().replace(/[s]\b/, "")
                     );
                     const moduleName: string = this.ej2Instances.getModuleName().toLowerCase();
-                    tag = tag
-                    ? tag.replace("e-", "")
-                    : childSlot.type.methods.getTag().replace(moduleName === "ribbon" ? "e-ribbon-" : "e-", "");
+                    tag = tag ? tag : childSlot.type.methods.getTag();
+                    tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace("e-ribbon-", "").replace("e-", "");
                     if (this.ej2Instances.getModuleName().toLowerCase() == "diagram" && tag.indexOf('annotations') !=-1) {
                         tag =  'annotations';
                     }
@@ -330,12 +330,14 @@ export let ComponentBase = vueDefineComponent({
         },
         resolveComplexInnerDirs(slots: any, tagObject: any, tagName: string) {
             let slot: any = [];
-            let innerDirValues: any;
             slot = slots.default ? slots.default() : slots;
             let items: any = slot.length > 1 ? [] : {};
             for (const childSlot of slot) {
+                let innerDirValues: any = null;
                 let isRibbon: boolean = (this.ej2Instances.getModuleName().toLowerCase() == "ribbon");
-                let tag: string = childSlot.type.methods.getTag().replace(isRibbon ? "e-ribbon-" : "e-", "");
+                let isSpreadsheet: boolean = (this.ej2Instances.getModuleName().toLowerCase() == "spreadsheet");
+                let tag: string = childSlot.type.methods.getTag();
+                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-ribbon-", "").replace("e-", "");
                 if (childSlot.children) {
                     innerDirValues = this.resolveMultilevelComplexInnerDirs(childSlot.children, tagObject[`${tagName}`], childSlot.type.methods.getTag());
                     if ((/[s]\b/).test(tag) || slot.length > 1) {
@@ -344,7 +346,8 @@ export let ComponentBase = vueDefineComponent({
                             if (innerDirValues.length) {
                                 items[`${tag}`] = innerDirValues;
                             } else {items[`${tag}`].push(innerDirValues);}
-                        } else if (innerDirValues && !(isRibbon && innerDirValues.hasOwnProperty('collections'))) {
+                        } else if (innerDirValues && !(isRibbon && innerDirValues.hasOwnProperty('collections')) &&
+                                    !(isSpreadsheet && innerDirValues.hasOwnProperty('cells') && childSlot.props)) {
                             items.push(innerDirValues)
                         }
                     } else {
@@ -355,7 +358,8 @@ export let ComponentBase = vueDefineComponent({
                     childSlot.props = this.getCamelCaseProps(childSlot.props);
                 }
                 if (slot.length > 1 && childSlot.props) {
-                    if (isRibbon && innerDirValues && innerDirValues.hasOwnProperty('collections')) {
+                    if ((isRibbon && innerDirValues && innerDirValues.hasOwnProperty('collections')) ||
+                        (isSpreadsheet && innerDirValues && innerDirValues.hasOwnProperty('cells'))) {
                         innerDirValues = childSlot.props ? (<any>Object).assign(innerDirValues, childSlot.props) : innerDirValues;
                         items.push(innerDirValues);
                     }
@@ -372,12 +376,13 @@ export let ComponentBase = vueDefineComponent({
         },
         resolveMultilevelComplexInnerDirs(slots: any, tagObject: any, tagName: string) {
             let slot: any = [];
-            let innerDirValues: any;
             slot = slots.default ? slots.default() : slots;
             let items: any = slot.length > 1 ? [] : {};
             for (const childSlot of slot) {
+                let innerDirValues: any = null;
                 const moduleName: string = this.ej2Instances.getModuleName().toLowerCase();
-                let tag: string = childSlot.type.methods.getTag().replace(moduleName === "ribbon" ? "e-ribbon-" : "e-", "");
+                let tag: string = childSlot.type.methods.getTag();
+                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-ribbon-", "").replace("e-", "");
                 if (childSlot.children) {
                     innerDirValues = this.resolveComplexInnerDirs(childSlot.children, tagObject[`${tagName}`], childSlot.type.methods.getTag());
                 }
@@ -402,9 +407,9 @@ export let ComponentBase = vueDefineComponent({
             let dir: Object = {};
             if (tagDirectives) {
                 for (let tagDirective of tagDirectives) {
-                    if (tagDirective.componentOptions && tagDirective.componentOptions.children && tagDirective.componentOptions.tag || 
+                    if (tagDirective.componentOptions && tagDirective.componentOptions.children && this.getTagName(tagDirective.componentOptions) || 
                     (tagDirective.tag === 'e-seriescollection' && tagDirective.children)) {
-                        let dirTag: string = tagDirective.componentOptions ? tagDirective.componentOptions.tag : tagDirective.tag;
+                        let dirTag: string = tagDirective.componentOptions ? this.getTagName(tagDirective.componentOptions) : tagDirective.tag;
                         dirTag = (dirTag === 'e-seriescollection') ? 'e-seriesCollection' : dirTag;
                         if (keyTags.indexOf(dirTag) !== -1) {
                             let tagName: string = tagNameMapper[`${dirTag}`] ? tagNameMapper[`${dirTag}`] : dirTag;
@@ -428,7 +433,7 @@ export let ComponentBase = vueDefineComponent({
                 let key: string;
                 let children: any;
                 if (tagDir.componentOptions) {
-                    key = tagDir.componentOptions.tag;
+                    key = this.getTagName(tagDir.componentOptions);
                     if (tagDir.componentOptions.children) {
                         children = tagDir.componentOptions.children;
                     }
@@ -456,7 +461,7 @@ export let ComponentBase = vueDefineComponent({
             if (tagDirective.componentOptions || ((tagDirective.tag === 'e-markersettings' || tagDirective.tag === 'e-markersetting') && tagDirective.context)) {
                 let dirTag: string;
                 if (tagDirective.componentOptions) {
-                    dirTag = tagDirective.componentOptions.tag;
+                    dirTag = this.getTagName(tagDirective.componentOptions);
                 } else {
                     dirTag = (tagDirective.tag === 'e-markersettings') ? 'e-markerSettings' : 'e-markerSetting';
                 }
@@ -491,6 +496,13 @@ export let ComponentBase = vueDefineComponent({
         setProperties(arg: Object, muteOnChange?: boolean): void {
             return this.ej2Instances.setProperties(arg, muteOnChange);
         },
+        getTagName(options: any): string | undefined {
+            let tag = options.tag;
+            if (!tag && options.Ctor && options.Ctor.extendOptions && options.Ctor.extendOptions.methods && options.Ctor.extendOptions.methods.getTag) {
+                tag = options.Ctor.extendOptions.methods.getTag();
+            }
+            return tag;
+        }
     }
  });
 

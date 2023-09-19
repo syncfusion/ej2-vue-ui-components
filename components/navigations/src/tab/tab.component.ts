@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Tab } from '@syncfusion/ej2-navigations';
+import { Tab, TabModel } from '@syncfusion/ej2-navigations';
 import { TabItemsDirective, TabItemDirective, TabItemsPlugin, TabItemPlugin } from './items.directive'
 
 
@@ -19,7 +19,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-tab></ejs-tab>
  * ```
  */
-export let TabComponent =  vueDefineComponent({
+export let TabComponent: DefineVueComponent<TabModel> =  vueDefineComponent({
     name: 'TabComponent',
     mixins: [ComponentBase],
     props: props,

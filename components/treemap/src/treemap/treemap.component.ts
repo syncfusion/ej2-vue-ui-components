@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { TreeMap } from '@syncfusion/ej2-treemap';
+import { TreeMap, TreeMapModel } from '@syncfusion/ej2-treemap';
 import { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, ColorMappingPlugin } from './colormapping.directive'
 import { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin } from './levels.directive'
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-treemap></ejs-treemap>
  * ```
  */
-export let TreeMapComponent =  vueDefineComponent({
+export let TreeMapComponent: DefineVueComponent<TreeMapModel> =  vueDefineComponent({
     name: 'TreeMapComponent',
     mixins: [ComponentBase],
     props: props,

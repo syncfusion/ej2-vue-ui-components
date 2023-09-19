@@ -1,8 +1,8 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { isUndefined } from '@syncfusion/ej2-base';
 
-import { Carousel } from '@syncfusion/ej2-navigations';
+import { Carousel, CarouselModel } from '@syncfusion/ej2-navigations';
 import { CarouselItemsDirective, CarouselItemDirective, CarouselItemsPlugin, CarouselItemPlugin } from './items.directive'
 
 
@@ -20,7 +20,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-carousel :items='carouselItems'></ejs-carousel>
  * ```
  */
-export let CarouselComponent =  vueDefineComponent({
+export let CarouselComponent: DefineVueComponent<CarouselModel> =  vueDefineComponent({
     name: 'CarouselComponent',
     mixins: [ComponentBase],
     props: props,

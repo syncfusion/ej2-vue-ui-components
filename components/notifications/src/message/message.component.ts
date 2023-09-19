@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { Message } from '@syncfusion/ej2-notifications';
+import { Message, MessageModel } from '@syncfusion/ej2-notifications';
 
 
 export const properties: string[] = ['isLazyUpdate', 'plugins', 'content', 'cssClass', 'enablePersistence', 'enableRtl', 'locale', 'severity', 'showCloseIcon', 'showIcon', 'variant', 'visible', 'closed', 'created', 'destroyed'];
@@ -18,7 +18,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-message id='msg'>Editing is restricted</ejs-message>
  * ```
  */
-export let MessageComponent =  vueDefineComponent({
+export let MessageComponent: DefineVueComponent<MessageModel> =  vueDefineComponent({
     name: 'MessageComponent',
     mixins: [ComponentBase],
     props: props,

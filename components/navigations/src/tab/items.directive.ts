@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { TabItemModel } from '@syncfusion/ej2-navigations';
 
 export let TabItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const TabItemsPlugin = {
  * </ejs-tab>
  * ```
  */
-export let TabItemDirective =  vueDefineComponent({
+export let TabItemDirective: DefineVueDirective<TabItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

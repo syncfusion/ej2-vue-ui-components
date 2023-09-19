@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { ButtonPropsModel } from '@syncfusion/ej2-popups';
 
 export let ButtonsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const ButtonsPlugin = {
  * </ejs-Dialog>
  * ```
  */
-export let DialogButtonDirective =  vueDefineComponent({
+export let DialogButtonDirective: DefineVueDirective<ButtonPropsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

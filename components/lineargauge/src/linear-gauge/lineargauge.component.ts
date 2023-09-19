@@ -1,7 +1,7 @@
-import { ComponentBase, gh, getProps, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
-import { LinearGauge } from '@syncfusion/ej2-lineargauge';
+import { LinearGauge, LinearGaugeModel } from '@syncfusion/ej2-lineargauge';
 import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './ranges.directive'
 import { PointersDirective, PointerDirective, PointersPlugin, PointerPlugin } from './pointers.directive'
 import { AxesDirective, AxisDirective, AxesPlugin, AxisPlugin } from './axes.directive'
@@ -22,7 +22,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
  * <ejs-lineargauge></ejs-lineargauge>
  * ```
  */
-export let LinearGaugeComponent =  vueDefineComponent({
+export let LinearGaugeComponent: DefineVueComponent<LinearGaugeModel> =  vueDefineComponent({
     name: 'LinearGaugeComponent',
     mixins: [ComponentBase],
     props: props,

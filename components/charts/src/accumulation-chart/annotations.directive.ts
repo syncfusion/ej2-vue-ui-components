@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { AccumulationAnnotationSettingsModel } from '@syncfusion/ej2-charts';
 
 export let AccumulationAnnotationsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const AccumulationAnnotationsPlugin = {
 }
 
 
-export let AccumulationAnnotationDirective =  vueDefineComponent({
+export let AccumulationAnnotationDirective: DefineVueDirective<AccumulationAnnotationSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

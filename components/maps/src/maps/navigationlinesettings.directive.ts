@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { NavigationLineSettingsModel } from '@syncfusion/ej2-maps';
 
 export let NavigationLinesDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -45,7 +46,7 @@ export const NavigationLinesPlugin = {
  * </ejs-maps>
  * ```
  */
-export let NavigationLineDirective =  vueDefineComponent({
+export let NavigationLineDirective: DefineVueDirective<NavigationLineSettingsModel> =  vueDefineComponent({
     render(): void {
         return;
     },

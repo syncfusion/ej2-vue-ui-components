@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { TechnicalIndicatorModel } from '@syncfusion/ej2-charts';
 
 export let IndicatorsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -31,7 +32,7 @@ export const IndicatorsPlugin = {
 }
 
 
-export let IndicatorDirective =  vueDefineComponent({
+export let IndicatorDirective: DefineVueDirective<TechnicalIndicatorModel> =  vueDefineComponent({
     render(): void {
         return;
     },

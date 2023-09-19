@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { AccordionItemModel } from '@syncfusion/ej2-navigations';
 
 export let AccordionItemsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const AccordionItemsPlugin = {
  * </ejs-accordion>
  * ```
  */
-export let AccordionItemDirective =  vueDefineComponent({
+export let AccordionItemDirective: DefineVueDirective<AccordionItemModel> =  vueDefineComponent({
     render(): void {
         return;
     },

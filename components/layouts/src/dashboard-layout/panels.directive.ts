@@ -1,5 +1,6 @@
-import { gh, isExecute, vueDefineComponent } from '@syncfusion/ej2-vue-base';
+import { gh, isExecute, vueDefineComponent, DefineVueDirective } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
+import { PanelModel } from '@syncfusion/ej2-layouts';
 
 export let PanelsDirective =  vueDefineComponent({
     inject: { custom: { default: null } },
@@ -42,7 +43,7 @@ export const PanelsPlugin = {
  * </ejs-dashboardlayout>
  * ```
  */
-export let PanelDirective =  vueDefineComponent({
+export let PanelDirective: DefineVueDirective<PanelModel> =  vueDefineComponent({
     render(): void {
         return;
     },
