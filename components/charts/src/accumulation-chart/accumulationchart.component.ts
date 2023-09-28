@@ -134,6 +134,9 @@ export let AccumulationChartComponent: DefineVueComponent<AccumulationChartModel
         custom(): void {
             this.updated();
         },
+        calculateBounds(): void {
+            return this.ej2Instances.calculateBounds();
+        },
         export(type: Object, fileName: string): void {
             return this.ej2Instances.export(type, fileName);
         },

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 23.1.38 (2023-09-26)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I501151` - An issue where the `eventDoubleClick` event is not triggering has been fixed.
+
 ## 23.1.36 (2023-09-15)
 
 ### Schedule
