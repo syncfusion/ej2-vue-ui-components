@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 23.1.39 (2023-10-04)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- `#I499489` - Issue with read only property not working in dropdowntree field of QueryBuilder has been fixed.
+
 ## 23.1.38 (2023-09-26)
 
 ### QueryBuilder
