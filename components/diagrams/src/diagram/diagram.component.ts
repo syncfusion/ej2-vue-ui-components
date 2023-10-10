@@ -214,8 +214,8 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         exportImage(image: string, options: Object): void {
             return this.ej2Instances.exportImage(image, options);
         },
-        findElementUnderMouse(obj: Object, position: Object, padding?: number): Object {
-            return this.ej2Instances.findElementUnderMouse(obj, position, padding);
+        findElementUnderMouse(obj: Object, position: Object, diagram: Object, padding?: number): Object {
+            return this.ej2Instances.findElementUnderMouse(obj, position, diagram, padding);
         },
         findObjectUnderMouse(objects: undefined[], action: Object, inAction: boolean): Object {
             return this.ej2Instances.findObjectUnderMouse(objects, action, inAction);

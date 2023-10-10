@@ -1289,6 +1289,15 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
 
+## 23.1.39 (2023-10-04)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I498556` - Issue with "decimal values with zeros after the decimal point were not properly processed while loading it using `openFromJson` method and cell data binding" has been resolved.
+- `#I501902` - Issue with "script error throws while passing the HTML element as a string value in the template property" has been resolved.
+
 ## 21.2.10 (2023-06-13)
 
 ### Spreadsheet
