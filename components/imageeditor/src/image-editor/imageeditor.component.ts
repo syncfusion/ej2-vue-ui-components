@@ -112,7 +112,7 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number): boolean {
             return this.ej2Instances.drawEllipse(x, y, radiusX, radiusY, strokeWidth, strokeColor, fillColor, degree);
         },
-        drawFrame(frameType: Object, color: string, gradientColor: string, size: number, inset: number, offset: number, borderRadius: number, frameLineStyle: Object, lineCount: number): boolean {
+        drawFrame(frameType: Object, color?: string, gradientColor?: string, size?: number, inset?: number, offset?: number, borderRadius?: number, frameLineStyle?: Object, lineCount?: number): boolean {
             return this.ej2Instances.drawFrame(frameType, color, gradientColor, size, inset, offset, borderRadius, frameLineStyle, lineCount);
         },
         drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number): boolean {
