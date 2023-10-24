@@ -8,6 +8,14 @@
 
 #### Bug Fixes
 
+- `#I509029` - The issue with "`HtmlAttributes` property not working properly in checkBox component" has been resolved.
+
+## 23.1.39 (2023-10-04)
+
+### Checkbox
+
+#### Bug Fixes
+
 - `#I505814` - The issue with "Script error thrown in CheckBox While using the change event in React" has been resolved.
 
 ## 23.1.36 (2023-09-15)
