@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 23.1.43 (2023-10-31)
+
+### Ribbon
+
+#### Features
+
+`#I510343` - Provided custom HTML attributes support for the Ribbon items
+
+
 ## 23.1.38 (2023-09-26)
 
 ### Ribbon

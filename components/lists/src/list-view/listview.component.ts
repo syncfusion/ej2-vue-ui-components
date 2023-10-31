@@ -94,8 +94,8 @@ export let ListViewComponent: DefineVueComponent<ListViewModel> =  vueDefineComp
         custom(): void {
             this.updated();
         },
-        addItem(data: undefined[], fields: Object): void {
-            return this.ej2Instances.addItem(data, fields);
+        addItem(data: undefined[], fields: Object, index?: number): void {
+            return this.ej2Instances.addItem(data, fields, index);
         },
         back(): void {
             return this.ej2Instances.back();
