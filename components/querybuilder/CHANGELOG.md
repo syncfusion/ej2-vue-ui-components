@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 23.1.43 (2023-10-31)
+## 23.1.44 (2023-11-07)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- `#F510127` - Issue with Query builder rule does not gets changed dynamically has been fixed.
+
+## 23.1.41 (2023-10-17)
 
 ### QueryBuilder
 

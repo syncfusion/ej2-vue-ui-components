@@ -2,6 +2,23 @@
 
 ## [Unreleased]
 
+## 23.1.44 (2023-11-07)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I508486` - Now, user-handle template is rendered properly after save and load.
+
+## 23.1.43 (2023-10-31)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I506971` - Now, Overview with html node is updated properly when we zoom-out the diagram.
+- `#I505963` - Now, Exception occurs due to line routing constraints enabled is resolved.
+
 ## 23.1.42 (2023-10-24)
 
 ### Diagram
