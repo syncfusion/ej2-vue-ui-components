@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 23.2.4 (2023-11-20)
+
+### Common
+
+#### Bug Fixes
+
+- `#I508468` - The issue with "unable to access the template data in production mode for Vue components" has been resolved.
+
 ## 23.1.36 (2023-09-15)
 
 ### Common
