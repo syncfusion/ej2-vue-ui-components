@@ -10,6 +10,7 @@
 
 - `#I512867` - Now, the transparency in the border color for the checkbox is being maintained when the document is loaded.
 - `#I515960` - Now, the mouse cursor position is properly updated for multiline fields when clicked.
+- `#I517898` - Now, the radio button's background color does not shifts to white automatically.
 
 ## 23.1.44 (2023-11-07)
 

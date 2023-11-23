@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 23.2.5 (2023-11-23)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I518408` - Issue with "unable to select a cell or range of cell addresses from the protected sheet for formula calculation" has been resolved.
+
 ## 23.1.44 (2023-11-07)
 
 ### Spreadsheet
