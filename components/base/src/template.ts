@@ -97,6 +97,19 @@ export function compile(
         getValues(app, context.vueInstance, root);
         Vue.render(app, ele);
         returnEle = ele.childNodes;
+        if (context.vueInstance) {
+          let templateInstance: any = context.vueInstance.templateCollection;
+          if (!templateInstance) {
+            context.vueInstance.templateCollection = {};
+            templateInstance = context.vueInstance.templateCollection;
+          }
+          if (propName) {
+            if (!templateInstance[`${propName}`]) {
+              templateInstance[`${propName}`] = [];
+            }
+            templateInstance[`${propName}`].push(returnEle[0]);
+          }
+        }
         detach(ele);
       } else if (typeof templateElement === "string" || (templateElement.prototype && templateElement.prototype.CSPTemplate && typeof templateElement === 'function')) {
         let vueSlot: any = getVueSlot(context.vueInstance, templateElement, root);

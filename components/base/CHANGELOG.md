@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 23.2.7 (2023-12-05)
+
+### Common
+
+#### Bug Fixes
+
+- `#I513639` - The issue with "the pager template renders multiple times in the Grid component" has been resolved.
+
 ## 23.2.5 (2023-11-23)
 
 ### Common
