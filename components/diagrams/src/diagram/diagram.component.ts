@@ -109,6 +109,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         addChildToGroup(group: Object, child: string | Object | Object): void {
             return this.ej2Instances.addChildToGroup(group, child);
         },
+        addChildToUmlNode(node: Object, child: Object | Object | Object, umlChildType: Object): void {
+            return this.ej2Instances.addChildToUmlNode(node, child, umlChildType);
+        },
         addConnector(obj: Object): Object {
             return this.ej2Instances.addConnector(obj);
         },
@@ -306,6 +309,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         },
         remove(obj?: Object | Object): void {
             return this.ej2Instances.remove(obj);
+        },
+        removeChildFromGroup(group: Object, child: string | Object | Object): void {
+            return this.ej2Instances.removeChildFromGroup(group, child);
         },
         removeConstraints(constraintsType: number, constraintsValue: number): number {
             return this.ej2Instances.removeConstraints(constraintsType, constraintsValue);

@@ -155,6 +155,9 @@ export let MapsComponent: DefineVueComponent<MapsModel> =  vueDefineComponent({
         getGeoLocation(layerIndex: number, x: number, y: number): Object {
             return this.ej2Instances.getGeoLocation(layerIndex, x, y);
         },
+        getMinMaxLatitudeLongitude(): Object {
+            return this.ej2Instances.getMinMaxLatitudeLongitude();
+        },
         getTileGeoLocation(x: number, y: number): Object {
             return this.ej2Instances.getTileGeoLocation(x, y);
         },

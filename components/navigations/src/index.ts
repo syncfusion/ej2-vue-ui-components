@@ -15,3 +15,5 @@ export { SidebarComponent, SidebarPlugin } from './sidebar/sidebar.component';
 export { MenuItemsDirective, MenuItemDirective, MenuItemsPlugin, MenuItemPlugin } from './menu/items.directive';
 export { MenuComponent, MenuPlugin } from './menu/menu.component';
 export { AppBarComponent, AppBarPlugin } from './appbar/appbar.component';
+export { StepsDirective, StepDirective, StepsPlugin, StepPlugin } from './stepper/steps.directive';
+export { StepperComponent, StepperPlugin } from './stepper/stepper.component';

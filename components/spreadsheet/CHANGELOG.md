@@ -2,41 +2,16 @@
 
 ## [Unreleased]
 
-## 23.2.7 (2023-12-05)
+## 24.1.41 (2023-12-18)
 
 ### Spreadsheet
 
-#### Bug fixes
+#### Features
 
-- `#I518408` - Issue with "unable to select a cell or range of cell addresses from the protected sheet for formula calculation" has been resolved.
-
-## 23.1.44 (2023-11-07)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I512609` - Issue with "aria-label is updated as undefined while changing the cell value using `updateCell` method" has been resolved.
-
-#### Bug fixes
-
-- `#I515346` - Issue with "formula is not calculated properly while sheets contain the defined name with underscore" has been resolved.
-
-## 23.1.42 (2023-10-24)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I509149` - Issue with "row model is not properly updated when the sheet model is constructed with the range property and provided as an argument to the `insertSheet` method for new sheet creation" has been resolved.
-
-## 23.1.38 (2023-09-26)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `#I499291`, `#I496936` - Issue with "`ESC` key and edit mode functionality don't work properly when rendering the spreadsheet inside the dialog" has been resolved.
+- `#I477190` - Now, provided support for displaying a confirmation dialog before opening an Excel file that contains an external workbook references.
+- The following new formulas added to the Spreadsheet.
+- LOOKUP, VLOOKUP, HLOOKUP.
+- SQRT, RSQ, ROUNDDOWN, EOMONTH, NOT.
 
 ## 23.1.36 (2023-09-15)
 
@@ -1316,15 +1291,6 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
-
-## 23.1.39 (2023-10-04)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I498556` - Issue with "decimal values with zeros after the decimal point were not properly processed while loading it using `openFromJson` method and cell data binding" has been resolved.
-- `#I501902` - Issue with "script error throws while passing the HTML element as a string value in the template property" has been resolved.
 
 ## 21.2.10 (2023-06-13)
 

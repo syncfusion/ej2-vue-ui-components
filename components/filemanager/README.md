@@ -1,6 +1,6 @@
-# Vue File Manager Component
+# Vue FileManager Component
 
-The [Vue File Manager](https://www.syncfusion.com/vue-components/vue-file-manager?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-manager-npm) component is a graphical user interface that allows users to manage their file system in an intuitive and efficient manner. With this component, you can easily access, edit, upload, download, and organize files and folders. It also offers a convenient way to browse and select items from the file system.
+The [Vue FileManager](https://www.syncfusion.com/vue-components/vue-file-manager?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-manager-npm) component is a graphical user interface that allows users to manage their file system in an intuitive and efficient manner. With this component, you can easily access, edit, upload, download, and organize files and folders. It also offers a convenient way to browse and select items from the file system.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-manager-npm">Getting Started</a>.
@@ -33,28 +33,28 @@ npm run serve
 ```
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-### Adding Syncfusion File Manager package
+### Adding Syncfusion FileManager package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue File Manager package, use the following command.
+All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue FileManager package, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-vue-filemanager --save
 ```
 
-### Registering Vue File Manager component
+### Registering Vue FileManager component
 
-You can register the File Manager component in your application by using the **Vue.use()**. Refer to the code example given below.
+You can register the FileManager component in your application by using the **Vue.use()**. Refer to the code example given below.
 
 ```typescript
 import { FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
 
 Vue.use(FileManagerPlugin);
 ```
-> Registering **FileManagerPlugin** in vue, will register the file manager component along with its required child directives globally.
+> Registering **FileManagerPlugin** in vue, will register the FileManager component along with its required child directives globally.
 
-### Adding CSS references for File Manager
+### Adding CSS references for FileManager
 
-Add CSS references needed for File Manager in **style** section of the **App.vue** file from **../node_modules/@syncfusion** package folder.
+Add CSS references needed for FileManager in **style** section of the **App.vue** file from **../node_modules/@syncfusion** package folder.
 
 ```css
 <style>
@@ -71,9 +71,9 @@ Add CSS references needed for File Manager in **style** section of the **App.vue
 </style>
 ```
 
-### Add Vue File Manager component
+### Add Vue FileManager component
 
-Add the Vue File Manager by using **ejs-filemanager** selector in **template** section of the **App.vue** file.
+Add the Vue FileManager by using **ejs-filemanager** selector in **template** section of the **App.vue** file.
 
 ```html
 <template>
@@ -99,12 +99,12 @@ data () {
 }
 </script>
 ```
-> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started-vue-3/) for using Syncfusion Vue File Manager components in Vue 3 applications.
+> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started-vue-3/) for using Syncfusion Vue FileManager components in Vue 3 applications.
 
 
 ## Supported frameworks
 
-The File Manager component is also offered in the following list of frameworks.
+The FileManager component is also offered in the following list of frameworks.
 
 | [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular.svg"  height="50" />](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg" height="50" />](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |

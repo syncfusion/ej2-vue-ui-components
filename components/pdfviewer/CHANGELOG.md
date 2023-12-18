@@ -2,14 +2,26 @@
 
 ## [Unreleased]
 
-## 23.2.7 (2023-12-05)
+## 24.1.41 (2023-12-18)
 
 ### PDF Viewer
 
 #### Bug Fixes
 
-- `#I526059` - Now, the export Annotations is working in the presence of subject property in `annotationSettings`.
-- `#I525692` - Now, the stretch fit mode has been appropriately implemented for the signature image content within the signature and initial field. 
+- `#I522001` - Now, the `RenderPdfPages` request is not triggered twice when the `zoomMode` is set during the initial loading.
+- `#I526468` - Now, the position of the free text annotations does not shift when double-clicking the annotation in the provided document.
+- `#I525845` - Now, the read-only radio buttons are properly preserved in the saved document.
+
+#### New Features
+
+- Introduced support for adding multiple new items within the built-in toolbar, offering users the ability to customize and expand their toolbar options.
+- Introduced keyboard-based navigation features to improve the user experience, allowing individuals to navigate the PDF Viewer with greater efficiency.
+
+## 23.2.7 (2023-12-05)
+
+### PDF Viewer
+
+#### Bug Fixes
 
 - `#I526059` - Now, the export Annotations is working in the presence of subject property in `annotationSettings`.
 - `#I525692` - Now, the stretch fit mode has been appropriately implemented for the signature image content within the signature and initial field.
@@ -22,9 +34,8 @@
 
 - `#I518113` - Now, the provided document is properly loaded and scrolls without getting stuck or freezing.
 - `#I517738` - Now, the text selection is working properly while selecting the text from left to right.
-- `#I510393` - Now, the script error has been resolved while loading a provided PDF document.
 - `#I521831` - Now, The script error is resolved when the read only property of the form fields were updated as true.
-- `#I517119` - now, the Search does not highlights the wrong area after zoom in standalone PDF Viewer.
+- `#I510393` - Now, the script error has been resolved while loading a provided PDF document.
 - `#I521824` - now, when the read-only radio button is clicked, the undo button does not get automatically enabled.
 
 ## 23.2.5 (2023-11-23)
@@ -59,12 +70,6 @@
 - `#I510606` - Now, the opacity value is properly preserved in the free annotation if it is set as zero programmatically.
 - `#I513923` -Now, the script error is resolved when loading a document using the created event.
 
-- `#I511552` - Now, the `openThumbnailPane` method does not close the thumbnail pane.
-- `#I509218` - Now, The thumbnail pane is now rendered properly when opened programmatically.
-- `#I509483` - Now, the issue of loading the provided PDF document has been resolv
-- `#I510606` - Now, the opacity value is properly preserved in the free annotation if it is set as zero programmatically.
-- `#I513923` -Now, the script error is resolved when loading a document using the created event.
-
 ## 23.1.43 (2023-10-31)
 
 ### PDF Viewer
@@ -72,11 +77,6 @@
 #### Bug Fixes
 
 - `#I511694` - Now, The script error is resolved when export the annotation as object after adding the handwritten signature.
-- `#I511005` - Now, the programmatically added stamp annotation is visible in the PDF Viewer.
-- `#I508032` - Now, the signature fields are not placed outside the page when placed between pages.
-- `#I508421` - Now, the redo operations on free text annotations is working properly.
-
-- `#I511694` - Now, The script error is now resolved when export the annotation as object after adding the handwritten signature.
 - `#I511005` - Now, the programmatically added stamp annotation is visible in the PDF Viewer.
 - `#I508032` - Now, the signature fields are not placed outside the page when placed between pages.
 - `#I508421` - Now, the redo operations on free text annotations is working properly.
@@ -101,24 +101,20 @@
 #### Bug Fixes
 
 - `#I503904` - Now, the missing properties have been included in the form field collections.
-- `#I506233` - Now, the dropdown list does not open when selecting the dropdown field in designer mode. 
-- `#F184471` - Newline characters are now correctly retained in the saved document when saving a document with numerous free text annotations.
-- `#I505498` - Now, the thumbnail highlighting functions correctly when scrolling and viewing rotated pages.
-- `#I507503` - Now, clicking again the same bookmark after scrolling ,the bookmark is navigated correctly.
-- `#I504089` - Now, the search is working when the Enter key is pressed continuously in the Public API.
-- `#I501644` - Now, the stackoverflow exception is not occurred while loading the 6000 bookmarks document.
-
-- `#I503904` - Now, the missing properties have been included in the form field collections.
 - `#I506233` - Now, the dropdown list does not open when selecting the dropdown field in designer mode.
 - `#F184471` - Newline characters are now correctly retained in the saved document when saving a document with numerous free text annotations.
 - `#I505498` - Now, the thumbnail highlighting functions correctly when scrolling and viewing rotated pages.
 - `#I507503` - Now, clicking again the same bookmark after scrolling ,the bookmark is navigated correctly.
 - `#I504089` - Now, the search is working when the Enter key is pressed continuously in the Public API.
-- `#I501644` - Now, the stackoverflow exception is not occurred while loading the 6000 bookmarks document.
+- `#I501644` - Now, the Stack Overflow exception is not occurred while loading the 6000 bookmarks document.
 
 ## 23.1.40 (2023-10-10)
 
 ### PDF Viewer
+
+#### New Features
+
+- `#I497356`,`#I505447`,`#I506487` - Now, users can set the resource URL for assets or the public directory. The Stand-alone PDF Viewer will load its custom resources from this URL.
 
 #### Bug Fixes
 
@@ -129,10 +125,6 @@
 ## 23.1.39 (2023-10-04)
 
 ### PDF Viewer
-
-#### New Features
-
-- `#I497356`,`#I505447`,`#I506487` - Now, users can set the resource URL for assets or the public directory. The standalone PDF Viewer will load its custom resources from this URL.
 
 #### Bug Fixes
 
@@ -150,7 +142,7 @@
 
 - `#I498978` - Now, the tooltip will not be displayed when no value is provided for the tooltip on radio buttons and checkboxes fields.
 - `#I498981` - Now, the tooltip is not visible after deleting the tooltip value for the dropdown field.
-- `#I494968` - Now, the annotation toolbar opens properly in mobile mode when 'isAnnotationToolbarOpen' is set to TRUE.
+- `#I494968` - Now, the annotation toolbar opens properly in mobile mode when `isAnnotationToolbarOpen` is set to TRUE.
 - `#I495804` - Now, the loading indicator is enabled while the document is being zoomed.
 - `#I497662` - Now, the close button in the comment panel is properly hidden when switching from mobile mode to desktop mode.
 - `#I497663` - Now, the annotation toolbar shows properly if the comment panel is opened while enabling desktop mode on a mobile device.
@@ -160,7 +152,7 @@
 - `#I496823` - Now, the form field hover does not disappears after adding many form fields.
 - `#I497857` - Now, the cursor position is updated properly when clicking the content in the text box field.
 - `#I496823` - Now, it is possible to resize the form fields if placed at the edge of the page.
-- `#I498980` - Now, if the value of the radio button is null, then the name of the radio button is automatically assigned to the value. 
+- `#I498980` - Now, if the value of the radio button is null, then the name of the radio button is automatically assigned to the value.
 - `#I502251` - Now, the content of the annotation comment is properly exported in the exported object.
 
 ## 23.1.36 (2023-09-15)
@@ -198,10 +190,10 @@
 
 #### Bug Fixes
 
-- `#I489048` - Now, the Unload API is properly called for the respective components when we use multiple components on a page. 
+- `#I489048` - Now, the Unload API is properly called for the respective components when we use multiple components on a page.
 - `#I489448` - Now, it is possible to add form fields after a few pages with edited properties.
 - `#I490199` - Now, the touch-based page scrolling is works as expected on simulated iOS/iPad devices.
-- The issue with server side rendering in next.js has been resolved.
+- The issue with server side rendering in `Next.js` has been resolved.
 
 ## 22.2.9 (2023-08-15)
 

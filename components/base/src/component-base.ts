@@ -299,7 +299,7 @@ export let ComponentBase = vueDefineComponent({
                     );
                     const moduleName: string = this.ej2Instances.getModuleName().toLowerCase();
                     tag = tag ? tag : childSlot.type.methods.getTag();
-                    tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace("e-ribbon-", "").replace("e-", "");
+                    tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace("e-", "");
                     if (this.ej2Instances.getModuleName().toLowerCase() == "diagram" && tag.indexOf('annotations') !=-1) {
                         tag =  'annotations';
                     }
@@ -334,10 +334,8 @@ export let ComponentBase = vueDefineComponent({
             let items: any = slot.length > 1 ? [] : {};
             for (const childSlot of slot) {
                 let innerDirValues: any = null;
-                let isRibbon: boolean = (this.ej2Instances.getModuleName().toLowerCase() == "ribbon");
-                let isSpreadsheet: boolean = (this.ej2Instances.getModuleName().toLowerCase() == "spreadsheet");
                 let tag: string = childSlot.type.methods.getTag();
-                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-ribbon-", "").replace("e-", "");
+                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-", "");
                 if (childSlot.children) {
                     innerDirValues = this.resolveMultilevelComplexInnerDirs(childSlot.children, tagObject[`${tagName}`], childSlot.type.methods.getTag());
                     if ((/[s]\b/).test(tag) || slot.length > 1) {
@@ -346,8 +344,7 @@ export let ComponentBase = vueDefineComponent({
                             if (innerDirValues.length) {
                                 items[`${tag}`] = innerDirValues;
                             } else {items[`${tag}`].push(innerDirValues);}
-                        } else if (innerDirValues && !(isRibbon && innerDirValues.hasOwnProperty('collections')) &&
-                                    !(isSpreadsheet && innerDirValues.hasOwnProperty('cells') && childSlot.props)) {
+                        } else if (innerDirValues && !childSlot.props) {
                             items.push(innerDirValues)
                         }
                     } else {
@@ -358,8 +355,7 @@ export let ComponentBase = vueDefineComponent({
                     childSlot.props = this.getCamelCaseProps(childSlot.props);
                 }
                 if (slot.length > 1 && childSlot.props) {
-                    if ((isRibbon && innerDirValues && innerDirValues.hasOwnProperty('collections')) ||
-                        (isSpreadsheet && innerDirValues && innerDirValues.hasOwnProperty('cells'))) {
+                    if (innerDirValues) {
                         innerDirValues = childSlot.props ? (<any>Object).assign(innerDirValues, childSlot.props) : innerDirValues;
                         items.push(innerDirValues);
                     }
@@ -382,7 +378,7 @@ export let ComponentBase = vueDefineComponent({
                 let innerDirValues: any = null;
                 const moduleName: string = this.ej2Instances.getModuleName().toLowerCase();
                 let tag: string = childSlot.type.methods.getTag();
-                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-ribbon-", "").replace("e-", "");
+                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-", "");
                 if (childSlot.children) {
                     innerDirValues = this.resolveComplexInnerDirs(childSlot.children, tagObject[`${tagName}`], childSlot.type.methods.getTag());
                 }

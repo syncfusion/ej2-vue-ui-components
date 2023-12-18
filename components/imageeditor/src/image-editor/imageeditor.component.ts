@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { ImageEditor, ImageEditorModel } from '@syncfusion/ej2-image-editor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'frameChange', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'resizing', 'rotating', 'saved', 'selectionChanging', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'fontFamily', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'frameChange', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'resizing', 'rotating', 'saved', 'selectionChanging', 'shapeChange', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -100,6 +100,9 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         clearSelection(): void {
             return this.ej2Instances.clearSelection();
         },
+        cloneShape(shapeId: string): boolean {
+            return this.ej2Instances.cloneShape(shapeId);
+        },
         crop(): boolean {
             return this.ej2Instances.crop();
         },
@@ -115,14 +118,14 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         drawFrame(frameType: Object, color?: string, gradientColor?: string, size?: number, inset?: number, offset?: number, borderRadius?: number, frameLineStyle?: Object, lineCount?: number): boolean {
             return this.ej2Instances.drawFrame(frameType, color, gradientColor, size, inset, offset, borderRadius, frameLineStyle, lineCount);
         },
-        drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number): boolean {
-            return this.ej2Instances.drawImage(data, x, y, width, height, isAspectRatio, degree);
+        drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number, opacity?: number): boolean {
+            return this.ej2Instances.drawImage(data, x, y, width, height, isAspectRatio, degree, opacity);
         },
         drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string): boolean {
             return this.ej2Instances.drawLine(startX, startY, endX, endY, strokeWidth, strokeColor);
         },
-        drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string): boolean {
-            return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor);
+        drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, opacity?: number): boolean {
+            return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor, opacity);
         },
         drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number): boolean {
             return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree);
@@ -181,11 +184,17 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         selectShape(id: string): boolean {
             return this.ej2Instances.selectShape(id);
         },
+        straightenImage(degree: number): boolean {
+            return this.ej2Instances.straightenImage(degree);
+        },
         undo(): void {
             return this.ej2Instances.undo();
         },
         update(): void {
             return this.ej2Instances.update();
+        },
+        updateShape(setting: Object): boolean {
+            return this.ej2Instances.updateShape(setting);
         },
         zoom(zoomFactor: number, zoomPoint?: Object): void {
             return this.ej2Instances.zoom(zoomFactor, zoomPoint);

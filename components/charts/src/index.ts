@@ -34,3 +34,9 @@ export { StockChartIndicatorsDirective, StockChartIndicatorDirective, StockChart
 export { StockChartComponent, StockChartPlugin } from './stock-chart/stockchart.component';
 export { BulletRangeCollectionDirective, BulletRangeDirective, BulletRangeCollectionPlugin, BulletRangePlugin } from './bullet-chart/ranges.directive';
 export { BulletChartComponent, BulletChartPlugin } from './bullet-chart/bulletchart.component';
+export { Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, Chart3DSeriesCollectionPlugin, Chart3DSeriesPlugin } from './chart3d/series.directive';
+export { Chart3DAxesDirective, Chart3DAxisDirective, Chart3DAxesPlugin, Chart3DAxisPlugin } from './chart3d/axes.directive';
+export { Chart3DRowsDirective, Chart3DRowDirective, Chart3DRowsPlugin, Chart3DRowPlugin } from './chart3d/rows.directive';
+export { Chart3DColumnsDirective, Chart3DColumnDirective, Chart3DColumnsPlugin, Chart3DColumnPlugin } from './chart3d/columns.directive';
+export { Chart3DSelectedDataIndexesDirective, Chart3DSelectedDataIndexDirective, Chart3DSelectedDataIndexesPlugin, Chart3DSelectedDataIndexPlugin } from './chart3d/selecteddataindexes.directive';
+export { Chart3DComponent, Chart3DPlugin } from './chart3d/chart3d.component';

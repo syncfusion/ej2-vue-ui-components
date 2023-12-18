@@ -2,47 +2,7 @@
 
 ## [Unreleased]
 
-## 23.2.7 (2023-12-05)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I510127` - Issue with Query builder rule does not changed dynamically has been fixed.
-
-## 23.1.44 (2023-11-07)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I510127` - Issue with Query builder dynamically adding rule does not gets changed has been fixed.
-
-## 23.1.41 (2023-10-17)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#F184903` - Issue with `setRules` method of the Query builder not working for complex data binding has been fixed.
-
-## 23.1.39 (2023-10-04)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I499489` - Issue with read only property not working in dropdowntree field of QueryBuilder has been fixed.
-
-## 23.1.38 (2023-09-26)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I504588` - Issue with Query builder column template not render in Vue3 platform has been fixed.
-
-## 23.1.36 (2023-09-15)
+## 24.1.41 (2023-12-18)
 
 ### QueryBuilder
 
