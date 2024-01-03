@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 24.1.44 (2024-01-03)
+
+### GanttChart
+
+#### Bug Fixes
+
+`#I531670` - When adding record by method before saving, if the task ID is changed after taskbar hover exception thrown issue has been fixed.
+
+
 ## 24.1.43 (2023-12-27)
 
 ### GanttChart
