@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 24.1.44 (2024-01-03)
+## 24.1.45 (2024-01-09)
+
+### Signature
+
+#### Bug Fixes
+
+- `#I510300` - Issue with "drawn points will be in a significantly different location than the cursor while zooming" has been resolved.
+
+## 24.1.41 (2023-12-18)
 
 ### Signature
 
