@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I527482` - Now, overview updated properly while zoom out and move nodes outside viewport.
+
 ## 24.1.45 (2024-01-09)
 
 ### Diagram

@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### DropDownButton
+
+#### Bug Fixes
+
+- `#I863317` -  Issue in "DropDownButton list items do not meet WCAG AA standards for focus indicators" has been resolved.
+
+### ButtonGroup
+
+#### Bug Fixes
+
+- `#I534148` -  Issue in "Focus Css style not removed after clicking outside from button group button in bootstrap4 theme" has been resolved.
+
 ## 24.1.45 (2024-01-09)
 
 ### DropDownButton

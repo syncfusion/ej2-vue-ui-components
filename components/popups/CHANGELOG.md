@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### Tooltip
+
+#### Bug Fixes
+
+- `#I533557` - The console error while assigning a function type value to the `Content` property in the Tooltip component has been resolved.
+
 ## 24.1.44 (2024-01-03)
 
 ### Tooltip

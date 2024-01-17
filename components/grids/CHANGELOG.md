@@ -2,11 +2,28 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### Grid
+
+#### Bug fixes
+
+- `#FB49473` - Resolved the issue where preventing checkbox selection by setting `isSelectable` property to false was not effective when using a column template in the grid.
+
+- `#FB49473` - Resolved the issue where preventing checkbox selection by setting `isSelectable` property to false was not effective when using a column template in the grid.
+- `#I532213` - Fixed the issue where the `rowTemplate` was not being destroyed properly when the grid is destroyed in Vue component.
+
 ## 24.1.45 (2024-01-09)
 
 ### Grid
 
 #### Bug fixes
+
+- `#FB49340` - Fixed an issue that occurred when resizing columns in the grid with stacked headers.
+- `#I520335` - Resolved an issue regarding incorrect `filterBeforeOpen requestType` naming and updated the `options` property scope as public within the `actionBegin` event argument when opening the filter menu.
+- `#I533690` - Script error thrown when clicking the cancel button in batch edit has been fixed.
+- `#FB49544` - The problem with `persistSelection` in custom data binding has been successfully resolved.
+- `#FB49437` - Auto suggestion not working when using the right click paste issue has been fixed.
 
 - `#FB49340` - Fixed an issue that occurred when resizing columns in the grid with stacked headers.
 - `#I520335` - Resolved an issue regarding incorrect `filterBeforeOpen requestType` naming and updated the `options` property scope as public within the `actionBegin` event argument when opening the filter menu.

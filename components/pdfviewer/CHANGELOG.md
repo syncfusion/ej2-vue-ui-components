@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I537980` - Now, the form fields have rendered properly without injecting the annotation, text selection, and text search modules.
+- `#I533753` - Now, only the formFieldSelect event is called when select the `formField`.
+- `#I537955` - Now, programmatically opening the handwritten signature dialog is works properly after opening the Initial dialog.
+- `#I536567` - Now, duplicate comment and replay content are not added to the annotation when exporting/importing the text markup annotation.
+- `#I536470` - Now, a script error is not occurs when rapidly adding a TextBox across multiple pages.
+
 ## 24.1.45 (2024-01-09)
 
 ### PDF Viewer

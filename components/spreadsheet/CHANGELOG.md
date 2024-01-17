@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I864921` - Issue with "exception is thrown when performing an arithmetic operation with percentage formatted value" has been resolved.
+
 ## 24.1.41 (2023-12-18)
 
 ### Spreadsheet

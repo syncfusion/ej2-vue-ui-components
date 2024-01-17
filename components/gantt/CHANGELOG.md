@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### GanttChart
+
+#### Bug Fixes
+
+- `#I533229` - Server call is triggered twice issue has been fixed.
+- `#I531670` - When adding a record by method before saving, if the task ID is changed after taskbar hover exception thrown issue has been fixed.
+- `#I538917` - Text is not rendered properly in header while using page size issue has been fixed.
+- `#I185970` - Dynamic template updating in columns does not render issue has been fixed.
+
 ## 24.1.45 (2024-01-09)
 
 ### GanttChart
@@ -12,6 +23,7 @@
 - `#F185683` - Resources are not updating properly in `actionBegin`event issue has been fixed.
 - `#I532918` - Baseline width not rendered properly in PDF export issue has been fixed.
 - `#F532918` - Issue with remote data while performing CRUD operation in various Gantt chart versions has been fixed.
+- `#I521365` - Dates in tooltip not rendered correctly issue has been fixed.
 
 - `#I530808` - Progress width not rendered properly in split tasks issue has been fixed.
 

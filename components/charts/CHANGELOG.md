@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 24.1.46 (2024-01-17)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I537751` - Now, the `enableZoom` property in the `scrollbarSettings` is working properly.
+- `#I535723` - Now, the showTooltip is working properly on mobile devices.
+- `#I528752` - Now, the chart values update properly during the resized event when integrating the EJ2 JS chart in a Blazor application.
+
 ## 24.1.45 (2024-01-09)
 
 ### AccumulationChart

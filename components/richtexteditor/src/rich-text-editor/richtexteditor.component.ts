@@ -132,6 +132,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         custom(): void {
             this.updated();
         },
+        addAnchorAriaLabel(value: string): string {
+            return this.ej2Instances.addAnchorAriaLabel(value);
+        },
         cleanList(e: Object): void {
             return this.ej2Instances.cleanList(e);
         },
