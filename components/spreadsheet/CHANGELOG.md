@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 24.1.46 (2024-01-17)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I864921` - Issue with "exception is thrown when performing an arithmetic operation with percentage formatted value" has been resolved.
-
 ## 24.1.41 (2023-12-18)
 
 ### Spreadsheet
@@ -1299,6 +1291,14 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Localization:** Provides inherent support to localize the UI.
 - **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.
 
+
+## 24.1.46 (2024-01-17)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I864921` - Issue with "exception is thrown when performing an arithmetic operation with percentage formatted value" has been resolved.
 
 ## 21.2.10 (2023-06-13)
 

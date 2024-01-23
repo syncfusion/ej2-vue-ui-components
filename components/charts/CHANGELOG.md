@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 24.1.47 (2024-01-23)
+
+### AccumulationChart
+
+#### Bug Fixes
+
+- `#I539550` - Now, the `enableSmartLabels` property in the accumulation chart is functioning correctly.
+
+### Chart
+
+#### Bug Fixes
+
+- `#I541520` - Now, the `startFromZero` property in the chart is working properly.
+
 ## 24.1.46 (2024-01-17)
 
 ### Chart
