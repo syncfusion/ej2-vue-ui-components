@@ -27,7 +27,7 @@ export let SignatureComponent: DefineVueComponent<SignatureModel> =  vueDefineCo
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Signature({}) as any,
+            ej2Instances: new Signature({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

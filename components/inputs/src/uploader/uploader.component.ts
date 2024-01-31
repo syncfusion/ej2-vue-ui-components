@@ -28,7 +28,7 @@ export let UploaderComponent: DefineVueComponent<UploaderModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Uploader({}) as any,
+            ej2Instances: new Uploader({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

@@ -30,7 +30,7 @@ export let AccordionComponent: DefineVueComponent<AccordionModel> =  vueDefineCo
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Accordion({}) as any,
+            ej2Instances: new Accordion({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

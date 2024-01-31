@@ -29,7 +29,7 @@ export let TimePickerComponent: DefineVueComponent<TimePickerModel> =  vueDefine
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new TimePicker({}) as any,
+            ej2Instances: new TimePicker({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

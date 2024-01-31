@@ -33,7 +33,7 @@ export let TreeGridComponent: DefineVueComponent<TreeGridModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new TreeGrid({}) as any,
+            ej2Instances: new TreeGrid({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

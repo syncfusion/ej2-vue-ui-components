@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 24.1.47 (2024-01-23)
+## 24.2.3 (2024-01-31)
+
+### Common
+
+#### Bug Fixes
+
+- `#I528934` - The issue with "Reactivity is not working in Vue Grid component" has been resolved.
+
+## 24.1.41 (2023-12-18)
 
 ### Common
 

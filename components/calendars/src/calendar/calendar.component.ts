@@ -29,7 +29,7 @@ export let CalendarComponent: DefineVueComponent<CalendarModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Calendar({}) as any,
+            ej2Instances: new Calendar({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

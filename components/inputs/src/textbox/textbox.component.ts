@@ -29,7 +29,7 @@ export let TextBoxComponent: DefineVueComponent<TextBoxModel> =  vueDefineCompon
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new TextBox({}) as any,
+            ej2Instances: new TextBox({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

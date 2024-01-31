@@ -27,7 +27,7 @@ export let RecurrenceEditorComponent: DefineVueComponent<RecurrenceEditorModel> 
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new RecurrenceEditor({}) as any,
+            ej2Instances: new RecurrenceEditor({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

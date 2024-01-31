@@ -2,7 +2,7 @@
  * Vue Component Base
  */
 import * as Vue from 'vue';
-import { isNullOrUndefined, extend, getValue } from '@syncfusion/ej2-base';
+import { isNullOrUndefined, extend, getValue, setProxyToRaw } from '@syncfusion/ej2-base';
 
 function _interopRequireWildcard(obj: any) { if (obj && obj.__esModule) { return obj; } else { let newObj: any = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[`${key}`] = obj[`${key}`]; } } newObj.default = obj; return newObj; } }
 
@@ -516,3 +516,5 @@ export function getProps(options: any = {}): any {
     }
     return [options.newprops, options.watch];
 }
+
+if (!isExecute) setProxyToRaw(aVue.toRaw);

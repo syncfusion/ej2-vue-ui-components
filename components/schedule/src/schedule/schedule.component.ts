@@ -33,7 +33,7 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Schedule({}) as any,
+            ej2Instances: new Schedule({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

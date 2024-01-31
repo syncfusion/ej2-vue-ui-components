@@ -27,7 +27,7 @@ export let PivotViewComponent: DefineVueComponent<PivotViewModel> =  vueDefineCo
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new PivotView({}) as any,
+            ej2Instances: new PivotView({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

@@ -29,7 +29,7 @@ export let RatingComponent: DefineVueComponent<RatingModel> =  vueDefineComponen
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Rating({}) as any,
+            ej2Instances: new Rating({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

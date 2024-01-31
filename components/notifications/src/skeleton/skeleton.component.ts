@@ -27,7 +27,7 @@ export let SkeletonComponent: DefineVueComponent<SkeletonModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Skeleton({}) as any,
+            ej2Instances: new Skeleton({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

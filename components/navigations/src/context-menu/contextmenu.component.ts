@@ -28,7 +28,7 @@ export let ContextMenuComponent: DefineVueComponent<ContextMenuModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ContextMenu({}) as any,
+            ej2Instances: new ContextMenu({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

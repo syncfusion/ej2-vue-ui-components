@@ -30,7 +30,7 @@ export let StepperComponent: DefineVueComponent<StepperModel> =  vueDefineCompon
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Stepper({}) as any,
+            ej2Instances: new Stepper({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

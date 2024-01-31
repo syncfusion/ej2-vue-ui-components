@@ -29,7 +29,7 @@ export let DatePickerComponent: DefineVueComponent<DatePickerModel> =  vueDefine
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new DatePicker({}) as any,
+            ej2Instances: new DatePicker({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

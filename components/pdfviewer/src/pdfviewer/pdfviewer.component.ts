@@ -27,7 +27,7 @@ export let PdfViewerComponent: DefineVueComponent<PdfViewerModel> =  vueDefineCo
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new PdfViewer({}) as any,
+            ej2Instances: new PdfViewer({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

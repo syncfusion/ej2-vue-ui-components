@@ -29,7 +29,7 @@ export let ProgressBarComponent: DefineVueComponent<ProgressBarModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ProgressBar({}) as any,
+            ej2Instances: new ProgressBar({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

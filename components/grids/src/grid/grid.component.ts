@@ -33,7 +33,7 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Grid({}) as any,
+            ej2Instances: new Grid({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

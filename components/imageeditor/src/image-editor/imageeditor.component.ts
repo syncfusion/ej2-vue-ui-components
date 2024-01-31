@@ -27,7 +27,7 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ImageEditor({}) as any,
+            ej2Instances: new ImageEditor({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

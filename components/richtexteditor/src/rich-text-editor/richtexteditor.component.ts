@@ -29,7 +29,7 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new RichTextEditor({}) as any,
+            ej2Instances: new RichTextEditor({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

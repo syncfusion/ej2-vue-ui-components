@@ -36,7 +36,7 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Spreadsheet({}) as any,
+            ej2Instances: new Spreadsheet({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -178,6 +178,12 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         deleteImage(id: string, range?: string): void {
             return this.ej2Instances.deleteImage(id, range);
         },
+        deselectChart(): void {
+            return this.ej2Instances.deselectChart();
+        },
+        deselectImage(): void {
+            return this.ej2Instances.deselectImage();
+        },
         duplicateSheet(sheetIndex?: number): void {
             return this.ej2Instances.duplicateSheet(sheetIndex);
         },
@@ -312,6 +318,12 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         },
         saveAsJson(): Object {
             return this.ej2Instances.saveAsJson();
+        },
+        selectChart(id?: string): void {
+            return this.ej2Instances.selectChart(id);
+        },
+        selectImage(id?: string): void {
+            return this.ej2Instances.selectImage(id);
         },
         selectRange(address: string): void {
             return this.ej2Instances.selectRange(address);

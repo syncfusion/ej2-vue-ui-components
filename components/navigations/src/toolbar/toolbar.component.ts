@@ -28,7 +28,7 @@ export let ToolbarComponent: DefineVueComponent<ToolbarModel> =  vueDefineCompon
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Toolbar({}) as any,
+            ej2Instances: new Toolbar({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

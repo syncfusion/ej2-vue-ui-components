@@ -28,7 +28,7 @@ export let FileManagerComponent: DefineVueComponent<FileManagerModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new FileManager({}) as any,
+            ej2Instances: new FileManager({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

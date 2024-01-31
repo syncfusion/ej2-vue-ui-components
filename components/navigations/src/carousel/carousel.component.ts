@@ -30,7 +30,7 @@ export let CarouselComponent: DefineVueComponent<CarouselModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Carousel({}) as any,
+            ej2Instances: new Carousel({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

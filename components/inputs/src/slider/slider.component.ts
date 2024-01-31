@@ -29,7 +29,7 @@ export let SliderComponent: DefineVueComponent<SliderModel> =  vueDefineComponen
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Slider({}) as any,
+            ej2Instances: new Slider({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

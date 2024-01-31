@@ -29,7 +29,7 @@ export let PagerComponent: DefineVueComponent<PagerModel> =  vueDefineComponent(
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Pager({}) as any,
+            ej2Instances: new Pager({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
