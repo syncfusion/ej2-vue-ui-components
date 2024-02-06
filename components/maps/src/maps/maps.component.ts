@@ -37,7 +37,7 @@ export let MapsComponent: DefineVueComponent<MapsModel> =  vueDefineComponent({
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Maps({}) as any,
+            ej2Instances: new Maps({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

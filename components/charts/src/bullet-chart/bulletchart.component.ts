@@ -30,7 +30,7 @@ export let BulletChartComponent: DefineVueComponent<BulletChartModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new BulletChart({}) as any,
+            ej2Instances: new BulletChart({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

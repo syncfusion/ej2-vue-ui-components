@@ -38,7 +38,7 @@ export let StockChartComponent: DefineVueComponent<StockChartModel> =  vueDefine
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new StockChart({}) as any,
+            ej2Instances: new StockChart({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

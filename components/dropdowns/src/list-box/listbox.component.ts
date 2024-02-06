@@ -29,7 +29,7 @@ export let ListBoxComponent: DefineVueComponent<ListBoxModel> =  vueDefineCompon
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ListBox({}) as any,
+            ej2Instances: new ListBox({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

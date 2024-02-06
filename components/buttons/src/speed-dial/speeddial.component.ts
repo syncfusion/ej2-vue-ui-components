@@ -30,7 +30,7 @@ export let SpeedDialComponent: DefineVueComponent<SpeedDialModel> =  vueDefineCo
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new SpeedDial({}) as any,
+            ej2Instances: new SpeedDial({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

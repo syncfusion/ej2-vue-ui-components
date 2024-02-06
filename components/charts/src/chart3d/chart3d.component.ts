@@ -34,7 +34,7 @@ export let Chart3DComponent: DefineVueComponent<Chart3DModel> =  vueDefineCompon
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Chart3D({}) as any,
+            ej2Instances: new Chart3D({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

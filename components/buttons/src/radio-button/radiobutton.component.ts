@@ -29,7 +29,7 @@ export let RadioButtonComponent: DefineVueComponent<RadioButtonModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new RadioButton({}) as any,
+            ej2Instances: new RadioButton({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

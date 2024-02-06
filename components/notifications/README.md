@@ -68,6 +68,26 @@ The [Vue Toast](https://www.syncfusion.com/vue-components/vue-toaster?utm_source
 * [Action buttons](https://ej2.syncfusion.com/vue/documentation/toast/action-buttons/) - Supports to add buttons in the toast for archiving any actions within the toast.
 * [Template](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-notification-npm#/material/toast/template.html) - User customized element can be defined for the toast using the template property.
 
+### Vue Skeleton
+
+The [Vue Skeleton](https://www.syncfusion.com/vue-components/vue-skeleton?utm_source=npm&utm_medium=listing&utm_campaign=vue-notifications-npm) component is a placeholder that animates a shimmer effect to let users know that the page’s content is currently loading. It has several built-in features such as support for shapes, shimmer effect, and UI customization.
+
+<p align="center">
+    <a href="https://ej2.syncfusion.com/vue/documentation/skeleton/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-notifications-npm">Getting Started</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-notifications-npm#/material/skeleton/default.html">Online demos</a> .
+    <a href="https://www.syncfusion.com/vue-components/vue-skeleton?utm_source=npm&utm_medium=listing&utm_campaign=vue-notifications-npm">Learn more</a>
+</p>
+
+<p align="center">
+<img alt="Vue Skeleton Component" src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-skeleton.gif">
+</p>
+
+#### Key features
+
+* [Shapes](https://ej2.syncfusion.com/vue/documentation/skeleton/shapes) - Provides various built-in shape variants to design the layout of the page.
+* [ShimmerEffect](https://ej2.syncfusion.com/vue/documentation/skeleton/shimmer-effect) - Provides an option to display the skeleton with various animation effects.
+* [Styles](https://ej2.syncfusion.com/vue/documentation/skeleton/styles) - Customize the style of a skeleton.
+
 ## Setup
 
 To install `notifications` and its dependent packages, use the following command,
@@ -109,4 +129,4 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license) for more info.
 
-&copy; Copyright 2023 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+&copy; Copyright 2024 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.

@@ -30,7 +30,7 @@ export let RangeNavigatorComponent: DefineVueComponent<RangeNavigatorModel> =  v
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new RangeNavigator({}) as any,
+            ej2Instances: new RangeNavigator({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

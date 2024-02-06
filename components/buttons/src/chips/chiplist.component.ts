@@ -28,7 +28,7 @@ export let ChipListComponent: DefineVueComponent<ChipListModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ChipList({}) as any,
+            ej2Instances: new ChipList({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

@@ -15,6 +15,7 @@
 #### Bug fixes
 
 - `#I546255` - An issue tab switching on disable item has been resolved.
+- `#I523951` - The issue with React's selection of a tab item using the select method, where all tab items were being underlined, has been resolved.
 
 ## 24.1.46 (2024-01-17)
 

@@ -29,7 +29,7 @@ export let DropDownListComponent: DefineVueComponent<DropDownListModel> =  vueDe
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new DropDownList({}) as any,
+            ej2Instances: new DropDownList({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

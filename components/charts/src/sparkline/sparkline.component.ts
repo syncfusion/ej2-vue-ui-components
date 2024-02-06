@@ -28,7 +28,7 @@ export let SparklineComponent: DefineVueComponent<SparklineModel> =  vueDefineCo
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Sparkline({}) as any,
+            ej2Instances: new Sparkline({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

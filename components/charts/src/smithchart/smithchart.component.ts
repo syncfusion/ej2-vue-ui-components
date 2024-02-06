@@ -28,7 +28,7 @@ export let SmithchartComponent: DefineVueComponent<SmithchartModel> =  vueDefine
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Smithchart({}) as any,
+            ej2Instances: new Smithchart({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,

@@ -29,7 +29,7 @@ export let CheckBoxComponent: DefineVueComponent<CheckBoxModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new CheckBox({}) as any,
+            ej2Instances: new CheckBox({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

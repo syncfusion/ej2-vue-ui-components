@@ -27,7 +27,7 @@ export let ButtonComponent: DefineVueComponent<ButtonModel> =  vueDefineComponen
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new Button({}) as any,
+            ej2Instances: new Button({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
