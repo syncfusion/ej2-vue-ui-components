@@ -27,7 +27,7 @@ export let ProgressButtonComponent: DefineVueComponent<ProgressButtonModel> =  v
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ProgressButton({}) as any,
+            ej2Instances: new ProgressButton({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

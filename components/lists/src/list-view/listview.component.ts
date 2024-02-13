@@ -27,7 +27,7 @@ export let ListViewComponent: DefineVueComponent<ListViewModel> =  vueDefineComp
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new ListView({}) as any,
+            ej2Instances: new ListView({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,

@@ -164,6 +164,29 @@ The [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload?
 * [Auto upload](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/default.html) – Process the file to upload without interaction.
 * [Preload files](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/preload-files.html) – View and manipulate previously uploaded files.
 
+### Vue Rating
+
+The [Vue Rating](https://www.syncfusion.com/vue-components/vue-rating?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm) component is used to provide a star rating or view other people’s ratings on a numeric scale for any service provided, such as for movies, applications, or products. It has several built-in features such as support for precision modes, labels, tooltip, and UI customization.
+
+<p align="center">
+  <a href="https://ej2.syncfusion.com/vue/documentation/rating/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/rating/default.html">Online demos</a> .
+  <a href="https://www.syncfusion.com/vue-components/vue-rating?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
+</p>
+
+<p align="center">
+<img alt="Vue Rating Component" src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-rating.gif">
+</p>
+
+#### Key features
+
+* [Precision modes](https://ej2.syncfusion.com/vue/documentation/rating/precision-modes) - Provides different precision modes for more accurate rating.
+* [Labels](https://ej2.syncfusion.com/vue/documentation/rating/labels) - Displays current value of the rating.
+* [Tooltip](https://ej2.syncfusion.com/vue/documentation/rating/tool-tip) -  Displays additional information of the rating items.
+* [Selection](https://ej2.syncfusion.com/vue/documentation/rating/selection) - Customization options for the selected rating value and selection behavior.
+* [Appearance](https://ej2.syncfusion.com/vue/documentation/rating/appearance) - Customize the rating items appearance.
+* [Templates](https://ej2.syncfusion.com/vue/documentation/rating/templates) - Customize the rating item with a heart, SVG, or any content that precisely matches unique needs.
+
 <p align="center">
 Trusted by the world's leading companies
   <a href="https://www.syncfusion.com/">
@@ -212,4 +235,4 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license) for more info.
 
-&copy; Copyright 2023 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+&copy; Copyright 2024 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.

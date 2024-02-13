@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 24.2.5 (2024-02-13)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- `#I545248` - Issue with QueryBuilder validation message removed when navigating away from the QueryBuilder control has been fixed.
+- `#F186129` - Issue with tooltip rendering twice in the operator field while using validateFields method has been fixed.
+
 ## 24.1.46 (2024-01-17)
 
 ### QueryBuilder

@@ -28,7 +28,7 @@ export let DropDownButtonComponent: DefineVueComponent<DropDownButtonModel> =  v
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new DropDownButton({}) as any,
+            ej2Instances: new DropDownButton({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
