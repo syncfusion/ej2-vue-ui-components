@@ -2,6 +2,34 @@
 
 ## [Unreleased]
 
+## 24.2.7 (2024-02-20)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I549018` - Now, the bridging is not enabled while connector visibility is false.
+- `#I542327` - Now, the sendBackward and sendForward commands works fine.
+- `#I527474` - Now, drawing connector from source port to target port with port id underscore works fine.
+
+## 24.2.5 (2024-02-13)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I547586` - Now, the performance of diagram is improved while dragging large number of HTML shapes.
+
+## 24.2.4 (2024-02-06)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#F185529` - Now, Annotation alignment updated properly with virtualisation constraints enabled.
+- `#I544969` - Now, grouping a grouped nodes no longer throws error.
+- `#I539121` - Now, the oldValue & newValue arguments of the size change event are updated properly while resizing the nodes.
+
 ## 24.2.3 (2024-01-31)
 
 ### Diagram
