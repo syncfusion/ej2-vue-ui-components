@@ -148,6 +148,9 @@ export let ListViewComponent: DefineVueComponent<ListViewModel> =  vueDefineComp
         uncheckItem(item: Object | Object | Object): void {
             return this.ej2Instances.uncheckItem(item);
         },
+        unselectItem(item?: Object | Object | Object): void {
+            return this.ej2Instances.unselectItem(item);
+        },
     }
 });
 

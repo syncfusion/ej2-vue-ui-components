@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 24.2.8 (2024-02-27)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I870021` - Issue with "`cellEditing` event is not triggered when you focus the cell and press the backspace key" has been resolved.
+- `#I870519` - Issue with "cell values are updated directly from the data source before being converted to formatted values" has been resolved.
+
 ## 24.2.4 (2024-02-06)
 
 ### Spreadsheet
