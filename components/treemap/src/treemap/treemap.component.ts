@@ -111,7 +111,27 @@ export let TreeMapComponent: DefineVueComponent<TreeMapModel> =  vueDefineCompon
     }
 });
 
-export type TreeMapComponent = InstanceType<typeof TreeMapComponent>;
+export type TreeMapComponent = typeof ComponentBase & {
+    ej2Instances: TreeMap;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    doubleClickOnTreeMap(e: Object): void;
+    export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
+    print(id?: string[] | string | Object): void;
+    selectItem(levelOrder: string[], isSelected?: boolean): void
+};
 
 export const TreeMapPlugin = {
     name: 'ejs-treemap',

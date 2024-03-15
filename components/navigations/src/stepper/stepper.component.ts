@@ -145,7 +145,26 @@ export let StepperComponent: DefineVueComponent<StepperModel> =  vueDefineCompon
     }
 });
 
-export type StepperComponent = InstanceType<typeof StepperComponent>;
+export type StepperComponent = typeof ComponentBase & {
+    ej2Instances: Stepper;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    nextStep(): void;
+    previousStep(): void;
+    reset(): void
+};
 
 export const StepperPlugin = {
     name: 'ejs-stepper',

@@ -128,7 +128,33 @@ export let TabComponent: DefineVueComponent<TabModel> =  vueDefineComponent({
     }
 });
 
-export type TabComponent = InstanceType<typeof TabComponent>;
+export type TabComponent = typeof ComponentBase & {
+    ej2Instances: Tab;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addTab(items: Object[], index?: number): void;
+    disable(value: boolean): void;
+    enableTab(index: number, value: boolean): void;
+    getItemIndex(tabItemId: string): number;
+    hideTab(index: number, value?: boolean): void;
+    refresh(): void;
+    refreshActiveTab(): void;
+    refreshActiveTabBorder(): void;
+    removeTab(index: number): void;
+    select(args: number | Object, event?: Object): void
+};
 
 export const TabPlugin = {
     name: 'ejs-tab',

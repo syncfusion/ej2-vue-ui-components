@@ -154,7 +154,29 @@ export let DateRangePickerComponent: DefineVueComponent<DateRangePickerModel> = 
     }
 });
 
-export type DateRangePickerComponent = InstanceType<typeof DateRangePickerComponent>;
+export type DateRangePickerComponent = typeof ComponentBase & {
+    ej2Instances: DateRangePicker;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    focusIn(): void;
+    focusOut(): void;
+    getSelectedRange(): Object;
+    hide(event?: Object | Object | Object): void;
+    requiredModules(): Object[];
+    show(element?: Object, event?: Object | Object | Object): void
+};
 
 export const DateRangePickerPlugin = {
     name: 'ejs-daterangepicker',

@@ -10,7 +10,7 @@ import { Chart3DColumnsDirective, Chart3DColumnDirective, Chart3DColumnsPlugin, 
 import { Chart3DSelectedDataIndexesDirective, Chart3DSelectedDataIndexDirective, Chart3DSelectedDataIndexesPlugin, Chart3DSelectedDataIndexPlugin } from './selecteddataindexes.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'axes', 'background', 'backgroundImage', 'border', 'columns', 'currencyCode', 'dataSource', 'depth', 'description', 'enablePersistence', 'enableRotation', 'enableRtl', 'enableSideBySidePlacement', 'height', 'highlightColor', 'highlightMode', 'highlightPattern', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rows', 'selectedDataIndexes', 'selectionMode', 'selectionPattern', 'series', 'subTitle', 'subTitleStyle', 'theme', 'tilt', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'wallColor', 'wallSize', 'width', 'afterExport', 'axisLabelRender', 'beforeExport', 'beforePrint', 'beforeResize', 'chart3DMouseClick', 'chart3DMouseDown', 'chart3DMouseLeave', 'chart3DMouseMove', 'chart3DMouseUp', 'legendClick', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'selectionComplete', 'seriesRender', 'textRender', 'tooltipRender'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'axes', 'background', 'backgroundImage', 'border', 'columns', 'currencyCode', 'dataSource', 'depth', 'description', 'enableExport', 'enablePersistence', 'enableRotation', 'enableRtl', 'enableSideBySidePlacement', 'height', 'highlightColor', 'highlightMode', 'highlightPattern', 'isMultiSelect', 'isTransposed', 'legendSettings', 'locale', 'margin', 'palettes', 'perspectiveAngle', 'primaryXAxis', 'primaryYAxis', 'rotation', 'rows', 'selectedDataIndexes', 'selectionMode', 'selectionPattern', 'series', 'subTitle', 'subTitleStyle', 'theme', 'tilt', 'title', 'titleStyle', 'tooltip', 'useGroupingSeparator', 'wallColor', 'wallSize', 'width', 'afterExport', 'axisLabelRender', 'beforeExport', 'beforePrint', 'beforeResize', 'chart3DMouseClick', 'chart3DMouseDown', 'chart3DMouseLeave', 'chart3DMouseMove', 'chart3DMouseUp', 'legendClick', 'legendRender', 'load', 'loaded', 'pointClick', 'pointMove', 'pointRender', 'resized', 'selectionComplete', 'seriesRender', 'textRender', 'tooltipRender'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -161,7 +161,30 @@ export let Chart3DComponent: DefineVueComponent<Chart3DModel> =  vueDefineCompon
     }
 });
 
-export type Chart3DComponent = InstanceType<typeof Chart3DComponent>;
+export type Chart3DComponent = typeof ComponentBase & {
+    ej2Instances: Chart3D;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addSeries(seriesCollection: Object[]): void;
+    createChartSvg(): void;
+    export(type: Object, fileName: string): void;
+    highlightAnimation(element: Object, index: number, duration: number, startOpacity: number): void;
+    print(id?: string[] | string | Object): void;
+    removeSeries(index: number): void;
+    stopElementAnimation(element: Object, index: number): void
+};
 
 export const Chart3DPlugin = {
     name: 'ejs-chart3d',

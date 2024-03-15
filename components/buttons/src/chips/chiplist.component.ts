@@ -101,7 +101,7 @@ export let ChipListComponent: DefineVueComponent<ChipListModel> =  vueDefineComp
         find(fields: number | Object): Object {
             return this.ej2Instances.find(fields);
         },
-        getSelectedChips(): Object | Object {
+        getSelectedChips(): Object | Object | undefined {
             return this.ej2Instances.getSelectedChips();
         },
         remove(fields: number | number[] | Object | Object[]): void {
@@ -113,7 +113,28 @@ export let ChipListComponent: DefineVueComponent<ChipListModel> =  vueDefineComp
     }
 });
 
-export type ChipListComponent = InstanceType<typeof ChipListComponent>;
+export type ChipListComponent = typeof ComponentBase & {
+    ej2Instances: ChipList;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    add(chipsData: string[] | number[] | Object[] | string | number | Object): void;
+    find(fields: number | Object): Object;
+    getSelectedChips(): Object | Object | undefined;
+    remove(fields: number | number[] | Object | Object[]): void;
+    select(fields: number | number[] | Object | Object[] | string[], selectionType?: Object): void
+};
 
 export const ChipListPlugin = {
     name: 'ejs-chiplist',

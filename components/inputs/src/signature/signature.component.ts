@@ -136,7 +136,36 @@ export let SignatureComponent: DefineVueComponent<SignatureModel> =  vueDefineCo
     }
 });
 
-export type SignatureComponent = InstanceType<typeof SignatureComponent>;
+export type SignatureComponent = typeof ComponentBase & {
+    ej2Instances: Signature;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    canRedo(): boolean;
+    canUndo(): boolean;
+    clear(): void;
+    draw(text: string, fontFamily?: string, fontSize?: number, x?: number, y?: number): void;
+    getBlob(url: string): Object;
+    initialize(): void;
+    isEmpty(): boolean;
+    load(signature: string, width?: number, height?: number): void;
+    redo(): void;
+    refresh(): void;
+    save(type?: Object, fileName?: string): void;
+    saveAsBlob(): Object;
+    undo(): void
+};
 
 export const SignaturePlugin = {
     name: 'ejs-signature',

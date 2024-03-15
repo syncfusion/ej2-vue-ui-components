@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { DropDownList, DropDownListModel } from '@syncfusion/ej2-dropdowns';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'text', 'value', 'valueTemplate', 'width', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'open', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'allowObjectBinding', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'text', 'value', 'valueTemplate', 'width', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'blur', 'change', 'close', 'created', 'dataBound', 'destroyed', 'filtering', 'focus', 'open', 'select'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -171,7 +171,35 @@ export let DropDownListComponent: DefineVueComponent<DropDownListModel> =  vueDe
     }
 });
 
-export type DropDownListComponent = InstanceType<typeof DropDownListComponent>;
+export type DropDownListComponent = typeof ComponentBase & {
+    ej2Instances: DropDownList;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
+    clear(): void;
+    filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
+    focusIn(e?: Object | Object | Object | Object): void;
+    focusOut(e?: Object | Object): void;
+    getDataByValue(value: string | number | boolean): Object | string | number | boolean;
+    getItems(): Object[];
+    hidePopup(e?: Object | Object | Object): void;
+    hideSpinner(): void;
+    requiredModules(): Object[];
+    showPopup(e?: Object | Object | Object): void;
+    showSpinner(): void
+};
 
 export const DropDownListPlugin = {
     name: 'ejs-dropdownlist',

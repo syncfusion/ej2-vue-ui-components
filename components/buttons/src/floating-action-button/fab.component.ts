@@ -106,7 +106,26 @@ export let FabComponent: DefineVueComponent<FabModel> =  vueDefineComponent({
     }
 });
 
-export type FabComponent = InstanceType<typeof FabComponent>;
+export type FabComponent = typeof ComponentBase & {
+    ej2Instances: Fab;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    click(): void;
+    focusIn(): void;
+    refreshPosition(): void
+};
 
 export const FabPlugin = {
     name: 'ejs-fab',

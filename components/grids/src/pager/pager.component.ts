@@ -147,7 +147,27 @@ export let PagerComponent: DefineVueComponent<PagerModel> =  vueDefineComponent(
     }
 });
 
-export type PagerComponent = InstanceType<typeof PagerComponent>;
+export type PagerComponent = typeof ComponentBase & {
+    ej2Instances: Pager;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    destroyTemplate(propertyNames?: string[], index?: any): void;
+    getLocalizedLabel(key: string): string;
+    goToPage(pageNo: number): void;
+    refresh(): void
+};
 
 export const PagerPlugin = {
     name: 'ejs-pager',

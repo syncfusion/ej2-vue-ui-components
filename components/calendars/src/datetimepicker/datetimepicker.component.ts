@@ -168,7 +168,34 @@ export let DateTimePickerComponent: DefineVueComponent<DateTimePickerModel> =  v
     }
 });
 
-export type DateTimePickerComponent = InstanceType<typeof DateTimePickerComponent>;
+export type DateTimePickerComponent = typeof ComponentBase & {
+    ej2Instances: DateTimePicker;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addDate(dates: Object | Object[]): void;
+    createContent(): void;
+    currentView(): string;
+    focusIn(): void;
+    focusOut(): void;
+    hide(e?: Object | Object | Object): void;
+    navigateTo(view: Object, date: Object): void;
+    removeDate(dates: Object | Object[]): void;
+    requiredModules(): Object[];
+    show(type?: string, e?: Object | Object | Object): void;
+    toggle(e?: Object): void
+};
 
 export const DateTimePickerPlugin = {
     name: 'ejs-datetimepicker',

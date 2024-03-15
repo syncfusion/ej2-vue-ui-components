@@ -144,7 +144,26 @@ export let MaskedTextBoxComponent: DefineVueComponent<MaskedTextBoxModel> =  vue
     }
 });
 
-export type MaskedTextBoxComponent = InstanceType<typeof MaskedTextBoxComponent>;
+export type MaskedTextBoxComponent = typeof ComponentBase & {
+    ej2Instances: MaskedTextBox;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    focusIn(): void;
+    focusOut(): void;
+    getMaskedValue(): string
+};
 
 export const MaskedTextBoxPlugin = {
     name: 'ejs-maskedtextbox',

@@ -148,7 +148,27 @@ export let SpeedDialComponent: DefineVueComponent<SpeedDialModel> =  vueDefineCo
     }
 });
 
-export type SpeedDialComponent = InstanceType<typeof SpeedDialComponent>;
+export type SpeedDialComponent = typeof ComponentBase & {
+    ej2Instances: SpeedDial;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    createPopup(): void;
+    hide(): void;
+    refreshPosition(): void;
+    show(): void
+};
 
 export const SpeedDialPlugin = {
     name: 'ejs-speeddial',

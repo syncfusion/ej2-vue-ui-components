@@ -40,3 +40,6 @@ export { Chart3DRowsDirective, Chart3DRowDirective, Chart3DRowsPlugin, Chart3DRo
 export { Chart3DColumnsDirective, Chart3DColumnDirective, Chart3DColumnsPlugin, Chart3DColumnPlugin } from './chart3d/columns.directive';
 export { Chart3DSelectedDataIndexesDirective, Chart3DSelectedDataIndexDirective, Chart3DSelectedDataIndexesPlugin, Chart3DSelectedDataIndexPlugin } from './chart3d/selecteddataindexes.directive';
 export { Chart3DComponent, Chart3DPlugin } from './chart3d/chart3d.component';
+export { CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, CircularChart3DSeriesCollectionPlugin, CircularChart3DSeriesPlugin } from './circularchart3d/series.directive';
+export { CircularChart3DSelectedDataIndexesDirective, CircularChart3DSelectedDataIndexDirective, CircularChart3DSelectedDataIndexesPlugin, CircularChart3DSelectedDataIndexPlugin } from './circularchart3d/selecteddataindexes.directive';
+export { CircularChart3DComponent, CircularChart3DPlugin } from './circularchart3d/circularchart3d.component';

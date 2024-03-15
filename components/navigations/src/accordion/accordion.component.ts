@@ -154,7 +154,29 @@ export let AccordionComponent: DefineVueComponent<AccordionModel> =  vueDefineCo
     }
 });
 
-export type AccordionComponent = InstanceType<typeof AccordionComponent>;
+export type AccordionComponent = typeof ComponentBase & {
+    ej2Instances: Accordion;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItem(item: Object | Object[] | Object | Object[], index?: number): void;
+    enableItem(index: number, isEnable: boolean): void;
+    expandItem(isExpand: boolean, index?: number): void;
+    hideItem(index: number, isHidden?: boolean): void;
+    removeItem(index: number): void;
+    select(index: number): void
+};
 
 export const AccordionPlugin = {
     name: 'ejs-accordion',

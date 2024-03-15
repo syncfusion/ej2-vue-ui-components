@@ -141,7 +141,25 @@ export let SliderComponent: DefineVueComponent<SliderModel> =  vueDefineComponen
     }
 });
 
-export type SliderComponent = InstanceType<typeof SliderComponent>;
+export type SliderComponent = typeof ComponentBase & {
+    ej2Instances: Slider;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    reposition(): void;
+    setTooltip(args?: string): void
+};
 
 export const SliderPlugin = {
     name: 'ejs-slider',

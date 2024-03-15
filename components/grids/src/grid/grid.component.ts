@@ -142,8 +142,8 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         addShimmerEffect(): void {
             return this.ej2Instances.addShimmerEffect();
         },
-        autoFitColumns(fieldNames?: string | string[]): void {
-            return this.ej2Instances.autoFitColumns(fieldNames);
+        autoFitColumns(fieldNames?: string | string[], startRowIndex?: number, endRowIndex?: number): void {
+            return this.ej2Instances.autoFitColumns(fieldNames, startRowIndex, endRowIndex);
         },
         batchAsyncUpdate(changes: Object): void {
             return this.ej2Instances.batchAsyncUpdate(changes);
@@ -532,7 +532,154 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
     }
 });
 
-export type GridComponent = InstanceType<typeof GridComponent>;
+export type GridComponent = typeof ComponentBase & {
+    ej2Instances: Grid;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addRecord(data?: Object, index?: number): void;
+    addShimmerEffect(): void;
+    autoFitColumns(fieldNames?: string | string[], startRowIndex?: number, endRowIndex?: number): void;
+    batchAsyncUpdate(changes: Object): void;
+    batchUpdate(changes: Object): void;
+    calculatePageSizeByParentHeight(containerHeight: number | string): number;
+    changeDataSource(dataSource?: Object | Object | Object, columns?: Object[] | string[] | Object[]): void;
+    clearCellSelection(): void;
+    clearFiltering(fields?: string[]): void;
+    clearGrouping(): void;
+    clearRowSelection(): void;
+    clearSelection(): void;
+    clearSorting(): void;
+    closeEdit(): void;
+    copy(withHeader?: boolean): void;
+    csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
+    dataReady(): void;
+    deleteRecord(fieldname?: string, data?: Object): void;
+    deleteRow(tr: Object): void;
+    destroyTemplate(propertyNames?: string[], index?: any): void;
+    detailCollapseAll(): void;
+    detailExpandAll(): void;
+    editCell(index: number, field: string): void;
+    enableToolbarItems(items: string[], isEnable: boolean): void;
+    endEdit(): void;
+    excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
+    extendRequiredModules(modules: Object[]): void;
+    filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): void;
+    getBatchChanges(): Object;
+    getCellFromIndex(rowIndex: number, columnIndex: number): Object;
+    getColumnByField(field: string): Object;
+    getColumnByUid(uid: string): Object;
+    getColumnFieldNames(): string[];
+    getColumnHeaderByField(field: string): Object;
+    getColumnHeaderByIndex(index: number): Object;
+    getColumnHeaderByUid(uid: string): Object;
+    getColumnIndexByField(field: string): number;
+    getColumnIndexByUid(uid: string): number;
+    getColumns(isRefresh?: boolean): Object[];
+    getContent(): Object;
+    getContentTable(): Object;
+    getCurrentViewRecords(): Object[];
+    getDataModule(): Object;
+    getDataRows(): Object[];
+    getFilterUIInfo(): Object;
+    getFilteredRecords(): Object[] | Object;
+    getFooterContent(): Object;
+    getFooterContentTable(): Object;
+    getForeignKeyColumns(): Object[];
+    getFrozenDataRows(): Object[];
+    getFrozenLeftColumnHeaderByIndex(index: number): Object;
+    getFrozenLeftCount(): number;
+    getFrozenMode(): Object;
+    getFrozenRightCellFromIndex(rowIndex: number, columnIndex: number): Object;
+    getFrozenRightColumnHeaderByIndex(index: number): Object;
+    getFrozenRightDataRows(): Object[];
+    getFrozenRightRowByIndex(index: number): Object;
+    getFrozenRightRows(): Object[];
+    getFrozenRowByIndex(index: number): Object;
+    getHeaderContent(): Object;
+    getHeaderTable(): Object;
+    getHiddenColumns(): Object[];
+    getMediaColumns(): void;
+    getMovableCellFromIndex(rowIndex: number, columnIndex: number): Object;
+    getMovableColumnHeaderByIndex(index: number): Object;
+    getMovableDataRows(): Object[];
+    getMovableRowByIndex(index: number): Object;
+    getMovableRows(): Object[];
+    getPager(): Object;
+    getPrimaryKeyFieldNames(): string[];
+    getRowByIndex(index: number): Object;
+    getRowIndexByPrimaryKey(value: string | Object): number;
+    getRowInfo(target: Object | Object): Object;
+    getRows(): Object[];
+    getSelectedColumnsUid(): string[];
+    getSelectedRecords(): Object[];
+    getSelectedRowCellIndexes(): Object[];
+    getSelectedRowIndexes(): number[];
+    getSelectedRows(): Object[];
+    getSummaryValues(summaryCol: Object, summaryData: Object): number;
+    getUidByColumnField(field: string): string;
+    getVisibleColumns(): Object[];
+    goToPage(pageNo: number): void;
+    groupCollapseAll(): void;
+    groupColumn(columnName: string): void;
+    groupExpandAll(): void;
+    hideColumns(keys: string | string[], hideBy?: string): void;
+    hideScroll(): void;
+    hideSpinner(): void;
+    isFrozenGrid(): boolean;
+    openColumnChooser(x?: number, y?: number): void;
+    pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object;
+    print(): void;
+    refresh(): void;
+    refreshColumns(): void;
+    refreshHeader(): void;
+    removeMaskRow(): void;
+    reorderColumnByIndex(fromIndex: number, toIndex: number): void;
+    reorderColumnByTargetIndex(fieldName: string | string[], toIndex: number): void;
+    reorderColumns(fromFName: string | string[], toFName: string): void;
+    reorderRows(fromIndexes: number[], toIndex: number): void;
+    saveCell(): void;
+    search(searchString: string): void;
+    selectCell(cellIndex: Object, isToggle?: boolean): void;
+    selectCells(rowCellIndexes: Object[]): void;
+    selectCellsByRange(startIndex: Object, endIndex?: Object): void;
+    selectRow(index: number, isToggle?: boolean): void;
+    selectRows(rowIndexes: number[]): void;
+    selectRowsByRange(startIndex: number, endIndex?: number): void;
+    serverCsvExport(url: string): void;
+    serverExcelExport(url: string): void;
+    serverPdfExport(url: string): void;
+    setCellValue(key: string | number, field: string, value: string | number | boolean | Object | null): void;
+    setGridContent(element: Object): void;
+    setGridContentTable(element: Object): void;
+    setGridHeaderContent(element: Object): void;
+    setGridHeaderTable(element: Object): void;
+    setGridPager(element: Object): void;
+    setRowData(key: string | number, rowData?: Object): void;
+    showAdaptiveFilterDialog(): void;
+    showAdaptiveSortDialog(): void;
+    showColumns(keys: string | string[], showBy?: string): void;
+    showMaskRow(axisDirection?: string, dialogElement?: Object): void;
+    showSpinner(): void;
+    sortColumn(columnName: string, direction: Object, isMultiSort?: boolean): void;
+    startEdit(): void;
+    ungroupColumn(columnName: string): void;
+    updateCell(rowIndex: number, field: string, value: string | number | boolean | Object): void;
+    updateExternalMessage(message: string): void;
+    updateRow(index: number, data: Object): void;
+    updateRowValue(key: number, rowData: Object): void
+};
 
 export const GridPlugin = {
     name: 'ejs-grid',

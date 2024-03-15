@@ -6,9 +6,10 @@ import { RibbonItemsDirective, RibbonItemDirective, RibbonItemsPlugin, RibbonIte
 import { RibbonCollectionsDirective, RibbonCollectionDirective, RibbonCollectionsPlugin, RibbonCollectionPlugin } from './collections.directive'
 import { RibbonGroupsDirective, RibbonGroupDirective, RibbonGroupsPlugin, RibbonGroupPlugin } from './groups.directive'
 import { RibbonTabsDirective, RibbonTabDirective, RibbonTabsPlugin, RibbonTabPlugin } from './tabs.directive'
+import { RibbonContextualTabsDirective, RibbonContextualTabDirective, RibbonContextualTabsPlugin, RibbonContextualTabPlugin } from './contextualtabs.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeLayout', 'backStageMenu', 'cssClass', 'enablePersistence', 'enableRtl', 'fileMenu', 'helpPaneTemplate', 'hideLayoutSwitcher', 'isMinimized', 'launcherIconCss', 'locale', 'selectedTab', 'tabAnimation', 'tabs', 'width', 'created', 'launcherIconClick', 'overflowPopupClose', 'overflowPopupOpen', 'ribbonCollapsing', 'ribbonExpanding', 'tabSelected', 'tabSelecting'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeLayout', 'backStageMenu', 'contextualTabs', 'cssClass', 'enableKeyTips', 'enablePersistence', 'enableRtl', 'fileMenu', 'helpPaneTemplate', 'hideLayoutSwitcher', 'isMinimized', 'launcherIconCss', 'layoutSwitcherKeyTip', 'locale', 'selectedTab', 'tabAnimation', 'tabs', 'width', 'created', 'launcherIconClick', 'overflowPopupClose', 'overflowPopupOpen', 'ribbonCollapsing', 'ribbonExpanding', 'tabSelected', 'tabSelecting'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -36,8 +37,8 @@ export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponen
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: true as boolean,
-            tagMapper: {"e-ribbon-tabs":{"e-ribbon-tab":{"e-ribbon-groups":{"e-ribbon-group":{"e-ribbon-collections":{"e-ribbon-collection":{"e-ribbon-items":"e-ribbon-item"}}}}}}} as { [key: string]: Object },
-            tagNameMapper: {"e-ribbon-items":"e-items","e-ribbon-collections":"e-collections","e-ribbon-groups":"e-groups","e-ribbon-tabs":"e-tabs"} as Object,
+            tagMapper: {"e-ribbon-tabs":{"e-ribbon-tab":{"e-ribbon-groups":{"e-ribbon-group":{"e-ribbon-collections":{"e-ribbon-collection":{"e-ribbon-items":"e-ribbon-item"}}}}}},"e-ribbon-contextual-tabs":{"e-ribbon-contextual-tab":{"e-ribbon-tabs":{"e-ribbon-tab":{"e-ribbon-groups":{"e-ribbon-group":{"e-ribbon-collections":{"e-ribbon-collection":{"e-ribbon-items":"e-ribbon-item"}}}}}}}}} as { [key: string]: Object },
+            tagNameMapper: {"e-ribbon-items":"e-items","e-ribbon-collections":"e-collections","e-ribbon-groups":"e-groups","e-ribbon-tabs":"e-tabs","e-ribbon-contextual-tabs":"e-contextualTabs"} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -128,14 +129,17 @@ export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponen
         enableTab(tabId: string): void {
             return this.ej2Instances.enableTab(tabId);
         },
+        getItem(itemId: string): Object {
+            return this.ej2Instances.getItem(itemId);
+        },
         hideGroup(groupID: string): void {
             return this.ej2Instances.hideGroup(groupID);
         },
         hideItem(itemId: string): void {
             return this.ej2Instances.hideItem(itemId);
         },
-        hideTab(tabId: string): void {
-            return this.ej2Instances.hideTab(tabId);
+        hideTab(tabId: string, isContextual: boolean): void {
+            return this.ej2Instances.hideTab(tabId, isContextual);
         },
         refreshLayout(): void {
             return this.ej2Instances.refreshLayout();
@@ -161,8 +165,8 @@ export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponen
         showItem(itemId: string): void {
             return this.ej2Instances.showItem(itemId);
         },
-        showTab(tabId: string): void {
-            return this.ej2Instances.showTab(tabId);
+        showTab(tabId: string, isContextual: boolean): void {
+            return this.ej2Instances.showTab(tabId, isContextual);
         },
         updateCollection(collection: Object): void {
             return this.ej2Instances.updateCollection(collection);
@@ -179,7 +183,50 @@ export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponen
     }
 });
 
-export type RibbonComponent = InstanceType<typeof RibbonComponent>;
+export type RibbonComponent = typeof ComponentBase & {
+    ej2Instances: Ribbon;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addCollection(groupId: string, collection: Object, targetId?: string, isAfter?: boolean): void;
+    addGroup(tabId: string, group: Object, targetId?: string, isAfter?: boolean): void;
+    addItem(collectionId: string, item: Object, targetId?: string, isAfter?: boolean): void;
+    addTab(tab: Object, targetId?: string, isAfter?: boolean): void;
+    disableGroup(groupID: string): void;
+    disableItem(itemId: string): void;
+    disableTab(tabId: string): void;
+    enableGroup(groupID: string): void;
+    enableItem(itemId: string): void;
+    enableTab(tabId: string): void;
+    getItem(itemId: string): Object;
+    hideGroup(groupID: string): void;
+    hideItem(itemId: string): void;
+    hideTab(tabId: string, isContextual: boolean): void;
+    refreshLayout(): void;
+    removeCollection(collectionId: string): void;
+    removeGroup(groupId: string): void;
+    removeItem(itemId: string): void;
+    removeTab(tabId: string): void;
+    selectTab(tabId: string): void;
+    showGroup(groupID: string): void;
+    showItem(itemId: string): void;
+    showTab(tabId: string, isContextual: boolean): void;
+    updateCollection(collection: Object): void;
+    updateGroup(group: Object): void;
+    updateItem(item: Object): void;
+    updateTab(tab: Object): void
+};
 
 export const RibbonPlugin = {
     name: 'ejs-ribbon',
@@ -193,6 +240,8 @@ export const RibbonPlugin = {
         Vue.component(RibbonCollectionsPlugin.name, RibbonCollectionsDirective);
         Vue.component(RibbonItemPlugin.name, RibbonItemDirective);
         Vue.component(RibbonItemsPlugin.name, RibbonItemsDirective);
+        Vue.component(RibbonContextualTabPlugin.name, RibbonContextualTabDirective);
+        Vue.component(RibbonContextualTabsPlugin.name, RibbonContextualTabsDirective);
 
     }
 }

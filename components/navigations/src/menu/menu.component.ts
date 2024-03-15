@@ -128,7 +128,33 @@ export let MenuComponent: DefineVueComponent<MenuModel> =  vueDefineComponent({
     }
 });
 
-export type MenuComponent = InstanceType<typeof MenuComponent>;
+export type MenuComponent = typeof ComponentBase & {
+    ej2Instances: Menu;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    close(): void;
+    enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
+    getItemIndex(item: Object | string, isUniqueId?: boolean): number[];
+    hideItems(items: string[], isUniqueId?: boolean): void;
+    insertAfter(items: Object[], text: string, isUniqueId?: boolean): void;
+    insertBefore(items: Object[], text: string, isUniqueId?: boolean): void;
+    open(): void;
+    removeItems(items: string[], isUniqueId?: boolean): void;
+    setItem(item: Object, id?: string, isUniqueId?: boolean): void;
+    showItems(items: string[], isUniqueId?: boolean): void
+};
 
 export const MenuPlugin = {
     name: 'ejs-menu',

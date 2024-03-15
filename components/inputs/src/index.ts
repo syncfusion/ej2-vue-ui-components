@@ -1,5 +1,6 @@
 export * from '@syncfusion/ej2-inputs';
 export { TextBoxComponent, TextBoxPlugin } from './textbox/textbox.component';
+export { TextAreaComponent, TextAreaPlugin } from './textarea/textarea.component';
 export { NumericTextBoxComponent, NumericTextBoxPlugin } from './numerictextbox/numerictextbox.component';
 export { MaskedTextBoxComponent, MaskedTextBoxPlugin } from './maskedtextbox/maskedtextbox.component';
 export { SliderComponent, SliderPlugin } from './slider/slider.component';

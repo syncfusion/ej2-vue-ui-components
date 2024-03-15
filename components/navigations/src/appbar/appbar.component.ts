@@ -98,7 +98,24 @@ export let AppBarComponent: DefineVueComponent<AppBarModel> =  vueDefineComponen
     }
 });
 
-export type AppBarComponent = InstanceType<typeof AppBarComponent>;
+export type AppBarComponent = typeof ComponentBase & {
+    ej2Instances: AppBar;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    
+};
 
 export const AppBarPlugin = {
     name: 'ejs-appbar',

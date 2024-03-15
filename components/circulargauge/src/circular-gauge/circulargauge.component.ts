@@ -31,7 +31,7 @@ export let CircularGaugeComponent: DefineVueComponent<CircularGaugeModel> =  vue
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new CircularGauge({}) as any,
+            ej2Instances: new CircularGauge({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -116,7 +116,28 @@ export let CircularGaugeComponent: DefineVueComponent<CircularGaugeModel> =  vue
     }
 });
 
-export type CircularGaugeComponent = InstanceType<typeof CircularGaugeComponent>;
+export type CircularGaugeComponent = typeof ComponentBase & {
+    ej2Instances: CircularGauge;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
+    print(id?: string[] | string | Object): void;
+    setAnnotationValue(axisIndex: number, annotationIndex: number, content: string | Object): void;
+    setPointerValue(axisIndex: number, pointerIndex: number, value: number): void;
+    setRangeValue(axisIndex: number, rangeIndex: number, start: number, end: number): void
+};
 
 export const CircularGaugePlugin = {
     name: 'ejs-circulargauge',

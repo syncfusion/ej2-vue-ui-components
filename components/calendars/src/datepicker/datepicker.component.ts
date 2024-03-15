@@ -165,7 +165,33 @@ export let DatePickerComponent: DefineVueComponent<DatePickerModel> =  vueDefine
     }
 });
 
-export type DatePickerComponent = InstanceType<typeof DatePickerComponent>;
+export type DatePickerComponent = typeof ComponentBase & {
+    ej2Instances: DatePicker;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addDate(dates: Object | Object[]): void;
+    createContent(): void;
+    currentView(): string;
+    focusIn(triggerEvent?: boolean): void;
+    focusOut(): void;
+    hide(event?: Object | Object | Object): void;
+    navigateTo(view: Object, date: Object): void;
+    removeDate(dates: Object | Object[]): void;
+    requiredModules(): Object[];
+    show(type?: null | string, e?: Object | Object | Object): void
+};
 
 export const DatePickerPlugin = {
     name: 'ejs-datepicker',

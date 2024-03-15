@@ -110,7 +110,27 @@ export let SplitterComponent: DefineVueComponent<SplitterModel> =  vueDefineComp
     }
 });
 
-export type SplitterComponent = InstanceType<typeof SplitterComponent>;
+export type SplitterComponent = typeof ComponentBase & {
+    ej2Instances: Splitter;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addPane(paneProperties: Object, index: number): void;
+    collapse(index: number): void;
+    expand(index: number): void;
+    removePane(index: number): void
+};
 
 export const SplitterPlugin = {
     name: 'ejs-splitter',

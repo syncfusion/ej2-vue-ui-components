@@ -148,7 +148,27 @@ export let CarouselComponent: DefineVueComponent<CarouselModel> =  vueDefineComp
     }
 });
 
-export type CarouselComponent = InstanceType<typeof CarouselComponent>;
+export type CarouselComponent = typeof ComponentBase & {
+    ej2Instances: Carousel;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    next(): void;
+    pause(): void;
+    play(): void;
+    prev(): void
+};
 
 export const CarouselPlugin = {
     name: 'ejs-carousel',

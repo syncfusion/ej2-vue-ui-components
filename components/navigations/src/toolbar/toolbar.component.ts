@@ -116,7 +116,29 @@ export let ToolbarComponent: DefineVueComponent<ToolbarModel> =  vueDefineCompon
     }
 });
 
-export type ToolbarComponent = InstanceType<typeof ToolbarComponent>;
+export type ToolbarComponent = typeof ComponentBase & {
+    ej2Instances: Toolbar;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItems(items: Object[], index?: number): void;
+    disable(value: boolean): void;
+    enableItems(items: number | Object | Object, isEnable?: boolean): void;
+    hideItem(index: number | Object | Object, value?: boolean): void;
+    refreshOverflow(): void;
+    removeItems(args: number | Object | Object | Object | Object[]): void
+};
 
 export const ToolbarPlugin = {
     name: 'ejs-toolbar',

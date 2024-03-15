@@ -265,8 +265,8 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         setRecurrenceEditor(recurrenceEditor: Object): void {
             return this.ej2Instances.setRecurrenceEditor(recurrenceEditor);
         },
-        setResourceCollections(resourceCol: Object[]): void {
-            return this.ej2Instances.setResourceCollections(resourceCol);
+        setResourceCollections(resourceCol: Object[], isEventDataRefresh: boolean): void {
+            return this.ej2Instances.setResourceCollections(resourceCol, isEventDataRefresh);
         },
         setWorkHours(dates: Object[], start: string, end: string, groupIndex?: number): void {
             return this.ej2Instances.setWorkHours(dates, start, end, groupIndex);
@@ -277,7 +277,69 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
     }
 });
 
-export type ScheduleComponent = InstanceType<typeof ScheduleComponent>;
+export type ScheduleComponent = typeof ComponentBase & {
+    ej2Instances: Schedule;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addEvent(data: Object | Object[]): void;
+    addResource(resources: Object | Object[], name: string, index: number): void;
+    changeCurrentView(viewName: Object, viewIndex?: number): void;
+    closeEditor(): void;
+    closeQuickInfoPopup(): void;
+    closeTooltip(): void;
+    collapseResource(resourceId: string | number, name: string): void;
+    deleteEvent(id: string | number | Object | Object[], currentAction?: Object): void;
+    expandResource(resourceId: string | number, name: string): void;
+    exportToExcel(excelExportOptions?: Object): void;
+    exportToICalendar(fileName?: string, customData?: Object[]): void;
+    generateEventOccurrences(event: Object, startDate?: Object): Object[];
+    getBlockEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[];
+    getCellDetails(tdCol: Object | Object[]): Object;
+    getCurrentViewDates(): Object[];
+    getCurrentViewEvents(): Object[];
+    getCurrentViewIndex(): number;
+    getDeletedOccurrences(recurrenceData: string | number | Object): Object[];
+    getEventDetails(element: Object): Object;
+    getEventMaxID(): number | string;
+    getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[];
+    getIndexFromResourceId(id: string | number, name?: string): number;
+    getOccurrencesByID(eventID: number | string): Object[];
+    getOccurrencesByRange(startTime: Object, endTime: Object): Object[];
+    getResourceCollections(): Object[];
+    getResourcesByIndex(index: number): Object;
+    getSelectedElements(): Object[];
+    hideSpinner(): void;
+    importICalendar(fileContent: Object | string): void;
+    isSlotAvailable(startTime: Object | Object, endTime?: Object, groupIndex?: number): boolean;
+    openEditor(data: Object, action: Object, isEventData?: boolean, repeatType?: number): void;
+    openQuickInfoPopup(data: Object): void;
+    print(printOptions?: Object): void;
+    refreshEvents(isRemoteRefresh: boolean): void;
+    refreshLayout(): void;
+    refreshTemplates(templateName?: string): void;
+    removeResource(resourceId: string | string[] | number | number[], name: string): void;
+    resetWorkHours(dates: Object[], start?: string, end?: string, groupIndex?: number): void;
+    saveEvent(data: Object | Object[], currentAction?: Object): void;
+    scrollTo(hour: string, scrollDate?: Object): void;
+    scrollToResource(resourceId: string | number, groupName?: string): void;
+    selectResourceByIndex(groupIndex: number): void;
+    setRecurrenceEditor(recurrenceEditor: Object): void;
+    setResourceCollections(resourceCol: Object[], isEventDataRefresh: boolean): void;
+    setWorkHours(dates: Object[], start: string, end: string, groupIndex?: number): void;
+    showSpinner(): void
+};
 
 export const SchedulePlugin = {
     name: 'ejs-schedule',

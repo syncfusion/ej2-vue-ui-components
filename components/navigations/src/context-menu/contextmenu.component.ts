@@ -128,7 +128,33 @@ export let ContextMenuComponent: DefineVueComponent<ContextMenuModel> =  vueDefi
     }
 });
 
-export type ContextMenuComponent = InstanceType<typeof ContextMenuComponent>;
+export type ContextMenuComponent = typeof ComponentBase & {
+    ej2Instances: ContextMenu;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    close(): void;
+    enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
+    getItemIndex(item: Object | string, isUniqueId?: boolean): number[];
+    hideItems(items: string[], isUniqueId?: boolean): void;
+    insertAfter(items: Object[], text: string, isUniqueId?: boolean): void;
+    insertBefore(items: Object[], text: string, isUniqueId?: boolean): void;
+    open(top: number, left: number, target?: Object): void;
+    removeItems(items: string[], isUniqueId?: boolean): void;
+    setItem(item: Object, id?: string, isUniqueId?: boolean): void;
+    showItems(items: string[], isUniqueId?: boolean): void
+};
 
 export const ContextMenuPlugin = {
     name: 'ejs-contextmenu',

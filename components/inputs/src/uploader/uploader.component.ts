@@ -134,7 +134,35 @@ export let UploaderComponent: DefineVueComponent<UploaderModel> =  vueDefineComp
     }
 });
 
-export type UploaderComponent = InstanceType<typeof UploaderComponent>;
+export type UploaderComponent = typeof ComponentBase & {
+    ej2Instances: Uploader;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    bytesToSize(bytes: number): string;
+    cancel(fileData?: Object[]): void;
+    clearAll(): void;
+    createFileList(fileData: Object[]): void;
+    getFilesData(index?: number): Object[];
+    pause(fileData?: Object | Object[], custom?: boolean): void;
+    remove(fileData?: Object | Object[], customTemplate?: boolean, removeDirectly?: boolean, postRawFile?: boolean, args?: Object | Object | Object): void;
+    resume(fileData?: Object | Object[], custom?: boolean): void;
+    retry(fileData?: Object | Object[], fromcanceledStage?: boolean, custom?: boolean): void;
+    sortFileList(filesData?: Object): Object[];
+    traverseFileTree(item: any, event?: Object | Object | Object | Object): void;
+    upload(files?: Object | Object[], custom?: boolean): void
+};
 
 export const UploaderPlugin = {
     name: 'ejs-uploader',

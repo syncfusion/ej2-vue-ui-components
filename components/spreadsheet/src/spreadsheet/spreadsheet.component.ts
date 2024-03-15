@@ -13,7 +13,7 @@ import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sh
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'listSeparator', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -382,7 +382,115 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
     }
 });
 
-export type SpreadsheetComponent = InstanceType<typeof SpreadsheetComponent>;
+export type SpreadsheetComponent = typeof ComponentBase & {
+    ej2Instances: Spreadsheet;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    Unfreeze(sheet?: number | string): void;
+    addContextMenuItems(items: Object[], text: string, insertAfter: boolean, isUniqueId?: boolean): void;
+    addCustomFunction(functionHandler: string | Object, functionName?: string, formulaDescription?: string): void;
+    addDataValidation(rules: Object, range?: string): void;
+    addDefinedName(definedName: Object): boolean;
+    addFileMenuItems(items: Object[], text: string, insertAfter: boolean, isUniqueId?: boolean): void;
+    addHyperlink(hyperlink: string | Object, address: string, displayText?: string): void;
+    addInvalidHighlight(range?: string): void;
+    addRibbonTabs(items: Object[], insertBefore?: string): void;
+    addToolbarItems(tab: string, items: Object[], index?: number): void;
+    applyFilter(predicates?: Object[], range?: string): Object;
+    autoFill(fillRange: string, dataRange?: string, direction?: Object, fillType?: Object): void;
+    autoFit(range: string): void;
+    cellFormat(style: Object, range?: string): void;
+    clear(options: Object): void;
+    clearConditionalFormat(range?: string): void;
+    clearFilter(field?: string): void;
+    closeEdit(): void;
+    computeExpression(formula: string): string | number;
+    conditionalFormat(conditionalFormat: Object): void;
+    copy(address?: string): Object;
+    cut(address?: string): Object;
+    delete(startIndex?: number, endIndex?: number, model?: Object, sheet?: number | string): void;
+    deleteChart(id?: string): void;
+    deleteImage(id: string, range?: string): void;
+    deselectChart(): void;
+    deselectImage(): void;
+    duplicateSheet(sheetIndex?: number): void;
+    enableContextMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
+    enableFileMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
+    enableRibbonTabs(tabs: string[], enable: boolean): void;
+    enableToolbarItems(tab: string, items?: number[] | string[], enable?: boolean): void;
+    endEdit(): void;
+    find(args: Object): void | string;
+    findAll(value: string, mode?: string, isCSen?: boolean, isEMatch?: boolean, sheetIndex?: number): string[];
+    freezePanes(row: number, column: number, sheet?: number | string): void;
+    getData(address: string): Object;
+    getDisplayText(cell: Object): string;
+    getRowData(index?: number, sheetIndex?: number): Object[];
+    getSelectAllContent(): Object;
+    goTo(address: string): void;
+    hideColumn(startIndex: number, endIndex: number, hide: boolean): void;
+    hideFileMenuItems(items: string[], hide: boolean, isUniqueId?: boolean): void;
+    hideRibbonTabs(tabs: string[], hide: boolean): void;
+    hideRow(startIndex: number, endIndex: number, hide: boolean): void;
+    hideSpinner(): void;
+    hideToolbarItems(tab: string, indexes: number[], hide: boolean): void;
+    insertChart(chart?: Object[]): void;
+    insertColumn(startColumn?: number | Object[], endColumn?: number, sheet?: number | string): void;
+    insertImage(images: Object[], range?: string): void;
+    insertRow(startRow?: number | Object[], endRow?: number, sheet?: number | string): void;
+    insertSheet(startSheet?: number | Object[], endSheet?: number): void;
+    isValidCell(cellAddress?: string): boolean;
+    lockCells(range?: string, isLocked?: boolean): void;
+    merge(range?: string, type?: Object): void;
+    moveSheet(position: number, sheetIndexes?: number[]): void;
+    numberFormat(format: string, range?: string): void;
+    open(options: Object): void;
+    openFromJson(options: undefined): void;
+    paste(address?: string, type?: Object): void;
+    protectSheet(sheet?: number | string, protectSettings?: Object, password?: string): void;
+    redo(): void;
+    refresh(isNew?: boolean): void;
+    removeContextMenuItems(items: string[], isUniqueId?: boolean): void;
+    removeDataValidation(range?: string): void;
+    removeDefinedName(definedName: string, scope: string): boolean;
+    removeHyperlink(range: string): void;
+    removeInvalidHighlight(range?: string): void;
+    replace(args: Object): void;
+    resize(): void;
+    save(saveOptions: Object): void;
+    saveAsJson(): Object;
+    selectChart(id?: string): void;
+    selectImage(id?: string): void;
+    selectRange(address: string): void;
+    setBorder(style: Object, range?: string, type?: Object, isUndoRedo?: boolean): void;
+    setColWidth(width: number | string, colIndex: number, sheetIndex?: number): void;
+    setColumnsWidth(width: number, ranges?: string[]): void;
+    setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean): void;
+    setRowsHeight(height: number, ranges?: string[]): void;
+    showSpinner(): void;
+    sort(sortOptions?: Object, range?: string): Object;
+    startEdit(): void;
+    unMerge(range?: string): void;
+    undo(): void;
+    unfreezePanes(sheet?: number | string): void;
+    unprotectSheet(sheet?: number | string): void;
+    updateAction(options: Object): void;
+    updateCell(cell: Object, address?: string): void;
+    updateRange(range: Object, sheetIdx?: number): void;
+    updateUndoRedoCollection(args: undefined): void;
+    wrap(address: string, wrap: boolean): void
+};
 
 export const SpreadsheetPlugin = {
     name: 'ejs-spreadsheet',

@@ -31,26 +31,7 @@ export const RibbonCollectionsPlugin = {
     }
 }
 
-/**
- * `e-ribbon-collection` directive represent a collection in the VueJS Ribbon. 
- * ```vue
- * <ejs-ribbon>
- *   <e-ribbon-tabs>
- *    <e-ribbon-tab></e-ribbon-tab>
- *    <e-ribbon-tab>
- *       <e-ribbon-groups>
- *         <e-ribbon-group>
- *             <e-ribbon-collections>
- *                 <e-ribbon-collection></e-ribbon-collection>
- *                 <e-ribbon-collection></e-ribbon-collection>
- *             </e-ribbon-collections>
- *         </e-ribbon-group>
- *       </e-ribbon-groups>
- *    </e-ribbon-tab>
- *   </e-ribbon-tabs>
- * </ejs-ribbon>
- * ```
- */
+
 export let RibbonCollectionDirective: DefineVueDirective<RibbonCollectionModel> =  vueDefineComponent({
     render(): void {
         return;

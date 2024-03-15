@@ -98,7 +98,24 @@ export let SkeletonComponent: DefineVueComponent<SkeletonModel> =  vueDefineComp
     }
 });
 
-export type SkeletonComponent = InstanceType<typeof SkeletonComponent>;
+export type SkeletonComponent = typeof ComponentBase & {
+    ej2Instances: Skeleton;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    
+};
 
 export const SkeletonPlugin = {
     name: 'ejs-skeleton',

@@ -31,22 +31,7 @@ export const RibbonGroupsPlugin = {
     }
 }
 
-/**
- * `e-ribbon-group` directive represent a group in the VueJS Ribbon. 
- * ```vue
- * <ejs-ribbon>
- *   <e-ribbon-tabs>
- *    <e-ribbon-tab></e-ribbon-tab>
- *    <e-ribbon-tab>
- *       <e-ribbon-groups>
- *         <e-ribbon-group></e-ribbon-group>
- *         <e-ribbon-group></e-ribbon-group>
- *       </e-ribbon-groups>
- *    </e-ribbon-tab>
- *   </e-ribbon-tabs>
- * </ejs-ribbon>
- * ```
- */
+
 export let RibbonGroupDirective: DefineVueDirective<RibbonGroupModel> =  vueDefineComponent({
     render(): void {
         return;

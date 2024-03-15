@@ -150,7 +150,28 @@ export let TimePickerComponent: DefineVueComponent<TimePickerModel> =  vueDefine
     }
 });
 
-export type TimePickerComponent = InstanceType<typeof TimePickerComponent>;
+export type TimePickerComponent = typeof ComponentBase & {
+    ej2Instances: TimePicker;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    focusIn(): void;
+    focusOut(): void;
+    hide(): void;
+    requiredModules(): Object[];
+    show(event?: Object | Object | Object): void
+};
 
 export const TimePickerPlugin = {
     name: 'ejs-timepicker',

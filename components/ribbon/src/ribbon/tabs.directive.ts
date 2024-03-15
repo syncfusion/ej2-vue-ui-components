@@ -31,18 +31,7 @@ export const RibbonTabsPlugin = {
     }
 }
 
-/**
- * `e-ribbon-tab` directive represent a column of the VueJS Ribbon. 
- * It must be contained in a Ribbon component(`ejs-ribbon`). 
- * ```vue
- * <ejs-ribbon>
- *   <e-ribbon-tabs>
- *    <e-ribbon-tab></e-ribbon-tab>
- *    <e-ribbon-tab></e-ribbon-tab>
- *   </e-ribbon-tabs>
- * </ejs-ribbon>
- * ```
- */
+
 export let RibbonTabDirective: DefineVueDirective<RibbonTabModel> =  vueDefineComponent({
     render(): void {
         return;

@@ -141,7 +141,7 @@ export let ListBoxComponent: DefineVueComponent<ListBoxModel> =  vueDefineCompon
         filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
             return this.ej2Instances.filter(dataSource, query, fields);
         },
-        getDataByValue(value: string | number | boolean): Object | string | number | boolean {
+        getDataByValue(value: string | number | boolean | any): Object | string | number | boolean {
             return this.ej2Instances.getDataByValue(value);
         },
         getDataByValues(value: string[] | number[] | boolean[]): undefined[] {
@@ -198,7 +198,44 @@ export let ListBoxComponent: DefineVueComponent<ListBoxModel> =  vueDefineCompon
     }
 });
 
-export type ListBoxComponent = InstanceType<typeof ListBoxComponent>;
+export type ListBoxComponent = typeof ComponentBase & {
+    ej2Instances: ListBox;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItems(items: Object[] | Object, itemIndex?: number): void;
+    enableItems(items: string[], enable: boolean, isValue?: boolean): void;
+    filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
+    getDataByValue(value: string | number | boolean | any): Object | string | number | boolean;
+    getDataByValues(value: string[] | number[] | boolean[]): undefined[];
+    getDataList(): undefined[] | string[] | boolean[] | number[];
+    getItems(): Object[];
+    getSortedList(): undefined[] | string[] | boolean[] | number[];
+    hideSpinner(): void;
+    moveAllTo(targetId?: string, index?: number): void;
+    moveBottom(value?: string[] | number[] | boolean[]): void;
+    moveDown(value?: string[] | number[] | boolean[]): void;
+    moveTo(value?: string[] | number[] | boolean[], index?: number, targetId?: string): void;
+    moveTop(value?: string[] | number[] | boolean[]): void;
+    moveUp(value?: string[] | number[] | boolean[]): void;
+    removeItem(items?: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
+    removeItems(items?: Object[] | Object, itemIndex?: number): void;
+    requiredModules(): Object[];
+    selectAll(state: boolean): void;
+    selectItems(items: string[], state: boolean, isValue?: boolean): void;
+    showSpinner(): void
+};
 
 export const ListBoxPlugin = {
     name: 'ejs-listbox',

@@ -148,7 +148,27 @@ export let BulletChartComponent: DefineVueComponent<BulletChartModel> =  vueDefi
     }
 });
 
-export type BulletChartComponent = InstanceType<typeof BulletChartComponent>;
+export type BulletChartComponent = typeof ComponentBase & {
+    ej2Instances: BulletChart;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    createSvg(chart: Object): void;
+    export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number, isVertical?: boolean): void;
+    print(id?: string[] | string | Object): void;
+    removeSvg(): void
+};
 
 export const BulletChartPlugin = {
     name: 'ejs-bulletchart',

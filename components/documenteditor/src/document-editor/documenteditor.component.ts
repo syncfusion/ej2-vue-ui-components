@@ -181,7 +181,51 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
     }
 });
 
-export type DocumentEditorComponent = InstanceType<typeof DocumentEditorComponent>;
+export type DocumentEditorComponent = typeof ComponentBase & {
+    ej2Instance: DocumentEditor;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    enableAllModules(): void;
+    exportAsImage(pageNumber: number, format: Object): Object;
+    exportFormData(): Object[];
+    fitPage(pageFitType?: Object): void;
+    focusIn(): void;
+    getBookmarks(): string[];
+    getFormFieldInfo(name: string): Object | Object | Object;
+    getFormFieldNames(): string[];
+    getStyleNames(styleType?: Object): string[];
+    getStyles(styleType?: Object): Object[];
+    importFormData(formData: Object[]): void;
+    open(sfdtText: string): void;
+    openBlank(): void;
+    print(printWindow?: Object): void;
+    resetFormFields(name?: string): void;
+    resize(width?: number, height?: number): void;
+    save(fileName: string, formatType?: Object): void;
+    saveAsBlob(formatType?: Object): Object;
+    scrollToPage(pageNumber: number): boolean;
+    serialize(): string;
+    setDefaultCharacterFormat(characterFormat: Object): void;
+    setDefaultParagraphFormat(paragraphFormat: Object): void;
+    setDefaultSectionFormat(sectionFormat: Object): void;
+    setFormFieldInfo(name: string, formFieldInfo: Object | Object | Object): void;
+    showDialog(dialogType: Object): void;
+    showOptionsPane(): void;
+    showRestrictEditingPane(show?: boolean): void;
+    updateFields(): void
+};
 
 export const DocumentEditorPlugin = {
     name: 'ejs-documenteditor',

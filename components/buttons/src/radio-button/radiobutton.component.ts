@@ -144,7 +144,26 @@ export let RadioButtonComponent: DefineVueComponent<RadioButtonModel> =  vueDefi
     }
 });
 
-export type RadioButtonComponent = InstanceType<typeof RadioButtonComponent>;
+export type RadioButtonComponent = typeof ComponentBase & {
+    ej2Instances: RadioButton;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    click(): void;
+    focusIn(): void;
+    getSelectedValue(): string
+};
 
 export const RadioButtonPlugin = {
     name: 'ejs-radiobutton',

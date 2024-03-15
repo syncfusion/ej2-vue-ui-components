@@ -152,7 +152,28 @@ export let AccumulationChartComponent: DefineVueComponent<AccumulationChartModel
     }
 });
 
-export type AccumulationChartComponent = InstanceType<typeof AccumulationChartComponent>;
+export type AccumulationChartComponent = typeof ComponentBase & {
+    ej2Instances: AccumulationChart;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    calculateBounds(): void;
+    export(type: Object, fileName: string): void;
+    print(id?: string[] | string | Object): void;
+    setAnnotationValue(annotationIndex: number, content: string): void;
+    titleTooltip(event: Object, x: number, y: number, isTouch?: boolean): void
+};
 
 export const AccumulationChartPlugin = {
     name: 'ejs-accumulationchart',

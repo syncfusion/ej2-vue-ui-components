@@ -138,7 +138,24 @@ export let RatingComponent: DefineVueComponent<RatingModel> =  vueDefineComponen
     }
 });
 
-export type RatingComponent = InstanceType<typeof RatingComponent>;
+export type RatingComponent = typeof ComponentBase & {
+    ej2Instances: Rating;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    reset(): void
+};
 
 export const RatingPlugin = {
     name: 'ejs-rating',

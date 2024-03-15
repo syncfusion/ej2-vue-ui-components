@@ -150,7 +150,28 @@ export let NumericTextBoxComponent: DefineVueComponent<NumericTextBoxModel> =  v
     }
 });
 
-export type NumericTextBoxComponent = InstanceType<typeof NumericTextBoxComponent>;
+export type NumericTextBoxComponent = typeof ComponentBase & {
+    ej2Instances: NumericTextBox;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    decrement(step: number): void;
+    focusIn(): void;
+    focusOut(): void;
+    getText(): string;
+    increment(step: number): void
+};
 
 export const NumericTextBoxPlugin = {
     name: 'ejs-numerictextbox',

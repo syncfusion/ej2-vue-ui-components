@@ -13,7 +13,25 @@ export const isExecute: boolean = (parseInt(curVue['version']) > 2) ? false : tr
 
 export let vueDefineComponent = (options: any) => { return !isExecute? aVue['defineComponent'](options) : aVue['extend'](options) };
 
-export let ComponentBase = vueDefineComponent({
+type ComponentBase = {
+    getInjectedServices(): Object[];
+    updated(): void;
+    bindProperties(): void;
+    assignValueToWrapper(option: Object, silent?: boolean): void;
+    fetchChildPropValues(childOption: Object): void;
+    getDirectiveValues(tagDirectives: any, tagMapper: {
+        [key: string]: Object;
+    }, tagNameMapper: Object): Object;
+    getMultiLevelDirValue(tagDirectories: any, tagKey: string | Object, tagNameMapper: Object): Object;
+    getVNodeValue(tagDirective: any, tagKey: string | Object, tagNameMapper: Object): Object;
+    /**
+     * convert kebab case directive props to camel case
+     */
+    getCamelCaseProps(props: Object): Object;
+    dataBind(): void;
+}
+
+export let ComponentBase: ComponentBase = vueDefineComponent({
     name: 'ComponentBase',
     data() {
         return {

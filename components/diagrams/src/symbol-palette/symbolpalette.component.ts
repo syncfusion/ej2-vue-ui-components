@@ -110,7 +110,27 @@ export let SymbolPaletteComponent: DefineVueComponent<SymbolPaletteModel> =  vue
     }
 });
 
-export type SymbolPaletteComponent = InstanceType<typeof SymbolPaletteComponent>;
+export type SymbolPaletteComponent = typeof ComponentBase & {
+    ej2Instances: SymbolPalette;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addPaletteItem(paletteName: string, paletteSymbol: Object | Object, isChild?: boolean): void;
+    addPalettes(palettes: Object[]): void;
+    removePaletteItem(paletteName: string, symbolId: string): void;
+    removePalettes(palettes: string[]): void
+};
 
 export const SymbolPalettePlugin = {
     name: 'ejs-symbolpalette',

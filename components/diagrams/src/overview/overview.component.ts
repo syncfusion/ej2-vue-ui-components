@@ -100,7 +100,24 @@ export let OverviewComponent: DefineVueComponent<OverviewModel> =  vueDefineComp
     }
 });
 
-export type OverviewComponent = InstanceType<typeof OverviewComponent>;
+export type OverviewComponent = typeof ComponentBase & {
+    ej2Instances: Overview;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    updateHtmlLayer(view: Object): void
+};
 
 export const OverviewPlugin = {
     name: 'ejs-overview',

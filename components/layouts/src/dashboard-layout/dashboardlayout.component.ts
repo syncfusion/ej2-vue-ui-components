@@ -122,7 +122,31 @@ export let DashboardLayoutComponent: DefineVueComponent<DashboardLayoutModel> = 
     }
 });
 
-export type DashboardLayoutComponent = InstanceType<typeof DashboardLayoutComponent>;
+export type DashboardLayoutComponent = typeof ComponentBase & {
+    ej2Instances: DashboardLayout;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addPanel(panel: Object): void;
+    movePanel(id: string, row: number, col: number): void;
+    refresh(): void;
+    removeAll(): void;
+    removePanel(id: string): void;
+    resizePanel(id: string, sizeX: number, sizeY: number): void;
+    serialize(): Object[];
+    updatePanel(panel: Object): void
+};
 
 export const DashboardLayoutPlugin = {
     name: 'ejs-dashboardlayout',

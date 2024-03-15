@@ -97,8 +97,14 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         applyImageFilter(filterOption: Object): void {
             return this.ej2Instances.applyImageFilter(filterOption);
         },
-        clearSelection(): void {
-            return this.ej2Instances.clearSelection();
+        canRedo(): boolean {
+            return this.ej2Instances.canRedo();
+        },
+        canUndo(): boolean {
+            return this.ej2Instances.canUndo();
+        },
+        clearSelection(resetCrop?: boolean): void {
+            return this.ej2Instances.clearSelection(resetCrop);
         },
         cloneShape(shapeId: string): boolean {
             return this.ej2Instances.cloneShape(shapeId);
@@ -109,29 +115,32 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         deleteShape(id: string): void {
             return this.ej2Instances.deleteShape(id);
         },
-        drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object): boolean {
-            return this.ej2Instances.drawArrow(startX, startY, endX, endY, strokeWidth, strokeColor, arrowStart, arrowEnd);
+        drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawArrow(startX, startY, endX, endY, strokeWidth, strokeColor, arrowStart, arrowEnd, isSelected);
         },
-        drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number): boolean {
-            return this.ej2Instances.drawEllipse(x, y, radiusX, radiusY, strokeWidth, strokeColor, fillColor, degree);
+        drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawEllipse(x, y, radiusX, radiusY, strokeWidth, strokeColor, fillColor, degree, isSelected);
         },
         drawFrame(frameType: Object, color?: string, gradientColor?: string, size?: number, inset?: number, offset?: number, borderRadius?: number, frameLineStyle?: Object, lineCount?: number): boolean {
             return this.ej2Instances.drawFrame(frameType, color, gradientColor, size, inset, offset, borderRadius, frameLineStyle, lineCount);
         },
-        drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number, opacity?: number): boolean {
-            return this.ej2Instances.drawImage(data, x, y, width, height, isAspectRatio, degree, opacity);
+        drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number, opacity?: number, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawImage(data, x, y, width, height, isAspectRatio, degree, opacity, isSelected);
         },
-        drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string): boolean {
-            return this.ej2Instances.drawLine(startX, startY, endX, endY, strokeWidth, strokeColor);
+        drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawLine(startX, startY, endX, endY, strokeWidth, strokeColor, isSelected);
         },
-        drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, opacity?: number): boolean {
-            return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor, opacity);
+        drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor, isSelected);
         },
-        drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number): boolean {
-            return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree);
+        drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree, isSelected);
         },
-        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string): boolean {
-            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color);
+        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean): boolean {
+            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected);
+        },
+        enableTextEditing(): void {
+            return this.ej2Instances.enableTextEditing();
         },
         export(type?: string, fileName?: string): void {
             return this.ej2Instances.export(type, fileName);
@@ -150,6 +159,9 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         },
         getImageDimension(): Object {
             return this.ej2Instances.getImageDimension();
+        },
+        getImageFilter(filterOption: Object): string {
+            return this.ej2Instances.getImageFilter(filterOption);
         },
         getShapeSetting(id: string): Object {
             return this.ej2Instances.getShapeSetting(id);
@@ -193,8 +205,8 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         update(): void {
             return this.ej2Instances.update();
         },
-        updateShape(setting: Object): boolean {
-            return this.ej2Instances.updateShape(setting);
+        updateShape(setting: Object, isSelected?: boolean): boolean {
+            return this.ej2Instances.updateShape(setting, isSelected);
         },
         zoom(zoomFactor: number, zoomPoint?: Object): void {
             return this.ej2Instances.zoom(zoomFactor, zoomPoint);
@@ -202,7 +214,62 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
     }
 });
 
-export type ImageEditorComponent = InstanceType<typeof ImageEditorComponent>;
+export type ImageEditorComponent = typeof ComponentBase & {
+    ej2Instances: ImageEditor;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    applyImageFilter(filterOption: Object): void;
+    canRedo(): boolean;
+    canUndo(): boolean;
+    clearSelection(resetCrop?: boolean): void;
+    cloneShape(shapeId: string): boolean;
+    crop(): boolean;
+    deleteShape(id: string): void;
+    drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object, isSelected?: boolean): boolean;
+    drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean;
+    drawFrame(frameType: Object, color?: string, gradientColor?: string, size?: number, inset?: number, offset?: number, borderRadius?: number, frameLineStyle?: Object, lineCount?: number): boolean;
+    drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number, opacity?: number, isSelected?: boolean): boolean;
+    drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
+    drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
+    drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean;
+    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean): boolean;
+    enableTextEditing(): void;
+    export(type?: string, fileName?: string): void;
+    finetuneImage(finetuneOption: Object, value: number): void;
+    flip(direction: Object): void;
+    freehandDraw(value: boolean): void;
+    getImageData(): Object;
+    getImageDimension(): Object;
+    getImageFilter(filterOption: Object): string;
+    getShapeSetting(id: string): Object;
+    getShapeSettings(): Object[];
+    initialize(): void;
+    open(data: string | Object): void;
+    pan(value: boolean): void;
+    redo(): void;
+    reset(): void;
+    resize(width: number, height: number, isAspectRatio?: boolean): boolean;
+    rotate(degree: number): boolean;
+    select(type: string, startX?: number, startY?: number, width?: number, height?: number): void;
+    selectShape(id: string): boolean;
+    straightenImage(degree: number): boolean;
+    undo(): void;
+    update(): void;
+    updateShape(setting: Object, isSelected?: boolean): boolean;
+    zoom(zoomFactor: number, zoomPoint?: Object): void
+};
 
 export const ImageEditorPlugin = {
     name: 'ejs-imageeditor',

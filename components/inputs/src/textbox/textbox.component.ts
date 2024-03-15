@@ -150,7 +150,28 @@ export let TextBoxComponent: DefineVueComponent<TextBoxModel> =  vueDefineCompon
     }
 });
 
-export type TextBoxComponent = InstanceType<typeof TextBoxComponent>;
+export type TextBoxComponent = typeof ComponentBase & {
+    ej2Instances: TextBox;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addAttributes(attributes: undefined): void;
+    addIcon(position: string, icons: string | string[]): void;
+    focusIn(): void;
+    focusOut(): void;
+    removeAttributes(attributes: string[]): void
+};
 
 export const TextBoxPlugin = {
     name: 'ejs-textbox',

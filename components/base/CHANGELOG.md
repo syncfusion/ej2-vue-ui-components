@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 24.2.3 (2024-01-31)
+## 25.1.35 (2024-03-15)
 
 ### Common
 
 #### Bug Fixes
 
-- `#I528934` - The issue with "Reactivity is not working in Vue Grid component" has been resolved.
+- `#I552563` - The issue with "the TypeScript intellisense is not shown in the Vue components" has been resolved.
 
 ## 24.1.41 (2023-12-18)
 

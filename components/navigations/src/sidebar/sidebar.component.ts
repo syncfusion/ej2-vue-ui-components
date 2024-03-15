@@ -144,7 +144,26 @@ export let SidebarComponent: DefineVueComponent<SidebarModel> =  vueDefineCompon
     }
 });
 
-export type SidebarComponent = InstanceType<typeof SidebarComponent>;
+export type SidebarComponent = typeof ComponentBase & {
+    ej2Instances: Sidebar;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    hide(e?: Object): void;
+    show(e?: Object): void;
+    toggle(): void
+};
 
 export const SidebarPlugin = {
     name: 'ejs-sidebar',

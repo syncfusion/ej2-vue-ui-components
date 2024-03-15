@@ -104,7 +104,25 @@ export let ToastComponent: DefineVueComponent<ToastModel> =  vueDefineComponent(
     }
 });
 
-export type ToastComponent = InstanceType<typeof ToastComponent>;
+export type ToastComponent = typeof ComponentBase & {
+    ej2Instances: Toast;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    hide(element?: Object | Object | string): void;
+    show(toastObj?: Object): void
+};
 
 export const ToastPlugin = {
     name: 'ejs-toast',

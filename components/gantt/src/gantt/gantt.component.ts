@@ -11,7 +11,7 @@ import { HolidaysDirective, HolidayDirective, HolidaysPlugin, HolidayPlugin } fr
 import { EventMarkersDirective, EventMarkerDirective, EventMarkersPlugin, EventMarkerPlugin } from './eventmarkers.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'UpdateOffsetOnTaskbarEdit', 'addDialogFields', 'allowExcelExport', 'allowFiltering', 'allowKeyboard', 'allowParentDependency', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTaskbarDragAndDrop', 'allowTaskbarOverlap', 'allowUnscheduledTasks', 'autoCalculateDateScheduling', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columnMenuItems', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'contextMenuItems', 'dataSource', 'dateFormat', 'dayWorkingTime', 'disableHtmlEncode', 'durationUnit', 'editDialogFields', 'editSettings', 'enableContextMenu', 'enableCriticalPath', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableMultiTaskbar', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'enableTimelineVirtualization', 'enableVirtualMaskRow', 'enableVirtualization', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'loadChildOnDemand', 'loadingIndicator', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'readOnly', 'renderBaseline', 'resourceFields', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'segmentData', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'showOverAllocation', 'sortSettings', 'splitterSettings', 'taskFields', 'taskMode', 'taskType', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'timezone', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'validateManualTasksOnLinking', 'viewType', 'width', 'workUnit', 'workWeek', 'zoomingLevels', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeExcelExport', 'beforePdfExport', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataStateChange', 'destroyed', 'endEdit', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'onMouseMove', 'onTaskbarClick', 'pdfColumnHeaderQueryCellInfo', 'pdfExportComplete', 'pdfQueryCellInfo', 'pdfQueryTaskbarInfo', 'pdfQueryTimelineCellInfo', 'queryCellInfo', 'queryTaskbarInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'UpdateOffsetOnTaskbarEdit', 'addDialogFields', 'allowExcelExport', 'allowFiltering', 'allowKeyboard', 'allowParentDependency', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTaskbarDragAndDrop', 'allowTaskbarOverlap', 'allowUnscheduledTasks', 'autoCalculateDateScheduling', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columnMenuItems', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'contextMenuItems', 'dataSource', 'dateFormat', 'dayWorkingTime', 'disableHtmlEncode', 'durationUnit', 'editDialogFields', 'editSettings', 'enableContextMenu', 'enableCriticalPath', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableMultiTaskbar', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'enableTimelineVirtualization', 'enableUndoRedo', 'enableVirtualMaskRow', 'enableVirtualization', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'loadChildOnDemand', 'loadingIndicator', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'readOnly', 'renderBaseline', 'resourceFields', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'segmentData', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'showOverAllocation', 'sortSettings', 'splitterSettings', 'taskFields', 'taskMode', 'taskType', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'timezone', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'undoRedoActions', 'undoRedoStepsCount', 'validateManualTasksOnLinking', 'viewType', 'width', 'workUnit', 'workWeek', 'zoomingLevels', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeExcelExport', 'beforePdfExport', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataStateChange', 'destroyed', 'endEdit', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'onMouseMove', 'onTaskbarClick', 'pdfColumnHeaderQueryCellInfo', 'pdfExportComplete', 'pdfQueryCellInfo', 'pdfQueryTaskbarInfo', 'pdfQueryTimelineCellInfo', 'queryCellInfo', 'queryTaskbarInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -153,11 +153,17 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         clearFiltering(fields?: string[]): void {
             return this.ej2Instances.clearFiltering(fields);
         },
+        clearRedoCollection(): void {
+            return this.ej2Instances.clearRedoCollection();
+        },
         clearSelection(): void {
             return this.ej2Instances.clearSelection();
         },
         clearSorting(): void {
             return this.ej2Instances.clearSorting();
+        },
+        clearUndoCollection(): void {
+            return this.ej2Instances.clearUndoCollection();
         },
         collapseAll(): void {
             return this.ej2Instances.collapseAll();
@@ -219,6 +225,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         getRecordByID(id: string): Object {
             return this.ej2Instances.getRecordByID(id);
         },
+        getRedoActions(): Object[] {
+            return this.ej2Instances.getRedoActions();
+        },
         getRowByID(id: string | number): Object {
             return this.ej2Instances.getRowByID(id);
         },
@@ -230,6 +239,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         },
         getTaskbarHeight(): number {
             return this.ej2Instances.getTaskbarHeight();
+        },
+        getUndoActions(): Object[] {
+            return this.ej2Instances.getUndoActions();
         },
         getWorkString(work: number, workUnit: string): string {
             return this.ej2Instances.getWorkString(work, workUnit);
@@ -269,6 +281,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         },
         previousTimeSpan(mode?: string): void {
             return this.ej2Instances.previousTimeSpan(mode);
+        },
+        redo(): void {
+            return this.ej2Instances.redo();
         },
         removeCriticalPathStyles(): void {
             return this.ej2Instances.removeCriticalPathStyles();
@@ -336,6 +351,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         splitTask(taskId: number | string, splitDate: Object | Object[]): void {
             return this.ej2Instances.splitTask(taskId, splitDate);
         },
+        undo(): void {
+            return this.ej2Instances.undo();
+        },
         updateChartScrollOffset(left: number, top: number): void {
             return this.ej2Instances.updateChartScrollOffset(left, top);
         },
@@ -366,7 +384,104 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
     }
 });
 
-export type GanttComponent = InstanceType<typeof GanttComponent>;
+export type GanttComponent = typeof ComponentBase & {
+    ej2Instances: Gantt;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addPredecessor(id: number | string, predecessorString: string): void;
+    addRecord(data?: Object[] | Object | Object, rowPosition?: Object, rowIndex?: number): void;
+    cancelEdit(): void;
+    changeTaskMode(data: Object): void;
+    clearFiltering(fields?: string[]): void;
+    clearRedoCollection(): void;
+    clearSelection(): void;
+    clearSorting(): void;
+    clearUndoCollection(): void;
+    collapseAll(): void;
+    collapseByID(id: number | string): void;
+    collapseByIndex(index: number): void;
+    convertToMilestone(id: string): void;
+    csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object;
+    deleteRecord(taskDetail: number | string | number[] | string[] | Object | Object[]): void;
+    enableItems(items: string[], isEnable: boolean): void;
+    excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object;
+    expandAll(): void;
+    expandByID(id: number | string): void;
+    expandByIndex(index: number[] | number): void;
+    filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[], predicate?: string, matchCase?: boolean, ignoreAccent?: boolean): void;
+    fitToProject(): void;
+    getCriticalTasks(): Object[];
+    getDurationString(duration: number, durationUnit: string): string;
+    getExpandedRecords(records: Object[]): Object[];
+    getFormatedDate(date: Object, format?: string): string;
+    getGanttColumns(): Object[];
+    getGridColumns(): Object[];
+    getRecordByID(id: string): Object;
+    getRedoActions(): Object[];
+    getRowByID(id: string | number): Object;
+    getRowByIndex(index: number): Object;
+    getTaskByUniqueID(id: string): Object;
+    getTaskbarHeight(): number;
+    getUndoActions(): Object[];
+    getWorkString(work: number, workUnit: string): string;
+    hideColumn(keys: string | string[], hideBy?: string): void;
+    hideMaskRow(): void;
+    hideSpinner(): void;
+    indent(): void;
+    keyActionHandler(e: Object): void;
+    mergeTask(taskId: number | string, segmentIndexes: undefined[]): void;
+    nextTimeSpan(mode?: string): void;
+    openAddDialog(): void;
+    openEditDialog(taskId?: number | string): void;
+    outdent(): void;
+    pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object;
+    previousTimeSpan(mode?: string): void;
+    redo(): void;
+    removeCriticalPathStyles(): void;
+    removePredecessor(id: number | string): void;
+    removeSortColumn(columnName: string): void;
+    renderTemplates(): void;
+    reorderColumns(fromFName: string | string[], toFName: string): void;
+    reorderRows(fromIndexes: number[], toIndex: number, position: string): void;
+    resetTemplates(): void;
+    scrollToDate(date: string): void;
+    scrollToTask(taskId: string): void;
+    search(keyVal: string): void;
+    selectCell(cellIndex: Object, isToggle?: boolean): void;
+    selectCells(rowCellIndexes: Object[]): void;
+    selectRow(index: number, isToggle?: boolean): void;
+    selectRows(records: number[]): void;
+    setScrollTop(scrollTop: number): void;
+    setSplitterPosition(value: string | number, type: string): void;
+    showColumn(keys: string | string[], showBy?: string): void;
+    showCriticalPath(isCritical: boolean): void;
+    showMaskRow(): void;
+    showSpinner(): void;
+    sortColumn(columnName: string, direction: Object, isMultiSort?: boolean): void;
+    splitTask(taskId: number | string, splitDate: Object | Object[]): void;
+    undo(): void;
+    updateChartScrollOffset(left: number, top: number): void;
+    updateDataSource(dataSource: Object[], args: object): void;
+    updatePredecessor(id: number | string, predecessorString: string): void;
+    updateProjectDates(startDate: Object, endDate: Object, isTimelineRoundOff: boolean, isFrom?: string): void;
+    updateRecordByID(data: Object): void;
+    updateRecordByIndex(index: number, data: Object): void;
+    updateTaskId(currentId: number | string, newId: number | string): void;
+    zoomIn(): void;
+    zoomOut(): void
+};
 
 export const GanttPlugin = {
     name: 'ejs-gantt',

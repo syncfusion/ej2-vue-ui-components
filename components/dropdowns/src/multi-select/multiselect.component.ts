@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { MultiSelect, MultiSelectModel } from '@syncfusion/ej2-dropdowns';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'addTagOnBlur', 'allowCustomValue', 'allowFiltering', 'changeOnBlur', 'closePopupOnSelect', 'cssClass', 'dataSource', 'delimiterChar', 'enableGroupCheckBox', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableSelectionOrder', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'hideSelectedItem', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'maximumSelectionLength', 'mode', 'noRecordsTemplate', 'openOnClick', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'selectAllText', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'unSelectAllText', 'value', 'valueTemplate', 'width', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'beforeSelectAll', 'blur', 'change', 'chipSelection', 'close', 'created', 'customValueSelection', 'dataBound', 'destroyed', 'filtering', 'focus', 'open', 'removed', 'removing', 'select', 'selectedAll', 'tagging'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'addTagOnBlur', 'allowCustomValue', 'allowFiltering', 'allowObjectBinding', 'changeOnBlur', 'closePopupOnSelect', 'cssClass', 'dataSource', 'delimiterChar', 'enableGroupCheckBox', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableSelectionOrder', 'enableVirtualization', 'enabled', 'fields', 'filterBarPlaceholder', 'filterType', 'floatLabelType', 'footerTemplate', 'groupTemplate', 'headerTemplate', 'hideSelectedItem', 'htmlAttributes', 'ignoreAccent', 'ignoreCase', 'itemTemplate', 'locale', 'maximumSelectionLength', 'mode', 'noRecordsTemplate', 'openOnClick', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'selectAllText', 'showClearButton', 'showDropDownIcon', 'showSelectAll', 'sortOrder', 'text', 'unSelectAllText', 'value', 'valueTemplate', 'width', 'zIndex', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'beforeSelectAll', 'blur', 'change', 'chipSelection', 'close', 'created', 'customValueSelection', 'dataBound', 'destroyed', 'filtering', 'focus', 'open', 'removed', 'removing', 'select', 'selectedAll', 'tagging'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -147,7 +147,7 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
         focusOut(): void {
             return this.ej2Instances.focusOut();
         },
-        getDataByValue(value: string | number | boolean): Object | string | number | boolean {
+        getDataByValue(value: string | number | boolean | any): Object | string | number | boolean {
             return this.ej2Instances.getDataByValue(value);
         },
         getItems(): Object[] {
@@ -174,7 +174,36 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
     }
 });
 
-export type MultiSelectComponent = InstanceType<typeof MultiSelectComponent>;
+export type MultiSelectComponent = typeof ComponentBase & {
+    ej2Instances: MultiSelect;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
+    clear(): void;
+    filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
+    focusIn(): void;
+    focusOut(): void;
+    getDataByValue(value: string | number | boolean | any): Object | string | number | boolean;
+    getItems(): Object[];
+    hidePopup(e?: Object | Object): void;
+    hideSpinner(): void;
+    requiredModules(): Object[];
+    selectAll(state: boolean): void;
+    showPopup(e?: Object | Object | Object): void;
+    showSpinner(): void
+};
 
 export const MultiSelectPlugin = {
     name: 'ejs-multiselect',

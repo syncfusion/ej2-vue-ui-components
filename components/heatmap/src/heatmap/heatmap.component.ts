@@ -113,7 +113,28 @@ export let HeatMapComponent: DefineVueComponent<HeatMapModel> =  vueDefineCompon
     }
 });
 
-export type HeatMapComponent = InstanceType<typeof HeatMapComponent>;
+export type HeatMapComponent = typeof ComponentBase & {
+    ej2Instances: HeatMap;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    clearSelection(): void;
+    export(type: Object, fileName: string, orientation?: Object): void;
+    print(): void;
+    refresh(): void;
+    refreshBound(): void
+};
 
 export const HeatMapPlugin = {
     name: 'ejs-heatmap',

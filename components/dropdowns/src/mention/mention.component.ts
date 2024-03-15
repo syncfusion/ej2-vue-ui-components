@@ -97,7 +97,7 @@ export let MentionComponent: DefineVueComponent<MentionModel> =  vueDefineCompon
         addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void {
             return this.ej2Instances.addItem(items, itemIndex);
         },
-        getDataByValue(value: string | number | boolean): Object | string | number | boolean {
+        getDataByValue(value: string | number | boolean | any): Object | string | number | boolean {
             return this.ej2Instances.getDataByValue(value);
         },
         getItems(): Object[] {
@@ -115,7 +115,29 @@ export let MentionComponent: DefineVueComponent<MentionModel> =  vueDefineCompon
     }
 });
 
-export type MentionComponent = InstanceType<typeof MentionComponent>;
+export type MentionComponent = typeof ComponentBase & {
+    ej2Instances: Mention;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
+    getDataByValue(value: string | number | boolean | any): Object | string | number | boolean;
+    getItems(): Object[];
+    hidePopup(e?: Object | Object): void;
+    search(text: string, positionX: number, positionY: number): void;
+    showPopup(): void
+};
 
 export const MentionPlugin = {
     name: 'ejs-mention',

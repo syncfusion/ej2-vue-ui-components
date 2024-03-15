@@ -144,7 +144,26 @@ export let ColorPickerComponent: DefineVueComponent<ColorPickerModel> =  vueDefi
     }
 });
 
-export type ColorPickerComponent = InstanceType<typeof ColorPickerComponent>;
+export type ColorPickerComponent = typeof ComponentBase & {
+    ej2Instances: ColorPicker;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    focusIn(): void;
+    getValue(value?: string, type?: string): string;
+    toggle(): void
+};
 
 export const ColorPickerPlugin = {
     name: 'ejs-colorpicker',

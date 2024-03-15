@@ -148,7 +148,27 @@ export let RangeNavigatorComponent: DefineVueComponent<RangeNavigatorModel> =  v
     }
 });
 
-export type RangeNavigatorComponent = InstanceType<typeof RangeNavigatorComponent>;
+export type RangeNavigatorComponent = typeof ComponentBase & {
+    ej2Instances: RangeNavigator;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    createSecondaryElement(): void;
+    export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number, isVertical?: boolean): void;
+    print(id?: string[] | string | Object): void;
+    renderChart(resize: boolean): void
+};
 
 export const RangeNavigatorPlugin = {
     name: 'ejs-rangenavigator',

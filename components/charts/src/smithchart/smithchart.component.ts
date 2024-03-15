@@ -107,7 +107,7 @@ export let SmithchartComponent: DefineVueComponent<SmithchartModel> =  vueDefine
         print(id?: string[] | string | Object): void {
             return this.ej2Instances.print(id);
         },
-        smithchartOnClick(e: Object): void {
+        smithchartOnClick(e: Object | Object): void {
             return this.ej2Instances.smithchartOnClick(e);
         },
         smithchartOnResize(): boolean {
@@ -116,7 +116,29 @@ export let SmithchartComponent: DefineVueComponent<SmithchartModel> =  vueDefine
     }
 });
 
-export type SmithchartComponent = InstanceType<typeof SmithchartComponent>;
+export type SmithchartComponent = typeof ComponentBase & {
+    ej2Instances: Smithchart;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    export(type: Object, fileName: string, orientation?: Object): void;
+    mouseEnd(e: Object): void;
+    mouseMove(e: Object): void;
+    print(id?: string[] | string | Object): void;
+    smithchartOnClick(e: Object | Object): void;
+    smithchartOnResize(): boolean
+};
 
 export const SmithchartPlugin = {
     name: 'ejs-smithchart',

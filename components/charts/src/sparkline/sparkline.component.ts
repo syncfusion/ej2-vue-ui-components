@@ -101,7 +101,24 @@ export let SparklineComponent: DefineVueComponent<SparklineModel> =  vueDefineCo
     }
 });
 
-export type SparklineComponent = InstanceType<typeof SparklineComponent>;
+export type SparklineComponent = typeof ComponentBase & {
+    ej2Instances: Sparkline;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    renderSparkline(): void
+};
 
 export const SparklinePlugin = {
     name: 'ejs-sparkline',

@@ -103,7 +103,25 @@ export let ButtonComponent: DefineVueComponent<ButtonModel> =  vueDefineComponen
     }
 });
 
-export type ButtonComponent = InstanceType<typeof ButtonComponent>;
+export type ButtonComponent = typeof ComponentBase & {
+    ej2Instances: Button;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    click(): void;
+    focusIn(): void
+};
 
 export const ButtonPlugin = {
     name: 'ejs-button',

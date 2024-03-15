@@ -2,24 +2,37 @@
 
 ## [Unreleased]
 
-## 24.2.9 (2024-03-06)
+## 25.1.35 (2024-03-15)
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
-- `#I557001` - Console error in dependency connection after row drag action issue has been fixed.
-- `#I556547` - top and bottom tier shows null when using custom zooming levels.
-- `#I552622` - The enable immutable enabled sample expand icon hide when record add issue has been fixed.
-- `#F186617` - Gantt pdf export taskbar text alignment issue has been fixed.
-- `#I561997` - The PDF export is not working properly when changing `bottomTier` to week.
-- `#I560166` - The context menu using "add child" for any task, dependency line validation is not working properly.
+- `#F186965` - When we use `RTL` mode splitter settings functionality remains as in normal mode issue has been fixed.
+- `#I561396` - When `hasChildMapping` is enabled `addParams` not working issue has been fixed.
+- `#I546767` - Split taskbar template not working properly with multiple levels.
+
+- `#I546767` - Split taskbar template not working properly with multiple levels.
+
+#### Features
+
+- `#I468621`,`#I504565`,`#I518180`, `#I523106`,`#I558459` - Provided undo redo support for the actions such as `Edit`, `Add`, `Delete`, `Sorting`, `ColumnReorder`, `ColumnResize`, `Search`, `Filtering`, `ZoomIn`, `ZoomOut`, `ZoomToFit`, `ColumnState`, `Indent`, `Outdent`, `RowDragAndDrop`, `TaskbarDragAndDrop`, `PreviousTimeSpan` and `NextTimeSpan` in Gantt Chart. Please find the demo link [here](https://ej2.syncfusion.com/demos/#/bootstrap5/gantt/undo-redo.html).
+- `#I364692` - Provided support for taskbars, task labels, and header templates in the Gantt Chart's PDF Export feature. Please find the documentation link [here](https://ej2.syncfusion.com/documentation/gantt/pdf-export/pdf-export#exporting-with-templates).
+- `#I522246`,`#I527511`,`#I562591`- Provided [`additionalParams`](https://ej2.syncfusion.com/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) API support to customize the Grid and RTE in edit/add dialog. Please find more information [here](https://ej2.syncfusion.com/documentation/gantt/managing-tasks/managing-tasks#customize-tab-elements).
+
+- `#I468621`,`#I504565`,`#I518180`, `#I523106`,`#I558459` - Provided undo redo support for the actions such as `Edit`, `Add`, `Delete`, `Sorting`, `ColumnReorder`, `ColumnResize`, `Search`, `Filtering`, `ZoomIn`, `ZoomOut`, `ZoomToFit`, `ColumnState`, `Indent`, `Outdent`, `RowDragAndDrop`, `TaskbarDragAndDrop`, `PreviousTimeSpan` and `NextTimeSpan` in Gantt Chart. Please find the demo link [here](https://ej2.syncfusion.com/vue/demos/#/material3/gantt/undo-redo.html).
+- `#I364692` - Provided support for taskbars, task labels, and header templates in the Gantt Chart's PDF Export feature. Please find the documentation link [here](https://ej2.syncfusion.com/vue/documentation/gantt/pdf-export/pdf-export#exporting-with-templates).
+- `#I522246`,`#I527511`,`#I562591`- Provided [`additionalParams`](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) API support to customize the Grid and RTE in edit/add dialog. Please find more information [here](https://ej2.syncfusion.com/vue/documentation/gantt/managing-tasks/managing-tasks#customize-tab-elements).
+
+#### Breaking Changes
+
+- The default value for taskType will be `fixedUnit`, even when the `work` field is mapped in `taskFields`. Previously, if the `work` field was mapped, its default value internally changed to `fixedWork`, and resource units were calculated accordingly. Now, it's necessary to specify taskType as `fixedWork` at the sample level if the `work` field is mapped in `taskFields`.
 
 ## 24.2.8 (2024-02-27)
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I555169` - The scrollbar into view taskbar not working properly issue has been fixed.
 - `#I556229` - Splitter View is not updating properly while using `setSplitterPosition` issue has been fixed.
@@ -39,7 +52,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I548671` - Dependency not working when id is alpha numeric issue has been fixed.
 - `#I552756` - A console error occurs when hovering over the Column menu options issue has been fixed.
@@ -50,7 +63,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I544540` - Offset value not calculated properly issue has been fixed.
 - `#I552745` - Pressing enter key in dialog refresh the Gantt issue has been fixed.
@@ -61,7 +74,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I550406` - Task type property does not update properly by mapping work field issue has been fixed.
 - `#I542029` - Unable to render full lengthy text in pdf export issue has been fixed.
@@ -72,7 +85,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I540355` - RTE create column not working in dialog box issue has been fixed.
 - `#I543351` - The taskbar render validation not working properly issue has been fixed.
@@ -81,7 +94,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I540518` - Can't able to drag and drop to the new resource issue has been fixed.
 - `#I185970` - Dynamic template updating in columns does not render issue has been fixed.
@@ -93,7 +106,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I533229` - Server call is triggered twice issue has been fixed.
 - `#I531670` - When adding a record by method before saving, if the task ID is changed after taskbar hover exception thrown issue has been fixed.
@@ -104,7 +117,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I530808` - Progress width not rendered properly in split tasks issue has been fixed.
 - `#F185683` - Resources are not updating properly in `actionBegin`event issue has been fixed.
@@ -118,7 +131,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 `#I531670` - When adding record by method before saving, if the task ID is changed after taskbar hover exception thrown issue has been fixed.
 
@@ -132,7 +145,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I520118` - Console error occurs other than self reference data issue has been fixed.
 - `#I515425` - Issue with observable data binding in Gantt chart issue has been fixed.
@@ -144,7 +157,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I517359` - Columns does not update while changing columns value by Gantt instance issue has been fixed.
 - `#I514463` - PDF exported with blank pages and dislocated connected lines issue has been fixed.
@@ -157,13 +170,13 @@
 - `#I513332` - Excel filter only takes one character at a time issue has been fixed.
 - `#I517515` - Custom toolbar template not renders after toolbar click action in Gantt issue has been fixed.
 
-#### Bug Fixes
+#### Bug fixes
 
 ## 23.1.43 (2023-10-31)
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I493515` - Console error throw while Expand and collapse the parent taskbar issue has been fixed.
 - `#I513655` - Filter menu close as soon as the mouse is up issue has been fixed.
@@ -172,7 +185,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I508297` - Progress tooltip is misaligned after editing issue has been fixed.
 - `#I509023` - Duration changes to zero while giving input as decimal in remote data issue has been fixed.
@@ -184,7 +197,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I494495` - Script error occurs when trying to edit after sorting in presence of validation message  issue has been fixed.
 - `#I508721` - Baseline date does not render properly for milestone task issue has been fixed.
@@ -194,7 +207,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I502041` - Error throw while adding the record issue has been fixed.
 - `#I493515` - Style is not applied to the second segment issue has been fixed.
@@ -203,7 +216,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I479961` - Milestone baseline moves along with the milestone issue has been fixed.
 - `#I501391` - Misalignment in tooltip when connecting predecessor.
@@ -232,7 +245,7 @@
 - Provided support to export the Gantt component where each rows are auto-fit to the PDF document page width. Please find the demo link [here](https://ej2.syncfusion.com/vue/demos/#/material3/gantt/exporting.html).
 - Provided touch interaction support for taskbar resizing, dragging, predecessor connectivity in Gantt chart.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I492654` - When empty data source pdf export exception thrown issue has been fixed.
 - `#I479578` - Milestone parent is not appearing issue has been fixed.
@@ -241,7 +254,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I488557` - The project dates are not modified after changing the timeline.
 - `#I472635` - When pressing the insert key `newRowPosition` bottom row is not highlighted.
@@ -255,7 +268,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I485527` - Filter menu opening issue in column menu has been fixed.
 - `#I491313` - Multiple records were selected after using the context menu, adding the milestone position wrong issue has been fixed.
@@ -266,7 +279,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I486977` - Zoom To Fit issue when we resize browser window has been fixed.
 - `#I484086` - Other instance of the taskbar not moved in the resource view issue has been fixed.
@@ -276,7 +289,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I485657` - Misalignment happened in timeline while exporting `PDF` in Gantt has been fixed.
 - `#I485398` - console error occurs while using segment data issue has been fixed.
@@ -289,7 +302,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I485907` - When multiple records are selected after using the context menu to delete, it is not working issue has been fixed.
 - `#I483579` - Splitter resize issue when we resize browser window issue has been fixed.
@@ -300,7 +313,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I479591` - Critical path is not working properly when the baseline is changed dynamically issue has been fixed.
 - `#F182867` - Edit parameters not working in date columns issue has been fixed.
@@ -320,7 +333,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 -`#I472635`-Using insert key highlights top row has been fixed.
 
@@ -333,7 +346,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I45187` - Border is changed to outline in CSS issue has been fixed.
 
@@ -341,7 +354,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I474676` - Fit to project display wrong timeline issue has been fixed.
 - `#I472975` - Manual task predecessor not properly fetching updated offset issue has been fixed.
@@ -355,7 +368,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I471925` - Cannot see a Dragged Task after Zoom In issue has been fixed.
 - `#I473517` - Incorrect taskbar render when unit is given in hour issue has been fixed.
@@ -366,7 +379,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I473901` - Baseline converted to milestone when task gets converted into milestone issue has been fixed.
 - `#I471926` - Console error occurs in critical path when data source is empty issue has been fixed.
@@ -394,7 +407,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I459187` - Newly added record missed at the bottom in virtual scroll issue has been fixed.
 - `#I469401` - Resource names gets duplicated in right label issue has been fixed.
@@ -407,7 +420,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I467744` - Provided support for virtual scroll in resource view multitask bar.
 - `#I464831` - Incorrect render of segments when we give end date while declaring segment in data source issue has been fixed.
@@ -427,7 +440,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I461738` - Updating custom column change the end date issue has been fixed
 - `#I461564` - Editing cell followed by context menu does not work issue has been fixed
@@ -445,7 +458,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I461435` - Adding and deleting record rapidly while displaying tooltip cause error has been fixed.
 - `#I461087` - Offset value getting modified incorrectly issue has been fixed.
@@ -455,7 +468,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I461778` - Misalignment in rows on Tree Grid and Gantt in virtual scroll issue has been fixed
 - `#I181309` - splitter position not updating after resize issue has been fixed.
@@ -468,7 +481,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I457032` - Task label not rendered properly when we render as template issue has been fixed.
 - `#I457212` - Timeline renders different in `Firefox` and `Chrome` issue has been fixed.
@@ -480,7 +493,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I441205` - Two spinner appears while performing action issue has been fixed.
 - `#I451257` - No proper template for manual milestone parent.
@@ -490,7 +503,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I453787` - Duration not calculated properly in hour duration unit issue has been fixed.
 - `#I453745` - Modified records in `actionBegin` event has invalid records issue has been fixed.
@@ -504,7 +517,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I451243` - Unable to set zooming levels through `zoomingLevels` property issue has been fixed.
 - `#I447704` - Timeline tier is not changing dynamically issue has been fixed.
@@ -516,7 +529,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I432146` - Script error occurs while changing data source and resource simultaneously issue has been fixed.
 - -`I441276`- Outdent task is not in correct index of modified records in `actionComplete` event issue has been fixed.
@@ -548,7 +561,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 -`I442012`- Pdf export padding property for column header is not working properly issue has been fixed.
 -`F180721`-  Script error occurs when critical path is enabled in virtualization mode issue has been fixed.
@@ -562,7 +575,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 -`I413261`- Validate predecessor link on editing issue has been fixed.
 -`I441394`- Gantt Column name doesn't change respect to changing of culture at runtime issue has been fixed.
@@ -576,7 +589,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 -`I435386`- Column template not working in `Vue` platform issue has been fixed.
 -`I426170`- Incorrect Start Date Update for Unscheduled Task When Editing Parent Start Date.
@@ -593,7 +606,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 -`I432910`- Export Issue with Predecessor Connectivity for Filtered Data.
 -`#I434098`- Script error occurs when updating resources dynamically without child mapping.
@@ -603,7 +616,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I431629`- A script error is thrown while performing tab navigation on the last row.
 
@@ -611,7 +624,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I429875` - Console error while using self-referential data issue has been fixed.
 - `#I428914` - Duration value is not maintained when using `valueAccessor` issue has been fixed.
@@ -621,7 +634,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I427837` - Baseline renders with incorrect date in difference timezone issue has been fixed.
 - `#I430365` - Child tasks not updated after updating parent task predecessor has been fixed.
@@ -631,7 +644,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I426170` - Incorrect request type in zooming action has been fixed.
 - `#FB39646` - Incorrect index value during row drag and drop has been fixed.
@@ -640,7 +653,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I421870`- Record does not update properly when its modified in `actionBegin` event issue has been fixed.
 - `#I420414` - Row height issue in task mode has been fixed.
@@ -649,7 +662,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I420702` - Persistence settings prevent changing the timeline settings issue has been fixed.
 - `#I422731` - Issue when predecessor is given for unscheduled parent issue has been fixed.
@@ -673,7 +686,7 @@
 - `#I237939`,`#I255626`,`#I398597` - Provided `RTL` support in Gantt chart. Please find the documentation link [here](https://ej2.syncfusion.com/vue/documentation/gantt/global-local/#right-to-left-rtl)
 - Provided `Shimmer` support in Gantt chart. Please find the demo link [here](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/gantt/loading-animation).
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I417035` - Expand Collapse not working properly after cell editing issue has been fixed.
 - `#I421663` - The baseline end date has not been properly validated issue has been fixed.
@@ -682,7 +695,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I420414` - Unable to disable edit dialog fields in general tab issue has been fixed.
 - `#I420280` - The `actionBegin` event receives more records as modified data when a task is resized issue has been fixed.
@@ -696,7 +709,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I413261` - Dependency values for the parent task are not properly updated issue has been fixed.
 - `#I419062` - Edit type issue when datasource is undefined issue has been fixed.
@@ -709,7 +722,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I416610` - Able to scroll vertically when virtual scrolling enabled without scrollable records issue has been fixed.
 - `#I417049` - Adding duration to an unscheduled task affects the project start date.
@@ -720,7 +733,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I413261` - Dependency values for the parent task are not properly updated issue has been fixed.
 - `#I410200` - Timeline headers disappears when timeline changes dynamically.
@@ -734,7 +747,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I414182` - Datasource Property not updated properly after row drag and drop issue has been fixed.
 - `#I413625` - Current view data not updated properly when dynamically change the view type issue has been fixed.
@@ -748,7 +761,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I413261` - Dependency values for the parent task are not properly updated issue has been fixed.
 - `#I412821` - Row drag and drop is not working properly when Virtualization is enabled.
@@ -759,7 +772,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I409097` - Deleting record when search text is selected issue has been fixed.
 - `#I404228` - Saving record even when in edited state issue has been fixed.
@@ -769,7 +782,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I395003` - Gantt records disappear when scrolling up and down quickly issue has been fixed.
 - `#I407437` - Add new record in resource view without child mapping issue has been fixed.
@@ -781,7 +794,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I408288` - Timeline rendering is incomplete when data is rebinded issue has been fixed.
 - `#I404228` - Issue in saving data in segment has been fixed.
@@ -811,7 +824,7 @@
 - `#I246769`, `#I316949`, `#I334501`, `#F159768`, `#F167576` - Provided support to define task id as string type for Gantt Chart. Please find the `API` link [here](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#id).
 - `#FB36072` - Provided support for Critical Path with Multi Taskbar enabled.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#F177237` - The `currentViewData` with dependencies were not exported correctly in `PDFExport` issue has been fixed.
 - `#I402913` - Checkbox selection must be completed with a single click issue has been fixed.
@@ -823,7 +836,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I403222` - Console error occurs in resource view with enabled persistence issue has been fixed.
 
@@ -831,7 +844,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#F176984` - Timeline is extended when the splitter position is moved issue has been fixed.
 - `#I398394` - Row drag and drop not working properly on resource view sample issue has been fixed.
@@ -841,7 +854,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I389542` - Filter records with hierarchy mode as both shows no record to display issue has been fixed.
 
@@ -849,7 +862,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I394194` - Timeline changes when toggling critical path issue has been fixed.
 - `#I388575` - Gantt chart disappears when searching is performed with tasks in collapsed state with virtualization issue has been fixed.
@@ -865,7 +878,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I393339` - Empty record is displayed after searching a text when using the refresh method issue has been fixed.
 - `#I392655` - Issue in deleting multiple tasks, when one task is collapsed issue has been fixed.
@@ -879,7 +892,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I389834` - Records position not updated properly in datasource when we drag and drop the records issue has been fixed.
 
@@ -887,7 +900,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I380929` - Baseline end date issue for milestone with same baseline start and end date has been fixed.
 - `#I385298` - Bottom Tier not partitioned properly when zoom to fit issue has been fixed.
@@ -905,7 +918,7 @@
 - `#I233407`, `#I258725`, `#I280586`, `#I291191`, `#I304599`, `#F160011`, `#I310340`, `#F163773`, `#I323187`, `#I323187`, `#I346348` - Provided Critical Path support for Gantt Chart. Please find the Demo link [here](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/gantt/critical-path).
 - Provided State Persistence support for Gantt Chart. Please find the documentation link [here](https://ej2.syncfusion.com/vue/documentation/gantt/state-persistence).
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I379308, #I380615` - Baseline end date issue for milestone with same baseline start and end date has been fixed.
 - `#I383128` - DataSource gets updated wrongly when we update the data with invalid `parentID` issue has been fixed.
@@ -917,7 +930,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#367483` - Indent Outdent toolbar options appearing when edit settings is not defined issue has been been fixed.
 - `#384296` - Unable to draw dependency when progress mapping is disabled issue has been been fixed.
@@ -927,7 +940,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#379229` - Pdf export is not working when using custom date format issue has been fixed.
 - `#381109` - Issue when Zoom To Fit with unscheduled tasks has been fixed.
@@ -937,7 +950,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#380136` - End date is not updated when we update the resource unit via `updateRecordByID` method.
 - `#378491` - Data is not displayed when we frequently move between different tabs has been fixed.
@@ -947,7 +960,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#F174816` - Landscape page orientation is not working when exporting Pdf has been fixed.
 - `#377857` - Task not assigned to resources when dynamically changes from project view into resource view has been fixed.
@@ -958,7 +971,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#376228` - Duration is not updated while updating resource units using `updateRecordByID` method issue has been fixed.
 - `#370224` - Filtering issue when rendering Gantt inside the modal has been fixed.
@@ -968,7 +981,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#372661` - Data not properly updated in the Gantt Chart when switching between list view issue has been fixed.
 
@@ -976,7 +989,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#373529` - Task label is not properly displayed in pdf export issue has been fixed.
 - `#373829` - Top tier and bottom tier partitioning issue in quarterly mode has been fixed.
@@ -987,7 +1000,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#372623` - New record keeps an editable state in dependency tab even after switching the tabs has been fixed.
 - `#373803` - Scrollbar not available in notes tab issue has been fixed.
@@ -998,7 +1011,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#371080` - Issue in `actionBegin` event for cancelling the row drag and drop action using request type `beforeDrop` has been fixed.
 - `#374064` - Gantt height not gets responsive when collapsing all tasks in `auto` mode.
@@ -1008,7 +1021,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#300959` - Provided support to fill empty space with extended timeline in zoom out action.
 - `#371372` - Unable to change end Date of manual parent task issue has been fixed.
@@ -1018,7 +1031,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#369264` - Event marker labels not visible when there is single record has been fixed
 - `#362146` - Row customization using `rowDataBound` event in `enableImmutableMode` issue has been fixed
@@ -1032,7 +1045,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#366304` - Gantt line mismatches when we set system display as 100% and browser zoom settings as 90% has been fixed.
 - `#365994` - Right and left label template not working in `vue` has been fixed.
@@ -1043,7 +1056,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#366296` - When moving from once cell to another cell using tab key navigation issue has been fixed.
 - `#363358`,`F172781` - Drag and drop not working properly after row gets collapsed issue has been fixed.
@@ -1052,7 +1065,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#365463` - Gantt timeline view gets changed when resize the task to left side has been fixed.
 
@@ -1060,7 +1073,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#360085` - Issue in deleting a task after performing expand collapse action for multiple times has been fixed.
 - `#364950` - The `taskLabel` property does not show the task name properly when giving name with space has been fixed.
@@ -1071,7 +1084,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#362011` - Date alignment issue with Gantt Zoom to fit top tier and bottom tier has been fixed.
 - `#364643` - Extra fields are added in `dataSource` property for bottom position issue has been fixed.
@@ -1088,7 +1101,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#356978` - Issue in disable the initial move of taskbar drag has been fixed.
 - `#357647` - Issue in enabling scroll top during load time has been fixed.
@@ -1102,7 +1115,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#359455` - Issue in rendering Gantt when parent container height is set in percentage has been fixed.
 - `#360424` - Issue in performing drag and drop when resource is set to null has been fixed.
@@ -1116,7 +1129,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#354721` - Issue in rendering milestone based on the milestone mapping in datasource has been fixed.
 - `#358683` - Toolbar gets hide after `expandAll` and `collapseAll` is performed issue has been fixed.
@@ -1125,7 +1138,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#355824, #360027` - Gantt Chart display issue with misalign in dates on which DST change happens has been fixed.
 - `#F171256` - Issue in Localization for the word New Task has been fixed.
@@ -1136,7 +1149,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#357340` - Issue with Gantt `selectedRowIndex` property when deleted the selected item in last row.
 
@@ -1144,7 +1157,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#346141` - Issue with Gantt manipulates and change task data date values from original data has been fixed.
 - `#F170644` - Issue in manual start date while mapping multiple parent levels has been fixed.
@@ -1162,7 +1175,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#347613` - Connector line issue after updating the datasource dynamically has been fixed.
 - `#346909` - Issue in disable custom context menu has been fixed.
@@ -1171,7 +1184,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#347753` - Issue in `defaultedit` edit type has been fixed.
 
@@ -1179,7 +1192,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#342557` - In fixed work type duration update issue has been fixed.
 
@@ -1187,7 +1200,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#343417` - Issue in updating row index after row drag and drop has been fixed.
 - `#346516` - Issue in context menu after cell editing has been fixed.
@@ -1197,7 +1210,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#343991` - Additional parameters are not passed to `BatchUpdate` method when deleting the row issue has been fixed.
 - `#344100` - Issue in cancelling the drawing of predecessor line in `actionBegin` event has been fixed.
@@ -1212,7 +1225,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#343417` - Issue in CRUD operations when using datamanager data has been fixed.
 - `#340739` - Vertical grid line issue while changing height dynamically has been fixed.
@@ -1222,7 +1235,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#342557` - In fixed work type duration update issue has been fixed.
 - `#340406` - Misalignment while using line height property issue has been fixed.
@@ -1236,7 +1249,7 @@
 
 - `#304621, #322659` - Provided percentage support for height and width of Gantt element.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#331618` - Issue in updating `dataSource` property has been fixed.
 - `#333672` - Issue in calculating duration across DST has been fixed.
@@ -1245,7 +1258,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#340421` - In smaller resolution the splitter appeared in wrong position issue has been fixed.
 - `#341502` - Indicators disappear when datasource changed dynamically issue has been fixed.
@@ -1254,7 +1267,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#340155` - Dialog closes when pressing insert key issue has been fixed.
 - `#333851` - Dynamically changing the holidays issue has been fixed.
@@ -1263,7 +1276,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#339434` - Issue in tooltip has been resolved.
 
@@ -1271,7 +1284,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#339511` - Issue in maintaining resource selection has been resolved.
 - `#338206` - Cleared warnings thrown in Firefox browser.
@@ -1280,7 +1293,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#338587` - Issue in assigning empty data to datasource has been resolved.
 - `#335677` - Issue in `expandAtLevel` and `collapseAtLevel` method with virtual scrolling has been resolved.
@@ -1289,7 +1302,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#336211` - Issue with Virtual Scrolling in Firefox browse has been resolved.
 
@@ -1297,7 +1310,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#331618` - Issue in updating `dataSource` property has been fixed.
 - `#333672` - Issue in calculating duration across DST has been fixed.
@@ -1307,7 +1320,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#331671` - Right Labels are rendered properly in exported PDF document.
 - `#332161` - Issue fixed when drag and drop performed after adding record through context menu.
@@ -1324,7 +1337,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#330806` - When using `updateTaskId` method with predecessor field is not mapped in the `taskFields` has been fixed.
 - At certain zoom level, both halves of year are H1 has been resolved.
@@ -1333,7 +1346,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#328182` - Mismatch between timeline and chart body content has been fixed.
 - `#165629` - Notes updated properly in Gantt chart when new task is added.
@@ -1346,7 +1359,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#325587` - Issue while deleting resource on split task has been fixed.
 - Issue on dynamically changing the `allowTaskbarEditing` property has been fixed.
@@ -1368,7 +1381,7 @@
 
 - `#320843` - Provide support to cancel the merging of split tasks using client-side event.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#326155` - Issue in splitting task using public method has been fixed.
 - `#325948` - Issue in adding new task with empty string has been fixed.
@@ -1380,7 +1393,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#325250` - Progress updated properly in manual scheduling.
 - `#324644` - Issue on adding records, when Gantt view is changed has been fixed.
@@ -1392,7 +1405,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#324141` - Issue in tooltip rendering position has been fixed.
 - `#320979` - Issue on changing data source and timeline settings on same time has been fixed.
@@ -1403,7 +1416,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F164497` - Issue in editing end date of a task has been fixed.
 
@@ -1411,7 +1424,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#320979` - Provided support to update data source dynamically with `collapseAllParentTasks` and `enableMultiTaskbar` enabled mode.
 
@@ -1419,7 +1432,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#320882` - Issue on expand/collapse icon in `Resource view` has been fixed.
 
@@ -1440,7 +1453,7 @@
 
 - `#317550` - Provided support to define `valueAccessor` as string.
 
-#### Bug Fixes
+#### Bug fixes
 
 - Console error when end date of segments is given as string has been fixed.
 
@@ -1448,7 +1461,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `316898` - Maintained additional fields in segments on zooming action.
 
@@ -1456,7 +1469,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#315501` - Error on closing filter menu while focusing out has been resolved.
 
@@ -1464,7 +1477,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#311841` - Duplicating records issue while indent action has been resolved.
 - `F160722` - Error on rendering editing tooltip has been resolved.
@@ -1476,7 +1489,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#298884` - Error on reorder rows method has been fixed.
 
@@ -1492,7 +1505,7 @@
 
 - `#291192` - Provided Immutable Support to refresh specific rows while performing Gantt actions.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F161492` - Console error on converting milestone to task has been fixed.
 
@@ -1500,7 +1513,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F161492` - Console error on drag and drop action has been fixed.
 - `F161492` - Issue on indent action has been fixed.
@@ -1509,7 +1522,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#298884` - Issue on reorder rows method in virtual scroll support has been fixed.
 
@@ -1517,7 +1530,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F160722` - Issue on editing tooltip template has been fixed.
 - `#306971` - HTML encoder issue with notes column has been fixed.
@@ -1527,7 +1540,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#306741` - Issue on closing filter menu while focusing out has been fixed.
 - `#306556` - Issue on duration field of add dialog has been fixed.
@@ -1547,7 +1560,7 @@
 
 - `F149775` - Provided `Virtual Scroll` support for Gantt.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#306090` - Issue on pressing delete key when add/edit dialog is opened has been fixed.
 - `#306342` - Included additional field in `taskData.segments`.
@@ -1557,7 +1570,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F159625` - Console error on indent action after adding record has been fixed.
 
@@ -1565,7 +1578,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `301606` - Issue in template column when use it as `treeColumnIndex` has been fixed.
 
@@ -1573,7 +1586,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `293889` - Console error in split task when allowTaskbarEditing is disable has been fixed.
 - `300744` - Console error on clicking add/edit toolbar has been fixed.
@@ -1583,7 +1596,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `299695` - Issue in left label template has been fixed.
 - `F159354` - Issue in locale text of predecessor tooltip has been fixed.
@@ -1599,7 +1612,7 @@
 - `#292246` - Provided support to split the taskbar into multiple segments through context menu and dialog edit.
 - `#282972, #293345` - Provided support to render predecessor and rows properly in different zooming levels and display scaling size.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#295381` - Issue on exporting Gantt with partial data has been fixed.
 - `#299370` - Issue on restricting dragging action when read only property set to true.
@@ -1610,7 +1623,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#296920` - Issue on rendering Gantt with resources has been fixed.
 - `F158128` - Issue on updating DB on `indent` and `outdent` action has been fixed.
@@ -1621,7 +1634,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#293528` - Issue when work value is given as decimal values has been fixed.
 
@@ -1633,7 +1646,7 @@
 
 - `#292825` - Provided support to improvement of trigger actions on key press.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#293539` - Issue while dynamically updating `allowRowDragAndDrop` gets fixed.
 - `#292470` - Issue on edit template in dialog has been fixed.
@@ -1643,7 +1656,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#290457` - Issue on customizing the background colour of taskbar in Resource view has been fixed.
 - `F157498` - Console error on indenting record after sorting has been fixed.
@@ -1652,7 +1665,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#291158` - Console error on destroy Gantt when allowKeyboard is false has been fixed.
 - `#279528` - Dialog dependency drop-down list has existing dependency data has been fixed.
@@ -1661,7 +1674,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#288438` - Tooltip rendering issue has been fixed.
 - The issue of the bottom tire format in Chinese culture has been fixed.
@@ -1674,7 +1687,7 @@
 
 - `#287282` - Provided support to change viewType of Gantt dynamically.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#285626` - Console error while rendering multiple Gantt has been fixed.
 - `#285749` - Issue on parent progress calculation while delete child record has been fixed.
@@ -1683,7 +1696,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#284995` - Issue in predecessor lines of exported pdf document has been fixed.
 - `#284995` - Content overflow issue in exported pdf document has been fixed.
@@ -1697,7 +1710,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#276968` - Column misalignment issue after editing has been fixed.
 - `F155689` - Issue on expanding records while mapping expand status of record has been fixed.
@@ -1706,7 +1719,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#278235` - Parent Id is not updated properly on row drag and drop action issue gets resolved.
 - `F155766` - PDF export document Gantt timeline issue after zooming has been resolved.
@@ -1729,7 +1742,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#281103`- Taskbar not rendered properly while cancel the new child record by context menu action has been fixed.
 - `#281247`- Parent id is not updated on add a child record by context menu has been fixed.
@@ -1753,7 +1766,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#278176` - Zoom in or zoom out toolbar button disabled after zoom to fit action was fixed.
 - `#278238` - Action begin event not triggered on finish to finish predecessor was fixed.
@@ -1766,7 +1779,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#277029` - Update value not display on edit action issue has been fixed.
 - `#276942` - Issue while passing additional parameter to the server side on CRUD operation has been fixed.
@@ -1775,7 +1788,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#39566` - Issue when remove event markers dynamically has been resolved.
 - `F154261`,`#276047` - Issue while adding new record with empty data on load time gets resolved.
@@ -1795,7 +1808,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#268349` - Issue on maintaining duration data type gets resolved.
 - Column filter menu displayed in wrong place has been fixed.
@@ -1810,7 +1823,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#273422` - Date mismatch for parent and child record gets resolved.
 
@@ -1818,7 +1831,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#273440` - Issue on updating end date value using cell edit gets resolved.
 - `#273426` - Issue on validating parent start date on taskbar edit action gets resolved.
@@ -1828,7 +1841,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#268281` - Issue on adding dependency using dialog gets resolved.
 
@@ -1836,7 +1849,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#270801` - Issue on end date calculations gets resolved.
 - `#270563` - Console error throws while taskbar resizing with use of taskbar template has been fixed.
@@ -1850,7 +1863,7 @@
 
 - `#269693, #269694` - Provided accessibility support for column header and filter.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#270384` - Prevented event markers, indicators, holidays, baseline consideration for timeline while doing zoom to fit action.
 
@@ -1858,7 +1871,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#264099` - Console error on tab key press has been fixed.
 - `#269692`,`#269690` - Issue on focussing to the next element has been fixed.
@@ -1875,7 +1888,7 @@
 - `F146634` - Provided support for Resource Unit, which indicate the efficiency of resource by each task and Work mapping support which is used to allocate the total number of works to a task.
 - `#245866`,`#252413`,`#262485`,`F147349` - Provided support for the Resource view which is used to visualize the list of tasks assigned to each resource in hierarchical order.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#263236` - Issue on multi-level dragged parent dropped into last index has been fixed.
 - `#264099` - Issue in tab key action in edited state is fixed.
@@ -1894,7 +1907,7 @@
 
 - `F149069` - Provided support to render parent as milestone.
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F150408` - Baseline tooltip not rendered for milestone tasks has been fixed.
 - `#260944` - Issue in preventing taskbar editing has been fixed.
@@ -1903,7 +1916,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#260331` - Typescript declaration issue fixed.
 
@@ -1919,7 +1932,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F149551` - Handled empty value while editing the numeric edit type field.
 
@@ -1927,7 +1940,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F147793` - Context menu not closing issue while scrolling on the Gantt element has been fixed.
 
@@ -1946,7 +1959,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#253076` - Accessibility issues in Gantt has been fixed.
 
@@ -1954,7 +1967,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F149069` - Parent taskbar alignment issue while rendering with single milestone child record has been fixed.
 - `F149070` - Key navigation disable issue on Tree Grid section has been fixed.
@@ -1967,7 +1980,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#253912` - Parent taskbar disappearance issue while deleting all its child records has been fixed.
 
@@ -1975,7 +1988,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `249581` - Browser hangs issue while change schedule mode to year has been fixed.
 - `252195` - Issue on forEach method iteration in IE11 has been fixed.
@@ -1986,7 +1999,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F147755` - Chart part disappearing issue when splitter position value greater than control width has been fixed.
 
@@ -1994,7 +2007,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#245866` - Alignment issue with `height` property value as `auto` has been fixed.
 - `F145725` - Issue with cell editing on newly added record has been fixed.
@@ -2011,7 +2024,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `F145733` -  Alignment issue with header and rows on splitter resizing has been fixed.
 - `F146641` - Issue with indicators tooltip support has been fixed.
@@ -2022,7 +2035,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#243770` - Issue in date picker with custom format has been fixed.
 - `#243238` - Included current edited data in `actionComplete` event arguments.
@@ -2031,7 +2044,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - #F145936 -  Custom column values not updated in data source on Editing has been fixed.
 - Lexical declaration issues in es2015 has been fixed.
@@ -2042,7 +2055,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - #241781 - Gantt task-data property missing in template data issue has been fixed.
 
@@ -2050,7 +2063,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - #238228 - Issue while rendering tooltip with smaller duration has been fixed.
 
@@ -2064,7 +2077,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - #F144145 - Task Id duplication issue while adding new record has been fixed.
 
@@ -2072,7 +2085,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - #233041 - Alignment issue with timeline and vertical lines has been fixed.
 
@@ -2084,7 +2097,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - Bug fixes included.
 
@@ -2092,9 +2105,9 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
-- Internal bug fixes included.
+- Internal Bug fixes included.
 
 ## 17.1.32-beta (2019-03-13)
 
@@ -2118,7 +2131,7 @@
 
 ### GanttChart
 
-#### Bug Fixes
+#### Bug fixes
 
 - `#I473341` - Tooltip template not working properly issue has been fixed.
 - `#I467372` - no drop icon is displayed while dropping in Gantt chart.
