@@ -1,12 +1,14 @@
 # ej2-vue-layouts
 
-The layout package contains cards, avatars, splitter and Dashboard Layout components. 
+The layout package contains cards, avatars, splitter, timeline and Dashboard Layout components. 
 
 * The `card` is a small container in which user can show defined content in specific structure. 
 
 * The `avatars` are icons, initials or figures representing a particular person, used in popular media formats like images, SVG, font icons, and letters.
 
 * The `splitter` is container component which used to construct different layouts using multiple and nested panes.
+
+* The `timeline` is a tool for displaying chronological information effortlessly within your application. It offers a visually compelling and user-friendly experience for showcasing user activities, tracking progress, or narrating historical timelines.
 
 * The `DashboardLayout` is a grid structured layout component that helps to create a dashboard with panels. Panels hold the UI components and allow resize, reorder, drag-n-drop, remove and add options. This allows users to easily place the components at the desired position within the grid layout.
 
@@ -40,6 +42,10 @@ Following list of components are available in the package
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/splitter/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
   * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/default.html)
 
+* [Vue Timeline](https://www.syncfusion.com/vue-ui-components/vue-timeline?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Used to build timelines to showcases user activities, tracking progress, narrating historical timelines, and more.
+  * [Getting Started](https://ej2.syncfusion.com/vue/documentation/timeline/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
+  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/default.html) 
+
 * [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Used to build dashboards with panels that holds the UI components and allow resize, reorder, drag-n-drop, remove and add options.
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/dashboard-layout/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
   * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboard-layout/default.html)
@@ -68,6 +74,7 @@ These components are available in following list of:
 ## Key Features
 
 * Card
+
   * [Header](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/basic.html) - Header supports to include title, subtitle along with image.
 
   * [Images and Title](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/reveal.html) - Support to include images with customizable caption positions in it.
@@ -88,6 +95,7 @@ These components are available in following list of:
         * xlarge
 
 * Splitter
+
   * [Multiple Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/default.html) - Provided an option to configure more than two panes.
 
   * [Resizable Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/code-editor-layout.html) - Supports resizable to adjust its pane size dynamically.
@@ -97,6 +105,18 @@ These components are available in following list of:
   * [Integration](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/accordion-navigation-menu.html) - Other Vue UI components can be integrated within panes.
 
   * [Nested Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/code-editor-layout.html) - Another splitter can be integrated within panes to create a complex layout.
+
+* Timeline
+
+  * [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) - Display items in a horizontal or vertical orientation.
+
+  * [Opposite content](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) -  Display additional information opposite to the item content.
+  
+  * [Items alignment](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) - Items content and opposite content can be aligned - before, after, alternate, or alternate reverse.
+  
+  * [Reverse timeline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) - Shows the timeline items in the reverse order.
+  
+  * [Templates](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/template.html) - Customize the default appearance, including styling the dot item, templated content, and more.
 
 * Dashboard Layout
  

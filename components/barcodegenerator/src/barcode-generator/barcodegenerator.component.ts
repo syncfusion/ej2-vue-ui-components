@@ -27,7 +27,7 @@ export let BarcodeGeneratorComponent: DefineVueComponent<BarcodeGeneratorModel> 
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new BarcodeGenerator({}) as any,
+            ej2Instances: new BarcodeGenerator({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -103,7 +103,25 @@ export let BarcodeGeneratorComponent: DefineVueComponent<BarcodeGeneratorModel> 
     }
 });
 
-export type BarcodeGeneratorComponent = InstanceType<typeof BarcodeGeneratorComponent>;
+export type BarcodeGeneratorComponent = typeof ComponentBase & {
+    ej2Instances: BarcodeGenerator;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    exportAsBase64Image(exportType: Object): Object;
+    exportImage(filename: string, exportType: Object): void
+};
 
 export const BarcodeGeneratorPlugin = {
     name: 'ejs-barcodegenerator',

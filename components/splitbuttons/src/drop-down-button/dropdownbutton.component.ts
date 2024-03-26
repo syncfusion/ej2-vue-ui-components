@@ -110,7 +110,27 @@ export let DropDownButtonComponent: DefineVueComponent<DropDownButtonModel> =  v
     }
 });
 
-export type DropDownButtonComponent = InstanceType<typeof DropDownButtonComponent>;
+export type DropDownButtonComponent = typeof ComponentBase & {
+    ej2Instances: DropDownButton;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItems(items: Object[], text?: string): void;
+    focusIn(): void;
+    removeItems(items: string[], isUniqueId?: boolean): void;
+    toggle(): void
+};
 
 export const DropDownButtonPlugin = {
     name: 'ejs-dropdownbutton',

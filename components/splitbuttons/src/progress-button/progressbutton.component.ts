@@ -112,7 +112,28 @@ export let ProgressButtonComponent: DefineVueComponent<ProgressButtonModel> =  v
     }
 });
 
-export type ProgressButtonComponent = InstanceType<typeof ProgressButtonComponent>;
+export type ProgressButtonComponent = typeof ComponentBase & {
+    ej2Instances: ProgressButton;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    click(): void;
+    focusIn(): void;
+    progressComplete(): void;
+    start(percent?: number): void;
+    stop(): void
+};
 
 export const ProgressButtonPlugin = {
     name: 'ejs-progressbutton',

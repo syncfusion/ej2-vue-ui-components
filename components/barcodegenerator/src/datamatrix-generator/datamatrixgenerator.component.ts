@@ -27,7 +27,7 @@ export let DataMatrixGeneratorComponent: DefineVueComponent<DataMatrixGeneratorM
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new DataMatrixGenerator({}) as any,
+            ej2Instances: new DataMatrixGenerator({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -103,7 +103,25 @@ export let DataMatrixGeneratorComponent: DefineVueComponent<DataMatrixGeneratorM
     }
 });
 
-export type DataMatrixGeneratorComponent = InstanceType<typeof DataMatrixGeneratorComponent>;
+export type DataMatrixGeneratorComponent = typeof ComponentBase & {
+    ej2Instances: DataMatrixGenerator;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    exportAsBase64Image(barcodeExportType: Object): Object;
+    exportImage(fileName: string, exportType: Object): void
+};
 
 export const DataMatrixGeneratorPlugin = {
     name: 'ejs-datamatrixgenerator',

@@ -27,7 +27,7 @@ export let QRCodeGeneratorComponent: DefineVueComponent<QRCodeGeneratorModel> = 
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instance: new QRCodeGenerator({}) as any,
+            ej2Instances: new QRCodeGenerator({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -103,7 +103,25 @@ export let QRCodeGeneratorComponent: DefineVueComponent<QRCodeGeneratorModel> = 
     }
 });
 
-export type QRCodeGeneratorComponent = InstanceType<typeof QRCodeGeneratorComponent>;
+export type QRCodeGeneratorComponent = typeof ComponentBase & {
+    ej2Instances: QRCodeGenerator;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    exportAsBase64Image(barcodeExportType: Object): Object;
+    exportImage(filename: string, barcodeExportType: Object): void
+};
 
 export const QRCodeGeneratorPlugin = {
     name: 'ejs-qrcodegenerator',

@@ -8,8 +8,8 @@
 
 #### Bug Fixes
 
-`#I525892` - Now, the card template works properly upon drag-and-drop action in Kanban with remote data.
-
+- `#I525892` - Now, the card template works properly upon drag-and-drop action in Kanban with remote data.
+- `#I550208` - Now, the swimlane header template will work properly in the mobile view.
 
 ## 24.1.47 (2024-01-23)
 
@@ -17,8 +17,7 @@
 
 #### Bug Fixes
 
-`#I544423` - Now, the Kanban column header title shows properly when the column is collapsed.
-
+- `#I544423` - Now, the Kanban column header title shows properly when the column is collapsed.
 
 ## 24.1.46 (2024-01-17)
 
@@ -26,8 +25,7 @@
 
 #### Bug Fixes
 
-`#I535989` - Now, drop clone works properly when slowly dragging and dropping the cards in the last position in the Kanban column.
-
+- `#I535989` - Now, drop clone works properly when slowly dragging and dropping the cards in the last position in the Kanban column.
 
 ## 24.1.41 (2023-12-18)
 
@@ -43,11 +41,8 @@
 
 #### Bug Fixes
 
-`#I513537` - Now, localization of the "Cards" text was done. When you drag the multiple cards, it show up.
-
-
-`#I515897` - Now, when the `cancel` argument is set to true in the `dialogClose` event in the kanban, it works properly.
-
+- `#I513537` - Now, localization of the "Cards" text was done. When you drag the multiple cards, it show up.
+- `#I515897` - Now, when the `cancel` argument is set to true in the `dialogClose` event in the kanban, it works properly.
 
 ## 23.1.36 (2023-09-15)
 
@@ -55,11 +50,8 @@
 
 #### Bug Fixes
 
-`#I492818` - Now, fast scrolling from top to bottom of the column continuously works properly.
-
-
-`#I495751` - Now, dragging a card to the first position in the Kanban works properly without flickering.
-
+- `#I492818` - Now, fast scrolling from top to bottom of the column continuously works properly.
+- `#I495751` - Now, dragging a card to the first position in the Kanban works properly without flickering.
 
 ## 22.1.34 (2023-06-21)
 
@@ -75,8 +67,7 @@
 
 #### Bug Fixes
 
-`#F181441` - Resolved a issue, where a console error was thrown when dragging into the column header on the Kanban.
-
+- `#F181441` - Resolved a issue, where a console error was thrown when dragging into the column header on the Kanban.
 
 ## 21.1.37 (2023-03-29)
 

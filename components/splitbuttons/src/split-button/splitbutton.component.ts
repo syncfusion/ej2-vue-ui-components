@@ -110,7 +110,27 @@ export let SplitButtonComponent: DefineVueComponent<SplitButtonModel> =  vueDefi
     }
 });
 
-export type SplitButtonComponent = InstanceType<typeof SplitButtonComponent>;
+export type SplitButtonComponent = typeof ComponentBase & {
+    ej2Instances: SplitButton;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    addItems(items: Object[], text?: string): void;
+    focusIn(): void;
+    removeItems(items: string[], isUniqueId?: boolean): void;
+    toggle(): void
+};
 
 export const SplitButtonPlugin = {
     name: 'ejs-splitbutton',
