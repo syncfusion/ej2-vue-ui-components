@@ -175,8 +175,8 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         open(data: string | Object): void {
             return this.ej2Instances.open(data);
         },
-        pan(value: boolean): void {
-            return this.ej2Instances.pan(value);
+        pan(value: boolean, x?: number, y?: number): void {
+            return this.ej2Instances.pan(value, x, y);
         },
         redo(): void {
             return this.ej2Instances.redo();
@@ -257,7 +257,7 @@ export type ImageEditorComponent = typeof ComponentBase & {
     getShapeSettings(): Object[];
     initialize(): void;
     open(data: string | Object): void;
-    pan(value: boolean): void;
+    pan(value: boolean, x?: number, y?: number): void;
     redo(): void;
     reset(): void;
     resize(width: number, height: number, isAspectRatio?: boolean): boolean;

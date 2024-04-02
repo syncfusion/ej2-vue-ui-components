@@ -4,6 +4,12 @@
 
 ## 25.1.37 (2024-03-26)
 
+### TreeView
+
+#### Bug Fixes
+
+- `#I570321` - The issue with the focus on first item in TreeView if it is disabled mode has been resolved.
+
 ### Toolbar
 
 #### Bug Fixes

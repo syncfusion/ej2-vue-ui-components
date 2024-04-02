@@ -106,7 +106,26 @@ export let TooltipComponent: DefineVueComponent<TooltipModel> =  vueDefineCompon
     }
 });
 
-export type TooltipComponent = InstanceType<typeof TooltipComponent>;
+export type TooltipComponent = typeof ComponentBase & {
+    ej2Instances: Tooltip;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    close(animation?: Object): void;
+    open(element?: Object, animation?: Object): void;
+    refresh(target?: Object): void
+};
 
 export const TooltipPlugin = {
     name: 'ejs-tooltip',
