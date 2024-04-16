@@ -113,7 +113,27 @@ export let LinearGaugeComponent: DefineVueComponent<LinearGaugeModel> =  vueDefi
     }
 });
 
-export type LinearGaugeComponent = InstanceType<typeof LinearGaugeComponent>;
+export type LinearGaugeComponent = typeof ComponentBase & {
+    ej2Instances: LinearGauge;
+    isVue3: boolean;
+    isLazyUpdate: Boolean;
+    plugins: any[];
+    propKeys: string[];
+    models: string[];
+    hasChildDirective: boolean;
+    tagMapper: {
+        [key: string]: Object;
+    };
+    tagNameMapper: Object;
+    setProperties(prop: any, muteOnChange: boolean): void;
+    trigger(eventName: string, eventProp: {
+        [key: string]: Object;
+    }, successHandler?: Function): void;
+    export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
+    print(id?: string[] | string | Object): void;
+    setAnnotationValue(annotationIndex: number, content: string | Object, axisValue?: number): void;
+    setPointerValue(axisIndex: number, pointerIndex: number, value: number): void
+};
 
 export const LinearGaugePlugin = {
     name: 'ejs-lineargauge',

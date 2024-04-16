@@ -147,7 +147,7 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void {
             return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
         },
-        executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object, option?: Object): void {
+        executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object, option?: Object): void {
             return this.ej2Instances.executeCommand(commandName, value, option);
         },
         focusIn(): void {
@@ -243,7 +243,7 @@ export type RichTextEditorComponent = typeof ComponentBase & {
     closeDialog(type: Object): void;
     disableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
     enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
-    executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object, option?: Object): void;
+    executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object, option?: Object): void;
     focusIn(): void;
     focusOut(): void;
     getCharCount(): number;
