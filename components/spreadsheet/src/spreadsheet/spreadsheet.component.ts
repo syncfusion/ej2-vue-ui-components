@@ -337,11 +337,11 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         setColumnsWidth(width: number, ranges?: string[]): void {
             return this.ej2Instances.setColumnsWidth(width, ranges);
         },
-        setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean): void {
-            return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex, edited);
+        setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean, skipCustomRow?: boolean): void {
+            return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex, edited, skipCustomRow);
         },
-        setRowsHeight(height: number, ranges?: string[]): void {
-            return this.ej2Instances.setRowsHeight(height, ranges);
+        setRowsHeight(height: number, ranges?: string[], skipCustomRows?: boolean): void {
+            return this.ej2Instances.setRowsHeight(height, ranges, skipCustomRows);
         },
         showSpinner(): void {
             return this.ej2Instances.showSpinner();
@@ -476,8 +476,8 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     setBorder(style: Object, range?: string, type?: Object, isUndoRedo?: boolean): void;
     setColWidth(width: number | string, colIndex: number, sheetIndex?: number): void;
     setColumnsWidth(width: number, ranges?: string[]): void;
-    setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean): void;
-    setRowsHeight(height: number, ranges?: string[]): void;
+    setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean, skipCustomRow?: boolean): void;
+    setRowsHeight(height: number, ranges?: string[], skipCustomRows?: boolean): void;
     showSpinner(): void;
     sort(sortOptions?: Object, range?: string): Object;
     startEdit(): void;

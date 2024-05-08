@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 25.2.3 (2024-05-08)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `#I577454` - Issue with "cell values were not updating correctly in merged cells when scrolling through the spreadsheet content" has been resolved.
+
+- `#I573271`- Added a `boolean` argument to the `setRowsHeight` method. When this parameter is set to true, the method skips updating the heights of rows that have already been modified, with their `customHeight` property set to true.
+
 ## 25.1.41 (2024-04-23)
 
 ### Spreadsheet
