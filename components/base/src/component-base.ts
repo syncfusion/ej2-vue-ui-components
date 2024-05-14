@@ -186,7 +186,23 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             let tempBeforeDestroyThis: any = this;
             tempBeforeDestroyThis.ej2Instances.destroy();
             (tempBeforeDestroyThis.$el as any).style.visibility = 'hidden';
+            tempBeforeDestroyThis.destroyPortals();
             tempBeforeDestroyThis = null;
+        },
+        destroyPortals(): void {
+            if (this.portals) {
+                for (const portal of this.portals) {
+                    const controls: any[] = portal.classList.contains('e-control') ? [portal] : portal.getElementsByClassName('e-control');
+                    for (let index: number = 0; index < controls.length; index++) {
+                        const control: any = controls[parseInt(index.toString(), 10)];
+                        if (control.ej2_instances && control.ej2_instances[0]) {
+                            control.ej2_instances[0].destroy();
+                            index--;
+                        }
+                    }
+                }
+                this.portals = null;
+            }
         },
         bindProperties(): void {
             let options: Object = {};

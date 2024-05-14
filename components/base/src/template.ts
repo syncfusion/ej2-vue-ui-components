@@ -13,6 +13,8 @@ export function compile(
     let returnEle: any;
     if (context) {
       let plugins: any = context.vueInstance && context.vueInstance.plugins ? { plugins: context.vueInstance.plugins } : {};
+      const vueInstance: any = context.vueInstance ? context.vueInstance :
+                ((root && root.vueInstance) ? root.vueInstance : null);
       let pid: string = getUniqueID("templateParentDiv");
       let id: string = getUniqueID("templateDiv");
       let ele: HTMLElement = createElement("div", {
@@ -33,6 +35,10 @@ export function compile(
           // Get values for Vue 3 slot template
           getValues(app, context.vueInstance, root);
           Vue.render(app, ele);
+          if (vueInstance) {
+            if (!vueInstance['portals']) { vueInstance['portals'] = []; }
+            vueInstance.portals.push(...[].slice.call(ele.children));
+          }
           returnEle = ele.childNodes;
           detach(ele);
         } else {
@@ -96,6 +102,10 @@ export function compile(
         // Get values for Vue 3 functional template
         getValues(app, context.vueInstance, root);
         Vue.render(app, ele);
+        if (vueInstance) {
+          if (!vueInstance['portals']) { vueInstance['portals'] = []; }
+          vueInstance.portals.push(...[].slice.call(ele.children));
+        }
         returnEle = ele.childNodes;
         if (context.vueInstance) {
           let templateInstance: any = context.vueInstance.templateCollection;
@@ -134,6 +144,10 @@ export function compile(
             }
           });
           vueTemplate.$mount("#" + id);
+          if (vueInstance) {
+            if (!vueInstance['portals']) { vueInstance['portals'] = []; }
+            vueInstance.portals.push(...[].slice.call(ele.children));
+          }
           returnEle = ele.childNodes;
           detach(ele);
         } else {
@@ -164,6 +178,10 @@ export function compile(
         // let templateVue = new Vue(tempObj.template);
         // templateVue.$data.data = extend(tempObj.data, data);
         templateVue.$mount("#" + id);
+        if (vueInstance) {
+          if (!vueInstance['portals']) { vueInstance['portals'] = []; }
+          vueInstance.portals.push(...[].slice.call(ele.children));
+        }
         returnEle = ele.childNodes;
         if (context.vueInstance) {
           let templateInstance: any = context.vueInstance.templateCollection;

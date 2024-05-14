@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 25.2.4 (2024-05-14)
+
+### Common
+
+#### Bug Fixes
+
+- `#I573822` - The issue with "the element duplications occur while routing in the Vue template component" has been resolved.
+
 ## 25.1.35 (2024-03-15)
 
 ### Common

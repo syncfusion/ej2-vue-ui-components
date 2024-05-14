@@ -196,6 +196,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         getEventMaxID(): number | string {
             return this.ej2Instances.getEventMaxID();
         },
+        getEventTemplateName(resIndex: number): string {
+            return this.ej2Instances.getEventTemplateName(resIndex);
+        },
         getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[] {
             return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
         },
@@ -313,6 +316,7 @@ export type ScheduleComponent = typeof ComponentBase & {
     getDeletedOccurrences(recurrenceData: string | number | Object): Object[];
     getEventDetails(element: Object): Object;
     getEventMaxID(): number | string;
+    getEventTemplateName(resIndex: number): string;
     getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[];
     getIndexFromResourceId(id: string | number, name?: string): number;
     getOccurrencesByID(eventID: number | string): Object[];
