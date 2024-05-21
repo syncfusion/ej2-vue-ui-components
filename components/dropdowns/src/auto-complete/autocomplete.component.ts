@@ -159,6 +159,9 @@ export let AutoCompleteComponent: DefineVueComponent<AutoCompleteModel> =  vueDe
         hideSpinner(): void {
             return this.ej2Instances.hideSpinner();
         },
+        removeAllChildren(element: any): void {
+            return this.ej2Instances.removeAllChildren(element);
+        },
         requiredModules(): Object[] {
             return this.ej2Instances.requiredModules();
         },
@@ -196,6 +199,7 @@ export type AutoCompleteComponent = typeof ComponentBase & {
     getItems(): Object[];
     hidePopup(e?: Object | Object | Object): void;
     hideSpinner(): void;
+    removeAllChildren(element: any): void;
     requiredModules(): Object[];
     showPopup(e?: Object | Object | Object): void;
     showSpinner(): void
