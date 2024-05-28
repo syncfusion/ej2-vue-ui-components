@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 25.2.5 (2024-05-21)
+## 25.2.6 (2024-05-28)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I586530` - The issue with `refreshTemplates` caused alignment issues in resource header has been resolved.
+
+## 25.2.4 (2024-05-14)
 
 ### Schedule
 

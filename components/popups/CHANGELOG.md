@@ -667,6 +667,14 @@ Dialog is a window that displays information to the user, and used to get the us
 - **Keyboard Interaction** - The Dialog can be intractable through keyboard.
 
 
+## 25.2.4 (2024-05-14)
+
+### Dialog
+
+#### Bug Fixes
+
+- `#I580008` - Resolved issue with Console error occurring while closing the dialog.
+
 ## 19.1.57 (2021-04-20)
 
 ### Popup
