@@ -13,7 +13,7 @@ import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sh
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'listSeparator', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowPrint', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'autoFillSettings', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enableNotes', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'listSeparator', 'locale', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -277,11 +277,14 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         open(options: Object): void {
             return this.ej2Instances.open(options);
         },
-        openFromJson(options: undefined): void {
-            return this.ej2Instances.openFromJson(options);
+        openFromJson(options: undefined, jsonConfig?: Object): void {
+            return this.ej2Instances.openFromJson(options, jsonConfig);
         },
         paste(address?: string, type?: Object): void {
             return this.ej2Instances.paste(address, type);
+        },
+        print(printOptions: Object): void {
+            return this.ej2Instances.print(printOptions);
         },
         protectSheet(sheet?: number | string, protectSettings?: Object, password?: string): void {
             return this.ej2Instances.protectSheet(sheet, protectSettings, password);
@@ -313,11 +316,11 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         resize(): void {
             return this.ej2Instances.resize();
         },
-        save(saveOptions: Object): void {
-            return this.ej2Instances.save(saveOptions);
+        save(saveOptions: Object, jsonConfig?: Object): void {
+            return this.ej2Instances.save(saveOptions, jsonConfig);
         },
-        saveAsJson(): Object {
-            return this.ej2Instances.saveAsJson();
+        saveAsJson(jsonConfig?: Object): Object {
+            return this.ej2Instances.saveAsJson(jsonConfig);
         },
         selectChart(id?: string): void {
             return this.ej2Instances.selectChart(id);
@@ -336,6 +339,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         },
         setColumnsWidth(width: number, ranges?: string[]): void {
             return this.ej2Instances.setColumnsWidth(width, ranges);
+        },
+        setRangeReadOnly(readOnly: boolean, range: string, sheetIndex: number): void {
+            return this.ej2Instances.setRangeReadOnly(readOnly, range, sheetIndex);
         },
         setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean, skipCustomRow?: boolean): void {
             return this.ej2Instances.setRowHeight(height, rowIndex, sheetIndex, edited, skipCustomRow);
@@ -456,8 +462,9 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     moveSheet(position: number, sheetIndexes?: number[]): void;
     numberFormat(format: string, range?: string): void;
     open(options: Object): void;
-    openFromJson(options: undefined): void;
+    openFromJson(options: undefined, jsonConfig?: Object): void;
     paste(address?: string, type?: Object): void;
+    print(printOptions: Object): void;
     protectSheet(sheet?: number | string, protectSettings?: Object, password?: string): void;
     redo(): void;
     refresh(isNew?: boolean): void;
@@ -468,14 +475,15 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     removeInvalidHighlight(range?: string): void;
     replace(args: Object): void;
     resize(): void;
-    save(saveOptions: Object): void;
-    saveAsJson(): Object;
+    save(saveOptions: Object, jsonConfig?: Object): void;
+    saveAsJson(jsonConfig?: Object): Object;
     selectChart(id?: string): void;
     selectImage(id?: string): void;
     selectRange(address: string): void;
     setBorder(style: Object, range?: string, type?: Object, isUndoRedo?: boolean): void;
     setColWidth(width: number | string, colIndex: number, sheetIndex?: number): void;
     setColumnsWidth(width: number, ranges?: string[]): void;
+    setRangeReadOnly(readOnly: boolean, range: string, sheetIndex: number): void;
     setRowHeight(height: number | string, rowIndex: number, sheetIndex?: number, edited?: boolean, skipCustomRow?: boolean): void;
     setRowsHeight(height: number, ranges?: string[], skipCustomRows?: boolean): void;
     showSpinner(): void;

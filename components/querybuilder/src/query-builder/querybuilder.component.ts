@@ -5,7 +5,7 @@ import { QueryBuilder, QueryBuilderModel } from '@syncfusion/ej2-querybuilder';
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'addRuleToNewGroups', 'allowValidation', 'autoSelectField', 'autoSelectOperator', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'fieldMode', 'fieldModel', 'headerTemplate', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'operatorModel', 'readonly', 'rule', 'separator', 'showButtons', 'sortDirection', 'summaryView', 'valueModel', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'dataBound', 'ruleChange'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'addRuleToNewGroups', 'allowDragAndDrop', 'allowValidation', 'autoSelectField', 'autoSelectOperator', 'columns', 'cssClass', 'dataSource', 'displayMode', 'enableNotCondition', 'enablePersistence', 'enableRtl', 'enableSeparateConnector', 'fieldMode', 'fieldModel', 'headerTemplate', 'height', 'immediateModeDelay', 'locale', 'matchCase', 'maxGroupCount', 'operatorModel', 'readonly', 'rule', 'separator', 'showButtons', 'sortDirection', 'summaryView', 'valueModel', 'width', 'actionBegin', 'beforeChange', 'change', 'created', 'dataBound', 'ruleChange', 'drag', 'dragStart', 'drop'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -119,7 +119,7 @@ export let QueryBuilderComponent: DefineVueComponent<QueryBuilderModel> =  vueDe
         getDataManagerQuery(rule: Object): Object {
             return this.ej2Instances.getDataManagerQuery(rule);
         },
-        getFilteredRecords(): Object | any {
+        getFilteredRecords(): Object | object {
             return this.ej2Instances.getFilteredRecords();
         },
         getGroup(target: Object | string): Object {
@@ -155,7 +155,7 @@ export let QueryBuilderComponent: DefineVueComponent<QueryBuilderModel> =  vueDe
         getValidRules(currentRule?: Object): Object {
             return this.ej2Instances.getValidRules(currentRule);
         },
-        getValues(field: string): any[] {
+        getValues(field: string): object[] {
             return this.ej2Instances.getValues(field);
         },
         lockGroup(groupID: string): void {
@@ -218,7 +218,7 @@ export type QueryBuilderComponent = typeof ComponentBase & {
     deleteGroups(groupIdColl: string[]): void;
     deleteRules(ruleIdColl: string[]): void;
     getDataManagerQuery(rule: Object): Object;
-    getFilteredRecords(): Object | any;
+    getFilteredRecords(): Object | object;
     getGroup(target: Object | string): Object;
     getMongoQuery(rule?: Object): string;
     getOperators(field: string): undefined[];
@@ -230,7 +230,7 @@ export type QueryBuilderComponent = typeof ComponentBase & {
     getRulesFromSql(sqlString: string, sqlLocale?: boolean): Object;
     getSqlFromRules(rule?: Object, allowEscape?: boolean, sqlLocale?: boolean): string;
     getValidRules(currentRule?: Object): Object;
-    getValues(field: string): any[];
+    getValues(field: string): object[];
     lockGroup(groupID: string): void;
     lockRule(ruleID: string): void;
     notifyChange(value: string | number | boolean | Object | string[] | number[] | Object[], element: Object, type?: string): void;

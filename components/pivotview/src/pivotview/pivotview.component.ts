@@ -100,11 +100,11 @@ export let PivotViewComponent: DefineVueComponent<PivotViewModel> =  vueDefineCo
         createCalculatedFieldDialog(): void {
             return this.ej2Instances.createCalculatedFieldDialog();
         },
-        csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean, isServerExport?: boolean): void {
-            return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob, isServerExport);
+        csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void {
+            return this.ej2Instances.csvExport(excelExportProperties, isMultipleExport, workbook, isBlob);
         },
-        excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean, isServerExport?: boolean): void {
-            return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob, isServerExport);
+        excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void {
+            return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
         },
         loadPersistData(persistData: string): void {
             return this.ej2Instances.loadPersistData(persistData);
@@ -145,8 +145,8 @@ export type PivotViewComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     chartExport(type: Object, pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object;
     createCalculatedFieldDialog(): void;
-    csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean, isServerExport?: boolean): void;
-    excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean, isServerExport?: boolean): void;
+    csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
+    excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
     loadPersistData(persistData: string): void;
     pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean, exportBothTableAndChart?: boolean): Object;
     printChart(): void;

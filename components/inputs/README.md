@@ -187,6 +187,19 @@ The [Vue Rating](https://www.syncfusion.com/vue-components/vue-rating?utm_source
 * [Appearance](https://ej2.syncfusion.com/vue/documentation/rating/appearance) - Customize the rating items appearance.
 * [Templates](https://ej2.syncfusion.com/vue/documentation/rating/templates) - Customize the rating item with a heart, SVG, or any content that precisely matches unique needs.
 
+### Vue OTP Input
+
+The `Vue OTP Input` component is designed to securely enter and verify single-use passwords for multi-factor authentication purposes in various applications, such as banking, e-commerce, or account login processes. It has several built-in features such as support for input types, styling modes, placeholder, seperators, and customization.
+
+#### Key features
+
+* `Input types` - Allow specifying the input type as text, number, or password for the OTP input..
+* `Styling modes` - Offer built-in styling options such as underline, outline, or fill.
+* `Tooltip` - Displays additional information of the rating items.
+* `Placeholders` - Allow setting a hint character for each input field, indicating the expected value.
+* `Separators` - Specify a character to be placed between input fields. 
+* `Customization` - Allows customizing the default appearance, including input field styling, input length, and more. 
+
 <p align="center">
 Trusted by the world's leading companies
   <a href="https://www.syncfusion.com/">

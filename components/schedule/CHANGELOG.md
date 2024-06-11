@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 26.1.35 (2024-06-11)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I587571` - The issue with the `refreshLayout` method causing UI disruptions when utilizing `allowVirtualscrolling` has been resolved.
+- `#FB57769` - An issue with the events is not overlap properly when the event has same start and end time.
+
 ## 25.2.6 (2024-05-28)
 
 ### Schedule
@@ -908,10 +917,10 @@
 
 - The following properties type was changed.
 
-| Property | Previous Type | Current Type | 
-|---|---|---|
-| `selectedType` | `anonymous` | `int` | 
-| value | `anonymous` | `string` | 
+| Property | Previous Type | Current Type                   |
+|----------|---------------|--------------------------------|
+| `selectedType` | `anonymous`      | `int` |
+| value | `anonymous`      | `string` |
 
 ## 18.4.49 (2021-03-23)
 
@@ -1893,7 +1902,6 @@
 
 undefinedSchedule is an event calendar which facilitates user with the common Outlook-calendar features, thus allowing the users to plan and manage their appointments and its time in an efficient way.
 
-
 - **Views** - Schedule is now availed with 6 different view modes – day, week, work week, month, agenda and month agenda. It is possible to configure view-based settings on each view mode. The `Week` view is set as active view by default.
 - **Data binding** - Seamless data binding with various client-side and remote data sources thus allowing the data to load on demand by default to reduce the data transfer and loading time.
 - **Multiple resources** - Supports planning and management of events for multiple resources and allows to group them under appropriate resources. Also, supports date-wise grouping, linked appointments and other group related customizations.
@@ -1906,10 +1914,7 @@ undefinedSchedule is an event calendar which facilitates user with the common Ou
 - **Adaptive rendering** - Adapts with optimal user interfaces for mobile and desktop form-factors, thus helping the user’s application to scale elegantly across all the form-factors without any additional effort.
 - **Keyboard interaction** - All the common actions such as traversing through the appointments, multiple cell selection, add/edit/delete the appointments, navigate to other views, dates and much more can be performed through keyboard inputs.
 - **Localization** - All the static text and date content can be localized to any desired language. Also, it can be displayed with appropriate time mode and date-format as per the localized language.
-- **RTL** - Supports displaying the component to display in the direction from right to left.
-
-
-## 16.1.37 (2018-04-24)
+- **RTL** - Supports displaying the component to display in the direction from right to left.## 16.1.37 (2018-04-24)
 
 ### Schedule
 
@@ -1933,7 +1938,6 @@ undefinedSchedule is an event calendar which facilitates user with the common Ou
 
 Schedule is an event calendar which facilitates user with the common Outlook-calendar features, thus allowing the users to plan and manage their appointments and its time in an efficient way.
 
-
 - **Views** - Schedule is now availed with 6 different view modes – day, week, work week, month, agenda and month agenda. It is possible to configure view-based settings on each view mode. The `Week` view is set as active view by default.
 - **Data binding** - Seamless data binding with various client-side and remote data sources thus allowing the data to load on demand by default to reduce the data transfer and loading time.
 - **Recurrence** - Allows the user to repeat a set of events on a daily, weekly, monthly, or yearly basis.
@@ -1945,5 +1949,3 @@ Schedule is an event calendar which facilitates user with the common Outlook-cal
 - **Keyboard interaction** - All the common actions such as traversing through the appointments, multiple cell selection, add/edit/delete the appointments, navigate to other views, dates and much more can be performed through keyboard inputs.
 - **Localization** - All the static text and date content can be localized to any desired language. Also, it can be displayed with appropriate time mode and date-format as per the localized language.
 - **RTL** - Supports displaying the component to display in the direction from right to left.
-
-

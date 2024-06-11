@@ -138,6 +138,9 @@ export let AutoCompleteComponent: DefineVueComponent<AutoCompleteModel> =  vueDe
         clear(): void {
             return this.ej2Instances.clear();
         },
+        disableItem(item: string | number | object | Object): void {
+            return this.ej2Instances.disableItem(item);
+        },
         filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
             return this.ej2Instances.filter(dataSource, query, fields);
         },
@@ -158,9 +161,6 @@ export let AutoCompleteComponent: DefineVueComponent<AutoCompleteModel> =  vueDe
         },
         hideSpinner(): void {
             return this.ej2Instances.hideSpinner();
-        },
-        removeAllChildren(element: any): void {
-            return this.ej2Instances.removeAllChildren(element);
         },
         requiredModules(): Object[] {
             return this.ej2Instances.requiredModules();
@@ -192,6 +192,7 @@ export type AutoCompleteComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
     clear(): void;
+    disableItem(item: string | number | object | Object): void;
     filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
     focusIn(): void;
     focusOut(e?: Object | Object): void;
@@ -199,7 +200,6 @@ export type AutoCompleteComponent = typeof ComponentBase & {
     getItems(): Object[];
     hidePopup(e?: Object | Object | Object): void;
     hideSpinner(): void;
-    removeAllChildren(element: any): void;
     requiredModules(): Object[];
     showPopup(e?: Object | Object | Object): void;
     showSpinner(): void

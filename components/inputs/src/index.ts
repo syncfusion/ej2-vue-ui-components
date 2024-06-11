@@ -9,3 +9,4 @@ export { UploaderComponent, UploaderPlugin } from './uploader/uploader.component
 export { ColorPickerComponent, ColorPickerPlugin } from './color-picker/colorpicker.component';
 export { SignatureComponent, SignaturePlugin } from './signature/signature.component';
 export { RatingComponent, RatingPlugin } from './rating/rating.component';
+export { OtpInputComponent, OtpInputPlugin } from './otp-input/otpinput.component';

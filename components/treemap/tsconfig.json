@@ -19,7 +19,13 @@
     "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "types": ["node"]
+    "types": [
+      "jasmine",
+      "jasmine-ajax",
+      "requirejs",
+      "chai",
+      "es6-promise"
+    ]
   },
   "exclude": [
     "node_modules",

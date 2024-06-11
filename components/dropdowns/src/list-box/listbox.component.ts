@@ -141,7 +141,7 @@ export let ListBoxComponent: DefineVueComponent<ListBoxModel> =  vueDefineCompon
         filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
             return this.ej2Instances.filter(dataSource, query, fields);
         },
-        getDataByValue(value: string | number | boolean | any): Object | string | number | boolean {
+        getDataByValue(value: string | number | boolean | object): Object | string | number | boolean {
             return this.ej2Instances.getDataByValue(value);
         },
         getDataByValues(value: string[] | number[] | boolean[]): undefined[] {
@@ -217,7 +217,7 @@ export type ListBoxComponent = typeof ComponentBase & {
     addItems(items: Object[] | Object, itemIndex?: number): void;
     enableItems(items: string[], enable: boolean, isValue?: boolean): void;
     filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
-    getDataByValue(value: string | number | boolean | any): Object | string | number | boolean;
+    getDataByValue(value: string | number | boolean | object): Object | string | number | boolean;
     getDataByValues(value: string[] | number[] | boolean[]): undefined[];
     getDataList(): undefined[] | string[] | boolean[] | number[];
     getItems(): Object[];

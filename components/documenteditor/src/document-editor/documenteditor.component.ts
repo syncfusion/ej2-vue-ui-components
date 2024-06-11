@@ -100,6 +100,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         exportAsImage(pageNumber: number, format: Object): Object {
             return this.ej2Instances.exportAsImage(pageNumber, format);
         },
+        exportContentControlData(): Object[] {
+            return this.ej2Instances.exportContentControlData();
+        },
         exportFormData(): Object[] {
             return this.ej2Instances.exportFormData();
         },
@@ -124,17 +127,23 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         getStyles(styleType?: Object): Object[] {
             return this.ej2Instances.getStyles(styleType);
         },
+        importContentControlData(contentControlInfo: Object[]): Object[] {
+            return this.ej2Instances.importContentControlData(contentControlInfo);
+        },
         importFormData(formData: Object[]): void {
             return this.ej2Instances.importFormData(formData);
         },
-        open(sfdtText: string): void {
-            return this.ej2Instances.open(sfdtText);
+        open(inputData: string): void {
+            return this.ej2Instances.open(inputData);
         },
         openBlank(): void {
             return this.ej2Instances.openBlank();
         },
         print(printWindow?: Object): void {
             return this.ej2Instances.print(printWindow);
+        },
+        resetContentControlData(contentControInfo: Object[]): void {
+            return this.ej2Instances.resetContentControlData(contentControInfo);
         },
         resetFormFields(name?: string): void {
             return this.ej2Instances.resetFormFields(name);
@@ -199,6 +208,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     enableAllModules(): void;
     exportAsImage(pageNumber: number, format: Object): Object;
+    exportContentControlData(): Object[];
     exportFormData(): Object[];
     fitPage(pageFitType?: Object): void;
     focusIn(): void;
@@ -207,10 +217,12 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     getFormFieldNames(): string[];
     getStyleNames(styleType?: Object): string[];
     getStyles(styleType?: Object): Object[];
+    importContentControlData(contentControlInfo: Object[]): Object[];
     importFormData(formData: Object[]): void;
-    open(sfdtText: string): void;
+    open(inputData: string): void;
     openBlank(): void;
     print(printWindow?: Object): void;
+    resetContentControlData(contentControInfo: Object[]): void;
     resetFormFields(name?: string): void;
     resize(width?: number, height?: number): void;
     save(fileName: string, formatType?: Object): void;

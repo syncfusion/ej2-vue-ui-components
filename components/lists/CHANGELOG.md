@@ -2,23 +2,7 @@
 
 ## [Unreleased]
 
-## 25.2.7 (2024-06-04)
-
-### ListView
-
-#### Bug Fixes
-
-- `#FB52724` -  The issue with space bar toggle in Switch is not working within ListView component has been resolved.
-
-## 25.1.39 (2024-04-09)
-
-### ListBox
-
-#### Bug Fixes
-
-- Issue with "Script error thrown in list box while dragging hover on `svg` element" has been resolved.
-
-## 25.1.35 (2024-03-15)
+## 26.1.35 (2024-06-11)
 
 ### ListBox
 
@@ -38,7 +22,6 @@
 
 **Previous**
 
-
 ```typescript
 
 let template: string = '<div class="e-list-wrapper e-list-avatar" id = ${id}>' +
@@ -46,7 +29,6 @@ let template: string = '<div class="e-list-wrapper e-list-avatar" id = ${id}>' +
 ```
 
 **Now**
-
 
 ```typescript
 
@@ -129,6 +111,7 @@ let template: Function = (data: any) => {
 #### Bug Fixes
 
 - `#304129`,`#304247` - The issue "ActionBegin event does not trigger before/after switching to new views in the nested ListView" has been fixed.
+
 - `#310143` - The script error with refreshItemHeight method in ListView component has been resolved.
 
 ## 18.3.53 (2020-12-08)
@@ -138,6 +121,7 @@ let template: Function = (data: any) => {
 #### Bug Fixes
 
 - `#302538` - The issue with "The space key is not accepted in input text while using inside of Listview Template" has been fixed.
+
 - `#305040` - `The template issue in ListView component when using AddItem method` has been resolved.
 
 ## 18.3.47 (2020-11-05)
@@ -162,7 +146,7 @@ let template: Function = (data: any) => {
 
 #### New Features
 
-- Provided support for rendering JsRender template in the ListView component.
+- Provided support for rendering JsRender template in the ListView component.
 
 #### Bug Fixes
 
@@ -275,6 +259,7 @@ let template: Function = (data: any) => {
 #### Bug Fixes
 
 - Issue with duplicate entries on updating the data source while binding data using data manager has been fixed.
+
 - Now it is possible to perform key interactions with input list items displayed using custom templates.
 
 ## 16.4.44 (2018-12-24)
@@ -284,6 +269,7 @@ let template: Function = (data: any) => {
 #### Bug Fixes
 
 - Fixed multiple CSS class not added properly while using `template` property in `UI Virtualization`.
+
 - Fixed height calculation in `UI Virtualization` with sample level border inclusion.
 
 ## 16.3.33 (2018-11-20)
@@ -308,7 +294,7 @@ let template: Function = (data: any) => {
 
 #### Bug Fixes
 
-- Fixed issue with `imageUrl` property while using with `template` rendering.
+- Fixed issue with `imageUrl` property while using with `template` rendering.
 
 ## 16.3.25 (2018-10-15)
 
@@ -317,6 +303,7 @@ let template: Function = (data: any) => {
 #### Bug Fixes
 
 - Fixed remove selection of list items with `undefined` input using `selectItem` public method.
+
 - Fixed custom `cssClass` not removed properly while using `destroy` public method.
 
 ## 16.3.23 (2018-10-03)
@@ -380,23 +367,23 @@ let template: Function = (data: any) => {
 
 - The following API namings are renamed.
 
-| Existing API Name | New API Name | 
-|:-:|:-:|
-| unCheckAllItem | uncheckAllItems | 
-| unCheckItem | uncheckItem | 
-| checkAllItem | checkAllItems | 
+| Existing API Name | New API Name    |
+| :-------------:   |:-------------:  |
+| unCheckAllItem    | uncheckAllItems |
+| unCheckItem       | uncheckItem     |
+| checkAllItem      | checkAllItems   |
 
 undefinedListView component represent data in interactive hierarchical structure interface across different layouts or views, which also has features of data-binding, template and grouping.
 
-
 - **Data binding** - Supports data binding to display the list of items from the local or server-side data source.
+
 - **Grouping** - Provides support to group the logically related items under a category.
+
 - **Nested list** -  Displays a set of nested list items in different layout.
+
 - **Customizing templates** - Allows you to customize the list item, header and category group header.
-- **Accessibility** - Provides built-in accessibility support which helps to access all the ListView component features through the keyboard, on-screen readers, or other assistive technology devices.
 
-
-## 16.1.42 (2018-05-15)
+- **Accessibility** - Provides built-in accessibility support which helps to access all the ListView component features through the keyboard, on-screen readers, or other assistive technology devices.## 16.1.42 (2018-05-15)
 
 ### ListView
 
@@ -522,11 +509,12 @@ undefinedListView component represent data in interactive hierarchical structure
 
 ListView component represent data in interactive hierarchical structure interface across different layouts or views, which also has features of data-binding, template and grouping.
 
-
 - **Data binding** - Supports data binding to display the list of items from the local or server-side data source.
+
 - **Grouping** - Provides support to group the logically related items under a category.
+
 - **Nested list** -  Displays a set of nested list items in different layout.
+
 - **Customizing templates** - Allows you to customize the list item, header and category group header.
+
 - **Accessibility** - Provides built-in accessibility support which helps to access all the ListView component features through the keyboard, on-screen readers, or other assistive technology devices.
-
-

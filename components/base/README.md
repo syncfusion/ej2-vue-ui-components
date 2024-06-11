@@ -1,3 +1,5 @@
+[![coverage](http://ej2.syncfusion.com/badges/ej2-vue-base/coverage.svg)](http://ej2.syncfusion.com/badges/ej2-vue-base)
+
 # ej2-vue-base
 
 A common package of Syncfusion Vue UI Components (Essential JS 2) which contains base libraries, methods and class definitions.

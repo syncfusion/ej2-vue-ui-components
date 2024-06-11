@@ -97,7 +97,7 @@ export let MentionComponent: DefineVueComponent<MentionModel> =  vueDefineCompon
         addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void {
             return this.ej2Instances.addItem(items, itemIndex);
         },
-        getDataByValue(value: string | number | boolean | any): Object | string | number | boolean {
+        getDataByValue(value: string | number | boolean | object): Object | string | number | boolean {
             return this.ej2Instances.getDataByValue(value);
         },
         getItems(): Object[] {
@@ -132,7 +132,7 @@ export type MentionComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
-    getDataByValue(value: string | number | boolean | any): Object | string | number | boolean;
+    getDataByValue(value: string | number | boolean | object): Object | string | number | boolean;
     getItems(): Object[];
     hidePopup(e?: Object | Object): void;
     search(text: string, positionX: number, positionY: number): void;

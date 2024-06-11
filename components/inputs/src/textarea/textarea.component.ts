@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { TextArea, TextAreaModel } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'columnsCount', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'maxLength', 'placeholder', 'readonly', 'resizeMode', 'rowsCount', 'showClearButton', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'cols', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'maxLength', 'placeholder', 'readonly', 'resizeMode', 'rows', 'showClearButton', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});

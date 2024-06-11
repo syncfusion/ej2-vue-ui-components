@@ -138,6 +138,9 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
         clear(): void {
             return this.ej2Instances.clear();
         },
+        disableItem(item: string | number | object | Object): void {
+            return this.ej2Instances.disableItem(item);
+        },
         filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void {
             return this.ej2Instances.filter(dataSource, query, fields);
         },
@@ -147,7 +150,7 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
         focusOut(): void {
             return this.ej2Instances.focusOut();
         },
-        getDataByValue(value: string | number | boolean | any): Object | string | number | boolean {
+        getDataByValue(value: string | number | boolean | object): Object | string | number | boolean {
             return this.ej2Instances.getDataByValue(value);
         },
         getItems(): Object[] {
@@ -192,10 +195,11 @@ export type MultiSelectComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
     clear(): void;
+    disableItem(item: string | number | object | Object): void;
     filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
     focusIn(): void;
     focusOut(): void;
-    getDataByValue(value: string | number | boolean | any): Object | string | number | boolean;
+    getDataByValue(value: string | number | boolean | object): Object | string | number | boolean;
     getItems(): Object[];
     hidePopup(e?: Object | Object): void;
     hideSpinner(): void;

@@ -145,6 +145,9 @@ export let ChartComponent: DefineVueComponent<ChartModel> =  vueDefineComponent(
         custom(): void {
             this.updated();
         },
+        FindXYPointValue(mouseX: number, mouseY: number): Object | null {
+            return this.ej2Instances.FindXYPointValue(mouseX, mouseY);
+        },
         addAxes(axisCollection: Object[]): void {
             return this.ej2Instances.addAxes(axisCollection);
         },
@@ -215,6 +218,7 @@ export type ChartComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    FindXYPointValue(mouseX: number, mouseY: number): Object | null;
     addAxes(axisCollection: Object[]): void;
     addSeries(seriesCollection: Object[]): void;
     clearSeries(): void;

@@ -2,17 +2,13 @@
 
 ## [Unreleased]
 
-## 25.2.4 (2024-05-14)
-
-### Common
-
-#### Bug Fixes
-
-- `#I573822` - The issue with "the element duplications occur while routing in the Vue template component" has been resolved.
-
 ## 25.1.35 (2024-03-15)
 
 ### Common
+
+#### Features
+
+- `#I409207` - Provided compatible support with `Quasar` for the Vue components.
 
 #### Bug Fixes
 
@@ -177,10 +173,10 @@
 - Provided the TypeScript 4.7 compatible support for the Vue components.
 - Provided the option to register the license key by using the `npx` command. Follow these steps to register the license using the `npx` command:
 
-| The `npx` command | 
+| The `npx` command |
 |---|
-| Install the Syncfusion packages from `npm`. | 
-| Add the license key either in the environment variable `SYNCFUSION_LICENSE` or in the `syncfusion-license.txt` text file. | 
+| Install the Syncfusion packages from `npm`. |
+| Add the license key either in the environment variable `SYNCFUSION_LICENSE` or in the `syncfusion-license.txt` text file. |
 | Run the command `npx syncfusion-license activate` to automatically register the license. |
 
 ## 20.1.61 (2022-06-21)
@@ -235,7 +231,7 @@
 
 #### New Features
 
--  `#F140652`, `#F138394`, `#F148391`, `#I309881`, `#F167735`, `#I228458` - Provided slot template support for the Vue components.
+- `#F140652`, `#F138394`, `#F148391`, `#I309881`, `#F167735`, `#I228458` - Provided slot template support for the Vue components.
 
 ## 19.4.53 (2022-02-22)
 
@@ -243,7 +239,7 @@
 
 #### Bug Fixes
 
--  `#I364613` - Object property templates are not working in production mode issue has been resolved.
+- `#I364613` - Object property templates are not working in production mode issue has been resolved.
 
 ## 19.4.52 (2022-02-15)
 
@@ -251,7 +247,7 @@
 
 #### Bug Fixes
 
--  `#I362388` - Modules in provider section not works properly issue has been resolved.
+- `#I362388` - Modules in provider section not works properly issue has been resolved.
 
 ## 19.4.47 (2022-01-25)
 
@@ -259,7 +255,7 @@
 
 #### Bug Fixes
 
--  `#F171693` - The issue with "Vue components are not rendered with node version 16" has been resolved.
+- `#F171693` - The issue with "Vue components are not rendered with node version 16" has been resolved.
 
 ## 19.4.40 (2021-12-28)
 
@@ -267,7 +263,7 @@
 
 #### Bug Fixes
 
--  `#I334904`, `#I347008` - Compatability support for Vue components in Vite js has been resolved.
+- `#I334904`, `#I347008` - Compatability support for Vue components in Vite js has been resolved.
 
 ## 19.4.38 (2021-12-17)
 
@@ -275,7 +271,7 @@
 
 #### Bug Fixes
 
--  `#I348114` - Peer dependencies issue has been resolved.
+- `#I348114` - Peer dependencies issue has been resolved.
 
 ## 19.3.47 (2021-10-26)
 
@@ -283,7 +279,7 @@
 
 #### Bug Fixes
 
--  `#I345561` - Resolved the data loading issue in the external template.
+- `#I345561` - Resolved the data loading issue in the external template.
 
 ## 17.4.47 (2020-02-05)
 
@@ -291,7 +287,7 @@
 
 #### Bug Fixes
 
--  `#I260681`, `#I261593` - Resolved the peer dependency warning issues.
+- `#I260681`, `#I261593` - Resolved the peer dependency warning issues.
 
 ## 17.4.41 (2020-01-07)
 

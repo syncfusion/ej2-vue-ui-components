@@ -2,62 +2,12 @@
 
 ## [Unreleased]
 
-## 25.2.7 (2024-06-04)
+## 26.1.35 (2024-06-11)
 
 ### QueryBuilder
 
 #### Bug Fixes
 
-- `#I887637` - Issue with Script error thrown in QueryBuilder when `clicking` the button group component in header template has been fixed.
-
-## 25.2.4 (2024-05-14)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I585876` - Removing the isLocked property from query builder rules when the rule/group is not locked / unlocked.
-
-## 25.2.3 (2024-05-08)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#F187657` - Provided the input event support for QueryBuilder numeric textbox value changes.
-- `#I585320` - Issue with Query builder dropdown list element removed when placed two query builder in same page while calling refresh method has been fixed.
-
-## 25.1.42 (2024-04-30)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#F553588` - Issue with `setRulesFromSql` method is not working while using a field name like `"Name = '|_fn { keyword ' kFinishedProduct '}_|'"` has been fixed.
-
-## 25.1.40 (2024-04-16)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I578463` - Issue with popups height is not updated properly in QueryBuilder sub field has been fixed.
-
-## 25.1.38 (2024-04-02)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I568017` - Issue with Sub field value is not set properly while setting rule for complex data binding has been fixed.
-
-## 25.1.37 (2024-03-26)
-
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I873568` - Issue with `getSqlFromRules` method not working properly in boolean fields when calling validateFields within the `ruleChange` event has been fixed.
 - `#I568017` - Issue with QueryBuilder 'In' or 'Not in' Operator results in value field as empty list when using fieldMode as default mode has been fixed.
 
 ## 25.1.35 (2024-03-15)
@@ -541,9 +491,9 @@
 
 #### Breaking Changes
 
-| Property Name | Previous Type | Current Type | 
-|---|---|---|
-| format | string | string | FormatObject | 
+|Property Name|Previous Type|Current Type       |
+|-------------|-------------|-------------------|
+|format       |string       |string|FormatObject|
 
 ## 17.4.46 (2020-01-30)
 
@@ -689,7 +639,7 @@
 - Updating conditions throws script error after using 'setRules' method.
 - Rule with AND operator is not properly updated in ASP.NET MVC and Core.
 - Multiselect datasource not properly updated for in and notin operators.
-- Provided option for handling data source request on demand.
+- Provided option for handling data source request on demand.
 
 ## 17.1.43 (2019-04-30)
 
@@ -723,20 +673,20 @@
 
 - The following events are renamed.
 
-| Existing Event Name | New Event Name | 
-|---|---|
-| beforeConditionChange | beforeChange | 
-| beforeFieldChange | beforeChange | 
-| beforeOperatorChange | beforeChange | 
-| beforeValueChange | beforeChange | 
-| conditionChanged | change | 
-| fieldChanged | change | 
-| operatorChanged | change | 
-| valueChanged | change | 
-| groupDelete | change | 
-| groupInsert | change | 
-| ruleDelete | change | 
-| ruleInsert | change | 
+| Existing Event Name| New Event Name |
+|------|-------------|
+|beforeConditionChange|beforeChange|
+|beforeFieldChange|beforeChange|
+|beforeOperatorChange|beforeChange|
+|beforeValueChange|beforeChange|
+|conditionChanged|change|
+|fieldChanged|change|
+|operatorChanged|change|
+|valueChanged|change|
+|groupDelete|change|
+|groupInsert|change|
+|ruleDelete|change|
+|ruleInsert|change|
 
 - Modified the return type of 'getFilteredRecords' method from object collection to promise.
 - Renamed the 'RulesModel' class to 'RuleModel' and removed the 'RulesModel' class.
@@ -755,20 +705,20 @@
 
 - The following events are renamed.
 
-| Existing Event Name | New Event Name | 
-|---|---|
-| beforeConditionChange | beforeChange | 
-| beforeFieldChange | beforeChange | 
-| beforeOperatorChange | beforeChange | 
-| beforeValueChange | beforeChange | 
-| conditionChanged | change | 
-| fieldChanged | change | 
-| operatorChanged | change | 
-| valueChanged | change | 
-| groupDelete | change | 
-| groupInsert | change | 
-| ruleDelete | change | 
-| ruleInsert | change | 
+| Existing Event Name| New Event Name |
+|------|-------------|
+|beforeConditionChange|beforeChange|
+|beforeFieldChange|beforeChange|
+|beforeOperatorChange|beforeChange|
+|beforeValueChange|beforeChange|
+|conditionChanged|change|
+|fieldChanged|change|
+|operatorChanged|change|
+|valueChanged|change|
+|groupDelete|change|
+|groupInsert|change|
+|ruleDelete|change|
+|ruleInsert|change|
 
 #### Bug Fixes
 
@@ -804,17 +754,14 @@
 
 The Query Builder component is a graphical user interface that allows users to create and edit filters. It outputs a structured JSON of filters which that can be easily parsed to create SQL. It is integrated with Data Manager to communicates with data sources and returns the desired result based on the provided filter. It supports data binding, templates, validation, and horizontal and vertical orientation.
 
+- **Data binding**: It auto populates the data source and maps the data to the appropriate fields.
+
+- **Template**: Supports templates and it is applicable for all input components.
+
+- **Queries**: Queries supports JSON/SQL rules.The Query Builder component is a graphical user interface that allows users to create and edit filters. It outputs a structured JSON of filters that can be easily parsed to create SQL. It is integrated with Data Manager to communicate with data sources and returns the desired result based on the provided filter. It supports data binding, templates, validation, and horizontal and vertical orientation.
 
 - **Data binding**: It auto populates the data source and maps the data to the appropriate fields.
+
 - **Template**: Supports templates and it is applicable for all input components.
+
 - **Queries**: Queries supports JSON/SQL rules.
-
-
-The Query Builder component is a graphical user interface that allows users to create and edit filters. It outputs a structured JSON of filters that can be easily parsed to create SQL. It is integrated with Data Manager to communicate with data sources and returns the desired result based on the provided filter. It supports data binding, templates, validation, and horizontal and vertical orientation.
-
-
-- **Data binding**: It auto populates the data source and maps the data to the appropriate fields.
-- **Template**: Supports templates and it is applicable for all input components.
-- **Queries**: Queries supports JSON/SQL rules.
-
-

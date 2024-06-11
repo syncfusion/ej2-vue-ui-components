@@ -1,19 +1,26 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Vue Component Base
  */
 import * as Vue from 'vue';
 import { isNullOrUndefined, extend, getValue, setProxyToRaw } from '@syncfusion/ej2-base';
 
-function _interopRequireWildcard(obj: any) { if (obj && obj.__esModule) { return obj; } else { let newObj: any = {}; if (obj != null) { for (let key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[`${key}`] = obj[`${key}`]; } } newObj.default = obj; return newObj; } }
+/**
+ * Clone the Vue compiler instance.
+ *
+ * @param {any} obj - representes the Vue compiler.
+ * @returns {any} cloned object of Vue compiler.
+ */
+function _interopRequireWildcard(obj: any): any { if (obj && obj.__esModule) { return obj; } else { const newObj: any = {}; if (obj != null) { for (const key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { newObj[`${key}`] = obj[`${key}`]; } } } newObj.default = obj; return newObj; } }
 
 const curVue: any = _interopRequireWildcard(Vue);
-export const isExecute: boolean = (parseInt(curVue['version']) > 2) ? false : true,
-    aVue: any = !isExecute ? curVue : (curVue['default']['default'] ? curVue['default']['default'] : curVue['default']),
-    gh: any = curVue['h'];
+export const isExecute: boolean = (parseInt(curVue['version'], 10) > 2) ? false : true;
+export const aVue: any = !isExecute ? curVue : (curVue['default']['default'] ? curVue['default']['default'] : curVue['default']);
+export const gh: any = curVue['h'];
 
-export let vueDefineComponent = (options: any) => { return !isExecute? aVue['defineComponent'](options) : aVue['extend'](options) };
+export const vueDefineComponent: Function = (options: Object): any => { return !isExecute ? aVue['defineComponent'](options) : aVue['extend'](options); };
 
-type ComponentBase = {
+type ComponentBaseType = {
     getInjectedServices(): Object[];
     updated(): void;
     bindProperties(): void;
@@ -31,9 +38,9 @@ type ComponentBase = {
     dataBind(): void;
 }
 
-export let ComponentBase: ComponentBase = vueDefineComponent({
+export const ComponentBase: ComponentBaseType = vueDefineComponent({
     name: 'ComponentBase',
-    data() {
+    data(): Object {
         return {
             tagMapper: {} as any,
             tagNameMapper: {} as any,
@@ -42,35 +49,35 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             childDirObjects: '' as string,
             propKeys: {} as any,
             isDecorator: false as boolean
-        }
+        };
     },
     created(): void {
         if (this.ej2Instance) {
             this.ej2Instances = this.isVue3 ? aVue.toRaw(this.ej2Instance) : this.ej2Instance;
         }
         if (!this.propKeys) {
-            return
+            return;
         }
-        for (let prop of this.propKeys) {
+        for (const prop of this.propKeys) {
             this.ej2Instances.addEventListener(prop, (args: object) => {
                 this.$emit(prop, args);
             });
         }
-        let injectables: any = getValue('$root.$options.provide', this);
+        const injectables: any = getValue('$root.$options.provide', this);
         let vueInjectables: any = getValue('$parent.$options.provide', this);
         vueInjectables = !isNullOrUndefined(vueInjectables) ? vueInjectables : getValue('$.parent.provides', this);
         if (this.hasInjectedModules && !isExecute) {
             let prevModule: Object[] = [];
             if (injectables && injectables.managed) {
                 this.isDecorator = true;
-                prevModule = this.getInjectedServices() || [];   
+                prevModule = this.getInjectedServices() || [];
             } else if (injectables) {
                 prevModule = injectables[this.ej2Instances.getModuleName()] || [];
             } else if (vueInjectables) {
                 prevModule = this.getInjectedServices() || [];
             }
-            let curModule: Object[] = this.ej2Instances.getInjectedModules() || [];
-            for (let mod of curModule) {
+            const curModule: Object[] = this.ej2Instances.getInjectedModules() || [];
+            for (const mod of curModule) {
                 if (prevModule.indexOf(mod) === -1) {
                     prevModule.push(mod);
                 }
@@ -79,10 +86,11 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
         }
     },
     mounted(): void {
-        let cusEle: any = this.$el ? this.$el.querySelectorAll("div.e-directive") : null;
+        const cusEle: any = this.$el ? this.$el.querySelectorAll('div.e-directive') : null;
         if (!isExecute && cusEle) {
             for (let i: number = 0; i < cusEle.length; i++) {
-                cusEle[parseInt(i.toString(), 10)].parentElement && cusEle[parseInt(i.toString(), 10)].parentElement.removeChild(cusEle[parseInt(i.toString(), 10)]);
+                const cusElement: HTMLElement = cusEle[parseInt(i.toString(), 10)];
+                if (cusElement.parentElement) { cusElement.parentElement.removeChild(cusElement); }
             }
         }
         this.ej2Instances.isVue = true;
@@ -119,9 +127,9 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                 this.setModelValue();
             }
             if (this.hasChildDirective) {
-                let childKey: Object = {};
+                const childKey: Object = {};
                 this.fetchChildPropValues(childKey);
-                let curChildDir: string = JSON.stringify(childKey);
+                const curChildDir: string = JSON.stringify(childKey);
                 if (this.childDirObjects !== curChildDir) {
                     this.childDirObjects = curChildDir;
                     this.assignValueToWrapper(childKey, false);
@@ -129,7 +137,7 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             }
         },
         getInjectedServices(): Object[] {
-            let ret = []; let provide: any;
+            let ret: Object[] = []; let provide: any;
             if (this.$root && this.isDecorator) {
                 provide = getValue('$root.$options.provide', this);
             } else if (this.$vnode) {
@@ -141,12 +149,11 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                 provide = getValue('$.parent.provides', this);
             }
             if (provide) {
-                // tslint:disable:no-any
                 let injectables: any = provide;
                 if (typeof provide === 'function') {
                     if (provide.managed) {
-                        let provideKey: Object = provide.managed;
-                        let provideValue: string[] = Object.keys(provideKey);
+                        const pKey: Object = provide.managed;
+                        const pValue: string[] = Object.keys(pKey);
                         let key: string[];
                         if (this.$root && this.isDecorator) {
                             key = Object.keys(this.$root);
@@ -155,39 +162,36 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                         } else if (this.$parent) {
                             key = Object.keys(this.$parent);
                         }
-                        for (let i: number = 0; i < provideValue.length; i++) {
+                        for (let i: number = 0; i < pValue.length; i++) {
                             for (let j: number = 0; j < key.length; j++) {
-                                if ((key[parseInt(j.toString(), 10)].indexOf(provideValue[parseInt(i.toString(), 10)])) !== -1) {
+                                if ((key[parseInt(j.toString(), 10)].indexOf(pValue[parseInt(i.toString(), 10)])) !== -1) {
                                     if (this.$root && this.isDecorator) {
-                                        provideKey[provideValue[parseInt(j.toString(), 10)]] = this.$root[key[parseInt(i.toString(), 10)]];
+                                        pKey[pValue[parseInt(j.toString(), 10)]] = this.$root[key[parseInt(i.toString(), 10)]];
                                     } else if (this.$vnode) {
-                                        provideKey[provideValue[parseInt(i.toString(), 10)]] = this.$vnode.context[key[parseInt(j.toString(), 10)]];
+                                        pKey[pValue[parseInt(i.toString(), 10)]] = this.$vnode.context[key[parseInt(j.toString(), 10)]];
                                     } else if (this.$parent) {
-                                        provideKey[provideValue[parseInt(i.toString(), 10)]] = this.$parent[key[parseInt(j.toString(), 10)]];
+                                        pKey[pValue[parseInt(i.toString(), 10)]] = this.$parent[key[parseInt(j.toString(), 10)]];
                                     }
-                                    injectables = provideKey;
+                                    injectables = pKey;
                                 }
                             }
-                        }  
+                        }
                     }
-                    // tslint:disable:no-any
                     else if (this.$vnode) {
                         injectables = this.$vnode.context.$options.provide();
-                    } else if(this.$parent) {
+                    } else if (this.$parent) {
                         injectables = this.$parent.$options.provide();
                     }
                 }
                 ret = injectables[this.ej2Instances.getModuleName()] || [];
             }
             this.isDecorator = false;
-            return ret; 
+            return ret;
         },
         destroyComponent(): void {
-            let tempBeforeDestroyThis: any = this;
-            tempBeforeDestroyThis.ej2Instances.destroy();
-            (tempBeforeDestroyThis.$el as any).style.visibility = 'hidden';
-            tempBeforeDestroyThis.destroyPortals();
-            tempBeforeDestroyThis = null;
+            this.ej2Instances.destroy();
+            (this.$el as any).style.visibility = 'hidden';
+            this.destroyPortals();
         },
         destroyPortals(): void {
             if (this.portals) {
@@ -205,11 +209,11 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             }
         },
         bindProperties(): void {
-            let options: Object = {};
-            for (let prop of this.propKeys) {
-                if (!isNullOrUndefined(this[`${prop}`])) { 
+            const options: Object = {};
+            for (const prop of this.propKeys) {
+                if (!isNullOrUndefined(this[`${prop}`])) {
                     options[`${prop}`] = this[`${prop}`];
-                } 
+                }
                 else if (this[0] && !isNullOrUndefined(this[0][0]) && !isNullOrUndefined(this[0][0][`${prop}`])) {
                     options[`${prop}`] = this[0][0][`${prop}`];
                 }
@@ -219,9 +223,9 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             }
             if (this.hasInjectedModules) {
 
-                let prevModule: Object[] = this.getInjectedServices() || [];
-                let curModule: Object[] = this.ej2Instances.getInjectedModules() || [];
-                for (let mod of curModule) {
+                const prevModule: Object[] = this.getInjectedServices() || [];
+                const curModule: Object[] = this.ej2Instances.getInjectedModules() || [];
+                for (const mod of curModule) {
                     if (prevModule.indexOf(mod) === -1) {
                         prevModule.push(mod);
                     }
@@ -235,8 +239,8 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
         },
         fetchChildPropValues(childOption: Object): void {
             let dirProps: Object = {};
-            if(!this.isVue3) {
-                dirProps = this.getDirectiveValues( this.$slots.default, this.tagMapper || {}, this.tagNameMapper || {});
+            if (!this.isVue3) {
+                dirProps = this.getDirectiveValues(this.$slots.default, this.tagMapper || {}, this.tagNameMapper || {});
             } else {
                 let propRef: any;
                 if (this[0] && this[0][1].slots.default) {
@@ -248,20 +252,20 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                 if (propRef) {
                     for (let i: number = 0; i < propRef.length; i++) {
                         if (propRef[parseInt(i.toString(), 10)].type.methods || propRef[parseInt(i.toString(), 10)].type === 'e-seriescollection') {
-                            let key: string = propRef[parseInt(i.toString(), 10)].type === 'e-seriescollection' ? 'series-collection' : 
-                            propRef[parseInt(i.toString(), 10)].type.methods.getTag().replace("e-", "");
-                            let ref: any = this.resolveArrayDirectives(propRef[parseInt(i.toString(), 10)].children,key);
-                            let splitKeys: any = key.split('-');
-                            let controlName: string = this.ej2Instances.getModuleName().toLowerCase();
-                            let keyRef: string = (splitKeys.length > 1 && controlName.indexOf(splitKeys[0])>-1) ? splitKeys[1]: splitKeys[0];
-                            keyRef = keyRef.replace(controlName,'');
+                            const key: string = propRef[parseInt(i.toString(), 10)].type === 'e-seriescollection' ? 'series-collection' :
+                                propRef[parseInt(i.toString(), 10)].type.methods.getTag().replace('e-', '');
+                            const ref: any = this.resolveArrayDirectives(propRef[parseInt(i.toString(), 10)].children, key);
+                            const spKeys: any = key.split('-');
+                            const controlName: string = this.ej2Instances.getModuleName().toLowerCase();
+                            let keyRef: string = (spKeys.length > 1 && controlName.indexOf(spKeys[0]) > -1) ? spKeys[1] : spKeys[0];
+                            keyRef = keyRef.replace(controlName, '');
                             keyRef = this.tagNameMapper['e-' + key] ? this.tagNameMapper['e-' + key].replace('e-', '') : keyRef;
-                            if (controlName == "splitter" && keyRef == "panes") {
-                                keyRef = "paneSettings"
-                            } else if (controlName == "bulletchart" && keyRef == "range") {
-                                keyRef = "ranges";
-                            } else if (controlName == "schedule" && keyRef == "header") {
-                                keyRef = "headerRows";
+                            if (controlName === 'splitter' && keyRef === 'panes') {
+                                keyRef = 'paneSettings';
+                            } else if (controlName === 'bulletchart' && keyRef === 'range') {
+                                keyRef = 'ranges';
+                            } else if (controlName === 'schedule' && keyRef === 'header') {
+                                keyRef = 'headerRows';
                             }
                             dirProps[`${keyRef}`] = ref[`${key}`];
                         }
@@ -273,50 +277,50 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             if (!this.childDirObjects) {
                 this.childDirObjects = JSON.stringify(dirProps);
             }
-            for (let dirProp of Object.keys(dirProps)) {
+            for (const dirProp of Object.keys(dirProps)) {
                 childOption[`${dirProp}`] = dirProps[`${dirProp}`];
             }
         },
-        resolveArrayDirectives(slots: any, tagName: any) {
+        resolveArrayDirectives(slots: any, tagName: any): any {
             let slot: any = [];
             let innerDirValues: any;
             slot = slots.default ? slots.default() : slots;
             slot = slot.flatMap((item: any) => Array.isArray(item.children) ? item.children : item);
-            let items: any = {};
+            const items: any = {};
             items[`${tagName}`] = [];
             for (const childSlot of slot) {
                 let tempObj: any = {};
-                let tagRef: any = childSlot.type.methods ? childSlot.type.methods.getTag() : tagName;
+                const tagRef: any = childSlot.type.methods ? childSlot.type.methods.getTag() : tagName;
                 if (childSlot.children) {
                     let key: string;
-                    innerDirValues = this.resolveComplexDirs(childSlot.children, this.tagMapper["e-" + tagName], tagRef);
+                    innerDirValues = this.resolveComplexDirs(childSlot.children, this.tagMapper['e-' + tagName], tagRef);
                     if (innerDirValues.length) {
                         tempObj = innerDirValues;
                     } else {
-                        for(var i=0;i< Object.keys(innerDirValues).length;i++){
+                        for (let i: number = 0; i < Object.keys(innerDirValues).length; i++) {
                             key = Object.keys(innerDirValues)[parseInt(i.toString(), 10)];
                             tempObj[`${key}`] = innerDirValues[`${key}`];
                         }
                     }
                 }
                 if (childSlot.props) {
-                Object.keys(childSlot.props).forEach((key) => {
-                    let propName: string = key.replace(/-[a-z]/g, (e) => {return e[1].toUpperCase()});
-                    if (propName) {
-                        tempObj[`${propName}`] = childSlot.props[`${key}`];
-                    }
-                });
+                    Object.keys(childSlot.props).forEach((key: string) => {
+                        const propName: string = key.replace(/-[a-z]/g, (e: any) => { return e[1].toUpperCase(); });
+                        if (propName) {
+                            tempObj[`${propName}`] = childSlot.props[`${key}`];
+                        }
+                    });
                 }
                 if (((/[s]\b/).test(tagRef) && innerDirValues) && (!(/[s]\b/).test(tagName) || innerDirValues.length)) {
-                    Array.isArray(tempObj) ? tempObj.forEach((item: any) => { items[`${tagName}`].push(item) }) : items[`${tagName}`].push(tempObj);
-                } 
+                    if (Array.isArray(tempObj)) { tempObj.forEach((item: any) => { items[`${tagName}`].push(item); }); } else { items[`${tagName}`].push(tempObj); }
+                }
                 else if (tempObj && Object.keys(tempObj).length !== 0) {
                     items[`${tagName}`].push(tempObj);
                 }
             }
             return items;
-        }, 
-        resolveComplexDirs(slots: any, tagObject: any, tagName: string) {
+        },
+        resolveComplexDirs(slots: any, tagObject: any, tagName: string): any {
             let slot: any = [];
             let innerDirValues: any;
             slot = slots.default ? slots.default() : slots;
@@ -325,17 +329,16 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                 let tagRef: any;
                 let tag: any;
                 if (tagObject[`${tagName}`]) {
-                    tagRef= Object.keys(tagObject[`${tagName}`]);
-                    tag= tagRef.find(
-                    (key: any) =>
-                        tagObject[`${tagName}`][`${key}`] ===
-                        childSlot.type.methods.getTag().replace(/[s]\b/, "")
+                    tagRef = Object.keys(tagObject[`${tagName}`]);
+                    tag = tagRef.find(
+                        (key: any) =>
+                            tagObject[`${tagName}`][`${key}`] ===
+                        childSlot.type.methods.getTag().replace(/[s]\b/, '')
                     );
-                    const moduleName: string = this.ej2Instances.getModuleName().toLowerCase();
                     tag = tag ? tag : childSlot.type.methods.getTag();
-                    tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace("e-", "");
-                    if (this.ej2Instances.getModuleName().toLowerCase() == "diagram" && tag.indexOf('annotations') !=-1) {
-                        tag =  'annotations';
+                    tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace('e-', '');
+                    if (this.ej2Instances.getModuleName().toLowerCase() === 'diagram' && tag.indexOf('annotations') !== -1) {
+                        tag = 'annotations';
                     }
                 }
                 if (childSlot.children) {
@@ -343,7 +346,7 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                     if (!items[`${tag}`]) {
                         items[`${tag}`] = [];
                     }
-                    if (innerDirValues.length >1) {
+                    if (innerDirValues.length > 1) {
                         items[`${tag}`] = innerDirValues;
                     } else {
                         items[`${tag}`].push(innerDirValues);
@@ -353,7 +356,7 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                     childSlot.props = this.getCamelCaseProps(childSlot.props);
                 }
                 if (slot.length > 1) {
-                    items = Object.keys(items).length == 0 &&  !items.length ? [] : items;
+                    items = Object.keys(items).length === 0 && !items.length ? [] : items;
                     if (childSlot.props) { items.push(childSlot.props); }
                 }
                 else {
@@ -362,14 +365,14 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             }
             return items;
         },
-        resolveComplexInnerDirs(slots: any, tagObject: any, tagName: string) {
+        resolveComplexInnerDirs(slots: any, tagObject: any, tagName: string): any {
             let slot: any = [];
             slot = slots.default ? slots.default() : slots;
             let items: any = slot.length > 1 ? [] : {};
             for (const childSlot of slot) {
                 let innerDirValues: any = null;
                 let tag: string = childSlot.type.methods.getTag();
-                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-", "");
+                tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace('e-', '');
                 if (childSlot.children) {
                     innerDirValues = this.resolveMultilevelComplexInnerDirs(childSlot.children, tagObject[`${tagName}`], childSlot.type.methods.getTag());
                     if ((/[s]\b/).test(tag) || slot.length > 1) {
@@ -377,9 +380,9 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                             items[`${tag}`] = !items[`${tag}`] ? [] : items[`${tag}`];
                             if (innerDirValues.length) {
                                 items[`${tag}`] = innerDirValues;
-                            } else {items[`${tag}`].push(innerDirValues);}
+                            } else { items[`${tag}`].push(innerDirValues); }
                         } else if (innerDirValues && !childSlot.props) {
-                            items.push(innerDirValues)
+                            items.push(innerDirValues);
                         }
                     } else {
                         items = innerDirValues ? innerDirValues : items;
@@ -404,49 +407,49 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             }
             return items;
         },
-        resolveMultilevelComplexInnerDirs(slots: any, tagObject: any, tagName: string) {
+        resolveMultilevelComplexInnerDirs(slots: any, tagObject: any, tagName: string): any {
             let slot: any = [];
             slot = slots.default ? slots.default() : slots;
             let items: any = slot.length > 1 ? [] : {};
             for (const childSlot of slot) {
                 let innerDirValues: any = null;
-                const moduleName: string = this.ej2Instances.getModuleName().toLowerCase();
                 let tag: string = childSlot.type.methods.getTag();
-                tag = (this.tagNameMapper[tag] ? this.tagNameMapper[tag] : tag).replace("e-", "");
+                tag = (this.tagNameMapper[`${tag}`] ? this.tagNameMapper[`${tag}`] : tag).replace('e-', '');
                 if (childSlot.children) {
                     innerDirValues = this.resolveComplexInnerDirs(childSlot.children, tagObject[`${tagName}`], childSlot.type.methods.getTag());
                 }
                 if (childSlot.props) {
                     childSlot.props = this.getCamelCaseProps(childSlot.props);
                 }
-                if((/[s]\b/).test(tag)) {
+                if ((/[s]\b/).test(tag)) {
                     items[`${tag}`] = !items[`${tag}`] ? [] : items[`${tag}`];
-                    if(innerDirValues.length) {
+                    if (innerDirValues.length) {
                         items[`${tag}`] = innerDirValues;
                     } else { items[`${tag}`].push(innerDirValues); }
-                    if (childSlot.props) { items[`${tag}`].push(childSlot.props) }
+                    if (childSlot.props) { items[`${tag}`].push(childSlot.props); }
                 } else {
                     items = innerDirValues;
-                    items = childSlot.props ?  (<any>Object).assign(items, childSlot.props) : items;
+                    items = childSlot.props ? (<any>Object).assign(items, childSlot.props) : items;
                 }
             }
             return items;
         },
         getDirectiveValues(tagDirectives: any, tagMapper: { [key: string]: Object }, tagNameMapper: Object): Object {
-            let keyTags: string[] = Object.keys(tagMapper);
-            let dir: Object = {};
+            const keyTags: string[] = Object.keys(tagMapper);
+            const dir: Object = {};
             if (tagDirectives) {
-                for (let tagDirective of tagDirectives) {
-                    if (tagDirective.componentOptions && tagDirective.componentOptions.children && this.getTagName(tagDirective.componentOptions) || 
+                for (const tagDirective of tagDirectives) {
+                    const tagCompOption: any = tagDirective.componentOptions;
+                    if (tagCompOption && tagCompOption.children && this.getTagName(tagCompOption) ||
                     (tagDirective.tag === 'e-seriescollection' && tagDirective.children)) {
-                        let dirTag: string = tagDirective.componentOptions ? this.getTagName(tagDirective.componentOptions) : tagDirective.tag;
+                        let dirTag: string = tagCompOption ? this.getTagName(tagCompOption) : tagDirective.tag;
                         dirTag = (dirTag === 'e-seriescollection') ? 'e-seriesCollection' : dirTag;
                         if (keyTags.indexOf(dirTag) !== -1) {
-                            let tagName: string = tagNameMapper[`${dirTag}`] ? tagNameMapper[`${dirTag}`] : dirTag;
+                            const tagName: string = tagNameMapper[`${dirTag}`] ? tagNameMapper[`${dirTag}`] : dirTag;
                             dir[tagName.replace('e-', '')] = [];
-                            let children = tagDirective.componentOptions ? tagDirective.componentOptions.children : tagDirective.children;
-                            for (let tagDirChild of children) {
-                                let retObj: Object = this.getVNodeValue(tagDirChild, tagMapper[`${dirTag}`], tagNameMapper);
+                            const children: any = tagCompOption ? tagCompOption.children : tagDirective.children;
+                            for (const tagDirChild of children) {
+                                const retObj: Object = this.getVNodeValue(tagDirChild, tagMapper[`${dirTag}`], tagNameMapper);
                                 if (Object.keys(retObj).length !== 0) {
                                     dir[tagName.replace('e-', '')].push(retObj);
                                 }
@@ -458,8 +461,8 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
             return dir;
         },
         getMultiLevelDirValue(tagDirectories: any, tagKey: string | Object, tagNameMapper: Object): Object {
-            let mulObj: Object = {};
-            for (let tagDir of tagDirectories) {
+            const mulObj: Object = {};
+            for (const tagDir of tagDirectories) {
                 let key: string;
                 let children: any;
                 if (tagDir.componentOptions) {
@@ -472,11 +475,11 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                     children = tagDir.children;
                 }
                 if (key) {
-                    let tagName: string = tagNameMapper[`${key}`] ? tagNameMapper[`${key}`] : key;
+                    const tagName: string = tagNameMapper[`${key}`] ? tagNameMapper[`${key}`] : key;
                     mulObj[tagName.replace('e-', '')] = [];
                     if (children) {
-                        for (let tagDirChild of children) {
-                            let mulLevObj: Object = this.getVNodeValue(tagDirChild, tagKey[`${key}`], tagNameMapper);
+                        for (const tagDirChild of children) {
+                            const mulLevObj: Object = this.getVNodeValue(tagDirChild, tagKey[`${key}`], tagNameMapper);
                             if (Object.keys(mulLevObj).length !== 0) {
                                 mulObj[tagName.replace('e-', '')].push(mulLevObj);
                             }
@@ -495,60 +498,72 @@ export let ComponentBase: ComponentBase = vueDefineComponent({
                 } else {
                     dirTag = (tagDirective.tag === 'e-markersettings') ? 'e-markerSettings' : 'e-markerSetting';
                 }
-                if (typeof tagKey === 'string' && dirTag === tagKey && tagDirective.data) {
-                    ret = tagDirective.data.attrs ? this.getCamelCaseProps(tagDirective.data.attrs) : this.getCamelCaseProps(tagDirective.data);
+                const tagData: any = tagDirective.data;
+                if (typeof tagKey === 'string' && dirTag === tagKey && tagData) {
+                    ret = tagData.attrs ? this.getCamelCaseProps(tagData.attrs) : this.getCamelCaseProps(tagData);
                 } else if (typeof tagKey === 'object') {
                     if (tagDirective.componentOptions.children && (Object.keys(tagKey).indexOf(dirTag) !== -1)) {
                         ret = this.getMultiLevelDirValue(tagDirective.componentOptions.children, tagKey[`${dirTag}`], tagNameMapper);
                     } else if (tagDirective.children && (Object.keys(tagKey).indexOf(dirTag) !== -1) && (dirTag === 'e-markersettings' || dirTag === 'e-markersetting')) {
                         ret = this.getMultiLevelDirValue(tagDirective.children, tagKey[`${dirTag}`], tagNameMapper);
                     }
-                    if (tagDirective.data && tagDirective.data.attrs) {
-                        ret = extend(ret, this.getCamelCaseProps(tagDirective.data.attrs));
+                    if (tagData && tagData.attrs) {
+                        ret = extend(ret, this.getCamelCaseProps(tagData.attrs));
                     }
                 }
             }
             return ret;
         },
         /**
-         * convert kebab case directive props to camel case
+         * convert kebab case directive props to camel case.
+         *
+         * @param {Object} props - Objects in kebab case directive props.
+         * @returns {Object} Object converted into camel case directive props.
          */
         getCamelCaseProps(props: Object): Object {
-            let retProps: Object = {};
-            for (let prop of Object.keys(props)) {
-                retProps[prop.replace(/-[a-z]/g, (e) => {return e[1].toUpperCase()})] = props[`${prop}`];
+            const retProps: Object = {};
+            for (const prop of Object.keys(props)) {
+                retProps[prop.replace(/-[a-z]/g, (e: any) => { return e[1].toUpperCase(); })] = props[`${prop}`];
             }
             return retProps;
         },
-        dataBind() {
+        dataBind(): void {
             this.ej2Instances.dataBind();
         },
         setProperties(arg: Object, muteOnChange?: boolean): void {
             return this.ej2Instances.setProperties(arg, muteOnChange);
         },
         getTagName(options: any): string | undefined {
-            let tag = options.tag;
-            if (!tag && options.Ctor && options.Ctor.extendOptions && options.Ctor.extendOptions.methods && options.Ctor.extendOptions.methods.getTag) {
+            let tag: any = options.tag;
+            const optCtor: any = options.Ctor;
+            if (!tag && optCtor && optCtor.extendOptions && optCtor.extendOptions.methods && optCtor.extendOptions.methods.getTag) {
                 tag = options.Ctor.extendOptions.methods.getTag();
             }
             return tag;
         }
     }
- });
+});
 
+/**
+ * Collect public property values for the Vue component.
+ *
+ * @param {any} options - represents props object.
+ * @returns {any} array of props object and `watchobject` respectively.
+ */
 export function getProps(options: any = {}): any {
     if (options.props) {
-      for (let prop of options.props) {
-        (options.newprops || (options.newprops = {}))[`${prop}`] = {};
-        (options.watch || (options.watch = {}))[`${prop}`] = function (newVal: Object) { // watch it
-          this.ej2Instances[`${prop}`] = newVal;
-          if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
-              this.dataBind();    
-          }
-        };
-      }
+        for (const prop of options.props) {
+            (options.newprops || (options.newprops = {}))[`${prop}`] = {};
+            (options.watch || (options.watch = {}))[`${prop}`] = function (newVal: Object): void { // watch it
+                this.ej2Instances[`${prop}`] = newVal;
+                if (this.dataBind && (options.name !== 'DateRangePickerComponent')) {
+                    this.dataBind();
+                }
+            };
+        }
     }
     return [options.newprops, options.watch];
 }
 
-if (!isExecute) setProxyToRaw(aVue.toRaw);
+if (!isExecute) { setProxyToRaw(aVue.toRaw); }
+

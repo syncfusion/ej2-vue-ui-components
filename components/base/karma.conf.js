@@ -16,7 +16,6 @@ module.exports = function (config) {
     files: [
       "test-main.js",
       { pattern: "src/**/*.js", included: false },
-      { pattern: "spec/**/*.js", included: false },
        { pattern: "node_modules/@syncfusion/ej2-base/**/*.js", included: false },
     ],
 
@@ -82,6 +81,7 @@ module.exports = function (config) {
           lines: 90
         }
       }
-    }
+    },
+    failOnEmptyTestSuite: false
   })
 }

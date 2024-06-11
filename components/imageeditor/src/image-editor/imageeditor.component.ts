@@ -94,14 +94,26 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         custom(): void {
             this.updated();
         },
+        apply(): void {
+            return this.ej2Instances.apply();
+        },
         applyImageFilter(filterOption: Object): void {
             return this.ej2Instances.applyImageFilter(filterOption);
+        },
+        bringForward(shapeId: string): void {
+            return this.ej2Instances.bringForward(shapeId);
+        },
+        bringToFront(shapeId: string): void {
+            return this.ej2Instances.bringToFront(shapeId);
         },
         canRedo(): boolean {
             return this.ej2Instances.canRedo();
         },
         canUndo(): boolean {
             return this.ej2Instances.canUndo();
+        },
+        clearImage(): void {
+            return this.ej2Instances.clearImage();
         },
         clearSelection(resetCrop?: boolean): void {
             return this.ej2Instances.clearSelection(resetCrop);
@@ -114,6 +126,9 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         },
         deleteShape(id: string): void {
             return this.ej2Instances.deleteShape(id);
+        },
+        discard(): void {
+            return this.ej2Instances.discard();
         },
         drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object, isSelected?: boolean): boolean {
             return this.ej2Instances.drawArrow(startX, startY, endX, endY, strokeWidth, strokeColor, arrowStart, arrowEnd, isSelected);
@@ -136,8 +151,11 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean {
             return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree, isSelected);
         },
-        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean): boolean {
-            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected);
+        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number): boolean {
+            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected, degree);
+        },
+        enableShapeDrawing(shapeType: Object, isEnabled: boolean): void {
+            return this.ej2Instances.enableShapeDrawing(shapeType, isEnabled);
         },
         enableTextEditing(): void {
             return this.ej2Instances.enableTextEditing();
@@ -196,6 +214,12 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         selectShape(id: string): boolean {
             return this.ej2Instances.selectShape(id);
         },
+        sendBackward(shapeId: string): void {
+            return this.ej2Instances.sendBackward(shapeId);
+        },
+        sendToBack(shapeId: string): void {
+            return this.ej2Instances.sendToBack(shapeId);
+        },
         straightenImage(degree: number): boolean {
             return this.ej2Instances.straightenImage(degree);
         },
@@ -230,13 +254,18 @@ export type ImageEditorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    apply(): void;
     applyImageFilter(filterOption: Object): void;
+    bringForward(shapeId: string): void;
+    bringToFront(shapeId: string): void;
     canRedo(): boolean;
     canUndo(): boolean;
+    clearImage(): void;
     clearSelection(resetCrop?: boolean): void;
     cloneShape(shapeId: string): boolean;
     crop(): boolean;
     deleteShape(id: string): void;
+    discard(): void;
     drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object, isSelected?: boolean): boolean;
     drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean;
     drawFrame(frameType: Object, color?: string, gradientColor?: string, size?: number, inset?: number, offset?: number, borderRadius?: number, frameLineStyle?: Object, lineCount?: number): boolean;
@@ -244,7 +273,8 @@ export type ImageEditorComponent = typeof ComponentBase & {
     drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
     drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
     drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean;
-    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean): boolean;
+    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number): boolean;
+    enableShapeDrawing(shapeType: Object, isEnabled: boolean): void;
     enableTextEditing(): void;
     export(type?: string, fileName?: string): void;
     finetuneImage(finetuneOption: Object, value: number): void;
@@ -264,6 +294,8 @@ export type ImageEditorComponent = typeof ComponentBase & {
     rotate(degree: number): boolean;
     select(type: string, startX?: number, startY?: number, width?: number, height?: number): void;
     selectShape(id: string): boolean;
+    sendBackward(shapeId: string): void;
+    sendToBack(shapeId: string): void;
     straightenImage(degree: number): boolean;
     undo(): void;
     update(): void;
