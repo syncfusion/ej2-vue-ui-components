@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## 26.1.38 (2024-06-19)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I587460` - Console error throws when assigning predecessor to an unscheduled task issue has been fixed.
+- `#I594645` - Cannot edit cell after validation rule is applied issue has been fixed.
+- `#I598329` - Cancel in `actionBegin` event argument doesn't cancel taskbar and dialog edit action issue been fixed.
+- `#I594908`,`#I594882`, `#I592404` - Incorrect validation of resource, work and duration utilization while mapping `taskType` issues has been fixed.
+
 ## 26.1.35 (2024-06-11)
 
 ### GanttChart
