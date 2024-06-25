@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 26.1.39 (2024-06-25)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I599445` - Console error occurs while exporting pdf with header and without footer issue has been fixed.
+- `#I601248` - Selection not working when dynamically updated issue has been fixed.
+- `#I598080` - When initial load, the predecessor validation case is not properly handled issue has been fixed.
+- `#I598858` - Segment task duration is not validating properly after resizing issue has been fixed.
+- `#I602401` - Shift tab key navigation not working properly when cell is in edited state issue has been fixed.
+- `#F188524` - PDF export is not working properly when `taskMode` is set to `Manual` issue has been fixed.
+- `#I598987` - Start and end date not validated when editing record by event issue has been fixed.
+
 ## 26.1.38 (2024-06-19)
 
 ### GanttChart
@@ -12,6 +26,11 @@
 - `#I594645` - Cannot edit cell after validation rule is applied issue has been fixed.
 - `#I598329` - Cancel in `actionBegin` event argument doesn't cancel taskbar and dialog edit action issue been fixed.
 - `#I594908`,`#I594882`, `#I592404` - Incorrect validation of resource, work and duration utilization while mapping `taskType` issues has been fixed.
+- `#I594878` - When adding a record via dialog, if the `startDate` is set to a Friday, the `endDate` and duration become empty issue has been fixed.
+- `#I585587` - Filter pop up misalign in column menu filter issue has been fixed.
+- `#I590307` - The issue about the "Add" and "Delete" buttons in the dependency tab were not being disabled when unnecessary has been fixed.
+- `#I594645` - Date validation not working properly when taskbar is moved issue has been fixed.
+- `#I592824` - Event markers height not updated properly issue has been fixed.
 
 ## 26.1.35 (2024-06-11)
 
