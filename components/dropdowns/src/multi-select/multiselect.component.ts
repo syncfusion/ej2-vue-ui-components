@@ -29,7 +29,7 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new MultiSelect({}) as any,
+            ej2Instance: new MultiSelect({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
@@ -178,7 +178,7 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
 });
 
 export type MultiSelectComponent = typeof ComponentBase & {
-    ej2Instances: MultiSelect;
+    ej2Instance: MultiSelect;
     isVue3: boolean;
     isLazyUpdate: Boolean;
     plugins: any[];
