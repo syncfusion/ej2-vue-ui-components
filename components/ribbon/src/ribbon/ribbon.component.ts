@@ -9,7 +9,7 @@ import { RibbonTabsDirective, RibbonTabDirective, RibbonTabsPlugin, RibbonTabPlu
 import { RibbonContextualTabsDirective, RibbonContextualTabDirective, RibbonContextualTabsPlugin, RibbonContextualTabPlugin } from './contextualtabs.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeLayout', 'backStageMenu', 'contextualTabs', 'cssClass', 'enableKeyTips', 'enablePersistence', 'enableRtl', 'fileMenu', 'helpPaneTemplate', 'hideLayoutSwitcher', 'isMinimized', 'launcherIconCss', 'layoutSwitcherKeyTip', 'locale', 'selectedTab', 'tabAnimation', 'tabs', 'width', 'created', 'launcherIconClick', 'overflowPopupClose', 'overflowPopupOpen', 'ribbonCollapsing', 'ribbonExpanding', 'tabSelected', 'tabSelecting'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeLayout', 'backStageMenu', 'contextualTabs', 'cssClass', 'enableKeyTips', 'enablePersistence', 'enableRtl', 'fileMenu', 'helpPaneTemplate', 'hideLayoutSwitcher', 'isMinimized', 'launcherIconCss', 'layoutSwitcherKeyTip', 'locale', 'selectedTab', 'tabAnimation', 'tabs', 'width', 'created', 'launcherIconClick', 'overflowPopupClose', 'overflowPopupOpen', 'ribbonCollapsing', 'ribbonExpanding', 'ribbonLayoutSwitched', 'tabSelected', 'tabSelecting'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

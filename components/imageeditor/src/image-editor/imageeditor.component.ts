@@ -160,8 +160,8 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         enableTextEditing(): void {
             return this.ej2Instances.enableTextEditing();
         },
-        export(type?: string, fileName?: string): void {
-            return this.ej2Instances.export(type, fileName);
+        export(type?: string, fileName?: string, imageQuality?: number): void {
+            return this.ej2Instances.export(type, fileName, imageQuality);
         },
         finetuneImage(finetuneOption: Object, value: number): void {
             return this.ej2Instances.finetuneImage(finetuneOption, value);
@@ -276,7 +276,7 @@ export type ImageEditorComponent = typeof ComponentBase & {
     drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number): boolean;
     enableShapeDrawing(shapeType: Object, isEnabled: boolean): void;
     enableTextEditing(): void;
-    export(type?: string, fileName?: string): void;
+    export(type?: string, fileName?: string, imageQuality?: number): void;
     finetuneImage(finetuneOption: Object, value: number): void;
     flip(direction: Object): void;
     freehandDraw(value: boolean): void;

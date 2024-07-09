@@ -139,6 +139,9 @@ export let StepperComponent: DefineVueComponent<StepperModel> =  vueDefineCompon
         previousStep(): void {
             return this.ej2Instances.previousStep();
         },
+        refreshProgressbar(): void {
+            return this.ej2Instances.refreshProgressbar();
+        },
         reset(): void {
             return this.ej2Instances.reset();
         },
@@ -163,6 +166,7 @@ export type StepperComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     nextStep(): void;
     previousStep(): void;
+    refreshProgressbar(): void;
     reset(): void
 };
 

@@ -2,7 +2,27 @@
 
 ## [Unreleased]
 
+## 26.1.41 (2024-07-09)
+
+### DropDownTree
+
+#### Bug Fixes
+
+- `#I601738` - Resolved the issue where `autoCheck` action was not working properly during the filtering action.
+
+### ListBox
+
+#### Bug Fixes
+
+- `#I601598` - Issue with "filtering was not applied after adding the new items in listbox while filtering" has been resolved.
+
 ## 26.1.40 (2024-07-02)
+
+### DropDownTree
+
+#### Bug Fixes
+
+- `#I605241` - An issue with change event in the Dropdown Tree component has been resolved.
 
 ### MultiSelect
 

@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 26.1.41 (2024-07-09)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I605907` - The notes dialog box in the Spreadsheet will not appear outside the viewport when scrolling within the control.
+
+- `#I593096` - Issue with "last column is removed once the hidden column is unhidden when finite mode is set to true" has been resolved.
+
+- `#I605907` - The notes dialog box in the Spreadsheet will not appear outside the viewport when scrolling within the control.
+
+- `#I578290` - Issue with "scaled image is returned to its initial size after saving and opening the data as JSON" has been resolved.
+
 ## 26.1.38 (2024-06-19)
 
 ### Spreadsheet
