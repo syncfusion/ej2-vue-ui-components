@@ -142,6 +142,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         autoFit(range: string): void {
             return this.ej2Instances.autoFit(range);
         },
+        calculateNow(scope?: string, sheet?: number | string): Object {
+            return this.ej2Instances.calculateNow(scope, sheet);
+        },
         cellFormat(style: Object, range?: string): void {
             return this.ej2Instances.cellFormat(style, range);
         },
@@ -417,6 +420,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     applyFilter(predicates?: Object[], range?: string): Object;
     autoFill(fillRange: string, dataRange?: string, direction?: Object, fillType?: Object): void;
     autoFit(range: string): void;
+    calculateNow(scope?: string, sheet?: number | string): Object;
     cellFormat(style: Object, range?: string): void;
     clear(options: Object): void;
     clearConditionalFormat(range?: string): void;
