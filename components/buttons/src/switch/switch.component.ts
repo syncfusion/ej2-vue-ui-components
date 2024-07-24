@@ -65,9 +65,7 @@ export let SwitchComponent: DefineVueComponent<SwitchModel> =  vueDefineComponen
                     let elementCollection: any = this.templateCollection[tempName];
                     if(elementCollection && elementCollection.length) {
                         for(let ele of elementCollection) {
-                            let destroy: any = getValue('__vue__.$destroy', ele);
-                            if (destroy) { ele.__vue__.$destroy() }
-                            if (ele.innerHTML) { ele.innerHTML = '' }
+                            this.destroyPortals(ele);
                         }
                         delete this.templateCollection[tempName];
                     }

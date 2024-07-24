@@ -191,21 +191,20 @@ export const ComponentBase: ComponentBaseType = vueDefineComponent({
         destroyComponent(): void {
             this.ej2Instances.destroy();
             (this.$el as any).style.visibility = 'hidden';
-            this.destroyPortals();
+            this.clearTemplate();
         },
-        destroyPortals(): void {
-            if (this.portals) {
-                for (const portal of this.portals) {
-                    const controls: any[] = portal.classList.contains('e-control') ? [portal] : portal.getElementsByClassName('e-control');
-                    for (let index: number = 0; index < controls.length; index++) {
-                        const control: any = controls[parseInt(index.toString(), 10)];
-                        if (control.ej2_instances && control.ej2_instances[0]) {
-                            control.ej2_instances[0].destroy();
-                            index--;
-                        }
-                    }
+        destroyPortals(element?: any): void {
+            if (element) {
+                const destroy: any = getValue('__vue__.$destroy', element);
+                if (destroy) {
+                    element.__vue__.$destroy();
+                } else if (!isExecute && element._vnode) {
+                    try { aVue.render(null, element); }
+                    catch (e) { /* Handle error */ }
                 }
-                this.portals = null;
+                if (element.innerHTML) {
+                    element.innerHTML = '';
+                }
             }
         },
         bindProperties(): void {

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 26.2.4 (2024-07-24)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I604105` - Issue with "exception occurs on the server end during excel file export when using floating-point numbers for the image properties" has been resolved.
+
 ## 26.1.42 (2024-07-16)
 
 ### Spreadsheet

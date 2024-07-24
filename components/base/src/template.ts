@@ -41,11 +41,20 @@ export function compile(
                     // Get values for Vue 3 slot template
                     getValues(app, context.vueInstance, root);
                     Vue.render(app, ele);
-                    if (vueInstance) {
-                        if (!vueInstance['portals']) { vueInstance['portals'] = []; }
-                        vueInstance.portals.push(...[].slice.call(ele.children));
-                    }
                     returnEle = ele.childNodes;
+                    if (vueInstance) {
+                        let templateInstance: any = vueInstance.templateCollection;
+                        if (!templateInstance) {
+                            vueInstance.templateCollection = {};
+                            templateInstance = vueInstance.templateCollection;
+                        }
+                        if (propName) {
+                            if (!templateInstance[`${propName}`]) {
+                                templateInstance[`${propName}`] = [];
+                            }
+                            templateInstance[`${propName}`].push(ele);
+                        }
+                    }
                     detach(ele);
                 } else {
                     // Compilation for Vue 3 string template
@@ -110,22 +119,19 @@ export function compile(
                 // Get values for Vue 3 functional template
                 getValues(app, context.vueInstance, root);
                 Vue.render(app, ele);
-                if (vueInstance) {
-                    if (!vueInstance['portals']) { vueInstance['portals'] = []; }
-                    vueInstance.portals.push(...[].slice.call(ele.children));
-                }
                 returnEle = ele.childNodes;
-                if (context.vueInstance) {
-                    let templateInstance: any = context.vueInstance.templateCollection;
+                dataObj.parent = null;
+                if (vueInstance) {
+                    let templateInstance: any = vueInstance.templateCollection;
                     if (!templateInstance) {
-                        context.vueInstance.templateCollection = {};
-                        templateInstance = context.vueInstance.templateCollection;
+                        vueInstance.templateCollection = {};
+                        templateInstance = vueInstance.templateCollection;
                     }
                     if (propName) {
                         if (!templateInstance[`${propName}`]) {
                             templateInstance[`${propName}`] = [];
                         }
-                        templateInstance[`${propName}`].push(returnEle[0]);
+                        templateInstance[`${propName}`].push(ele);
                     }
                 }
                 detach(ele);
@@ -153,11 +159,20 @@ export function compile(
                         }
                     });
                     vueTemplate.$mount('#' + id);
-                    if (vueInstance) {
-                        if (!vueInstance['portals']) { vueInstance['portals'] = []; }
-                        vueInstance.portals.push(...[].slice.call(ele.children));
-                    }
                     returnEle = ele.childNodes;
+                    if (vueInstance) {
+                        let templateInstance: any = vueInstance.templateCollection;
+                        if (!templateInstance) {
+                            vueInstance.templateCollection = {};
+                            templateInstance = vueInstance.templateCollection;
+                        }
+                        if (propName) {
+                            if (!templateInstance[`${propName}`]) {
+                                templateInstance[`${propName}`] = [];
+                            }
+                            templateInstance[`${propName}`].push(returnEle[0]);
+                        }
+                    }
                     detach(ele);
                 } else {
                     // Compilation for Vue 2 string template
@@ -187,16 +202,13 @@ export function compile(
                 // let templateVue = new Vue(tempObj.template);
                 // templateVue.$data.data = extend(tempObj.data, data);
                 templateVue.$mount('#' + id);
-                if (vueInstance) {
-                    if (!vueInstance['portals']) { vueInstance['portals'] = []; }
-                    vueInstance.portals.push(...[].slice.call(ele.children));
-                }
                 returnEle = ele.childNodes;
-                if (context.vueInstance) {
-                    let templateInstance: any = context.vueInstance.templateCollection;
+                dataObj.parent = null;
+                if (vueInstance) {
+                    let templateInstance: any = vueInstance.templateCollection;
                     if (!templateInstance) {
-                        context.vueInstance.templateCollection = {};
-                        templateInstance = context.vueInstance.templateCollection;
+                        vueInstance.templateCollection = {};
+                        templateInstance = vueInstance.templateCollection;
                     }
                     if (propName) {
                         if (!templateInstance[`${propName}`]) {

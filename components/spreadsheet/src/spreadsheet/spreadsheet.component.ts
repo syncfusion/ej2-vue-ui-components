@@ -71,9 +71,7 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
                     let elementCollection: any = this.templateCollection[tempName];
                     if(elementCollection && elementCollection.length) {
                         for(let ele of elementCollection) {
-                            let destroy: any = getValue('__vue__.$destroy', ele);
-                            if (destroy) { ele.__vue__.$destroy() }
-                            if (ele.innerHTML) { ele.innerHTML = '' }
+                            this.destroyPortals(ele);
                         }
                         delete this.templateCollection[tempName];
                     }
@@ -154,8 +152,8 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         clearConditionalFormat(range?: string): void {
             return this.ej2Instances.clearConditionalFormat(range);
         },
-        clearFilter(field?: string): void {
-            return this.ej2Instances.clearFilter(field);
+        clearFilter(field?: string, sheetIndex?: number): void {
+            return this.ej2Instances.clearFilter(field, sheetIndex);
         },
         closeEdit(): void {
             return this.ej2Instances.closeEdit();
@@ -424,7 +422,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     cellFormat(style: Object, range?: string): void;
     clear(options: Object): void;
     clearConditionalFormat(range?: string): void;
-    clearFilter(field?: string): void;
+    clearFilter(field?: string, sheetIndex?: number): void;
     closeEdit(): void;
     computeExpression(formula: string): string | number;
     conditionalFormat(conditionalFormat: Object): void;
