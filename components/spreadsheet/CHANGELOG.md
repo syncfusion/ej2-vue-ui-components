@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 26.2.5 (2024-07-26)
+## 26.2.7 (2024-07-30)
 
 ### Spreadsheet
 
 #### Bug fixes
 
-- `#I604105` - Issue with "exception occurs on the server end during excel file export when using floating-point numbers for the image properties" has been resolved.
+- `#I577428` - The script error that occurred when attempting to open the context menu without an active cell in the spreadsheet will no longer be thrown.
 
 ## 26.1.42 (2024-07-16)
 
@@ -1337,7 +1337,15 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Save:** Provides option to save spreadsheet data as excel file.
 - **RTL:** Provides right-to-left mode which aligns content in the spreadsheet component from right to left.
 - **Localization:** Provides inherent support to localize the UI.
-- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 21.2.10 (2023-06-13)
+- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 26.2.4 (2024-07-24)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I604105` - Issue with "exception occurs on the server end during excel file export when using floating-point numbers for the image properties" has been resolved.
+
+## 21.2.10 (2023-06-13)
 
 ### Spreadsheet
 

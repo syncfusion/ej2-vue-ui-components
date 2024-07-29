@@ -113,6 +113,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         getBookmarks(): string[] {
             return this.ej2Instances.getBookmarks();
         },
+        getComments(): Object[] {
+            return this.ej2Instances.getComments();
+        },
         getFormFieldInfo(name: string): Object | Object | Object {
             return this.ej2Instances.getFormFieldInfo(name);
         },
@@ -211,6 +214,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     fitPage(pageFitType?: Object): void;
     focusIn(): void;
     getBookmarks(): string[];
+    getComments(): Object[];
     getFormFieldInfo(name: string): Object | Object | Object;
     getFormFieldNames(): string[];
     getStyleNames(styleType?: Object): string[];
