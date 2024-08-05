@@ -2,7 +2,16 @@
 
 ## [Unreleased]
 
-## 26.2.7 (2024-07-30)
+## 26.2.8 (2024-08-06)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- `#I898205` - Issue with While setting rule value as an empty string the rule was not created in QueryBuilder has been fixed.
+- `#I896995` - Issue with Operator is not set properly when using the `addRules` method has been fixed.
+
+## 26.1.42 (2024-07-16)
 
 ### QueryBuilder
 

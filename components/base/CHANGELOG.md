@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 26.2.4 (2024-07-24)
+
+### Common
+
+#### Bug Fixes
+
+- `#I581127` - The issue with "the memory leak on the Vue Grid when rendering the row template" has been resolved.
+
 ## 25.1.35 (2024-03-15)
 
 ### Common

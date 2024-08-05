@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 26.2.7 (2024-07-30)
+## 26.2.8 (2024-08-06)
+
+### Image Editor
+
+#### Bug Fixes
+
+- `#I898988` - The issue with "script error thrown while using the drawText method" has been resolved.
+
+## 26.2.5 (2024-07-26)
 
 ### Image Editor
 

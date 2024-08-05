@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 26.2.8 (2024-08-06)
+
+### Tree Grid
+
+#### Bug Fixes
+
+- `#I609686` - Fixed an issue where row selection was incorrect when virtualization was enabled.
+
+- `#F59092` - Fixed issue where wrong data was returning in `rowDeselected` event when both `persistSelection` and `filterSettings` were enabled with `loadChildOnDemand`.
+
 ## 26.2.4 (2024-07-24)
 
 ### Tree Grid
