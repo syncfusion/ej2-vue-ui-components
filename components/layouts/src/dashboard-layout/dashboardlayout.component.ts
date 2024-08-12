@@ -63,9 +63,7 @@ export let DashboardLayoutComponent: DefineVueComponent<DashboardLayoutModel> = 
                     let elementCollection: any = this.templateCollection[tempName];
                     if(elementCollection && elementCollection.length) {
                         for(let ele of elementCollection) {
-                            let destroy: any = getValue('__vue__.$destroy', ele);
-                            if (destroy) { ele.__vue__.$destroy() }
-                            if (ele.innerHTML) { ele.innerHTML = '' }
+                            this.destroyPortals(ele);
                         }
                         delete this.templateCollection[tempName];
                     }
@@ -104,6 +102,9 @@ export let DashboardLayoutComponent: DefineVueComponent<DashboardLayoutModel> = 
         refresh(): void {
             return this.ej2Instances.refresh();
         },
+        refreshDraggableHandle(): void {
+            return this.ej2Instances.refreshDraggableHandle();
+        },
         removeAll(): void {
             return this.ej2Instances.removeAll();
         },
@@ -141,6 +142,7 @@ export type DashboardLayoutComponent = typeof ComponentBase & {
     addPanel(panel: Object): void;
     movePanel(id: string, row: number, col: number): void;
     refresh(): void;
+    refreshDraggableHandle(): void;
     removeAll(): void;
     removePanel(id: string): void;
     resizePanel(id: string, sizeX: number, sizeY: number): void;

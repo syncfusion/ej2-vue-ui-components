@@ -6,7 +6,7 @@ import { MultiColumnComboBox, MultiColumnComboBoxModel } from '@syncfusion/ej2-m
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'allowSorting', 'allowTextWrap', 'columns', 'cssClass', 'dataSource', 'disabled', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'filterType', 'floatLabelType', 'footerTemplate', 'gridSettings', 'groupTemplate', 'htmlAttributes', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'sortType', 'text', 'textWrapMode', 'value', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'change', 'close', 'created', 'filtering', 'open', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'actionFailureTemplate', 'allowFiltering', 'allowSorting', 'columns', 'cssClass', 'dataSource', 'disabled', 'enablePersistence', 'enableRtl', 'enableVirtualization', 'fields', 'filterType', 'floatLabelType', 'footerTemplate', 'gridSettings', 'groupTemplate', 'htmlAttributes', 'index', 'itemTemplate', 'locale', 'noRecordsTemplate', 'placeholder', 'popupHeight', 'popupWidth', 'query', 'readonly', 'showClearButton', 'sortOrder', 'sortType', 'text', 'value', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'change', 'close', 'created', 'filtering', 'open', 'select'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});

@@ -143,7 +143,7 @@ export let PdfViewerComponent: DefineVueComponent<PdfViewerModel> =  vueDefineCo
         importFormFields(data?: string, formFieldDataFormat?: Object): void {
             return this.ej2Instances.importFormFields(data, formFieldDataFormat);
         },
-        load(document: string, password: string): void {
+        load(document: string | Object, password: string): void {
             return this.ej2Instances.load(document, password);
         },
         redo(): void {
@@ -221,7 +221,7 @@ export type PdfViewerComponent = typeof ComponentBase & {
     getPageNumberFromClientPoint(clientPoint: Object): number;
     importAnnotation(importData: any, annotationDataFormat?: Object): void;
     importFormFields(data?: string, formFieldDataFormat?: Object): void;
-    load(document: string, password: string): void;
+    load(document: string | Object, password: string): void;
     redo(): void;
     requiredModules(): Object[];
     resetFormFields(): void;
