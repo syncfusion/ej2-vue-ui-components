@@ -2,13 +2,32 @@
 
 ## [Unreleased]
 
+## 26.2.10 (2024-08-20)
+
+### DropDownTree
+
+#### Bug Fixes
+
+- `#I618290` - The issue with keyboard actions and the focus-related issue in the Dropdown Tree component have been resolved.
+
 ## 26.2.9 (2024-08-13)
 
 ### ListBox
 
 #### Bug Fixes
 
+- `#I898586` - Issue with "Script error thrown in listbox while changing `allowDragAndDrop` and dataSource property" has been resolved.
 - `#I897366` - Issue with "Listbox double scroll appears issue while enabling the filtering option." has been resolved.
+
+### MultiSelect
+
+#### Bug fixes
+
+- `#I615841` - Fixed the issue where preselected values were not bound to the component with RemoteData when enableVirtualization was enabled.
+
+#### Bug Fixes
+
+- `#612401` - Resolved the issue with the `noRecordsTemplate` and `actionFailureTemplate` in dropdowns, ensuring they function correctly.
 
 ### AutoComplete
 
@@ -23,12 +42,6 @@
 - `#612401` - Resolved the issue with the `noRecordsTemplate` and `actionFailureTemplate` in dropdowns, ensuring they function correctly.
 
 ### DropDownList
-
-#### Bug Fixes
-
-- `#612401` - Resolved the issue with the `noRecordsTemplate` and `actionFailureTemplate` in dropdowns, ensuring they function correctly.
-
-### MultiSelect
 
 #### Bug Fixes
 
