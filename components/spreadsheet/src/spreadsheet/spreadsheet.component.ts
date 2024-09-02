@@ -377,8 +377,8 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         updateCell(cell: Object, address?: string): void {
             return this.ej2Instances.updateCell(cell, address);
         },
-        updateRange(range: Object, sheetIdx?: number): void {
-            return this.ej2Instances.updateRange(range, sheetIdx);
+        updateRange(range: Object, sheetIndex: number): void {
+            return this.ej2Instances.updateRange(range, sheetIndex);
         },
         updateUndoRedoCollection(args: undefined): void {
             return this.ej2Instances.updateUndoRedoCollection(args);
@@ -497,7 +497,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     unprotectSheet(sheet?: number | string): void;
     updateAction(options: Object): void;
     updateCell(cell: Object, address?: string): void;
-    updateRange(range: Object, sheetIdx?: number): void;
+    updateRange(range: Object, sheetIndex: number): void;
     updateUndoRedoCollection(args: undefined): void;
     wrap(address: string, wrap: boolean): void
 };

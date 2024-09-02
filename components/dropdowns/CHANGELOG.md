@@ -8,7 +8,13 @@
 
 #### Bug fixes
 
+- `#I620910` -  Fixed the misalignment of footer elements in the MultiSelect popup on mobile devices.
+
 - `#I619463` - Fixed an exception that occurred when re-rendering the multiselect component inside the scheduler by clicking the scheduler navigation icon.
+
+- `#I620453` - Fixed the issue where ItemData returned null in the removed event argument when the value was cleared.
+
+- `#I6414793` - Fixed the issue where the Clear Icon fails to create a placeholder in MultiSelect after the selection is reset.
 
 ### DropDownTree
 
