@@ -12,7 +12,7 @@ The [Vue ColorPicker](https://www.syncfusion.com/vue-components/vue-color-picker
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/color-picker/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/color-picker/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-color-picker?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -22,10 +22,10 @@ The [Vue ColorPicker](https://www.syncfusion.com/vue-components/vue-color-picker
 
 #### Key features
 
-* [Color specification](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=color-picker#/material/color-picker/default.html) - Supports `Red Green Blue`, `Hue Saturation Value` and `Hex` codes.
+* [Color specification](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=color-picker#/fluent2/color-picker/default.html) - Supports `Red Green Blue`, `Hue Saturation Value` and `Hex` codes.
 * [Mode](https://ej2.syncfusion.com/vue/documentation/color-picker/mode-and-value#mode-and-value) - Supports `Picker` and `Palette` mode.
-* [Inline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=color-picker#/material/color-picker/inline.html) - Supports inline type rendering of color picker.
-* [Custom palettes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=color-picker#/material/color-picker/custom.html) - Allows to customize palettes and supports multiple palette groups rendering.
+* [Inline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=color-picker#/fluent2/color-picker/inline.html) - Supports inline type rendering of color picker.
+* [Custom palettes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=color-picker#/fluent2/color-picker/custom.html) - Allows to customize palettes and supports multiple palette groups rendering.
 * [Opacity](https://ej2.syncfusion.com/vue/documentation/color-picker/mode-and-value#color-value) - Allows to set and change the `opacity` of the selected color.
 * [Accessibility](https://ej2.syncfusion.com/vue/documentation/color-picker/accessibility#accessibility) - Built-in accessibility features to access color picker using the keyboard, screen readers, or other assistive technology devices.
 
@@ -35,7 +35,7 @@ The [Vue TextBox](https://www.syncfusion.com/vue-components/vue-textbox?utm_sour
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/textbox/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/textboxes/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/textboxes/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-textbox?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -45,10 +45,10 @@ The [Vue TextBox](https://www.syncfusion.com/vue-components/vue-textbox?utm_sour
 
 #### Key features
 
-* [Floating label](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/material/textboxes/default.html) – floats the placeholder text while focus.
-* [Input group](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/material/textboxes/default.html) – group the icons, buttons along with textbox.
-* [Validation states](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/material/textboxes/default.html) – provides styles for success, error, and warning states.
-* [Multiline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/material/textboxes/default.html) – handles multiline input with placeholder text
+* [Floating label](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/fluent2/textboxes/default.html) – floats the placeholder text while focus.
+* [Input group](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/fluent2/textboxes/default.html) – group the icons, buttons along with textbox.
+* [Validation states](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/fluent2/textboxes/default.html) – provides styles for success, error, and warning states.
+* [Multiline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=textbox#/fluent2/textboxes/default.html) – handles multiline input with placeholder text
 
 ### Vue MaskedTextBox
 
@@ -56,7 +56,7 @@ The [Vue MaskedTextBox](https://www.syncfusion.com/vue-components/vue-input-mask
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/maskedtextbox/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/maskedtextbox/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-input-mask?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -66,7 +66,7 @@ The [Vue MaskedTextBox](https://www.syncfusion.com/vue-components/vue-input-mask
 
 #### Key features
 
-* [Custom characters](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=maskedtextbox#/material/maskedtextbox/custommask.html) - allows you to use your own characters as the mask elements.
+* [Custom characters](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=maskedtextbox#/fluent2/maskedtextbox/custom-mask.html) - allows you to use your own characters as the mask elements.
 * [Regular expression](https://ej2.syncfusion.com/vue/documentation/maskedtextbox/mask-configuration#regular-expression/?utm_source=npm&utm_campaign=maskedtextbox#regular-expression) - can be used as a mask element for each character of the MaskedTextBox.
 * [Accessibility](https://ej2.syncfusion.com/vue/documentation/maskedtextbox/accessibility/?utm_source=npm&utm_campaign=maskedtextbox) - provides built-in accessibility support which helps to access all the MaskedTextBox component features through keyboard, on-screen readers, or other assistive technology devices.
 
@@ -76,7 +76,7 @@ The [Vue NumericTextBox](https://www.syncfusion.com/vue-components/vue-numeric-t
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/numerictextbox/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/numerictextbox/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/numerictextbox/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-numeric-textbox?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -86,13 +86,13 @@ The [Vue NumericTextBox](https://www.syncfusion.com/vue-components/vue-numeric-t
 
 #### Key features
 
-* [Range validation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=numerictextbox#/material/numerictextbox/range.html) - allows to set the minimum and maximum range of values in the NumericTextBox.
-* [Number formats](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=numerictextbox#/material/numerictextbox/format.html) - supports the number display formatting with MSDN standard and custom number formats.
-* [Precision Of numbers](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=numerictextbox#/material/numerictextbox/restrict.html) - allows to restrict the number precision when enters the value.
+* [Range validation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=numerictextbox#/fluent2/numerictextbox/range-validation.html) - allows to set the minimum and maximum range of values in the NumericTextBox.
+* [Number formats](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=numerictextbox#/fluent2/numerictextbox/custom-format.html) - supports the number display formatting with MSDN standard and custom number formats.
+* [Precision Of numbers](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=numerictextbox#/fluent2/numerictextbox/restrict-decimals.html) - allows to restrict the number precision when enters the value.
 * [Keyboard interaction](https://ej2.syncfusion.com/vue/documentation/numerictextbox/accessibility#keyboard-interaction/?utm_source=npm&utm_campaign=numerictextbox#keyboard-interaction) - allows users to interact with the NumericTextBox using the keyboard.
 * [Accessibility](https://ej2.syncfusion.com/vue/documentation/numerictextbox/accessibility/?utm_source=npm&utm_campaign=numerictextbox) - provides built-in accessibility support which helps to access all the NumericTextBox component features through keyboard, on-screen readers or other assistive technology devices.
-* [Internationalization](https://ej2.syncfusion.com/vue/documentation/numerictextbox/internationalization/?utm_source=npm&utm_campaign=numerictextbox) - library provides support for formatting and parsing number using the official Unicode CLDR JSON data.
-* [Localization](https://ej2.syncfusion.com/vue/documentation/numerictextbox/internationalization#localization/?utm_source=npm&utm_campaign=numerictextbox#localization) - Supports to localize spin up and down buttons title for the tooltip to different cultures.
+* [Internationalization](https://ej2.syncfusion.com/vue/documentation/numerictextbox/globalization/?utm_source=npm&utm_campaign=numerictextbox#internationalization) - library provides support for formatting and parsing number using the official Unicode CLDR JSON data.
+* [Localization](https://ej2.syncfusion.com/vue/documentation/numerictextbox/globalization/?utm_source=npm&utm_campaign=numerictextbox#localization) - Supports to localize spin up and down buttons title for the tooltip to different cultures.
 
 ### Vue Signature
 
@@ -100,7 +100,7 @@ The [Vue Signature](https://www.syncfusion.com/vue-components/vue-signature?utm_
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/signature/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/signature/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/signature/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-signature?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -110,10 +110,10 @@ The [Vue Signature](https://www.syncfusion.com/vue-components/vue-signature?utm_
 
 #### Key features
 
-* [Customization](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/material/signature/default.html) - Support various customization options like background color, background image, stroke color, stroke width, save with background, undo, redo, clear, readonly, and disabled.
-* [Save](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/material/signature/default.html) - Support to save the signature as image like PNG, JPEG, and SVG.
-* [Load](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/material/signature/default.html) - Support to load the signature as base64 url of the image.
-* [Draw](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/material/signature/default.html) - Support to draw the text with the different font family and font size.
+* [Customization](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/fluent2/signature/default.html) - Support various customization options like background color, background image, stroke color, stroke width, save with background, undo, redo, clear, readonly, and disabled.
+* [Save](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/fluent2/signature/default.html) - Support to save the signature as image like PNG, JPEG, and SVG.
+* [Load](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/fluent2/signature/default.html) - Support to load the signature as base64 url of the image.
+* [Draw](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_campaign=slider#/fluent2/signature/default.html) - Support to draw the text with the different font family and font size.
 
 ### Vue Slider
 
@@ -121,7 +121,7 @@ The [Vue slider](https://www.syncfusion.com/vue-components/vue-slider?utm_source
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/range-slider/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/range-slider/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/range-slider/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-slider?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -131,15 +131,15 @@ The [Vue slider](https://www.syncfusion.com/vue-components/vue-slider?utm_source
 
 #### Key features
 
-* [Types](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/default.html) - Provided three types of Slider.
-* [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/orientation.html) - Displays the Slider in horizontal or vertical direction.
-* [Buttons](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/tooltip.html) - Provided built-in support to render the buttons in both edges of the Slider.
-* [Tooltip](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/tooltip.html) - Displays a tooltip to show the currently selected value.
-* [Ticks](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/ticks.html) - Displays a scale with small and big ticks.
-* [Format](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/format.html) - Customize the slider values into various format.
-* [Limits](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/limits.html) - Slider thumb movement restriction enabled with interval dragging in range-slider.
-* [Accessibility](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/default.html) - Built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications.
-* [Keyboard interaction](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/api.html) - The Slider can be intractable through the keyboard.
+* [Types](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/default.html) - Provided three types of Slider.
+* [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/orientation.html) - Displays the Slider in horizontal or vertical direction.
+* [Buttons](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/tooltip.html) - Provided built-in support to render the buttons in both edges of the Slider.
+* [Tooltip](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/tooltip.html) - Displays a tooltip to show the currently selected value.
+* [Ticks](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/ticks.html) - Displays a scale with small and big ticks.
+* [Format](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/format.html) - Customize the slider values into various format.
+* [Limits](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/limits.html) - Slider thumb movement restriction enabled with interval dragging in range-slider.
+* [Accessibility](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/default.html) - Built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications.
+* [Keyboard interaction](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/api.html) - The Slider can be intractable through the keyboard.
 
 ### Vue File Upload
 
@@ -147,7 +147,7 @@ The [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload?
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/uploader/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/uploader/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/uploader/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-file-upload?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -157,12 +157,12 @@ The [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload?
 
 #### Key features
 
-* [Chunk upload](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/chunk-upload.html) – used to upload large files as chunks
-* [Drag-and-drop](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/custom-drop-area.html) – drag the files and drop into component to upload them.
-* [Template](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/custom-file-list.html) – the file list and buttons can be customize using template.
-* [Validation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/file-validation.html) – validate extension and size of upload file.
-* [Auto upload](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/default.html) – Process the file to upload without interaction.
-* [Preload files](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/material/uploader/preload-files.html) – View and manipulate previously uploaded files.
+* [Chunk upload](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/fluent2/uploader/chunk-upload.html) – used to upload large files as chunks
+* [Drag-and-drop](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/fluent2/uploader/custom-drop-area.html) – drag the files and drop into component to upload them.
+* [Template](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/fluent2/uploader/custom-file-list.html) – the file list and buttons can be customize using template.
+* [Validation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/fluent2/uploader/file-validation.html) – validate extension and size of upload file.
+* [Auto upload](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/fluent2/uploader/default.html) – Process the file to upload without interaction.
+* [Preload files](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-file-upload-npm#/fluent2/uploader/preload-files.html) – View and manipulate previously uploaded files.
 
 ### Vue Rating
 
@@ -170,7 +170,7 @@ The [Vue Rating](https://www.syncfusion.com/vue-components/vue-rating?utm_source
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/rating/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
-  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/material/rating/default.html">Online demos</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/rating/default.html">Online demos</a> .
   <a href="https://www.syncfusion.com/vue-components/vue-rating?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
 </p>
 
@@ -224,7 +224,7 @@ Inputs components are also offered in following list of frameworks.
 
 ## Showcase samples
 
-* Cloud Pricing - [Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/material/slider/azure-pricing.html)
+* Cloud Pricing - [Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=slider#/fluent2/range-slider/azure-pricing.html)
 
 ## Support
 

@@ -10,3 +10,4 @@ export { ColorPickerComponent, ColorPickerPlugin } from './color-picker/colorpic
 export { SignatureComponent, SignaturePlugin } from './signature/signature.component';
 export { RatingComponent, RatingPlugin } from './rating/rating.component';
 export { OtpInputComponent, OtpInputPlugin } from './otp-input/otpinput.component';
+export { SmartTextAreaComponent, SmartTextAreaPlugin } from './smart-textarea/smarttextarea.component';

@@ -155,9 +155,6 @@ export let ChartComponent: DefineVueComponent<ChartModel> =  vueDefineComponent(
         clearSeries(): void {
             return this.ej2Instances.clearSeries();
         },
-        createChartSvg(): void {
-            return this.ej2Instances.createChartSvg();
-        },
         export(type: Object, fileName: string): void {
             return this.ej2Instances.export(type, fileName);
         },
@@ -181,9 +178,6 @@ export let ChartComponent: DefineVueComponent<ChartModel> =  vueDefineComponent(
         },
         refreshLiveData(): void {
             return this.ej2Instances.refreshLiveData();
-        },
-        removeAxis(index: number): void {
-            return this.ej2Instances.removeAxis(index);
         },
         removeSeries(index: number): void {
             return this.ej2Instances.removeSeries(index);
@@ -220,7 +214,6 @@ export type ChartComponent = typeof ComponentBase & {
     addAxes(axisCollection: Object[]): void;
     addSeries(seriesCollection: Object[]): void;
     clearSeries(): void;
-    createChartSvg(): void;
     export(type: Object, fileName: string): void;
     getLocalizedLabel(key: string): string;
     hideCrosshair(): void;
@@ -229,7 +222,6 @@ export type ChartComponent = typeof ComponentBase & {
     print(id?: string[] | string | Object): void;
     processData(render: boolean): void;
     refreshLiveData(): void;
-    removeAxis(index: number): void;
     removeSeries(index: number): void;
     setAnnotationValue(annotationIndex: number, content: string): void;
     showCrosshair(x: number, y: number): void;

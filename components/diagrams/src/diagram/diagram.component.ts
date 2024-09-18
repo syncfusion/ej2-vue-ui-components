@@ -13,7 +13,7 @@ import { PortsDirective, PortDirective, PortsPlugin, PortPlugin } from './ports.
 import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enableConnectorSplit', 'enablePersistence', 'enableRtl', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'segmentThumbShape', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'elementDraw', 'expandStateChange', 'fixedUserHandleClick', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'load', 'mouseEnter', 'mouseLeave', 'mouseOver', 'mouseWheel', 'onFixedUserHandleMouseDown', 'onFixedUserHandleMouseEnter', 'onFixedUserHandleMouseLeave', 'onFixedUserHandleMouseUp', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enableConnectorSplit', 'enablePersistence', 'enableRtl', 'fixedUserHandleTemplate', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'segmentThumbShape', 'segmentThumbSize', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'elementDraw', 'expandStateChange', 'fixedUserHandleClick', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'load', 'loaded', 'mouseEnter', 'mouseLeave', 'mouseOver', 'mouseWheel', 'onFixedUserHandleMouseDown', 'onFixedUserHandleMouseEnter', 'onFixedUserHandleMouseLeave', 'onFixedUserHandleMouseUp', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -281,6 +281,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         loadDiagram(data: string, isEJ1Data?: boolean): Object {
             return this.ej2Instances.loadDiagram(data, isEJ1Data);
         },
+        loadDiagramFromMermaid(data: string): void {
+            return this.ej2Instances.loadDiagramFromMermaid(data);
+        },
         moveForward(): void {
             return this.ej2Instances.moveForward();
         },
@@ -352,6 +355,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         },
         saveDiagram(): string {
             return this.ej2Instances.saveDiagram();
+        },
+        saveDiagramAsMermaid(): string {
+            return this.ej2Instances.saveDiagramAsMermaid();
         },
         scale(obj: Object | Object | Object, sx: number, sy: number, pivot: Object): boolean {
             return this.ej2Instances.scale(obj, sx, sy, pivot);
@@ -486,6 +492,7 @@ export type DiagramComponent = typeof ComponentBase & {
     hideTooltip(obj: Object | Object): void;
     insertData(node?: Object | Object): object;
     loadDiagram(data: string, isEJ1Data?: boolean): Object;
+    loadDiagramFromMermaid(data: string): void;
     moveForward(): void;
     moveObjects(objects: string[], targetLayer?: string): void;
     moveObjectsUp(node: Object | Object, currentLayer: Object): void;
@@ -510,6 +517,7 @@ export type DiagramComponent = typeof ComponentBase & {
     rotate(obj: Object | Object | Object, angle: number, pivot?: Object, rotateUsingHandle?: boolean): boolean;
     sameSize(option: Object, objects?: undefined[]): void;
     saveDiagram(): string;
+    saveDiagramAsMermaid(): string;
     scale(obj: Object | Object | Object, sx: number, sy: number, pivot: Object): boolean;
     select(objects: undefined[], multipleSelection?: boolean, oldValue?: undefined[]): void;
     selectAll(): void;

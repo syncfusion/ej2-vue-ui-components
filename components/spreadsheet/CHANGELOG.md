@@ -2,64 +2,13 @@
 
 ## [Unreleased]
 
-## 26.2.9 (2024-08-13)
+## 27.1.48 (2024-09-18)
 
 ### Spreadsheet
 
 #### Bug fixes
 
-- `#I616139` - The script error that occurs while scrolling down and up in a sheet when a cell has filter icon and notes has been resolved.
-
-- `#I613155` - The notes in the spreadsheet are now scrollable when the content length is long.
-
-- `#I613687` - Issue with "text value is converted into date format when the cell text content contains the '-' character" has been resolved.
-
-- `#I616139` - The script error that occurs while scrolling down and up in a sheet when a cell has filter icon and notes has been resolved.
-
-- `#I613155` - The notes in the spreadsheet are now scrollable when the content length is long.
-
-- `#I617075` - Issue with "exception occurs while saving spreadsheet data as a blob in the `Vue 3` application" has been resolved.
-
-## 26.2.7 (2024-07-30)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I577428` - The script error that occurred when attempting to open the context menu without an active cell in the spreadsheet will no longer be thrown.
-
-## 26.1.42 (2024-07-16)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I600955` - Issue with "hyperlink navigation action is not prevented when the `cancel` argument of the `beforeHyperlinkClick` event is set to `true`" has been resolved.
-- `#I600874` - Issue with "script error occurs when inserting rows using the `insertRow` method after inserting an image and freezing rows" has been resolved.
-
-- `#I607842` - Issue "active sheet becomes unprotected when unprotecting a non-active sheet using the `unprotectSheet` method" has been resolved.
-
-## 26.1.41 (2024-07-09)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I605907` - The notes dialog box in the Spreadsheet will not appear outside the viewport when scrolling within the control.
-
-- `#I593096` - Issue with "last column is removed once the hidden column is unhidden when finite mode is set to true" has been resolved.
-
-- `#I605907` - The notes dialog box in the Spreadsheet will not appear outside the viewport when scrolling within the control.
-
-- `#I578290` - Issue with "scaled image is returned to its initial size after saving and opening the data as JSON" has been resolved.
-
-## 26.1.38 (2024-06-19)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- Now, the notes can be edited using the `SHIFT` + `F2` keyboard shortcut.
+- `#I625508` - Issue with "wrap text was removed from the cell after applying `readonly` to it in the `openComplete` event and switching sheets" has been resolved.
 
 ## 26.1.35 (2024-06-11)
 
@@ -1355,15 +1304,7 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Save:** Provides option to save spreadsheet data as excel file.
 - **RTL:** Provides right-to-left mode which aligns content in the spreadsheet component from right to left.
 - **Localization:** Provides inherent support to localize the UI.
-- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 26.2.4 (2024-07-24)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I604105` - Issue with "exception occurs on the server end during excel file export when using floating-point numbers for the image properties" has been resolved.
-
-## 21.2.10 (2023-06-13)
+- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 21.2.10 (2023-06-13)
 
 ### Spreadsheet
 

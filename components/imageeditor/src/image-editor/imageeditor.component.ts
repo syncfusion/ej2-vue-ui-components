@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { ImageEditor, ImageEditorModel } from '@syncfusion/ej2-image-editor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'fontFamily', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'fileOpened', 'finetuneValueChanging', 'flipping', 'frameChange', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'resizing', 'rotating', 'saved', 'selectionChanging', 'shapeChange', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowUndoRedo', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'finetuneSettings', 'fontFamily', 'height', 'isReadOnly', 'locale', 'quickAccessToolbarTemplate', 'selectionSettings', 'showQuickAccessToolbar', 'theme', 'toolbar', 'toolbarTemplate', 'width', 'zoomSettings', 'beforeSave', 'click', 'created', 'cropping', 'destroyed', 'editComplete', 'fileOpened', 'finetuneValueChanging', 'flipping', 'frameChange', 'imageFiltering', 'panning', 'quickAccessToolbarItemClick', 'quickAccessToolbarOpen', 'resizing', 'rotating', 'saved', 'selectionChanging', 'shapeChange', 'shapeChanging', 'toolbarCreated', 'toolbarItemClicked', 'toolbarUpdating', 'zooming'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -122,6 +122,9 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         crop(): boolean {
             return this.ej2Instances.crop();
         },
+        deleteRedact(id: string): void {
+            return this.ej2Instances.deleteRedact(id);
+        },
         deleteShape(id: string): void {
             return this.ej2Instances.deleteShape(id);
         },
@@ -146,11 +149,14 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean {
             return this.ej2Instances.drawPath(pointColl, strokeWidth, strokeColor, isSelected);
         },
-        drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean {
-            return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree, isSelected);
+        drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean, borderRadius?: number): boolean {
+            return this.ej2Instances.drawRectangle(x, y, width, height, strokeWidth, strokeColor, fillColor, degree, isSelected, borderRadius);
         },
-        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number): boolean {
-            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected, degree);
+        drawRedact(type?: Object, x?: number, y?: number, width?: number, height?: number, value?: number): boolean {
+            return this.ej2Instances.drawRedact(type, x, y, width, height, value);
+        },
+        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number, fillColor?: string, strokeColor?: string, strokeWidth?: number): boolean {
+            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected, degree, fillColor, strokeColor, strokeWidth);
         },
         enableShapeDrawing(shapeType: Object, isEnabled: boolean): void {
             return this.ej2Instances.enableShapeDrawing(shapeType, isEnabled);
@@ -170,14 +176,17 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         freehandDraw(value: boolean): void {
             return this.ej2Instances.freehandDraw(value);
         },
-        getImageData(): Object {
-            return this.ej2Instances.getImageData();
+        getImageData(includeAnnotations?: boolean): Object {
+            return this.ej2Instances.getImageData(includeAnnotations);
         },
         getImageDimension(): Object {
             return this.ej2Instances.getImageDimension();
         },
         getImageFilter(filterOption: Object): string {
             return this.ej2Instances.getImageFilter(filterOption);
+        },
+        getRedacts(): Object[] {
+            return this.ej2Instances.getRedacts();
         },
         getShapeSetting(id: string): Object {
             return this.ej2Instances.getShapeSetting(id);
@@ -188,8 +197,8 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         initialize(): void {
             return this.ej2Instances.initialize();
         },
-        open(data: string | Object): void {
-            return this.ej2Instances.open(data);
+        open(data: string | Object, resetChanges?: boolean, imageSettings?: Object): void {
+            return this.ej2Instances.open(data, resetChanges, imageSettings);
         },
         pan(value: boolean, x?: number, y?: number): void {
             return this.ej2Instances.pan(value, x, y);
@@ -209,6 +218,9 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         select(type: string, startX?: number, startY?: number, width?: number, height?: number): void {
             return this.ej2Instances.select(type, startX, startY, width, height);
         },
+        selectRedact(id: string): boolean {
+            return this.ej2Instances.selectRedact(id);
+        },
         selectShape(id: string): boolean {
             return this.ej2Instances.selectShape(id);
         },
@@ -221,11 +233,17 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         straightenImage(degree: number): boolean {
             return this.ej2Instances.straightenImage(degree);
         },
+        triggerEditCompleteEvent(args: Object): void {
+            return this.ej2Instances.triggerEditCompleteEvent(args);
+        },
         undo(): void {
             return this.ej2Instances.undo();
         },
         update(): void {
             return this.ej2Instances.update();
+        },
+        updateRedact(setting: Object, isSelected?: boolean): boolean {
+            return this.ej2Instances.updateRedact(setting, isSelected);
         },
         updateShape(setting: Object, isSelected?: boolean): boolean {
             return this.ej2Instances.updateShape(setting, isSelected);
@@ -262,6 +280,7 @@ export type ImageEditorComponent = typeof ComponentBase & {
     clearSelection(resetCrop?: boolean): void;
     cloneShape(shapeId: string): boolean;
     crop(): boolean;
+    deleteRedact(id: string): void;
     deleteShape(id: string): void;
     discard(): void;
     drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object, isSelected?: boolean): boolean;
@@ -270,33 +289,38 @@ export type ImageEditorComponent = typeof ComponentBase & {
     drawImage(data: string | Object, x?: number, y?: number, width?: number, height?: number, isAspectRatio?: boolean, degree?: number, opacity?: number, isSelected?: boolean): boolean;
     drawLine(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
     drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
-    drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean;
-    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number): boolean;
+    drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean, borderRadius?: number): boolean;
+    drawRedact(type?: Object, x?: number, y?: number, width?: number, height?: number, value?: number): boolean;
+    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number, fillColor?: string, strokeColor?: string, strokeWidth?: number): boolean;
     enableShapeDrawing(shapeType: Object, isEnabled: boolean): void;
     enableTextEditing(): void;
     export(type?: string, fileName?: string, imageQuality?: number): void;
     finetuneImage(finetuneOption: Object, value: number): void;
     flip(direction: Object): void;
     freehandDraw(value: boolean): void;
-    getImageData(): Object;
+    getImageData(includeAnnotations?: boolean): Object;
     getImageDimension(): Object;
     getImageFilter(filterOption: Object): string;
+    getRedacts(): Object[];
     getShapeSetting(id: string): Object;
     getShapeSettings(): Object[];
     initialize(): void;
-    open(data: string | Object): void;
+    open(data: string | Object, resetChanges?: boolean, imageSettings?: Object): void;
     pan(value: boolean, x?: number, y?: number): void;
     redo(): void;
     reset(): void;
     resize(width: number, height: number, isAspectRatio?: boolean): boolean;
     rotate(degree: number): boolean;
     select(type: string, startX?: number, startY?: number, width?: number, height?: number): void;
+    selectRedact(id: string): boolean;
     selectShape(id: string): boolean;
     sendBackward(shapeId: string): void;
     sendToBack(shapeId: string): void;
     straightenImage(degree: number): boolean;
+    triggerEditCompleteEvent(args: Object): void;
     undo(): void;
     update(): void;
+    updateRedact(setting: Object, isSelected?: boolean): boolean;
     updateShape(setting: Object, isSelected?: boolean): boolean;
     zoom(zoomFactor: number, zoomPoint?: Object): void
 };

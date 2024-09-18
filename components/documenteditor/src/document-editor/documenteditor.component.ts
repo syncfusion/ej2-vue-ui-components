@@ -137,6 +137,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         open(inputData: string): void {
             return this.ej2Instances.open(inputData);
         },
+        openAsync(inputData: string): void {
+            return this.ej2Instances.openAsync(inputData);
+        },
         openBlank(): void {
             return this.ej2Instances.openBlank();
         },
@@ -185,6 +188,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         showRestrictEditingPane(show?: boolean): void {
             return this.ej2Instances.showRestrictEditingPane(show);
         },
+        showXmlPane(): void {
+            return this.ej2Instances.showXmlPane();
+        },
         updateFields(): void {
             return this.ej2Instances.updateFields();
         },
@@ -222,6 +228,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     importContentControlData(contentControlInfo: Object[]): Object[];
     importFormData(formData: Object[]): void;
     open(inputData: string): void;
+    openAsync(inputData: string): void;
     openBlank(): void;
     print(printWindow?: Object): void;
     resetContentControlData(contentControInfo: Object[]): void;
@@ -238,6 +245,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     showDialog(dialogType: Object): void;
     showOptionsPane(): void;
     showRestrictEditingPane(show?: boolean): void;
+    showXmlPane(): void;
     updateFields(): void
 };
 

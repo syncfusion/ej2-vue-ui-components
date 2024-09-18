@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { OtpInput, OtpInputModel } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'ariaLabels', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'length', 'locale', 'placeholder', 'separator', 'stylingMode', 'type', 'value', 'blur', 'created', 'focus', 'input', 'valueChanged'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'ariaLabels', 'autoFocus', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'length', 'locale', 'placeholder', 'separator', 'stylingMode', 'textTransform', 'type', 'value', 'blur', 'created', 'focus', 'input', 'valueChanged'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});

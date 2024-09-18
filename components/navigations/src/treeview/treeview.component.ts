@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { TreeView, TreeViewModel } from '@syncfusion/ej2-navigations';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowDragAndDrop', 'allowEditing', 'allowMultiSelection', 'allowTextWrap', 'animation', 'autoCheck', 'checkedNodes', 'cssClass', 'disabled', 'dragArea', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandOn', 'expandedNodes', 'fields', 'fullRowNavigable', 'fullRowSelect', 'loadOnDemand', 'locale', 'nodeTemplate', 'selectedNodes', 'showCheckBox', 'sortOrder', 'actionFailure', 'created', 'dataBound', 'dataSourceChanged', 'destroyed', 'drawNode', 'keyPress', 'nodeChecked', 'nodeChecking', 'nodeClicked', 'nodeCollapsed', 'nodeCollapsing', 'nodeDragStart', 'nodeDragStop', 'nodeDragging', 'nodeDropped', 'nodeEdited', 'nodeEditing', 'nodeExpanded', 'nodeExpanding', 'nodeSelected', 'nodeSelecting'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowDragAndDrop', 'allowEditing', 'allowMultiSelection', 'allowTextWrap', 'animation', 'autoCheck', 'checkDisabledChildren', 'checkedNodes', 'cssClass', 'disabled', 'dragArea', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'expandOn', 'expandedNodes', 'fields', 'fullRowNavigable', 'fullRowSelect', 'loadOnDemand', 'locale', 'nodeTemplate', 'selectedNodes', 'showCheckBox', 'sortOrder', 'actionFailure', 'created', 'dataBound', 'dataSourceChanged', 'destroyed', 'drawNode', 'keyPress', 'nodeChecked', 'nodeChecking', 'nodeClicked', 'nodeCollapsed', 'nodeCollapsing', 'nodeDragStart', 'nodeDragStop', 'nodeDragging', 'nodeDropped', 'nodeEdited', 'nodeEditing', 'nodeExpanded', 'nodeExpanding', 'nodeSelected', 'nodeSelecting'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -113,8 +113,8 @@ export let TreeViewComponent: DefineVueComponent<TreeViewModel> =  vueDefineComp
         ensureVisible(node: string | Object): void {
             return this.ej2Instances.ensureVisible(node);
         },
-        expandAll(nodes?: string[] | Object[], level?: number, excludeHiddenNodes?: boolean): void {
-            return this.ej2Instances.expandAll(nodes, level, excludeHiddenNodes);
+        expandAll(nodes?: string[] | Object[], level?: number, excludeHiddenNodes?: boolean, preventAnimation?: boolean): void {
+            return this.ej2Instances.expandAll(nodes, level, excludeHiddenNodes, preventAnimation);
         },
         getAllCheckedNodes(): string[] {
             return this.ej2Instances.getAllCheckedNodes();
@@ -169,7 +169,7 @@ export type TreeViewComponent = typeof ComponentBase & {
     disableNodes(nodes: string[] | Object[]): void;
     enableNodes(nodes: string[] | Object[]): void;
     ensureVisible(node: string | Object): void;
-    expandAll(nodes?: string[] | Object[], level?: number, excludeHiddenNodes?: boolean): void;
+    expandAll(nodes?: string[] | Object[], level?: number, excludeHiddenNodes?: boolean, preventAnimation?: boolean): void;
     getAllCheckedNodes(): string[];
     getDisabledNodes(): string[];
     getNode(node: string | Object): Object;

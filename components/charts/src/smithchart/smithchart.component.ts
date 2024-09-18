@@ -105,6 +105,9 @@ export let SmithchartComponent: DefineVueComponent<SmithchartModel> =  vueDefine
         print(id?: string[] | string | Object): void {
             return this.ej2Instances.print(id);
         },
+        setTabIndex(previousElement: Object, currentElement: Object): void {
+            return this.ej2Instances.setTabIndex(previousElement, currentElement);
+        },
         smithchartOnClick(e: Object | Object): void {
             return this.ej2Instances.smithchartOnClick(e);
         },
@@ -134,6 +137,7 @@ export type SmithchartComponent = typeof ComponentBase & {
     mouseEnd(e: Object): void;
     mouseMove(e: Object): void;
     print(id?: string[] | string | Object): void;
+    setTabIndex(previousElement: Object, currentElement: Object): void;
     smithchartOnClick(e: Object | Object): void;
     smithchartOnResize(): boolean
 };

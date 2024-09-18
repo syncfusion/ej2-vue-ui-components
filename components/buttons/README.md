@@ -10,7 +10,7 @@ The [Vue Button](https://www.syncfusion.com/vue-components/vue-button?utm_source
 
 <p align="center">
     <a href="https://ej2.syncfusion.com/vue/documentation/button/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/material/button/default.html">Online demos</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/fluent2/button/default.html">Online demos</a> .
     <a href="https://www.syncfusion.com/vue-components/vue-button?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Learn more</a>
 </p>
 
@@ -31,7 +31,7 @@ The [Vue CheckBox](https://www.syncfusion.com/vue-components/vue-checkbox?utm_so
 
 <p align="center">
     <a href="https://ej2.syncfusion.com/vue/documentation/check-box/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/material/button/checkbox.html">Online demos</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/fluent2/button/checkbox.html">Online demos</a> .
     <a href="https://www.syncfusion.com/vue-components/vue-checkbox?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Learn more</a>
 </p>
 
@@ -51,7 +51,7 @@ The [Vue RadioButton](https://www.syncfusion.com/vue-components/vue-radio-button
 
 <p align="center">
     <a href="https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/material/button/radio-button.html">Online demos</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/fluent2/button/radio-button.html">Online demos</a> .
     <a href="https://www.syncfusion.com/vue-components/vue-radio-button?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Learn more</a>
 </p>
 
@@ -71,7 +71,7 @@ The [Vue Switch](https://www.syncfusion.com/vue-components/vue-toggle-switch-but
 
 <p align="center">
     <a href="https://ej2.syncfusion.com/vue/documentation/switch/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/material/button/switch.html">Online demos</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm#/fluent2/button/switch.html">Online demos</a> .
     <a href="https://www.syncfusion.com/vue-components/vue-toggle-switch-button?utm_source=npm&utm_medium=listing&utm_campaign=vue-button-npm">Learn more</a>
 </p>
 
@@ -90,7 +90,7 @@ The [Vue Floating Action Button](https://www.syncfusion.com/vue-components/vue-f
 
 <p align="center">
     <a href="https://ej2.syncfusion.com/vue/documentation/floating-action-button/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm#/material/floating-action-button/overview.html">Online demos</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm#/fluent2/floating-action-button/overview.html">Online demos</a> .
     <a href="https://www.syncfusion.com/vue-components/vue-fab?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm">Learn more</a>
 </p>
 
@@ -110,7 +110,7 @@ The [Vue Speed Dial](https://www.syncfusion.com/vue-components/vue-speed-dial?ut
 
 <p align="center">
     <a href="https://ej2.syncfusion.com/vue/documentation/speed-dial/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm">Getting Started</a> .
-    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm#/material/speed-dial/default.html">Online demos</a> .
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm#/fluent2/speed-dial/default.html">Online demos</a> .
     <a href="https://www.syncfusion.com/vue-components/vue-speed-dial?utm_source=npm&utm_medium=listing&utm_campaign=vue-buttons-npm">Learn more</a>
 </p>
 

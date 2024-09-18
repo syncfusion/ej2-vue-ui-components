@@ -3,8 +3,8 @@
 The [Vue PDF Viewer](https://www.syncfusion.com/Vue-ui-components/Vue-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm) component enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
 
 <p align="center">
-    <a href="https://ej2.syncfusion.com/Vue/documentation/pdfviewer/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm">Getting started</a> . 
-    <a href="https://ej2.syncfusion.com/Vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm#/bootstrap5/pdfviewer/default">Online demos</a> . 
+    <a href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm">Getting started</a> . 
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm#/bootstrap5/pdfviewer/default">Online demos</a> . 
     <a href="https://www.syncfusion.com/Vue-components/Vue-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm">Learn more</a>
 </p>
 
@@ -149,4 +149,4 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 See [LICENSE FILE](https://github.com/syncfusion/ej2/blob/master/license?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm) for more info.
 
-&copy; Copyright 2022 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+&copy; Copyright 2024 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.

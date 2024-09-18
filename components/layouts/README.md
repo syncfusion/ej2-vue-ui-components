@@ -14,7 +14,7 @@ The layout package contains cards, avatars, splitter, timeline and Dashboard Lay
 
 ![Layout](https://ej2.syncfusion.com/products/images/layout/readme.png)
 
-> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license, you can purchase one at [https://www.syncfusion.com/sales/products](https://www.syncfusion.com/sales/products/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) or start a free 30-day trial [here](https://www.syncfusion.com/account/manage-trials/start-trials/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm).
+> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license, you can [purchase](https://www.syncfusion.com/sales/products/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) or start a free 30-day trial [here](https://www.syncfusion.com/account/manage-trials/start-trials/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm).
 
 > A free [community license](https://www.syncfusion.com/products/communitylicense/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 
@@ -32,23 +32,23 @@ Following list of components are available in the package
 
 * [Vue Card](https://www.syncfusion.com/vue-ui-components/vue-card?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Container used to display content in specific structure.
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/card/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
-  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/basic.html)
+  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/basic.html)
 
 * [Vue Avatar](https://www.syncfusion.com/vue-ui-components/vue-avatar?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Used to add images or initials or icons in different shapes and sizes to your application.
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/avatar/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
-  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/avatar/default.html)
+  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/avatar/default.html)
 
 * [Vue Splitter](https://www.syncfusion.com/vue-ui-components/vue-splitter?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Used to construct a different layout using its multiple and nested panes with resizable.
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/splitter/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
-  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/default.html)
+  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/splitter/default.html)
 
 * [Vue Timeline](https://www.syncfusion.com/vue-ui-components/vue-timeline?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Used to build timelines to showcases user activities, tracking progress, narrating historical timelines, and more.
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/timeline/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
-  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/default.html) 
+  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/timeline/default.html) 
 
 * [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm) - Used to build dashboards with panels that holds the UI components and allow resize, reorder, drag-n-drop, remove and add options.
   * [Getting Started](https://ej2.syncfusion.com/vue/documentation/dashboard-layout/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
-  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboard-layout/default.html)
+  * [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/dashboard-layout/default.html)
 
 ## Supported Frameworks
 
@@ -63,30 +63,30 @@ These components are available in following list of:
 ## Use Case samples
 
 * IT Asset Management ([Live Demo](https://ej2.syncfusion.com/showcase/vue/assetmanagement/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm))
-* Swipeable Card ([Live Demo](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/swipeable.html))
-* Flip Card ([Live Demo](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/flip.html))
-* Tile View ([Live Demo](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/tile.html))
-* Contact Application ([Live Demo](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/avatar/listview.html))
-* Avatar Badge ([Live Demo](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/avatar/badge.html))
-* Avatar Card ([Live Demo](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/avatar/card.html))
-* SEO Analysis Dashboard ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboardlayout/analytics-dashboard.html))
+* Swipeable Card ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/swipeable.html))
+* Flip Card ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/flip.html))
+* Tile View ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/tile.html))
+* Contact Application ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/avatar/listview.html))
+* Avatar Badge ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/avatar/badge.html))
+* Avatar Card ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/avatar/card.html))
+* SEO Analysis Dashboard ([Live Demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/dashboard-layout/seodashboard.html.html))
 
 ## Key Features
 
 * Card
 
-  * [Header](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/basic.html) - Header supports to include title, subtitle along with image.
+  * [Header](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/basic.html) - Header supports to include title, subtitle along with image.
 
-  * [Images and Title](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/reveal.html) - Support to include images with customizable caption positions in it.
+  * [Images and Title](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/reveal.html) - Support to include images with customizable caption positions in it.
 
-  * [Action Buttons](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/vertical.html) - Supports to add buttons within the card either in vertical or horizontal alignment.
+  * [Action Buttons](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/vertical.html) - Supports to add buttons within the card either in vertical or horizontal alignment.
 
-  * [Horizontal Card](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/card/horizontal.html) - Allows to align card elements horizontally and also allows to stack the content vertically within horizontal alignment.
+  * [Horizontal Card](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/card/horizontal.html) - Allows to align card elements horizontally and also allows to stack the content vertically within horizontal alignment.
 
 * Avatar
-  * [Types](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/avatar/default.html) - Provided `2` types of avatars such as `default` and `circle`.
+  * [Types](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/avatar/default.html) - Provided `2` types of avatars such as `default` and `circle`.
 
-  * [Sizes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/avatar/types.html) - Supports `7` different sizes to adapt the various application scenario.
+  * [Sizes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/avatar/types.html) - Supports `7` different sizes to adapt the various application scenario.
 
         * xsmall
         * small
@@ -96,37 +96,37 @@ These components are available in following list of:
 
 * Splitter
 
-  * [Multiple Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/default.html) - Provided an option to configure more than two panes.
+  * [Multiple Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/splitter/default.html) - Provided an option to configure more than two panes.
 
-  * [Resizable Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/code-editor-layout.html) - Supports resizable to adjust its pane size dynamically.
+  * [Resizable Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/splitter/code-editor-layout.html) - Supports resizable to adjust its pane size dynamically.
 
-  * [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/default.html) - The panes can orient either `horizontally` or `vertically`.
+  * [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/splitter/default.html) - The panes can orient either `horizontally` or `vertically`.
 
-  * [Integration](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/accordion-navigation-menu.html) - Other Vue UI components can be integrated within panes.
+  * [Integration](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/splitter/accordion-navigation-menu.html) - Other Vue UI components can be integrated within panes.
 
-  * [Nested Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/splitter/code-editor-layout.html) - Another splitter can be integrated within panes to create a complex layout.
+  * [Nested Panes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/splitter/code-editor-layout.html) - Another splitter can be integrated within panes to create a complex layout.
 
 * Timeline
 
-  * [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) - Display items in a horizontal or vertical orientation.
+  * [Orientation](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/timeline/api.html) - Display items in a horizontal or vertical orientation.
 
-  * [Opposite content](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) -  Display additional information opposite to the item content.
+  * [Opposite content](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/timeline/api.html) -  Display additional information opposite to the item content.
   
-  * [Items alignment](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) - Items content and opposite content can be aligned - before, after, alternate, or alternate reverse.
+  * [Items alignment](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/timeline/api.html) - Items content and opposite content can be aligned - before, after, alternate, or alternate reverse.
   
-  * [Reverse timeline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/api.html) - Shows the timeline items in the reverse order.
+  * [Reverse timeline](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/timeline/api.html) - Shows the timeline items in the reverse order.
   
-  * [Templates](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/timeline/template.html) - Customize the default appearance, including styling the dot item, templated content, and more.
+  * [Templates](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/timeline/template.html) - Customize the default appearance, including styling the dot item, templated content, and more.
 
 * Dashboard Layout
  
-   * [Drag and Drop](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboard-layout/properties.html) - Allows drag and drop of panels at the desired location within the dashboard.
+   * [Drag and Drop](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/dashboard-layout/api.html) - Allows drag and drop of panels at the desired location within the dashboard.
 
-   * [Floating](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboard-layout/properties.html) - Floats the panels upward when the dragging option is enabled.
+   * [Floating](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/dashboard-layout/api.html) - Floats the panels upward when the dragging option is enabled.
 
-   * [Resizing](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboard-layout/properties.html) - Support to resize the panels in any direction as per the requirement.
+   * [Resizing](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/dashboard-layout/api.html) - Support to resize the panels in any direction as per the requirement.
 
-   * [MediaQuery](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/material/dashboard-layout/default.html) - Allows the panels to be stacked when the specified resolution is met.
+   * [MediaQuery](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm#/fluent2/dashboard-layout/default.html) - Allows the panels to be stacked when the specified resolution is met.
 
 ## Support
 
@@ -144,4 +144,4 @@ Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-compone
 
 Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/layouts/CHANGELOG.md/?utm_source=npm&utm_medium=listing&utm_campaign=vue-layout-npm)
 
-© Copyright 2019 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+© Copyright 2024 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
