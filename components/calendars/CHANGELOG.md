@@ -2,7 +2,13 @@
 
 ## [Unreleased]
 
-## 27.1.48 (2024-09-18)
+## 27.1.50 (2024-09-24)
+
+### DatePicker
+
+#### Bug Fixes
+
+- `#I628537` -  Fixed an issue where users were unable to navigate through data cells using the arrow keys while a popup was open.
 
 ### DateRangePicker
 
