@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 27.1.51 (2024-09-30)
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `#I633820` - Resolved the issue where the change event was not triggered when removing the selected value.
+
+### ComboBox
+
+#### Bug Fixes
+
+- `#I631481` - The issue where the “aria-disabled” attribute value did not update properly when dynamically enabling and disabling the ComboBox has been resolved.
+
 ## 27.1.50 (2024-09-24)
 
 ### DropDownTree
