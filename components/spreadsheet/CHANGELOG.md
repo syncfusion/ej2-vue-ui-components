@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 27.1.51 (2024-09-30)
+## 27.1.52 (2024-10-08)
 
 ### Spreadsheet
 
 #### Bug fixes
 
-- `#I625508` - Issue with "wrap text was removed from the cell after applying `readonly` to it in the `openComplete` event and switching sheets" has been resolved.
+- `#I633175` - The border styles will now display correctly when printing a sheet or workbook.
 
 ## 26.1.35 (2024-06-11)
 
@@ -1304,7 +1304,15 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Save:** Provides option to save spreadsheet data as excel file.
 - **RTL:** Provides right-to-left mode which aligns content in the spreadsheet component from right to left.
 - **Localization:** Provides inherent support to localize the UI.
-- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 21.2.10 (2023-06-13)
+- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 27.1.48 (2024-09-18)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I625508` - Issue with "wrap text was removed from the cell after applying `readonly` to it in the `openComplete` event and switching sheets" has been resolved.
+
+## 21.2.10 (2023-06-13)
 
 ### Spreadsheet
 
