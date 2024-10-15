@@ -167,6 +167,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         serialize(): string {
             return this.ej2Instances.serialize();
         },
+        setCustomFonts(fonts: string | object[]): void {
+            return this.ej2Instances.setCustomFonts(fonts);
+        },
         setDefaultCharacterFormat(characterFormat: Object): void {
             return this.ej2Instances.setDefaultCharacterFormat(characterFormat);
         },
@@ -238,6 +241,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     saveAsBlob(formatType?: Object): Object;
     scrollToPage(pageNumber: number): boolean;
     serialize(): string;
+    setCustomFonts(fonts: string | object[]): void;
     setDefaultCharacterFormat(characterFormat: Object): void;
     setDefaultParagraphFormat(paragraphFormat: Object): void;
     setDefaultSectionFormat(sectionFormat: Object): void;
