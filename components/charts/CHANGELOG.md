@@ -2,7 +2,37 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Chart
+
+#### Bug Fixes
+
+- `#F188458` - Now the page scroll remains the same after clearing the series.
+- `#I647466` - The zoom settings properties are now properly updated on data binding.
+
+### Accumulation Chart
+
+#### Bug Fixes
+
+- `I917094` - The series property now updates correctly on data binding.
+
 ## 27.1.57 (2024-10-29)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I640035` - The tooltips now render properly for decimal data points.
+- `#I645981` - The stripline now works correctly on the logarithmic axis.
+
+### Stock Chart
+
+#### Bug Fixes
+
+- `#F194807` - The series now renders properly after a data source update and legend toggle.
+
+## 27.1.55 (2024-10-22)
 
 ### Chart
 

@@ -2,7 +2,23 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Dialog
+
+#### Bug Fixes
+
+- `#F194699` - Fixed an issue where the scrollbar appears as soon as the modal dialog is closed.
+
 ## 27.1.57 (2024-10-29)
+
+### Dialog
+
+#### Bug Fixes
+
+- `#I28945` - Fixed an issue where the Dialog's `enableResize` property was not functioning for dynamic changes.
+
+## 27.1.56 (2024-10-23)
 
 ### Dialog
 

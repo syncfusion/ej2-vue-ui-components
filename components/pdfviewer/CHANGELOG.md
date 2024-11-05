@@ -2,14 +2,28 @@
 
 ## [Unreleased]
 
-## 27.1.57 (2024-10-29)
+## 27.1.58 (2024-11-05)
 
 ### PDF Viewer
 
 #### Bug Fixes
 
-- `#I642195` - Now, the footer is visible in the organize dialog when the viewer size is small.
-- `#I634848` - Now, the signature dialog no longer overflows when the viewer size is small.
+- `#I638740` - Now, the comment delete event is properly triggered when the parent comment `div` is deleted.
+- `#I646822` - Now, the `formFieldMouseover` event includes both the form field ID and Name.
+- `#I637574` - Now, the signature position is accurately rendered in the provided document upon reloading the downloaded file.
+- `#I641496` - Now, the annotation signature buttons no longer overflow when the translation string is too long.
+
+## 27.1.57 (2024-10-29)
+
+### PDF Viewer
+
+#### Breaking Changes
+
+- The `getPageDetails` API has been renamed to `getPageInfo`. Additionally, the zoom factor parameter has been removed from the `getPageInfo` API, as the zoom factor can be accessed directly through the `zoomPercentage` API.
+
+| Existing API name| New API Name |
+|------|-------------|
+| `getPageDetails`| `getPageInfo`|
 
 ## 27.1.55 (2024-10-22)
 
