@@ -94,6 +94,7 @@
        </td>
    </tr>
 </table>
+
 ### Editors
 <table>
    <tr>
@@ -148,6 +149,7 @@
        </td>
    </tr>
 </table>
+
 ### Dropdowns
 <table>
    <tr>
@@ -238,6 +240,7 @@
        </td>
    </tr>
 </table>
+
 ### Inputs
 <table>
    <tr>
@@ -387,6 +390,7 @@
        </td>
    </tr>
 </table>
+
 ### Data Visualization
 <table>
    <tr>
@@ -613,6 +617,7 @@
        </td>
    </tr>
 </table>
+
 ### Calendars
 <table>
    <tr>
@@ -723,6 +728,7 @@
        </td>
    </tr>
 </table>
+
 ### Navigation
 <table>
    <tr>
@@ -872,6 +878,7 @@
        </td>
    </tr>
 </table>
+
 ### Buttons
 <table>
    <tr>
@@ -965,6 +972,7 @@
        </td>
    </tr>
 </table>
+
 ### Layout
 <table>
    <tr>
@@ -1075,6 +1083,7 @@
        </td>
    </tr>
 </table>
+
 ### Notification
 <table>
    <tr>
@@ -1126,6 +1135,7 @@
        </td>
    </tr>
 </table>
+
 ### Forms
 <table>
    <tr>
@@ -1146,6 +1156,7 @@
        </td>
    </tr>
 </table>
+
 ### Viewer
 <table>
    <tr>
