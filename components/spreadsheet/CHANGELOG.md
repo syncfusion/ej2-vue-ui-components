@@ -1304,7 +1304,23 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Save:** Provides option to save spreadsheet data as excel file.
 - **RTL:** Provides right-to-left mode which aligns content in the spreadsheet component from right to left.
 - **Localization:** Provides inherent support to localize the UI.
-- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 27.1.48 (2024-09-18)
+- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 27.1.55 (2024-10-22)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I640754` - Issue with "image ID is not applied properly when inserting an image with an ID using the `insertImage` method" has been resolved.
+
+## 27.1.53 (2024-10-15)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I639103` - Issue with "script error occurred when exporting to Excel with a filter set to the second sheet but not the first sheet" has been resolved.
+
+## 27.1.48 (2024-09-18)
 
 ### Spreadsheet
 

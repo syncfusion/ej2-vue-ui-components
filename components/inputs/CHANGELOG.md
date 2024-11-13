@@ -2,7 +2,23 @@
 
 ## [Unreleased]
 
-## 27.1.52 (2024-10-08)
+## 27.1.58 (2024-11-05)
+
+### NumericTextBox
+
+#### Bug Fixes
+
+- `#I641562` - Fixed an issue where pasting a number with spaces resulted in a blank entry.
+
+## 27.1.55 (2024-10-22)
+
+### NumericTextBox
+
+#### Bug Fixes
+
+- `#I641562` - Fixed an issue where pasting a number with spaces resulted in a blank entry.
+
+## 27.1.50 (2024-09-24)
 
 ### ColorPicker
 

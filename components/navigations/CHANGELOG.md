@@ -2,6 +2,81 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Tab
+
+#### Bug Fixes
+
+- `#I640676` - An issue with the Tab item selection when Tab is rendered with hidden Tab items has been fixed.
+
+## 27.1.57 (2024-10-29)
+
+### ContextMenu
+
+#### Bug Fixes
+
+- `#I911927` - The issue with "The context menu popup does not close while scrolling when the open using `open` method" has been resolved.
+
+### Carousel
+
+#### Bug Fixes
+
+- `#I644419` - The script error that occurred in the carousel when a grid was rendered as a carousel item has been fixed.
+
+### TreeView
+
+- `#I639573` - Resolved issues with selected items and the checked state of the parent node when filtering in the DropdownTree component.
+
+#### Bug Fixes
+
+- `#I642832` - An issue with TreeView component when adding child nodes using `addNodes` method without passing a target has been resolved.
+
+### Sidebar
+
+#### Bug Fixes
+
+- `#I643178` - An issue on browser resizing while setting width value in percentage in Sidebar component has been resolved.
+
+## 27.1.56 (2024-10-23)
+
+### Breadcrumb
+
+#### Bug Fixes
+
+- `#I916680` - The issue with "Breadcrumb menu popup not destroyed after breadcrumb element destroyed" has been resolved.
+
+## 27.1.55 (2024-10-22)
+
+### Stepper
+
+#### Bug Fixes
+
+- `#I592870` - Now the issue with unable to navigate to the next step when the step's disabled state is dynamically updated in linear mode has been resolved.
+
+- `#I640774` - Now the issue with progress bar misalignment during dynamic updates of the step label has been resolved.
+
+### Tab
+
+#### Bug Fixes
+
+- `#I640676` - An issue with the arguments returned in the `selected` event of the Tab when using the `removeTab` method with hidden Tab items has been fixed.
+
+## 27.1.53 (2024-10-15)
+
+### Stepper
+
+#### Bug Fixes
+
+- `#F194542` - The issue with the text indicators disappearing when the disabled property is updated dynamically in the stepper component has been resolved.
+
+### TreeView
+
+#### Bug Fixes
+
+- `#I637759` - The issue with the collapseAll API not collapsing TreeView nodes correctly based on the specified node level in the TreeView component has been resolved.
+- `#I912588` - The issue with filtered selected item in the DropdownTree component has been fixed.
+
 ## 27.1.52 (2024-10-08)
 
 ### ContextMenu

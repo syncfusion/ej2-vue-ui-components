@@ -2,6 +2,48 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I641865` - Now, the node can be moved inside the lane when the `AllowMovingOutsideLane` constraint is applied to the nodes.
+
+## 27.1.57 (2024-10-29)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I637156` - Tooltip now displays properly on mobile devices with touch interactions.
+- `#I637207` - Nodes are now resizable via touch interactions.
+- `#I639121` - The gradient background of the node is now properly preserved when exporting the diagram as an SVG.
+- `#F194691` - The Position Change Event Now Triggers on Keyboard Nudging.
+- `#I642023`, `#I642126` - Multiple selected child nodes of a Swimlane can be moved to a different lane smoothly.
+- `#I642048` - Multiple selected child nodes of a Swimlane can now be properly repositioned within the same lane.
+
+## 27.1.55 (2024-10-22)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I635721` - The undo and redo actions work during swimlane deletion, even when the swimlane's delete constraint is disabled.
+- `#I638627` - The tooltip for the annotation is now visible when the text overflow is set to Ellipsis or Clip.
+- `#I595572`, `#I632276` - The undefined exception will no longer be thrown when moving a node with Line Routing enabled.
+
+## 27.1.53 (2024-10-15)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I631866` - Now, The connectors can connect to ports even when their visibility is set to hidden.
+- `#F194445` - The mouse cursor now updates correctly when entering the diagram canvas after changing tools at runtime.
+- `#I635135` - The tooltip for a node is now displayed correctly when the node is grouped at runtime.
+- `#I630934` - Now, The flipped annotations are readable when the corresponding node is flipped.
+
 ## 27.1.52 (2024-10-08)
 
 ### Diagram

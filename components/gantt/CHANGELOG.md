@@ -2,6 +2,60 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#645586` - Last 3 rows of the taskbar are not exported when performing PDF export with the `pageOrientation` set Portrait issue has been fixed.
+- `#644812` - When adding a record, the validation for taskType as `fixedDuration` is not working properly issue has been fixed.
+
+## 27.1.57 (2024-10-29)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I642434` - `recordIndex` property is updating last index for every above or below add action via `contextMenu` issue has been fixed.
+- `#I646826` - An invalid resource collection is being passed resulting in a script error issue has been fixed.
+- `#I637870` - White space when expand and collapse action issue has been fixed.
+
+## 27.1.56 (2024-10-23)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I645245` - Console error occurs while taskbar editing without `allowEditing` property issue has been fixed.
+
+## 27.1.55 (2024-10-22)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I639460` - Console error occurred when clicking `fittoproject` issue has been fixed.
+- `#I643327` - Custom zooming levels using virtual mode throw a script error when zooming in and out issue has been fixed.
+- `#I641833` - Console error occurs while exporting pdf with empty data and critical path issue has been fixed.
+- `#I639036` - `columnMenuItems` property shows an error when assigning AutoFit and `AutoFitAll` issue has been fixed.
+- `#I637794`,`#I637841` - Pdf export issue with baselines not working properly issue has been fixed.
+
+## 27.1.53 (2024-10-15)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I634857` - Parent dependency validation is not working properly issue has been fixed.
+- `#I632390` - While collapsing parent custom color applied for child disappeared issue has been fixed.
+- `#I635881` - `taskMode` is set to custom non-working days are not disabled when editing the Start Date and End Date columns issue has been fixed.
+- `#I636598` - Duration field not updating in dialog box when setting the end Date as same as start Date issue has been fixed.
+- `#I635782` - When the `PdfTrueTypeFont` property is used, the label value is not exported issue has been fixed.
+- `#I637078` - Setting `fontSize` for labels does not working when exporting to pdf issue has been fixed.
+- `#I635774` - Portrait mode not working in pdf export while using `A0` page size issue has been fixed.
+- `#I632226` - Performance delay occur during load time issue has been fixed.
+
 ## 27.1.52 (2024-10-08)
 
 ### GanttChart
@@ -12,6 +66,7 @@
 - `#I634832` - The issue about `isShiftPressed` property in the row selecting event was not maintained properly has been fixed.
 - `#I633271` - Changing the events hitting order and add `rowPosition` property in `actionBegin` event issue has been fixed
 - `#I634857` - Parent dependency validation is not working properly issue has been fixed.
+- `#I634137` - The Date Format is not working properly in the predecessor dialog validation issue has been fixed.
 
 ## 27.1.51 (2024-09-30)
 

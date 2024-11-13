@@ -2,6 +2,70 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### DocumentEditor
+
+#### Bug Fixes
+
+- `#I914903` - Resolved the endNote layouting issue.
+
+## 27.1.57 (2024-10-29)
+
+### DocumentEditor
+
+#### Bug Fixes
+
+- `#I644412` - Resolved the issue of editor deletes all text in document.
+- `#I642436` - Resolve the issue with track Changes when pasting Word contents multiple times.
+- `F194706` - Now able to copy highlighted text from word processor when Restrict Editing property is true.
+- `#I640675` - Resolve script error when using track changes.
+- `#I639276` - Resolved the issue of page freezes when trying to load document in document editor.
+
+## 27.1.55 (2024-10-22)
+
+### DocumentEditor
+
+#### Bug Fixes
+
+- `#I636914` - Now track changes working as expected when using collaboration.
+- `#I641336` - Resolved the text overlap issue in document uploading.
+- `#I636876` - Now script error does not get thrown when unmounting the DocumentEditor with collaboration.
+- `#I638548` - Resolved the issue of document stays loading.
+- `#I637068` - Now proper font family is updated for splitted Chinese text.
+- `#I618565` - Now text get highlighted properly if user clicks on comment.
+
+## 27.1.53 (2024-10-15)
+
+### DocumentEditor
+
+#### Bug Fixes
+
+- `#I628955` - Resolved the Pie chart color issue in Blazor word processor.
+- `#I627890` - Resolved the error in opening the document.
+- `#I631391` - Resolved the Word Preview Freezes Browser issue.
+- `#I632707` - Resolved the issue of tables with complex structures that have cells wrapping to the next page are not rendered.
+- `#FB61513` - Resolved the error when saving track changes.
+- `#I631081` - Resolved the table looping issue while opening attached sfdt.
+- `#I638813` - Resolved the XSS vulnerability issue.
+- `#I635143` - Resolved the mailto issue in the Document editor.
+- `#I632855` - Resolved script error when try to download the document with unposted comments.
+- `#I627023` - Now SpellCheck API pass the custom header when using beforeXmlHttpRequestSend.
+- `#I631727` - Resolved the issue bullet points loses it style.
+- `#I636298` - Now stopProtectionAsync reject properly when entered wrong password.
+- `#I626464` - Resolved the Characters get hidden when typing multi languages with Track changes OFF.
+- `#I632911` - Resolved console warning for missing modules in document editor.
+- `#I630998` - Now able to add text after a content control when no other element is next to it.
+- `#I622732` - Resolved script error while delete content after search text.
+- `#I624123` - Resolved the footnote overlap with table issue in document editor.
+- `#I635035` - Now Content control has been exported properly in document editor.
+- `#I633148` - Resolved the issue multiple spell check triggered when inserting text.
+
+#### Features
+
+- `#I629004` - Added support for selecting revision in beforeAcceptRejectChanges event in document editor.
+- `#I568983` - Provided support to refer external font in Document Editor.
+
 ## 27.1.52 (2024-10-08)
 
 ### DocumentEditor

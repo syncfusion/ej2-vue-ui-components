@@ -4,7 +4,23 @@
 
 ## [Unreleased]
 
-## 27.1.52 (2024-10-08)
+## 27.1.58 (2024-11-05)
+
+### Circular Gauge
+
+#### Bug fixes
+
+`#I644577` - The target element is now correctly identified in the `gaugeMouseDown` event.
+
+## 27.1.57 (2024-10-29)
+
+### Circular Gauge
+
+#### Bug fixes
+
+`#I640295` - Exceptions will no longer be thrown when the pointer is dragged and the pointer value is updated during the `dragEnd` event.
+
+## 27.1.50 (2024-09-24)
 
 ### Circular Gauge
 

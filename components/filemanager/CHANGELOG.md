@@ -2,6 +2,23 @@
 
 ## [Unreleased]
 
+## 27.1.55 (2024-10-22)
+
+### FileManager
+
+#### Bug Fixes
+
+- `#I641183` - Resolved the flat data navigation path and rename arguments issues in File Manager component.
+
+## 27.1.53 (2024-10-15)
+
+### FileManager
+
+#### Bug Fixes
+
+- `#I629895` - The scrolling performance of the File Manager component has been enhanced to enable smoother scrolling during drag-and-drop operations.
+- `#I633879` - Improved error handling and null value management in File Manager component create folder and `filterFiles` operations.
+
 ## 27.1.52 (2024-10-08)
 
 ### FileManager

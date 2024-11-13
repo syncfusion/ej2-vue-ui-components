@@ -10,7 +10,15 @@
 
 ## [Unreleased]
 
-## 27.1.52 (2024-10-08)
+## 27.1.56 (2024-10-23)
+
+### Maps
+
+#### Bug fixes
+
+- `#F194675` - The `panComplete` event is now functioning properly with online map providers.
+
+## 27.1.48 (2024-09-18)
 
 ### Maps
 

@@ -2,7 +2,40 @@
 
 ## [Unreleased]
 
-## 27.1.52 (2024-10-08)
+## 27.1.58 (2024-11-05)
+
+### Pivot Table
+
+#### Bug fixes
+
+- `#I645787` - Number formatting will now be applied correctly when using the number formatting popup in the pivot table.
+- `#I648479` - The context menu will now appear when clicking on a value cell in the pivot table.
+
+## 27.1.57 (2024-10-29)
+
+### Pivot Table
+
+#### Bug fixes
+
+- The pivot table will now be rendered properly when creating a new report using the toolbar.
+
+## 27.1.55 (2024-10-22)
+
+### Pivot Table
+
+#### Bug fixes
+
+- `#I640765` - The cumulative percentage values will now be displayed correctly in the tooltip when hovering over the chart series of the Pareto chart.
+
+## 27.1.53 (2024-10-15)
+
+### Pivot Table
+
+#### Bug fixes
+
+- The pivot table will now work properly while dynamically disabling grouping with the pivot chart enabled.
+
+## 27.1.51 (2024-09-30)
 
 ### Pivot Table
 

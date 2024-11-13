@@ -2,6 +2,30 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- Issue with "Input element value get selected while double clicking on query builder rules." has been fixed.
+
+## 27.1.55 (2024-10-22)
+
+### QueryBuilder
+
+#### Bug Fixes
+
+- Issue with "Script error thrown while clicking on svg element within the query builder" has been fixed.
+
+## 27.1.53 (2024-10-15)
+
+### QueryBuilder
+
+- `#I639409` - Issue with "Custom operator not working properly in QueryBuilder While dynamically change locale property" has been fixed.
+
+#### Bug Fixes
+
 ## 27.1.52 (2024-10-08)
 
 ### QueryBuilder

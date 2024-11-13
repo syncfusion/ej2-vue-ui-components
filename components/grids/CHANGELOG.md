@@ -2,6 +2,54 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Grid
+
+#### Bug fixes
+
+- `I644169` - Resolved an issue where the `actionBegin` event triggers multiple times when dynamically updating the data source.
+- `I645803` - Resolved an issue where the Grid displays an empty state when a grouped column contains `null` values.
+
+## 27.1.57 (2024-10-29)
+
+### Grid
+
+#### Bug fixes
+
+- `#I645144` - Resolved an issue where the search keyword would automatically change when entering more than 16 digits.
+- `#I641786` - Fixed an issue with focus misplacement after deleting a row using the command column.
+- `#I641368` - Resolved a type issue in the `ICustomOptr` interface by updating the `filterSettings.operators` property from `dateTimeOperator` to `datetimeOperator`.
+- `#I640492` - The issue where the `dataBound` event was triggered multiple times during a page refresh when `virtualization` with persistence was enabled has been resolved.
+
+## 27.1.55 (2024-10-22)
+
+### Grid
+
+#### Bug fixes
+
+- `#I642129` - The script error that occurred when adding a new row with a `dateonly` column in `Batch` edit mode has been resolved.
+- `#I643285` - The script error caused by the pager when using a custom locale has been resolved.
+- `#I641645` - Resolved the misalignment of print grid cells for lazy loading with multi-column grouping.
+- `#I638401` - In `AdaptiveUI` Grid, the localization issue with the filter dialog header text is still present, but the issue with the filter icon title has been resolved.
+- `#I641453` - Fixed an issue where unsupported characters were present in the `pt` and `pt-BR` localization JSON files.
+- `#F194581` - Fixed an issue where the `Excel` filter in the grid was not functioning correctly when localization was enabled.
+
+## 27.1.53 (2024-10-15)
+
+### Grid
+
+#### Bug fixes
+
+- `#I637799` - The issue with Excel custom filtering not working correctly with the `Null` or `Empty` operators has been resolved.
+- `#FB61575` - The issue where the browser automatically scrolls to the grid when it is rendered with initially grouped columns has been resolved.
+- `#I630298` - The issue where the `dataStateChange` event was not triggered when opening the filter menu for a Boolean column in custom data binding has been resolved.
+- `I640964` - Resolved a script error that occurred when editing was disabled in `Batch` mode.
+- `I638333` - Fixed an issue where clicking the `Clear` button in the sort responsive dialog incorrectly displayed all sort buttons text as `None` instead of their localized values.
+- `I639750` - Resolved a script error that occurred during the initial rendering of `auto-generated` columns when resizing was enabled.
+- `I638418` - Fixed a script error that occurred when opening the `filter` pop-up and navigating using the down arrow key.
+- `I635845` - Resolved misalignment issues that occurred when resizing aggregate columns along with frozen columns.
+
 ## 27.1.52 (2024-10-08)
 
 ### Grid

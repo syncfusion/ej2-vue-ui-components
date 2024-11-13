@@ -2,6 +2,71 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Chart
+
+#### Bug Fixes
+
+- `#F188458` - Now the page scroll remains the same after clearing the series.
+- `#I647466` - The zoom settings properties are now properly updated on data binding.
+
+### Accumulation Chart
+
+#### Bug Fixes
+
+- `I917094` - The series property now updates correctly on data binding.
+
+## 27.1.57 (2024-10-29)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I640035` - The tooltips now render properly for decimal data points.
+- `#I645981` - The stripline now works correctly on the logarithmic axis.
+
+### Stock Chart
+
+#### Bug Fixes
+
+- `#F194807` - The series now renders properly after a data source update and legend toggle.
+
+## 27.1.55 (2024-10-22)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I641213` - Data points in a multi-pane chart no longer collapse when zooming in canvas mode.
+- `#I641366` - The border for the multi-pane chart now renders correctly in canvas mode.
+- `#I640624` - The Moving Average trendline now functions as expected when the period is set to one.
+- `#I642177` - The `columnWidthInPixel` property now works correctly in the transposed stacked column chart.
+- `#I638097` - The scrollbar now functions properly during data binding.
+- `#I644765` - Series now renders properly when the axis interval is zero.  
+
+### Accumulation Chart
+
+#### Bug Fixes
+
+- `#I642553` - The legend text size now updates correctly when resizing the accumulation chart.
+
+## 27.1.53 (2024-10-15)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I637436` - Now, multilevel axis labels are working properly when RTL is enabled.
+- `#I640682` - The border dash array now works properly for all series.
+- `#I640585` - Now, the range area series works properly when the middle point's x value is set to 0.
+
+### 3DChart
+
+#### Bug Fixes
+
+- `#I637725` - The first label on the y-axis is now positioned correctly.
+
 ## 27.1.52 (2024-10-08)
 
 ### Chart

@@ -2,6 +2,50 @@
 
 ## [Unreleased]
 
+## 27.1.58 (2024-11-05)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I647902` - An issue where a script error occurred while click the close icon in print window has been resolved.
+
+## 27.1.57 (2024-10-29)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I641069` - An issue when dragging an event, the first cell of the hour will be selected and highlighted has been resolved.
+- `#I643159` - An issue when weekly recurrence rule is rendered in the wrong position when setting the `firstDayOfWeek` has been resolved.
+- `#FB62128` - An issue causing events to display incorrectly when a weekly recurrence rule with `BDAY` and a specified timezone is applied has been resolved.
+
+## 27.1.56 (2024-10-23)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I638628` - The issue with the `renderCell` event not being triggered in the Agenda view has been resolved.
+
+## 27.1.55 (2024-10-22)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I592841` - An issue where resizing was not functioning correctly in timeline views when using the `startHour` and `endHour` properties has been resolved.
+
+## 27.1.53 (2024-10-15)
+
+### Schedule
+
+#### Bug fixes
+
+- `#FB61537` - An issue where a script error occurred when attempting to save an event after adding the `NumericTextBox` component in the editor template has been resolved.
+- `#FB61371` - An issue affecting the identification of the `startTime` and `endTime` properties within the `eventRenderedArgs` for spanned events in the Month view has been resolved.
+- `#I640650` - An issue where a script error occurred while setting `setWorkHours` in DST time has been resolved.
+
 ## 27.1.52 (2024-10-08)
 
 ### Schedule
@@ -9,6 +53,7 @@
 #### Bug fixes
 
 - `#FB61586` - The issue with the schedule component tooltip rendering outside the viewport has been fixed.
+- `#I610923` - An issue where the appointments are getting overlapped due to appointment width is not calculated properly has been fixed.
 
 ## 27.1.51 (2024-09-30)
 
