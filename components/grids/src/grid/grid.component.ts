@@ -227,8 +227,8 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         getColumnByField(field: string): Object {
             return this.ej2Instances.getColumnByField(field);
         },
-        getColumnByUid(uid: string): Object {
-            return this.ej2Instances.getColumnByUid(uid);
+        getColumnByUid(uid: string, isColumns?: boolean): Object {
+            return this.ej2Instances.getColumnByUid(uid, isColumns);
         },
         getColumnFieldNames(): string[] {
             return this.ej2Instances.getColumnFieldNames();
@@ -577,7 +577,7 @@ export type GridComponent = typeof ComponentBase & {
     getBatchChanges(): Object;
     getCellFromIndex(rowIndex: number, columnIndex: number): Object;
     getColumnByField(field: string): Object;
-    getColumnByUid(uid: string): Object;
+    getColumnByUid(uid: string, isColumns?: boolean): Object;
     getColumnFieldNames(): string[];
     getColumnHeaderByField(field: string): Object;
     getColumnHeaderByIndex(index: number): Object;

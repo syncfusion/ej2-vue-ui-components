@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 27.2.2 (2024-11-15)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I641003` - Issue with "selection misalignment happens when applying autofill to wrapped cells that are outside of the viewport" has been resolved.
+
+- `#I647929` - Issue with "script error occurs when selecting cells with list validation values that contain an equal sign" has been resolved.
+
 ## 27.1.52 (2024-10-08)
 
 ### Spreadsheet

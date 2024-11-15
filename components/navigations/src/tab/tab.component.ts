@@ -117,6 +117,9 @@ export let TabComponent: DefineVueComponent<TabModel> =  vueDefineComponent({
         refreshActiveTabBorder(): void {
             return this.ej2Instances.refreshActiveTabBorder();
         },
+        refreshOverflow(): void {
+            return this.ej2Instances.refreshOverflow();
+        },
         removeTab(index: number): void {
             return this.ej2Instances.removeTab(index);
         },
@@ -150,6 +153,7 @@ export type TabComponent = typeof ComponentBase & {
     refresh(): void;
     refreshActiveTab(): void;
     refreshActiveTabBorder(): void;
+    refreshOverflow(): void;
     removeTab(index: number): void;
     select(args: number | Object, event?: Object): void
 };
