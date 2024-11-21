@@ -104,6 +104,9 @@ export let ListViewComponent: DefineVueComponent<ListViewModel> =  vueDefineComp
         checkItem(item: Object | Object | Object): void {
             return this.ej2Instances.checkItem(item);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disableItem(item: Object | Object | Object): void {
             return this.ej2Instances.disableItem(item);
         },
@@ -172,6 +175,7 @@ export type ListViewComponent = typeof ComponentBase & {
     back(): void;
     checkAllItems(): void;
     checkItem(item: Object | Object | Object): void;
+    destroy(): void;
     disableItem(item: Object | Object | Object): void;
     enableItem(item: Object | Object | Object): void;
     findItem(item: Object | Object | Object): Object;

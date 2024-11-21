@@ -96,6 +96,9 @@ export let DashboardLayoutComponent: DefineVueComponent<DashboardLayoutModel> = 
         addPanel(panel: Object): void {
             return this.ej2Instances.addPanel(panel);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         movePanel(id: string, row: number, col: number): void {
             return this.ej2Instances.movePanel(id, row, col);
         },
@@ -140,6 +143,7 @@ export type DashboardLayoutComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addPanel(panel: Object): void;
+    destroy(): void;
     movePanel(id: string, row: number, col: number): void;
     refresh(): void;
     refreshDraggableHandle(): void;

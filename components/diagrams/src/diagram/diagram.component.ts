@@ -191,6 +191,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         cut(): void {
             return this.ej2Instances.cut();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         distribute(option: Object, objects?: undefined[]): void {
             return this.ej2Instances.distribute(option, objects);
         },
@@ -462,6 +465,7 @@ export type DiagramComponent = typeof ComponentBase & {
     cloneLayer(layerName: string): void;
     copy(): Object;
     cut(): void;
+    destroy(): void;
     distribute(option: Object, objects?: undefined[]): void;
     doLayout(): Object | boolean;
     drag(obj: Object | Object | Object, tx: number, ty: number): void;

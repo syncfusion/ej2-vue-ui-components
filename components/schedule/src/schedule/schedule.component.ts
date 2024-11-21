@@ -158,6 +158,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         deleteEvent(id: string | number | Object | Object[], currentAction?: Object): void {
             return this.ej2Instances.deleteEvent(id, currentAction);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         expandResource(resourceId: string | number, name: string): void {
             return this.ej2Instances.expandResource(resourceId, name);
         },
@@ -302,6 +305,7 @@ export type ScheduleComponent = typeof ComponentBase & {
     closeTooltip(): void;
     collapseResource(resourceId: string | number, name: string): void;
     deleteEvent(id: string | number | Object | Object[], currentAction?: Object): void;
+    destroy(): void;
     expandResource(resourceId: string | number, name: string): void;
     exportToExcel(excelExportOptions?: Object): void;
     exportToICalendar(fileName?: string, customData?: Object[]): void;

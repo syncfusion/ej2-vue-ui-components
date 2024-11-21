@@ -131,6 +131,9 @@ export let DateRangePickerComponent: DefineVueComponent<DateRangePickerModel> = 
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -168,6 +171,7 @@ export type DateRangePickerComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     focusIn(): void;
     focusOut(): void;
     getSelectedRange(): Object;

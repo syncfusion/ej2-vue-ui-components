@@ -96,6 +96,9 @@ export let TabComponent: DefineVueComponent<TabModel> =  vueDefineComponent({
         addTab(items: Object[], index?: number): void {
             return this.ej2Instances.addTab(items, index);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disable(value: boolean): void {
             return this.ej2Instances.disable(value);
         },
@@ -146,6 +149,7 @@ export type TabComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addTab(items: Object[], index?: number): void;
+    destroy(): void;
     disable(value: boolean): void;
     enableTab(index: number, value: boolean): void;
     getItemIndex(tabItemId: string): number;

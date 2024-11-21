@@ -92,6 +92,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         enableAllModules(): void {
             return this.ej2Instances.enableAllModules();
         },
@@ -216,6 +219,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     enableAllModules(): void;
     exportAsImage(pageNumber: number, format: Object): Object;
     exportContentControlData(): Object[];

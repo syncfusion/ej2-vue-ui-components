@@ -142,6 +142,9 @@ export let StockChartComponent: DefineVueComponent<StockChartModel> =  vueDefine
         chartModuleInjection(): void {
             return this.ej2Instances.chartModuleInjection();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         findCurrentData(totalData: Object, xName: string): Object {
             return this.ej2Instances.findCurrentData(totalData, xName);
         },
@@ -174,6 +177,7 @@ export type StockChartComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     chartModuleInjection(): void;
+    destroy(): void;
     findCurrentData(totalData: Object, xName: string): Object;
     rangeChanged(updatedStart: number, updatedEnd: number): void;
     renderPeriodSelector(): void;

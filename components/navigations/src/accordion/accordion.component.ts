@@ -134,6 +134,9 @@ export let AccordionComponent: DefineVueComponent<AccordionModel> =  vueDefineCo
         addItem(item: Object | Object[] | Object | Object[], index?: number): void {
             return this.ej2Instances.addItem(item, index);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         enableItem(index: number, isEnable: boolean): void {
             return this.ej2Instances.enableItem(index, isEnable);
         },
@@ -169,6 +172,7 @@ export type AccordionComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addItem(item: Object | Object[] | Object | Object[], index?: number): void;
+    destroy(): void;
     enableItem(index: number, isEnable: boolean): void;
     expandItem(isExpand: boolean, index?: number): void;
     hideItem(index: number, isHidden?: boolean): void;

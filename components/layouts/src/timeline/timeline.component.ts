@@ -93,7 +93,9 @@ export let TimelineComponent: DefineVueComponent<TimelineModel> =  vueDefineComp
         custom(): void {
             this.updated();
         },
-
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
     }
 });
 
@@ -113,7 +115,7 @@ export type TimelineComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    
+    destroy(): void
 };
 
 export const TimelinePlugin = {

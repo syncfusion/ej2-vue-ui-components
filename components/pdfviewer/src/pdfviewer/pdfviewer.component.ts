@@ -113,6 +113,9 @@ export let PdfViewerComponent: DefineVueComponent<PdfViewerModel> =  vueDefineCo
         deleteAnnotations(): void {
             return this.ej2Instances.deleteAnnotations();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         download(): void {
             return this.ej2Instances.download();
         },
@@ -214,6 +217,7 @@ export type PdfViewerComponent = typeof ComponentBase & {
     convertPagePointToClientPoint(pagePoint: Object, pageNumber: number): Object;
     convertPagePointToScrollingPoint(pagePoint: Object, pageNumber: number): Object;
     deleteAnnotations(): void;
+    destroy(): void;
     download(): void;
     exportAnnotation(annotationDataFormat?: Object): void;
     exportAnnotationsAsBase64String(annotationDataFormat: Object): Object;

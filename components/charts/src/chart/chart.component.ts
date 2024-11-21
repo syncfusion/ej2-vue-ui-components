@@ -155,6 +155,9 @@ export let ChartComponent: DefineVueComponent<ChartModel> =  vueDefineComponent(
         clearSeries(): void {
             return this.ej2Instances.clearSeries();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string): void {
             return this.ej2Instances.export(type, fileName);
         },
@@ -214,6 +217,7 @@ export type ChartComponent = typeof ComponentBase & {
     addAxes(axisCollection: Object[]): void;
     addSeries(seriesCollection: Object[]): void;
     clearSeries(): void;
+    destroy(): void;
     export(type: Object, fileName: string): void;
     getLocalizedLabel(key: string): string;
     hideCrosshair(): void;

@@ -133,6 +133,9 @@ export let DropDownTreeComponent: DefineVueComponent<DropDownTreeModel> =  vueDe
         clear(): void {
             return this.ej2Instances.clear();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         ensureVisible(item: string | Object): void {
             return this.ej2Instances.ensureVisible(item);
         },
@@ -171,6 +174,7 @@ export type DropDownTreeComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     clear(): void;
+    destroy(): void;
     ensureVisible(item: string | Object): void;
     getData(item?: string | Object): undefined[];
     getLocaleName(): string;

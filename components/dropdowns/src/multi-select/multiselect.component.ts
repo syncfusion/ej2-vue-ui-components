@@ -136,6 +136,9 @@ export let MultiSelectComponent: DefineVueComponent<MultiSelectModel> =  vueDefi
         clear(): void {
             return this.ej2Instances.clear();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disableItem(item: string | number | object | Object): void {
             return this.ej2Instances.disableItem(item);
         },
@@ -193,6 +196,7 @@ export type MultiSelectComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addItem(items: undefined[] | undefined | string | boolean | number | string[] | boolean[] | number[], itemIndex?: number): void;
     clear(): void;
+    destroy(): void;
     disableItem(item: string | number | object | Object): void;
     filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
     focusIn(): void;

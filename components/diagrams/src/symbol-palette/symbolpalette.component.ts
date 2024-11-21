@@ -99,6 +99,9 @@ export let SymbolPaletteComponent: DefineVueComponent<SymbolPaletteModel> =  vue
         addPalettes(palettes: Object[]): void {
             return this.ej2Instances.addPalettes(palettes);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         removePaletteItem(paletteName: string, symbolId: string): void {
             return this.ej2Instances.removePaletteItem(paletteName, symbolId);
         },
@@ -126,6 +129,7 @@ export type SymbolPaletteComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addPaletteItem(paletteName: string, paletteSymbol: Object | Object, isChild?: boolean): void;
     addPalettes(palettes: Object[]): void;
+    destroy(): void;
     removePaletteItem(paletteName: string, symbolId: string): void;
     removePalettes(palettes: string[]): void
 };

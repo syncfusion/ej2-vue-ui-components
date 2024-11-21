@@ -96,6 +96,9 @@ export let MenuComponent: DefineVueComponent<MenuModel> =  vueDefineComponent({
         close(): void {
             return this.ej2Instances.close();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void {
             return this.ej2Instances.enableItems(items, enable, isUniqueId);
         },
@@ -143,6 +146,7 @@ export type MenuComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     close(): void;
+    destroy(): void;
     enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
     getItemIndex(item: Object | string, isUniqueId?: boolean): number[];
     hideItems(items: string[], isUniqueId?: boolean): void;

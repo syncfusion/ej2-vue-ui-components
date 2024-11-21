@@ -131,7 +131,9 @@ export let BreadcrumbComponent: DefineVueComponent<BreadcrumbModel> =  vueDefine
         custom(): void {
             this.updated();
         },
-
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
     }
 });
 
@@ -151,7 +153,7 @@ export type BreadcrumbComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    
+    destroy(): void
 };
 
 export const BreadcrumbPlugin = {

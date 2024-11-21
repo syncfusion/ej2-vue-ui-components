@@ -105,6 +105,9 @@ export let FileManagerComponent: DefineVueComponent<FileManagerModel> =  vueDefi
         deleteFiles(ids?: string[]): void {
             return this.ej2Instances.deleteFiles(ids);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disableMenuItems(items: string[]): void {
             return this.ej2Instances.disableMenuItems(items);
         },
@@ -173,6 +176,7 @@ export type FileManagerComponent = typeof ComponentBase & {
     closeDialog(): void;
     createFolder(name?: string): void;
     deleteFiles(ids?: string[]): void;
+    destroy(): void;
     disableMenuItems(items: string[]): void;
     disableToolbarItems(items: string[]): void;
     downloadFiles(ids?: string[]): void;

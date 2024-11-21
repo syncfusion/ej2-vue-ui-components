@@ -139,6 +139,9 @@ export let CalendarComponent: DefineVueComponent<CalendarModel> =  vueDefineComp
         currentView(): string {
             return this.ej2Instances.currentView();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         navigateTo(view: Object, date: Object, isCustomDate?: boolean): void {
             return this.ej2Instances.navigateTo(view, date, isCustomDate);
         },
@@ -170,6 +173,7 @@ export type CalendarComponent = typeof ComponentBase & {
     addDate(dates: Object | Object[]): void;
     createContent(): void;
     currentView(): string;
+    destroy(): void;
     navigateTo(view: Object, date: Object, isCustomDate?: boolean): void;
     removeDate(dates: Object | Object[]): void;
     requiredModules(): Object[]

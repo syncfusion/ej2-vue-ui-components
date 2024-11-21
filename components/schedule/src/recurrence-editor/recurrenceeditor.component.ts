@@ -92,6 +92,9 @@ export let RecurrenceEditorComponent: DefineVueComponent<RecurrenceEditorModel> 
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         getRecurrenceDates(startDate: Object, rule: string, excludeDate?: string, maximumCount?: number, viewDate?: Object): number[] {
             return this.ej2Instances.getRecurrenceDates(startDate, rule, excludeDate, maximumCount, viewDate);
         },
@@ -129,6 +132,7 @@ export type RecurrenceEditorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     getRecurrenceDates(startDate: Object, rule: string, excludeDate?: string, maximumCount?: number, viewDate?: Object): number[];
     getRecurrenceRule(): string;
     getRuleSummary(rule: string): string;

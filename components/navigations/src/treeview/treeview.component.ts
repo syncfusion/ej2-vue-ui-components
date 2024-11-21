@@ -104,6 +104,9 @@ export let TreeViewComponent: DefineVueComponent<TreeViewModel> =  vueDefineComp
         collapseAll(nodes?: string[] | Object[], level?: number, excludeHiddenNodes?: boolean): void {
             return this.ej2Instances.collapseAll(nodes, level, excludeHiddenNodes);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disableNodes(nodes: string[] | Object[]): void {
             return this.ej2Instances.disableNodes(nodes);
         },
@@ -166,6 +169,7 @@ export type TreeViewComponent = typeof ComponentBase & {
     beginEdit(node: string | Object): void;
     checkAll(nodes?: string[] | Object[]): void;
     collapseAll(nodes?: string[] | Object[], level?: number, excludeHiddenNodes?: boolean): void;
+    destroy(): void;
     disableNodes(nodes: string[] | Object[]): void;
     enableNodes(nodes: string[] | Object[]): void;
     ensureVisible(node: string | Object): void;

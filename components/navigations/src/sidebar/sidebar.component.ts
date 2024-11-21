@@ -130,6 +130,9 @@ export let SidebarComponent: DefineVueComponent<SidebarModel> =  vueDefineCompon
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         hide(e?: Object): void {
             return this.ej2Instances.hide(e);
         },
@@ -158,6 +161,7 @@ export type SidebarComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     hide(e?: Object): void;
     show(e?: Object): void;
     toggle(): void

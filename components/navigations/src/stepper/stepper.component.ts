@@ -131,6 +131,9 @@ export let StepperComponent: DefineVueComponent<StepperModel> =  vueDefineCompon
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         nextStep(): void {
             return this.ej2Instances.nextStep();
         },
@@ -162,6 +165,7 @@ export type StepperComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     nextStep(): void;
     previousStep(): void;
     refreshProgressbar(): void;

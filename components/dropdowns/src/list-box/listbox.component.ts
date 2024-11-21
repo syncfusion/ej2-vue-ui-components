@@ -133,6 +133,9 @@ export let ListBoxComponent: DefineVueComponent<ListBoxModel> =  vueDefineCompon
         addItems(items: Object[] | Object, itemIndex?: number): void {
             return this.ej2Instances.addItems(items, itemIndex);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         enableItems(items: string[], enable: boolean, isValue?: boolean): void {
             return this.ej2Instances.enableItems(items, enable, isValue);
         },
@@ -213,6 +216,7 @@ export type ListBoxComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addItems(items: Object[] | Object, itemIndex?: number): void;
+    destroy(): void;
     enableItems(items: string[], enable: boolean, isValue?: boolean): void;
     filter(dataSource: undefined[] | Object | string[] | number[] | boolean[], query?: Object, fields?: Object): void;
     getDataByValue(value: string | number | boolean | object): Object | string | number | boolean;

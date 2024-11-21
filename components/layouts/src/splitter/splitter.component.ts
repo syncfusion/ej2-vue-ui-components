@@ -99,6 +99,9 @@ export let SplitterComponent: DefineVueComponent<SplitterModel> =  vueDefineComp
         collapse(index: number): void {
             return this.ej2Instances.collapse(index);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         expand(index: number): void {
             return this.ej2Instances.expand(index);
         },
@@ -126,6 +129,7 @@ export type SplitterComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addPane(paneProperties: Object, index: number): void;
     collapse(index: number): void;
+    destroy(): void;
     expand(index: number): void;
     removePane(index: number): void
 };

@@ -130,6 +130,9 @@ export let PagerComponent: DefineVueComponent<PagerModel> =  vueDefineComponent(
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         destroyTemplate(propertyNames?: string[], index?: any): void {
             return this.ej2Instances.destroyTemplate(propertyNames, index);
         },
@@ -161,6 +164,7 @@ export type PagerComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     destroyTemplate(propertyNames?: string[], index?: any): void;
     getLocalizedLabel(key: string): string;
     goToPage(pageNo: number): void;

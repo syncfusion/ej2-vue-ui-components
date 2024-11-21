@@ -139,6 +139,9 @@ export let DateTimePickerComponent: DefineVueComponent<DateTimePickerModel> =  v
         currentView(): string {
             return this.ej2Instances.currentView();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -185,6 +188,7 @@ export type DateTimePickerComponent = typeof ComponentBase & {
     addDate(dates: Object | Object[]): void;
     createContent(): void;
     currentView(): string;
+    destroy(): void;
     focusIn(): void;
     focusOut(): void;
     hide(e?: Object | Object | Object): void;

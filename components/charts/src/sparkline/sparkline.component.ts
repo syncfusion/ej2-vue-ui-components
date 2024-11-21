@@ -93,6 +93,9 @@ export let SparklineComponent: DefineVueComponent<SparklineModel> =  vueDefineCo
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         renderSparkline(): void {
             return this.ej2Instances.renderSparkline();
         },
@@ -115,6 +118,7 @@ export type SparklineComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     renderSparkline(): void
 };
 

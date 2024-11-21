@@ -141,6 +141,9 @@ export let Chart3DComponent: DefineVueComponent<Chart3DModel> =  vueDefineCompon
         createChartSvg(): void {
             return this.ej2Instances.createChartSvg();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string): void {
             return this.ej2Instances.export(type, fileName);
         },
@@ -177,6 +180,7 @@ export type Chart3DComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addSeries(seriesCollection: Object[]): void;
     createChartSvg(): void;
+    destroy(): void;
     export(type: Object, fileName: string): void;
     highlightAnimation(element: Object, index: number, duration: number, startOpacity: number): void;
     print(id?: string[] | string | Object): void;

@@ -176,6 +176,9 @@ export let TreeGridComponent: DefineVueComponent<TreeGridModel> =  vueDefineComp
         deleteRow(tr: Object): void {
             return this.ej2Instances.deleteRow(tr);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         editCell(rowIndex?: number, field?: string): void {
             return this.ej2Instances.editCell(rowIndex, field);
         },
@@ -470,6 +473,7 @@ export type TreeGridComponent = typeof ComponentBase & {
     csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: any, isBlob?: boolean): Object;
     deleteRecord(fieldName?: string, data?: Object): void;
     deleteRow(tr: Object): void;
+    destroy(): void;
     editCell(rowIndex?: number, field?: string): void;
     enableToolbarItems(items: string[], isEnable: boolean): void;
     endEdit(): void;

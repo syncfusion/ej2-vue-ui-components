@@ -191,6 +191,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         deleteRow(tr: Object): void {
             return this.ej2Instances.deleteRow(tr);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         destroyTemplate(propertyNames?: string[], index?: any): void {
             return this.ej2Instances.destroyTemplate(propertyNames, index);
         },
@@ -565,6 +568,7 @@ export type GridComponent = typeof ComponentBase & {
     dataReady(): void;
     deleteRecord(fieldname?: string, data?: Object): void;
     deleteRow(tr: Object): void;
+    destroy(): void;
     destroyTemplate(propertyNames?: string[], index?: any): void;
     detailCollapseAll(): void;
     detailExpandAll(): void;

@@ -131,6 +131,9 @@ export let CarouselComponent: DefineVueComponent<CarouselModel> =  vueDefineComp
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         next(): void {
             return this.ej2Instances.next();
         },
@@ -162,6 +165,7 @@ export type CarouselComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     next(): void;
     pause(): void;
     play(): void;

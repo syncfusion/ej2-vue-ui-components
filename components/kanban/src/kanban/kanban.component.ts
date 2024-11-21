@@ -109,6 +109,9 @@ export let KanbanComponent: DefineVueComponent<KanbanModel> =  vueDefineComponen
         deleteColumn(index: number): void {
             return this.ej2Instances.deleteColumn(index);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         getCardDetails(target: Object): Object {
             return this.ej2Instances.getCardDetails(target);
         },
@@ -178,6 +181,7 @@ export type KanbanComponent = typeof ComponentBase & {
     closeDialog(): void;
     deleteCard(cardData: string | number | Object | Object[]): void;
     deleteColumn(index: number): void;
+    destroy(): void;
     getCardDetails(target: Object): Object;
     getColumnData(columnKey: string | number, dataSource?: Object[]): Object[];
     getSelectedCards(): Object[];

@@ -139,6 +139,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         closeDialog(type: Object): void {
             return this.ej2Instances.closeDialog(type);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void {
             return this.ej2Instances.disableToolbarItem(items, muteToolbarUpdate);
         },
@@ -239,6 +242,7 @@ export type RichTextEditorComponent = typeof ComponentBase & {
     addAnchorAriaLabel(value: string): string;
     cleanList(e: Object): void;
     closeDialog(type: Object): void;
+    destroy(): void;
     disableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
     enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
     executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object, option?: Object): void;

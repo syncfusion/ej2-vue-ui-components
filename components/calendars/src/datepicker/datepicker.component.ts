@@ -139,6 +139,9 @@ export let DatePickerComponent: DefineVueComponent<DatePickerModel> =  vueDefine
         currentView(): string {
             return this.ej2Instances.currentView();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(triggerEvent?: boolean): void {
             return this.ej2Instances.focusIn(triggerEvent);
         },
@@ -182,6 +185,7 @@ export type DatePickerComponent = typeof ComponentBase & {
     addDate(dates: Object | Object[]): void;
     createContent(): void;
     currentView(): string;
+    destroy(): void;
     focusIn(triggerEvent?: boolean): void;
     focusOut(): void;
     hide(event?: Object | Object | Object): void;

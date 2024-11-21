@@ -96,6 +96,9 @@ export let ToolbarComponent: DefineVueComponent<ToolbarModel> =  vueDefineCompon
         addItems(items: Object[], index?: number): void {
             return this.ej2Instances.addItems(items, index);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disable(value: boolean): void {
             return this.ej2Instances.disable(value);
         },
@@ -131,6 +134,7 @@ export type ToolbarComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addItems(items: Object[], index?: number): void;
+    destroy(): void;
     disable(value: boolean): void;
     enableItems(items: number | Object | Object, isEnable?: boolean): void;
     hideItem(index: number | Object | Object, value?: boolean): void;

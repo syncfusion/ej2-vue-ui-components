@@ -92,6 +92,9 @@ export let OverviewComponent: DefineVueComponent<OverviewModel> =  vueDefineComp
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         updateHtmlLayer(view: Object): void {
             return this.ej2Instances.updateHtmlLayer(view);
         },
@@ -114,6 +117,7 @@ export type OverviewComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     updateHtmlLayer(view: Object): void
 };
 

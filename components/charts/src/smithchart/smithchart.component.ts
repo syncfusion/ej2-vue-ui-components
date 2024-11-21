@@ -93,6 +93,9 @@ export let SmithchartComponent: DefineVueComponent<SmithchartModel> =  vueDefine
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string, orientation?: Object): void {
             return this.ej2Instances.export(type, fileName, orientation);
         },
@@ -133,6 +136,7 @@ export type SmithchartComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     export(type: Object, fileName: string, orientation?: Object): void;
     mouseEnd(e: Object): void;
     mouseMove(e: Object): void;

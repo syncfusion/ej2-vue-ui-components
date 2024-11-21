@@ -134,6 +134,9 @@ export let RangeNavigatorComponent: DefineVueComponent<RangeNavigatorModel> =  v
         createSecondaryElement(): void {
             return this.ej2Instances.createSecondaryElement();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number, isVertical?: boolean): void {
             return this.ej2Instances.export(type, fileName, orientation, controls, width, height, isVertical);
         },
@@ -163,6 +166,7 @@ export type RangeNavigatorComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     createSecondaryElement(): void;
+    destroy(): void;
     export(type: Object, fileName: string, orientation?: Object, controls?: undefined[], width?: number, height?: number, isVertical?: boolean): void;
     print(id?: string[] | string | Object): void;
     renderChart(resize: boolean): void

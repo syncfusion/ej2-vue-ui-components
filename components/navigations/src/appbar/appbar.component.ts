@@ -92,7 +92,9 @@ export let AppBarComponent: DefineVueComponent<AppBarModel> =  vueDefineComponen
         custom(): void {
             this.updated();
         },
-
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
     }
 });
 
@@ -112,7 +114,7 @@ export type AppBarComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    
+    destroy(): void
 };
 
 export const AppBarPlugin = {

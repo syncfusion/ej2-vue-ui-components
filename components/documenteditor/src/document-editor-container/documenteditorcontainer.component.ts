@@ -92,6 +92,9 @@ export let DocumentEditorContainerComponent: DefineVueComponent<DocumentEditorCo
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         resize(width?: number, height?: number): void {
             return this.ej2Instances.resize(width, height);
         },
@@ -123,6 +126,7 @@ export type DocumentEditorContainerComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     resize(width?: number, height?: number): void;
     setDefaultCharacterFormat(characterFormat: Object): void;
     setDefaultParagraphFormat(paragraphFormat: Object): void;
