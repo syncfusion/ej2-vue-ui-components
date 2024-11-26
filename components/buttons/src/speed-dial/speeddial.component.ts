@@ -134,6 +134,9 @@ export let SpeedDialComponent: DefineVueComponent<SpeedDialModel> =  vueDefineCo
         createPopup(): void {
             return this.ej2Instances.createPopup();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         hide(): void {
             return this.ej2Instances.hide();
         },
@@ -163,6 +166,7 @@ export type SpeedDialComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     createPopup(): void;
+    destroy(): void;
     hide(): void;
     refreshPosition(): void;
     show(): void

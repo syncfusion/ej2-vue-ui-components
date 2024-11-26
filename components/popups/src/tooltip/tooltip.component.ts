@@ -95,6 +95,9 @@ export let TooltipComponent: DefineVueComponent<TooltipModel> =  vueDefineCompon
         close(animation?: Object): void {
             return this.ej2Instances.close(animation);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         open(element?: Object, animation?: Object): void {
             return this.ej2Instances.open(element, animation);
         },
@@ -121,6 +124,7 @@ export type TooltipComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     close(animation?: Object): void;
+    destroy(): void;
     open(element?: Object, animation?: Object): void;
     refresh(target?: Object): void
 };

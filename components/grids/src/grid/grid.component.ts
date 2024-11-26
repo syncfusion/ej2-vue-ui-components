@@ -464,14 +464,14 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         selectRowsByRange(startIndex: number, endIndex?: number): void {
             return this.ej2Instances.selectRowsByRange(startIndex, endIndex);
         },
-        serverCsvExport(url: string): void {
-            return this.ej2Instances.serverCsvExport(url);
+        serverCsvExport(url: string, headers?: Object): void {
+            return this.ej2Instances.serverCsvExport(url, headers);
         },
-        serverExcelExport(url: string): void {
-            return this.ej2Instances.serverExcelExport(url);
+        serverExcelExport(url: string, headers?: Object): void {
+            return this.ej2Instances.serverExcelExport(url, headers);
         },
-        serverPdfExport(url: string): void {
-            return this.ej2Instances.serverPdfExport(url);
+        serverPdfExport(url: string, headers?: Object): void {
+            return this.ej2Instances.serverPdfExport(url, headers);
         },
         setCellValue(key: string | number, field: string, value: string | number | boolean | Object | null): void {
             return this.ej2Instances.setCellValue(key, field, value);
@@ -659,9 +659,9 @@ export type GridComponent = typeof ComponentBase & {
     selectRow(index: number, isToggle?: boolean): void;
     selectRows(rowIndexes: number[]): void;
     selectRowsByRange(startIndex: number, endIndex?: number): void;
-    serverCsvExport(url: string): void;
-    serverExcelExport(url: string): void;
-    serverPdfExport(url: string): void;
+    serverCsvExport(url: string, headers?: Object): void;
+    serverExcelExport(url: string, headers?: Object): void;
+    serverPdfExport(url: string, headers?: Object): void;
     setCellValue(key: string | number, field: string, value: string | number | boolean | Object | null): void;
     setGridContent(element: Object): void;
     setGridContentTable(element: Object): void;

@@ -133,6 +133,9 @@ export let RadioButtonComponent: DefineVueComponent<RadioButtonModel> =  vueDefi
         click(): void {
             return this.ej2Instances.click();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -159,6 +162,7 @@ export type RadioButtonComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     click(): void;
+    destroy(): void;
     focusIn(): void;
     getSelectedValue(): string
 };

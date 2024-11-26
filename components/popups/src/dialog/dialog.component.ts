@@ -131,6 +131,9 @@ export let DialogComponent: DefineVueComponent<DialogModel> =  vueDefineComponen
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         getButtons(index?: number): Object[] | Object {
             return this.ej2Instances.getButtons(index);
         },
@@ -168,6 +171,7 @@ export type DialogComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     getButtons(index?: number): Object[] | Object;
     getDimension(): Object;
     hide(event?: Object): void;

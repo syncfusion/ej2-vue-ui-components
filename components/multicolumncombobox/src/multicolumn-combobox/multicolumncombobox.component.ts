@@ -134,6 +134,9 @@ export let MultiColumnComboBoxComponent: DefineVueComponent<MultiColumnComboBoxM
         addItems(items: undefined[] | undefined, index?: number): void {
             return this.ej2Instances.addItems(items, index);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(e?: Object | Object | Object | Object): void {
             return this.ej2Instances.focusIn(e);
         },
@@ -172,6 +175,7 @@ export type MultiColumnComboBoxComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addItems(items: undefined[] | undefined, index?: number): void;
+    destroy(): void;
     focusIn(e?: Object | Object | Object | Object): void;
     focusOut(e?: Object | Object): void;
     getDataByValue(value: string): Object;

@@ -96,6 +96,9 @@ export let ChipListComponent: DefineVueComponent<ChipListModel> =  vueDefineComp
         add(chipsData: string[] | number[] | Object[] | string | number | Object): void {
             return this.ej2Instances.add(chipsData);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         find(fields: number | Object): Object {
             return this.ej2Instances.find(fields);
         },
@@ -128,6 +131,7 @@ export type ChipListComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     add(chipsData: string[] | number[] | Object[] | string | number | Object): void;
+    destroy(): void;
     find(fields: number | Object): Object;
     getSelectedChips(): Object | Object | undefined;
     remove(fields: number | number[] | Object | Object[]): void;

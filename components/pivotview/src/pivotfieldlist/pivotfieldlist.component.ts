@@ -92,6 +92,9 @@ export let PivotFieldListComponent: DefineVueComponent<PivotFieldListModel> =  v
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         update(control: Object): void {
             return this.ej2Instances.update(control);
         },
@@ -117,6 +120,7 @@ export type PivotFieldListComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     update(control: Object): void;
     updateView(control: Object): void
 };

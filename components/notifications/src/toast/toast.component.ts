@@ -93,6 +93,9 @@ export let ToastComponent: DefineVueComponent<ToastModel> =  vueDefineComponent(
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         hide(element?: Object | Object | string): void {
             return this.ej2Instances.hide(element);
         },
@@ -118,6 +121,7 @@ export type ToastComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     hide(element?: Object | Object | string): void;
     show(toastObj?: Object): void
 };

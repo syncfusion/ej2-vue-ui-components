@@ -95,6 +95,9 @@ export let FabComponent: DefineVueComponent<FabModel> =  vueDefineComponent({
         click(): void {
             return this.ej2Instances.click();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -121,6 +124,7 @@ export type FabComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     click(): void;
+    destroy(): void;
     focusIn(): void;
     refreshPosition(): void
 };

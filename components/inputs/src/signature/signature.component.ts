@@ -101,6 +101,9 @@ export let SignatureComponent: DefineVueComponent<SignatureModel> =  vueDefineCo
         clear(): void {
             return this.ej2Instances.clear();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         draw(text: string, fontFamily?: string, fontSize?: number, x?: number, y?: number): void {
             return this.ej2Instances.draw(text, fontFamily, fontSize, x, y);
         },
@@ -153,6 +156,7 @@ export type SignatureComponent = typeof ComponentBase & {
     canRedo(): boolean;
     canUndo(): boolean;
     clear(): void;
+    destroy(): void;
     draw(text: string, fontFamily?: string, fontSize?: number, x?: number, y?: number): void;
     getBlob(url: string): Object;
     initialize(): void;

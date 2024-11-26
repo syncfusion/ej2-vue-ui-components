@@ -133,6 +133,9 @@ export let NumericTextBoxComponent: DefineVueComponent<NumericTextBoxModel> =  v
         decrement(step: number): void {
             return this.ej2Instances.decrement(step);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -165,6 +168,7 @@ export type NumericTextBoxComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     decrement(step: number): void;
+    destroy(): void;
     focusIn(): void;
     focusOut(): void;
     getText(): string;

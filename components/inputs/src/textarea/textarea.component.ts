@@ -133,6 +133,9 @@ export let TextAreaComponent: DefineVueComponent<TextAreaModel> =  vueDefineComp
         addAttributes(attributes: undefined): void {
             return this.ej2Instances.addAttributes(attributes);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -162,6 +165,7 @@ export type TextAreaComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addAttributes(attributes: undefined): void;
+    destroy(): void;
     focusIn(): void;
     focusOut(): void;
     removeAttributes(attributes: string[]): void

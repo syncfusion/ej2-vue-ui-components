@@ -2,7 +2,32 @@
 
 ## [Unreleased]
 
+## 27.2.4 (2024-11-26)
+
+### Pivot Table
+
+#### Bug fixes
+
+- `#I655109` - The calculated field option will now work properly with the 'Defer Layout Update' option enabled in the pivot table when using the server-side engine.
+
 ## 27.2.3 (2024-11-21)
+
+### Pivot Table
+
+#### Bug fixes
+
+- `#I651756` - Field searching will now work properly within the field list UI when searching for grouped child fields.
+
+## 27.2.2 (2024-11-15)
+
+### Pivot Table
+
+#### Bug fixes
+
+- `#I645195` - The pivot table will now display the proper data based on the current page size when using the paging option.
+- `#I645619` - The error popup will now appear correctly when entering an invalid formula in the calculated field UI.
+
+## 27.1.58 (2024-11-05)
 
 ### Pivot Table
 

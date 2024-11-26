@@ -136,6 +136,9 @@ export let TextBoxComponent: DefineVueComponent<TextBoxModel> =  vueDefineCompon
         addIcon(position: string, icons: string | string[]): void {
             return this.ej2Instances.addIcon(position, icons);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -166,6 +169,7 @@ export type TextBoxComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addAttributes(attributes: undefined): void;
     addIcon(position: string, icons: string | string[]): void;
+    destroy(): void;
     focusIn(): void;
     focusOut(): void;
     removeAttributes(attributes: string[]): void

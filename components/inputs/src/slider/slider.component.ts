@@ -130,6 +130,9 @@ export let SliderComponent: DefineVueComponent<SliderModel> =  vueDefineComponen
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         reposition(): void {
             return this.ej2Instances.reposition();
         },
@@ -155,6 +158,7 @@ export type SliderComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     reposition(): void;
     setTooltip(args?: string): void
 };

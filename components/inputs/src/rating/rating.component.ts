@@ -130,6 +130,9 @@ export let RatingComponent: DefineVueComponent<RatingModel> =  vueDefineComponen
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         reset(): void {
             return this.ej2Instances.reset();
         },
@@ -152,6 +155,7 @@ export type RatingComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     reset(): void
 };
 

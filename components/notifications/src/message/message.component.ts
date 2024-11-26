@@ -92,7 +92,9 @@ export let MessageComponent: DefineVueComponent<MessageModel> =  vueDefineCompon
         custom(): void {
             this.updated();
         },
-
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
     }
 });
 
@@ -112,7 +114,7 @@ export type MessageComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    
+    destroy(): void
 };
 
 export const MessagePlugin = {

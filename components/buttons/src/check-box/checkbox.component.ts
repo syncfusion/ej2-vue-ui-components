@@ -133,6 +133,9 @@ export let CheckBoxComponent: DefineVueComponent<CheckBoxModel> =  vueDefineComp
         click(): void {
             return this.ej2Instances.click();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -156,6 +159,7 @@ export type CheckBoxComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     click(): void;
+    destroy(): void;
     focusIn(): void
 };
 

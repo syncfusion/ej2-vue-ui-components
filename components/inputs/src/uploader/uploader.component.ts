@@ -105,6 +105,9 @@ export let UploaderComponent: DefineVueComponent<UploaderModel> =  vueDefineComp
         createFileList(fileData: Object[]): void {
             return this.ej2Instances.createFileList(fileData);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         getFilesData(index?: number): Object[] {
             return this.ej2Instances.getFilesData(index);
         },
@@ -152,6 +155,7 @@ export type UploaderComponent = typeof ComponentBase & {
     cancel(fileData?: Object[]): void;
     clearAll(): void;
     createFileList(fileData: Object[]): void;
+    destroy(): void;
     getFilesData(index?: number): Object[];
     pause(fileData?: Object | Object[], custom?: boolean): void;
     remove(fileData?: Object | Object[], customTemplate?: boolean, removeDirectly?: boolean, postRawFile?: boolean, args?: Object | Object | Object): void;
