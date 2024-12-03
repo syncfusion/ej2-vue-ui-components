@@ -185,6 +185,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         deselectImage(): void {
             return this.ej2Instances.deselectImage();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         duplicateSheet(sheetIndex?: number): void {
             return this.ej2Instances.duplicateSheet(sheetIndex);
         },
@@ -433,6 +436,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     deleteImage(id: string, range?: string): void;
     deselectChart(): void;
     deselectImage(): void;
+    destroy(): void;
     duplicateSheet(sheetIndex?: number): void;
     enableContextMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
     enableFileMenuItems(items: string[], enable: boolean, isUniqueId?: boolean): void;

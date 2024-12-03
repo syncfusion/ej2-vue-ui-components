@@ -114,6 +114,9 @@ export let QueryBuilderComponent: DefineVueComponent<QueryBuilderModel> =  vueDe
         deleteRules(ruleIdColl: string[]): void {
             return this.ej2Instances.deleteRules(ruleIdColl);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         getDataManagerQuery(rule: Object): Object {
             return this.ej2Instances.getDataManagerQuery(rule);
         },
@@ -215,6 +218,7 @@ export type QueryBuilderComponent = typeof ComponentBase & {
     deleteGroup(target: Object | string): void;
     deleteGroups(groupIdColl: string[]): void;
     deleteRules(ruleIdColl: string[]): void;
+    destroy(): void;
     getDataManagerQuery(rule: Object): Object;
     getFilteredRecords(): Object | object;
     getGroup(target: Object | string): Object;

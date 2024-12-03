@@ -128,6 +128,9 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         deleteShape(id: string): void {
             return this.ej2Instances.deleteShape(id);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         discard(): void {
             return this.ej2Instances.discard();
         },
@@ -155,8 +158,8 @@ export let ImageEditorComponent: DefineVueComponent<ImageEditorModel> =  vueDefi
         drawRedact(type?: Object, x?: number, y?: number, width?: number, height?: number, value?: number): boolean {
             return this.ej2Instances.drawRedact(type, x, y, width, height, value);
         },
-        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number, fillColor?: string, strokeColor?: string, strokeWidth?: number): boolean {
-            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected, degree, fillColor, strokeColor, strokeWidth);
+        drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number, fillColor?: string, strokeColor?: string, strokeWidth?: number, transformCollection?: Object[]): boolean {
+            return this.ej2Instances.drawText(x, y, text, fontFamily, fontSize, bold, italic, color, isSelected, degree, fillColor, strokeColor, strokeWidth, transformCollection);
         },
         enableShapeDrawing(shapeType: Object, isEnabled: boolean): void {
             return this.ej2Instances.enableShapeDrawing(shapeType, isEnabled);
@@ -282,6 +285,7 @@ export type ImageEditorComponent = typeof ComponentBase & {
     crop(): boolean;
     deleteRedact(id: string): void;
     deleteShape(id: string): void;
+    destroy(): void;
     discard(): void;
     drawArrow(startX?: number, startY?: number, endX?: number, endY?: number, strokeWidth?: number, strokeColor?: string, arrowStart?: Object, arrowEnd?: Object, isSelected?: boolean): boolean;
     drawEllipse(x?: number, y?: number, radiusX?: number, radiusY?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean): boolean;
@@ -291,7 +295,7 @@ export type ImageEditorComponent = typeof ComponentBase & {
     drawPath(pointColl: Object[], strokeWidth?: number, strokeColor?: string, isSelected?: boolean): boolean;
     drawRectangle(x?: number, y?: number, width?: number, height?: number, strokeWidth?: number, strokeColor?: string, fillColor?: string, degree?: number, isSelected?: boolean, borderRadius?: number): boolean;
     drawRedact(type?: Object, x?: number, y?: number, width?: number, height?: number, value?: number): boolean;
-    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number, fillColor?: string, strokeColor?: string, strokeWidth?: number): boolean;
+    drawText(x?: number, y?: number, text?: string, fontFamily?: string, fontSize?: number, bold?: boolean, italic?: boolean, color?: string, isSelected?: boolean, degree?: number, fillColor?: string, strokeColor?: string, strokeWidth?: number, transformCollection?: Object[]): boolean;
     enableShapeDrawing(shapeType: Object, isEnabled: boolean): void;
     enableTextEditing(): void;
     export(type?: string, fileName?: string, imageQuality?: number): void;
