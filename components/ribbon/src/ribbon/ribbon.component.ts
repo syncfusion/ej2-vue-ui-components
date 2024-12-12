@@ -109,6 +109,9 @@ export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponen
         addTab(tab: Object, targetId?: string, isAfter?: boolean): void {
             return this.ej2Instances.addTab(tab, targetId, isAfter);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         disableGroup(groupID: string): void {
             return this.ej2Instances.disableGroup(groupID);
         },
@@ -201,6 +204,7 @@ export type RibbonComponent = typeof ComponentBase & {
     addGroup(tabId: string, group: Object, targetId?: string, isAfter?: boolean): void;
     addItem(collectionId: string, item: Object, targetId?: string, isAfter?: boolean): void;
     addTab(tab: Object, targetId?: string, isAfter?: boolean): void;
+    destroy(): void;
     disableGroup(groupID: string): void;
     disableItem(itemId: string): void;
     disableTab(tabId: string): void;

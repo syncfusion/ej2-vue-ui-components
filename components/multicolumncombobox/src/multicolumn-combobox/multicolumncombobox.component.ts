@@ -34,7 +34,7 @@ export let MultiColumnComboBoxComponent: DefineVueComponent<MultiColumnComboBoxM
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
-            hasInjectedModules: true as boolean,
+            hasInjectedModules: false as boolean,
             tagMapper: {"e-columns":"e-column"} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,

@@ -6,7 +6,7 @@ import { ColorMappingsDirective, ColorMappingDirective, ColorMappingsPlugin, Col
 import { LevelsDirective, LevelDirective, LevelsPlugin, LevelPlugin } from './levels.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowPdfExport', 'allowPrint', 'background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowPdfExport', 'allowPrint', 'background', 'border', 'breadcrumbConnector', 'colorValuePath', 'dataSource', 'description', 'drillDownView', 'enableBreadcrumb', 'enableDrillDown', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'equalColorValuePath', 'format', 'height', 'highlightSettings', 'initialDrillDown', 'layoutType', 'leafItemSettings', 'legendSettings', 'levels', 'locale', 'margin', 'palette', 'query', 'rangeColorValuePath', 'renderDirection', 'selectionSettings', 'tabIndex', 'theme', 'titleSettings', 'tooltipSettings', 'useGroupingSeparator', 'weightValuePath', 'width', 'beforePrint', 'click', 'doubleClick', 'drillEnd', 'drillStart', 'itemClick', 'itemHighlight', 'itemMove', 'itemRendering', 'itemSelected', 'legendItemRendering', 'legendRendering', 'load', 'loaded', 'mouseMove', 'resize', 'rightClick', 'tooltipRendering'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -94,6 +94,9 @@ export let TreeMapComponent: DefineVueComponent<TreeMapModel> =  vueDefineCompon
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         doubleClickOnTreeMap(e: Object): void {
             return this.ej2Instances.doubleClickOnTreeMap(e);
         },
@@ -125,6 +128,7 @@ export type TreeMapComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     doubleClickOnTreeMap(e: Object): void;
     export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
     print(id?: string[] | string | Object): void;

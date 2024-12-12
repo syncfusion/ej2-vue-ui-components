@@ -31,9 +31,9 @@ npm run serve
 ```
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-### Adding Syncfusion Vue Query Builder package
+### Adding Syncfusion<sup>®</sup> Vue Query Builder package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install vue query builder package, use the following command.
+All Syncfusion<sup>®</sup> Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install vue query builder package, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-vue-querybuilder --save
@@ -68,9 +68,9 @@ Add CSS references needed for Query Builder in **style** section of the **App.vu
 </style>
 ```
 
-## Add Syncfusion Vue Query Builder component
+## Add Syncfusion<sup>®</sup> Vue Query Builder component
 
-Add the Syncfusion Vue Query Builder by using **ejs-querybuilder** selector in **template** section of the **App.vue** file.
+Add the Syncfusion<sup>®</sup> Vue Query Builder by using **ejs-querybuilder** selector in **template** section of the **App.vue** file.
 
 ```html
 <template>
@@ -101,7 +101,7 @@ Add the Syncfusion Vue Query Builder by using **ejs-querybuilder** selector in *
     }
 </script>
 ```
-> Refer the [Getting started with Vue3](https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started-vue/) for using Syncfusion Vue components in Vue 3 applications.
+> Refer the [Getting started with Vue3](https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started-vue/) for using Syncfusion<sup>®</sup> Vue components in Vue 3 applications.
 
 
 ## Supported frameworks
@@ -140,8 +140,8 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 ## License and copyright
 
-> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 80+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
+> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 80+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
 > A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_medium=listing&utm_campaign=vue-query-builder-npm) for more info.
 
-&copy; Copyright 2024 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+&copy; Copyright 2024 Syncfusion<sup>®</sup> Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential<sup>®</sup> Studio license and copyright applies to this distribution.

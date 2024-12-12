@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { Switch, SwitchModel } from '@syncfusion/ej2-buttons';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'locale', 'name', 'offLabel', 'onLabel', 'value', 'change', 'created'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'checked', 'cssClass', 'disabled', 'enablePersistence', 'enableRtl', 'htmlAttributes', 'locale', 'name', 'offLabel', 'onLabel', 'value', 'beforeChange', 'change', 'created'];
 export const modelProps: string[] = ['checked'];
 
 export const testProp: any = getProps({props: properties});

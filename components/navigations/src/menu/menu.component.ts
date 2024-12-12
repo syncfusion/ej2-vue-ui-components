@@ -105,6 +105,9 @@ export let MenuComponent: DefineVueComponent<MenuModel> =  vueDefineComponent({
         getItemIndex(item: Object | string, isUniqueId?: boolean): number[] {
             return this.ej2Instances.getItemIndex(item, isUniqueId);
         },
+        getMenuWidth(cmenu: Object, width: number, isRtl: boolean): number {
+            return this.ej2Instances.getMenuWidth(cmenu, width, isRtl);
+        },
         hideItems(items: string[], isUniqueId?: boolean): void {
             return this.ej2Instances.hideItems(items, isUniqueId);
         },
@@ -149,6 +152,7 @@ export type MenuComponent = typeof ComponentBase & {
     destroy(): void;
     enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
     getItemIndex(item: Object | string, isUniqueId?: boolean): number[];
+    getMenuWidth(cmenu: Object, width: number, isRtl: boolean): number;
     hideItems(items: string[], isUniqueId?: boolean): void;
     insertAfter(items: Object[], text: string, isUniqueId?: boolean): void;
     insertBefore(items: Object[], text: string, isUniqueId?: boolean): void;

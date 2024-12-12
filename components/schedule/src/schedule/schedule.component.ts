@@ -9,7 +9,7 @@ import { HeaderRowsDirective, HeaderRowDirective, HeaderRowsPlugin, HeaderRowPlu
 import { ToolbarItemsDirective, ToolbarItemDirective, ToolbarItemsPlugin, ToolbarItemPlugin } from './toolbaritems.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'agendaDaysCount', 'allowDragAndDrop', 'allowInline', 'allowKeyboardInteraction', 'allowMultiCellSelection', 'allowMultiDrag', 'allowMultiRowSelection', 'allowResizing', 'allowSwiping', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'dateRangeTemplate', 'dayHeaderTemplate', 'editorFooterTemplate', 'editorHeaderTemplate', 'editorTemplate', 'enableAdaptiveUI', 'enableAllDayScroll', 'enableHtmlSanitizer', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'firstMonthOfYear', 'group', 'headerIndentTemplate', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'monthHeaderTemplate', 'monthsCount', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeFormat', 'timeScale', 'timezone', 'timezoneDataSource', 'toolbarItems', 'views', 'weekRule', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventDoubleClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select', 'virtualScrollStart', 'virtualScrollStop'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'agendaDaysCount', 'allowClipboard', 'allowDragAndDrop', 'allowInline', 'allowKeyboardInteraction', 'allowMultiCellSelection', 'allowMultiDrag', 'allowMultiRowSelection', 'allowResizing', 'allowSwiping', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'dateRangeTemplate', 'dayHeaderTemplate', 'editorFooterTemplate', 'editorHeaderTemplate', 'editorTemplate', 'enableAdaptiveUI', 'enableAllDayScroll', 'enableHtmlSanitizer', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'firstMonthOfYear', 'group', 'headerIndentTemplate', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'monthHeaderTemplate', 'monthsCount', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeFormat', 'timeScale', 'timezone', 'timezoneDataSource', 'toolbarItems', 'views', 'weekRule', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'beforePaste', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventDoubleClick', 'eventRendered', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select', 'virtualScrollStart', 'virtualScrollStop'];
 export const modelProps: string[] = ['currentView', 'selectedDate'];
 
 export const testProp: any = getProps({props: properties});
@@ -155,6 +155,12 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         collapseResource(resourceId: string | number, name: string): void {
             return this.ej2Instances.collapseResource(resourceId, name);
         },
+        copy(elements: Object[]): void {
+            return this.ej2Instances.copy(elements);
+        },
+        cut(elements: Object[]): void {
+            return this.ej2Instances.cut(elements);
+        },
         deleteEvent(id: string | number | Object | Object[], currentAction?: Object): void {
             return this.ej2Instances.deleteEvent(id, currentAction);
         },
@@ -187,6 +193,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         },
         getCurrentViewIndex(): number {
             return this.ej2Instances.getCurrentViewIndex();
+        },
+        getDateRangeText(dates: Object[]): string {
+            return this.ej2Instances.getDateRangeText(dates);
         },
         getDeletedOccurrences(recurrenceData: string | number | Object): Object[] {
             return this.ej2Instances.getDeletedOccurrences(recurrenceData);
@@ -221,6 +230,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         getSelectedElements(): Object[] {
             return this.ej2Instances.getSelectedElements();
         },
+        getViewDates(type: Object): Object[] {
+            return this.ej2Instances.getViewDates(type);
+        },
         hideSpinner(): void {
             return this.ej2Instances.hideSpinner();
         },
@@ -235,6 +247,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         },
         openQuickInfoPopup(data: Object): void {
             return this.ej2Instances.openQuickInfoPopup(data);
+        },
+        paste(targetElement: Object): void {
+            return this.ej2Instances.paste(targetElement);
         },
         print(printOptions?: Object): void {
             return this.ej2Instances.print(printOptions);
@@ -304,6 +319,8 @@ export type ScheduleComponent = typeof ComponentBase & {
     closeQuickInfoPopup(): void;
     closeTooltip(): void;
     collapseResource(resourceId: string | number, name: string): void;
+    copy(elements: Object[]): void;
+    cut(elements: Object[]): void;
     deleteEvent(id: string | number | Object | Object[], currentAction?: Object): void;
     destroy(): void;
     expandResource(resourceId: string | number, name: string): void;
@@ -315,6 +332,7 @@ export type ScheduleComponent = typeof ComponentBase & {
     getCurrentViewDates(): Object[];
     getCurrentViewEvents(): Object[];
     getCurrentViewIndex(): number;
+    getDateRangeText(dates: Object[]): string;
     getDeletedOccurrences(recurrenceData: string | number | Object): Object[];
     getEventDetails(element: Object): Object;
     getEventMaxID(): number | string;
@@ -326,11 +344,13 @@ export type ScheduleComponent = typeof ComponentBase & {
     getResourceCollections(): Object[];
     getResourcesByIndex(index: number): Object;
     getSelectedElements(): Object[];
+    getViewDates(type: Object): Object[];
     hideSpinner(): void;
     importICalendar(fileContent: Object | string): void;
     isSlotAvailable(startTime: Object | Object, endTime?: Object, groupIndex?: number): boolean;
     openEditor(data: Object, action: Object, isEventData?: boolean, repeatType?: number): void;
     openQuickInfoPopup(data: Object): void;
+    paste(targetElement: Object): void;
     print(printOptions?: Object): void;
     refreshEvents(isRemoteRefresh: boolean): void;
     refreshLayout(): void;

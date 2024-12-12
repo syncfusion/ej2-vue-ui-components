@@ -12,7 +12,7 @@ import { LayersDirective, LayerDirective, LayersPlugin, LayerPlugin } from './la
 import { AnnotationsDirective, AnnotationDirective, AnnotationsPlugin, AnnotationPlugin } from './annotations.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowPdfExport', 'allowPrint', 'annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'legendRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerDragEnd', 'markerDragStart', 'markerMouseMove', 'markerRendering', 'onclick', 'pan', 'panComplete', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom', 'zoomComplete'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowImageExport', 'allowPdfExport', 'allowPrint', 'annotations', 'background', 'baseLayerIndex', 'border', 'centerPosition', 'description', 'enablePersistence', 'enableRtl', 'format', 'height', 'layers', 'legendSettings', 'locale', 'mapsArea', 'margin', 'projectionType', 'tabIndex', 'theme', 'titleSettings', 'tooltipDisplayMode', 'useGroupingSeparator', 'width', 'zoomSettings', 'animationComplete', 'annotationRendering', 'beforePrint', 'bubbleClick', 'bubbleMouseMove', 'bubbleRendering', 'click', 'dataLabelRendering', 'doubleClick', 'itemHighlight', 'itemSelection', 'layerRendering', 'legendRendering', 'load', 'loaded', 'markerClick', 'markerClusterClick', 'markerClusterMouseMove', 'markerClusterRendering', 'markerDragEnd', 'markerDragStart', 'markerMouseMove', 'markerRendering', 'mouseMove', 'onclick', 'pan', 'panComplete', 'resize', 'rightClick', 'shapeHighlight', 'shapeRendering', 'shapeSelected', 'tooltipRender', 'tooltipRenderComplete', 'zoom', 'zoomComplete'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -141,8 +141,11 @@ export let MapsComponent: DefineVueComponent<MapsModel> =  vueDefineComponent({
         addLayer(layer: Object): void {
             return this.ej2Instances.addLayer(layer);
         },
-        addMarker(layerIndex: number, markerCollection: Object[]): void {
+        addMarker(layerIndex?: number, markerCollection?: Object[]): void {
             return this.ej2Instances.addMarker(layerIndex, markerCollection);
+        },
+        destroy(): void {
+            return this.ej2Instances.destroy();
         },
         export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
             return this.ej2Instances.export(type, fileName, orientation, allowDownload);
@@ -203,7 +206,8 @@ export type MapsComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addLayer(layer: Object): void;
-    addMarker(layerIndex: number, markerCollection: Object[]): void;
+    addMarker(layerIndex?: number, markerCollection?: Object[]): void;
+    destroy(): void;
     export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
     getBingUrlTemplate(url: string): Object;
     getGeoLocation(layerIndex: number, x: number, y: number): Object;

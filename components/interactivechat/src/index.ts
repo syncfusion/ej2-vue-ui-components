@@ -1,3 +1,5 @@
 export * from '@syncfusion/ej2-interactive-chat';
-export { ViewsDirective, ViewDirective, ViewsPlugin, ViewPlugin } from './ai-assist-view/views.directive';
-export { AIAssistViewComponent, AIAssistViewPlugin } from './ai-assist-view/aiassistview.component';
+export { ViewsDirective, ViewDirective, ViewsPlugin, ViewPlugin } from './ai-assistview/views.directive';
+export { AIAssistViewComponent, AIAssistViewPlugin } from './ai-assistview/aiassistview.component';
+export { MessagesDirective, MessageDirective, MessagesPlugin, MessagePlugin } from './chat-ui/messages.directive';
+export { ChatUIComponent, ChatUIPlugin } from './chat-ui/chatui.component';

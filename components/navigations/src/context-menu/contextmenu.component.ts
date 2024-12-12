@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { ContextMenu, ContextMenuModel } from '@syncfusion/ej2-navigations';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hoverDelay', 'items', 'locale', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationSettings', 'cssClass', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableScrolling', 'fields', 'filter', 'hoverDelay', 'itemTemplate', 'items', 'locale', 'showItemOnClick', 'target', 'template', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'created', 'onClose', 'onOpen', 'select'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -105,6 +105,9 @@ export let ContextMenuComponent: DefineVueComponent<ContextMenuModel> =  vueDefi
         getItemIndex(item: Object | string, isUniqueId?: boolean): number[] {
             return this.ej2Instances.getItemIndex(item, isUniqueId);
         },
+        getMenuWidth(cmenu: Object, width: number, isRtl: boolean): number {
+            return this.ej2Instances.getMenuWidth(cmenu, width, isRtl);
+        },
         hideItems(items: string[], isUniqueId?: boolean): void {
             return this.ej2Instances.hideItems(items, isUniqueId);
         },
@@ -149,6 +152,7 @@ export type ContextMenuComponent = typeof ComponentBase & {
     destroy(): void;
     enableItems(items: string[], enable: boolean, isUniqueId?: boolean): void;
     getItemIndex(item: Object | string, isUniqueId?: boolean): number[];
+    getMenuWidth(cmenu: Object, width: number, isRtl: boolean): number;
     hideItems(items: string[], isUniqueId?: boolean): void;
     insertAfter(items: Object[], text: string, isUniqueId?: boolean): void;
     insertBefore(items: Object[], text: string, isUniqueId?: boolean): void;

@@ -103,6 +103,9 @@ export let ProgressBarComponent: DefineVueComponent<ProgressBarModel> =  vueDefi
         createClipPath(clipPath?: Object, range?: number, d?: string, refresh?: boolean, thickness?: number, isLabel?: boolean, isMaximum?: boolean): Object {
             return this.ej2Instances.createClipPath(clipPath, range, d, refresh, thickness, isLabel, isMaximum);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         getPathLine(x: number, width: number, thickness: number): string {
             return this.ej2Instances.getPathLine(x, width, thickness);
         },
@@ -140,6 +143,7 @@ export type ProgressBarComponent = typeof ComponentBase & {
     calculateProgressRange(value: number, minimum?: number, maximum?: number): number;
     calculateSegmentSize(width: number, thickness: number): string;
     createClipPath(clipPath?: Object, range?: number, d?: string, refresh?: boolean, thickness?: number, isLabel?: boolean, isMaximum?: boolean): Object;
+    destroy(): void;
     getPathLine(x: number, width: number, thickness: number): string;
     hide(): void;
     removeSvg(): void;

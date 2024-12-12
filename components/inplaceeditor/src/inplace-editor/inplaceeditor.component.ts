@@ -130,6 +130,9 @@ export let InPlaceEditorComponent: DefineVueComponent<InPlaceEditorModel> =  vue
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         extendModelValue(val: string | number | boolean | Object | object | Object | string[] | Object[] | number[] | boolean[] | object[]): void {
             return this.ej2Instances.extendModelValue(val);
         },
@@ -161,6 +164,7 @@ export type InPlaceEditorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     extendModelValue(val: string | number | boolean | Object | object | Object | string[] | Object[] | number[] | boolean[] | object[]): void;
     save(): void;
     setValue(): void;

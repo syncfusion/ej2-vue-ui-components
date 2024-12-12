@@ -96,6 +96,9 @@ export let CircularGaugeComponent: DefineVueComponent<CircularGaugeModel> =  vue
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
             return this.ej2Instances.export(type, fileName, orientation, allowDownload);
         },
@@ -130,6 +133,7 @@ export type CircularGaugeComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
     print(id?: string[] | string | Object): void;
     setAnnotationValue(axisIndex: number, annotationIndex: number, content: string | Object): void;

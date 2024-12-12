@@ -96,6 +96,9 @@ export let LinearGaugeComponent: DefineVueComponent<LinearGaugeModel> =  vueDefi
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object {
             return this.ej2Instances.export(type, fileName, orientation, allowDownload);
         },
@@ -127,6 +130,7 @@ export type LinearGaugeComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     export(type: Object, fileName: string, orientation?: Object, allowDownload?: boolean): Object;
     print(id?: string[] | string | Object): void;
     setAnnotationValue(annotationIndex: number, content: string | Object, axisValue?: number): void;

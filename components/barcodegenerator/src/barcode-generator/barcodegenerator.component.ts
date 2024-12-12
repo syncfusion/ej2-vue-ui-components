@@ -92,6 +92,9 @@ export let BarcodeGeneratorComponent: DefineVueComponent<BarcodeGeneratorModel> 
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         exportAsBase64Image(exportType: Object): Object {
             return this.ej2Instances.exportAsBase64Image(exportType);
         },
@@ -117,6 +120,7 @@ export type BarcodeGeneratorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     exportAsBase64Image(exportType: Object): Object;
     exportImage(filename: string, exportType: Object): void
 };

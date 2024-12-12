@@ -92,6 +92,9 @@ export let QRCodeGeneratorComponent: DefineVueComponent<QRCodeGeneratorModel> = 
         custom(): void {
             this.updated();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         exportAsBase64Image(barcodeExportType: Object): Object {
             return this.ej2Instances.exportAsBase64Image(barcodeExportType);
         },
@@ -117,6 +120,7 @@ export type QRCodeGeneratorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    destroy(): void;
     exportAsBase64Image(barcodeExportType: Object): Object;
     exportImage(filename: string, barcodeExportType: Object): void
 };

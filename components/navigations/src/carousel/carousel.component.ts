@@ -6,7 +6,7 @@ import { Carousel, CarouselModel } from '@syncfusion/ej2-navigations';
 import { CarouselItemsDirective, CarouselItemDirective, CarouselItemsPlugin, CarouselItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationEffect', 'autoPlay', 'buttonsVisibility', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTouchSwipe', 'height', 'htmlAttributes', 'indicatorsTemplate', 'indicatorsType', 'interval', 'itemTemplate', 'items', 'locale', 'loop', 'nextButtonTemplate', 'partialVisible', 'pauseOnHover', 'playButtonTemplate', 'previousButtonTemplate', 'selectedIndex', 'showIndicators', 'showPlayButton', 'swipeMode', 'width', 'slideChanged', 'slideChanging'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowKeyboardInteraction', 'animationEffect', 'autoPlay', 'buttonsVisibility', 'cssClass', 'dataSource', 'enablePersistence', 'enableRtl', 'enableTouchSwipe', 'height', 'htmlAttributes', 'indicatorsTemplate', 'indicatorsType', 'interval', 'itemTemplate', 'items', 'locale', 'loop', 'nextButtonTemplate', 'partialVisible', 'pauseOnHover', 'playButtonTemplate', 'previousButtonTemplate', 'selectedIndex', 'showIndicators', 'showPlayButton', 'swipeMode', 'width', 'slideChanged', 'slideChanging'];
 export const modelProps: string[] = ['selectedIndex'];
 
 export const testProp: any = getProps({props: properties});

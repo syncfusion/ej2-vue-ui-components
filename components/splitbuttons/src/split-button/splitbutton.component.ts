@@ -5,7 +5,7 @@ import { SplitButton, SplitButtonModel } from '@syncfusion/ej2-splitbuttons';
 import { SplitButtonItemsDirective, SplitButtonItemDirective, SplitButtonItemsPlugin, SplitButtonItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'closeActionEvents', 'content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'items', 'locale', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'animationSettings', 'closeActionEvents', 'content', 'createPopupOnClick', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'itemTemplate', 'items', 'locale', 'popupWidth', 'target', 'beforeClose', 'beforeItemRender', 'beforeOpen', 'click', 'close', 'created', 'open', 'select'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -96,6 +96,9 @@ export let SplitButtonComponent: DefineVueComponent<SplitButtonModel> =  vueDefi
         addItems(items: Object[], text?: string): void {
             return this.ej2Instances.addItems(items, text);
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -125,6 +128,7 @@ export type SplitButtonComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addItems(items: Object[], text?: string): void;
+    destroy(): void;
     focusIn(): void;
     removeItems(items: string[], isUniqueId?: boolean): void;
     toggle(): void

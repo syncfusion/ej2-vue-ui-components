@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { HeatMap, HeatMapModel } from '@syncfusion/ej2-heatmap';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSelection', 'backgroundColor', 'cellSettings', 'dataSource', 'dataSourceSettings', 'enableMultiSelect', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellDoubleClick', 'cellRender', 'cellSelected', 'created', 'legendRender', 'load', 'loaded', 'resized', 'tooltipRender'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSelection', 'backgroundColor', 'cellSettings', 'dataSource', 'dataSourceSettings', 'enableHtmlSanitizer', 'enableMultiSelect', 'enablePersistence', 'enableRtl', 'height', 'legendSettings', 'locale', 'margin', 'paletteSettings', 'renderingMode', 'showTooltip', 'theme', 'titleSettings', 'tooltipSettings', 'width', 'xAxis', 'yAxis', 'cellClick', 'cellDoubleClick', 'cellRender', 'cellSelected', 'created', 'legendRender', 'load', 'loaded', 'resized', 'tooltipRender'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -96,6 +96,9 @@ export let HeatMapComponent: DefineVueComponent<HeatMapModel> =  vueDefineCompon
         clearSelection(): void {
             return this.ej2Instances.clearSelection();
         },
+        destroy(): void {
+            return this.ej2Instances.destroy();
+        },
         export(type: Object, fileName: string, orientation?: Object): void {
             return this.ej2Instances.export(type, fileName, orientation);
         },
@@ -128,6 +131,7 @@ export type HeatMapComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     clearSelection(): void;
+    destroy(): void;
     export(type: Object, fileName: string, orientation?: Object): void;
     print(): void;
     refresh(): void;
