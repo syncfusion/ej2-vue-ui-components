@@ -2,13 +2,15 @@
 
 ## [Unreleased]
 
-## 28.1.35 (2024-12-18)
+## 28.1.36 (2024-12-24)
 
 ### DateRangePicker
 
 #### Bug Fixes
 
-- `#F171486` - Issue with "performance delay in the popup open while entering invalid start or end date value" has been resolved.
+- `#I664732` - Fixed an issue where the overlay was displayed even when the popup was prevented from opening in mobile mode.
+
+- `#I664735` - Removed unnecessary conditional code for adding CSS classes based on device type.
 
 ## 19.3.46 (2021-10-19)
 
@@ -1285,7 +1287,15 @@ TimePicker component is the pre-filled dropdown list with the time values 12/24 
 
 - **StrictMode** - Allows to entering the only valid time in a textbox.
 
-- **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.## 19.1.56 (2021-04-13)
+- **Accessibility** - Provided with built-in accessibility support which helps to access all the TimePicker component features through the keyboard, screen readers, or other assistive technology devices.## 28.1.35 (2024-12-18)
+
+### DateRangePicker
+
+#### Bug Fixes
+
+- `#F171486` - Issue with "performance delay in the popup open while entering invalid start or end date value" has been resolved.
+
+## 19.1.56 (2021-04-13)
 
 ### DateRangePicker
 
