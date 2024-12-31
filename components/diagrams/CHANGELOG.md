@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 28.1.37 (2024-12-31)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I664086` - Bezier settings are now applied to freehand connectors during the drawing process.
+- `#I664088` - Segment points are now draggable even when the pointer is positioned on the outer part of an increased segment thumb size.
+
 ## 28.1.36 (2024-12-24)
 
 ### Diagram
