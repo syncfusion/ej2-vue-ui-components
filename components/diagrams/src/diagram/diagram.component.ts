@@ -269,6 +269,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         getParentId(id: string): string {
             return this.ej2Instances.getParentId(id);
         },
+        getPathData(key: string): Object[] {
+            return this.ej2Instances.getPathData(key);
+        },
         getTool(action: string): Object {
             return this.ej2Instances.getTool(action);
         },
@@ -383,6 +386,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         setActiveLayer(layerName: string): void {
             return this.ej2Instances.setActiveLayer(layerName);
         },
+        setPathData(key: string, data: Object[]): void {
+            return this.ej2Instances.setPathData(key, data);
+        },
         setStackLimit(stackLimit: number): void {
             return this.ej2Instances.setStackLimit(stackLimit);
         },
@@ -491,6 +497,7 @@ export type DiagramComponent = typeof ComponentBase & {
     getNodeObject(id: string): Object;
     getObject(name: string): Object;
     getParentId(id: string): string;
+    getPathData(key: string): Object[];
     getTool(action: string): Object;
     group(): void;
     hideTooltip(obj: Object | Object): void;
@@ -529,6 +536,7 @@ export type DiagramComponent = typeof ComponentBase & {
     sendLayerBackward(layerName: string): void;
     sendToBack(): void;
     setActiveLayer(layerName: string): void;
+    setPathData(key: string, data: Object[]): void;
     setStackLimit(stackLimit: number): void;
     showTooltip(obj: Object | Object): void;
     startGroupAction(): void;

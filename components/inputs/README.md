@@ -189,16 +189,24 @@ The [Vue Rating](https://www.syncfusion.com/vue-components/vue-rating?utm_source
 
 ### Vue OTP Input
 
-The `Vue OTP Input` component is designed to securely enter and verify single-use passwords for multi-factor authentication purposes in various applications, such as banking, e-commerce, or account login processes. It has several built-in features such as support for input types, styling modes, placeholder, seperators, and customization.
+The [Vue OTP Input](https://www.syncfusion.com/vue-components/vue-otp-input?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm) component is designed to securely enter and verify single-use passwords for multi-factor authentication purposes in various applications, such as banking, e-commerce, or account login processes. It has several built-in features such as support for input types, styling modes, placeholder, seperators, and customization.
+
+<p align="center">
+  <a href="https://ej2.syncfusion.com/vue/documentation/otp-input/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Getting Started</a> .
+  <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm#/fluent2/otp-input/default">Online demos</a> .
+  <a href="https://www.syncfusion.com/vue-components/vue-otp-input?utm_source=npm&utm_medium=listing&utm_campaign=vue-inputs-npm">Learn more</a>
+</p>
+
+<p align="center">
+<img alt="Vue OTP Input Component" src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-otp-input.png">
 
 #### Key features
 
-* `Input types` - Allow specifying the input type as text, number, or password for the OTP input..
-* `Styling modes` - Offer built-in styling options such as underline, outline, or fill.
-* `Tooltip` - Displays additional information of the rating items.
-* `Placeholders` - Allow setting a hint character for each input field, indicating the expected value.
-* `Separators` - Specify a character to be placed between input fields. 
-* `Customization` - Allows customizing the default appearance, including input field styling, input length, and more. 
+* [Input types](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-otp-input-npm#/fluent2/otp-input/default) - Allow specifying the input type as text, number, or password for the OTP input..
+* [Styling modes](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-otp-input-npm#/fluent2/otp-input/api) - Offer built-in styling options such as underline, outline, or fill.
+* [Placeholders](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-otp-input-npm#/fluent2/otp-input/api) - Allow setting a hint character for each input field, indicating the expected value.
+* [Separators](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-otp-input-npm#/fluent2/otp-input/api) - Specify a character to be placed between input fields. 
+* [Customization](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-otp-input-npm#/fluent2/otp-input/api) - Allows customizing the default appearance, including input field styling, input length, and more.
 
 <p align="center">
 Trusted by the world's leading companies

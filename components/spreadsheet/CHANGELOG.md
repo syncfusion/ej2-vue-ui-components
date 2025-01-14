@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 28.1.39 (2024-01-14)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I678207` - Issue with "sheet panel did not render properly when the `refresh` and `calculateNow` functions were invoked during the `openComplete` event" has been resolved.
+
 ## 28.1.35 (2024-12-18)
 
 ### Spreadsheet
