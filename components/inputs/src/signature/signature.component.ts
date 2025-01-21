@@ -110,6 +110,9 @@ export let SignatureComponent: DefineVueComponent<SignatureModel> =  vueDefineCo
         getBlob(url: string): Object {
             return this.ej2Instances.getBlob(url);
         },
+        getSignature(type?: Object): string {
+            return this.ej2Instances.getSignature(type);
+        },
         initialize(): void {
             return this.ej2Instances.initialize();
         },
@@ -159,6 +162,7 @@ export type SignatureComponent = typeof ComponentBase & {
     destroy(): void;
     draw(text: string, fontFamily?: string, fontSize?: number, x?: number, y?: number): void;
     getBlob(url: string): Object;
+    getSignature(type?: Object): string;
     initialize(): void;
     isEmpty(): boolean;
     load(signature: string, width?: number, height?: number): void;

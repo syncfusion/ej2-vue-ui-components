@@ -140,6 +140,9 @@ export let AIAssistViewComponent: DefineVueComponent<AIAssistViewModel> =  vueDe
         executePrompt(prompt: string): void {
             return this.ej2Instances.executePrompt(prompt);
         },
+        scrollToBottom(): void {
+            return this.ej2Instances.scrollToBottom();
+        },
     }
 });
 
@@ -161,7 +164,8 @@ export type AIAssistViewComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addPromptResponse(promptData: string | Object): void;
     destroy(): void;
-    executePrompt(prompt: string): void
+    executePrompt(prompt: string): void;
+    scrollToBottom(): void
 };
 
 export const AIAssistViewPlugin = {

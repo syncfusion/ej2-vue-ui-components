@@ -359,6 +359,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         getRows(): Object[] {
             return this.ej2Instances.getRows();
         },
+        getRowsObject(): Object[] {
+            return this.ej2Instances.getRowsObject();
+        },
         getSelectedColumnsUid(): string[] {
             return this.ej2Instances.getSelectedColumnsUid();
         },
@@ -624,6 +627,7 @@ export type GridComponent = typeof ComponentBase & {
     getRowIndexByPrimaryKey(value: string | Object): number;
     getRowInfo(target: Object | Object): Object;
     getRows(): Object[];
+    getRowsObject(): Object[];
     getSelectedColumnsUid(): string[];
     getSelectedRecords(): Object[];
     getSelectedRowCellIndexes(): Object[];
