@@ -117,6 +117,9 @@ export let FileManagerComponent: DefineVueComponent<FileManagerModel> =  vueDefi
         downloadFiles(ids?: string[]): void {
             return this.ej2Instances.downloadFiles(ids);
         },
+        enableMenuItems(items: string[]): void {
+            return this.ej2Instances.enableMenuItems(items);
+        },
         enableToolbarItems(items: string[]): void {
             return this.ej2Instances.enableToolbarItems(items);
         },
@@ -180,6 +183,7 @@ export type FileManagerComponent = typeof ComponentBase & {
     disableMenuItems(items: string[]): void;
     disableToolbarItems(items: string[]): void;
     downloadFiles(ids?: string[]): void;
+    enableMenuItems(items: string[]): void;
     enableToolbarItems(items: string[]): void;
     filterFiles(filterData?: Object): void;
     getMenuItemIndex(item: string): number;
