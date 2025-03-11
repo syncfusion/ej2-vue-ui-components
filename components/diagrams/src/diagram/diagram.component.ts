@@ -36,7 +36,7 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Diagram({}) as any,
+            ej2Instance: new Diagram({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -420,7 +420,7 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
 });
 
 export type DiagramComponent = typeof ComponentBase & {
-    ej2Instances: Diagram;
+    ej2Instance: Diagram;
     isVue3: boolean;
     isLazyUpdate: Boolean;
     plugins: any[];
