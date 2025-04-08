@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-inputs",
-	"version": "18.78.15",
+	"version": "29.1.33",
 	"description": "A package of Essential JS 2 input components such as Textbox, Color-picker, Masked-textbox, Numeric-textbox, Slider, Upload, and Form-validator that is used to get input from the users. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -51,7 +51,7 @@
 		"@types/requirejs": "2.1.37",
 		"vue": "2.6.14",
 		"vue-loader-v16": "16.0.0-beta.5.4",
-		"rollup": "2.79.2",
+		"rollup": "1.32.1",
 		"rollup-plugin-commonjs": "10.1.0",
 		"rollup-plugin-node-resolve": "5.2.0",
 		"rollup-plugin-sourcemaps": "0.6.3",
