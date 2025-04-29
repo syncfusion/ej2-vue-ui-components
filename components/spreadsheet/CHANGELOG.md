@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 29.1.40 (2025-04-29)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I710888` - Issue with "the custom class is not added to the ribbon tab when using the `addRibbonTabs` method with the `cssClass` property specified" has been resolved.
+
 ## 29.1.39 (2025-04-22)
 
 ### Spreadsheet
