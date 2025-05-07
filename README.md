@@ -36,7 +36,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-grids"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-grids" title="@syncfusion/ej2-vue-grids" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-grids"><img src="https://ej2.syncfusion.com/badges/ej2-grids/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-grids" title="@syncfusion/ej2-vue-grids" /></a>
        </td>
        <td>
-           <a href="src/grids/src">Source</a>
+           <a href="components/grids/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/grid-overview.html">Live demo</a>
@@ -53,7 +53,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-pivotview"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-pivotview" title="@syncfusion/ej2-vue-pivotview" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-pivotview"><img src="https://ej2.syncfusion.com/badges/ej2-pivotview/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-pivotview" title="@syncfusion/ej2-vue-pivotview" /></a>
        </td>
        <td>
-           <a href="src/pivotview/src">Source</a>
+           <a href="components/pivotview/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/pivot-table/default.html">Live demo</a>
@@ -70,7 +70,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-spreadsheet" title="@syncfusion/ej2-vue-spreadsheet" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-spreadsheet"><img src="https://ej2.syncfusion.com/badges/ej2-spreadsheet/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-spreadsheet" title="@syncfusion/ej2-vue-spreadsheet" /></a>
        </td>
        <td>
-           <a href="src/spreadsheet/src">Source</a>
+           <a href="components/spreadsheet/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/spreadsheet/default.html">Live demo</a>
@@ -87,7 +87,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-treegrid"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-treegrid" title="@syncfusion/ej2-vue-treegrid" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-treegrid"><img src="https://ej2.syncfusion.com/badges/ej2-treegrid/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-treegrid" title="@syncfusion/ej2-vue-treegrid" /></a>
        </td>
        <td>
-           <a href="src/treegrid/src">Source</a>
+           <a href="components/treegrid/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/tree-grid/overview.html">Live demo</a>
@@ -109,7 +109,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-inplace-editor"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-inplace-editor" title="@syncfusion/ej2-vue-inplace-editor" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-inplace-editor"><img src="https://ej2.syncfusion.com/badges/ej2-inplace-editor/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-inplace-editor" title="@syncfusion/ej2-vue-inplace-editor" /></a>
        </td>
        <td>
-           <a href="src/inplaceeditor/src">Source</a>
+           <a href="components/inplaceeditor/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/inplace-editor/default.html">Live demo</a>
@@ -126,7 +126,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-richtexteditor"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-richtexteditor" title="@syncfusion/ej2-vue-richtexteditor" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-richtexteditor"><img src="https://ej2.syncfusion.com/badges/ej2-richtexteditor/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-richtexteditor" title="@syncfusion/ej2-vue-richtexteditor" /></a>
        </td>
        <td>
-           <a href="src/richtexteditor/src">Source</a>
+           <a href="components/richtexteditor/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/tools.html">Live demo</a>
@@ -143,7 +143,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-documenteditor" title="@syncfusion/ej2-vue-documenteditor" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-documenteditor"><img src="https://ej2.syncfusion.com/badges/ej2-documenteditor/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-documenteditor" title="@syncfusion/ej2-vue-documenteditor" /></a>
        </td>
        <td>
-           <a href="src/documenteditor/src">Source</a>
+           <a href="components/documenteditor/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/document-editor/default.html">Live demo</a>
@@ -165,7 +165,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-dropdowns"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-dropdowns" title="@syncfusion/ej2-vue-dropdowns" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-dropdowns"><img src="https://ej2.syncfusion.com/badges/ej2-dropdowns/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-dropdowns" title="@syncfusion/ej2-vue-dropdowns" /></a>
        </td>
        <td>
-           <a href="src/dropdowns/src/auto-complete">Source</a>
+           <a href="components/dropdowns/src/auto-complete">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/auto-complete/default.html">Live demo</a>
@@ -179,7 +179,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-combobox"><b>ComboBox</b></a>
        </td>
        <td>
-           <a href="src/dropdowns/src/combo-box">Source</a>
+           <a href="components/dropdowns/src/combo-box">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/combo-box/default.html">Live demo</a>
@@ -193,7 +193,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-dropdown-list"><b>Dropdown List</b></a>
        </td>
        <td>
-           <a href="src/dropdowns/src/drop-down-list">Source</a>
+           <a href="components/dropdowns/src/drop-down-list">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/drop-down-list/default.html">Live demo</a>
@@ -207,7 +207,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-dropdown-tree"><b>Dropdown Tree</b></a>
        </td>
        <td>
-           <a href="src/dropdowns/src/drop-down-tree">Source</a>
+           <a href="components/dropdowns/src/drop-down-tree">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/drop-down-tree/default.html">Live demo</a>
@@ -221,7 +221,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-listbox"><b>List Box</b></a>
        </td>
        <td>
-           <a href="src/dropdowns/src/list-box">Source</a>
+           <a href="components/dropdowns/src/list-box">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/list-box/default.html">Live demo</a>
@@ -235,7 +235,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-multiselect-dropdown"><b>MultiSelect Dropdown</b></a>
        </td>
        <td>
-           <a href="src/dropdowns/src/multi-select">Source</a>
+           <a href="components/dropdowns/src/multi-select">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/multi-select/default.html">Live demo</a>
@@ -257,7 +257,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-buttons"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-buttons"><img src="https://ej2.syncfusion.com/badges/ej2-buttons/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" /></a>
        </td>
        <td>
-           <a href="src/buttons/src/check-box">Source</a>
+           <a href="components/buttons/src/check-box">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/checkbox.html">Live demo</a>
@@ -271,7 +271,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-radio-button"><b>Radio Button</b></a>
        </td>
        <td>
-           <a href="src/buttons/src/radio-button">Source</a>
+           <a href="components/buttons/src/radio-button">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/radio-button.html">Live demo</a>
@@ -285,7 +285,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-toggle-switch-button"><b>Toggle Switch Button</b></a>
        </td>
        <td>
-           <a href="src/buttons/src/switch">Source</a>
+           <a href="components/buttons/src/switch">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/switch.html">Live demo</a>
@@ -302,7 +302,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-inputs"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-inputs" title="@syncfusion/ej2-vue-inputs" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-inputs"><img src="https://ej2.syncfusion.com/badges/ej2-inputs/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-inputs" title="@syncfusion/ej2-vue-inputs" /></a>
        </td>
        <td>
-           <a href="src/inputs/src/color-picker">Source</a>
+           <a href="components/inputs/src/color-picker">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/color-picker/default.html">Live demo</a>
@@ -316,7 +316,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-file-upload"><b>File Upload</b></a>
        </td>
        <td>
-           <a href="src/inputs/src/uploader">Source</a>
+           <a href="components/inputs/src/uploader">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/uploader/default.html">Live demo</a>
@@ -330,7 +330,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-input-mask"><b>Input Mask</b></a>
        </td>
        <td>
-           <a href="src/inputs/src/maskedtextbox">Source</a>
+           <a href="components/inputs/src/maskedtextbox">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/maskedtextbox/default.html">Live demo</a>
@@ -344,7 +344,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-numeric-textbox"><b>Numeric Textbox</b></a>
        </td>
        <td>
-           <a href="src/inputs/src/numerictextbox">Source</a>
+           <a href="components/inputs/src/numerictextbox">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/numerictextbox/default.html">Live demo</a>
@@ -358,7 +358,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-range-selector"><b>Range Slider</b></a>
        </td>
        <td>
-           <a href="src/inputs/src/slider">Source</a>
+           <a href="components/inputs/src/slider">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/range-navigator/default.htmll">Live demo</a>
@@ -372,7 +372,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-textbox"><b>TextBox</b></a>
        </td>
        <td>
-           <a href="src/inputs/src/textbox">Source</a>
+           <a href="components/inputs/src/textbox">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/textboxes/default.html">Live demo</a>
@@ -386,7 +386,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/Signature"><b>Signature</b></a>
        </td>
        <td>
-           <a href="src/inputs/src/signature">Source</a>
+           <a href="components/inputs/src/signature">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/signature/default.html">Live demo</a>
@@ -408,7 +408,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-barcode-generator"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-barcode-generator" title="@syncfusion/ej2-vue-barcode-generator" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-barcode-generator"><img src="https://ej2.syncfusion.com/badges/ej2-barcode-generator/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-barcode-generator" title="@syncfusion/ej2-vue-barcode-generator" /></a>
        </td>
        <td>
-           <a href="src/barcodegenerator/src">Source</a>
+           <a href="components/barcodegenerator/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/barcode/ean8.html">Live demo</a>
@@ -425,7 +425,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-circulargauge"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-circulargauge" title="@syncfusion/ej2-vue-circulargauge" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-circulargauge"><img src="https://ej2.syncfusion.com/badges/ej2-circulargauge/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-circulargauge" title="@syncfusion/ej2-vue-circulargauge" /></a>
        </td>
        <td>
-           <a href="src/circulargauge/src">Source</a>
+           <a href="components/circulargauge/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/circular-gauge/default.html">Live demo</a>
@@ -442,7 +442,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-diagrams"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-diagrams" title="@syncfusion/ej2-vue-diagrams" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-diagrams"><img src="https://ej2.syncfusion.com/badges/ej2-diagrams/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-diagrams" title="@syncfusion/ej2-vue-diagrams" /></a>
        </td>
        <td>
-           <a href="src/diagrams/src">Source</a>
+           <a href="components/diagrams/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/diagram/default-functionalities.html">Live demo</a>
@@ -459,7 +459,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-heatmap"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-heatmap" title="@syncfusion/ej2-vue-heatmap" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-heatmap"><img src="https://ej2.syncfusion.com/badges/ej2-heatmap/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-heatmap" title="@syncfusion/ej2-vue-heatmap" /></a>
        </td>
        <td>
-           <a href="src/heatmap/src">Source</a>
+           <a href="components/heatmap/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/heatmap/default.html">Live demo</a>
@@ -476,7 +476,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-kanban"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-kanban" title="@syncfusion/ej2-vue-kanban" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-kanban"><img src="https://ej2.syncfusion.com/badges/ej2-kanban/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-kanban" title="@syncfusion/ej2-vue-kanban" /></a>
        </td>
        <td>
-           <a href="src/kanban/src">Source</a>
+           <a href="components/kanban/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/kanban/overview.html">Live demo</a>
@@ -493,7 +493,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-lineargauge"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-lineargauge" title="@syncfusion/ej2-vue-lineargauge" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-lineargauge"><img src="https://ej2.syncfusion.com/badges/ej2-lineargauge/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-lineargauge" title="@syncfusion/ej2-vue-lineargauge" /></a>
        </td>
        <td>
-           <a href="src/lineargauge/src">Source</a>
+           <a href="components/lineargauge/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/linear-gauge/default.html">Live demo</a>
@@ -510,7 +510,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-maps"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-maps" title="@syncfusion/ej2-vue-maps" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-maps"><img src="https://ej2.syncfusion.com/badges/ej2-maps/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-maps" title="@syncfusion/ej2-vue-maps" /></a>
        </td>
        <td>
-           <a href="src/maps/src">Source</a>
+           <a href="components/maps/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/maps/default.html">Live demo</a>
@@ -527,7 +527,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-treemap"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-treemap" title="@syncfusion/ej2-vue-treemap" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-treemap"><img src="https://ej2.syncfusion.com/badges/ej2-treemap/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-treemap" title="@syncfusion/ej2-vue-treemap" /></a>
        </td>
        <td>
-           <a href="src/treemap/src">Source</a>
+           <a href="components/treemap/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/treemap/default.html">Live demo</a>
@@ -544,7 +544,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-charts"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-charts" title="@syncfusion/ej2-vue-charts" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-charts"><img src="https://ej2.syncfusion.com/badges/ej2-charts/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-charts" title="@syncfusion/ej2-vue-charts" /></a>
        </td>
        <td>
-           <a href="src/charts/src/bullet-chart">Source</a>
+           <a href="components/charts/src/bullet-chart">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/bullet-chart/default.html">Live demo</a>
@@ -558,7 +558,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-charts"><b>Charts</b></a>
        </td>
        <td>
-           <a href="src/charts/src/chart">Source</a>
+           <a href="components/charts/src/chart">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/chart/line.html">Live demo</a>
@@ -572,7 +572,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-range-selector"><b>Range Selector</b></a>
        </td>
        <td>
-           <a href="src/charts/src/range-navigator">Source</a>
+           <a href="components/charts/src/range-navigator">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/range-navigator/default.html">Live demo</a>
@@ -586,7 +586,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-smith-chart"><b>Smith Chart</b></a>
        </td>
        <td>
-           <a href="src/charts/src/smithchart">Source</a>
+           <a href="components/charts/src/smithchart">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/smith-chart/default.html">Live demo</a>
@@ -600,7 +600,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-sparkline"><b>Sparkline Charts</b></a>
        </td>
        <td>
-           <a href="src/charts/src/sparkline">Source</a>
+           <a href="components/charts/src/sparkline">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/sparkline/default.html">Live demo</a>
@@ -614,7 +614,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-stock-chart"><b>Stock Chart</b></a>
        </td>
        <td>
-           <a href="src/charts/src/stock-chart">Source</a>
+           <a href="components/charts/src/stock-chart">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/stock-chart/default.html">Live demo</a>
@@ -636,7 +636,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-calendars"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-calendars" title="@syncfusion/ej2-vue-calendars" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-calendars"><img src="https://ej2.syncfusion.com/badges/ej2-calendars/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-calendars" title="@syncfusion/ej2-vue-calendars" /></a>
        </td>
        <td>
-           <a href="src/calendars/src/calendar">Source</a>
+           <a href="components/calendars/src/calendar">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/calendar/default.html">Live demo</a>
@@ -650,7 +650,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-datepicker"><b>DatePicker</b></a>
        </td>
        <td>
-           <a href="src/calendars/src/datepicker">Source</a>
+           <a href="components/calendars/src/datepicker">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/datepicker/default.html">Live demo</a>
@@ -664,7 +664,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-date-range-picker"><b>DateRangePicker</b></a>
        </td>
        <td>
-           <a href="src/calendars/src/daterangepicker">Source</a>
+           <a href="components/calendars/src/daterangepicker">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/daterangepicker/default.html">Live demo</a>
@@ -678,7 +678,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-datetimepicker"><b>DateTime Picker</b></a>
        </td>
        <td>
-           <a href="src/calendars/src/datetimepicker">Source</a>
+           <a href="components/calendars/src/datetimepicker">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/datetimepicker/default.html">Live demo</a>
@@ -692,7 +692,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-timepicker"><b>TimePicker</b></a>
        </td>
        <td>
-           <a href="src/calendars/src/timepicker">Source</a>
+           <a href="components/calendars/src/timepicker">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/timepicker/default.html">Live demo</a>
@@ -709,7 +709,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-gantt"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-gantt" title="@syncfusion/ej2-vue-gantt" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-gantt"><img src="https://ej2.syncfusion.com/badges/ej2-gantt/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-gantt" title="@syncfusion/ej2-vue-gantt" /></a>
        </td>
        <td>
-           <a href="src/gantt/src">Source</a>
+           <a href="components/gantt/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/gantt/default.html">Live demo</a>
@@ -726,7 +726,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-schedule"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-schedule" title="@syncfusion/ej2-vue-schedule" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-schedule"><img src="https://ej2.syncfusion.com/badges/ej2-schedule/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-schedule" title="@syncfusion/ej2-vue-schedule" /></a>
        </td>
        <td>
-           <a href="src/schedule/src">Source</a>
+           <a href="components/schedule/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/schedule/overview.html">Live demo</a>
@@ -748,7 +748,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-navigations"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-navigations" title="@syncfusion/ej2-vue-navigations" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-navigations"><img src="https://ej2.syncfusion.com/badges/ej2-navigations/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-navigations" title="@syncfusion/ej2-vue-navigations" /></a>
        </td>
        <td>
-           <a href="src/navigations/src/accordion">Source</a>
+           <a href="components/navigations/src/accordion">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/accordion/default.html">Live demo</a>
@@ -762,7 +762,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/breadcrumb"><b>Breadcrumb</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/breadcrumb">Source</a>
+           <a href="components/navigations/src/breadcrumb">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/breadcrumb/default.html">Live demo</a>
@@ -776,7 +776,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/carousel"><b>Carousel</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/carousel">Source</a>
+           <a href="components/navigations/src/carousel">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/carousel/default.html">Live demo</a>
@@ -790,7 +790,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-context-menu"><b>Context Menu</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/context-menu">Source</a>
+           <a href="components/navigations/src/context-menu">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/context-menu/default.html">Live demo</a>
@@ -804,7 +804,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-menu-bar"><b>Menu Bar</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/menu">Source</a>
+           <a href="components/navigations/src/menu">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/menu/default.html">Live demo</a>
@@ -818,7 +818,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-sidebar"><b>Sidebar</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/sidebar">Source</a>
+           <a href="components/navigations/src/sidebar">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/sidebar/default.html">Live demo</a>
@@ -832,7 +832,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-tabs"><b>Tabs</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/tab">Source</a>
+           <a href="components/navigations/src/tab">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/tab/default.html">Live demo</a>
@@ -846,7 +846,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-toolbar"><b>Toolbar</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/toolbar">Source</a>
+           <a href="components/navigations/src/toolbar">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/toolbar/default.html">Live demo</a>
@@ -860,7 +860,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-tree-view"><b>TreeView</b></a>
        </td>
        <td>
-           <a href="src/navigations/src/treeview">Source</a>
+           <a href="components/navigations/src/treeview">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/treeview/default.html">Live demo</a>
@@ -877,7 +877,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-filemanager"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-filemanager" title="@syncfusion/ej2-vue-filemanager" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-filemanager"><img src="https://ej2.syncfusion.com/badges/ej2-filemanager/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-filemanager" title="@syncfusion/ej2-vue-filemanager" /></a>
        </td>
        <td>
-           <a href="src/filemanager/src">Source</a>
+           <a href="components/filemanager/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/file-manager/overview.html">Live demo</a>
@@ -899,7 +899,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-buttons"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-buttons"><img src="https://ej2.syncfusion.com/badges/ej2-buttons/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" /></a>
        </td>
        <td>
-           <a href="src/buttons/src/button">Source</a>
+           <a href="components/buttons/src/button">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/default.html">Live demo</a>
@@ -913,7 +913,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-chips"><b>Chips</b></a>
        </td>
        <td>
-           <a href="src/buttons/src/chips">Source</a>
+           <a href="components/buttons/src/chips">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/chips/default.html">Live demo</a>
@@ -930,7 +930,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-splitbuttons"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-splitbuttons" title="@syncfusion/ej2-vue-splitbuttons" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-splitbuttons"><img src="https://ej2.syncfusion.com/badges/ej2-splitbuttons/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-splitbuttons" title="@syncfusion/ej2-vue-splitbuttons" /></a>
        </td>
        <td>
-           <a href="src/splitbuttons/src/button-group">Source</a>
+           <a href="components/splitbuttons/src/button-group">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/button-group.html">Live demo</a>
@@ -944,7 +944,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-dropdown-menu"><b>Dropdown Menu</b></a>
        </td>
        <td>
-           <a href="src/splitbuttons/src/drop-down-button">Source</a>
+           <a href="components/splitbuttons/src/drop-down-button">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/dropdown-button.html">Live demo</a>
@@ -958,7 +958,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-progress-button"><b>Progress Button</b></a>
        </td>
        <td>
-           <a href="src/splitbuttons/src/progress-button">Source</a>
+           <a href="components/splitbuttons/src/progress-button">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/progress-button.html">Live demo</a>
@@ -972,7 +972,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-split-button"><b>Split Button</b></a>
        </td>
        <td>
-           <a href="src/splitbuttons/src/split-button">Source</a>
+           <a href="components/splitbuttons/src/split-button">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/split-button.html">Live demo</a>
@@ -994,7 +994,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-layouts"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-layouts" title="@syncfusion/ej2-vue-layouts" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-layouts"><img src="https://ej2.syncfusion.com/badges/ej2-layouts/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-layouts" title="@syncfusion/ej2-vue-layouts" /></a>
        </td>
        <td>
-           <a href="src/layouts/styles/avatar">Styles</a>
+           <a href="components/layouts/styles/avatar">Styles</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/avatar/default.html">Live demo</a>
@@ -1008,7 +1008,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-card"><b>Card</b></a>
        </td>
        <td>
-           <a href="src/layouts/styles/card">Styles</a>
+           <a href="components/layouts/styles/card">Styles</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/card/basic.html">Live demo</a>
@@ -1022,7 +1022,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout"><b>Dashboard Layout</b></a>
        </td>
        <td>
-           <a href="src/layouts/src/dashboard-layout">Source</a>
+           <a href="components/layouts/src/dashboard-layout">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/dashboard-layout/default.html">Live demo</a>
@@ -1036,7 +1036,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-splitter"><b>Splitter</b></a>
        </td>
        <td>
-           <a href="src/layouts/src/splitter">Source</a>
+           <a href="components/layouts/src/splitter">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/splitter/default.html">Live demo</a>
@@ -1053,7 +1053,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-popups"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-popups" title="@syncfusion/ej2-vue-popups" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-popups"><img src="https://ej2.syncfusion.com/badges/ej2-popups/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-popups" title="@syncfusion/ej2-vue-popups" /></a>
        </td>
        <td>
-           <a href="src/popups/src/dialog">Source</a>
+           <a href="components/popups/src/dialog">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/dialog/default.html">Live demo</a>
@@ -1067,7 +1067,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-tooltip"><b>Tooltip</b></a>
        </td>
        <td>
-           <a href="src/popups/src/tooltip">Source</a>
+           <a href="components/popups/src/tooltip">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/tooltip/default.html">Live demo</a>
@@ -1084,7 +1084,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-lists"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-lists" title="@syncfusion/ej2-vue-lists" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-lists"><img src="https://ej2.syncfusion.com/badges/ej2-lists/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-lists" title="@syncfusion/ej2-vue-lists" /></a>
        </td>
        <td>
-           <a href="src/lists/src">Source</a>
+           <a href="components/lists/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/listview/default.html">Live demo</a>
@@ -1106,7 +1106,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-notifications"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-notifications" title="@syncfusion/ej2-vue-notifications" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-notifications"><img src="https://ej2.syncfusion.com/badges/ej2-notifications/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-notifications" title="@syncfusion/ej2-vue-notifications" /></a>
        </td>
        <td>
-           <a href="src/notifications/styles/badge">Styles</a>
+           <a href="components/notifications/styles/badge">Styles</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/badge/default.html">Live demo</a>
@@ -1120,7 +1120,7 @@
            <a href="https://www.syncfusion.com/vue-ui-components/vue-toaster"><b>Toast</b></a>
        </td>
        <td>
-           <a href="src/notifications/src/toast">Source</a>
+           <a href="components/notifications/src/toast">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/toast/default.html">Live demo</a>
@@ -1137,7 +1137,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-progressbar"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-progressbar" title="@syncfusion/ej2-vue-progressbar" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-progressbar"><img src="https://ej2.syncfusion.com/badges/ej2-progressbar/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-progressbar" title="@syncfusion/ej2-vue-progressbar" /></a>
        </td>
        <td>
-           <a href="src/progressbar/src">Source</a>
+           <a href="components/progressbar/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/progress-bar/linear.html">Live demo</a>
@@ -1159,7 +1159,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-querybuilder"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-querybuilder" title="@syncfusion/ej2-vue-querybuilder" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-querybuilder"><img src="https://ej2.syncfusion.com/badges/ej2-querybuilder/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-querybuilder" title="@syncfusion/ej2-vue-querybuilder" /></a>
        </td>
        <td>
-           <a href="src/querybuilder/src">Source</a>
+           <a href="components/querybuilder/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/query-builder/default.html">Live demo</a>
@@ -1181,7 +1181,7 @@
            <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-pdfviewer"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-pdfviewer" title="@syncfusion/ej2-vue-pdfviewer" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-pdfviewer"><img src="https://ej2.syncfusion.com/badges/ej2-pdfviewer/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-pdfviewer" title="@syncfusion/ej2-vue-pdfviewer" /></a>
        </td>
        <td>
-           <a href="src/pdfviewer/src">Source</a>
+           <a href="components/pdfviewer/src">Source</a>
        </td>
        <td>
            <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/pdfviewer/default.html">Live demo</a>
