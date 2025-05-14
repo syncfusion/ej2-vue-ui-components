@@ -221,6 +221,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): void {
             return this.ej2Instances.filterByColumn(fieldName, filterOperator, filterValue, predicate, matchCase, ignoreAccent, actualFilterValue, actualOperator);
         },
+        freezeRefresh(): void {
+            return this.ej2Instances.freezeRefresh();
+        },
         getBatchChanges(): Object {
             return this.ej2Instances.getBatchChanges();
         },
@@ -581,6 +584,7 @@ export type GridComponent = typeof ComponentBase & {
     excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
     extendRequiredModules(modules: Object[]): void;
     filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): void;
+    freezeRefresh(): void;
     getBatchChanges(): Object;
     getCellFromIndex(rowIndex: number, columnIndex: number): Object;
     getColumnByField(field: string): Object;

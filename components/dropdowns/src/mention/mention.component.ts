@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { Mention, MentionModel } from '@syncfusion/ej2-dropdowns';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSpaces', 'cssClass', 'dataSource', 'displayTemplate', 'fields', 'filterType', 'highlight', 'ignoreCase', 'itemTemplate', 'locale', 'mentionChar', 'minLength', 'noRecordsTemplate', 'popupHeight', 'popupWidth', 'query', 'requireLeadingSpace', 'showMentionChar', 'sortOrder', 'spinnerTemplate', 'suffixText', 'suggestionCount', 'target', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'change', 'closed', 'created', 'destroyed', 'filtering', 'opened', 'select'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowSpaces', 'cssClass', 'dataSource', 'debounceDelay', 'displayTemplate', 'fields', 'filterType', 'highlight', 'ignoreCase', 'itemTemplate', 'locale', 'mentionChar', 'minLength', 'noRecordsTemplate', 'popupHeight', 'popupWidth', 'query', 'requireLeadingSpace', 'showMentionChar', 'sortOrder', 'spinnerTemplate', 'suffixText', 'suggestionCount', 'target', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeOpen', 'change', 'closed', 'created', 'destroyed', 'filtering', 'opened', 'select'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
