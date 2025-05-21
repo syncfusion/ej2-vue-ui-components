@@ -173,9 +173,6 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         bringToFront(): void {
             return this.ej2Instances.bringToFront();
         },
-        checkSize(node: Object, sx: number, sy: number): boolean {
-            return this.ej2Instances.checkSize(node, sx, sy);
-        },
         clear(): void {
             return this.ej2Instances.clear();
         },
@@ -462,7 +459,6 @@ export type DiagramComponent = typeof ComponentBase & {
     bringLayerForward(layerName: string): void;
     bringToCenter(bound: Object): void;
     bringToFront(): void;
-    checkSize(node: Object, sx: number, sy: number): boolean;
     clear(): void;
     clearHistory(): void;
     clearSelection(): void;
