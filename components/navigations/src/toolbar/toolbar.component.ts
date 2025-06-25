@@ -5,7 +5,7 @@ import { Toolbar, ToolbarModel } from '@syncfusion/ej2-navigations';
 import { ItemsDirective, ItemDirective, ItemsPlugin, ItemPlugin } from './items.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowKeyboard', 'cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowKeyboard', 'cssClass', 'enableCollision', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'items', 'locale', 'overflowMode', 'scrollStep', 'width', 'beforeCreate', 'clicked', 'created', 'destroyed', 'keyDown'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

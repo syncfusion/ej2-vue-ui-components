@@ -12,7 +12,7 @@ import { HolidaysDirective, HolidayDirective, HolidaysPlugin, HolidayPlugin } fr
 import { EventMarkersDirective, EventMarkerDirective, EventMarkersPlugin, EventMarkerPlugin } from './eventmarkers.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'UpdateOffsetOnTaskbarEdit', 'addDialogFields', 'allowExcelExport', 'allowFiltering', 'allowKeyboard', 'allowParentDependency', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTaskbarDragAndDrop', 'allowTaskbarOverlap', 'allowUnscheduledTasks', 'autoCalculateDateScheduling', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columnMenuItems', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'contextMenuItems', 'dataSource', 'dateFormat', 'dayWorkingTime', 'disableHtmlEncode', 'durationUnit', 'editDialogFields', 'editSettings', 'enableAdaptiveUI', 'enableContextMenu', 'enableCriticalPath', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableMultiTaskbar', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'enableTimelineVirtualization', 'enableUndoRedo', 'enableVirtualMaskRow', 'enableVirtualization', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'loadChildOnDemand', 'loadingIndicator', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'readOnly', 'renderBaseline', 'resourceFields', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'segmentData', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'showOverAllocation', 'sortSettings', 'splitterSettings', 'taskFields', 'taskMode', 'taskType', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'timelineTemplate', 'timezone', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'undoRedoActions', 'undoRedoStepsCount', 'updateOffsetOnTaskbarEdit', 'validateManualTasksOnLinking', 'viewType', 'weekWorkingTime', 'width', 'workUnit', 'workWeek', 'zoomingLevels', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeExcelExport', 'beforePdfExport', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataStateChange', 'destroyed', 'endEdit', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'onMouseMove', 'onTaskbarClick', 'pdfColumnHeaderQueryCellInfo', 'pdfExportComplete', 'pdfQueryCellInfo', 'pdfQueryTaskbarInfo', 'pdfQueryTimelineCellInfo', 'queryCellInfo', 'queryTaskbarInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'UpdateOffsetOnTaskbarEdit', 'addDialogFields', 'allowExcelExport', 'allowFiltering', 'allowKeyboard', 'allowParentDependency', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTaskbarDragAndDrop', 'allowTaskbarOverlap', 'allowUnscheduledTasks', 'autoCalculateDateScheduling', 'autoFocusTasks', 'baselineColor', 'collapseAllParentTasks', 'columnMenuItems', 'columns', 'connectorLineBackground', 'connectorLineWidth', 'contextMenuItems', 'dataSource', 'dateFormat', 'dayWorkingTime', 'disableHtmlEncode', 'durationUnit', 'editDialogFields', 'editSettings', 'enableAdaptiveUI', 'enableAutoWbsUpdate', 'enableContextMenu', 'enableCriticalPath', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableMultiTaskbar', 'enablePersistence', 'enablePredecessorValidation', 'enableRtl', 'enableTimelineVirtualization', 'enableUndoRedo', 'enableVirtualMaskRow', 'enableVirtualization', 'enableWBS', 'eventMarkers', 'filterSettings', 'gridLines', 'height', 'highlightWeekends', 'holidays', 'includeWeekend', 'labelSettings', 'loadChildOnDemand', 'loadingIndicator', 'locale', 'milestoneTemplate', 'parentTaskbarTemplate', 'projectEndDate', 'projectStartDate', 'query', 'readOnly', 'renderBaseline', 'resourceFields', 'resourceIDMapping', 'resourceNameMapping', 'resources', 'rowHeight', 'searchSettings', 'segmentData', 'selectedRowIndex', 'selectionSettings', 'showColumnMenu', 'showInlineNotes', 'showOverAllocation', 'sortSettings', 'splitterSettings', 'taskFields', 'taskMode', 'taskType', 'taskbarHeight', 'taskbarTemplate', 'timelineSettings', 'timelineTemplate', 'timezone', 'toolbar', 'tooltipSettings', 'treeColumnIndex', 'undoRedoActions', 'undoRedoStepsCount', 'updateOffsetOnTaskbarEdit', 'validateManualTasksOnLinking', 'viewType', 'weekWorkingTime', 'width', 'workUnit', 'workWeek', 'zoomingLevels', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeDataBound', 'beforeExcelExport', 'beforePdfExport', 'beforeTooltipRender', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSave', 'cellSelected', 'cellSelecting', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataStateChange', 'destroyed', 'endEdit', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'onMouseMove', 'onTaskbarClick', 'pdfColumnHeaderQueryCellInfo', 'pdfExportComplete', 'pdfQueryCellInfo', 'pdfQueryTaskbarInfo', 'pdfQueryTimelineCellInfo', 'queryCellInfo', 'queryTaskbarInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'splitterResizeStart', 'splitterResized', 'splitterResizing', 'taskbarEdited', 'taskbarEditing', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -143,6 +143,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         addRecord(data?: Object[] | Object | Object, rowPosition?: Object, rowIndex?: number): void {
             return this.ej2Instances.addRecord(data, rowPosition, rowIndex);
         },
+        autoFitColumns(fieldNames?: string | string[]): void {
+            return this.ej2Instances.autoFitColumns(fieldNames);
+        },
         cancelEdit(): void {
             return this.ej2Instances.cancelEdit();
         },
@@ -203,8 +206,14 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         fitToProject(): void {
             return this.ej2Instances.fitToProject();
         },
+        generateWBSCodes(flatDataCollection: Object[]): void {
+            return this.ej2Instances.generateWBSCodes(flatDataCollection);
+        },
         getCriticalTasks(): Object[] {
             return this.ej2Instances.getCriticalTasks();
+        },
+        getCurrentViewData(): Object[] {
+            return this.ej2Instances.getCurrentViewData();
         },
         getDurationString(duration: number, durationUnit: string): string {
             return this.ej2Instances.getDurationString(duration, durationUnit);
@@ -221,6 +230,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         getGridColumns(): Object[] {
             return this.ej2Instances.getGridColumns();
         },
+        getMaxRootWBSCode(parentDataCollection: Object[], parentItem?: Object): string {
+            return this.ej2Instances.getMaxRootWBSCode(parentDataCollection, parentItem);
+        },
         getRecordByID(id: string): Object {
             return this.ej2Instances.getRecordByID(id);
         },
@@ -235,6 +247,9 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
         },
         getTaskByUniqueID(id: string): Object {
             return this.ej2Instances.getTaskByUniqueID(id);
+        },
+        getTaskInfo(taskId: string): Object {
+            return this.ej2Instances.getTaskInfo(taskId);
         },
         getTaskbarHeight(): number {
             return this.ej2Instances.getTaskbarHeight();
@@ -395,6 +410,7 @@ export type GanttComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addPredecessor(id: number | string, predecessorString: string): void;
     addRecord(data?: Object[] | Object | Object, rowPosition?: Object, rowIndex?: number): void;
+    autoFitColumns(fieldNames?: string | string[]): void;
     cancelEdit(): void;
     changeTaskMode(data: Object): void;
     clearFiltering(fields?: string[]): void;
@@ -415,17 +431,21 @@ export type GanttComponent = typeof ComponentBase & {
     expandByIndex(index: number[] | number): void;
     filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[], predicate?: string, matchCase?: boolean, ignoreAccent?: boolean): void;
     fitToProject(): void;
+    generateWBSCodes(flatDataCollection: Object[]): void;
     getCriticalTasks(): Object[];
+    getCurrentViewData(): Object[];
     getDurationString(duration: number, durationUnit: string): string;
     getExpandedRecords(records: Object[]): Object[];
     getFormatedDate(date: Object, format?: string): string;
     getGanttColumns(): Object[];
     getGridColumns(): Object[];
+    getMaxRootWBSCode(parentDataCollection: Object[], parentItem?: Object): string;
     getRecordByID(id: string): Object;
     getRedoActions(): Object[];
     getRowByID(id: string | number): Object;
     getRowByIndex(index: number): Object;
     getTaskByUniqueID(id: string): Object;
+    getTaskInfo(taskId: string): Object;
     getTaskbarHeight(): number;
     getUndoActions(): Object[];
     getWorkString(work: number, workUnit: string): string;

@@ -6,7 +6,7 @@ import { AIAssistView, AIAssistViewModel } from '@syncfusion/ej2-interactive-cha
 import { ViewsDirective, ViewDirective, ViewsPlugin, ViewPlugin } from './views.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeView', 'bannerTemplate', 'cssClass', 'enablePersistence', 'enableRtl', 'footerTemplate', 'height', 'locale', 'prompt', 'promptIconCss', 'promptItemTemplate', 'promptPlaceholder', 'promptSuggestionItemTemplate', 'promptSuggestions', 'promptSuggestionsHeader', 'promptToolbarSettings', 'prompts', 'responseIconCss', 'responseItemTemplate', 'responseToolbarSettings', 'showClearButton', 'showHeader', 'toolbarSettings', 'views', 'width', 'created', 'promptChanged', 'promptRequest', 'stopRespondingClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeView', 'attachmentSettings', 'bannerTemplate', 'cssClass', 'enableAttachments', 'enablePersistence', 'enableRtl', 'footerTemplate', 'height', 'locale', 'prompt', 'promptIconCss', 'promptItemTemplate', 'promptPlaceholder', 'promptSuggestionItemTemplate', 'promptSuggestions', 'promptSuggestionsHeader', 'promptToolbarSettings', 'prompts', 'responseIconCss', 'responseItemTemplate', 'responseToolbarSettings', 'showClearButton', 'showHeader', 'toolbarSettings', 'views', 'width', 'attachmentRemoved', 'attachmentUploadFailure', 'attachmentUploadSuccess', 'beforeAttachmentUpload', 'created', 'promptChanged', 'promptRequest', 'stopRespondingClick'];
 export const modelProps: string[] = ['prompt'];
 
 export const testProp: any = getProps({props: properties});

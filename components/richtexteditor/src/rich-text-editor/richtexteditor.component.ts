@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { RichTextEditor, RichTextEditorModel } from '@syncfusion/ej2-richtexteditor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'autoSaveOnIdle', 'backgroundColor', 'bulletFormatList', 'cssClass', 'editorMode', 'emojiPickerSettings', 'enableAutoUrl', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enableXhtml', 'enabled', 'enterKey', 'exportPdf', 'exportWord', 'fileManagerSettings', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatPainterSettings', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'importWord', 'inlineMode', 'insertAudioSettings', 'insertImageSettings', 'insertVideoSettings', 'keyConfig', 'locale', 'maxLength', 'numberFormatList', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'shiftEnterKey', 'showCharCount', 'showTooltip', 'slashMenuSettings', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'afterImageDelete', 'afterMediaDelete', 'afterPasteCleanup', 'beforeDialogClose', 'beforeDialogOpen', 'beforeFileUpload', 'beforeImageDrop', 'beforeImageUpload', 'beforePasteCleanup', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'fileRemoving', 'fileSelected', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'slashMenuItemSelect', 'toolbarClick', 'toolbarStatusUpdate', 'updatedToolbarStatus'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'autoSaveOnIdle', 'backgroundColor', 'bulletFormatList', 'codeBlockSettings', 'cssClass', 'editorMode', 'emojiPickerSettings', 'enableAutoUrl', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enableXhtml', 'enabled', 'enterKey', 'exportPdf', 'exportWord', 'fileManagerSettings', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatPainterSettings', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'importWord', 'inlineMode', 'insertAudioSettings', 'insertImageSettings', 'insertVideoSettings', 'keyConfig', 'locale', 'maxLength', 'numberFormatList', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'shiftEnterKey', 'showCharCount', 'showTooltip', 'slashMenuSettings', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'afterImageDelete', 'afterMediaDelete', 'afterPasteCleanup', 'beforeDialogClose', 'beforeDialogOpen', 'beforeFileUpload', 'beforeImageDrop', 'beforeImageUpload', 'beforePasteCleanup', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'fileRemoving', 'fileSelected', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'slashMenuItemSelect', 'toolbarClick', 'toolbarStatusUpdate', 'updatedToolbarStatus'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -136,6 +136,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         cleanList(e: Object): void {
             return this.ej2Instances.cleanList(e);
         },
+        clearUndoRedo(): void {
+            return this.ej2Instances.clearUndoRedo();
+        },
         closeDialog(type: Object): void {
             return this.ej2Instances.closeDialog(type);
         },
@@ -148,7 +151,7 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void {
             return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
         },
-        executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object, option?: Object): void {
+        executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object | Object, option?: Object): void {
             return this.ej2Instances.executeCommand(commandName, value, option);
         },
         focusIn(): void {
@@ -241,11 +244,12 @@ export type RichTextEditorComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     addAnchorAriaLabel(value: string): string;
     cleanList(e: Object): void;
+    clearUndoRedo(): void;
     closeDialog(type: Object): void;
     destroy(): void;
     disableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
     enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
-    executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object, option?: Object): void;
+    executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object | Object, option?: Object): void;
     focusIn(): void;
     focusOut(): void;
     getCharCount(): number;

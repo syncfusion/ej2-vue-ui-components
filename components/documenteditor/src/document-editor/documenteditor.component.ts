@@ -200,8 +200,8 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         updateFields(): void {
             return this.ej2Instances.updateFields();
         },
-        verbelizeFromCursorLocation(): void {
-            return this.ej2Instances.verbelizeFromCursorLocation();
+        verbalizeFromCursorLocation(): void {
+            return this.ej2Instances.verbalizeFromCursorLocation();
         },
     }
 });
@@ -258,7 +258,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     showRestrictEditingPane(show?: boolean): void;
     showXmlPane(): void;
     updateFields(): void;
-    verbelizeFromCursorLocation(): void
+    verbalizeFromCursorLocation(): void
 };
 
 export const DocumentEditorPlugin = {
