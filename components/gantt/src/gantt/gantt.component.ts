@@ -36,7 +36,7 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
     provide() { return { custom: this.custom } },
     data() {
         return {
-            ej2Instances: new Gantt({}) as any,
+            ej2Instance: new Gantt({}) as any,
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
@@ -393,7 +393,7 @@ export let GanttComponent: DefineVueComponent<GanttModel> =  vueDefineComponent(
 });
 
 export type GanttComponent = typeof ComponentBase & {
-    ej2Instances: Gantt;
+    ej2Instance: Gantt;
     isVue3: boolean;
     isLazyUpdate: Boolean;
     plugins: any[];
