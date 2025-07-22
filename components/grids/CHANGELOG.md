@@ -2,6 +2,27 @@
 
 ## [Unreleased]
 
+## 30.1.41 (2025-07-22)
+
+### Grid
+
+#### Bug Fixes
+
+- `#I747365` - Resolved a script error that occurred when clicking the `Select All` checkbox while both `ColumnVirtualization` and infinite scrolling were enabled.
+- `#I747475` - Fixed a script error that appeared when expanding grouped records in Lazy Load Grouping with the `URLAdaptor`.
+- `I7443387` - Fixed an issue where the `show/hide` columns feature failed to work when using Lazy Load Grouping with `virtualization`.
+
+## 30.1.40 (2025-07-15)
+
+### Grid
+
+#### Bug Fixes
+
+- `#I744173` - Resolved an issue where the `ColumnChooser` could not be opened after the Filter dialog was opened.
+- `#I743131` - Resolved an issue where filtering a string column with an empty string in local data shows no records.
+- `#FB68522` - Fixed an issue where focus incorrectly shifted to the grid toolbar when all toolbar items were disabled.
+- `#I737920` - Fixed an issue where the group caption aggregate was missing for the first numeric column during server-side Excel export.
+
 ## 30.1.39 (2025-07-08)
 
 ### Grid
