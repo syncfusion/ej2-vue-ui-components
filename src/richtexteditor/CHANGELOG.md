@@ -6,6 +6,14 @@
 
 #### Bug Fixes
 
+- `#I754192` - Now, the Rich Text Editor works properly when a binding value is wrapped with a `<div>`, and no extra `<p>` tags are added.
+
+## 30.2.5 (2025-08-13)
+
+### RichTextEditor
+
+#### Bug Fixes
+
 - `#I698253` - Now, the Rich Text Editor works properly when removing inline code, and the page no longer becomes unresponsive.
 
 - `#I752891` - Now, the Rich Text Editor works properly when pressing the Home and End keys after inserting a mention.

@@ -6,6 +6,20 @@
 
 #### Bug fixes
 
+- `#I748629` - Resolved an issue where selecting an empty option resulted in the incorrect value.
+
+## 30.2.5 (2025-08-13)
+
+### DropDownTree
+
+#### Bug fixes
+
+- `#I754645` - Fixed an issue where checkbox selections were cleared after filtering when both showCheckBox and allowFiltering properties were enabled.
+
+### MultiSelect
+
+#### Bug fixes
+
 - `#I748341` - Fixed an issue where data was not loading properly and the popup closed automatically after selecting `Select All` and scrolling the list.
 
 ## 30.2.4 (2025-08-07)

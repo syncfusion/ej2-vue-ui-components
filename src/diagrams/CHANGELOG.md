@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## 30.2.5 (2025-08-13)
+
 ### Diagram
 
 #### Bug Fixes

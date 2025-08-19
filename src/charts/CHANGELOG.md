@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Chart
+
+#### Bug Fixes
+
+- `#T745980` - The legend text and symbol will no longer overlap when RTL is enabled.
+
+## 30.2.4 (2025-08-13)
+
 ### Accumulation Chart
 
 #### Bug Fixes

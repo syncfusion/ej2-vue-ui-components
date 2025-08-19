@@ -12,6 +12,8 @@
 
 - `#I746116` - Now the issue with `tabIndex` property not being updated properly for the header toolbar items in the ChatUI has been resolved.
 
+- `#I746122` - Now the issue with DropDownButton disappearing after drag, when configured the headerToolbar template inside Rnd component has been resolved in the Chat UI.
+
 ## 29.1.33 (2025-03-25)
 
 ### Chat UI

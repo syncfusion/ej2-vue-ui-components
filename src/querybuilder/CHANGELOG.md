@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### QueryBuilder
+
+- `#I753541` - The issue with the dropdown list positioning in QueryBuilder, which caused overflow in the React sample, has been resolved.
+
 ## 30.1.42 (2025-07-29)
 
 ### QueryBuilder
