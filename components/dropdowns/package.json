@@ -28,7 +28,7 @@
 		"@syncfusion/ej2-dropdowns": "*"
 	},
 	"devDependencies": {
-		"awesome-typescript-loader": "5.2.1",
+		"ts-loader": "9.4.4",
 		"source-map-loader": "5.0.0",
 		"@types/chai": "3.5.2",
 		"@types/es6-promise": "0.0.33",
@@ -38,18 +38,19 @@
 		"vue": "2.6.14",
 		"vue-loader-v16": "16.0.0-beta.5.4",
 		"rollup": "2.79.2",
-		"rollup-plugin-commonjs": "10.1.0",
-		"rollup-plugin-node-resolve": "5.2.0",
+		"@rollup/plugin-commonjs": "22.0.2",
+		"@rollup/plugin-node-resolve": "13.3.0",
 		"rollup-plugin-sourcemaps": "0.6.3",
-		"rollup-plugin-typescript": "1.0.1",
-		"rollup-plugin-uglify": "6.0.4",
+		"@rollup/plugin-typescript": "8.5.0",
+		"@rollup/plugin-terser": "0.4.4",
 		"@types/node": "20.11.10",
 		"es6-promise": "^3.2.1",
-		"gulp": "^3.9.1",
-		"gulp-sass": "^3.1.0",
-		"gulp-typescript": "^3.1.6",
+		"gulp": "^4.0.2",
+		"sass": "^1.69.5",
+		"gulp-sass": "^5.1.0",
+		"gulp-typescript": "^5.0.1",
 		"requirejs": "^2.3.3",
-		"typescript": "2.3.4"
+		"typescript": "4.9.5"
 	},
 	"scripts": {
 		"build": "gulp build"
