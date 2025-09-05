@@ -5,7 +5,7 @@ import { ChatUI, ChatUIModel } from '@syncfusion/ej2-interactive-chat';
 import { MessagesDirective, MessageDirective, MessagesPlugin, MessagePlugin } from './messages.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'autoScrollToBottom', 'cssClass', 'emptyChatTemplate', 'enableCompactMode', 'enablePersistence', 'enableRtl', 'footerTemplate', 'headerIconCss', 'headerText', 'headerToolbar', 'height', 'loadOnDemand', 'locale', 'messageTemplate', 'messageToolbarSettings', 'messages', 'placeholder', 'showFooter', 'showHeader', 'showTimeBreak', 'showTimeStamp', 'suggestionTemplate', 'suggestions', 'timeBreakTemplate', 'timeStampFormat', 'typingUsers', 'typingUsersTemplate', 'user', 'width', 'created', 'messageSend', 'userTyping'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'autoScrollToBottom', 'cssClass', 'emptyChatTemplate', 'enableCompactMode', 'enablePersistence', 'enableRtl', 'footerTemplate', 'headerIconCss', 'headerText', 'headerToolbar', 'height', 'loadOnDemand', 'locale', 'mentionTriggerChar', 'mentionUsers', 'messageTemplate', 'messageToolbarSettings', 'messages', 'placeholder', 'showFooter', 'showHeader', 'showTimeBreak', 'showTimeStamp', 'suggestionTemplate', 'suggestions', 'timeBreakTemplate', 'timeStampFormat', 'typingUsers', 'typingUsersTemplate', 'user', 'width', 'created', 'mentionSelect', 'messageSend', 'userTyping'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

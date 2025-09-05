@@ -120,15 +120,6 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         getBlockCount(): number {
             return this.ej2Instances.getBlockCount();
         },
-        getBlockElementById(blockId: string): Object | null {
-            return this.ej2Instances.getBlockElementById(blockId);
-        },
-        getContentModelForFragment(fragment: Object, blockModel: Object, referenceNode: Object): Object[] {
-            return this.ej2Instances.getContentModelForFragment(fragment, blockModel, referenceNode);
-        },
-        getCurrentFocusedBlockModel(): Object {
-            return this.ej2Instances.getCurrentFocusedBlockModel();
-        },
         getDataAsHtml(blockId?: string): string {
             return this.ej2Instances.getDataAsHtml(blockId);
         },
@@ -141,32 +132,17 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         getSelectedBlocks(): Object[] | null {
             return this.ej2Instances.getSelectedBlocks();
         },
-        handleBlockTransformation(args: Object): void {
-            return this.ej2Instances.handleBlockTransformation(args);
-        },
-        handleSelectiveDeletions(event: Object): boolean {
-            return this.ej2Instances.handleSelectiveDeletions(event);
-        },
         moveBlock(fromBlockId: string, toBlockId: string): void {
             return this.ej2Instances.moveBlock(fromBlockId, toBlockId);
-        },
-        populateUniqueIds(blocks: Object[], parentBlockId?: string): void {
-            return this.ej2Instances.populateUniqueIds(blocks, parentBlockId);
         },
         print(): void {
             return this.ej2Instances.print();
         },
-        reRenderBlockContent(block: Object): void {
-            return this.ej2Instances.reRenderBlockContent(block);
-        },
         removeBlock(blockId: string): void {
             return this.ej2Instances.removeBlock(blockId);
         },
-        renderBlocks(blocks: Object[]): void {
-            return this.ej2Instances.renderBlocks(blocks);
-        },
-        renderTemplate(block: Object, templateElement: Object): void {
-            return this.ej2Instances.renderTemplate(block, templateElement);
+        renderBlocksFromJson(json: object | string, replace: boolean, targetBlockId?: string): boolean {
+            return this.ej2Instances.renderBlocksFromJson(json, replace, targetBlockId);
         },
         selectAllBlocks(): void {
             return this.ej2Instances.selectAllBlocks();
@@ -177,32 +153,14 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         selectRange(range: Object): void {
             return this.ej2Instances.selectRange(range);
         },
-        serializeValue(value: string): string {
-            return this.ej2Instances.serializeValue(value);
-        },
         setCursorPosition(blockId: string, position: number): void {
             return this.ej2Instances.setCursorPosition(blockId, position);
-        },
-        setFocusToBlock(block: Object): void {
-            return this.ej2Instances.setFocusToBlock(block);
         },
         setSelection(contentId: string, startIndex: number, endIndex: number): void {
             return this.ej2Instances.setSelection(contentId, startIndex, endIndex);
         },
-        showFloatingIcons(target: Object): void {
-            return this.ej2Instances.showFloatingIcons(target);
-        },
-        splitAndCreateNewBlockAtCursor(args?: Object): void {
-            return this.ej2Instances.splitAndCreateNewBlockAtCursor(args);
-        },
-        togglePlaceholder(blockElement: Object, isFocused: boolean): void {
-            return this.ej2Instances.togglePlaceholder(blockElement, isFocused);
-        },
         updateBlock(blockId: string, properties: Object): boolean {
             return this.ej2Instances.updateBlock(blockId, properties);
-        },
-        updateContentOnUserTyping(blockElement: Object, e?: Object): void {
-            return this.ej2Instances.updateContentOnUserTyping(blockElement, e);
         },
     }
 });
@@ -232,34 +190,20 @@ export type BlockEditorComponent = typeof ComponentBase & {
     focusOut(): void;
     getBlock(blockId: string): Object | null;
     getBlockCount(): number;
-    getBlockElementById(blockId: string): Object | null;
-    getContentModelForFragment(fragment: Object, blockModel: Object, referenceNode: Object): Object[];
-    getCurrentFocusedBlockModel(): Object;
     getDataAsHtml(blockId?: string): string;
     getDataAsJson(blockId?: string): any;
     getRange(): Object | null;
     getSelectedBlocks(): Object[] | null;
-    handleBlockTransformation(args: Object): void;
-    handleSelectiveDeletions(event: Object): boolean;
     moveBlock(fromBlockId: string, toBlockId: string): void;
-    populateUniqueIds(blocks: Object[], parentBlockId?: string): void;
     print(): void;
-    reRenderBlockContent(block: Object): void;
     removeBlock(blockId: string): void;
-    renderBlocks(blocks: Object[]): void;
-    renderTemplate(block: Object, templateElement: Object): void;
+    renderBlocksFromJson(json: object | string, replace: boolean, targetBlockId?: string): boolean;
     selectAllBlocks(): void;
     selectBlock(blockId: string): void;
     selectRange(range: Object): void;
-    serializeValue(value: string): string;
     setCursorPosition(blockId: string, position: number): void;
-    setFocusToBlock(block: Object): void;
     setSelection(contentId: string, startIndex: number, endIndex: number): void;
-    showFloatingIcons(target: Object): void;
-    splitAndCreateNewBlockAtCursor(args?: Object): void;
-    togglePlaceholder(blockElement: Object, isFocused: boolean): void;
-    updateBlock(blockId: string, properties: Object): boolean;
-    updateContentOnUserTyping(blockElement: Object, e?: Object): void
+    updateBlock(blockId: string, properties: Object): boolean
 };
 
 export const BlockEditorPlugin = {
