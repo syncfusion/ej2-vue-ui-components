@@ -119,6 +119,12 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         getComments(): Object[] {
             return this.ej2Instances.getComments();
         },
+        getDefaultCharacterFormat(): Object {
+            return this.ej2Instances.getDefaultCharacterFormat();
+        },
+        getDocumentCharacterFormat(): Object {
+            return this.ej2Instances.getDocumentCharacterFormat();
+        },
         getFormFieldInfo(name: string): Object | Object | Object {
             return this.ej2Instances.getFormFieldInfo(name);
         },
@@ -182,6 +188,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         setDefaultSectionFormat(sectionFormat: Object): void {
             return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
         },
+        setDocumentCharacterFormat(characterFormat: Object): void {
+            return this.ej2Instances.setDocumentCharacterFormat(characterFormat);
+        },
         setFormFieldInfo(name: string, formFieldInfo: Object | Object | Object): void {
             return this.ej2Instances.setFormFieldInfo(name, formFieldInfo);
         },
@@ -231,6 +240,8 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     focusIn(): void;
     getBookmarks(): string[];
     getComments(): Object[];
+    getDefaultCharacterFormat(): Object;
+    getDocumentCharacterFormat(): Object;
     getFormFieldInfo(name: string): Object | Object | Object;
     getFormFieldNames(): string[];
     getStyleNames(styleType?: Object): string[];
@@ -252,6 +263,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     setDefaultCharacterFormat(characterFormat: Object): void;
     setDefaultParagraphFormat(paragraphFormat: Object): void;
     setDefaultSectionFormat(sectionFormat: Object): void;
+    setDocumentCharacterFormat(characterFormat: Object): void;
     setFormFieldInfo(name: string, formFieldInfo: Object | Object | Object): void;
     showDialog(dialogType: Object): void;
     showOptionsPane(): void;
