@@ -122,8 +122,17 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         getDefaultCharacterFormat(): Object {
             return this.ej2Instances.getDefaultCharacterFormat();
         },
+        getDefaultParagraphFormat(): Object {
+            return this.ej2Instances.getDefaultParagraphFormat();
+        },
+        getDefaultSectionFormat(): Object {
+            return this.ej2Instances.getDefaultSectionFormat();
+        },
         getDocumentCharacterFormat(): Object {
             return this.ej2Instances.getDocumentCharacterFormat();
+        },
+        getDocumentParagraphFormat(): Object {
+            return this.ej2Instances.getDocumentParagraphFormat();
         },
         getFormFieldInfo(name: string): Object | Object | Object {
             return this.ej2Instances.getFormFieldInfo(name);
@@ -191,6 +200,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         setDocumentCharacterFormat(characterFormat: Object): void {
             return this.ej2Instances.setDocumentCharacterFormat(characterFormat);
         },
+        setDocumentParagraphFormat(paragraphFormat: Object): void {
+            return this.ej2Instances.setDocumentParagraphFormat(paragraphFormat);
+        },
         setFormFieldInfo(name: string, formFieldInfo: Object | Object | Object): void {
             return this.ej2Instances.setFormFieldInfo(name, formFieldInfo);
         },
@@ -241,7 +253,10 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     getBookmarks(): string[];
     getComments(): Object[];
     getDefaultCharacterFormat(): Object;
+    getDefaultParagraphFormat(): Object;
+    getDefaultSectionFormat(): Object;
     getDocumentCharacterFormat(): Object;
+    getDocumentParagraphFormat(): Object;
     getFormFieldInfo(name: string): Object | Object | Object;
     getFormFieldNames(): string[];
     getStyleNames(styleType?: Object): string[];
@@ -264,6 +279,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     setDefaultParagraphFormat(paragraphFormat: Object): void;
     setDefaultSectionFormat(sectionFormat: Object): void;
     setDocumentCharacterFormat(characterFormat: Object): void;
+    setDocumentParagraphFormat(paragraphFormat: Object): void;
     setFormFieldInfo(name: string, formFieldInfo: Object | Object | Object): void;
     showDialog(dialogType: Object): void;
     showOptionsPane(): void;

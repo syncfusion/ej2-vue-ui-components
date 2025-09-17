@@ -95,6 +95,21 @@ export let DocumentEditorContainerComponent: DefineVueComponent<DocumentEditorCo
         destroy(): void {
             return this.ej2Instances.destroy();
         },
+        getDefaultCharacterFormat(): Object {
+            return this.ej2Instances.getDefaultCharacterFormat();
+        },
+        getDefaultParagraphFormat(): Object {
+            return this.ej2Instances.getDefaultParagraphFormat();
+        },
+        getDefaultSectionFormat(): Object {
+            return this.ej2Instances.getDefaultSectionFormat();
+        },
+        getDocumentCharacterFormat(): Object {
+            return this.ej2Instances.getDocumentCharacterFormat();
+        },
+        getDocumentParagraphFormat(): Object {
+            return this.ej2Instances.getDocumentParagraphFormat();
+        },
         resize(width?: number, height?: number): void {
             return this.ej2Instances.resize(width, height);
         },
@@ -106,6 +121,12 @@ export let DocumentEditorContainerComponent: DefineVueComponent<DocumentEditorCo
         },
         setDefaultSectionFormat(sectionFormat: Object): void {
             return this.ej2Instances.setDefaultSectionFormat(sectionFormat);
+        },
+        setDocumentCharacterFormat(characterFormat: Object): void {
+            return this.ej2Instances.setDocumentCharacterFormat(characterFormat);
+        },
+        setDocumentParagraphFormat(paragraphFormat: Object): void {
+            return this.ej2Instances.setDocumentParagraphFormat(paragraphFormat);
         },
     }
 });
@@ -127,10 +148,17 @@ export type DocumentEditorContainerComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     destroy(): void;
+    getDefaultCharacterFormat(): Object;
+    getDefaultParagraphFormat(): Object;
+    getDefaultSectionFormat(): Object;
+    getDocumentCharacterFormat(): Object;
+    getDocumentParagraphFormat(): Object;
     resize(width?: number, height?: number): void;
     setDefaultCharacterFormat(characterFormat: Object): void;
     setDefaultParagraphFormat(paragraphFormat: Object): void;
-    setDefaultSectionFormat(sectionFormat: Object): void
+    setDefaultSectionFormat(sectionFormat: Object): void;
+    setDocumentCharacterFormat(characterFormat: Object): void;
+    setDocumentParagraphFormat(paragraphFormat: Object): void
 };
 
 export const DocumentEditorContainerPlugin = {
