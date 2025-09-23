@@ -10,6 +10,18 @@
 
 - `#I762396` - Resolved the script error that occurred when copying and pasting bullet list content from Outlook into the `RichTextEditor`.
 
+### ComboBox
+
+#### Bug Fixes
+
+- `#I762995` - Fixed an issue where the combobox did not update its value when the `ignoreAccent` property was set to true.
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `I761815` - Resolved an issue where MultiSelect items remained enabled when the maximum selection length was set to zero.
+
 ## 28.2.9 (2025-03-04)
 
 ### ComboBox
