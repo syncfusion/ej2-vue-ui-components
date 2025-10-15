@@ -104,6 +104,9 @@ export let PivotViewComponent: DefineVueComponent<PivotViewModel> =  vueDefineCo
         destroy(): void {
             return this.ej2Instances.destroy();
         },
+        encodeHtml(value: string): string {
+            return this.ej2Instances.encodeHtml(value);
+        },
         excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void {
             return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
         },
@@ -151,6 +154,7 @@ export type PivotViewComponent = typeof ComponentBase & {
     createCalculatedFieldDialog(): void;
     csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
     destroy(): void;
+    encodeHtml(value: string): string;
     excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
     exportAsPivot(exportType?: Object): void;
     loadPersistData(persistData: string): void;

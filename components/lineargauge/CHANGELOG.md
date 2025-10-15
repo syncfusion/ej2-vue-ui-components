@@ -10,14 +10,6 @@
 
 ## [Unreleased]
 
-## 31.1.23 (2025-10-07)
-
-### LinearGauge
-
-#### Bug Fixes
-
-- `#T723906` - Touch scrolling for the Linear Gauge works correctly on touch-enabled devices.
-
 ## 18.3.47 (2020-11-05)
 
 ### LinearGauge
