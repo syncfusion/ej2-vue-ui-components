@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 31.2.5 (2025-11-04)
+
+### Common
+
+#### Bug Fixes
+
+- `#I776886` - Fixed a memory leak issue in Vue components when using slot templates during data source updates.
+
 ## 25.1.35 (2024-03-15)
 
 ### Common

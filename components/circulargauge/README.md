@@ -15,7 +15,7 @@ The [Vue Circular Gauge](https://www.syncfusion.com/vue-components/vue-circular-
 <p align="center">
 Trusted by the world's leading companies
   <a href="https://www.syncfusion.com">
-    <img src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/syncfusion/syncfusion-trusted-companies.webp" alt="Bootstrap logo">
+    <img src="https://ej2.syncfusion.com/home/images/trusted_companies.png" alt="Bootstrap logo">
   </a>
 </p>
 
@@ -33,9 +33,9 @@ npm run serve
 ```
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-### Add Syncfusion Circular Gauge package
+### Add Syncfusion<sup>®</sup> Circular Gauge package
 
-All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue Circular Gauge package, use the following command.
+All Syncfusion<sup>®</sup> Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install Vue Circular Gauge package, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-vue-circulargauge --save
@@ -70,7 +70,7 @@ export default {}
 </script>
 ```
 
-> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/circular-gauge/getting-started-vue-3/) topic for using Syncfusion Vue components in Vue 3 applications.
+> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/circular-gauge/getting-started-vue-3/) topic for using Syncfusion<sup>®</sup> Vue components in Vue 3 applications.
 
 ## Supported frameworks
 
@@ -101,6 +101,14 @@ Circular Gauge component is also offered in the following list of frameworks.
 * [Globalization](https://ej2.syncfusion.com/vue/documentation/circular-gauge/internationalization/?utm_source=npm&utm_medium=listing&utm_campaign=vue-circulargauge-npm): Personalize the circular gauge component with different languages, as well as culture-specific number, date and time formatting.
 * [Accessibility](https://ej2.syncfusion.com/vue/documentation/circular-gauge/accessibility/?utm_source=npm&utm_medium=listing&utm_campaign=vue-circulargauge-npm): Provides with built-in accessibility support which helps to access all the circular gauge component features through the keyboard, screen readers, or other assistive technology devices. 
 
+## Resources
+
+* [Documentation](https://ej2.syncfusion.com/vue/documentation/introduction)
+* [Theme Studio](https://ej2.syncfusion.com/themestudio/)
+* [What's New](https://www.syncfusion.com/products/whatsnew/vue?utm_medium=listing&utm_source=github)
+* [Road Map](https://www.syncfusion.com/products/roadmap/vue)
+* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all)
+
 ## Support
 
 Product support is available through the following mediums.
@@ -117,10 +125,10 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 ##  License and copyright
 
-> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 80+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
+> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 140+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
 
 > A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/circulargauge/license?utm_source=npm&utm_medium=listing&utm_campaign=vue-circulargauge-npm) for more info.
 
-&copy; Copyright 2024 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+&copy; Copyright 2025 Syncfusion<sup>®</sup>, Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential<sup>®</sup> Studio license and copyright applies to this distribution.

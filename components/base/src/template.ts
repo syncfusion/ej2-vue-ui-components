@@ -52,7 +52,7 @@ export function compile(
                             if (!templateInstance[`${propName}`]) {
                                 templateInstance[`${propName}`] = [];
                             }
-                            templateInstance[`${propName}`].push(ele);
+                            templateInstance[`${propName}`].push(returnEle[0]);
                         }
                     }
                     detach(ele);
@@ -131,7 +131,7 @@ export function compile(
                         if (!templateInstance[`${propName}`]) {
                             templateInstance[`${propName}`] = [];
                         }
-                        templateInstance[`${propName}`].push(ele);
+                        templateInstance[`${propName}`].push(returnEle[0]);
                     }
                 }
                 detach(ele);

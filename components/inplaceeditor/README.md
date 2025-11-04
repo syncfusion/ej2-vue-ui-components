@@ -1,10 +1,13 @@
 # ej2-vue-inplace-editor
 
+The [Vue In-place Editor](https://www.syncfusion.com/vue-components/vue-in-place-editor) is a rich and responsive component for inline editing of text, selections, dates, and more without switching to a separate edit view. It supports “Inline” and “Popup” edit modes, integrates with editors like DropDownList and DatePicker, and works seamlessly with forms and data binding to update values efficiently.
+
+<p align="center">
+    <a href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started.html?lang=typescript&utm_source=npm&utm_campaign=inplace-editor">Getting started</a> . 
+    <a href="https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=inplace-editor#/material/inplace-editor/default.html">Online demos</a> . 
+</p>
+
 ![ej2-vue-inplace-editor](https://ej2.syncfusion.com/products/images/inplace-editor/readMe.gif)
-
-> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license, you can purchase one at [https://www.syncfusion.com/sales/products](https://www.syncfusion.com/sales/products) or start a free 30-day trial [here](https://www.syncfusion.com/account/manage-trials/start-trials).
-
-> A free [community license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 
 ## Setup
 
@@ -14,39 +17,41 @@ To install `In-place Editor` and its dependent packages, use the following comma
 npm install @syncfusion/ej2-vue-inplace-editor
 ```
 
-## Resources
 
-* [Getting Started](https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started.html?lang=typescript&utm_source=npm&utm_campaign=inplace-editor)
-* [View Online Demos](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_campaign=inplace-editor#/material/inplace-editor/default.html)
-* [Product Page](https://www.syncfusion.com/vue-ui-controls/inplace-editor)
+## Supported frameworks
 
-## Supported Frameworks
+In-place Editor control is also offered in the following list of frameworks.
 
-In-place Editor component is also offered in following list of frameworks.
-
-1. [Angular](https://github.com/syncfusion/ej2-angular-ui-components/tree/master/components/inplace-editor)
-2. [VueJS](https://github.com/syncfusion/ej2-vue-ui-components/tree/master/components/inplace-editor)
-3. [JavaScript (ES5)](https://www.syncfusion.com/javascript-ui-controls/inplace-editor)
-3. [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls/inplace-editor)
-4. [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls/inplace-editor)
-5. [JavaScript (ES5)](https://www.syncfusion.com/javascript-ui-controls/inplace-editor)
+| [<img src="https://ej2.syncfusion.com/github/images/angular-new.svg" height="50" />](https://www.syncfusion.com/angular-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg"  height="50" />](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/vue.svg" height="50" />](https://www.syncfusion.com/vue-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vue](https://www.syncfusion.com/vue-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
+| :-----: | :-----: | :-----: | :-----: | :-----: |
 
 ## Key Features
 
-*  **Render mode** - Provides two types of rendering modes when editing the input, namely “Inline” and “Popup”.
+* [Render mode](https://ej2.syncfusion.com/vue/documentation/inplace-editor/configuration) - Provides two types of rendering modes when editing the input, namely “Inline” and “Popup”.
 *  **Component integration** - Support to integrate components such as “DropDownList”, “DatePicker”,” AutoComplete”, etc. to the In-place Editor.
-*  **Data binding**  - Bind the In-place Editor component with an array of JSON objects or DataManager to save the edited data to the server.
-*  **Customization**  - Offers UI customization such as popup, buttons, and also denotes editable content state.
+* [Data binding](https://ej2.syncfusion.com/vue/documentation/inplace-editor/data-binding) - Bind the In-place Editor component with an array of JSON objects or DataManager to save the edited data to the server.
+* Customization(https://ej2.syncfusion.com/vue/documentation/inplace-editor/style) - Offers UI customization such as popup, buttons, and also denotes editable content state.
 *  **Template**  - Templates can be used to integrate custom controls to the In-place Editor.
-*  **Globalization**  - Provides right to left and localization support.
+* [Globalization](https://ej2.syncfusion.com/vue/documentation/inplace-editor/localization) - Provides right to left and localization support.
+
+## Resources
+
+* [Documentation](https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started)
+* [Theme Studio](https://ej2.syncfusion.com/themestudio/)
+* [What's New](https://www.syncfusion.com/products/whatsnew/vue?utm_medium=listing&utm_source=github)
+* [Road Map](https://www.syncfusion.com/products/roadmap/vue)
+* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all)
 
 ## Support
 
 Product support is available for through following mediums.
 
-* Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=inplace-editor) support system or [Community forum](https://www.syncfusion.com/forums/essential-js2?utm_source=npm&utm_campaign=inplace-editor).
+* [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support 
+*[Community forum](https://www.syncfusion.com/forums/essential-js2?utm_source=npm&utm_campaign=inplace-editor).
 * New [GitHub issue](https://github.com/syncfusion/ej2-javascript-ui-controls/issues/new).
 * Ask your query in Stack Overflow with tag `syncfusion`, `ej2`.
+* [Request feature or report bug](https://www.syncfusion.com/feedback/vue)
+* Live chat
 
 ## License
 
@@ -57,4 +62,4 @@ Check the license detail [here](https://github.com/syncfusion/ej2-javascript-ui-
 Check the changelog [here](https://github.com/syncfusion/ej2-javascript-ui-controls/blob/master/controls/inplace-editor/CHANGELOG.md?utm_source=npm&utm_campaign=inplace-editor)
 
 
-&copy; Copyright 2019 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.
+&copy; Copyright 2025 Syncfusion<sup>®</sup> , Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential Studio license and copyright applies to this distribution.
