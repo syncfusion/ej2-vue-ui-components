@@ -13,7 +13,7 @@ The [Vue Image Editor](https://www.syncfusion.com/vue-components/vue-image-edito
 <p align="center">
 Trusted by the world's leading companies
   <a href="https://www.syncfusion.com">
-    <img src="https://ej2.syncfusion.com/home/images/trusted_companies.png" alt="Bootstrap logo">
+    <img src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/syncfusion/syncfusion-trusted-companies.webp" alt="Bootstrap logo">
   </a>
 </p>
 
@@ -31,9 +31,9 @@ npm run serve
 ```
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-### Adding Syncfusion<sup>®</sup> Vue Image Editor package
+### Adding Syncfusion Vue Image Editor package
 
-All Syncfusion<sup>®</sup> Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install vue image editor package, use the following command.
+All Syncfusion Vue packages are published in [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install vue image editor package, use the following command.
 
 ```bash
 npm install @syncfusion/ej2-vue-image-editor --save
@@ -68,9 +68,9 @@ Add CSS references needed for Image Editor in **style** section of the **App.vue
 </style>
 ```
 
-## Add Syncfusion<sup>®</sup> Vue Image Editor component
+## Add Syncfusion Vue Image Editor component
 
-Add the Syncfusion<sup>®</sup> Vue Image Editor by using **ejs-imageeditor** selector in **template** section of the **App.vue** file.
+Add the Syncfusion Vue Image Editor by using **ejs-imageeditor** selector in **template** section of the **App.vue** file.
 
 ```html
 <template>
@@ -110,14 +110,6 @@ Image Editor component is also offered in the following frameworks.
 * RTL and localization support: The control supports RTL (right-to-left) mode and provides inherent support for localization, allowing users to easily translate the user interface into different languages.
 * Various theme support: The component supports a range of themes, including fluent, tailwind css, bootstrap 5, material, and high contrast, giving users the ability to customize the look and feel of the image editor to match their preferences or brand guidelines.
 
-## Resources
-
-* [Documentation](https://ej2.syncfusion.com/vue/documentation/image-editor/getting-started)
-* [Theme Studio](https://ej2.syncfusion.com/themestudio/)
-* [What's New](https://www.syncfusion.com/products/whatsnew/vue?utm_medium=listing&utm_source=github)
-* [Road Map](https://www.syncfusion.com/products/roadmap/vue)
-* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all)
-
 ## Support
 
 Product support is available through the following mediums.
@@ -134,8 +126,8 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 ## License and copyright
 
-> This is a commercial product and requires a paid license for possession or use.Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>licensed software, including this component, is subject to the terms and conditions ofSyncfusion<sup>®</sup> Essential Studio<sup>®</sup>[EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 140+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
+> This is a commercial product and requires a paid license for possession or use.Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>licensed software, including this component, is subject to the terms and conditions ofSyncfusion<sup>®</sup> Essential Studio<sup>®</sup>[EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 80+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
 > A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_medium=listing&utm_campaign=vue-imageeditor-npm) for more info.
 
-&copy; Copyright 2025 Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> license and copyright applies to this distribution.
+&copy; Copyright 2024Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> license and copyright applies to this distribution.

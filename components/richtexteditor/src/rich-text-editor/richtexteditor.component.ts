@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { RichTextEditor, RichTextEditorModel } from '@syncfusion/ej2-richtexteditor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'autoSaveOnIdle', 'backgroundColor', 'bulletFormatList', 'codeBlockSettings', 'cssClass', 'editorMode', 'emojiPickerSettings', 'enableAutoUrl', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enableXhtml', 'enabled', 'enterKey', 'exportPdf', 'exportWord', 'fileManagerSettings', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatPainterSettings', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'importWord', 'inlineMode', 'insertAudioSettings', 'insertImageSettings', 'insertVideoSettings', 'keyConfig', 'locale', 'maxLength', 'numberFormatList', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'shiftEnterKey', 'showCharCount', 'showTooltip', 'slashMenuSettings', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'afterImageDelete', 'afterMediaDelete', 'afterPasteCleanup', 'beforeDialogClose', 'beforeDialogOpen', 'beforeFileUpload', 'beforeImageDrop', 'beforeImageUpload', 'beforeMediaDrop', 'beforePasteCleanup', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'fileRemoving', 'fileSelected', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'selectionChanged', 'slashMenuItemSelect', 'toolbarClick', 'toolbarStatusUpdate', 'updatedToolbarStatus'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'aiAssistantSettings', 'autoSaveOnIdle', 'backgroundColor', 'bulletFormatList', 'codeBlockSettings', 'cssClass', 'editorMode', 'emojiPickerSettings', 'enableAutoUrl', 'enableClipboardCleanup', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enableMarkdownAutoFormat', 'enablePersistence', 'enableResize', 'enableRtl', 'enableTabKey', 'enableXhtml', 'enabled', 'enterKey', 'exportPdf', 'exportWord', 'fileManagerSettings', 'floatingToolbarOffset', 'fontColor', 'fontFamily', 'fontSize', 'format', 'formatPainterSettings', 'formatter', 'height', 'htmlAttributes', 'iframeSettings', 'importWord', 'inlineMode', 'insertAudioSettings', 'insertImageSettings', 'insertVideoSettings', 'keyConfig', 'lineHeight', 'locale', 'maxLength', 'numberFormatList', 'pasteCleanupSettings', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'shiftEnterKey', 'showCharCount', 'showTooltip', 'slashMenuSettings', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueTemplate', 'width', 'actionBegin', 'actionComplete', 'afterImageDelete', 'afterMediaDelete', 'afterPasteCleanup', 'aiAssistantPromptRequest', 'aiAssistantStopRespondingClick', 'aiAssistantToolbarClick', 'beforeClipboardWrite', 'beforeDialogClose', 'beforeDialogOpen', 'beforeFileUpload', 'beforeImageDrop', 'beforeImageUpload', 'beforeMediaDrop', 'beforePasteCleanup', 'beforePopupClose', 'beforePopupOpen', 'beforeQuickToolbarOpen', 'beforeSanitizeHtml', 'blur', 'change', 'created', 'destroyed', 'dialogClose', 'dialogOpen', 'documentExporting', 'fileRemoving', 'fileSelected', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'imageRemoving', 'imageSelected', 'imageUploadFailed', 'imageUploadSuccess', 'imageUploading', 'quickToolbarClose', 'quickToolbarOpen', 'resizeStart', 'resizeStop', 'resizing', 'selectionChanged', 'slashMenuItemSelect', 'toolbarClick', 'toolbarStatusUpdate', 'updatedToolbarStatus', 'wordImporting'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -130,11 +130,17 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         custom(): void {
             this.updated();
         },
+        addAIPromptResponse(outputResponse: string | Object, isFinalUpdate?: boolean): void {
+            return this.ej2Instances.addAIPromptResponse(outputResponse, isFinalUpdate);
+        },
         addAnchorAriaLabel(value: string): string {
             return this.ej2Instances.addAnchorAriaLabel(value);
         },
         cleanList(e: Object): void {
             return this.ej2Instances.cleanList(e);
+        },
+        clearAIPromptHistory(): void {
+            return this.ej2Instances.clearAIPromptHistory();
         },
         clearUndoRedo(): void {
             return this.ej2Instances.clearUndoRedo();
@@ -151,6 +157,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void {
             return this.ej2Instances.enableToolbarItem(items, muteToolbarUpdate);
         },
+        executeAIPrompt(prompt: string): void {
+            return this.ej2Instances.executeAIPrompt(prompt);
+        },
         executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object | Object, option?: Object): void {
             return this.ej2Instances.executeCommand(commandName, value, option);
         },
@@ -159,6 +168,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         },
         focusOut(): void {
             return this.ej2Instances.focusOut();
+        },
+        getAIPromptHistory(): Object[] {
+            return this.ej2Instances.getAIPromptHistory();
         },
         getCharCount(): number {
             return this.ej2Instances.getCharCount();
@@ -184,6 +196,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         getXhtml(): string {
             return this.ej2Instances.getXhtml();
         },
+        hideAIAssistantPopup(): void {
+            return this.ej2Instances.hideAIAssistantPopup();
+        },
         hideInlineToolbar(): void {
             return this.ej2Instances.hideInlineToolbar();
         },
@@ -207,6 +222,9 @@ export let RichTextEditorComponent: DefineVueComponent<RichTextEditorModel> =  v
         },
         selectRange(range: Object): void {
             return this.ej2Instances.selectRange(range);
+        },
+        showAIAssistantPopup(): void {
+            return this.ej2Instances.showAIAssistantPopup();
         },
         showDialog(type: Object): void {
             return this.ej2Instances.showDialog(type);
@@ -242,16 +260,20 @@ export type RichTextEditorComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    addAIPromptResponse(outputResponse: string | Object, isFinalUpdate?: boolean): void;
     addAnchorAriaLabel(value: string): string;
     cleanList(e: Object): void;
+    clearAIPromptHistory(): void;
     clearUndoRedo(): void;
     closeDialog(type: Object): void;
     destroy(): void;
     disableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
     enableToolbarItem(items: string | string[], muteToolbarUpdate?: boolean): void;
+    executeAIPrompt(prompt: string): void;
     executeCommand(commandName: Object, value?: string | Object | Object | Object | Object | Object | Object | Object | Object, option?: Object): void;
     focusIn(): void;
     focusOut(): void;
+    getAIPromptHistory(): Object[];
     getCharCount(): number;
     getContent(): Object;
     getHtml(): string;
@@ -260,6 +282,7 @@ export type RichTextEditorComponent = typeof ComponentBase & {
     getSelection(): string;
     getText(): string;
     getXhtml(): string;
+    hideAIAssistantPopup(): void;
     hideInlineToolbar(): void;
     print(): void;
     refreshUI(): void;
@@ -268,6 +291,7 @@ export type RichTextEditorComponent = typeof ComponentBase & {
     sanitizeHtml(value: string): string;
     selectAll(): void;
     selectRange(range: Object): void;
+    showAIAssistantPopup(): void;
     showDialog(type: Object): void;
     showEmojiPicker(x?: number, y?: number): void;
     showFullScreen(): void;

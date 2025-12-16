@@ -8,7 +8,12 @@
 		"vue",
 		"vuejs",
 		"ej2-vue-blockeditor",
-		"vue-blockeditor"
+		"vue-blockeditor",
+		"block editor",
+		"blocks",
+		"editor",
+		"modular-editor",
+		"block-based"
 	],
 	"repository": {
 		"type": "git",

@@ -176,7 +176,6 @@ Gantt component is also offered in the following list of frameworks.
 
 ## Resources
 
-* [Documentation](https://ej2.syncfusion.com/vue/documentation/gantt/getting-started)
 * [Theme Studio](https://ej2.syncfusion.com/themestudio/)
 * [What's New](https://www.syncfusion.com/products/whatsnew/vue?utm_medium=listing&utm_source=github)
 * [Road Map](https://www.syncfusion.com/products/roadmap/vue)

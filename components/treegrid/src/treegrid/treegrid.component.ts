@@ -9,7 +9,7 @@ import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPl
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'aggregates', 'allowExcelExport', 'allowFiltering', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextWrap', 'autoCheckHierarchy', 'childMapping', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'copyHierarchyMode', 'currencyCode', 'dataSource', 'detailTemplate', 'editSettings', 'emptyRecordTemplate', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableCollapseAll', 'enableColumnVirtualization', 'enableHover', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRtl', 'enableStickyHeader', 'enableVirtualMaskRow', 'enableVirtualization', 'expandStateMapping', 'filterSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'hasChildMapping', 'height', 'idMapping', 'infiniteScrollSettings', 'isRowSelectable', 'loadChildOnDemand', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentIdMapping', 'printMode', 'query', 'rowDropSettings', 'rowHeight', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnChooser', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'treeColumnIndex', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeDataBound', 'beforeExcelExport', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkboxChange', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'detailDataBound', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolbarClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'aggregates', 'allowExcelExport', 'allowFiltering', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextWrap', 'autoCheckHierarchy', 'childMapping', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'copyHierarchyMode', 'currencyCode', 'dataSource', 'detailTemplate', 'editSettings', 'emptyRecordTemplate', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableCollapseAll', 'enableColumnSpan', 'enableColumnVirtualization', 'enableHover', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRowSpan', 'enableRtl', 'enableStickyHeader', 'enableVirtualMaskRow', 'enableVirtualization', 'expandStateMapping', 'filterSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'hasChildMapping', 'height', 'idMapping', 'infiniteScrollSettings', 'isRowSelectable', 'loadChildOnDemand', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentIdMapping', 'printMode', 'query', 'rowDropSettings', 'rowHeight', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'showColumnChooser', 'showColumnMenu', 'sortSettings', 'textWrapSettings', 'toolbar', 'treeColumnIndex', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeDataBound', 'beforeExcelExport', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkboxChange', 'collapsed', 'collapsing', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuOpen', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'detailDataBound', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'expanded', 'expanding', 'headerCellInfo', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -134,7 +134,7 @@ export let TreeGridComponent: DefineVueComponent<TreeGridModel> =  vueDefineComp
         custom(): void {
             this.updated();
         },
-        addRecord(data?: Object, index?: number, position?: Object): void {
+        addRecord(data?: Object | Object[], index?: number, position?: Object): void {
             return this.ej2Instances.addRecord(data, index, position);
         },
         autoFitColumns(fieldNames?: string | string[]): void {
@@ -308,6 +308,9 @@ export let TreeGridComponent: DefineVueComponent<TreeGridModel> =  vueDefineComp
         getMovableRows(): Object[] {
             return this.ej2Instances.getMovableRows();
         },
+        getPageSizeByHeight(containerHeight?: number | string): number {
+            return this.ej2Instances.getPageSizeByHeight(containerHeight);
+        },
         getPager(): Object {
             return this.ej2Instances.getPager();
         },
@@ -379,6 +382,9 @@ export let TreeGridComponent: DefineVueComponent<TreeGridModel> =  vueDefineComp
         },
         refreshHeader(): void {
             return this.ej2Instances.refreshHeader();
+        },
+        refreshLayout(): void {
+            return this.ej2Instances.refreshLayout();
         },
         reorderColumns(fromFName: string | string[], toFName: string): void {
             return this.ej2Instances.reorderColumns(fromFName, toFName);
@@ -459,7 +465,7 @@ export type TreeGridComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    addRecord(data?: Object, index?: number, position?: Object): void;
+    addRecord(data?: Object | Object[], index?: number, position?: Object): void;
     autoFitColumns(fieldNames?: string | string[]): void;
     clearFiltering(): void;
     clearSelection(): void;
@@ -517,6 +523,7 @@ export type TreeGridComponent = typeof ComponentBase & {
     getMovableDataRows(): Object[];
     getMovableRowByIndex(index: number): Object;
     getMovableRows(): Object[];
+    getPageSizeByHeight(containerHeight?: number | string): number;
     getPager(): Object;
     getPrimaryKeyFieldNames(): string[];
     getRowByIndex(index: number): Object;
@@ -541,6 +548,7 @@ export type TreeGridComponent = typeof ComponentBase & {
     refresh(): void;
     refreshColumns(refreshUI?: boolean): void;
     refreshHeader(): void;
+    refreshLayout(): void;
     reorderColumns(fromFName: string | string[], toFName: string): void;
     reorderRows(fromIndexes: number[], toIndex: number, position: string): void;
     saveCell(): void;

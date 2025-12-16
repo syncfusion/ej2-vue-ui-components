@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { TextBox, TextBoxModel } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'autocomplete', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'multiline', 'placeholder', 'readonly', 'showClearButton', 'type', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'appendTemplate', 'autocomplete', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'multiline', 'placeholder', 'prependTemplate', 'readonly', 'showClearButton', 'type', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});

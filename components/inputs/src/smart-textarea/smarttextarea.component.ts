@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { SmartTextArea, SmartTextAreaModel } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'UserPhrases', 'aiSuggestionHandler', 'cols', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'maxLength', 'placeholder', 'readonly', 'resizeMode', 'rows', 'showClearButton', 'showSuggestionOnPopup', 'userRole', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'UserPhrases', 'adornmentFlow', 'adornmentOrientation', 'aiSuggestionHandler', 'appendTemplate', 'cols', 'cssClass', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'htmlAttributes', 'locale', 'maxLength', 'placeholder', 'prependTemplate', 'readonly', 'resizeMode', 'rows', 'showClearButton', 'showSuggestionOnPopup', 'userRole', 'value', 'width', 'afterSuggestionInsert', 'beforeSuggestionInsert', 'blur', 'change', 'created', 'destroyed', 'focus', 'input'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -133,9 +133,6 @@ export let SmartTextAreaComponent: DefineVueComponent<SmartTextAreaModel> =  vue
         addAttributes(attributes: undefined): void {
             return this.ej2Instances.addAttributes(attributes);
         },
-        destroy(): void {
-            return this.ej2Instances.destroy();
-        },
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
@@ -165,7 +162,6 @@ export type SmartTextAreaComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addAttributes(attributes: undefined): void;
-    destroy(): void;
     focusIn(): void;
     focusOut(): void;
     removeAttributes(attributes: string[]): void

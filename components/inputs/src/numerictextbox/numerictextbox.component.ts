@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { NumericTextBox, NumericTextBoxModel } from '@syncfusion/ej2-inputs';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'cssClass', 'currency', 'currencyCode', 'decimals', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'htmlAttributes', 'locale', 'max', 'min', 'placeholder', 'readonly', 'showClearButton', 'showSpinButton', 'step', 'strictMode', 'validateDecimalOnType', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowMouseWheel', 'appendTemplate', 'cssClass', 'currency', 'currencyCode', 'decimals', 'enablePersistence', 'enableRtl', 'enabled', 'floatLabelType', 'format', 'htmlAttributes', 'locale', 'max', 'min', 'placeholder', 'prependTemplate', 'readonly', 'showClearButton', 'showSpinButton', 'step', 'strictMode', 'validateDecimalOnType', 'value', 'width', 'blur', 'change', 'created', 'destroyed', 'focus'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});

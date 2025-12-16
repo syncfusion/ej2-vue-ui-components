@@ -127,6 +127,13 @@ The [Vue Speed Dial](https://www.syncfusion.com/vue-components/vue-speed-dial?ut
 * [Modal](https://ej2.syncfusion.com/vue/documentation/speed-dial/modal) - Adds an overlay to prevent the background interaction.
 * [Templates](https://ej2.syncfusion.com/vue/documentation/speed-dial/template) - Customize Speed Dial items and the popup content using templates.
 
+<p align="center">
+Trusted by the world's leading companies
+  <a href="https://www.syncfusion.com/">
+    <img src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/syncfusion/syncfusion-trusted-companies.webp" alt="Syncfusion logo">
+  </a>
+</p>
+
 ## Setup
 
 To install `buttons` and its dependent packages, use the following command,

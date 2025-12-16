@@ -107,7 +107,7 @@ export let PivotViewComponent: DefineVueComponent<PivotViewModel> =  vueDefineCo
         encodeHtml(value: string): string {
             return this.ej2Instances.encodeHtml(value);
         },
-        excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void {
+        excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object {
             return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
         },
         exportAsPivot(exportType?: Object): void {
@@ -155,7 +155,7 @@ export type PivotViewComponent = typeof ComponentBase & {
     csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
     destroy(): void;
     encodeHtml(value: string): string;
-    excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
+    excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
     exportAsPivot(exportType?: Object): void;
     loadPersistData(persistData: string): void;
     pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean, exportBothTableAndChart?: boolean): Object;

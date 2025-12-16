@@ -1,12 +1,12 @@
 import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueComponent } from '@syncfusion/ej2-vue-base';
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
+import { isUndefined } from '@syncfusion/ej2-base';
 
 import { BlockEditor, BlockEditorModel } from '@syncfusion/ej2-blockeditor';
-import { BlocksDirective, BlockDirective, BlocksPlugin, BlockPlugin } from './blocks.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'blockActionsMenu', 'blocks', 'commandMenu', 'contextMenu', 'cssClass', 'enableAutoHttps', 'enableDragAndDrop', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'inlineToolbar', 'keyConfig', 'labelSettings', 'locale', 'pasteSettings', 'readOnly', 'undoRedoStack', 'users', 'width', 'afterPaste', 'beforePaste', 'blockAdded', 'blockDrag', 'blockDragStart', 'blockDrop', 'blockMoved', 'blockRemoved', 'blur', 'contentChanged', 'created', 'focus', 'keyActionExecuted', 'selectionChanged', 'undoRedoPerformed'];
-export const modelProps: string[] = [];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'blockActionMenuSettings', 'blocks', 'codeBlockSettings', 'commandMenuSettings', 'contextMenuSettings', 'cssClass', 'enableDragAndDrop', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'imageBlockSettings', 'inlineToolbarSettings', 'keyConfig', 'labelSettings', 'locale', 'pasteCleanupSettings', 'readOnly', 'undoRedoStack', 'users', 'width', 'afterPasteCleanup', 'beforePasteCleanup', 'blockChanged', 'blockDragStart', 'blockDragging', 'blockDropped', 'blur', 'created', 'focus', 'selectionChanged'];
+export const modelProps: string[] = ['blocks'];
 
 export const testProp: any = getProps({props: properties});
 export const props = testProp[0], watch = testProp[1], emitProbs: any = Object.keys(watch);
@@ -25,6 +25,7 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
     props: props,
     watch: watch,
     emits: emitProbs,
+    model: { event: 'modelchanged' },
     provide() { return { custom: this.custom } },
     data() {
         return {
@@ -33,14 +34,15 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: false as boolean,
-            tagMapper: {"e-blocks":"e-block"} as { [key: string]: Object },
+            tagMapper: {} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
     },
     created() {
-
+        this.ej2Instances._trigger = this.ej2Instances.trigger;
+        this.ej2Instances.trigger = this.trigger;
         this.bindProperties();
         this.ej2Instances._setProperties = this.ej2Instances.setProperties;
         this.ej2Instances.setProperties = this.setProperties;
@@ -89,7 +91,42 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
                     });
                 });
             }
+        },        
+        trigger(eventName: string, eventProp: {[key:string]:Object}, successHandler?: Function): void {
+            if(!isExecute) { this.models = !this.models ? this.ej2Instances.referModels : this.models }
+            if ((eventName === 'change' || eventName === 'input') && this.models && (this.models.length !== 0)) {
+                let key: string[] = this.models.toString().match(/checked|value/) || [];
+                let propKey: string = key[0];
+                if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                    if (!isExecute) {
+                        this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('update:modelValue', eventProp[propKey]);
+                    } else {
+                        if (eventName === 'change' || ((this as any).$props && !(this as any).$props.isLazyUpdate)) {
+                            (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                            (this as any).$emit('modelchanged', eventProp[propKey]);
+                        }
+                    }
+                }
+            } else if ((eventName === 'actionBegin' && eventProp.requestType === 'dateNavigate') && this.models && (this.models.length !== 0)) {
+                let key: string[] = this.models.toString().match(/currentView|selectedDate/) || [];
+                let propKey: string = key[0];
+                if (eventProp && key && !isUndefined(eventProp[propKey])) {
+                    if (!isExecute) {
+                        this.ej2Instances.vueInstance.$emit('update:' + propKey, eventProp[propKey]);
+                        this.ej2Instances.vueInstance.$emit('modelchanged', eventProp[propKey]);
+                    } else {
+                        (this as any).$emit('update:'+ propKey, eventProp[propKey]);
+                        (this as any).$emit('modelchanged', eventProp[propKey]);
+                    }
+                }
+            }
+            if ((this.ej2Instances && this.ej2Instances._trigger)) {
+                this.ej2Instances._trigger(eventName, eventProp, successHandler); 
+            }
         },
+
         custom(): void {
             this.updated();
         },
@@ -123,7 +160,7 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         getDataAsHtml(blockId?: string): string {
             return this.ej2Instances.getDataAsHtml(blockId);
         },
-        getDataAsJson(blockId?: string): any {
+        getDataAsJson(blockId?: string): Object | Object[] {
             return this.ej2Instances.getDataAsJson(blockId);
         },
         getRange(): Object | null {
@@ -134,6 +171,9 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         },
         moveBlock(fromBlockId: string, toBlockId: string): void {
             return this.ej2Instances.moveBlock(fromBlockId, toBlockId);
+        },
+        parseHtmlToBlocks(html: string): Object[] {
+            return this.ej2Instances.parseHtmlToBlocks(html);
         },
         print(): void {
             return this.ej2Instances.print();
@@ -191,10 +231,11 @@ export type BlockEditorComponent = typeof ComponentBase & {
     getBlock(blockId: string): Object | null;
     getBlockCount(): number;
     getDataAsHtml(blockId?: string): string;
-    getDataAsJson(blockId?: string): any;
+    getDataAsJson(blockId?: string): Object | Object[];
     getRange(): Object | null;
     getSelectedBlocks(): Object[] | null;
     moveBlock(fromBlockId: string, toBlockId: string): void;
+    parseHtmlToBlocks(html: string): Object[];
     print(): void;
     removeBlock(blockId: string): void;
     renderBlocksFromJson(json: object | string, replace: boolean, targetBlockId?: string): boolean;
@@ -210,8 +251,6 @@ export const BlockEditorPlugin = {
     name: 'ejs-blockeditor',
     install(Vue: any) {
         Vue.component(BlockEditorPlugin.name, BlockEditorComponent);
-        Vue.component(BlockPlugin.name, BlockDirective);
-        Vue.component(BlocksPlugin.name, BlocksDirective);
 
     }
 }

@@ -17,7 +17,6 @@ To install `In-place Editor` and its dependent packages, use the following comma
 npm install @syncfusion/ej2-vue-inplace-editor
 ```
 
-
 ## Supported frameworks
 
 In-place Editor control is also offered in the following list of frameworks.
