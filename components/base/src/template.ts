@@ -52,7 +52,11 @@ export function compile(
                             if (!templateInstance[`${propName}`]) {
                                 templateInstance[`${propName}`] = [];
                             }
-                            templateInstance[`${propName}`].push(ele);
+                            if ((context.ej2Instances && context.ej2Instances.getModuleName() === 'grid') || context.getModuleName() === 'grid') {
+                                templateInstance[`${propName}`].push(returnEle[0]);
+                            } else {
+                                templateInstance[`${propName}`].push(ele);
+                            }
                         }
                     }
                     detach(ele);
@@ -131,7 +135,11 @@ export function compile(
                         if (!templateInstance[`${propName}`]) {
                             templateInstance[`${propName}`] = [];
                         }
-                        templateInstance[`${propName}`].push(ele);
+                        if ((context.ej2Instances && context.ej2Instances.getModuleName() === 'grid') || context.getModuleName() === 'grid') {
+                            templateInstance[`${propName}`].push(returnEle[0]);
+                        } else {
+                            templateInstance[`${propName}`].push(ele);
+                        }
                     }
                 }
                 detach(ele);
