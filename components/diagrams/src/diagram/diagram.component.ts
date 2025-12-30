@@ -227,14 +227,8 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         findElementUnderMouse(obj: Object, position: Object, diagram: Object, padding?: number): Object {
             return this.ej2Instances.findElementUnderMouse(obj, position, diagram, padding);
         },
-        findObjectUnderMouse(objects: undefined[], action: Object, inAction: boolean): Object {
-            return this.ej2Instances.findObjectUnderMouse(objects, action, inAction);
-        },
         findObjectsUnderMouse(position: Object, source?: Object): Object[] {
             return this.ej2Instances.findObjectsUnderMouse(position, source);
-        },
-        findTargetObjectUnderMouse(objects: undefined[], action: Object, inAction: boolean, position: Object, source?: Object): Object {
-            return this.ej2Instances.findTargetObjectUnderMouse(objects, action, inAction, position, source);
         },
         fitToPage(options?: Object): void {
             return this.ej2Instances.fitToPage(options);
@@ -483,9 +477,7 @@ export type DiagramComponent = typeof ComponentBase & {
     exportDiagram(options: Object): string | Object;
     exportImage(image: string, options: Object): void;
     findElementUnderMouse(obj: Object, position: Object, diagram: Object, padding?: number): Object;
-    findObjectUnderMouse(objects: undefined[], action: Object, inAction: boolean): Object;
     findObjectsUnderMouse(position: Object, source?: Object): Object[];
-    findTargetObjectUnderMouse(objects: undefined[], action: Object, inAction: boolean, position: Object, source?: Object): Object;
     fitToPage(options?: Object): void;
     getActiveLayer(): Object;
     getConnectorObject(id: string): Object;

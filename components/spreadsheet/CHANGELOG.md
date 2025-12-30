@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 32.1.21 (2025-12-30)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I787911` - Issue with "left border not applied properly in the merged cells during scrolling" has been resolved.
+
 ## 32.1.20 (2025-12-23)
 
 ### Spreadsheet

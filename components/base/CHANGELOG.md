@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 32.1.21 (2025-12-30)
+
+### Common
+
+#### Bug Fixes
+
+- `#I784559` - Fixed a memory leak issue in Vue components when using slot templates after destroying the controls.
+
 ## 32.1.20 (2025-12-23)
 
 ### Common

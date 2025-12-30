@@ -10,7 +10,22 @@
 		"ej2-vue-aiassistview",
 		"vue-aiassistview",
 		"ej2-vue-interactive-chat",
-		"vue-interactive-chat"
+		"vue-interactive-chat",
+		"assistant",
+		"openai",
+		"ai",
+		"chat",
+		"chatbot",
+		"copilot",
+		"ai-chat",
+		"ai-chatbot",
+		"ai-assistant",
+		"ai-copilot",
+		"chatgpt",
+		"gpt4",
+		"gpt-4",
+		"conversational-ui",
+		"conversational-ai"
 	],
 	"repository": {
 		"type": "git",
