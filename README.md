@@ -1,5 +1,5 @@
 # Syncfusion Vue UI Components Library (Essential JS 2)
- Syncfusion Vue UI Components library has been built from the ground up to be lightweight, responsive, modular and touch friendly. It offers 100+ UI components that every applications will ever need.
+ Syncfusion Vue UI Components library has been built from the ground up to be lightweight, responsive, modular and touch friendly. It offers 140+ UI components that every applications will ever need.
  > This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's EULA (https://www.syncfusion.com/eula/es/). To acquire a license, you can purchase one at https://www.syncfusion.com/sales/products or start a free 30-day trial here (https://www.syncfusion.com/account/manage-trials/start-trials).
 > 
 > A free community license (https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
