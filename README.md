@@ -70,6 +70,8 @@ Real-world demos built with Syncfusion Vue components:
 - **Diagram Builder** — Drag-and-drop diagramming  
   [Demo](https://ej2.syncfusion.com/showcase/vue/diagrambuilder/)
 
+More showcases and code examples: https://www.syncfusion.com/showcase-apps/vue
+
 ---
 
 ## Supported Frameworks
