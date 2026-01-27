@@ -1,13 +1,5 @@
 # Vue Block Editor Component
 
-A package of Vue Block Editor is a modern, block-based content editor for web applications. It provides an intuitive interface for composing rich, structured documents using interactive content blocks, inline elements, and contextual tools.
-
-## What's Included in the Vue Block Editor Package
-
-The Vue Block Editor package includes the following,
-
-### Vue Block Editor
-
 The [Vue Block Editor](https://www.syncfusion.com/vue-components/vue-block-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-blockeditor-npm) is a modern, block-based editor for composing rich, structured documents. It’s ideal for document editing, knowledge bases, note-taking, and content creation tools. The editor provides an intuitive UI with mobile support and modular architecture. It offers multiple block types, inline content (mentions, links, labels), slash commands, and contextual menus, returning well-structured content models and valid HTML when needed.
 
 <p align="center">
@@ -39,7 +31,7 @@ npm install @syncfusion/ej2-vue-blockeditor
 ```
 
 <blockquote>
-    <p>ℹ <b>Note:</b></p>
+    <p>ℹ️ <b>Note:</b></p>
     <span>For more information on using Block Editor with Syncfusion, refer to our <a href="https://ej2.syncfusion.com/vue/documentation/block-editor/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-blockeditor-npm">Documentation</a>.</span>
 </blockquote>
 
