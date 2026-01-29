@@ -1,1214 +1,169 @@
-# Syncfusion Vue UI Components Library (Essential JS 2)
- Syncfusion Vue UI Components library has been built from the ground up to be lightweight, responsive, modular and touch friendly. It offers 70+ UI components that every applications will ever need.
- > This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's EULA (https://www.syncfusion.com/eula/es/). To acquire a license, you can purchase one at https://www.syncfusion.com/sales/products or start a free 30-day trial here (https://www.syncfusion.com/account/manage-trials/start-trials).
-> 
-> A free community license (https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
- ## Resources
- * [Getting Started](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-cli?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-* [View Online Demos](https://ej2.syncfusion.com/vue/demos?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-* [Product Page](https://www.syncfusion.com/vue-ui-components?utm_source=npm&utm_campaign=ej2-vue-ui-components)
- ## Framework highlights
- ### Lightweight and user friendly
- The entire library is built from scratch to be lightweight and modular. Its footprint can be reduced further by including only the specific components and features your application requires.
- ### Modular architecture
- All components have been built as modules to enable selective referencing, so only the components and features you need are included in your application.
- ### Built for performance
- Performance is critical for delivering a good user experience. We ensure that all our components are designed and built to achieve the best performance possible.
- ### Responsive and touch friendly
- All the components are touch friendly and render adaptively based on the device they are on to provide optimal usage experience on phones, tablets and desktops.
- ### Stunning built-in themes
- Pixel-perfect built-in themes are available in material, bootstrap and fabric design. In addition, it comes with Accessible high-contrast theme and an online tool "[Theme Studio](https://ej2.syncfusion.com/themestudio/)" to customize the provided built-in themes.
- ### Globalization simplified
- Easily build applications to be used by a global audience in various language and culture settings.
- ### Stay current
- With our commitment to at least four major updates per year, you receive the most up-to-date functionality and new components in addition to monthly service packs and bug fixes. Custom patches are available as needed.
+# Syncfusion Vue UI Components
 
- ## Control List
+[![npm](https://img.shields.io/npm/v/@syncfusion/ej2-vue-grids?logo=npm)](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-vue)
+[![Downloads](https://img.shields.io/npm/dm/@syncfusion/ej2-vue-base)](https://www.npmjs.com/search?q=%40syncfusion%2Fej2-vue)
+[![GitHub stars](https://img.shields.io/github/stars/syncfusion/ej2-vue-ui-components?style=social)](https://github.com/syncfusion/ej2-vue-ui-components)
+[![GitHub forks](https://img.shields.io/github/forks/syncfusion/ej2-vue-ui-components?style=social)](https://github.com/syncfusion/ej2-vue-ui-components)
 
-### Grids
+**145+ enterprise-grade, high-performance Vue UI components** built with Vue 3 Composition API support. Includes fully Vue-3-compatible implementations of DataGrid, Charts, Scheduler, Rich Text Editor, and more — all lightweight, modular, responsive, and touch-friendly.
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-grid"><b>Data Grid</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-grids"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-grids" title="@syncfusion/ej2-vue-grids" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-grids"><img src="https://ej2.syncfusion.com/badges/ej2-grids/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-grids" title="@syncfusion/ej2-vue-grids" /></a>
-       </td>
-       <td>
-           <a href="src/grids/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/grid-overview.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/grid/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-pivot-table"><b>Pivot Table</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-pivotview"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-pivotview" title="@syncfusion/ej2-vue-pivotview" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-pivotview"><img src="https://ej2.syncfusion.com/badges/ej2-pivotview/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-pivotview" title="@syncfusion/ej2-vue-pivotview" /></a>
-       </td>
-       <td>
-           <a href="src/pivotview/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/pivot-table/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/pivotview/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-spreadsheet"><b>Spreadsheet</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-spreadsheet" title="@syncfusion/ej2-vue-spreadsheet" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-spreadsheet"><img src="https://ej2.syncfusion.com/badges/ej2-spreadsheet/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-spreadsheet" title="@syncfusion/ej2-vue-spreadsheet" /></a>
-       </td>
-       <td>
-           <a href="src/spreadsheet/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/spreadsheet/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-tree-grid"><b>Tree Grid</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-treegrid"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-treegrid" title="@syncfusion/ej2-vue-treegrid" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-treegrid"><img src="https://ej2.syncfusion.com/badges/ej2-treegrid/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-treegrid" title="@syncfusion/ej2-vue-treegrid" /></a>
-       </td>
-       <td>
-           <a href="src/treegrid/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/tree-grid/overview.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+**Quick Links**  
+[Live Demos](https://ej2.syncfusion.com/vue/demos/) • [Documentation](https://ej2.syncfusion.com/vue/documentation/) • [API Reference](https://ej2.syncfusion.com/vue/documentation/api/) • [Free 30-Day Trial](https://www.syncfusion.com/downloads/vue) • [Community License](https://www.syncfusion.com/products/communitylicense)
 
-### Editors
+## Features
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-in-place-editor"><b>In-place Editor</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-inplace-editor"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-inplace-editor" title="@syncfusion/ej2-vue-inplace-editor" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-inplace-editor"><img src="https://ej2.syncfusion.com/badges/ej2-inplace-editor/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-inplace-editor" title="@syncfusion/ej2-vue-inplace-editor" /></a>
-       </td>
-       <td>
-           <a href="src/inplaceeditor/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/inplace-editor/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-wysiwyg-rich-text-editor"><b>Rich Text Editor</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-richtexteditor"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-richtexteditor" title="@syncfusion/ej2-vue-richtexteditor" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-richtexteditor"><img src="https://ej2.syncfusion.com/badges/ej2-richtexteditor/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-richtexteditor" title="@syncfusion/ej2-vue-richtexteditor" /></a>
-       </td>
-       <td>
-           <a href="src/richtexteditor/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/tools.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-word-processor"><b>Word Processor</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-documenteditor"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-documenteditor" title="@syncfusion/ej2-vue-documenteditor" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-documenteditor"><img src="https://ej2.syncfusion.com/badges/ej2-documenteditor/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-documenteditor" title="@syncfusion/ej2-vue-documenteditor" /></a>
-       </td>
-       <td>
-           <a href="src/documenteditor/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/document-editor/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+- **Lightweight & Modular** – Tree-shakable; include only what you need
+- **Top-tier Performance** – Virtualization, lazy loading, and optimized rendering
+- **Modern Theming** – Material, Bootstrap, Tailwind CSS, Fabric, Fluent, and High-Contrast themes
+- **Full Accessibility** – WCAG 2.2, Section 508, ARIA compliant
+- **AI-Ready Components** – AI AssistView, Chat UI, Smart Paste, Speech-to-Text, OTP Input, Block Editor
+- **Vue 3 Ready** – Complete support for Vue 3 with Composition API and TypeScript
+- **Frequent Releases** – 4 major upgrades per year + weekly service packs
 
-### Dropdowns
+## Installation
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-autocomplete"><b>AutoComplete</b></a>
-       </td>
-       <td rowspan="6">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-dropdowns"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-dropdowns" title="@syncfusion/ej2-vue-dropdowns" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-dropdowns"><img src="https://ej2.syncfusion.com/badges/ej2-dropdowns/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-dropdowns" title="@syncfusion/ej2-vue-dropdowns" /></a>
-       </td>
-       <td>
-           <a href="src/dropdowns/src/auto-complete">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/auto-complete/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/auto-complete/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-combobox"><b>ComboBox</b></a>
-       </td>
-       <td>
-           <a href="src/dropdowns/src/combo-box">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/combo-box/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/combo-box/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-dropdown-list"><b>Dropdown List</b></a>
-       </td>
-       <td>
-           <a href="src/dropdowns/src/drop-down-list">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/drop-down-list/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-dropdown-tree"><b>Dropdown Tree</b></a>
-       </td>
-       <td>
-           <a href="src/dropdowns/src/drop-down-tree">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/drop-down-tree/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/drop-down-tree/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-listbox"><b>List Box</b></a>
-       </td>
-       <td>
-           <a href="src/dropdowns/src/list-box">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/list-box/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/list-box/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-multiselect-dropdown"><b>MultiSelect Dropdown</b></a>
-       </td>
-       <td>
-           <a href="src/dropdowns/src/multi-select">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/multi-select/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/multi-select/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+```bash
+npm install @syncfusion/ej2-vue-base @syncfusion/ej2-vue-grids @syncfusion/ej2-vue-charts
+# or install any specific package(s) you need
+```
 
-### Inputs
+## Component Categories (145+)
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-checkbox"><b>Checkbox</b></a>
-       </td>
-       <td rowspan="3">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-buttons"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-buttons"><img src="https://ej2.syncfusion.com/badges/ej2-buttons/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" /></a>
-       </td>
-       <td>
-           <a href="src/buttons/src/check-box">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/checkbox.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/check-box/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-radio-button"><b>Radio Button</b></a>
-       </td>
-       <td>
-           <a href="src/buttons/src/radio-button">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/radio-button.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-toggle-switch-button"><b>Toggle Switch Button</b></a>
-       </td>
-       <td>
-           <a href="src/buttons/src/switch">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/switch.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/switch/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-color-picker"><b>Color Picker</b></a>
-       </td>
-       <td rowspan="8">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-inputs"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-inputs" title="@syncfusion/ej2-vue-inputs" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-inputs"><img src="https://ej2.syncfusion.com/badges/ej2-inputs/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-inputs" title="@syncfusion/ej2-vue-inputs" /></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/color-picker">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/color-picker/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-file-upload"><b>File Upload</b></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/uploader">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/uploader/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/uploader/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-input-mask"><b>Input Mask</b></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/maskedtextbox">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/maskedtextbox/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-numeric-textbox"><b>Numeric Textbox</b></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/numerictextbox">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/numerictextbox/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/numerictextbox/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-range-selector"><b>Range Slider</b></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/slider">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/range-navigator/default.htmll">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/range-slider/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-textbox"><b>TextBox</b></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/textbox">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/textboxes/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/textbox/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/Signature"><b>Signature</b></a>
-       </td>
-       <td>
-           <a href="src/inputs/src/signature">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/signature/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/signature/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+Explore all requested components with direct links to **Getting Started** docs and **Live Demos** (demos default to Material theme; switch themes on the site).
 
-### Data Visualization
+| Category                  | Component                  | Features                                                                                          | Documentation                                                                 | Demo Link                                                                                           |
+|---------------------------|----------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **AI / Smart**            | AI AssistView              | **AI-driven assistance**, **contextual suggestions**, **real-time interaction**, **integrates with editors** | [Link](https://ej2.syncfusion.com/vue/documentation/ai-assistview/getting-started)           | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/ai-assistview/default)                   |
+|                           | Smart TextArea             | **Intelligent editing**, **auto-complete suggestions**, **context-aware corrections**, **AI-powered** | [Link](https://ej2.syncfusion.com/vue/documentation/smart-textarea/vue-3-getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/ai-smart-textarea/default.html)                  |
+|                           | Smart Paste Button         | **Intelligent paste handling**, **content formatting**, **smart insertion**, **AI-enhanced**     | [Link](https://ej2.syncfusion.com/vue/documentation/smart-paste-button/vue-3-getting-started)      | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/ai-smart-paste/default.html)                     |
+| **Grids**                 | Data Grid                  | **Virtual scrolling**, **Excel-like editing/sorting/filtering**, **large dataset support**, **export to Excel/PDF**, **grouping & aggregation** | [Link](https://ej2.syncfusion.com/vue/documentation/grid/getting-started)                    | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/grid/overview)                           |
+|                           | Pivot Table                | **Drag-and-drop summarization**, **calculated fields**, **chart integration**, **virtual scrolling**, **Excel export** | [Link](https://ej2.syncfusion.com/vue/documentation/pivotview/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/pivotview/default)                       |
+|                           | Tree Grid                  | **Hierarchical data display**, **expand/collapse**, **row templates**, **editing & drag-and-drop**, **virtualization** | [Link](https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/treegrid/overview)                       |
+| **Charts & Data Viz**     | Charts                     | **50+ chart types**, **zooming & panning**, **interactive legends**, **real-time updates**, **animation** | [Link](https://ej2.syncfusion.com/vue/documentation/chart/getting-started)                   | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/chart/over-view.html)                              |
+|                           | 3D Charts                  | **3D visualization**, **rotation & perspective**, **multiple series**, **high customization**   | [Link](https://ej2.syncfusion.com/vue/documentation/3d-chart/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/three-dimension-chart/column.html)                        |
+|                           | Stock Chart                | **Financial time-series**, **technical indicators**, **range navigator**, **candle/OHLC**       | [Link](https://ej2.syncfusion.com/vue/documentation/stock-chart/getting-started)             | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/stock-chart/default.html)                     |
+|                           | Circular Gauge             | **Analog gauges**, **ranges & needles**, **annotations**, **directional indicators**            | [Link](https://ej2.syncfusion.com/vue/documentation/circular-gauge/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/circular-gauge/default-functionalities.html)                  |
+|                           | Linear Gauge               | **Progress/measurement bars**, **ranges**, **pointers**, **custom shapes**                      | [Link](https://ej2.syncfusion.com/vue/documentation/linear-gauge/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/linear-gauge/default-functionalities.html)                    |
+|                           | Maps                       | **Geo-spatial plotting**, **markers & shapes**, **drill-down**, **bubble visualization**        | [Link](https://ej2.syncfusion.com/vue/documentation/maps/getting-started)                    | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/maps/default.html)                            |
+|                           | Diagram                    | **Flowcharts & org charts**, **drag-and-drop**, **connectors**, **undo/redo**, **AI-enhanced**  | [Link](https://ej2.syncfusion.com/vue/documentation/diagram/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/diagram/default-functionality.html)                         |
+|                           | HeatMap                    | **Density visualization**, **gradient colors**, **row/column labels**, **tooltip**              | [Link](https://ej2.syncfusion.com/vue/documentation/heatmap-chart/getting-started)           | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/heatmap/default-functionalities.html)                         |
+|                           | TreeMap                    | **Hierarchical rectangles**, **drill-down**, **color mapping**, **legend**                      | [Link](https://ej2.syncfusion.com/vue/documentation/treemap/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/treemap/default.html)                         |
+|                           | Bullet Chart               | **Compact performance metering**, **ranges & targets**, **comparisons**                         | [Link](https://ej2.syncfusion.com/vue/documentation/bullet-chart/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/bullet-chart/default)                    |
+|                           | Kanban                     | **Drag-and-drop boards**, **swimlanes**, **card customization**, **drag multiple cards**        | [Link](https://ej2.syncfusion.com/vue/documentation/kanban/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/kanban/overview)                       |
+|                           | Sparkline                  | **Inline trend charts**, **compact size**, **multiple types**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/sparkline/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/sparkline/default)                       |
+|                           | Barcode                    | **1D/2D barcode generation**, **multiple formats**, **scanning support**                        | [Link](https://ej2.syncfusion.com/vue/documentation/barcode/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/barcode/ean8.html)                         |
+|                           | Smith Chart                | **RF engineering data**, **impedance/admittance**, **markers**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/smithchart/getting-started)              | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/smith-chart/default)                      |
+|                           | Range Selector             | **Time-range navigation**, **chart integration**, **zoom support**                              | [Link](https://ej2.syncfusion.com/vue/documentation/range-navigator/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/range-navigator/default)                  |
+| **Scheduling**            | Scheduler                  | **Multiple views (day/week/month)**, **drag-and-drop events**, **multiple event selection**, **resource grouping** | [Link](https://ej2.syncfusion.com/vue/documentation/schedule/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/schedule/overview)                       |
+|                           | Gantt Chart                | **Project timelines**, **task dependencies**, **progress tracking**, **critical path**          | [Link](https://ej2.syncfusion.com/vue/documentation/gantt/getting-started)                   | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/gantt/overview)                |
+|                           | Calendar                   | **Multiple views**, **event rendering**, **multi-date selection**                               | [Link](https://ej2.syncfusion.com/vue/documentation/calendar/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/calendar/default)                        |
+|                           | DatePicker                 | **Inline/dropdown mode**, **validation**, **custom formats**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/datepicker/getting-started)              | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/datepicker/default)                      |
+|                           | DateRangePicker            | **Start/end selection**, **preset ranges**, **calendar preview**                                | [Link](https://ej2.syncfusion.com/vue/documentation/daterangepicker/getting-started)         | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/daterangepicker/default)                 |
+|                           | DateTimePicker             | **Combined date & time**, **format customization**, **strict mode**                             | [Link](https://ej2.syncfusion.com/vue/documentation/datetimepicker/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/datetimepicker/default)                  |
+|                           | TimePicker                 | **24/12-hour format**, **interval selection**, **spin buttons**                                 | [Link](https://ej2.syncfusion.com/vue/documentation/timepicker/getting-started)              | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/timepicker/default)                      |
+| **Dropdowns**             | AutoComplete               | **Suggestion dropdown**, **filtering**, **multi-select**, **remote data**                       | [Link](https://ej2.syncfusion.com/vue/documentation/auto-complete/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/auto-complete/default)                    |
+|                           | ComboBox                   | **Hybrid textbox + dropdown**, **search & filtering**, **grouping**                             | [Link](https://ej2.syncfusion.com/vue/documentation/combo-box/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/combo-box/default)                     |
+|                           | MultiSelect Dropdown       | **Tag/chip selection**, **checkbox mode**, **remote binding**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/multi-select/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/multi-select/default)                    |
+|                           | Dropdown List              | **Simple selection**, **grouping**, **virtual scrolling**                                       | [Link](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/drop-down-list/default)                    |
+|                           | ListBox                    | **Multi-selection**, **drag-and-drop reordering**, **checkbox support**                         | [Link](https://ej2.syncfusion.com/vue/documentation/listbox/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/listbox/default)                         |
+|                           | DropDown Tree              | **Hierarchical selection**, **checkboxes**, **multi-select**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/drop-down-tree/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/drop-down-tree/default)                    |
+|                           | MultiColumn ComboBox       | **Multiple value columns**, **custom templates**, **search**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/multicolumn-combobox/getting-started)  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/multicolumn-combobox/default)            |
+|                           | Mention                    | **@tagging autocomplete**, **suggestions**, **custom templates**                               | [Link](https://ej2.syncfusion.com/vue/documentation/mention/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/mention/default)                         |
+| **Inputs**                | TextBox                    | **Validation & masking**, **floating label**, **icons**                                         | [Link](https://ej2.syncfusion.com/vue/documentation/textbox/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/textboxes/default)                         |
+|                           | TextArea                   | **Auto-resize**, **character counter**, **resize handles**                                      | [Link](https://ej2.syncfusion.com/vue/documentation/textarea/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/textarea/default)                        |
+|                           | Numeric TextBox            | **Spin buttons**, **formatting**, **strict mode**                                               | [Link](https://ej2.syncfusion.com/vue/documentation/numerictextbox/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/numerictextbox/default)                  |
+|                           | Masked TextBox             | **Input format enforcement** (phone/SSN/etc.), **prompt char**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/maskedtextbox/getting-started)           | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/maskedtextbox/default)                   |
+|                           | CheckBox                   | **Tri-state**, **label position**, **indeterminate state**                                      | [Link](https://ej2.syncfusion.com/vue/documentation/check-box/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/checkbox)                        |
+|                           | RadioButton                | **Group selection**, **label customization**, **checked state**                                 | [Link](https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/radio-button)                     |
+|                           | Color Picker               | **Palette/sliders**, **gradient support**, **opacity**                                          | [Link](https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/color-picker/default)                    |
+|                           | File Upload                | **Drag-and-drop**, **progress tracking**, **multiple files**, **validation**                    | [Link](https://ej2.syncfusion.com/vue/documentation/uploader/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/uploader/default)                        |
+|                           | Range Slider               | **Dual-thumb**, **step & limits**, **tooltip**                                                  | [Link](https://ej2.syncfusion.com/vue/documentation/range-slider/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/slider/default)                          |
+|                           | Switch                     | **On/off toggle**, **custom labels**, **animation**                                             | [Link](https://ej2.syncfusion.com/vue/documentation/switch/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/switch)                          |
+|                           | Signature                  | **Touch/mouse capture**, **save as image**, **clear/undo**                                      | [Link](https://ej2.syncfusion.com/vue/documentation/signature/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/signature/default)                       |
+|                           | Rating                     | **Star/custom shapes**, **partial rating**, **precision**                                       | [Link](https://ej2.syncfusion.com/vue/documentation/rating/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rating/default.html)                          |
+|                           | OTP Input                  | **Auto-focus & masking**, **paste support**, **resend timer**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/otp-input/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/otp-input/default)                       |
+| **Buttons**               | Button                     | **Variants & icons**, **loading state**, **disabled**                                           | [Link](https://ej2.syncfusion.com/vue/documentation/button/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/default)                          |
+|                           | ButtonGroup                | **Grouped buttons**, **toggle/selection**, **vertical mode**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/button-group/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/button-group)                     |
+|                           | SplitButton                | **Primary + dropdown**, **split actions**, **icons**                                            | [Link](https://ej2.syncfusion.com/vue/documentation/split-button/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/split-button)                     |
+|                           | Dropdown Menu              | **Menu items**, **icons & separators**, **submenus**                                            | [Link](https://ej2.syncfusion.com/vue/documentation/drop-down-button/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/dropdown-button)                    |
+|                           | Progress Button            | **Loading indicator**, **spinner integration**, **progress percentage**                         | [Link](https://ej2.syncfusion.com/vue/documentation/progress-button/getting-started)         | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/button/progress-button)                 |
+|                           | Chips                      | **Tags/filters**, **deletable**, **custom templates**                                           | [Link](https://ej2.syncfusion.com/vue/documentation/chips/getting-started)                   | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/chips/default)                           |
+|                           | FAB (Floating Action Button) | **Prominent action**, **motion effects**, **extended modes**                                 | [Link](https://ej2.syncfusion.com/vue/documentation/floating-action-button/getting-started) | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/floating-action-button/default)          |
+|                           | Speed Dial                 | **Multiple actions**, **directional expansion**, **FAB extension**                              | [Link](https://ej2.syncfusion.com/vue/documentation/speed-dial/getting-started)              | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/speed-dial/default)                       |
+| **Navigation & Layout**   | Accordion                  | **Collapsible sections**, **multiple expand**, **templates**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/accordion/getting-started)               | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/accordion/default)                       |
+|                           | Tabs                       | **Tabbed content**, **scrollable**, **closeable tabs**                                          | [Link](https://ej2.syncfusion.com/vue/documentation/tab/getting-started)                     | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/tab/default)                             |
+|                           | TreeView                   | **Hierarchical navigation**, **drag-and-drop**, **checkboxes**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/treeview/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/treeview/default)                        |
+|                           | Toolbar                    | **Button collection**, **overflow popup**, **responsive**                                       | [Link](https://ej2.syncfusion.com/vue/documentation/toolbar/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/toolbar/default)                         |
+|                           | Sidebar                    | **Side panel**, **collapsible**, **positioning**                                                | [Link](https://ej2.syncfusion.com/vue/documentation/sidebar/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/sidebar/default)                         |
+|                           | Menu Bar                   | **Navigation menu**, **submenus**, **keyboard support**                                         | [Link](https://ej2.syncfusion.com/vue/documentation/menu/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/menu/default)                         |
+|                           | Context Menu               | **Right-click actions**, **custom items**, **submenus**                                         | [Link](https://ej2.syncfusion.com/vue/documentation/context-menu/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/context-menu/default)                     |
+|                           | Carousel                   | **Sliding panels**, **auto-play**, **indicators**                                               | [Link](https://ej2.syncfusion.com/vue/documentation/carousel/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/carousel/default)                        |
+|                           | AppBar                     | **Top/bottom bar**, **actions & content**, **responsive**                                       | [Link](https://ej2.syncfusion.com/vue/documentation/appbar/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/appbar/default)                          |
+|                           | Breadcrumb                 | **Path navigation**, **overflow menu**, **custom separators**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/breadcrumb/getting-started)              | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/breadcrumb/default)                      |
+|                           | Ribbon                     | **Tabbed toolbar**, **grouped commands**, **contextual tabs**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/ribbon/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/ribbon/default)                          |
+|                           | Stepper                    | **Multi-step process**, **validation**, **linear/non-linear**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/stepper/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/stepper/default)                         |
+|                           | Pager                      | **Pagination controls**, **page size selector**, **numeric/symbolic**                           | [Link](https://ej2.syncfusion.com/vue/documentation/pager/getting-started)                   | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/pager/default)                           |
+|                           | File Manager               | **File browsing**, **upload/rename/delete**, **drag-and-drop**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/file-manager/default)                    |
+|                           | Dialog                     | **Modal/popover**, **custom content**, **buttons & actions**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/dialog/getting-started)                  | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/dialog/default)                          |
+|                           | Card                       | **Content container**, **headers/footers**, **actions**                                         | [Link](https://ej2.syncfusion.com/vue/documentation/card/getting-started)                    | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/card/default)                            |
+|                           | Splitter                   | **Resizable panels**, **horizontal/vertical**, **nested**                                       | [Link](https://ej2.syncfusion.com/vue/documentation/splitter/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/splitter/default)                        |
+|                           | ListView                   | **Scrollable list**, **templates**, **selection & grouping**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/listview/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/listview/default)                        |
+|                           | Tooltip                    | **Hover/contextual hints**, **positioning**, **custom content**                                 | [Link](https://ej2.syncfusion.com/vue/documentation/tooltip/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/tooltip/default)                         |
+|                           | Dashboard Layout           | **Drag-and-drop widgets**, **resizing**, **responsive**                                         | [Link](https://ej2.syncfusion.com/vue/documentation/dashboard-layout/getting-started)        | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/dashboard-layout/default)                |
+| **Forms & Editors**       | Query Builder              | **Visual query construction**, **conditions & operators**, **rule templates**                   | [Link](https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started)           | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/querybuilder/default)                    |
+|                            | Rich Text Editor           | **WYSIWYG formatting**, **tables & media**, **AI-powered**, **markdown support**                | [Link](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started)        | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/tools)                |
+|                           | In-place Editor            | **Inline/pop-up editing**, **grid integration**, **custom UI**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started)          | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/inplace-editor/default)                  |
+|                           | Image Editor               | **Crop/rotate/filters**, **annotations**, **redaction**                                         | [Link](https://ej2.syncfusion.com/vue/documentation/image-editor/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/image-editor/default)                    |
+|                           | Block Editor               | **Block-based content**, **modular editing**, **preview mode**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/block-editor/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/block-editor/default)                    |
+| **Notifications**         | Toast                      | **Temporary notifications**, **auto-dismiss**, **progress & actions**                           | [Link](https://ej2.syncfusion.com/vue/documentation/toast/getting-started)                   | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/toast/default)                           |
+|                           | Progress Bar               | **Determinate/indeterminate**, **segmented**, **circular mode**                                 | [Link](https://ej2.syncfusion.com/vue/documentation/progressbar/getting-started)            | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/progress-bar/default)                    |
+|                           | Spinner                    | **Loading indicator**, **size variants**, **overlay support**                                   | [Link](https://ej2.syncfusion.com/vue/documentation/spinner/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/spinner/default)                         |
+|                           | Badge                      | **Count/status indicator**, **positioning**, **dot/overlap**                                    | [Link](https://ej2.syncfusion.com/vue/documentation/badge/getting-started)                   | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/badge/default)                           |
+|                           | Skeleton                   | **Loading placeholder**, **shimmer effect**, **custom shapes**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/skeleton/getting-started)                | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/skeleton/default)                        |
+|                           | Message                    | **Inline alerts/status**, **severity levels**, **dismissible**                                  | [Link](https://ej2.syncfusion.com/vue/documentation/message/getting-started)                 | [Demo](https://ej2.syncfusion.com/vue/demos/#/tailwind3/message/default)                         |
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-barcode"><b>Barcode Generator</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-barcode-generator"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-barcode-generator" title="@syncfusion/ej2-vue-barcode-generator" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-barcode-generator"><img src="https://ej2.syncfusion.com/badges/ej2-barcode-generator/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-barcode-generator" title="@syncfusion/ej2-vue-barcode-generator" /></a>
-       </td>
-       <td>
-           <a href="src/barcodegenerator/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/barcode/ean8.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/barcode/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-circular-gauge"><b>Circular Gauge</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-circulargauge"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-circulargauge" title="@syncfusion/ej2-vue-circulargauge" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-circulargauge"><img src="https://ej2.syncfusion.com/badges/ej2-circulargauge/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-circulargauge" title="@syncfusion/ej2-vue-circulargauge" /></a>
-       </td>
-       <td>
-           <a href="src/circulargauge/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/circular-gauge/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/circular-gauge/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-diagram"><b>Diagram</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-diagrams"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-diagrams" title="@syncfusion/ej2-vue-diagrams" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-diagrams"><img src="https://ej2.syncfusion.com/badges/ej2-diagrams/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-diagrams" title="@syncfusion/ej2-vue-diagrams" /></a>
-       </td>
-       <td>
-           <a href="src/diagrams/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/diagram/default-functionalities.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/diagram/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-heatmap-chart"><b>HeatMap Chart</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-heatmap"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-heatmap" title="@syncfusion/ej2-vue-heatmap" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-heatmap"><img src="https://ej2.syncfusion.com/badges/ej2-heatmap/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-heatmap" title="@syncfusion/ej2-vue-heatmap" /></a>
-       </td>
-       <td>
-           <a href="src/heatmap/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/heatmap/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/heatmap-chart/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-kanban-board"><b>Kanban</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-kanban"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-kanban" title="@syncfusion/ej2-vue-kanban" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-kanban"><img src="https://ej2.syncfusion.com/badges/ej2-kanban/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-kanban" title="@syncfusion/ej2-vue-kanban" /></a>
-       </td>
-       <td>
-           <a href="src/kanban/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/kanban/overview.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/kanban/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-linear-gauge"><b>Linear Gauge</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-lineargauge"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-lineargauge" title="@syncfusion/ej2-vue-lineargauge" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-lineargauge"><img src="https://ej2.syncfusion.com/badges/ej2-lineargauge/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-lineargauge" title="@syncfusion/ej2-vue-lineargauge" /></a>
-       </td>
-       <td>
-           <a href="src/lineargauge/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/linear-gauge/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/linear-gauge/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-maps"><b>Maps</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-maps"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-maps" title="@syncfusion/ej2-vue-maps" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-maps"><img src="https://ej2.syncfusion.com/badges/ej2-maps/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-maps" title="@syncfusion/ej2-vue-maps" /></a>
-       </td>
-       <td>
-           <a href="src/maps/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/maps/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/maps/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-treemap"><b>TreeMap</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-treemap"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-treemap" title="@syncfusion/ej2-vue-treemap" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-treemap"><img src="https://ej2.syncfusion.com/badges/ej2-treemap/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-treemap" title="@syncfusion/ej2-vue-treemap" /></a>
-       </td>
-       <td>
-           <a href="src/treemap/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/treemap/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/treemap/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-bullet-chart"><b>Bullet Chart</b></a>
-       </td>
-       <td rowspan="6">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-charts"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-charts" title="@syncfusion/ej2-vue-charts" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-charts"><img src="https://ej2.syncfusion.com/badges/ej2-charts/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-charts" title="@syncfusion/ej2-vue-charts" /></a>
-       </td>
-       <td>
-           <a href="src/charts/src/bullet-chart">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/bullet-chart/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/bullet-chart/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-charts"><b>Charts</b></a>
-       </td>
-       <td>
-           <a href="src/charts/src/chart">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/chart/line.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/chart/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-range-selector"><b>Range Selector</b></a>
-       </td>
-       <td>
-           <a href="src/charts/src/range-navigator">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/range-navigator/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/range-navigator/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-smith-chart"><b>Smith Chart</b></a>
-       </td>
-       <td>
-           <a href="src/charts/src/smithchart">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/smith-chart/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/smithchart/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-sparkline"><b>Sparkline Charts</b></a>
-       </td>
-       <td>
-           <a href="src/charts/src/sparkline">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/sparkline/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/sparkline/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-stock-chart"><b>Stock Chart</b></a>
-       </td>
-       <td>
-           <a href="src/charts/src/stock-chart">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/stock-chart/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/stock-chart/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+**Full list of 145+ components** → [Documentation](https://ej2.syncfusion.com/vue/documentation/introduction)
 
-### Calendars
+## Resources
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-calendar"><b>Calendar</b></a>
-       </td>
-       <td rowspan="5">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-calendars"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-calendars" title="@syncfusion/ej2-vue-calendars" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-calendars"><img src="https://ej2.syncfusion.com/badges/ej2-calendars/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-calendars" title="@syncfusion/ej2-vue-calendars" /></a>
-       </td>
-       <td>
-           <a href="src/calendars/src/calendar">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/calendar/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/calendar/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-datepicker"><b>DatePicker</b></a>
-       </td>
-       <td>
-           <a href="src/calendars/src/datepicker">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/datepicker/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/datepicker/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-date-range-picker"><b>DateRangePicker</b></a>
-       </td>
-       <td>
-           <a href="src/calendars/src/daterangepicker">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/daterangepicker/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/daterangepicker/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-datetimepicker"><b>DateTime Picker</b></a>
-       </td>
-       <td>
-           <a href="src/calendars/src/datetimepicker">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/datetimepicker/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/datetimepicker/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-timepicker"><b>TimePicker</b></a>
-       </td>
-       <td>
-           <a href="src/calendars/src/timepicker">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/timepicker/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/timepicker/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-gantt-chart"><b>Gantt Chart</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-gantt"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-gantt" title="@syncfusion/ej2-vue-gantt" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-gantt"><img src="https://ej2.syncfusion.com/badges/ej2-gantt/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-gantt" title="@syncfusion/ej2-vue-gantt" /></a>
-       </td>
-       <td>
-           <a href="src/gantt/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/gantt/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/gantt/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-scheduler"><b>Scheduler</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-schedule"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-schedule" title="@syncfusion/ej2-vue-schedule" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-schedule"><img src="https://ej2.syncfusion.com/badges/ej2-schedule/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-schedule" title="@syncfusion/ej2-vue-schedule" /></a>
-       </td>
-       <td>
-           <a href="src/schedule/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/schedule/overview.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/schedule/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+- **Live Demos** – https://ej2.syncfusion.com/vue/demos/  
+  Try interactive examples of all 145+ components with real-time theme switching
+- **Documentation** – https://ej2.syncfusion.com/vue/documentation/  
+  Complete API reference, getting started guides, migration help, and tutorials
+- **API Reference** – https://ej2.syncfusion.com/vue/documentation/api/  
+  Detailed class, method, and property documentation
+- **Theme Studio** – https://ej2.syncfusion.com/themestudio/  
+  Online tool to customize Material, Bootstrap, Tailwind, Fluent, and other themes
+- **Release Notes** – https://ej2.syncfusion.com/vue/documentation/release-notes/  
+  What's new in each version, bug fixes, and breaking changes
+- **Showcase Applications** – https://www.syncfusion.com/showcase-apps/vue  
+  Real-world demo apps built with Syncfusion Vue components (Fitness Tracker, Hotel Booking, Diagram Builder, etc.)
+- **Support Channels**  
+  - [Support ticket](https://support.syncfusion.com/support/tickets/create)
+  - [Community Forum](https://www.syncfusion.com/forums)
+  - Stack Overflow (use tags: `syncfusion`, `ej2`, `ej2-vue`)  
+  - GitHub Issues (for open-source feedback or samples)
 
-### Navigation
+## License
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-accordion"><b>Accordion</b></a>
-       </td>
-       <td rowspan="9">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-navigations"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-navigations" title="@syncfusion/ej2-vue-navigations" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-navigations"><img src="https://ej2.syncfusion.com/badges/ej2-navigations/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-navigations" title="@syncfusion/ej2-vue-navigations" /></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/accordion">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/accordion/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/accordion/getting-started/">Documentation</a>
-       </td>
-   </tr>
-    <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/breadcrumb"><b>Breadcrumb</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/breadcrumb">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/breadcrumb/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/breadcrumb/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/carousel"><b>Carousel</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/carousel">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/carousel/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/carousel/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-context-menu"><b>Context Menu</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/context-menu">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/context-menu/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/context-menu/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-menu-bar"><b>Menu Bar</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/menu">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/menu/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/menu/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-sidebar"><b>Sidebar</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/sidebar">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/sidebar/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/sidebar/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-tabs"><b>Tabs</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/tab">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/tab/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/tab/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-toolbar"><b>Toolbar</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/toolbar">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/toolbar/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/toolbar/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-tree-view"><b>TreeView</b></a>
-       </td>
-       <td>
-           <a href="src/navigations/src/treeview">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/treeview/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/treeview/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-file-manager"><b>File Manager</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-filemanager"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-filemanager" title="@syncfusion/ej2-vue-filemanager" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-filemanager"><img src="https://ej2.syncfusion.com/badges/ej2-filemanager/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-filemanager" title="@syncfusion/ej2-vue-filemanager" /></a>
-       </td>
-       <td>
-           <a href="src/filemanager/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/file-manager/overview.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+This is a **commercial product** subject to the Syncfusion End User License Agreement (EULA).
 
-### Buttons
+**Free Community License** is available for qualifying users/organizations:  
+- Annual gross revenue < $1 million USD  
+- 5 or fewer total developers  
+- 10 or fewer total employees  
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-button"><b>Button</b></a>
-       </td>
-       <td rowspan="2">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-buttons"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-buttons"><img src="https://ej2.syncfusion.com/badges/ej2-buttons/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-buttons" title="@syncfusion/ej2-vue-buttons" /></a>
-       </td>
-       <td>
-           <a href="src/buttons/src/button">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/button/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-chips"><b>Chips</b></a>
-       </td>
-       <td>
-           <a href="src/buttons/src/chips">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/chips/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/chips/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-button-group"><b>Button Group</b></a>
-       </td>
-       <td rowspan="4">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-splitbuttons"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-splitbuttons" title="@syncfusion/ej2-vue-splitbuttons" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-splitbuttons"><img src="https://ej2.syncfusion.com/badges/ej2-splitbuttons/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-splitbuttons" title="@syncfusion/ej2-vue-splitbuttons" /></a>
-       </td>
-       <td>
-           <a href="src/splitbuttons/src/button-group">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/button-group.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/button-group/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-dropdown-menu"><b>Dropdown Menu</b></a>
-       </td>
-       <td>
-           <a href="src/splitbuttons/src/drop-down-button">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/dropdown-button.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/drop-down-button/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-progress-button"><b>Progress Button</b></a>
-       </td>
-       <td>
-           <a href="src/splitbuttons/src/progress-button">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/progress-button.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/progress-button/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-split-button"><b>Split Button</b></a>
-       </td>
-       <td>
-           <a href="src/splitbuttons/src/split-button">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/button/split-button.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/split-button/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+The community license allows free use in both internal and commercial applications under these conditions.  
+No registration or approval is required — just comply with the terms.
 
-### Layout
+**Paid Licenses** are required for:  
+- Larger organizations  
+- Teams exceeding the community license limits  
+- Priority support, custom patches, or on-premise deployment options  
 
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-avatar"><b>Avatar</b></a>
-       </td>
-       <td rowspan="4">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-layouts"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-layouts" title="@syncfusion/ej2-vue-layouts" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-layouts"><img src="https://ej2.syncfusion.com/badges/ej2-layouts/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-layouts" title="@syncfusion/ej2-vue-layouts" /></a>
-       </td>
-       <td>
-           <a href="src/layouts/styles/avatar">Styles</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/avatar/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/avatar/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-card"><b>Card</b></a>
-       </td>
-       <td>
-           <a href="src/layouts/styles/card">Styles</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/card/basic.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/card/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout"><b>Dashboard Layout</b></a>
-       </td>
-       <td>
-           <a href="src/layouts/src/dashboard-layout">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/dashboard-layout/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/dashboard-layout/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-splitter"><b>Splitter</b></a>
-       </td>
-       <td>
-           <a href="src/layouts/src/splitter">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/splitter/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/splitter/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-modal-dialog"><b>Dialog</b></a>
-       </td>
-       <td rowspan="2">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-popups"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-popups" title="@syncfusion/ej2-vue-popups" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-popups"><img src="https://ej2.syncfusion.com/badges/ej2-popups/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-popups" title="@syncfusion/ej2-vue-popups" /></a>
-       </td>
-       <td>
-           <a href="src/popups/src/dialog">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/dialog/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/dialog/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-tooltip"><b>Tooltip</b></a>
-       </td>
-       <td>
-           <a href="src/popups/src/tooltip">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/tooltip/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/tooltip/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-listview"><b>ListView</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-lists"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-lists" title="@syncfusion/ej2-vue-lists" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-lists"><img src="https://ej2.syncfusion.com/badges/ej2-lists/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-lists" title="@syncfusion/ej2-vue-lists" /></a>
-       </td>
-       <td>
-           <a href="src/lists/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/listview/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/listview/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
+Purchase options and pricing: https://www.syncfusion.com/sales/products  
+30-day free trial (full features, no credit card required): https://www.syncfusion.com/downloads/vue  
+Community License details & FAQ: https://www.syncfusion.com/products/communitylicense  
+Full EULA: https://www.syncfusion.com/eula/es/
 
-### Notification
-
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-badge"><b>Badge</b></a>
-       </td>
-       <td rowspan="2">
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-notifications"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-notifications" title="@syncfusion/ej2-vue-notifications" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-notifications"><img src="https://ej2.syncfusion.com/badges/ej2-notifications/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-notifications" title="@syncfusion/ej2-vue-notifications" /></a>
-       </td>
-       <td>
-           <a href="src/notifications/styles/badge">Styles</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/badge/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/badge/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-toaster"><b>Toast</b></a>
-       </td>
-       <td>
-           <a href="src/notifications/src/toast">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/toast/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/toast/getting-started/">Documentation</a>
-       </td>
-   </tr>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-progressbar"><b>Progress Bar</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-progressbar"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-progressbar" title="@syncfusion/ej2-vue-progressbar" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-progressbar"><img src="https://ej2.syncfusion.com/badges/ej2-progressbar/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-progressbar" title="@syncfusion/ej2-vue-progressbar" /></a>
-       </td>
-       <td>
-           <a href="src/progressbar/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/progress-bar/linear.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/progress-bar/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
-
-### Forms
-
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-query-builder"><b>Query Builder UI</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-querybuilder"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-querybuilder" title="@syncfusion/ej2-vue-querybuilder" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-querybuilder"><img src="https://ej2.syncfusion.com/badges/ej2-querybuilder/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-querybuilder" title="@syncfusion/ej2-vue-querybuilder" /></a>
-       </td>
-       <td>
-           <a href="src/querybuilder/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/query-builder/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
-
-### Viewer
-
-<table>
-   <tr>
-       <td>
-           <a href="https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer"><b>PDF Viewer</b></a>
-       </td>
-       <td>
-           <a href="https://www.npmjs.com/package/@syncfusion/ej2-vue-pdfviewer"><img src="https://ej2.syncfusion.com/github/images/npm-logo.png" alt="npm package @syncfusion/ej2-vue-pdfviewer" title="@syncfusion/ej2-vue-pdfviewer" style="height:20px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ej2.syncfusion.com/badges/ej2-pdfviewer"><img src="https://ej2.syncfusion.com/badges/ej2-pdfviewer/coverage.svg" alt="code coverage of @syncfusion/ej2-vue-pdfviewer" title="@syncfusion/ej2-vue-pdfviewer" /></a>
-       </td>
-       <td>
-           <a href="src/pdfviewer/src">Source</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/demos/#/bootstrap5/pdfviewer/default.html">Live demo</a>
-       </td>
-       <td>
-           <a href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/">Documentation</a>
-       </td>
-   </tr>
-</table>
-
- ## Supported Frameworks
- The Essential JS 2 is also offered in following list of frameworks.
- * [JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-* [Angular](https://www.syncfusion.com/angular-ui-components?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-* [React](https://www.syncfusion.com/react-ui-components?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-* [ASP.NET Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-* [ASP.NET MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_source=npm&utm_campaign=ej2-vue-ui-components)
- ## Showcase Applications
- * [IT Asset Management](https://ej2.syncfusion.com/showcase/vue/assetmanagement?utm_source=npm&utm_campaign=ej2-vue-ui-components)
- ## Support
- Product support is available for through following mediums.
- * Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=ej2-vue-ui-components) support system or [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_campaign=ej2-vue-ui-components).
-* New [GitHub issue](https://github.com/syncfusion/ej2-vue-ui-components/issues/new).
-* Ask your query in [Stack Overflow](https://stackoverflow.com/) with tag `syncfusion` and `ej2`.
- ## License
- Check the license detail [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license).
- ## Changelog
- Check the changelog [here](https://ej2.syncfusion.com/vue/documentation/release-notes/index/?utm_source=npm&utm_campaign=ej2-vue-ui-components)
-     © Copyright 2022 Syncfusion, Inc. All Rights Reserved.
-    The Syncfusion Essential Studio license and copyright applies to this distribution.
+© 2026 Syncfusion, Inc. All Rights Reserved.
