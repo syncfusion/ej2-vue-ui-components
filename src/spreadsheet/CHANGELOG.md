@@ -6,6 +6,14 @@
 
 #### Bug fixes
 
+- `#I801058` - Issue with "wrap not calculated correctly for cells in the same row during initial rendering" has been resolved.
+
+## 32.2.3 (2026-02-05)
+
+### Spreadsheet
+
+#### Bug fixes
+
 - `#I795894` - Issue with "cell values containing large decimal values not rounding correctly when a number format is applied" has been resolved.
 
 ## 32.1.21 (2025-12-30)

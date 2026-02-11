@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## 32.1.21 (2025-12-30)
+
 ### Common
 
 #### Bug Fixes

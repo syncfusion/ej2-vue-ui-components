@@ -6,9 +6,19 @@
 
 #### Bug Fixes
 
+- `I805487` - Resolved an issue where data was not added correctly using the `addRecord` method when batch editing, persistence, and multiple selection were enabled.
+
+## 32.2.3 (2026-02-05)
+
+### Tree Grid
+
+#### Bug Fixes
+
 - `I806463` - Resolved an issue where the `actionFailure` event was triggered even when the checkbox column and the tree column were the same.
 
 - `#F71783` - Fixed an issue where the next set of data not rendered on collapsing records when infinite scrolling is enabled.
+
+- `I805487` - Resolved an issue where data was not added correctly using the `addRecord` method when batch editing, persistence, and multiple selection were enabled.  
 
 ## 32.1.25 (2026-01-27)
 

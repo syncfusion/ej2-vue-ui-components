@@ -6,6 +6,16 @@
 
 #### Bug Fixes
 
+- `#I808473` - Resolved an issue where the free text color property was not displayed correctly in the color picker after editing the annotation in the Adobe PDF Viewer.
+- `#I803144` - Resolved an issue where the custom font family was not applied correctly for free text when set through the `freeTextSettings` API.
+- `#I803494` - Resolved an issue where alignment was not applied correctly for free text when set through the `freeTextSettings` API.
+
+## 32.2.3 (2026-02-05)
+
+### PDF Viewer
+
+#### Bug Fixes
+
 - `#I800598` - Resolved an issue where the text selection position was not proper in the customer provided PDF document.
 - `#I802146` - Resolved an issue where the selected annotation did not appear in the viewport at higher zoom levels in the customer provided PDF document.
 

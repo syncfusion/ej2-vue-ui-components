@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## 32.1.25 (2026-01-27)
+
 ### Splitter
 
 #### Bug Fixes

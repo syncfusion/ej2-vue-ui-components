@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### DropDownList
+
+#### Bug fixes
+
+- `#I801864` - The issue with programmatic value binding in a virtualization dropdown has been fixed.
+
 ## 32.1.23 (2026-01-13)
 
 ### MultiSelect
