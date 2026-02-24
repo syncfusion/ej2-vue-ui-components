@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 32.2.7 (2026-02-24)
+
+### Kanban
+
+#### Bug Fixes
+
+- `#I810679` - Now, the page works properly on mobile devices when drag‑and‑drop is disabled or set to false, without causing freezing of the page.
+
 ## 32.1.20 (2025-12-23)
 
 ### Kanban

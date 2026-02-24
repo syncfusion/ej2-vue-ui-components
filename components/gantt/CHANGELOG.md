@@ -2,6 +2,29 @@
 
 ## [Unreleased]
 
+## 32.2.7 (2026-02-24)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#F198069` - Fixed issue where context menu not opened after performing horizontal scrolling on the Grid columns.
+- `#I813079` - Fixed an issue where the spinner remained visible after dynamically clearing filters via an external button click.
+
+## 32.2.5 (2026-02-17)
+
+### GanttChart
+
+#### Bug fixes
+
+- `#I811186` - Fixed an issue where, with virtualization enabled and `enableVirtualMaskRow` set to false, scrolling caused initially loaded records to become hidden.
+- `#I811633` - Fixed an issue in the `rowSelecting` event where the target value was not properly reset when performing a right-click action using a mouse pad / trackpad.
+- `#I810428` - Fixed timeline cell misalignment in PDF export when `projectStartDate` is entered in `YYYY-MM-DD` format.
+
+#### Bug fix
+
+- `#I810428` - Fixed timeline cell misalignment in PDF export when `projectStartDate` is entered in `YYYY-MM-DD` format.
+
 ## 32.2.4 (2026-02-11)
 
 ### GanttChart
