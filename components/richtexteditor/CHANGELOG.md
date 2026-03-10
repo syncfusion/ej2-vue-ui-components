@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### RichTextEditor
+
+#### Bug Fixes
+
+- `#I814716` - Now, pressing Backspace does not delete the media element after several Enter key presses if the media element is not in selection.
+
+- `#I817289` - Now, AI Assistant prompt stays populated when chat reopens before response completion in Rich Text Editor.
+
+- `#I814716` - Now, the cursor position is maintained correctly after inserting a video using executeCommand in the Rich Text Editor.
+
 ## 32.2.8 (2025-12-22)
 
 ### RichTextEditor

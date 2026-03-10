@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### DropDownList
+
+#### Bug Fixes
+
+- `#I812495` - The issue with programmatic value binding in a virtualization dropdown has been fixed.
+
 ## 32.2.7 (2026-02-24)
 
 ### DropDownTree

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I817595` - Issue with "formula parsing failing when a formula containing a cell reference ending in 0 is immediately followed by the division operator and a quoted sheet reference, resulting in an incorrect result" has been resolved.
+
 ## 32.2.5 (2026-02-17)
 
 ### Spreadsheet

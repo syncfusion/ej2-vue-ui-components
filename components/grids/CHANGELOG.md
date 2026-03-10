@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### Grid
+
+#### Bug fixes
+
+- `#I813912` - Resolved an issue where an accessibility warning was thrown due to a missing id attribute in the clipboard feature of the Grid.
+- `#I812612` - Resolved an issue where resizing a Grid column using a touchpad on `macOS` caused text content in the Grid to be selected.
+
 ## 32.2.8 (2025-12-22)
 
 ### Grid

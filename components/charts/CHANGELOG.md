@@ -2,7 +2,15 @@
 
 ## [Unreleased]
 
-## 32.2.8 (2025-12-22)
+## 32.2.9 (2026-03-10)
+
+### Chart
+
+#### Bug Fixes
+
+- `#I815160` - The scrollbar is now properly rendered when `isInversed` is enabled
+
+## 32.2.8 (2026-03-03)
 
 ### Chart
 

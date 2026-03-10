@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### Sidebar
+
+#### Bug Fixes
+
+- `#I811704` - Fixed layout synchronization issues where toggling the `enableDock` property dynamically caused the main content to either retain unwanted spacing or be overlapped by the Sidebar.
+
+### Accordion
+
+#### Bug Fixes
+
+- `#I811714` - Resolved a runtime error when using `dataSource` without an `itemTemplate` by falling back to static-content rendering.
+
+### Menu
+
+#### Bug Fixes
+
+- `#I818021` - The issue with keyboard navigation for nested elements rendered in the submenu item within the drop-down button has been resolved.
+
 ## 32.2.8 (2025-12-22)
 
 ### Menu

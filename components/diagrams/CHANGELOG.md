@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I813036` - Fixed an issue where the selector of a selected node moved unexpectedly when dragging the node across the diagram’s negative region.
+- `#I813867` - Fixed the issue where AllowMovingOutsideLane caused a selected node to enlarge during Shift+Click multi‑selection drag.
+
 ## 32.2.8 (2025-12-22)
 
 ### Diagram

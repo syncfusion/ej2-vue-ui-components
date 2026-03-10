@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 32.2.9 (2026-03-10)
+
+### GanttChart
+
+#### Bug fix
+
+- `I816571` - The issue where the `rowSelected` event returned an incorrect target element while selecting rows on Grid side in iPad Safari has been resolved.
+
 ## 32.2.8 (2025-12-22)
 
 ### GanttChart
