@@ -2,127 +2,63 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
+## 33.1.44 (2026-03-16)
 
 ### RichTextEditor
 
-#### Bug Fixes
+#### Features
 
-- `#I814716` - Now, pressing Backspace does not delete the media element after several Enter key presses if the media element is not in selection.
+- **Table, Row, and Column Selection**: The Rich Text Editor now supports row, column, and entire table selection with an icon that appear on hover, along with `CTRL + A` keyboard short cut that progressively selects the cell, row, table, and then all the editor content. Explore the demo [here](https://ej2.syncfusion.com/demos/#/tailwind3/rich-text-editor/tools.html).
 
-- `#I817289` - Now, AI Assistant prompt stays populated when chat reopens before response completion in Rich Text Editor.
+- **Image Wrap**: The Rich Text Editor now provides image left and right text‑wrapping through the image quick toolbar. Explore the demo [here](https://ej2.syncfusion.com/demos/#/tailwind3/rich-text-editor/tools.html).
 
-- `#I814716` - Now, the cursor position is maintained correctly after inserting a video using executeCommand in the Rich Text Editor.
+- **Image Caption Restore**: Image captions now retain their previous values when toggled using the caption icon in the quick toolbar.
 
-## 32.2.8 (2025-12-22)
+- **Quick Toolbar enableAppendToBody**: The Rich Text Editor now includes support for the `enableAppendToBody` in the [quickToolbarSettings](https://ej2.syncfusion.com/documentation/api/rich-text-editor/index-default#quicktoolbarsettings), allowing both the quick toolbar and inline toolbar to be rendered directly in the document's body element instead of within the editor container. This enhancement prevents toolbar clipping at container boundaries, improves visibility in constrained or overflow layouts, and ensures the full toolbar remains accessible during editing interactions.
 
-### RichTextEditor
+- **Multiple Images Copy and Paste**: The Rich Text Editor supports inserting multiple images simultaneously through paste and drag‑and‑drop actions from the local file browser. When multiple images are selected and pasted or dropped into the editor, each file is individually processed, uploaded, and inserted according to the configured `insertImageSettings`. Explore the demo [here](https://ej2.syncfusion.com/demos/#/tailwind3/rich-text-editor/tools.html).
 
-#### Bug Fixes
+- **Table Cell Properties**: The Rich Text Editor now includes table cell formatting support. Individual or multiple selected cells can be formatted with the options like cell width, height, padding, background color, horizontal and vertical alignment, border width, style, and color. Explore the demo [here](https://ej2.syncfusion.com/demos/#/tailwind3/rich-text-editor/tools.html).
 
-- `#I813029` - Now, the Rich Text Editor's robust HTML sanitization effectively prevents XSS attacks by filtering out malicious content, including event handlers and inline scripts.
+- Enabling read‑only mode disables the toolbar and automatically closes any open dialogs and quick toolbars. Explore the demo [here](https://ej2.syncfusion.com/demos/#/tailwind3/rich-text-editor/api.html).
 
-- `#I812077` - Now, updating content with script tags does not remove the content in the Rich Text Editor.
+- **Table, Row, and Column Selection**: The Rich Text Editor now supports row, column, and entire table selection with an icon that appear on hover, along with `CTRL + A` keyboard short cut that progressively selects the cell, row, table, and then all the editor content. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/tools.html).
 
-## 32.2.7 (2026-02-24)
+- **Image Wrap**: The Rich Text Editor now provides image left and right text‑wrapping through the image quick toolbar. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/tools.html).
 
-### RichTextEditor
+- **Image Caption Restore**: Image captions now retain their previous values when toggled using the caption icon in the quick toolbar.
 
-#### Bug Fixes
+- **Quick Toolbar enableAppendToBody**: The Rich Text Editor now includes support for the `enableAppendToBody` in the [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/index-default#quicktoolbarsettings), allowing both the quick toolbar and inline toolbar to be rendered directly in the document's body element instead of within the editor container. This enhancement prevents toolbar clipping at container boundaries, improves visibility in constrained or overflow layouts, and ensures the full toolbar remains accessible during editing interactions.
 
-- `#I811744` - Now, Font Family dropdown displays the actual font name for content copied from Microsoft Word.
+- **Multiple Images Copy and Paste**: The Rich Text Editor supports inserting multiple images simultaneously through paste and drag‑and‑drop actions from the local file browser. When multiple images are selected and pasted or dropped into the editor, each file is individually processed, uploaded, and inserted according to the configured `insertImageSettings`. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/tools.html).
 
-## 32.2.5 (2026-02-17)
+- **Table Cell Properties**: The Rich Text Editor now includes table cell formatting support. Individual or multiple selected cells can be formatted with the options like cell width, height, padding, background color, horizontal and vertical alignment, border width, style, and color. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/tools.html).
 
-### RichTextEditor
+- Enabling read‑only mode disables the toolbar and automatically closes any open dialogs and quick toolbars. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/api.html).
 
-#### Bug Fixes
+#### Breaking Changes
 
-- `#I807301` - Now, tooltips for link quick toolbar icons are hidden when the Print Screen key is pressed.
+- Image Alignment: When image alignment was applied, the image’s display style was set to inline before, now applying the image alignment sets the image’s display style to block. Alternatively, use the Image Wrap option in the quick toolbar (Left Wrap /Right Wrap) to apply left or right alignment for images displayed inline.
 
-- `#I811708` - Now, focus is maintained in the input element during typing and does not transfer to the editor.
+- Image and caption element class names have been standardized as follows:
 
-- `#I809024` - Now, when configuring the `headerToolbarSettings` property within the `aiAssistantSettings` option to include the `Close` item, will function correctly without throwing any console errors.
-
-- `#I807359` - Now, when images are deleted in mobile mode using the quick toolbar, the focus will stay inside the editor.
-
-- `#I808077` - Now, the Rich Text Editor works properly by maintaining inline formatting styles when moving to a new line after removing all characters from the previous line.
-
-## 32.2.4 (2026-02-11)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I807353` - Now, lists are correctly inserted into the editor when copied from an online Word document.
-
-- `#I801773` - Now, the change event is properly triggered when the Rich Text Editor is rendered in `iframe` mode when `saveInterval` is configured.
-
-- `#I806375` - Now, applying the clear format option to table cells in the Rich Text Editor will eliminate all formatting from the selected cells properly.
-
-- `#I806936` - Now, table column widths are preserved when copying and pasting a table within the Rich Text Editor.
-
-## 32.1.25 (2026-01-27)
-
-### RichTextEditor
+| Previous class names                             | Current class names      |
+|--------------------------------------------------|--------------------------|
+| e-imginline                                      | e-img-inline             |
+| e-imgbreak                                       | e-img-break              |
+| e-imgcenter                                      | e-img-center             |
+| e-imgleft                                        | e-img-left               |
+| e-imgright                                       | e-img-right              |
+| e-img-caption e-rte-img-caption e-caption-inline | e-img-caption-container  |
+| e-img-inner                                      | e-img-caption-text       |
 
 #### Bug Fixes
 
-- `#I802471` - Now, the extra blank lines appearing when switching between Preview and Source View after inserting block elements has now been resolved.
+- `#I816137` - Now, the Rich Text Editor generates a minimal JavaScript file when injectable modules are selected using the Custom Resource Generator (CRG).
 
-- `#I803837` - Now, the Font Size toolbar option displays the correct value that corresponds to the current cursor position in the Rich Text Editor.
+- Now, pressing the enter key at the start of a block node preserves the formatting in the newly created block node.
 
-- `#I803207` - Now, pressing the Enter key when the cursor is placed immediately after an image with a caption functions properly without causing any errors.
-
-## 32.1.24 (2026-01-20)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I801343` - Now images copied using the browser context menu and pasted into the editor will be uploaded to the server with an `uploader` popup when `saveUrl` is configured.
-
-## 32.1.23 (2026-01-13)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I799247` - Now, the inline toolbar popup will be visible when the editor has minimal height.
-
-- `#I762475` - Now, applying clear format in the Rich Text Editor will remove all formatting from table's `tbody` and `tr` elements.
-
-## 32.1.22 (2026-01-06)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I798242` - Now, when dynamically setting the value to `null` in the Rich Text Editor, the toolbar status is updated properly.
-
-- `#I792426` - Now, continuously dragging and dropping images works properly in the Rich Text Editor when the `saveUrl` API is configured.
-
-## 32.1.21 (2025-12-30)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I795310` - Now, collapsing the extended toolbar after clicking the code view icons works properly without decreasing the Rich Text Editor height.
-
-- `#I796071` - Now, the tab key navigation across the Rich Text Editor works properly even after the maximum content length is reached.
-
-- `#I794986` - Now, the divider element remains separate and works properly without merging with a table when pasted from a Word document into the Rich Text Editor.
-
-## 32.1.20 (2025-12-23)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I794986` - Now, pressing the enter key works properly when the cursor is placed after a divider element pasted from a Word document into the Rich Text Editor.
-
-- `#I792912` - Now, the target attribute remains intact in the inserted link element when the `enableXhtml` property is enabled in the Rich Text Editor.
+- Now, pressing the enter key in a paragraph containing two <br> elements removes only the selected content instead of affecting the entire paragraph.
 
 ## 32.1.19 (2025-12-16)
 
@@ -155,168 +91,6 @@
 - `#I770551` - Now, the Rich Text Editor fully reverts list items across all nested levels when using the corresponding toolbar option. Previously, reverting a nested list only removed one level of nesting; with this update, all levels of the list are completely reverted for accurate and consistent formatting.
 
 - `#I792435` - Now, `clearFormat` works properly in the Rich Text Editor when the selected content begins with an empty line.
-
-## 31.2.18 (2025-12-09)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I763877` - Now, pasting content in the Rich Text Editor works properly when `BR` is configured for the Enter key.
-
-- `#I790401` - Now, when the Rich Text Editor is placed inside a table, hovering over it does not generate any errors.
-
-## 31.2.15 (2025-11-25)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I787017` - Now, inserting tables works properly when the Rich Text Editor is placed inside a list.
-
-- `#I783703` - Now, the inline toolbar in the Rich Text Editor is positioned properly without truncation at the edges.
-
-- `#I786061` - Now, localization works properly for the table cell dropdown items in the Rich Text Editor.
-
-- `#I773939` - Now, the emoji picker accessed through the `showEmojiPicker` public method works properly when inline mode is enabled in the Rich Text Editor.
-
-## 31.2.12 (2025-11-18)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I783876` - Now, the `Apply` and `Cancel` buttons are available in the `Picker` mode of the Rich Text Editor's color picker.
-
-- `#I785329` - Now, the Enter key behaves correctly when the cursor is placed at the end of a text node that is preceded by a `<br>` tag in the Rich Text Editor.
-
-- `#I763871` - Now, when the `BR` is configured for the Enter key in the Rich Text Editor, the backspace action works as expected when the cursor is placed after an anchor tag.
-
-## 31.2.10 (2025-11-13)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I762661` - Now, the Rich Text Editor works properly when pressing the `Backspace` key above the list element, without throwing script errors.
-
-## 31.2.5 (2025-11-04)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#F197675` - Now, the Rich Text Editor works properly by showing tooltips when dynamically setting the `enabled` property to `true`.
-
-- `#I780766` - Now, the Rich Text Editor works properly when the `value` is bound as `undefined`, without throwing script errors.
-
-- `#I776059` - Now, pasting nested lists from `OneNote` into the Rich Text Editor works correctly, with styles applying and reverting as expected.
-
-- `#I778189` - Now, pasting lists from `Copilot` into the Rich Text Editor works correctly, with no misalignment issues.
-
-- `#I779872` - Now, the Rich Text Editor works properly when hovering over the dialog header to show the tooltip.
-
-- `#I770551` - Now, reverting the indented list items in Rich Text Editor works properly.
-
-## 31.2.4 (2025-10-28)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I776604` - Now, unnecessary toolbar items are properly disabled when a custom toolbar item is added while focusing inside a code block.
-
-## 31.2.3 (2025-10-22)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I762935` - Now, list elements seamlessly adopt the appropriate styling properties when a list is applied.
-
-- `#I762396` - Now, when using backspace on a list pasted from Outlook into the Rich Text Editor, the entire list is correctly removed as expected.
-
-- `#I775016` - Now, text dragged into the Rich Text Editor is correctly tracked in the undo and redo history.
-
-## 31.2.2 (2025-10-15)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I764281` - Now, the inline toolbar displays correctly when text content is positioned alongside an image within the same block-level element.
-
-- `#I771571` - Now, the Rich Text Editor properly handles pasting when content is pasted from Microsoft Teams.
-
-- `#I773939` - Now, emoji insertion via the colon `:` functions properly when inline mode is enabled.
-
-## 31.1.23 (2025-10-07)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I768886` - Now, pasting content copied from a `span` wrapped Rich Text Editor works properly.
-
-- `#I764281` - Now, the Rich Text Editor inline toolbar position works properly when the editor content is empty.
-
-## 31.1.22 (2025-10-01)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I771758` - Now, the `aria-multiline` attribute has been successfully added with the value true to the `contenteditable` element of the Rich Text Editor.
-
-- `#I771370` - Now, the `getSelectedHtml` method accurately returns the HTML content corresponding to the selection made within the editor.
-
-- `#I770551` - Now, when plain text containing multiple paragraphs is pasted into the editor, each paragraph is correctly preserved and rendered as separate blocks, maintaining the original structure.
-
-- `#I769104` - Now, consecutive image drag-and-drop operations work properly in the Rich Text Editor.
-
-- `#I769396` - Now, pasting content from Notepad into the Rich Text Editor inserts it exactly at the cursor position.
-
-- `#I762396` - Now, pasting multiple lines of content into bullet lists copied from Outlook works properly in the Rich Text Editor when the `enterKey` property is set to `DIV`.
-
-## 31.1.21 (2025-09-23)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I764281` - Now, the inline toolbar will display correctly when triggered by the focus event, even if the Rich Text Editor contains no value.
-
-- `#I764677` - Now, column resizing functions correctly when a `colspan` attribute is applied to a table element.
-
-## 31.1.20 (2025-09-10)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I750223` - Now, drag and drop image insertion into the editor functions reliably even when no image path is configured.
-
-- `#I762924` - Now, the Rich Text Editor works properly when pasting list content as plain text in the Firefox browser, and the list no longer becomes a single element.
-
-- `#I762935` - Now, the Rich Text Editor works properly when the font color is removed from list content, and the bullet list element no longer retains the font color.
-
-- `#I762475` - Now, the Rich Text Editor works properly when using Clear Format to remove inline styles from table content.
-
-## 31.1.18 (2025-09-10)
-
-### RichTextEditor
-
-#### Bug Fixes
-
-- `#I760221` - Now, the Rich Text Editor works properly when deleting text from nested bullet lists that contain image elements.
-
-- `#I759593` - Now, the Rich Text Editor works properly without throwing an accessibility error from the color picker toolbar.
-
-- `#I762072, #I760826` - Now, the Rich Text Editor works properly when copying and pasting content with bold formatting and font color from Excel.
-
-- `#I762077` - Now, the Rich Text Editor works properly when pressing backspace before an image in a list item, and the image no longer disappears.
-
-- `#I760415` - Now, the Rich Text Editor works properly without scrolling to the top when inserting a link using Ctrl + K.
 
 ## 31.1.17 (2025-09-05)
 

@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { BlockEditor, BlockEditorModel } from '@syncfusion/ej2-blockeditor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'blockActionMenuSettings', 'blocks', 'codeBlockSettings', 'commandMenuSettings', 'contextMenuSettings', 'cssClass', 'enableDragAndDrop', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'height', 'imageBlockSettings', 'inlineToolbarSettings', 'keyConfig', 'labelSettings', 'locale', 'pasteCleanupSettings', 'readOnly', 'undoRedoStack', 'users', 'width', 'afterPasteCleanup', 'beforePasteCleanup', 'blockChanged', 'blockDragStart', 'blockDragging', 'blockDropped', 'blur', 'created', 'focus', 'selectionChanged'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColorSettings', 'blockActionMenuSettings', 'blocks', 'codeBlockSettings', 'commandMenuSettings', 'contextMenuSettings', 'cssClass', 'enableDragAndDrop', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'fontColorSettings', 'height', 'imageBlockSettings', 'inlineToolbarSettings', 'keyConfig', 'labelSettings', 'locale', 'pasteCleanupSettings', 'readOnly', 'transformSettings', 'undoRedoStack', 'users', 'width', 'afterPasteCleanup', 'beforeFileUpload', 'beforePasteCleanup', 'blockChanged', 'blockDragStart', 'blockDragging', 'blockDropped', 'blur', 'created', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'selectionChanged'];
 export const modelProps: string[] = ['blocks'];
 
 export const testProp: any = getProps({props: properties});
@@ -196,8 +196,8 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         setCursorPosition(blockId: string, position: number): void {
             return this.ej2Instances.setCursorPosition(blockId, position);
         },
-        setSelection(contentId: string, startIndex: number, endIndex: number): void {
-            return this.ej2Instances.setSelection(contentId, startIndex, endIndex);
+        setSelection(node: Object, startIndex: number, endIndex: number): void {
+            return this.ej2Instances.setSelection(node, startIndex, endIndex);
         },
         updateBlock(blockId: string, properties: Object): boolean {
             return this.ej2Instances.updateBlock(blockId, properties);
@@ -243,7 +243,7 @@ export type BlockEditorComponent = typeof ComponentBase & {
     selectBlock(blockId: string): void;
     selectRange(range: Object): void;
     setCursorPosition(blockId: string, position: number): void;
-    setSelection(contentId: string, startIndex: number, endIndex: number): void;
+    setSelection(node: Object, startIndex: number, endIndex: number): void;
     updateBlock(blockId: string, properties: Object): boolean
 };
 

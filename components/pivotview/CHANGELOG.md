@@ -2,56 +2,6 @@
 
 ## [Unreleased]
 
-## 32.2.4 (2026-02-11)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- PDF exports now preserve indentation, values, subtotals, and visual formatting consistent with the Pivot Table UI, ensuring exported documents match on‑screen presentation for review and distribution.
-
-## 32.2.3 (2026-02-05)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `I198038` - The localization text for the column chart and column axis label now renders properly in the pivot table.
-
-## 32.1.25 (2026-01-27)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `I801715` - The drag-and-drop icon now displays correctly for calculated fields when paging is enabled in the Pivot Table.
-
-## 32.1.22 (2026-01-06)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `I798298` - Pivot Tables now correctly preserve custom aggregate types for string fields in the value axis.
-
-## 32.1.21 (2025-12-30)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `I790108` - Pivot Table filtering now functions correctly, even when date grouping members include empty strings.
-
-## 32.1.20 (2025-12-23)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `I792577` - The Pivot Table now renders correctly when a parent field member is expanded while the tabular layout is enabled.
-- `I791186` - The Pivot Table now preserves the original data order when sorting is disabled, ensuring a consistent display without unintended reordering.
-- `I787359`, `I795042` - The Pivot Table subtotal cells now have consistent properties in the `aggregateCellInfo` event for both tabular and compact layouts.
-
 ## 31.1.17 (2025-09-05)
 
 ### Pivot Table

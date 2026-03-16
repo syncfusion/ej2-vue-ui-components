@@ -2,46 +2,6 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I817595` - Issue with "formula parsing failing when a formula containing a cell reference ending in 0 is immediately followed by the division operator and a quoted sheet reference, resulting in an incorrect result" has been resolved.
-
-## 32.2.5 (2026-02-17)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I798632` - Issue with "image position not being preserved after performing a drag and drop operation when saving and reloading the `JSON`" has been resolved.
-
-## 32.2.4 (2026-02-11)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I801058` - Issue with "wrap not calculated correctly for cells in the same row during initial rendering" has been resolved.
-
-## 32.2.3 (2026-02-05)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I795894` - Issue with "cell values containing large decimal values not rounding correctly when a number format is applied" has been resolved.
-
-## 32.1.21 (2025-12-30)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I787911` - Issue with "left border not applied properly in the merged cells during scrolling" has been resolved.
-
 ## 32.1.20 (2025-12-23)
 
 ### Spreadsheet

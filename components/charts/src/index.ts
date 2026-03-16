@@ -43,3 +43,6 @@ export { Chart3DComponent, Chart3DPlugin } from './chart3d/chart3d.component';
 export { CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, CircularChart3DSeriesCollectionPlugin, CircularChart3DSeriesPlugin } from './circularchart3d/series.directive';
 export { CircularChart3DSelectedDataIndexesDirective, CircularChart3DSelectedDataIndexDirective, CircularChart3DSelectedDataIndexesPlugin, CircularChart3DSelectedDataIndexPlugin } from './circularchart3d/selecteddataindexes.directive';
 export { CircularChart3DComponent, CircularChart3DPlugin } from './circularchart3d/circularchart3d.component';
+export { SankeyNodesCollectionDirective, SankeyNodeDirective, SankeyNodesCollectionPlugin, SankeyNodePlugin } from './sankey/nodes.directive';
+export { SankeyLinksCollectionDirective, SankeyLinkDirective, SankeyLinksCollectionPlugin, SankeyLinkPlugin } from './sankey/links.directive';
+export { SankeyComponent, SankeyPlugin } from './sankey/sankey.component';

@@ -137,6 +137,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         addRecord(data?: Object, index?: number): void {
             return this.ej2Instances.addRecord(data, index);
         },
+        addRecordAsync(data?: Object, index?: number): Object {
+            return this.ej2Instances.addRecordAsync(data, index);
+        },
         addShimmerEffect(): void {
             return this.ej2Instances.addShimmerEffect();
         },
@@ -161,8 +164,14 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         clearFiltering(fields?: string[]): void {
             return this.ej2Instances.clearFiltering(fields);
         },
+        clearFilteringAsync(fields?: string[]): Object {
+            return this.ej2Instances.clearFilteringAsync(fields);
+        },
         clearGrouping(): void {
             return this.ej2Instances.clearGrouping();
+        },
+        clearGroupingAsync(): Object {
+            return this.ej2Instances.clearGroupingAsync();
         },
         clearRowSelection(): void {
             return this.ej2Instances.clearRowSelection();
@@ -172,6 +181,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         clearSorting(): void {
             return this.ej2Instances.clearSorting();
+        },
+        clearSortingAsync(): Object {
+            return this.ej2Instances.clearSortingAsync();
         },
         closeEdit(): void {
             return this.ej2Instances.closeEdit();
@@ -188,8 +200,14 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         deleteRecord(fieldname?: string, data?: Object): void {
             return this.ej2Instances.deleteRecord(fieldname, data);
         },
+        deleteRecordAsync(fieldname?: string, data?: Object): Object {
+            return this.ej2Instances.deleteRecordAsync(fieldname, data);
+        },
         deleteRow(tr: Object): void {
             return this.ej2Instances.deleteRow(tr);
+        },
+        deleteRowAsync(tr: Object): Object {
+            return this.ej2Instances.deleteRowAsync(tr);
         },
         destroy(): void {
             return this.ej2Instances.destroy();
@@ -212,6 +230,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         endEdit(): void {
             return this.ej2Instances.endEdit();
         },
+        endEditAsync(): Object {
+            return this.ej2Instances.endEditAsync();
+        },
         excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object {
             return this.ej2Instances.excelExport(excelExportProperties, isMultipleExport, workbook, isBlob);
         },
@@ -220,6 +241,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): void {
             return this.ej2Instances.filterByColumn(fieldName, filterOperator, filterValue, predicate, matchCase, ignoreAccent, actualFilterValue, actualOperator);
+        },
+        filterByColumnAsync(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): Object {
+            return this.ej2Instances.filterByColumnAsync(fieldName, filterOperator, filterValue, predicate, matchCase, ignoreAccent, actualFilterValue, actualOperator);
         },
         freezeRefresh(): void {
             return this.ej2Instances.freezeRefresh();
@@ -347,6 +371,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         getPager(): Object {
             return this.ej2Instances.getPager();
         },
+        getPersistColumns(): string {
+            return this.ej2Instances.getPersistColumns();
+        },
         getPrimaryKeyFieldNames(): string[] {
             return this.ej2Instances.getPrimaryKeyFieldNames();
         },
@@ -392,11 +419,17 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         goToPage(pageNo: number): void {
             return this.ej2Instances.goToPage(pageNo);
         },
+        goToPageAsync(pageNo: number): Object {
+            return this.ej2Instances.goToPageAsync(pageNo);
+        },
         groupCollapseAll(): void {
             return this.ej2Instances.groupCollapseAll();
         },
         groupColumn(columnName: string): void {
             return this.ej2Instances.groupColumn(columnName);
+        },
+        groupColumnAsync(columnName: string): Object {
+            return this.ej2Instances.groupColumnAsync(columnName);
         },
         groupExpandAll(): void {
             return this.ej2Instances.groupExpandAll();
@@ -458,6 +491,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         search(searchString: string): void {
             return this.ej2Instances.search(searchString);
         },
+        searchAsync(searchString: string): Object {
+            return this.ej2Instances.searchAsync(searchString);
+        },
         selectCell(cellIndex: Object, isToggle?: boolean): void {
             return this.ej2Instances.selectCell(cellIndex, isToggle);
         },
@@ -488,6 +524,12 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         setCellValue(key: string | number, field: string, value: string | number | boolean | Object | null): void {
             return this.ej2Instances.setCellValue(key, field, value);
         },
+        setCellValueAsync(key: string | number, field: string, value: string | number | boolean | Object | null, delay: number): Object {
+            return this.ej2Instances.setCellValueAsync(key, field, value, delay);
+        },
+        setColumns(columns: Object[]): void {
+            return this.ej2Instances.setColumns(columns);
+        },
         setGridContent(element: Object): void {
             return this.ej2Instances.setGridContent(element);
         },
@@ -505,6 +547,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         setRowData(key: string | number, rowData?: Object): void {
             return this.ej2Instances.setRowData(key, rowData);
+        },
+        setRowDataAsync(key: string | number, rowData?: Object, delay?: number): Object {
+            return this.ej2Instances.setRowDataAsync(key, rowData, delay);
         },
         showAdaptiveFilterDialog(): void {
             return this.ej2Instances.showAdaptiveFilterDialog();
@@ -524,11 +569,17 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         sortColumn(columnName: string, direction: Object, isMultiSort?: boolean): void {
             return this.ej2Instances.sortColumn(columnName, direction, isMultiSort);
         },
+        sortColumnAsync(columnName: string, direction: Object, isMultiSort?: boolean): Object {
+            return this.ej2Instances.sortColumnAsync(columnName, direction, isMultiSort);
+        },
         startEdit(): void {
             return this.ej2Instances.startEdit();
         },
         ungroupColumn(columnName: string): void {
             return this.ej2Instances.ungroupColumn(columnName);
+        },
+        ungroupColumnAsync(columnName: string): Object {
+            return this.ej2Instances.ungroupColumnAsync(columnName);
         },
         unpinRows(data: Object[]): void {
             return this.ej2Instances.unpinRows(data);
@@ -541,6 +592,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         updateRow(index: number, data: Object): void {
             return this.ej2Instances.updateRow(index, data);
+        },
+        updateRowAsync(index: number, data: Object): Object {
+            return this.ej2Instances.updateRowAsync(index, data);
         },
         updateRowValue(key: number, rowData: Object): void {
             return this.ej2Instances.updateRowValue(key, rowData);
@@ -565,6 +619,7 @@ export type GridComponent = typeof ComponentBase & {
         [key: string]: Object;
     }, successHandler?: Function): void;
     addRecord(data?: Object, index?: number): void;
+    addRecordAsync(data?: Object, index?: number): Object;
     addShimmerEffect(): void;
     autoFitColumns(fieldNames?: string | string[], startRowIndex?: number, endRowIndex?: number): void;
     batchAsyncUpdate(changes: Object): void;
@@ -573,16 +628,21 @@ export type GridComponent = typeof ComponentBase & {
     changeDataSource(dataSource?: Object | Object | Object, columns?: Object[] | string[] | Object[], properties?: Object): void;
     clearCellSelection(): void;
     clearFiltering(fields?: string[]): void;
+    clearFilteringAsync(fields?: string[]): Object;
     clearGrouping(): void;
+    clearGroupingAsync(): Object;
     clearRowSelection(): void;
     clearSelection(): void;
     clearSorting(): void;
+    clearSortingAsync(): Object;
     closeEdit(): void;
     copy(withHeader?: boolean): void;
     csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
     dataReady(): void;
     deleteRecord(fieldname?: string, data?: Object): void;
+    deleteRecordAsync(fieldname?: string, data?: Object): Object;
     deleteRow(tr: Object): void;
+    deleteRowAsync(tr: Object): Object;
     destroy(): void;
     destroyTemplate(propertyNames?: string[], index?: any, callback?: Object): void;
     detailCollapseAll(): void;
@@ -590,9 +650,11 @@ export type GridComponent = typeof ComponentBase & {
     editCell(index: number, field: string): void;
     enableToolbarItems(items: string[], isEnable: boolean): void;
     endEdit(): void;
+    endEditAsync(): Object;
     excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
     extendRequiredModules(modules: Object[]): void;
     filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): void;
+    filterByColumnAsync(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): Object;
     freezeRefresh(): void;
     getBatchChanges(): Object;
     getCellFromIndex(rowIndex: number, columnIndex: number): Object;
@@ -635,6 +697,7 @@ export type GridComponent = typeof ComponentBase & {
     getMovableRowByIndex(index: number): Object;
     getMovableRows(): Object[];
     getPager(): Object;
+    getPersistColumns(): string;
     getPrimaryKeyFieldNames(): string[];
     getRowByIndex(index: number): Object;
     getRowIndexByPrimaryKey(value: string | Object | number): number;
@@ -650,8 +713,10 @@ export type GridComponent = typeof ComponentBase & {
     getUidByColumnField(field: string): string;
     getVisibleColumns(): Object[];
     goToPage(pageNo: number): void;
+    goToPageAsync(pageNo: number): Object;
     groupCollapseAll(): void;
     groupColumn(columnName: string): void;
+    groupColumnAsync(columnName: string): Object;
     groupExpandAll(): void;
     hideColumns(keys: string | string[], hideBy?: string): void;
     hideScroll(): void;
@@ -672,6 +737,7 @@ export type GridComponent = typeof ComponentBase & {
     reorderRows(fromIndexes: number[], toIndex: number): void;
     saveCell(): void;
     search(searchString: string): void;
+    searchAsync(searchString: string): Object;
     selectCell(cellIndex: Object, isToggle?: boolean): void;
     selectCells(rowCellIndexes: Object[]): void;
     selectCellsByRange(startIndex: Object, endIndex?: Object): void;
@@ -682,24 +748,30 @@ export type GridComponent = typeof ComponentBase & {
     serverExcelExport(url: string, headers?: Object): void;
     serverPdfExport(url: string, headers?: Object): void;
     setCellValue(key: string | number, field: string, value: string | number | boolean | Object | null): void;
+    setCellValueAsync(key: string | number, field: string, value: string | number | boolean | Object | null, delay: number): Object;
+    setColumns(columns: Object[]): void;
     setGridContent(element: Object): void;
     setGridContentTable(element: Object): void;
     setGridHeaderContent(element: Object): void;
     setGridHeaderTable(element: Object): void;
     setGridPager(element: Object): void;
     setRowData(key: string | number, rowData?: Object): void;
+    setRowDataAsync(key: string | number, rowData?: Object, delay?: number): Object;
     showAdaptiveFilterDialog(): void;
     showAdaptiveSortDialog(): void;
     showColumns(keys: string | string[], showBy?: string): void;
     showMaskRow(axisDirection?: string, dialogElement?: Object): void;
     showSpinner(): void;
     sortColumn(columnName: string, direction: Object, isMultiSort?: boolean): void;
+    sortColumnAsync(columnName: string, direction: Object, isMultiSort?: boolean): Object;
     startEdit(): void;
     ungroupColumn(columnName: string): void;
+    ungroupColumnAsync(columnName: string): Object;
     unpinRows(data: Object[]): void;
     updateCell(rowIndex: number, field: string, value: string | number | boolean | Object): void;
     updateExternalMessage(message: string): void;
     updateRow(index: number, data: Object): void;
+    updateRowAsync(index: number, data: Object): Object;
     updateRowValue(key: number, rowData: Object): void
 };
 

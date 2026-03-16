@@ -2,22 +2,6 @@
 
 ## [Unreleased]
 
-## 32.2.5 (2026-02-17)
-
-### Dialog
-
-#### Bug Fixes
-
-- `#I802885` - The issue related to abnormal dialog behaviour during resize and drag operations has been resolved.
-
-## 32.1.25 (2026-01-27)
-
-### Dialog
-
-#### Bug Fixes
-
-- `#I802080` - Resolved the issue where the Document Editor lost focus after closing a dialog.
-
 ## 21.1.35 (2023-03-23)
 
 ### Tooltip

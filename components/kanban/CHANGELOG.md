@@ -2,21 +2,7 @@
 
 ## [Unreleased]
 
-## 32.2.7 (2026-02-24)
-
-### Kanban
-
-#### Bug Fixes
-
-- `#I810679` - Now, the page works properly on mobile devices when drag‑and‑drop is disabled or set to false, without causing freezing of the page.
-
-## 32.1.20 (2025-12-23)
-
-### Kanban
-
-- `#F71773` - Now, auto horizontal scrolling works properly when dragging a card to the left or right side of the Kanban.
-
-## 32.1.19 (2025-12-16)
+## 33.1.44 (2026-03-16)
 
 ### Kanban
 

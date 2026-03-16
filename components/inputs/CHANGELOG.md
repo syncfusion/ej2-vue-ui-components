@@ -2,15 +2,13 @@
 
 ## [Unreleased]
 
-## 32.2.5 (2026-02-17)
+## 33.1.44 (2026-03-16)
 
-### Slider
+### Uploader
 
 #### Bug Fixes
 
-- `#I806428` - Resolved the issue where the max value position was incorrectly aligned when the orientation was set to Vertical.
-
-## 32.1.19 (2025-12-16)
+- `#I817371` - Fixed an issue where file uploads failed when the filename contained spaces.
 
 ### ColorPicker
 

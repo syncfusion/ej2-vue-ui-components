@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-vue-charts",
-	"version": "32.1.19",
+	"version": "28.1.33",
 	"description": "Feature-rich chart control with built-in support for over 25 chart types, technical indictors, trendline, zooming, tooltip, selection, crosshair and trackball. for Vue",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -19,7 +19,8 @@
 		"vue-bullet-chart",
 		"vue-bullet-graph",
 		"vue-chart3d",
-		"vue-circularchart3d"
+		"vue-circularchart3d",
+		"vue-sankey"
 	],
 	"repository": {
 		"type": "git",

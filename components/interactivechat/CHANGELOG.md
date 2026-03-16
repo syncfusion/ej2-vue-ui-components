@@ -2,14 +2,6 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### Chat UI
-
-#### Bug Fixes
-
-- Now the actual event argument parameters of the `AttachmentClickEventArgs` will be accessible now.
-
 ## 29.1.33 (2025-03-25)
 
 ### Chat UI

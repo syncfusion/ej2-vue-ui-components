@@ -2,88 +2,19 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### Sidebar
-
-#### Bug Fixes
-
-- `#I811704` - Fixed layout synchronization issues where toggling the `enableDock` property dynamically caused the main content to either retain unwanted spacing or be overlapped by the Sidebar.
-
-### Accordion
-
-#### Bug Fixes
-
-- `#I811714` - Resolved a runtime error when using `dataSource` without an `itemTemplate` by falling back to static-content rendering.
-
-### Menu
-
-#### Bug Fixes
-
-- `#I818021` - The issue with keyboard navigation for nested elements rendered in the submenu item within the drop-down button has been resolved.
-
-## 32.2.8 (2025-12-22)
-
-### Menu
-
-#### Bug Fixes
-
-- `#I811613` - Resolved an issue where Menu popup appeared beneath Angular `dialogs` in Angular 21.
-
-## 32.2.7 (2026-02-24)
-
-### Tab
-
-#### Bug Fixes
-
-- `#I809774` - Resolved an inconsistency in the height calculation logic when `heightAdjustMode` was set to Fill, where the component failed to properly adapt to the available parent height.
-
-### TreeView
-
-#### Feature
-
-- `#I803243` - Introduced the new `disableHtmlEncode` property to control how text content is rendered in the Treeview. When set to `true`, the component will render raw text exactly as provided (including HTML tags or special characters) without encoding or truncation. To preserve and render raw HTML content correctly, `enableHtmlSanitizer` must also be set to `false`. This update provides greater flexibility in displaying literal text and HTML content within Treeview nodes.
-
-**Example Usage**
-
-```typescript
-  import { TreeView } from '@syncfusion/ej2-navigations';
-  let data: Object[] = [
-    { id: '1', name: 'Australia' },
-    { id: '2', name: 'New<york' },
-    { id: '3', name: 'Normal Text' }
-  ];
-  // Initialize TreeView control
-  let treeViewObj: TreeView = new TreeView({
-    fields: { dataSource: data, id: 'id', text: 'name' },
-    disableHtmlEncode: true,
-    enableHtmlSanitizer: false
-  });
-  // Render initialized TreeView
-  treeViewObj.appendTo('#treeview');
-```
-
-### Sidebar
-
-#### Bug Fixes
-
-- `#I811704` - Fixed an issue where the Sidebar did not fully collapse when the `enableDock` property was toggled from `true` to `false` dynamically.
-
-## 32.2.3 (2026-02-05)
-
-### TreeView
-
-#### Bug Fixes
-
-- `#I803798` - Resolved an issue where TreeView value selection failed and console error occurred when node ID contained space or hash (#) characters.
-
-## 32.1.19 (2025-12-16)
+## 33.1.44 (2026-03-16)
 
 ### Tab
 
 #### Bug Fixes
 
 - `#I736712` - Fixed an issue where the `getItemIndex` method returned an incorrect tab item index when tab items were dynamically shown or hidden.
+
+### Menu
+
+#### Bug Fixes
+
+- `#I818021` - The issue with keyboard navigation for nested elements rendered in the submenu item within the drop-down button has been resolved.
 
 ## 30.2.5 (2025-08-13)
 

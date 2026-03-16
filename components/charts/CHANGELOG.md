@@ -2,53 +2,63 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### Chart
-
-#### Bug Fixes
-
-- `#I815160` - The scrollbar is now properly rendered when `isInversed` is enabled
-
-## 32.2.8 (2026-03-03)
-
-### Chart
-
-#### Bug Fixes
-
-- `I811385` - The chart data label now display correctly in the top and bottom positions when the angle is set to 90 degree.
-
-## 32.1.25 (2026-01-24)
-
-### Chart
-
-#### Bug Fixes
-
-- The `columnWidthInPixel` property works correctly when the `enableSideBySidePlacement` property is disabled.
-
-## 32.1.24 (2026-01-20)
-
-### Chart
-
-#### Bug Fixes
-
-- `I801695` - Multi-series chart data now exports properly to Excel.
-
-## 32.1.20 (2025-12-20)
-
-### Chart
-
-#### Bug Fixes
-
-- `I798374` - Fixed an issue where series animations did not animate from right to left when RTL mode was enabled.
-
-## 32.1.19 (2025-12-16)
+## 33.1.44 (2026-03-16)
 
 ### Chart
 
 #### Bug Fixes
 
 - `#I788505` - Hovering over the scatter chart in the spreadsheet now does not throw a console error.
+
+### Accumulation Chart
+
+#### Features
+
+- **Linear and Radial Gradient** - Added support for applying a gradient fill to chart series and individual points. Configure linear or radial gradients with customizable colors and gradient properties to deliver improved visual depth and a more polished appearance across all chart elements.
+
+- **Legend Template** - Added support for customizing legend items in the accumulation chart using templates. Define custom HTML or text templates for legend entries to fully control legend item rendering, enabling tailored and visually rich representations of the accumulation chart.
+
+#### Feature
+
+- Users can now use the `noDataTemplate` property in Accumulation Chart to define a custom template that clearly indicates when chart data is unavailable.
+
+### Stock Chart
+
+#### Features
+
+- **Linear and Radial Gradient** - Added support for applying a gradient fill to chart series, trendlines, and technical indicators. Configure linear or radial gradients with customizable colors and gradient properties to deliver improved visual depth and a more polished appearance across all chart elements.
+
+- **Legend Template** - Added support for customizing legend items in the stock chart using templates. Define custom HTML or text templates for legend entries to fully control legend item rendering, enabling tailored and visually rich representations of the stock chart.
+
+#### Feature
+
+- Users can now use the `noDataTemplate` property in Stock Chart to define a custom template that clearly indicates when chart data is unavailable.
+
+### Sankey
+
+The Syncfusion Sankey chart is a powerful flow‑visualization component designed to illustrate the movement and relationships between entities within a system. It is particularly effective for visualizing energy transfers, material flows, cost distributions, and process workflows. The chart uses nodes to represent entities and weighted links to depict the magnitude of flow between them, making it easy to analyze complex interactions and quantities at a glance.
+
+Explore the demo [here](https://ej2.syncfusion.com/demos/#/material3/sankey/default.html)
+
+#### Features
+
+- **Nodes** – Define key stages and entities in your flow diagram with customizable nodes that serve as anchor points for data visualization.
+
+- **Weighted Links** – Visualize flow magnitude with proportional link widths, making it easy to identify primary and secondary pathways at a glance.
+
+- **Smart Labels** – Add contextual information with customizable labels that clarify node purposes and enhance data comprehension.
+
+- **Descriptive Titles** – Provide clear context with chart titles and subtitles that communicate your data story effectively.
+
+- **Interactive Experience** – Engage users with built-in tooltips, hover effects, and legend highlighting for dynamic data exploration.
+
+- **Customizable Legends** – Configure legends to display node information, color coding, and categorical data for improved clarity.
+
+- **Responsive & Adaptive** – Automatically adjusts to different screen sizes and devices, ensuring optimal viewing on desktop, tablet, and mobile.
+
+- **Flexible Layouts** – Switch between horizontal and vertical orientations to best suit your data presentation needs.
+
+- **Export & Print** – Export charts as images (PNG, JPEG, SVG) or PDF, and print directly for reports and presentations.
 
 ### Charts
 
@@ -61,18 +71,6 @@
 
 - `#T745980` - The legend text trim tooltip will no longer be cropped at the bottom of the legend bounds.
 - `#T754125` - The marker will no longer render when it exceeds the axis range.
-
-### Accumulation Chart
-
-#### Feature
-
-- Users can now use the `noDataTemplate` property in Accumulation Chart to define a custom template that clearly indicates when chart data is unavailable.
-
-### Stock Chart
-
-#### Feature
-
-- Users can now use the `noDataTemplate` property in Stock Chart to define a custom template that clearly indicates when chart data is unavailable.
 
 ## 31.2.6 (2025-12-02)
 

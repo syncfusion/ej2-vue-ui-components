@@ -2,39 +2,7 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### DatePicker
-
-#### Bug Fixes
-
-- `#I805840`, `#I801368` - Resolved an issue where datepicker appeared beneath Angular `dialogs` in Angular 21.
-
-### DateRangePicker
-
-#### Bug Fixes
-
-- `#I805840`, `#I801368` - Resolved an issue where daterangepicker appeared beneath Angular `dialogs` in Angular 21.
-
-### TimePicker
-
-#### Bug Fixes
-
-- `#I805840`, `#I801368` - Resolved an issue where timepicker appeared beneath Angular `dialogs` in Angular 21.
-
-### DateTimePicker
-
-#### Bug Fixes
-
-- `#I805840`, `#I801368` - Resolved an issue where datetimepicker appeared beneath Angular `dialogs` in Angular 21.
-
-### Calendar
-
-#### Bug Fixes
-
-- `#I802045` - Fixed an issue where the Calendar is not behaving as expected when placed within a ContextMenu.
-
-## 32.1.19 (2025-12-16)
+## 33.1.44 (2026-03-16)
 
 ### DateRangePicker
 

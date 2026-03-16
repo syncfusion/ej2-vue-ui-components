@@ -3,3 +3,4 @@ export { ViewsDirective, ViewDirective, ViewsPlugin, ViewPlugin } from './ai-ass
 export { AIAssistViewComponent, AIAssistViewPlugin } from './ai-assistview/aiassistview.component';
 export { MessagesDirective, MessageDirective, MessagesPlugin, MessagePlugin } from './chat-ui/messages.directive';
 export { ChatUIComponent, ChatUIPlugin } from './chat-ui/chatui.component';
+export { InlineAIAssistComponent, InlineAIAssistPlugin } from './inline-ai-assist/inlineaiassist.component';

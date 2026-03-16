@@ -2,69 +2,7 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `#F72695` - Fixed an issue where child records were not exported in remote data when `isCollapsedStatePersist` is set to false.
-
-- `#F72864` - Fixed an issue in virtual scrolling where the white space issue occurs when the page size is higher than the actual records count.
-
-## 32.2.7 (2026-02-24)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `I811698` - Resolved an issue where the records expand on clearing filter in virtualization when the filter type is `Excel`.
-
-## 32.2.3 (2026-02-05)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `I806463` - Resolved an issue where the `actionFailure` event was triggered even when the checkbox column and the tree column were the same.
-
-- `#F71783` - Fixed an issue where the next set of data not rendered on collapsing records when infinite scrolling is enabled.
-
-- `I805487` - Resolved an issue where data was not added correctly using the `addRecord` method when batch editing, persistence, and multiple selection were enabled.  
-
-## 32.1.25 (2026-01-27)
-
-### Tree Grid
-
-#### Bug Fixes
-
--`I798336` - Resolved the issue where selection was not cleared after actions when Single Selection and `persistSelection` were enabled.
-
-## 32.1.24 (2026-01-20)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `I792894` - Resolved TreeGrid scroll reset after cell editing with aggregates enabled
-
-## 32.1.22 (2026-01-06)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `#I789011` - Fixed the issue where `getCheckedRecords` method returns empty after expanding / collapsing a record.
-
-## 32.1.21 (2025-12-30)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `#F71755` - Fixed an error that occurred when binding the action failure event with frozen columns in the Tree Grid.
-
-## 32.1.19 (2025-12-16)
+## 33.1.44 (2026-03-16)
 
 ### Tree Grid
 
@@ -233,15 +171,7 @@
 #### Bug Fixes
 
 - Expanding and Collapsing records is working fine when `pageSizeMode` is set as `All`.
-- `expandAtLevel`, `collapseAtLevel`, `expandAll` and `collapseAll` methods are working fine when `pageSizeMode` is set as `All`.## 32.2.4 (2026-02-11)
-
-### Tree Grid
-
-#### Bug Fixes
-
-- `I805487` - Resolved an issue where data was not added correctly using the `addRecord` method when batch editing, persistence, and multiple selection were enabled.
-
-## 19.1.54 (2021-03-30)
+- `expandAtLevel`, `collapseAtLevel`, `expandAll` and `collapseAll` methods are working fine when `pageSizeMode` is set as `All`.## 19.1.54 (2021-03-30)
 
 ### Tree Grid
 

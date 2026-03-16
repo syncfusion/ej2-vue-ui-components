@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## 32.2.8 (2025-12-22)
+## 33.1.44 (2026-03-16)
 
 ### PDF Viewer
 
@@ -72,15 +72,6 @@
 
 #### Bug Fixes
 
-- `#I802591` - Fixed an issue where the freetext annotation moved outside the PDF page when using a large font size and resizing or dragging it beyond the page boundaries.
-- `#I798752` - Fixed an issue that caused difficulties in resizing the newly added Calibrate Area annotation when the `enableShapeLabel` API was set to true.
-
-## 32.1.23 (2026-01-13)
-
-### PDF Viewer
-
-#### Bug Fixes
-
 - `#I799300` - Resolved an issue where the print preview was not displayed for password-protected documents in the `standalone` PDF Viewer.
 - `#I793340` - Fixed an issue where bounds in the `annotationCollection` deviated when adding a free text annotation using the `addAnnotation` method.
 - `#I792304` - Fixed an issue where free text positions were misaligned when importing annotations as XFDF file.
@@ -130,11 +121,11 @@
 
 #### Features
 
-- `#I628857` - Implemented [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/redaction/overview) support in the EJ2 PDF Viewer.
+- `#I628857` - Implemented Redaction support in the EJ2 PDF Viewer.
 - `#I249427`  - Implemented Extract Page support in [Page Organizer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/organize-pages/overview).
 - Enhanced [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/print) preview performance, achieving up to 80% improvement.
 
-- `#I628857` - Implemented [Redaction](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/redaction/overview) support in the EJ2 PDF Viewer.
+- `#I628857` - Implemented Redaction support in the EJ2 PDF Viewer.
 - `#I249427`  - Implemented Extract Page support in [Page Organizer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/organize-pages/overview).
 - Enhanced [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/print) preview performance, achieving up to 80% improvement.
 

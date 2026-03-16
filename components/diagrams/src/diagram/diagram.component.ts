@@ -13,7 +13,7 @@ import { PortsDirective, PortDirective, PortsPlugin, PortPlugin } from './ports.
 import { NodesDirective, NodeDirective, NodesPlugin, NodePlugin } from './nodes.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enableConnectorSplit', 'enablePersistence', 'enableRtl', 'fixedUserHandleTemplate', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'model', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'segmentThumbShape', 'segmentThumbSize', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'diagramExporting', 'diagramImporting', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'elementDraw', 'expandStateChange', 'fixedUserHandleClick', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'layoutUpdated', 'load', 'loaded', 'mouseEnter', 'mouseLeave', 'mouseOver', 'mouseWheel', 'onFixedUserHandleMouseDown', 'onFixedUserHandleMouseEnter', 'onFixedUserHandleMouseLeave', 'onFixedUserHandleMouseUp', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'addInfo', 'annotationTemplate', 'backgroundColor', 'bridgeDirection', 'commandManager', 'connectorDefaults', 'connectors', 'constraints', 'contextMenuSettings', 'customCursor', 'dataSourceSettings', 'diagramSettings', 'drawingObject', 'enableCollaborativeEditing', 'enableConnectorSplit', 'enablePersistence', 'enableRtl', 'fixedUserHandleTemplate', 'getConnectorDefaults', 'getCustomCursor', 'getCustomProperty', 'getCustomTool', 'getDescription', 'getNodeDefaults', 'height', 'historyManager', 'layers', 'layout', 'locale', 'mode', 'model', 'nodeDefaults', 'nodeTemplate', 'nodes', 'pageSettings', 'rulerSettings', 'scrollSettings', 'segmentThumbShape', 'segmentThumbSize', 'selectedItems', 'serializationSettings', 'setNodeTemplate', 'snapSettings', 'tool', 'tooltip', 'updateSelection', 'userHandleTemplate', 'width', 'animationComplete', 'click', 'collectionChange', 'commandExecute', 'connectionChange', 'contextMenuBeforeItemRender', 'contextMenuClick', 'contextMenuOpen', 'created', 'dataLoaded', 'diagramExporting', 'diagramImporting', 'doubleClick', 'dragEnter', 'dragLeave', 'dragOver', 'drop', 'elementDraw', 'expandStateChange', 'fixedUserHandleClick', 'historyChange', 'historyStateChange', 'keyDown', 'keyUp', 'layoutUpdated', 'load', 'loaded', 'mouseEnter', 'mouseLeave', 'mouseOver', 'mouseWheel', 'onFixedUserHandleMouseDown', 'onFixedUserHandleMouseEnter', 'onFixedUserHandleMouseLeave', 'onFixedUserHandleMouseUp', 'onImageLoad', 'onUserHandleMouseDown', 'onUserHandleMouseEnter', 'onUserHandleMouseLeave', 'onUserHandleMouseUp', 'positionChange', 'propertyChange', 'rotateChange', 'scrollChange', 'segmentChange', 'segmentCollectionChange', 'selectionChange', 'sizeChange', 'sourcePointChange', 'targetPointChange', 'textEdit'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -254,6 +254,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         getDiagramContent(styleSheets?: Object): string {
             return this.ej2Instances.getDiagramContent(styleSheets);
         },
+        getDiagramUpdates(args: Object): string[] {
+            return this.ej2Instances.getDiagramUpdates(args);
+        },
         getEdges(args: Object): string[] {
             return this.ej2Instances.getEdges(args);
         },
@@ -278,7 +281,7 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         hideTooltip(obj: Object | Object): void {
             return this.ej2Instances.hideTooltip(obj);
         },
-        importFromVisio(file: Object, options?: Object): Object {
+        importFromVisio(file: Object | Object, options?: Object): Object {
             return this.ej2Instances.importFromVisio(file, options);
         },
         insertData(node?: Object | Object): object {
@@ -386,6 +389,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         setActiveLayer(layerName: string): void {
             return this.ej2Instances.setActiveLayer(layerName);
         },
+        setDiagramUpdates(data: string[]): void {
+            return this.ej2Instances.setDiagramUpdates(data);
+        },
         setStackLimit(stackLimit: number): void {
             return this.ej2Instances.setStackLimit(stackLimit);
         },
@@ -412,6 +418,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         },
         updateFromModel(): void {
             return this.ej2Instances.updateFromModel();
+        },
+        updateGradient(newProp: Object, oldProp: Object, nodeObj: Object): void {
+            return this.ej2Instances.updateGradient(newProp, oldProp, nodeObj);
         },
         updateViewPort(): void {
             return this.ej2Instances.updateViewPort();
@@ -492,6 +501,7 @@ export type DiagramComponent = typeof ComponentBase & {
     getDiagramAction(diagramAction: Object): string;
     getDiagramBounds(): Object;
     getDiagramContent(styleSheets?: Object): string;
+    getDiagramUpdates(args: Object): string[];
     getEdges(args: Object): string[];
     getHistoryStack(isUndoStack: boolean): Object[];
     getNodeObject(id: string): Object;
@@ -500,7 +510,7 @@ export type DiagramComponent = typeof ComponentBase & {
     getTool(action: string): Object;
     group(): void;
     hideTooltip(obj: Object | Object): void;
-    importFromVisio(file: Object, options?: Object): Object;
+    importFromVisio(file: Object | Object, options?: Object): Object;
     insertData(node?: Object | Object): object;
     loadDiagram(data: string, isEJ1Data?: boolean): Object;
     loadDiagramFromMermaid(data: string): void;
@@ -536,6 +546,7 @@ export type DiagramComponent = typeof ComponentBase & {
     sendLayerBackward(layerName: string): void;
     sendToBack(): void;
     setActiveLayer(layerName: string): void;
+    setDiagramUpdates(data: string[]): void;
     setStackLimit(stackLimit: number): void;
     showTooltip(obj: Object | Object): void;
     startGroupAction(): void;
@@ -545,6 +556,7 @@ export type DiagramComponent = typeof ComponentBase & {
     undo(): void;
     updateData(node?: Object | Object): object;
     updateFromModel(): void;
+    updateGradient(newProp: Object, oldProp: Object, nodeObj: Object): void;
     updateViewPort(): void;
     zoom(factor: number, focusedPoint?: Object): void;
     zoomTo(options: Object): void

@@ -2,51 +2,6 @@
 
 ## [Unreleased]
 
-## 32.2.9 (2026-03-10)
-
-### DocumentEditor
-
-#### Bug Fixes
-
-`#I812677` - Resolved an issue where content controls were still editable in Read-Only mode.
-`#I812581` - Fixed a problem where typed text was not visible in the Document Editor.
-`#I809945` - Addressed an infinite loop that caused the editor to crash when inserting a Table of Contents.
-`#I808481` - Corrected layout shifting and content misalignment issues.
-`#I808272` - Fixed image resizing and dragging issues in RTL documents.
-`#I809606` - Resolved a script error that occurred when deleting the remainder of the Table of Contents.
-`#I74806` - Fixed a script error triggered when inserting a break inside a shape.
-`#I809680` - Corrected an issue where tabbing in the footer duplicated the last page number on a new line.
-`#I800024` - Fixed an issue where footnotes remained on the original page after moving the reference.
-`#I785134` - Improved selection consistency when selecting table headers or split rows.
-`#I789749` - Corrected improper bookmark rendering when inserted after a paragraph.
-`#I790909` - Resolved an issue that caused duplicate content during paste operations when using the grouped undo feature.
-
-## 32.2.8 (2025-12-22)
-
-### DocumentEditor
-
-#### Bug Fixes
-
-`#I813615` - Fixed an error that occurred when deleting a table column containing embedded content controls.
-`#I810273` - Resolved an issue where entering a space caused the cursor to jump after the next character.
-`#I812200` - Fixed a problem where the document jumped to the following page when deleting a table.
-`#I810311` - Corrected the behaviour where Bold/Italic formatting was incorrectly applied to bullet symbols.
-`#I807767` - Resolved an issue where the Document Editor became unresponsive while loading the attached document.
-`#I799682` - Fixed list formatting being lost when the exported document was opened in online Microsoft Word.
-`#I787996` - Fixed an RTL issue where highlighting Arabic text caused the words to split.
-`#I800024` - Corrected footnote positioning issues when moving content across pages.
-`#I810289` - Fixed localization not updating properly in the Drop down Form Field dialog.
-`#I796649` - Resolved an issue where the first list number or bullet outside a content control could not be edited.
-`#I797591` - Fixed an issue where newton soft version 13.0.1.0 could not be loaded in the MVC project.
-
-## 32.2.7 (2026-02-24)
-
-### DocumentEditor
-
-#### Bug Fixes
-
-`#I796630` -  Fixed a layout mismatch issue between the Document Editor and Microsoft Word.
-
 ## 32.2.5 (2026-02-17)
 
 ### DocumentEditor
