@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 33.1.45 (2026-03-24)
+
+### RichTextEditor
+
+#### Bug Fixes
+
+- `#I818640` - Now, the AI Assistant’s Insert action correctly handles full-content replacements and subsequent actions.
+
+- `#I819268` - Now, the Rich Text Editor opens the link quick toolbar when the `Alt+F10` keyboard shortcut is pressed.
+
 ## 33.1.44 (2026-03-16)
 
 ### RichTextEditor

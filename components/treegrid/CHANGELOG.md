@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 33.1.45 (2026-03-24)
+
+### Tree Grid
+
+#### Bug Fixes
+
+- `#F72915` - Fixed an issue where the duplicate records are added in the dataSource when adding record with `newRowPosition` as `Below`.
+- `#F73087` - Fixed an issue where, in Tree Grid with hierarchy mode set to "None", filtering records after collapsing all rows caused the filtered records to disappear and display a "No records to display" message when scrolling.
+
 ## 33.1.44 (2026-03-16)
 
 ### Tree Grid

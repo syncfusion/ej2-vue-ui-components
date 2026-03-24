@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## 33.1.45 (2026-03-24)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I819478` - Touch zoom now preserves the focused element's position correctly in the diagram.
+
+- `#I816847` - Annotation margin updates for center‑aligned text now apply correctly, preventing the text from reaching or overlapping node boundaries.
+
+- `#I816946` - The Connector path will be rendered based on port connection direction.
+
 ## 32.1.19 (2025-12-16)
 
 ### Diagram

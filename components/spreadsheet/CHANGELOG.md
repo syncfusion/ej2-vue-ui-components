@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 33.1.45 (2026-03-24)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I809820` - Issue with "image positions become misaligned when scrolling after importing a file that contains multiple images" has been resolved.
+
 ## 32.1.20 (2025-12-23)
 
 ### Spreadsheet

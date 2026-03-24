@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 33.1.45 (2026-03-24)
+
+### Grid
+
+#### Bug Fixes
+
+- `#I821485` - Fixed an issue where the filter dialog displayed a continuous spinner when both the column chooser and `adaptiveUI` mode were enabled.
+- `#I817121` - Fixed an issue where the `applyPreRequestMiddlewares` did not execute while deleting multiple records from a remote data source.
+
 ## 33.1.44 (2026-03-16)
 
 ### Grid
