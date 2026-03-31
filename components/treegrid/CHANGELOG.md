@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 33.1.46 (2026-03-31)
+
+### Tree Grid
+
+#### Bug Fixes
+
+- `#F73428` - Fixed an expand and collapse issue in the TreeGrid URL adaptor when using a checkbox column.
+
 ## 33.1.45 (2026-03-24)
 
 ### Tree Grid
@@ -10,6 +18,8 @@
 
 - `#F72915` - Fixed an issue where the duplicate records are added in the dataSource when adding record with `newRowPosition` as `Below`.
 - `#F73087` - Fixed an issue where, in Tree Grid with hierarchy mode set to "None", filtering records after collapsing all rows caused the filtered records to disappear and display a "No records to display" message when scrolling.
+- `#I820291` - Resolved an issue where undefined records were added to the TreeGrid data source after row drag and drop when child aggregates were enabled.
+- `#I820331` - Resolved an exception that occurred when dragging and dropping the child summary row.
 
 ## 33.1.44 (2026-03-16)
 

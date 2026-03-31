@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 33.1.46 (2026-03-31)
+
+### DropDownTree
+
+#### Bug Fixes
+
+- `#I816579` - Resolved a console error that occurred when filtering in the DropDown Tree component with node IDs containing the hash `#` symbol.
+
 ## 28.2.9 (2025-03-04)
 
 ### ComboBox

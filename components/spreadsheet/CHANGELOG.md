@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 33.1.45 (2026-03-24)
+## 33.1.46 (2026-03-31)
 
 ### Spreadsheet
 
-#### Bug fixes
+#### Features
 
-- `#I809820` - Issue with "image positions become misaligned when scrolling after importing a file that contains multiple images" has been resolved.
+- `#I807242` - Enhanced security by implementing encrypted hash-based password storage for worksheet and workbook protection, replacing plain text storage and ensuring Excel compatibility.
 
 ## 32.1.20 (2025-12-23)
 
@@ -1390,7 +1390,15 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Save:** Provides option to save spreadsheet data as excel file.
 - **RTL:** Provides right-to-left mode which aligns content in the spreadsheet component from right to left.
 - **Localization:** Provides inherent support to localize the UI.
-- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 27.1.48 (2024-09-18)
+- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 33.1.45 (2026-03-24)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I809820` - Issue with "image positions become misaligned when scrolling after importing a file that contains multiple images" has been resolved.
+
+## 27.1.48 (2024-09-18)
 
 ### Spreadsheet
 
