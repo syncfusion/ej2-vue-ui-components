@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 33.1.49 (2026-04-14)
+
+### Chip
+
+#### Bug Fixes
+
+- `#I824259` - Fixed an issue where the Chip List selection visual state and aria-selected attribute were lost when toggling enabled from false to true for value-based chips.
+
 ## 33.1.44 (2026-03-16)
 
 ### Chip
