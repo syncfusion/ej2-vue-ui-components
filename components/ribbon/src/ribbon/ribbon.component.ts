@@ -130,6 +130,9 @@ export let RibbonComponent: DefineVueComponent<RibbonModel> =  vueDefineComponen
         enableTab(tabId: string): void {
             return this.ej2Instances.enableTab(tabId);
         },
+        getAppendToElement(): Object {
+            return this.ej2Instances.getAppendToElement();
+        },
         getItem(itemId: string): Object {
             return this.ej2Instances.getItem(itemId);
         },
@@ -211,6 +214,7 @@ export type RibbonComponent = typeof ComponentBase & {
     enableGroup(groupID: string): void;
     enableItem(itemId: string): void;
     enableTab(tabId: string): void;
+    getAppendToElement(): Object;
     getItem(itemId: string): Object;
     hideGroup(groupID: string): void;
     hideItem(itemId: string): void;
