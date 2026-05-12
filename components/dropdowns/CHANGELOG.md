@@ -2,13 +2,21 @@
 
 ## [Unreleased]
 
-## 33.2.5 (2026-05-05)
+## 33.2.6 (2026-05-12)
+
+### DropdownList
+
+#### Bug Fixes
+
+- `#I835445` - Fixed an issue where the Index property was not applied when virtualization was enabled.
 
 ### MultiSelect
 
 #### Bug Fixes
 
 - `#I828952, #I828480, #I828633` - The issue with MultiSelect, where inconsistencies occurred when enable Virtualization was used along with other APIs, has been resolved.
+
+## 33.2.5 (2026-05-05)
 
 ## 33.2.4 (2026-04-28)
 
