@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 33.2.7 (2026-05-19)
+
+### TreeView
+
+#### Bug Fixes
+
+- `#I838036` - Resolved an issue where the TreeView component displayed an unwanted border outline during interaction.
+
+### Accordion
+
+#### Bug Fixes
+
+- `#I829704` - The issue with IconCss not rendering when using a header template in the Accordion has been resolved.
+
 ## 33.2.6 (2026-05-12)
 
 ### TreeView
