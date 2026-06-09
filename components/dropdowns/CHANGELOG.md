@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+## 33.2.12 (2026-06-09)
+
+### ComboBox
+
+#### Bug Fixes
+
+- `#I839807` - Fixed an issue where form controls were incorrectly marked as dirty after reset due to dependent `patchValue` operations.
+
+### DropdownList
+
+#### Bug Fixes
+
+- `#I839807` - Fixed an issue where form controls were incorrectly marked as dirty after reset due to dependent `patchValue` operations.
+
+### AutoComplete
+
+#### Bug Fixes
+
+- `#I839807` - Fixed an issue where form controls were incorrectly marked as dirty after reset due to dependent `patchValue` operations.
+
 ## 33.2.10 (2026-06-02)
 
 ### MultiSelect

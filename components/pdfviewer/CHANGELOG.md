@@ -2,7 +2,24 @@
 
 ## [Unreleased]
 
+## 33.2.12 (2026-06-09)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I841172` - Resolved the issue where the undo functionality was not working properly for comment status changes.
+
 ## 33.2.10 (2026-06-02)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I840406` - Resolved UI issues in annotation toolbar items in mobile rendering mode.
+- `#I842212` - Resolved a permissions policy violation caused by the deprecated unload event listener.
+
+## 33.2.8 (2026-05-26)
 
 ### PDF Viewer
 
