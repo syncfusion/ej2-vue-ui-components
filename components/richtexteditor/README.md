@@ -1,12 +1,12 @@
 # Vue Rich Text Editor Component | Vue Markdown Editor
 
-The [Vue Rich Text Editor](https://www.syncfusion.com/vue-ui-components/vue-wysiwyg-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) is a feature-rich WYSIWYG HTML editor and Markdown editor. The Rich Text Editor is widely used to create blogs, forum posts, notes sections, comment sections, messaging applications, and more. The control provides an efficient user interface for a better editing experience with mobile support. It has a variety of tools to edit and format rich content, and it return a valid HTML markup or Markdown (MD) content. It allows users to insert images, links, tables, media files and lists with modular architectures.
+The [Vue Rich Text Editor](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) is a feature-rich WYSIWYG HTML editor and Markdown editor. The Rich Text Editor is widely used to create blogs, forum posts, notes sections, comment sections, messaging applications, and more. The control provides an efficient user interface for a better editing experience with mobile support. It has a variety of tools to edit and format rich content, and it return a valid HTML markup or Markdown (MD) content. It allows users to insert images, links, tables, media files and lists with modular architectures.
 
 <div align="center">
     <h4>
-        <a href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=react-richtexteditor-npm">📖Getting started</a> &#x2022;
-        <a href="https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_medium=listing&utm_campaign=react-richtexteditor-npm#/bootstrap5/rich-text-editor/tools">🚀Online demos</a> &#x2022; 
-        <a href="https://www.syncfusion.com/react-components/react-wysiwyg-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=react-richtexteditor-npm">🌐Learn more</a>
+        <a href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm">📖Getting started</a> &#x2022;
+        <a href="https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/tools">🚀Online demos</a> &#x2022; 
+        <a href="https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm">🌐Learn more</a>
     </h4>
 </div>
 
@@ -118,13 +118,13 @@ Add the Vue Rich Text Editor by using **ejs-richtexteditor** selector in **templ
 @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/bootstrap5.css";
 </style>
 ```
-> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/get-started/#getting-started) for using Syncfusion<sup>®</sup> Vue components in Vue 3 applications.
+> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/get-started#getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) for using Syncfusion<sup>®</sup> Vue components in Vue 3 applications.
 
 ## 🛠️ Supported frameworks
 
 Rich Text Editor component is also offered in the following frameworks.
 
-| [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular-new.svg"  height="50" />](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-components/?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg" height="50" />](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-ui-components?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
+| [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/javascript-ui-controls?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/javascript-ui-controls?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular-new.svg"  height="50" />](https://www.syncfusion.com/angular-components/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/angular-components/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg" height="50" />](https://www.syncfusion.com/react-components?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/react-components?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/aspnet-core-ui-controls?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/aspnet-core-ui-controls?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/aspnet-mvc-ui-controls?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)&nbsp;&nbsp; | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 
 ## 🏗️ Showcase samples
@@ -138,15 +138,15 @@ Rich Text Editor component is also offered in the following frameworks.
 
 * [Edit mode](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/iframe.html) - HTML content is possible to edit in a `div` element or an `iframe` in the rich text editor.
 
-* [@Mentions](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/mention-integration.html) - Easily mention users, tags, or items with an autocomplete suggestion list.
+* [@Mentions](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/mention-integration.html) - Easily mention users, tags, or items with an autocomplete suggestion list.
 
-* [Slash Menu Support](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/smart-suggestion.html) - Quickly insert content blocks using the `/` command.
+* [Slash Menu Support](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/smart-suggestion.html) - Quickly insert content blocks using the `/` command.
 
-* [Checklist Suport](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=javascript-rich-text-editor-npm/#/bootstrap5/rich-text-editor/tools.html) - Allows users to create checklists (to-do lists) directly within the editor. Users can easily add interactive checkbox items to their content.
+* [Checklist Suport](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/tools.html) - Allows users to create checklists (to-do lists) directly within the editor. Users can easily add interactive checkbox items to their content.
 
-* [Accessibility & WCAG 2.0 Compliance](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility) - Ensures full accessibility support, making it user-friendly for people who rely on assistive technologies (AT) or keyboard navigation.
+* [Accessibility & WCAG 2.0 Compliance](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Ensures full accessibility support, making it user-friendly for people who rely on assistive technologies (AT) or keyboard navigation.
 
-* [Preventing Cross-Site Scripting (XSS)](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/prevent-cross-site-scripting/?utm_source=npm&utm_medium=listing&utm_campaign=javascript-richtexteditor-npm) - The Rich Text Editor allows users to edit the content with security by preventing cross-site scripting (XSS).
+* [Preventing Cross-Site Scripting (XSS)](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/prevent-cross-site-scripting??utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - The Rich Text Editor allows users to edit the content with security by preventing cross-site scripting (XSS).
 
 * [HTML code editing](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/miscellaneous/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#code-view) - The rich text editor allows users to edit the HTML code directly in the HTML code view. This can be useful for users who are familiar with HTML and want to have more control over the formatting and layout of their content.
 
@@ -158,11 +158,11 @@ Rich Text Editor component is also offered in the following frameworks.
 
 * [Toolbar appearance](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/types.html) - The rich text editor can provide a fully customizable toolbar that allows users to access the various formatting and editing options that are available.
 
-* [Export and Import](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/rich-text-editor/export-document.html) - Supports exporting content to PDF, and Word formats.
+* [Export and Import](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/export-document.html) - Supports exporting content to PDF, and Word formats.
 
-* [Copy and paste](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/paste-cleanup") - Copy and paste from Microsoft Word, Outlook, or other editors or sources while preserving formatting, styles, and structure.
+* [Copy and paste](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/paste-cleanup?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Copy and paste from Microsoft Word, Outlook, or other editors or sources while preserving formatting, styles, and structure.
 
-* [Undo and redo](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/undo-redo) - Users can use undo and redo actions to reverse or repeat actions they took while editing the content.
+* [Undo and redo](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/undo-redo?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Users can use undo and redo actions to reverse or repeat actions they took while editing the content.
 
 * [Module injection](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#module-injection) - It is possible to create a editor that utilizes a modular library to load the necessary functionality on demand. This can be useful for optimizing the performance of the editor.
 
@@ -170,20 +170,20 @@ Rich Text Editor component is also offered in the following frameworks.
 
 ## 📚 Resources
 
-* [Documentation](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started)
-* [Theme Studio](https://ej2.syncfusion.com/themestudio/)
-* [What's New](https://www.syncfusion.com/products/whatsnew/vue?utm_medium=listing&utm_source=github)
-* [Road Map](https://www.syncfusion.com/products/roadmap/vue)
-* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all)
+* [Documentation](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
+* [Theme Studio](https://ej2.syncfusion.com/themestudio/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
+* [What's New](https://www.syncfusion.com/products/whatsnew/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
+* [Road Map](https://www.syncfusion.com/products/roadmap/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
+* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
 
 ## 🤝 Support
 
 Product support is available through following mediums.
 
-* [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
-* [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-richtexteditor-npm)
+* [Support ticket](https://support.syncfusion.com/support/tickets/create?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
+* [Community forum](https://www.syncfusion.com/forums/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
 * [GitHub issues](https://github.com/syncfusion/ej2-vue-ui-components/issues/new)
-* [Request feature or report bug](https://www.syncfusion.com/feedback/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-richtexteditor-npm)
+* [Request feature or report bug](https://www.syncfusion.com/feedback/vue?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm)
 * Live chat
 
 ## 🔄 Change log
@@ -192,8 +192,8 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 ## ⚖️ License and copyright
 
-> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 140+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
-> A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
+> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/license/studio/33.2.3/syncfusion_essential_studio_eula.pdf?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm). To acquire a license for 150+ [Vue UI components](https://www.syncfusion.com/vue-components?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm), you can [purchase](https://www.syncfusion.com/sales/pricing?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm).
+> A free community [license](https://www.syncfusion.com/products/communitylicense?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) for more info.
 
 &copy; Copyright 2025 Syncfusion<sup>®</sup> Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential<sup>®</sup> Studio license and copyright applies to this distribution.
