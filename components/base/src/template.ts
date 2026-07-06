@@ -139,11 +139,15 @@ export function compile(
                 const vueSlot: any = getVueSlot(context.vueInstance, templateElement, root);
                 if (vueSlot) {
                     // Get provide values for Vue 2 slot template
-                    let provided: any = {};
+                    const provided: any = {};
                     const getProvideValues: any = (vueinstance: any) => {
                         if (vueinstance['$parent']) { getProvideValues(vueinstance.$parent); }
-                        if (vueinstance['_provided'] && Object.keys(vueinstance['_provided']).length > 0) {
-                            provided = { ...provided, ...vueinstance._provided };
+                        if (vueinstance['_provided']) {
+                            // eslint-disable-next-line guard-for-in
+                            for (const key in vueinstance['_provided']) {
+                                // eslint-disable-next-line security/detect-object-injection
+                                provided[key] = vueinstance['_provided'][key];
+                            }
                         }
                     };
                     const vueInstance: any = context.vueInstance ? context.vueInstance :
@@ -242,11 +246,15 @@ function getValues(app: any, cInstance: any, root: any): void {
     // Get globally defined variables.
     app['appContext'] = vueInstance['$']['appContext'];
     // Get provide value from child component.
-    let provided: any = {};
+    const provided: any = {};
     const getProvideValue: any = (vueinstance: any) => {
         if (vueinstance['$'] && vueinstance['$']['parent']) { getProvideValue(vueinstance.$.parent); }
-        if (vueinstance['provides'] && Object.keys(vueinstance['provides']).length > 0) {
-            provided = { ...provided, ...vueinstance.provides };
+        if (vueinstance['provides']) {
+            // eslint-disable-next-line guard-for-in
+            for (const key in vueinstance['provides']) {
+                // eslint-disable-next-line security/detect-object-injection
+                provided[key] = vueinstance['provides'][key];
+            }
         }
     };
     getProvideValue(vueInstance);

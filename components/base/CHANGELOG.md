@@ -2,7 +2,24 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
+## 34.1.29 (2026-07-06)
+
+### Common
+
+#### New Features
+
+- Upgraded `SASS` to the latest version `1.100.0`.
+- Enhanced Syncfusion [theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages) to support both consolidated and component-level styles. Each component now provides dedicated style files with an `index.css/index.scss` that includes required dependencies, enabling simpler and more modular style management.
+
+#### Breaking Changes
+
+- SCSS files are no longer supported within component packages and [EJ2 package](https://www.npmjs.com/package/@syncfusion/ej2), and direct SCSS imports will not work. Use SCSS theming by importing styles from centralized [theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme).
+
+#### Bug Fixes
+
+- The issue of being unable to access injected grandparent values in the Grid component when using provide/inject has been resolved.
+
+## 33.2.3 (2026-04-21)
 
 ### Common
 

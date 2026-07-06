@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { BlockEditor, BlockEditorModel } from '@syncfusion/ej2-blockeditor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColorSettings', 'blockActionMenuSettings', 'blocks', 'codeBlockSettings', 'commandMenuSettings', 'contextMenuSettings', 'cssClass', 'enableDragAndDrop', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'fontColorSettings', 'height', 'imageBlockSettings', 'inlineToolbarSettings', 'keyConfig', 'labelSettings', 'locale', 'pasteCleanupSettings', 'readOnly', 'transformSettings', 'undoRedoStack', 'users', 'width', 'afterPasteCleanup', 'beforeFileUpload', 'beforePasteCleanup', 'blockChanged', 'blockDragStart', 'blockDragging', 'blockDropped', 'blur', 'created', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'selectionChanged'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColorSettings', 'blockActionMenuSettings', 'blocks', 'codeBlockSettings', 'collaborationSettings', 'commandMenuSettings', 'contextMenuSettings', 'cssClass', 'currentUserId', 'enableDragAndDrop', 'enableHtmlEncode', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'fontColorSettings', 'height', 'imageBlockSettings', 'inlineToolbarSettings', 'keyConfig', 'labelSettings', 'locale', 'pasteCleanupSettings', 'readOnly', 'transformSettings', 'undoRedoStack', 'users', 'width', 'afterPasteCleanup', 'beforeFileUpload', 'beforePasteCleanup', 'blockChanged', 'blockDragStart', 'blockDragging', 'blockDropped', 'blur', 'created', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'selectionChanged'];
 export const modelProps: string[] = ['blocks'];
 
 export const testProp: any = getProps({props: properties});
@@ -33,7 +33,7 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
-            hasInjectedModules: false as boolean,
+            hasInjectedModules: true as boolean,
             tagMapper: {} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,
@@ -169,6 +169,9 @@ export let BlockEditorComponent: DefineVueComponent<BlockEditorModel> =  vueDefi
         getSelectedBlocks(): Object[] | null {
             return this.ej2Instances.getSelectedBlocks();
         },
+        getVersionHistory(): Object {
+            return this.ej2Instances.getVersionHistory();
+        },
         moveBlock(fromBlockId: string, toBlockId: string): void {
             return this.ej2Instances.moveBlock(fromBlockId, toBlockId);
         },
@@ -234,6 +237,7 @@ export type BlockEditorComponent = typeof ComponentBase & {
     getDataAsJson(blockId?: string): Object | Object[];
     getRange(): Object | null;
     getSelectedBlocks(): Object[] | null;
+    getVersionHistory(): Object;
     moveBlock(fromBlockId: string, toBlockId: string): void;
     parseHtmlToBlocks(html: string): Object[];
     print(): void;

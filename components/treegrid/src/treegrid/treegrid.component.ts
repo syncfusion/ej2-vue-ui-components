@@ -320,6 +320,9 @@ export let TreeGridComponent: DefineVueComponent<TreeGridModel> =  vueDefineComp
         getRowByIndex(index: number): Object {
             return this.ej2Instances.getRowByIndex(index);
         },
+        getRowIndexByPrimaryKey(value: string | Object | number): number {
+            return this.ej2Instances.getRowIndexByPrimaryKey(value);
+        },
         getRowInfo(target: Object | Object): Object {
             return this.ej2Instances.getRowInfo(target);
         },
@@ -527,6 +530,7 @@ export type TreeGridComponent = typeof ComponentBase & {
     getPager(): Object;
     getPrimaryKeyFieldNames(): string[];
     getRowByIndex(index: number): Object;
+    getRowIndexByPrimaryKey(value: string | Object | number): number;
     getRowInfo(target: Object | Object): Object;
     getRows(): Object[];
     getSelectedRecords(): Object[];

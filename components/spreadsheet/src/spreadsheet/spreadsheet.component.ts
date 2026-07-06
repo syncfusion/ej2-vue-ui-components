@@ -4,6 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { Spreadsheet, SpreadsheetModel } from '@syncfusion/ej2-spreadsheet';
 import { ImagesDirective, ImageDirective, ImagesPlugin, ImagePlugin } from './image.directive'
 import { ChartsDirective, ChartDirective, ChartsPlugin, ChartPlugin } from './chart.directive'
+import { RichTextsDirective, RichTextDirective, RichTextsPlugin, RichTextPlugin } from './richtext.directive'
 import { CellsDirective, CellDirective, CellsPlugin, CellPlugin } from './cells.directive'
 import { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.directive'
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
@@ -13,7 +14,7 @@ import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sh
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowPrint', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'author', 'autoFillSettings', 'calculationMode', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enableNotes', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'listSeparator', 'locale', 'openSettings', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showCommentsPane', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'aiAssistSettings', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowPrint', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'author', 'autoFillSettings', 'calculationMode', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableAIAssist', 'enableClipboard', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enableNotes', 'enablePersistence', 'enableRtl', 'height', 'isProtected', 'listSeparator', 'locale', 'openSettings', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showCommentsPane', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'promptRequest', 'promptResponse', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -41,8 +42,8 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: true as boolean,
-            tagMapper: {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image","e-charts":"e-chart"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"} as { [key: string]: Object },
-            tagNameMapper: {"e-images":"e-image","e-charts":"e-chart","e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"} as Object,
+            tagMapper: {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image","e-charts":"e-chart","e-richtexts":"e-richtext"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"} as { [key: string]: Object },
+            tagNameMapper: {"e-images":"e-image","e-charts":"e-chart","e-richtexts":"e-richText","e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -206,6 +207,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         endEdit(): void {
             return this.ej2Instances.endEdit();
         },
+        executeAIPrompt(prompt: string): void {
+            return this.ej2Instances.executeAIPrompt(prompt);
+        },
         find(args: Object): void | string {
             return this.ej2Instances.find(args);
         },
@@ -320,6 +324,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         resize(): void {
             return this.ej2Instances.resize();
         },
+        resumeRefresh(): Object {
+            return this.ej2Instances.resumeRefresh();
+        },
         save(saveOptions: Object, jsonConfig?: Object): void {
             return this.ej2Instances.save(saveOptions, jsonConfig);
         },
@@ -361,6 +368,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         },
         startEdit(): void {
             return this.ej2Instances.startEdit();
+        },
+        suspendRefresh(): void {
+            return this.ej2Instances.suspendRefresh();
         },
         unMerge(range?: string): void {
             return this.ej2Instances.unMerge(range);
@@ -443,6 +453,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     enableRibbonTabs(tabs: string[], enable: boolean): void;
     enableToolbarItems(tab: string, items?: number[] | string[], enable?: boolean): void;
     endEdit(): void;
+    executeAIPrompt(prompt: string): void;
     find(args: Object): void | string;
     findAll(value: string, mode?: string, isCSen?: boolean, isEMatch?: boolean, sheetIndex?: number): string[];
     freezePanes(row: number, column: number, sheet?: number | string): void;
@@ -481,6 +492,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     removeInvalidHighlight(range?: string): void;
     replace(args: Object): void;
     resize(): void;
+    resumeRefresh(): Object;
     save(saveOptions: Object, jsonConfig?: Object): void;
     saveAsJson(jsonConfig?: Object): Object;
     selectChart(id?: string): void;
@@ -495,6 +507,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     showSpinner(): void;
     sort(sortOptions?: Object, range?: string): Object;
     startEdit(): void;
+    suspendRefresh(): void;
     unMerge(range?: string): void;
     undo(): void;
     unfreezePanes(sheet?: number | string): void;
@@ -520,6 +533,8 @@ export const SpreadsheetPlugin = {
         Vue.component(ImagesPlugin.name, ImagesDirective);
         Vue.component(ChartPlugin.name, ChartDirective);
         Vue.component(ChartsPlugin.name, ChartsDirective);
+        Vue.component(RichTextPlugin.name, RichTextDirective);
+        Vue.component(RichTextsPlugin.name, RichTextsDirective);
         Vue.component(ColumnPlugin.name, ColumnDirective);
         Vue.component(ColumnsPlugin.name, ColumnsDirective);
         Vue.component(RangePlugin.name, RangeDirective);
