@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.1.30 (2026-07-09)
+
+### Tree Grid
+
+#### Bug Fixes
+
+- `#F74180` - Resolved incorrect selection behavior in `autoCheckHierarchy` when clicking an intermediate header checkbox.
+
 ## 34.1.29 (2026-07-06)
 
 ### Tree Grid

@@ -2,6 +2,32 @@
 
 ## [Unreleased]
 
+## 34.1.30 (2026-07-09)
+
+### ComboBox
+
+#### Bug Fixes
+
+- `#I838922` - Issue with "Change event not fired when AutoFill is enabled and item is selected via mouse" has been resolved.
+
+### DropDownList
+
+#### Bug fixes
+
+- `#I845518` - Issue with "Inconsistency in DropDownList component virtualization support during scrolling" has been resolved.
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `#I852515` - Resolved an accessibility issue in the MultiSelect component that occurred when a value was selected in Box mode, improving compliance with accessibility standards and ensuring proper screen reader support.
+
+-`#I848974` - Issue with "Maximum Call Stack Error Occurs When Binding Large Data Sets" has been resolved.
+
+- `#I850322` -  Issue with "MultiSelect Dropdown component input overrides chip text during early filtering with remote data source" has been resolved.
+
+- `#I852515` - Resolved an accessibility issue in the MultiSelect component that occurred when a value was selected in Box mode, improving compliance with accessibility standards and ensuring proper screen reader support.
+
 ## 28.2.9 (2025-03-04)
 
 ### ComboBox

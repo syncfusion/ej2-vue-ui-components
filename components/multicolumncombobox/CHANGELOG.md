@@ -2,13 +2,13 @@
 
 ## [Unreleased]
 
-## 34.1.29 (2026-07-06)
+## 34.1.30 (2026-07-09)
 
 ### MultiColumn ComboBox
 
 #### Bug Fixes
 
-- `#F198183` - Popup misalignment during filtering when the dropdown opens above the input in the MultiColumn ComboBox has been resolved.
+- `#I846768` - The issue with "MultiColumnComboBox enter key triggers null change event in remote data and causes form refresh in form tag" has been resolved.
 
 ## 27.1.48 (2024-09-18)
 

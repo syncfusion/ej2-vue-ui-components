@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 34.1.30 (2026-07-09)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I847063` - Fixed an issue where diagram selection changed unexpectedly when navigating using scrollbars.
+- `#I846808` - Fixed duplicate historyChange triggers when moving multiple nodes and connectors with Line Routing enabled, ensuring proper undo/redo.
+
 ## 32.1.19 (2025-12-16)
 
 ### Diagram

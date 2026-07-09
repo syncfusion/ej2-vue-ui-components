@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## 34.1.30 (2026-07-09)
+
+### Menu
+
+#### Bug Fixes
+
+- `#I846115` - The issue with " When navigating menu items using the up/down arrow keys, causing the parent scroll to activate" has been resolved.
+
+### Tab
+
+#### Bug Fixes
+
+- `#I832084` - Fixed an issue where tab content did not correctly fill the available height when `heightAdjustMode` was set to Fill and custom parent heights were applied.
+
+- `#I847098` - The issue with "Tab component overflow navigation buttons not updating after window resize" has been resolved.
+
 ## 34.1.29 (2026-07-06)
 
 ### Tab

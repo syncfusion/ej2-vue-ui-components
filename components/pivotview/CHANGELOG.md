@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 34.1.30 (2026-07-09)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- `#I849413` - Resolved a Content Security Policy (CSP) violation caused by an inline context menu handler that generated console errors in the Pivot Table.
+- `#I848615` - Fixed an issue where the Pivot Table did not render correctly when refreshed with an empty data source.
+
 ## 31.1.17 (2025-09-05)
 
 ### Pivot Table

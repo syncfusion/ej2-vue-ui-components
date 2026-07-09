@@ -2,17 +2,31 @@
 
 ## [Unreleased]
 
+## 34.1.30 (2026-07-09)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I847469` - Resolved an issue where button fields were not rendered in the `Standalone` PDF Viewer without the form designer module.
+- `#I844902` - Fixed an issue where duplicate annotations were rendered in the customer provided document without form designer module.
+- `#I794581` - Fixed an issue where form field values were not positioned correctly during printing in server rendering mode for the provided document.
+- `#I848900` - Resolved an issue where ink annotations were not rendered properly after being added as a dot and saved in the PDF document.
+- `#I846654` - Resolved screen reader and keyboard accessibility issues in the PDF Viewer.
+- `#I849048` - Resolved an issue where bounds were not updated correctly in the UI after fields were updated programmatically.
+- Resolved an issue where the context menu flickered when the comment panel was open on `Ubuntu OS devices`.
+
 ## 34.1.29 (2026-07-06)
 
 ### PDF Viewer
 
 #### New Features
 
-- `#I393057` - Annotation Comment Filter – Introduced annotation filter support in the EJ2 PDF Viewer, enabling users to efficiently manage and view annotations by applying filters based on specific criteria. The filter options can be accessed through the filter icon in the comments panel, allowing users to display only the annotations that match their requirements. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/annotation-comment-filter)
-- `#I313209`, `#I315475` - Ink Eraser – Introduced ink eraser support in the EJ2 PDF Viewer, allowing users to selectively remove or correct portions of freehand ink annotations drawn on a PDF document. This feature enhances annotation flexibility by enabling precise editing of ink strokes for improved accuracy and usability. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/ink-eraser)
+- `#I393057` - Annotation Comment Filter – Introduced annotation filter support in the PDF Viewer, enabling users to efficiently manage and view annotations by applying filters based on specific criteria. The filter options can be accessed through the filter icon in the comments panel, allowing users to display only the annotations that match their requirements. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/annotation-comment-filter)
+- `#I313209`, `#I315475` - Ink Eraser – Introduced ink eraser support in the PDF Viewer, allowing users to selectively remove or correct portions of freehand ink annotations drawn on a PDF document. This feature enhances annotation flexibility by enabling precise editing of ink strokes for improved accuracy and usability. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/annotations/ink-eraser)
 
-- `#I393057` - Annotation Comment Filter – Introduced annotation filter support in the EJ2 PDF Viewer, enabling users to efficiently manage and view annotations by applying filters based on specific criteria. The filter options can be accessed through the filter icon in the comments panel, allowing users to display only the annotations that match their requirements. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/annotation-comment-filter)
-- `#I313209`, `#I315475` - Ink Eraser – Introduced ink eraser support in the EJ2 PDF Viewer, allowing users to selectively remove or correct portions of freehand ink annotations drawn on a PDF document. This feature enhances annotation flexibility by enabling precise editing of ink strokes for improved accuracy and usability. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/ink-eraser)
+- `#I393057` - Annotation Comment Filter – Introduced annotation filter support in the PDF Viewer, enabling users to efficiently manage and view annotations by applying filters based on specific criteria. The filter options can be accessed through the filter icon in the comments panel, allowing users to display only the annotations that match their requirements. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/annotation-comment-filter)
+- `#I313209`, `#I315475` - Ink Eraser – Introduced ink eraser support in the PDF Viewer, allowing users to selectively remove or correct portions of freehand ink annotations drawn on a PDF document. This feature enhances annotation flexibility by enabling precise editing of ink strokes for improved accuracy and usability. Explore the documentation [here](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/ink-eraser)
 
 #### Bug Fixes
 
@@ -20,9 +34,9 @@
 
 #### Breaking Changes
 
-- Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server-backed mode, as all the PDF Viewer functionalities are now available in the `Standalone` mode. If you are currently using the server-backed mode, please refer to the [migration documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/server-to-standalone) and migrate to the `Standalone` PDF Viewer.
+- Starting with this release `(v34.1.29)`, no new features will be added to the Server-backed mode, as all the PDF Viewer functionalities are now available in the `Standalone` mode. If you are currently using the server-backed mode, please refer to the [migration documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/server-to-standalone) and migrate to the `Standalone` PDF Viewer.
 
-- Starting with the 2026 Vol 2 main release (June 2026), no new features will be added to the Server-backed mode, as all the PDF Viewer functionalities are now available in the `Standalone` mode. If you are currently using the server-backed mode, please refer to the [migration documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/server-to-standalone) and migrate to the `Standalone` PDF Viewer.
+- Starting with this release `(v34.1.29)`, no new features will be added to the Server-backed mode, as all the PDF Viewer functionalities are now available in the `Standalone` mode. If you are currently using the server-backed mode, please refer to the [migration documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/server-to-standalone) and migrate to the `Standalone` PDF Viewer.
 
 ## 33.2.15 (2026-06-23)
 
