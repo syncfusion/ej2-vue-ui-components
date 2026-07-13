@@ -2,15 +2,15 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
+## 34.1.30 (2026-07-09)
 
-### Chip
+### Switch
 
 #### Bug Fixes
 
-- `#I844690` - Resolved an issue where the ChipList component click event did not provide the clickEventArgs.
+- `#I843865` - The issue with "Toggle Switch persistence should use stable input ID instead of wrapper ID" has been resolved.
 
-## 33.1.44 (2026-03-16)
+## 34.1.29 (2026-07-06)
 
 ### Chip
 
@@ -552,15 +552,7 @@ RadioButton is a graphical user interface element that allows to select one opti
 
 - **Label** - Supports label and its positioning.
 
-- **Sizes** - Provided with different sizes of RadioButton.## 33.1.49 (2026-04-14)
-
-### Chip
-
-#### Bug Fixes
-
-- `#I824259` - Fixed an issue where the Chip List selection visual state and aria-selected attribute were lost when toggling enabled from false to true for value-based chips.
-
-## 18.4.39 (2021-01-28)
+- **Sizes** - Provided with different sizes of RadioButton.## 18.4.39 (2021-01-28)
 
 ### RadioButton
 

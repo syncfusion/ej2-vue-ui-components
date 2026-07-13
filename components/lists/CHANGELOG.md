@@ -2,15 +2,15 @@
 
 ## [Unreleased]
 
-## 33.1.47 (2026-04-07)
+## 34.1.30 (2026-07-09)
 
-### Sortable
+### ListBase
 
 #### Bug Fixes
 
-- `#I824102` -  Resolved an issue where the `beforeDrop` event of the Sortable component returned an incorrect `currentIndex` value during drag-and-drop operations.
+- `#I851323`- Resolved an issue in `Dropdown` components where the `popup` list incorrectly rendered items as anchor tags when the `DataSource` text field contained a URL.
 
-## 33.1.44 (2026-03-16)
+## 34.1.29 (2026-07-06)
 
 ### ListView
 

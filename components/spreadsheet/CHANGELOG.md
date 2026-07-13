@@ -2,29 +2,17 @@
 
 ## [Unreleased]
 
-## 33.2.4 (2026-04-28)
+## 34.1.30 (2026-07-09)
 
 ### Spreadsheet
 
-#### Bug fixes
+#### Bug Fixes
 
-- `#I829459` - Issue with "exception occurs when rendering charts with discontinuous data ranges containing empty cells" has been resolved.
-
-## 33.1.49 (2026-04-14)
-
-### Spreadsheet
+- `I848629` - Issue with "data validation in cells outside the used range was not retained when reopening the spreadsheet" has been resolved.
 
 #### Bug fixes
 
-- `#I827842` - Issue with "applying a top border to a cell with font styles caused selection misalignment" has been resolved.
-
-## 33.1.47 (2026-04-07)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I805278` - Issue with "pie chart rendered empty when the data range contained both string and numeric columns" has been resolved.
+- `#I847896` - Issue with "multiple images added to a worksheet were not displayed after saving and reopening the spreadsheet file" has been resolved.
 
 ## 32.1.20 (2025-12-23)
 
@@ -1406,23 +1394,7 @@ The Spreadsheet is an user interactive component to organize and analyze data in
 - **Save:** Provides option to save spreadsheet data as excel file.
 - **RTL:** Provides right-to-left mode which aligns content in the spreadsheet component from right to left.
 - **Localization:** Provides inherent support to localize the UI.
-- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 33.1.46 (2026-03-31)
-
-### Spreadsheet
-
-#### Features
-
-- `#I807242` - Enhanced security by implementing encrypted hash-based password storage for worksheet and workbook protection, replacing plain text storage and ensuring Excel compatibility.
-
-## 33.1.45 (2026-03-24)
-
-### Spreadsheet
-
-#### Bug fixes
-
-- `#I809820` - Issue with "image positions become misaligned when scrolling after importing a file that contains multiple images" has been resolved.
-
-## 27.1.48 (2024-09-18)
+- **Accessibility:** Provides with built-in accessibility support which helps to access all the spreadsheet component features using the keyboard, screen readers, or other assistive technology devices.## 27.1.48 (2024-09-18)
 
 ### Spreadsheet
 

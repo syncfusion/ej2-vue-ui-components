@@ -2,39 +2,14 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
+## 34.1.30 (2026-07-09)
 
 ### Pivot Table
 
 #### Bug Fixes
 
-- `#I822874` - Fixed an issue where the TreeView in the Calculated Field dialog did not render properly when the Pivot Table was used inside Angular Material dialogs.
-
-## 33.2.4 (2026-04-28)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `#I828186` - Fixed an issue where the `indexObject` was not available for row headers in the tabular Pivot Table.
-- `#I830313` - Fixed an issue where child row headers were missing during server-side Excel export of the tabular Pivot Table.
-- `#I829878` - Fixed an issue where the Pivot Table did not export correctly when Turkish characters were included in PDF document headers.
-
-## 33.1.49 (2026-04-14)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `#I823311` - Fixed an issue where report manipulation dialogs were rendered with duplicate instances when loading data dynamically in the Pivot Table.
-
-## 33.1.47 (2026-04-07)
-
-### Pivot Table
-
-#### Bug Fixes
-
-- `#I822874` - Fixed an issue where Pivot Table popups, such as filtering and number formatting dialogs, did not render properly when the component was rendered inside Angular Material dialogs.
+- `#I849413` - Resolved a Content Security Policy (CSP) violation caused by an inline context menu handler that generated console errors in the Pivot Table.
+- `#I848615` - Fixed an issue where the Pivot Table did not render correctly when refreshed with an empty data source.
 
 ## 31.1.17 (2025-09-05)
 

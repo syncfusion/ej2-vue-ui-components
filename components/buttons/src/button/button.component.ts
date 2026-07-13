@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { Button, ButtonModel } from '@syncfusion/ej2-buttons';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'created'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'content', 'cssClass', 'disabled', 'enableHtmlSanitizer', 'enablePersistence', 'enableRepeat', 'enableRtl', 'iconCss', 'iconPosition', 'isPrimary', 'isToggle', 'locale', 'repeatDelay', 'repeatInterval', 'clicked', 'created'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});

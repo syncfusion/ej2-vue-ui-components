@@ -2,131 +2,31 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
-
-### DropdownList
-
-#### Bug Fixes
-
-- `#I845531` - Resolved accessibility issues affecting the DropdownList, including incorrect behavior with Narrator.
-
-### ListBox
-
-#### Bug Fixes
-
-- `#I848672` - Issue with "CSP violation in ListBox component when using showSelectAll with localization functionality" has been resolved.
-
-## 33.2.12 (2026-06-09)
+## 34.1.30 (2026-07-09)
 
 ### ComboBox
 
 #### Bug Fixes
 
-- `#I839807` - Fixed an issue where form controls were incorrectly marked as dirty after reset due to dependent `patchValue` operations.
+- `#I838922` - Issue with "Change event not fired when AutoFill is enabled and item is selected via mouse" has been resolved.
 
-### DropdownList
+### DropDownList
 
-#### Bug Fixes
+#### Bug fixes
 
-- `#I839807` - Fixed an issue where form controls were incorrectly marked as dirty after reset due to dependent `patchValue` operations.
-
-### AutoComplete
-
-#### Bug Fixes
-
-- `#I839807` - Fixed an issue where form controls were incorrectly marked as dirty after reset due to dependent `patchValue` operations.
-
-## 33.2.10 (2026-06-02)
+- `#I845518` - Issue with "Inconsistency in DropDownList component virtualization support during scrolling" has been resolved.
 
 ### MultiSelect
 
 #### Bug Fixes
 
-- `#I840154` - Fixed an issue where the MultiSelect displayed "N selected" instead of the selected item when initialized before layout completion.
+- `#I852515` - Resolved an accessibility issue in the MultiSelect component that occurred when a value was selected in Box mode, improving compliance with accessibility standards and ensuring proper screen reader support.
 
-- `823331` - Resolved an issue where the MultiSelect component accepted whitespace as a custom value, leading to invalid numeric values.
+-`#I848974` - Issue with "Maximum Call Stack Error Occurs When Binding Large Data Sets" has been resolved.
 
-### ComboBox
+- `#I850322` -  Issue with "MultiSelect Dropdown component input overrides chip text during early filtering with remote data source" has been resolved.
 
-#### Bug Fixes
-
-- `#I838922` - Fixed an issue where Change event not fired when AutoFill is enabled and item is selected via mouse has been resolved.
-
-### Mention
-
-#### Bug Fixes
-
-- `#I839712` - Fixed an issue where mention filtering failed to update correctly when characters were deleted.
-
-## 33.2.7 (2026-05-19)
-
-### DropDownTree
-
-#### Bug Fixes
-
-- `F198294` - Fixed with "Tree selection loss by deferring value application until after data binding" has been resolved.
-
-### MultiSelect
-
-#### Bug Fixes
-
-- `#F198311` - The issue where the MultiSelect displayed “undefined” when virtualization was enabled along with custom preselected values has been resolved.
-
-- `#I837086` - The issue with "MultiSelect default height inconsistency in BDS theme" has been resolved.
-
-## 33.2.6 (2026-05-12)
-
-### DropdownList
-
-#### Bug Fixes
-
-- `#I835445` - Fixed an issue where the Index property was not applied when virtualization was enabled.
-
-### MultiSelect
-
-#### Bug Fixes
-
-- `#I828952, #I828480, #I828633` - The issue with MultiSelect, where inconsistencies occurred when enable Virtualization was used along with other APIs, has been resolved.
-
-## 33.2.5 (2026-05-05)
-
-## 33.2.4 (2026-04-28)
-
-### MultiSelect
-
-#### Bug Fixes
-
-- `#I829508` - Fixed an issue where binding 6,000+ preselected values with virtualization enabled resulted in a “Maximum call stack size exceeded” error.
-
-### Mention
-
-#### Bug Fixes
-
-- `#I58529` - Resolved an issue where mention filtering did not trigger after existing text when `allowSpaces`: true and the data source was empty.
-
-### DropDownTree
-
-#### Bug Fixes
-
-- `#I829239` - Resolved an issue where `Select All` was incorrectly hidden during filtering in `DropDownTree` based on filtered item count.
-
-- `#I813436` - Resolved a memory leak in the DropDownTree component by ensuring the window resize event listener is correctly detached during destroy, preventing retained instances in Angular Material Dialog scenarios.
-
-## 33.1.49 (2026-04-14)
-
-### MultiSelect
-
-#### Bug Fixes
-
-- `#I816920` - Resolved an issue where the MultiSelect “Select All” option selected only the first 30 items when using string arrays with virtualization enabled.
-
-## 33.1.46 (2026-03-31)
-
-### DropDownTree
-
-#### Bug Fixes
-
-- `#I816579` - Resolved a console error that occurred when filtering in the DropDown Tree component with node IDs containing the hash `#` symbol.
+- `#I852515` - Resolved an accessibility issue in the MultiSelect component that occurred when a value was selected in Box mode, improving compliance with accessibility standards and ensuring proper screen reader support.
 
 ## 28.2.9 (2025-03-04)
 

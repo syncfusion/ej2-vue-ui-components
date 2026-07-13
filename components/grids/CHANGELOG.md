@@ -2,91 +2,18 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
-
-### Grid
-
-#### Bugs
-
-- `I844550` - Resolved an issue where clipboard copy did not work when `virtualization` was enabled in the Grid.
-
-## 33.2.10 (2026-06-02)
-
-### Grid
-
-#### Bugs
-
-- `I838244` - The issue where editing a new row using a column template button caused a script error when another row was already in edit mode has been resolved.
-- `I835370` - The script error that occurred when clearing the persisted filter in Adaptive UI within the EJ2 Grid has been resolved.
-- `I839347` - The issue where the scrollbar jumped to the top during virtual scrolling when the data count was less than the page size has been resolved.
-
-## 33.2.7 (2026-05-19)
-
-### Grid
-
-#### Bugs
-
-- `I836076`  The issue where initial filtering with multiple predicates was not working for the Menu-type filter has been resolved.
-
-## 33.2.5 (2026-05-05)
-
-### Grid
-
-#### Bugs
-
-- `I833649` - Resolved a script error that occurred when reordering stacked header columns rendered using a header template.
-- `I827616` - Fixed an issue where the Excel filter dialog failed to load data after performing a grid search.
-
-## 33.2.4 (2026-04-28)
-
-### Grid
-
-#### Bugs
-
-- `I826547` - Resolved an issue where the custom format was not applied to date columns when the custom format type was not specified.
-
-## 33.2.3 (2026-04-21)
-
-### Grid
-
-#### Bugs
-
-- `I828282` - Resolved an issue where the shimmer effect was not removed when Immutable Mode was enabled in the Grid.
-
-## 33.1.49 (2026-04-14)
+## 34.1.30 (2026-07-09)
 
 ### Grid
 
 #### Bug Fixes
 
-- `#I828949` -  Resolved an issue where a script error occurred while scrolling the grid when `ColumnChooser` was enabled along with `virtualization` and `AdaptiveUI`.
+- `#I850753` - Resolved an issue where numeric filtering returned incorrect results when `matchCase` was disabled.
+- `#I845390` - Resolved an issue where `isCtrlPressed` incorrectly returned true during row selection when checkbox selection was enabled.
+- `#I841365` - Resolved an issue where the modal overlay was incorrectly positioned when the Grid dialog was appended to the body.
+- `#I847076` - Resolved an issue where the Menu filter for foreign key columns generated incorrect `OData` queries using the parent field instead of the configured `foreignKeyField`.
 
-## 33.1.47 (2026-04-07)
-
-### Grid
-
-#### Bug Fixes
-
-- `#I823122` - Resolved an issue where a duplicate filter query was added when grouping with `pageWiseAggregates` enabled.
-
-## 33.1.46 (2026-03-31)
-
-### Grid
-
-#### Bug Fixes
-
-- `#I823454` - The issue where the edit dialog did not close when `virtualization` and row height were enabled has been resolved.
-
-## 33.1.45 (2026-03-24)
-
-### Grid
-
-#### Bug Fixes
-
-- `#I821485` - Fixed an issue where the filter dialog displayed a continuous spinner when both the column chooser and `adaptiveUI` mode were enabled.
-- `#I817121` - Fixed an issue where the `applyPreRequestMiddlewares` did not execute while deleting multiple records from a remote data source.
-
-## 33.1.44 (2026-03-16)
+## 34.1.29 (2026-07-06)
 
 ### Grid
 
@@ -95,10 +22,6 @@
 - `#FB3775` - The `ODataV4` functionality has been enhanced, enabling you to invoke custom URLs for data fetching and CRUD actions.
 - Lazy load grouping with sorting performance has been improved, allowing you to handle large datasets without performance lag.
 - The Fluent 2 theme are now available in both light and dark modes on the EJ2 Grid. Explore the demo [here](https://ej2.syncfusion.com/demos/#/fluent2/grid/grid-overview.html).
-
-- `#FB3775` - The `ODataV4` functionality has been enhanced, enabling you to invoke custom URLs for data fetching and CRUD actions.
-- Lazy load grouping with sorting performance has been improved, allowing you to handle large datasets without performance lag.
-- The Fluent 2 theme are now available in both light and dark modes on the EJ2 Grid. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/fluent2/grid/grid-overview.html).
 
 ## 25.1.35 (2024-03-15)
 
@@ -2888,13 +2811,29 @@ Grid component is used to display and manipulate tabular data with configuration
 - **Hierarchy Grid** - It is used to display table data in hierarchical structure which can show or hide by clicking on expand or collapse button.
 - **Print and Exporting** - Provides the option to print and exporting grid records.
 - **RTL** - Provides a full-fledged right-to-left mode which aligns content in the Grid component from right to left.
-- **Localization** - Provides inherent support to localize the UI.## 33.2.8 (2026-05-26)
+- **Localization** - Provides inherent support to localize the UI.## Grid
+
+### Bug Fixes
+
+- `#I844794` - Resolved an issue where the "Select All" action failed to work when using remote data without paging or virtual scrolling.
+
+### Features
+
+- Introduced `DOM virtualization` support to improve rendering performance by minimizing the number of DOM elements created during scrolling, making the Grid more efficient when handling large datasets.
+- Added support for cell level editing, allowing users to edit individual cells directly without switching an entire row into edit mode, thereby improving editing flexibility and overall user experience.
+- Implemented undo and redo functionality for batch editing in the Grid, enabling users to easily revert or reapply changes and enhancing overall data manipulation usability.
+- Enabled immediate filtering support in `Excel` and `Checkbox` filter types, allowing filter operations to be applied instantly without requiring users to explicitly confirm their selection.
+- Enhanced the `Column Chooser` with immediate show and hide action support, so column visibility changes are reflected instantly when toggled, improving usability and interaction speed.
+- Added support for setting the Grid height using viewport height units, enabling better responsiveness and adaptability across different screen sizes.
+- Introduced support for displaying footer aggregate values while using column `virtualization`, ensuring accurate summary information even in highly optimized rendering scenarios.
+- Added a new `cellFocus` event that is triggered whenever a grid cell receives focus, providing better control for developers to handle focus-related interactions and improve accessibility.
+- Introduced `detailExpanded` and `detailCollapsed` events to notify when detail rows are expanded or collapsed, allowing developers to track and respond to detail row state changes effectively.
 
 ### Grid
 
-#### Bugs
+#### Features
 
-- `I838244` - The issue where editing a new row using a column template button caused a script error when another row was already in edit mode has been resolved.
-- `I835370` - The script error that occurred when clearing the persisted filter in Adaptive UI within the EJ2 Grid has been resolved.
-- `I839347` - The issue where the scrollbar jumped to the top during virtual scrolling when the data count was less than the page size has been resolved.
+- `#FB3775` - The `ODataV4` functionality has been enhanced, enabling you to invoke custom URLs for data fetching and CRUD actions.
+- Lazy load grouping with sorting performance has been improved, allowing you to handle large datasets without performance lag.
+- The Fluent 2 theme are now available in both light and dark modes on the EJ2 Grid. Explore the demo [here](https://ej2.syncfusion.com/vue/demos/#/fluent2/grid/grid-overview.html).
 

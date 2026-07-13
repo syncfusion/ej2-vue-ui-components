@@ -2,23 +2,17 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
+## 34.1.30 (2026-07-09)
 
 ### QueryBuilder
 
 #### Bug Fixes
 
-- `#I839882` - The issue where the `OR` operator changed to `AND` while dragging and dropping groups and conditions has been resolved.
+- `#I851973` - Resolved an accessibility issue in QueryBuilder that occurred when both `enableSeparateConnector` and `allowDragAndDrop` were enabled.
 
-## 33.2.7 (2026-05-19)
+- `#I852514` - Resolved an issue where QueryBuilder allowed multiple connector selections during keyboard navigation.
 
-### QueryBuilder
-
-#### Bug Fixes
-
-- `#I839882` - The issue where the `OR` operator changed to `AND` while dragging and dropping conditions has been resolved.
-
-## 33.1.44 (2026-03-16)
+## 34.1.29 (2026-07-06)
 
 ### QueryBuilder
 

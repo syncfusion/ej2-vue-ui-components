@@ -58,14 +58,14 @@ Add CSS references needed for Rich Text Editor in **style** section of the **App
 
 ```html
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.css";
-    @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/bootstrap5.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind3.css";
 </style>
 ```
 
@@ -108,14 +108,14 @@ Add the Vue Rich Text Editor by using **ejs-richtexteditor** selector in **templ
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/bootstrap5.css";
-@import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css";
+@import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/tailwind3.css";
 </style>
 ```
 > Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/get-started#getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) for using Syncfusion<sup>®</sup> Vue components in Vue 3 applications.
@@ -129,14 +129,14 @@ Rich Text Editor component is also offered in the following frameworks.
 
 ## 🏗️ Showcase samples
 
-* [Vue HTML editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/tools.html)
-* [Blog posting using Vue rich text editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/blog-posting.html)
-* [Vue Markdown editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/markdown-editor.html)
-* [Vue live Markdown editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/online-html-editor.html)
+* [Vue HTML editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/tools.html)
+* [Blog posting using Vue rich text editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/blog-posting.html)
+* [Vue Markdown editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/markdown-editor.html)
+* [Vue live Markdown editor demo](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/online-html-editor.html)
 
 ## ✨ Key features
 
-* [Edit mode](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/iframe.html) - HTML content is possible to edit in a `div` element or an `iframe` in the rich text editor.
+* [AI Assistant](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/ai-assistant.html) - The AI Assistant helps generate, rewrite, summarize, and refine editor content. It is designed to speed up content creation and improve editing productivity.
 
 * [@Mentions](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/mention-integration.html) - Easily mention users, tags, or items with an autocomplete suggestion list.
 
@@ -148,15 +148,15 @@ Rich Text Editor component is also offered in the following frameworks.
 
 * [Preventing Cross-Site Scripting (XSS)](https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/prevent-cross-site-scripting??utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - The Rich Text Editor allows users to edit the content with security by preventing cross-site scripting (XSS).
 
-* [HTML code editing](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/miscellaneous/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#code-view) - The rich text editor allows users to edit the HTML code directly in the HTML code view. This can be useful for users who are familiar with HTML and want to have more control over the formatting and layout of their content.
+* [Accessibility & WCAG 2.0 Compliance](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility) - Accessibility support helps the editor work with assistive technologies and keyboard navigation. It ensures the component can be used more effectively by a broader audience.
 
-* [Markdown editor](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/markdown-preview.html) - The rich text editor allows you to edit Markdown content using the Markdown syntax.
+* [Preventing Cross-Site Scripting (XSS)](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/validation-security/xhtml-validation#cross-site-scripting-xss) - XSS protection helps validate and sanitize editor content before it is used or rendered. It reduces security risks by blocking malicious scripts and unsafe markup.
 
-* [Markdown content preview](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/markdown-preview.html) - Preview of the modified Markdown content in the editor, you can give users the ability to see what the formatted content will look like before they save it.
+* [HTML code editing](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/editor-value#source-code-editing) - HTML code editing lets users view and edit the underlying markup directly. It is helpful when precise control over the document structure is required.
 
-* [Tools](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/toolbar/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#toolbar-items) - The rich text editor handles a wide range of features, including inserting images, hyperlinks, tables, formatting tools, and more.
+* [Markdown editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/editor-types/editor-modes#markdown-editor) - Markdown editor mode lets users create and edit content using Markdown syntax. It is ideal for lightweight authoring and text-based workflows.
 
-* [Toolbar appearance](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/types.html) - The rich text editor can provide a fully customizable toolbar that allows users to access the various formatting and editing options that are available.
+* [Custom Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/tools/custom-tools) - Custom toolbar items allow additional actions to be added to the editor toolbar. They help tailor the editing experience to specific application needs.
 
 * [Export and Import](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/export-document.html) - Supports exporting content to PDF, and Word formats.
 
@@ -164,9 +164,17 @@ Rich Text Editor component is also offered in the following frameworks.
 
 * [Undo and redo](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/undo-redo?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Users can use undo and redo actions to reverse or repeat actions they took while editing the content.
 
-* [Module injection](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#module-injection) - It is possible to create a editor that utilizes a modular library to load the necessary functionality on demand. This can be useful for optimizing the performance of the editor.
+* [Insert Media](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/insert-media.html) - Insert Media allows audio and video content to be embedded in the editor. It is useful for creating richer and more interactive documents.
 
-* [Third-party integration](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/third-party-integration/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#third-party-integration) - It is possible to integrate a third-party library into a rich text editor to add additional functionality or features to the editor like `Code-mirror`, `Embedly` and more.
+* [Toolbar](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/toolbar/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#toolbar-items) - Toolbar support provides editing controls and customization options for the editor. It supports floating behavior, multiple layout types, and toolbar positioning for flexible UI setups.
+
+* [Export and Import](https://ej2.syncfusion.com/vue/demos/#/tailwind3/rich-text-editor/export-document.html) - Export and Import support allows content to be moved between the editor and document formats such as PDF and Word. It simplifies content sharing, archiving, and document processing.
+
+* [Undo and redo](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/undo-redo) - Undo and redo support lets users reverse or repeat recent editing actions. It improves editing confidence by making changes easier to correct.
+
+* [Module injection](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#module-injection) - Module injection lets the editor load only the features that are needed. It helps reduce bundle size and keeps the component more efficient.
+
+* [Third-party integration](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/third-party-integration/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#third-party-integration) - Third-party integration lets the editor work with external libraries and services. It extends the editor with additional capabilities beyond the built-in feature set.
 
 ## 📚 Resources
 

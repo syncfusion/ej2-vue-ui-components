@@ -2,7 +2,19 @@
 
 ## [Unreleased]
 
-## 33.2.15 (2026-06-23)
+## 34.1.30 (2026-07-09)
+
+### DocumentEditor
+
+#### Bug Fixes
+
+`#I827048` - Fixed an issue where double-clicking the Ribbon tab left extra space and an unexpected border in the status bar.
+
+#### Features
+
+`#I848904` - Implemented support for rendering the tracking revision list based on paragraph character formatting.
+
+## 34.1.29 (2026-07-06)
 
 ### DocumentEditor
 
