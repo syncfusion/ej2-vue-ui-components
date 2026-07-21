@@ -1,6 +1,6 @@
 # Vue Gantt Component
 
-The [Vue Gantt](https://www.syncfusion.com/vue-components/vue-gantt-chart?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm) component is a project planning and management tool used to display and manage hierarchical tasks with timeline details. It helps assess how long a project should take, determine the resources needed, manage the dependencies between tasks, and plan the order in which the tasks should be completed.
+The [Vue Gantt](https://www.syncfusion.com/gantt-sdk/vue-gantt-chart?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm) component is a project planning and management tool used to display and manage hierarchical tasks with timeline details. It helps assess how long a project should take, determine the resources needed, manage the dependencies between tasks, and plan the order in which the tasks should be completed.
 
 <p align="center">
 <img alt="Vue Gantt Control" src="https://raw.githubusercontent.com/SyncfusionExamples/nuget-img/master/vue/vue-gantt-chart.png"> </p>
@@ -197,7 +197,7 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 ## License and copyright
 
-> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/license/studio/33.2.3/syncfusion_essential_studio_eula.pdf?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm). To acquire a license for 150+ [Vue UI components](https://www.syncfusion.com/vue-components?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm), you can [purchase](https://www.syncfusion.com/sales/pricing?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm).
+> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/license/studio/33.2.3/syncfusion_essential_studio_eula.pdf?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm). To acquire a license for 150+ [Vue UI components](https://www.syncfusion.com/vue-components?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm), you can [purchase](https://www.syncfusion.com/sales/pricing?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm) or [start a free 30-day trial](https://www.syncfusion.com/downloads/gantt-sdk?tag=es-ft-vue-gantt-chart-banner).
 
 > A free community [license](https://www.syncfusion.com/products/communitylicense?utm_source=npm&utm_medium=listing&utm_campaign=vue-gantt-npm) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 
