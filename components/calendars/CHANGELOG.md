@@ -10,6 +10,8 @@
 
 - `#I753728` - Fixed an issue where the date range picker with the preset range popup would open behind the drawer.
 
+- `I844857` - Fixed an issue where serverTimezoneOffset was not applied correctly when using date-time formats.
+
 ## 31.1.17 (2025-09-05)
 
 ### DatePicker

@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.1.32 (2026-07-21)
+
+### Spreadsheet
+
+#### Bug Fixes
+
+- `I852485` - Issue with "Data validation is not preserved on discontinuous ranges when opening the file" has been resolved.
+
 ## 34.1.30 (2026-07-09)
 
 ### Spreadsheet

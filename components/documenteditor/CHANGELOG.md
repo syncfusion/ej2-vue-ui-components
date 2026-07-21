@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.1.32 (2026-07-21)
+
+### DocumentEditor
+
+#### Bug Fixes
+
+`#I847820` - Fixed an issue where table resizing caused cross-page merges and incorrect alignment.
+
 ## 34.1.30 (2026-07-09)
 
 ### DocumentEditor

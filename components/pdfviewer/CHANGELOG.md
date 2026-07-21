@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 34.1.32 (2026-07-21)
+
+### PDF Viewer
+
+#### Bug Fixes
+
+- `#I849129` - Resolved an issue where text search highlights were not cleared properly and reappeared during zoom operations when `enableThumbnail` was set to `false`.
+- `#I842052` - Fixed a script error that occurred when performing text search programmatically without the Toolbar module.
+
 ## 34.1.30 (2026-07-09)
 
 ### PDF Viewer

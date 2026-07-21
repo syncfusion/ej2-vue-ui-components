@@ -113,6 +113,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
+        getAppendTo(isAngular: boolean): Object {
+            return this.ej2Instances.getAppendTo(isAngular);
+        },
         getBookmarks(): string[] {
             return this.ej2Instances.getBookmarks();
         },
@@ -151,6 +154,12 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         },
         importFormData(formData: Object[]): void {
             return this.ej2Instances.importFormData(formData);
+        },
+        moveAlertToCdkOverlay(e: any): void {
+            return this.ej2Instances.moveAlertToCdkOverlay(e);
+        },
+        movePopupToCdkOverlay(dropDownButtonEl: Object, popupEl: Object): void {
+            return this.ej2Instances.movePopupToCdkOverlay(dropDownButtonEl, popupEl);
         },
         open(inputData: string): void {
             return this.ej2Instances.open(inputData);
@@ -250,6 +259,7 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     exportFormData(): Object[];
     fitPage(pageFitType?: Object): void;
     focusIn(): void;
+    getAppendTo(isAngular: boolean): Object;
     getBookmarks(): string[];
     getComments(): Object[];
     getDefaultCharacterFormat(): Object;
@@ -263,6 +273,8 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     getStyles(styleType?: Object): Object[];
     importContentControlData(contentControlInfo: Object[]): Object[];
     importFormData(formData: Object[]): void;
+    moveAlertToCdkOverlay(e: any): void;
+    movePopupToCdkOverlay(dropDownButtonEl: Object, popupEl: Object): void;
     open(inputData: string): void;
     openAsync(inputData: string): Object;
     openBlank(): void;

@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## 34.1.32 (2026-07-21)
+
+### Pivot Table
+
+#### Bug Fixes
+
+- `#I848026` - Resolved an issue in Tabular mode with virtualization where row headers became misaligned when a value field was placed in the row axis and subtotals were displayed at the bottom.
+- `#I854067` - Resolved an issue where the Pivot Table height was calculated incorrectly when the chart was enabled and a predefined height was configured.
+
 ## 34.1.30 (2026-07-09)
 
 ### Pivot Table

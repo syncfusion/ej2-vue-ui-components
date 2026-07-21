@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.1.32 (2026-07-21)
+
+### Tree Grid
+
+#### Bug Fixes
+
+- `#I853975` - Resolved an issue where the hierarchy of filtered records are misplaced when dynamically changing hierarchy mode in filter settings.
+
 ## 34.1.30 (2026-07-09)
 
 ### Tree Grid
