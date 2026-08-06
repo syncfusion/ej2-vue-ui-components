@@ -32,9 +32,9 @@ npm run serve
 ```
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-### Adding Syncfusion Gantt and theme Package
+### Adding Syncfusion Gantt and Theme Packages
 
-All Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install the Vue Gantt package and the Tailwind 3 theme package, use the following command.
+All Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry. To install the Vue Gantt package and the Tailwind 3 theme package, use the following commands.
 
 ```bash
 npm install @syncfusion/ej2-vue-gantt
