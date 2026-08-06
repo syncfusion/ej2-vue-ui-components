@@ -1,6 +1,8 @@
 # Vue Grid Component
 
-The [Vue Grid](https://www.syncfusion.com/vue-components/vue-grid?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm) component is a powerful and flexible tool for displaying and manipulating tabular data. Vue Grid component is its ability to bind to a wide range of data sources, including arrays of JSON objects, `OData web services`, and the Syncfusion<sup>®</sup> DataManager. This makes it easy to integrate the grid into your application and display data from a variety of sources. In addition to its data binding capabilities, the Vue Grid also offers support for features such as sorting, filtering, paging, grouping, editing, frozen rows and columns, virtualization, and more. These features allow you to easily manipulate and present large datasets in an efficient and user-friendly way.
+The [Vue Grid](https://www.syncfusion.com/vue-components/vue-grid?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm) is a high‑performance and flexible component for displaying and managing tabular data. It supports binding to a wide range of data sources, including arrays of JSON objects, OData web services, REST APIs, GraphQL endpoints, SQL databases, and more. This makes it easy to integrate the grid into applications and present data from different backends.
+
+In addition to data binding, the Vue Data Grid includes features such as sorting, filtering, paging, grouping, editing, frozen rows and columns, virtualization, and more. These features help manage and present large datasets efficiently while maintaining ease of use.
 
 <p align="center">
   <a href="https://ej2.syncfusion.com/vue/documentation/grid/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm">Getting Started</a> . 
