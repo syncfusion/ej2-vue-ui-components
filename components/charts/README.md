@@ -1,6 +1,6 @@
 # Vue Charts Components
 
-The [Vue Chart](https://www.syncfusion.com/vue-components/vue-charts?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm) component is a well-crafted charting component for visualizing data with 50+ charts and graphs, ranging from line to financial types. It can bind data from  datasource such as array of JSON objects, `OData web services` or [DataManager](https://help.syncfusion.com/chart-sdk/vue/data/data-binding?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm). All chart elements are rendered using Scalable Vector Graphics (SVG).
+The [Vue Chart](https://www.syncfusion.com/vue-components/vue-charts?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm) component is a well-crafted charting component for visualizing data with 55+ charts and graphs, ranging from line to financial types. It can bind data from  datasource such as array of JSON objects, `OData web services` or [DataManager](https://help.syncfusion.com/chart-sdk/vue/data/data-binding?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm). All chart elements are rendered using Scalable Vector Graphics (SVG).
 
 ## What's Included in the Vue Charts Package
 
@@ -8,7 +8,7 @@ Following list of components are available in the package.
 
 ### Vue Chart
  
-The [Vue  Chart Component](https://www.syncfusion.com/vue-components/vue-charts?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm) is a  feature-rich chart component with built-in support for over 50 chart types, technical indictors, trendline, zooming, tooltip, selection, crosshair and trackball.
+The [Vue  Chart Component](https://www.syncfusion.com/vue-components/vue-charts?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm) is a  feature-rich chart component with built-in support for over 55 chart types, technical indictors, trendline, zooming, tooltip, selection, crosshair and trackball.
 
 <p align="center">
    <a href="https://help.syncfusion.com/chart-sdk/vue/chart/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-charts-npm">Getting Started</a> .

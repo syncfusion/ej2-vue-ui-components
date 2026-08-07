@@ -114,7 +114,7 @@ Add the Vue Document editor by using **ejs-documenteditorcontainer** selector in
 </style>
 ```
 
-> The web API ('https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/?utm_source=npm&utm_medium=listing&utm_campaign=vue-docx-editor-npm') is created specifically for our online demos. You should host web API on your side, refer the [web service documentation](https://help.syncfusion.com/document-processing/word/word-processor/vue/web-services/core?utm_source=npm&utm_medium=listing&utm_campaign=vue-docx-editor-npm) for more information.
+> The web API ('https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/') is created specifically for our online demos. You should host web API on your side, refer the [web service documentation](https://help.syncfusion.com/document-processing/word/word-processor/vue/web-services/core?utm_source=npm&utm_medium=listing&utm_campaign=vue-docx-editor-npm) for more information.
 > Refer the [Getting Started with Vue3](https://help.syncfusion.com/document-processing/word/word-processor/vue/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-docx-editor-npm) for using Syncfusion Vue components in Vue 3 applications.
 
 ## Supported frameworks

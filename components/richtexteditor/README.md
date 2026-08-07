@@ -5,7 +5,7 @@ The [Vue Rich Text Editor](https://www.syncfusion.com/rich-text-editor-sdk/vue-r
 <div align="center">
     <h4>
         <a href="https://ej2.syncfusion.com/react/documentation/rich-text-editor/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm">📖Getting started</a> &#x2022;
-        <a href="https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/tools">🚀Online demos</a> &#x2022; 
+        <a href="https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/tailwind3/rich-text-editor/tools">🚀Online demos</a> &#x2022; 
         <a href="https://www.syncfusion.com/rich-text-editor-sdk/vue-rich-text-editor?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm">🌐Learn more</a>
     </h4>
 </div>
@@ -138,11 +138,11 @@ Rich Text Editor component is also offered in the following frameworks.
 
 * [AI Assistant](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/ai-assistant.html) - The AI Assistant helps generate, rewrite, summarize, and refine editor content. It is designed to speed up content creation and improve editing productivity.
 
-* [@Mentions](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/mention-integration.html) - Easily mention users, tags, or items with an autocomplete suggestion list.
+* [@Mentions](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/tailwind3/rich-text-editor/mention-integration.html) - Easily mention users, tags, or items with an autocomplete suggestion list.
 
-* [Slash Menu Support](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/smart-suggestion.html) - Quickly insert content blocks using the `/` command.
+* [Slash Menu Support](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/tailwind3/rich-text-editor/smart-suggestion.html) - Quickly insert content blocks using the `/` command.
 
-* [Checklist Suport](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/bootstrap5/rich-text-editor/tools.html) - Allows users to create checklists (to-do lists) directly within the editor. Users can easily add interactive checkbox items to their content.
+* [Checklist Suport](https://ej2.syncfusion.com/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm/#/tailwind3/rich-text-editor/tools.html) - Allows users to create checklists (to-do lists) directly within the editor. Users can easily add interactive checkbox items to their content.
 
 * [Accessibility & WCAG 2.0 Compliance](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Ensures full accessibility support, making it user-friendly for people who rely on assistive technologies (AT) or keyboard navigation.
 
@@ -158,7 +158,7 @@ Rich Text Editor component is also offered in the following frameworks.
 
 * [Custom Toolbar Items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/tools/custom-tools) - Custom toolbar items allow additional actions to be added to the editor toolbar. They help tailor the editing experience to specific application needs.
 
-* [Export and Import](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/bootstrap5/rich-text-editor/export-document.html) - Supports exporting content to PDF, and Word formats.
+* [Export and Import](https://ej2.syncfusion.com/vue/demos/?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm#/tailwind3/rich-text-editor/export-document.html) - Supports exporting content to PDF, and Word formats.
 
 * [Copy and paste](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/paste-cleanup?utm_source=npm&utm_medium=listing&utm_campaign=vue-rich-text-editor-npm) - Copy and paste from Microsoft Word, Outlook, or other editors or sources while preserving formatting, styles, and structure.
 
