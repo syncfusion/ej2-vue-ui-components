@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.2.2 (2026-08-05)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#I850304` - Optimized diagram interaction performance for large-scale diagrams during copy-paste operations.
+
 ## 34.1.30 (2026-07-09)
 
 ### Diagram

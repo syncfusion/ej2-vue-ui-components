@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.2.2 (2026-08-05)
+
+### TreeView
+
+#### Bug Fixes
+
+- `I953919` - Fixed an issue in the DropDownTree component where node expand/collapse actions did not work correctly.
+
 ## 34.1.30 (2026-07-09)
 
 ### Menu

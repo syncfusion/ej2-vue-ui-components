@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 34.2.2 (2026-08-05)
+
+### SplitButton
+
+#### Bug Fixes
+
+- `#I852075` - Resolved an issue causing inconsistent `popup` opening `behavior` between mouse clicks and the Enter key.
+
 ## 28.1.33 (2024-12-12)
 
 ### DropDownButton
