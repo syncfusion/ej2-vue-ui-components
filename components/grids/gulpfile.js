@@ -3,11 +3,6 @@
 var gulp = require('gulp');
 
 /**
- * Build ts and scss files
- */
-gulp.task('build', gulp.series('scripts', 'styles'));
-
-/**
  * Compile ts files
  */
 gulp.task('scripts', function(done) {
@@ -26,7 +21,7 @@ gulp.task('scripts', function(done) {
  * Compile styles
  */
 gulp.task('styles', function() {
-    var sass = require('gulp-sass');
+    var sass = require('gulp-sass')(require('sass'));
     return gulp.src(['./**/*.scss', '!./node_modules/**/*.scss'], { base: './' })
         .pipe(sass({
             outputStyle: 'expanded',
@@ -34,3 +29,8 @@ gulp.task('styles', function() {
         }))
         .pipe(gulp.dest('.'));
 });
+
+/**
+ * Build ts and scss files
+ */
+gulp.task('build', gulp.series('scripts', 'styles'));
