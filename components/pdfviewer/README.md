@@ -1,11 +1,11 @@
 # Vue PDF Viewer Component
 
-The [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm) component enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
+The [Vue PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) component enables you to view, annotate, prepare and fill forms, and print PDF files from your web applications.
 
 <p align="center">
-    <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm">Getting started</a> . 
-    <a href="https://document.syncfusion.com/demos/pdf-viewer/vue/index.html#/tailwind3/pdfviewer/default.html/?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm#/bootstrap5/pdfviewer/default">Online demos</a> . 
-    <a href="https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm">Learn more</a>
+    <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm">Getting started</a> . 
+    <a href="https://document.syncfusion.com/demos/pdf-viewer/vue/index.html#/tailwind3/pdfviewer/default.html?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm">Online demos</a> . 
+    <a href="https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm">Learn more</a>
 </p>
 
 <p align="center">
@@ -104,54 +104,54 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 </script>
 ```
 
-> Refer the [Getting Started with Vue3](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started-application/) for using Syncfusion&reg; Vue components in Vue 3 applications.
+> Refer the [Getting Started with Vue3](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started-application) for using Syncfusion&reg; Vue components in Vue 3 applications.
 
 ## Supported frameworks
 
 PDF Viewer component is also offered in the following list of frameworks.
 
-| [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular-new.svg"  height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer/?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer/?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg"  height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer?utm_medium=listing&utm_source=github)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-mvc-pdf-viewer?utm_medium=listing&utm_source=github)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-mvc-pdf-viewer?utm_medium=listing&utm_source=github)&nbsp;&nbsp; | 
+| [<img src="https://ej2.syncfusion.com/github/images/js.svg" height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[JavaScript](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/angular-new.svg"  height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer/?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Angular](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer/?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/react.svg"  height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netcore.svg" height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;Core](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-core-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)&nbsp;&nbsp; | [<img src="https://ej2.syncfusion.com/github/images/netmvc.svg" height="50" />](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-mvc-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)<br/>&nbsp;&nbsp;[ASP.NET&nbsp;MVC](https://www.syncfusion.com/pdf-viewer-sdk/asp-net-mvc-pdf-viewer?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)&nbsp;&nbsp; | 
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 
 ## Key features
 
-* [View PDF Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started/) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
-* [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/text-markup-annotation/) - Annotate with text markup, shapes, stamps, ink, and sticky notes.
-* [Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/form-designer/create-fillable-pdf-forms/create-programmatically/) - Form filling and form designing can be done.
-* [Signature](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/handwritten-signature/) - Hand-written and digital signatures are allowed.
-* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/toolbar/) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
-* [Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/navigation/) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
-* [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/magnification/) - Fit to page, fit to width, and automatic (fits to the visible area).
-* [Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/text-search/) - Search a text easily across the PDF document.	
-* [Core Interactions](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interaction-mode/) - Allows scrolling, zooming, panning, selection, and page navigation.
-* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/print/) - Print the entire document or a specific page directly from the browser.
-* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/globalization/) - Provides inherent support to localize the UI.
+* [View PDF Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Open and display both the normal and the protected PDF files with AES and RC4 encryption.
+* [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/text-markup-annotation?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Annotate with text markup, shapes, stamps, ink, and sticky notes.
+* [Form Fields](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/forms/form-filling?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Form filling and form designing can be done.
+* Signature - Hand-written and digital signatures are allowed.
+* [Toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/toolbar?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Built-in-toolbar and custom toolbars to perform user interaction of PDF Viewer functionalities.
+* [Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/navigation?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Easy navigation with the help of bookmarks, thumbnails, hyperlinks, and table of contents.
+* [Magnification](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/magnification?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Fit to page, fit to width, and automatic (fits to the visible area).
+* [Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/text-search/overview?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Search a text easily across the PDF document.	
+* [Core Interactions](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interaction-mode?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Allows scrolling, zooming, panning, selection, and page navigation.
+* [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/print/overview?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Print the entire document or a specific page directly from the browser.
+* [Globalization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/localization/default-language?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Provides inherent support to localize the UI.
 
 ## Resources
 
-* [Theme Studio](https://ej2.syncfusion.com/themestudio/)
-* [What's New](https://www.syncfusion.com/products/whatsnew/pdf-viewer-sdk?utm_medium=listing&utm_source=github)
-* [Road Map](https://www.syncfusion.com/products/roadmap/pdf-viewer-sdk)
-* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all)
+* [Theme Studio](https://ej2.syncfusion.com/themestudio/?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
+* [What's New](https://www.syncfusion.com/products/whatsnew/pdf-viewer-sdk?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
+* [Road Map](https://www.syncfusion.com/products/roadmap/pdf-viewer-sdk?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
+* [E-Books](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=vue&type=all?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
 
 ## Support
 
 Product support is available through the following mediums.
 
-* [Support ticket](https://support.syncfusion.com/support/tickets/create) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
-* [Community forum](https://www.syncfusion.com/forums/pdf-viewer-sdk?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm)
-* [GitHub issues](https://github.com/syncfusion/ej2-Vue-ui-components/issues/new)
-* [Request feature or report bug](https://www.syncfusion.com/feedback/pdf-viewer-sdk?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm)
+* [Support ticket](https://support.syncfusion.com/support/tickets/create?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) - Guaranteed Response in 24 hours | Unlimited tickets | Holiday support
+* [Community forum](https://www.syncfusion.com/forums/pdf-viewer-sdk?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
+* [GitHub issues](https://github.com/syncfusion/ej2-Vue-ui-components/issues/new?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
+* [Request feature or report bug](https://www.syncfusion.com/feedback/pdf-viewer-sdk?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm)
 * Live chat
 
 ## Changelog
 
-Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/pdfviewer/CHANGELOG.md?utm_source=npm&utm_medium=listing&utm_campaign=Vue-pdf-viewer-npm). Get minor improvements and bug fixes every week to stay up to date with frequent updates.
+Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/components/pdfviewer/CHANGELOG.md?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm). Get minor improvements and bug fixes every week to stay up to date with frequent updates.
 
 ## License and copyright
 
-> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 140+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
+> This is a commercial product and requires a paid license for possession or use. Syncfusion<sup>®</sup> licensed software, including this component, is subject to the terms and conditions of Syncfusion<sup>®</sup> [EULA](https://www.syncfusion.com/eula/es/?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm). To acquire a license for 140+ [Vue UI components](https://www.syncfusion.com/vue-components?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/downloads/pdf-viewer-sdk?tag=es-ft-vue-pdf-viewer-banner).
 
-> A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
+> A free community [license](https://www.syncfusion.com/products/communitylicense?utm_source=npm&utm_medium=listing&utm_campaign=vue-pdf-viewer-npm) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 
 &copy; Copyright 2025 Syncfusion<sup>®</sup> Inc. All Rights Reserved. The Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> license and copyright applies to this distribution.
