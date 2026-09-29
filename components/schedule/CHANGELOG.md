@@ -2,7 +2,41 @@
 
 ## [Unreleased]
 
-## 34.2.9 (2026-09-22)
+## 35.1.37 (2026-09-29)
+
+### Schedule
+
+#### Features
+
+- `#FB58931` - Enhanced the Scheduler component to prevent unnecessary API requests during dynamic property changes, improving performance and reducing server load.
+
+- Provided support for the event buffer feature to display configured `bufferBefore` and `bufferAfter` time reservations around appointments. The feature is supported on `Day`, `Week`, `WorkWeek`, `TimelineDay`, `TimelineWeek`, and `TimelineWorkWeek` views when `enableBuffer` is enabled with `TimeScale`.
+
+## 34.2.6 (2026-09-01)
+
+### Schedule
+
+#### Bug fixes
+
+- `#I866290` - Fixed an issue where script error occurred when destroying the Schedule component and invoking a retained touch callback associated with the adaptive scroll container.
+
+## 34.2.4 (2026-08-18)
+
+### Schedule
+
+#### Bug fixes
+
+- Updated component name casing in telemetry to ensure consistent event tracking and reporting.
+
+## 34.2.3 (2026-08-11)
+
+### Schedule
+
+#### Bug fixes
+
+- `#F75047` - Fixed an issue where appointment resize throws a script error when the event target is the document.
+
+## 34.1.29 (2026-07-06)
 
 ### Schedule
 

@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { DocumentEditor, DocumentEditorModel } from '@syncfusion/ej2-documenteditor';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'acceptTab', 'autoResizeOnVisibilityChange', 'currentUser', 'defaultPasteOption', 'documentEditorSettings', 'documentName', 'documentSettings', 'enableAutoFocus', 'enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableCollaborativeEditing', 'enableColumnsDialog', 'enableComment', 'enableContextMenu', 'enableCursorOnReadOnly', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableFootnoteAndEndnoteDialog', 'enableFormField', 'enableHyperlinkDialog', 'enableImageResizer', 'enableLayout', 'enableListDialog', 'enableLocalPaste', 'enableLockAndEdit', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableSpellCheck', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableTrackChanges', 'enableWordExport', 'headers', 'height', 'isReadOnly', 'layoutType', 'locale', 'pageGap', 'pageOutline', 'serverActionSettings', 'serviceUrl', 'showComments', 'showRevisions', 'useCtrlClickToFollowHyperlink', 'userColor', 'width', 'zIndex', 'zoomFactor', 'actionComplete', 'afterFormFieldFill', 'beforeAcceptRejectChanges', 'beforeCommentAction', 'beforeFileOpen', 'beforeFormFieldFill', 'beforePaneSwitch', 'beforePaste', 'commentBegin', 'commentDelete', 'commentEnd', 'contentChange', 'contentControl', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'serviceFailure', 'trackChange', 'unsupportedBorderStyleClick', 'viewChange', 'zoomFactorChange', 'beforeXmlHttpRequestSend', 'documentLoadFailed'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'acceptTab', 'autoResizeOnVisibilityChange', 'currentUser', 'defaultPasteOption', 'documentEditorSettings', 'documentName', 'documentSettings', 'enableAutoFocus', 'enableBookmarkDialog', 'enableBordersAndShadingDialog', 'enableCollaborativeEditing', 'enableColumnsDialog', 'enableComment', 'enableContextMenu', 'enableCursorOnReadOnly', 'enableEditor', 'enableEditorHistory', 'enableFontDialog', 'enableFootnoteAndEndnoteDialog', 'enableFormField', 'enableHyperlinkDialog', 'enableImageResizer', 'enableLayout', 'enableListDialog', 'enableLocalPaste', 'enableLockAndEdit', 'enableOptionsPane', 'enablePageSetupDialog', 'enableParagraphDialog', 'enablePersistence', 'enablePrint', 'enableRtl', 'enableSearch', 'enableSelection', 'enableSfdtExport', 'enableSpellCheck', 'enableStyleDialog', 'enableTableDialog', 'enableTableOfContentsDialog', 'enableTableOptionsDialog', 'enableTablePropertiesDialog', 'enableTextExport', 'enableTrackChanges', 'enableWebMcp', 'enableWordExport', 'headers', 'height', 'isReadOnly', 'layoutType', 'locale', 'pageGap', 'pageOutline', 'serverActionSettings', 'serviceUrl', 'showComments', 'showRevisions', 'useCtrlClickToFollowHyperlink', 'userColor', 'width', 'zIndex', 'zoomFactor', 'actionComplete', 'afterFormFieldFill', 'beforeAcceptRejectChanges', 'beforeCommentAction', 'beforeFileOpen', 'beforeFormFieldFill', 'beforePaneSwitch', 'beforePaste', 'beforeWebMcpToolExecute', 'commentBegin', 'commentDelete', 'commentEnd', 'contentChange', 'contentControl', 'created', 'customContextMenuBeforeOpen', 'customContextMenuSelect', 'destroyed', 'documentChange', 'keyDown', 'requestNavigate', 'searchResultsChange', 'selectionChange', 'serviceFailure', 'trackChange', 'unsupportedBorderStyleClick', 'viewChange', 'zoomFactorChange', 'beforeXmlHttpRequestSend', 'documentLoadFailed'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -113,9 +113,6 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         focusIn(): void {
             return this.ej2Instances.focusIn();
         },
-        getAppendTo(isAngular: boolean): Object {
-            return this.ej2Instances.getAppendTo(isAngular);
-        },
         getBookmarks(): string[] {
             return this.ej2Instances.getBookmarks();
         },
@@ -149,17 +146,14 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         getStyles(styleType?: Object): Object[] {
             return this.ej2Instances.getStyles(styleType);
         },
+        getWebMcpTools(toolNames?: string[]): Object[] {
+            return this.ej2Instances.getWebMcpTools(toolNames);
+        },
         importContentControlData(contentControlInfo: Object[]): Object[] {
             return this.ej2Instances.importContentControlData(contentControlInfo);
         },
         importFormData(formData: Object[]): void {
             return this.ej2Instances.importFormData(formData);
-        },
-        moveAlertToCdkOverlay(e: any): void {
-            return this.ej2Instances.moveAlertToCdkOverlay(e);
-        },
-        movePopupToCdkOverlay(dropDownButtonEl: Object, popupEl: Object): void {
-            return this.ej2Instances.movePopupToCdkOverlay(dropDownButtonEl, popupEl);
         },
         open(inputData: string): void {
             return this.ej2Instances.open(inputData);
@@ -172,6 +166,9 @@ export let DocumentEditorComponent: DefineVueComponent<DocumentEditorModel> =  v
         },
         print(printWindow?: Object): void {
             return this.ej2Instances.print(printWindow);
+        },
+        registerWebMcpTools(prefix?: string, tools?: string[] | Object[], exposedTo?: string[]): void {
+            return this.ej2Instances.registerWebMcpTools(prefix, tools, exposedTo);
         },
         resetContentControlData(contentControInfo: Object[]): void {
             return this.ej2Instances.resetContentControlData(contentControInfo);
@@ -259,7 +256,6 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     exportFormData(): Object[];
     fitPage(pageFitType?: Object): void;
     focusIn(): void;
-    getAppendTo(isAngular: boolean): Object;
     getBookmarks(): string[];
     getComments(): Object[];
     getDefaultCharacterFormat(): Object;
@@ -271,14 +267,14 @@ export type DocumentEditorComponent = typeof ComponentBase & {
     getFormFieldNames(): string[];
     getStyleNames(styleType?: Object): string[];
     getStyles(styleType?: Object): Object[];
+    getWebMcpTools(toolNames?: string[]): Object[];
     importContentControlData(contentControlInfo: Object[]): Object[];
     importFormData(formData: Object[]): void;
-    moveAlertToCdkOverlay(e: any): void;
-    movePopupToCdkOverlay(dropDownButtonEl: Object, popupEl: Object): void;
     open(inputData: string): void;
     openAsync(inputData: string): Object;
     openBlank(): void;
     print(printWindow?: Object): void;
+    registerWebMcpTools(prefix?: string, tools?: string[] | Object[], exposedTo?: string[]): void;
     resetContentControlData(contentControInfo: Object[]): void;
     resetFormFields(name?: string): void;
     resize(width?: number, height?: number): void;

@@ -2,26 +2,6 @@
 
 ## [Unreleased]
 
-## 34.2.9 (2026-09-22)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `I852485` - Issue with "Data validation is not preserved on discontinuous ranges when opening the file" has been resolved.
-
-## 34.1.30 (2026-07-09)
-
-### Spreadsheet
-
-#### Bug Fixes
-
-- `I848629` - Issue with "data validation in cells outside the used range was not retained when reopening the spreadsheet" has been resolved.
-
-#### Bug fixes
-
-- `#I847896` - Issue with "multiple images added to a worksheet were not displayed after saving and reopening the spreadsheet file" has been resolved.
-
 ## 32.1.20 (2025-12-23)
 
 ### Spreadsheet
