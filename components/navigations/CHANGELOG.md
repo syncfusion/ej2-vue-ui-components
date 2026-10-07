@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## 35.1.39 (2026-10-07)
+
+### Tab
+
+#### Bug Fixes
+
+- `#I874931` - Resolved the issue where dynamic Tab loading retained Angular template views and accumulated component instances during tab navigation, leading to increased memory usage.
+
+### Accordion
+
+#### Bug Fixes
+
+- `#I871696` - Resolved the issue where Accordion `EnablePersistence` failed to restore the expanded/collapsed state after a page refresh.
+
 ## 35.1.37 (2026-09-29)
 
 ### Tab

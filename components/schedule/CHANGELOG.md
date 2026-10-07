@@ -12,6 +12,8 @@
 
 - Provided support for the event buffer feature to display configured `bufferBefore` and `bufferAfter` time reservations around appointments. The feature is supported on `Day`, `Week`, `WorkWeek`, `TimelineDay`, `TimelineWeek`, and `TimelineWorkWeek` views when `enableBuffer` is enabled with `TimeScale`.
 
+- Provided support for the current time indicator customization feature through the `currentTimeIndicatorSettings` property, offering per-aspect control over label visibility (`showTime`), line span (`showPreviousDates`), and stacking (`onTop`). The feature is supported on `Day`, `Week`, `WorkWeek`, `TimelineDay`, `TimelineWeek`, and `TimelineWorkWeek` views when `TimeScale` is enabled, and `showTimeIndicator` is set to `true`.
+
 ## 34.2.6 (2026-09-01)
 
 ### Schedule

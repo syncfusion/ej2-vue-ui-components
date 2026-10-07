@@ -1,0 +1,1 @@
+export { PdfComparerComponent, PdfComparerPlugin } from './pdfcomparer.component';

@@ -15,7 +15,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
 
 /**
  * Represents the Essential JS 2 VueJS BlockEditor Component
- * ```vue
+ * ```ts
  * <ejs-blockeditor></ejs-blockeditor>
  * ```
  */

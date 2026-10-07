@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+## 35.1.39 (2026-10-07)
+
+### DropdownList
+
+#### Bug Fixes
+
+- `#I874489` - Resolved the issue where an empty label was added when no placeholder was provided.
+
+### MultiSelect
+
+#### Bug Fixes
+
+- `#I874490` - Resolved the issue where aria active descendant was not updated when the data source was dynamically updated.
+
+### ListBox
+
+#### Bug Fixes
+
+- `#I873166` - Resolved the issue where the Select All option was displayed twice and a console error was thrown when using the set Properties method.
+
 ## 28.2.9 (2025-03-04)
 
 ### ComboBox

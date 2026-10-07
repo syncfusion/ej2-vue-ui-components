@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 35.1.39 (2026-10-07)
+
+### Diagram
+
+#### Bug Fixes
+
+- `#875480` - Fixed the invalid array length exception and diagram freeze during loading caused by a circular parent chain loop in line routing.
+
 ## 32.1.19 (2025-12-16)
 
 ### Diagram
