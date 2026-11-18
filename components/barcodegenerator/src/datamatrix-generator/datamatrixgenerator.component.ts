@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { DataMatrixGenerator, DataMatrixGeneratorModel } from '@syncfusion/ej2-barcode-generator';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'displayText', 'enablePersistence', 'enableRtl', 'encoding', 'foreColor', 'height', 'locale', 'margin', 'mode', 'size', 'value', 'width', 'xDimension', 'invalid'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'displayText', 'enableGS1', 'enablePersistence', 'enableRtl', 'enableWebMcp', 'encoding', 'foreColor', 'height', 'locale', 'margin', 'mode', 'size', 'value', 'webMcpSettings', 'width', 'xDimension', 'beforeWebMcpToolExecute', 'invalid'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -31,7 +31,7 @@ export let DataMatrixGeneratorComponent: DefineVueComponent<DataMatrixGeneratorM
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
-            hasInjectedModules: false as boolean,
+            hasInjectedModules: true as boolean,
             tagMapper: {} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,
@@ -101,6 +101,12 @@ export let DataMatrixGeneratorComponent: DefineVueComponent<DataMatrixGeneratorM
         exportImage(fileName: string, exportType: Object): void {
             return this.ej2Instances.exportImage(fileName, exportType);
         },
+        getWebMcpTools(toolNames?: string[]): Object[] {
+            return this.ej2Instances.getWebMcpTools(toolNames);
+        },
+        registerWebMcpTools(prefix?: string, tools?: string[] | Object[], exposedTo?: string[]): void {
+            return this.ej2Instances.registerWebMcpTools(prefix, tools, exposedTo);
+        },
     }
 });
 
@@ -122,7 +128,9 @@ export type DataMatrixGeneratorComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     destroy(): void;
     exportAsBase64Image(barcodeExportType: Object): Object;
-    exportImage(fileName: string, exportType: Object): void
+    exportImage(fileName: string, exportType: Object): void;
+    getWebMcpTools(toolNames?: string[]): Object[];
+    registerWebMcpTools(prefix?: string, tools?: string[] | Object[], exposedTo?: string[]): void
 };
 
 export const DataMatrixGeneratorPlugin = {

@@ -2,6 +2,30 @@
 
 ## [Unreleased]
 
+## 35.1.46 (2026-11-11)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I881010` - Issue with "selection misalignment due to a thick top border when using merged cells with lesser row height" has been resolved.
+
+## 35.1.41 (2026-10-20)
+
+### Spreadsheet
+
+#### Bug fixes
+
+- `#I876660` - Issue with "previously hidden file menu items become visible after adding a cell comment and opening the comments review pane" has been resolved.
+
+## 35.1.40 (2026-10-13)
+
+### Spreadsheet
+
+#### Features
+
+- Introduced client-side import and export support in Spreadsheet, enabling to open and save `.xlsx` files directly on the client side without requiring server-side `openUrl` and `saveUrl` endpoints.
+
 ## 32.1.20 (2025-12-23)
 
 ### Spreadsheet

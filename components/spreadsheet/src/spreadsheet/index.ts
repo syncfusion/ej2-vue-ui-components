@@ -6,6 +6,7 @@ export { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.direc
 export { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive';
 export { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './ranges.directive';
 export { ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin } from './conditionalformats.directive';
+export { FormControlsDirective, FormControlDirective, FormControlsPlugin, FormControlPlugin } from './formcontrols.directive';
 export { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sheets.directive';
 export { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive';
 export { SpreadsheetComponent, SpreadsheetPlugin } from './spreadsheet.component';

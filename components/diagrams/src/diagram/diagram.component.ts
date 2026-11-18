@@ -188,6 +188,9 @@ export let DiagramComponent: DefineVueComponent<DiagramModel> =  vueDefineCompon
         cloneLayer(layerName: string): void {
             return this.ej2Instances.cloneLayer(layerName);
         },
+        convertUnit(value: number, from: Object, to: Object): number {
+            return this.ej2Instances.convertUnit(value, from, to);
+        },
         copy(): Object {
             return this.ej2Instances.copy();
         },
@@ -497,6 +500,7 @@ export type DiagramComponent = typeof ComponentBase & {
     clearHistory(): void;
     clearSelection(): void;
     cloneLayer(layerName: string): void;
+    convertUnit(value: number, from: Object, to: Object): number;
     copy(): Object;
     cut(): void;
     destroy(): void;

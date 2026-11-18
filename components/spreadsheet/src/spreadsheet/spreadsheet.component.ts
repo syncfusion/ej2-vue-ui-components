@@ -10,11 +10,12 @@ import { RowsDirective, RowDirective, RowsPlugin, RowPlugin } from './rows.direc
 import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from './columns.directive'
 import { RangesDirective, RangeDirective, RangesPlugin, RangePlugin } from './ranges.directive'
 import { ConditionalFormatsDirective, ConditionalFormatDirective, ConditionalFormatsPlugin, ConditionalFormatPlugin } from './conditionalformats.directive'
+import { FormControlsDirective, FormControlDirective, FormControlsPlugin, FormControlPlugin } from './formcontrols.directive'
 import { SheetsDirective, SheetDirective, SheetsPlugin, SheetPlugin } from './sheets.directive'
 import { DefinedNamesDirective, DefinedNameDirective, DefinedNamesPlugin, DefinedNamePlugin } from './definednames.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'aiAssistSettings', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowPrint', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'author', 'autoFillSettings', 'calculationMode', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableAIAssist', 'enableClipboard', 'enableCollaborativeEditing', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enableNotes', 'enablePersistence', 'enableRtl', 'enableWebMcp', 'height', 'isProtected', 'listSeparator', 'locale', 'openSettings', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showCommentsPane', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'beforeWebMcpToolExecute', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'promptRequest', 'promptResponse', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'activeSheetIndex', 'aiAssistSettings', 'allowAutoFill', 'allowCellFormatting', 'allowChart', 'allowConditionalFormat', 'allowDataValidation', 'allowDelete', 'allowEditing', 'allowFiltering', 'allowFindAndReplace', 'allowFormControl', 'allowFreezePane', 'allowHyperlink', 'allowImage', 'allowInsert', 'allowMerge', 'allowNumberFormatting', 'allowOpen', 'allowPrint', 'allowResizing', 'allowSave', 'allowScrolling', 'allowSorting', 'allowUndoRedo', 'allowWrap', 'author', 'autoFillSettings', 'calculationMode', 'cellStyle', 'cssClass', 'currencyCode', 'definedNames', 'enableAIAssist', 'enableClipboard', 'enableCollaborativeEditing', 'enableContextMenu', 'enableKeyboardNavigation', 'enableKeyboardShortcut', 'enableNotes', 'enablePersistence', 'enableRtl', 'enableWebMcp', 'height', 'isProtected', 'listSeparator', 'locale', 'openSettings', 'openUrl', 'password', 'saveUrl', 'scrollSettings', 'selectionSettings', 'sheets', 'showAggregate', 'showCommentsPane', 'showFormulaBar', 'showRibbon', 'showSheetTabs', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'afterHyperlinkClick', 'afterHyperlinkCreate', 'beforeCellFormat', 'beforeCellRender', 'beforeCellSave', 'beforeCellUpdate', 'beforeConditionalFormat', 'beforeDataBound', 'beforeHyperlinkClick', 'beforeHyperlinkCreate', 'beforeOpen', 'beforeSave', 'beforeSelect', 'beforeSort', 'beforeWebMcpToolExecute', 'cellEdit', 'cellEdited', 'cellEditing', 'cellSave', 'contextMenuBeforeClose', 'contextMenuBeforeOpen', 'contextMenuItemSelect', 'created', 'dataBound', 'dataSourceChanged', 'dialogBeforeOpen', 'fileMenuBeforeClose', 'fileMenuBeforeOpen', 'fileMenuItemSelect', 'openComplete', 'openFailure', 'promptRequest', 'promptResponse', 'queryCellInfo', 'saveComplete', 'select', 'sortComplete'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -42,8 +43,8 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: true as boolean,
-            tagMapper: {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image","e-charts":"e-chart","e-richtexts":"e-richtext"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat"}},"e-definednames":"e-definedname"} as { [key: string]: Object },
-            tagNameMapper: {"e-images":"e-image","e-charts":"e-chart","e-richtexts":"e-richText","e-conditionalformats":"e-conditionalFormats","e-definednames":"e-definedNames"} as Object,
+            tagMapper: {"e-sheets":{"e-sheet":{"e-rows":{"e-row":{"e-cells":{"e-cell":{"e-images":"e-image","e-charts":"e-chart","e-richtexts":"e-richtext"}}}},"e-columns":"e-column","e-ranges":"e-range","e-conditionalformats":"e-conditionalformat","e-formcontrols":"e-formcontrol"}},"e-definednames":"e-definedname"} as { [key: string]: Object },
+            tagNameMapper: {"e-images":"e-image","e-charts":"e-chart","e-richtexts":"e-richText","e-conditionalformats":"e-conditionalFormats","e-formcontrols":"e-formControls","e-definednames":"e-definedNames"} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -108,8 +109,8 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         addContextMenuItems(items: Object[], text: string, insertAfter: boolean, isUniqueId?: boolean): void {
             return this.ej2Instances.addContextMenuItems(items, text, insertAfter, isUniqueId);
         },
-        addCustomFunction(functionHandler: string | Object, functionName?: string, formulaDescription?: string, category?: string): void {
-            return this.ej2Instances.addCustomFunction(functionHandler, functionName, formulaDescription, category);
+        addCustomFunction(functionHandler: string | Object, functionName?: string, formulaDescription?: string, category?: string, syntax?: string): void {
+            return this.ej2Instances.addCustomFunction(functionHandler, functionName, formulaDescription, category, syntax);
         },
         addDataValidation(rules: Object, range?: string): void {
             return this.ej2Instances.addDataValidation(rules, range);
@@ -260,6 +261,9 @@ export let SpreadsheetComponent: DefineVueComponent<SpreadsheetModel> =  vueDefi
         },
         insertColumn(startColumn?: number | Object[], endColumn?: number, sheet?: number | string): void {
             return this.ej2Instances.insertColumn(startColumn, endColumn, sheet);
+        },
+        insertFormControl(formControl: Object[], sheet?: string | number): void {
+            return this.ej2Instances.insertFormControl(formControl, sheet);
         },
         insertImage(images: Object[], range?: string): void {
             return this.ej2Instances.insertImage(images, range);
@@ -423,7 +427,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     Unfreeze(sheet?: number | string): void;
     addContextMenuItems(items: Object[], text: string, insertAfter: boolean, isUniqueId?: boolean): void;
-    addCustomFunction(functionHandler: string | Object, functionName?: string, formulaDescription?: string, category?: string): void;
+    addCustomFunction(functionHandler: string | Object, functionName?: string, formulaDescription?: string, category?: string, syntax?: string): void;
     addDataValidation(rules: Object, range?: string): void;
     addDefinedName(definedName: Object): boolean;
     addFileMenuItems(items: Object[], text: string, insertAfter: boolean, isUniqueId?: boolean): void;
@@ -474,6 +478,7 @@ export type SpreadsheetComponent = typeof ComponentBase & {
     hideToolbarItems(tab: string, indexes: number[], hide: boolean): void;
     insertChart(chart?: Object[]): void;
     insertColumn(startColumn?: number | Object[], endColumn?: number, sheet?: number | string): void;
+    insertFormControl(formControl: Object[], sheet?: string | number): void;
     insertImage(images: Object[], range?: string): void;
     insertRow(startRow?: number | Object[], endRow?: number, sheet?: number | string): void;
     insertSheet(startSheet?: number | Object[], endSheet?: number): void;
@@ -545,6 +550,8 @@ export const SpreadsheetPlugin = {
         Vue.component(RangesPlugin.name, RangesDirective);
         Vue.component(ConditionalFormatPlugin.name, ConditionalFormatDirective);
         Vue.component(ConditionalFormatsPlugin.name, ConditionalFormatsDirective);
+        Vue.component(FormControlPlugin.name, FormControlDirective);
+        Vue.component(FormControlsPlugin.name, FormControlsDirective);
         Vue.component(DefinedNamePlugin.name, DefinedNameDirective);
         Vue.component(DefinedNamesPlugin.name, DefinedNamesDirective);
 

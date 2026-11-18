@@ -1,0 +1,1 @@
+export { PDF417GeneratorComponent, PDF417GeneratorPlugin } from './pdf417generator.component';

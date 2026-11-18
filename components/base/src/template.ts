@@ -30,40 +30,49 @@ function collectHooks(vnode: any, out: any[]): void {
     if (!vnode) {
         return;
     }
-    const ci: any = vnode.component;
-    if (ci && ci.type && ci.proxy && !ci.isUnmounted) {
-        const mergedA: any[] | undefined = Array.isArray(ci['a']) ? ci['a'] : undefined;
-        const mergedDa: any[] | undefined = Array.isArray(ci['da']) ? ci['da'] : undefined;
-        // Fallback for Vue versions where a/da are unavailable.
-        const fallbackOpts: any = ci.proxy.$options || {};
-        const activatedHooks: Function[] = mergedA ? mergedA.slice()
-            : (Array.isArray(fallbackOpts.activated) ? fallbackOpts.activated : (fallbackOpts.activated ? [fallbackOpts.activated] : []));
-        const deactivatedHooks: Function[] = mergedDa ? mergedDa.slice()
-            : (Array.isArray(fallbackOpts.deactivated) ? fallbackOpts.deactivated
-                : (fallbackOpts.deactivated ? [fallbackOpts.deactivated] : []));
-        if (activatedHooks.length || deactivatedHooks.length) {
-            out.push({
-                activated: activatedHooks.length
-                    ? (): void => {
-                        for (let i: number = 0; i < activatedHooks.length; i++) {
-                            activatedHooks[parseInt(i.toString(), 10)].call(ci.proxy);
-                        }
-                    }
-                    : null,
-                deactivated: deactivatedHooks.length
-                    ? (): void => {
-                        for (let i: number = 0; i < deactivatedHooks.length; i++) {
-                            deactivatedHooks[parseInt(i.toString(), 10)].call(ci.proxy);
-                        }
-                    }
-                    : null
-            });
+    try {
+        const ci: any = vnode.component;
+        if (ci && ci.type && !ci.isUnmounted) {
+            if (ci.proxy) {
+                const mergedA: any[] | undefined = Array.isArray(ci['a']) ? ci['a'] : undefined;
+                const mergedDa: any[] | undefined = Array.isArray(ci['da']) ? ci['da'] : undefined;
+                // Fallback for Vue versions where a/da are unavailable.
+                const fallbackOpts: any = ci.proxy.$options || {};
+                const activatedHooks: Function[] = mergedA ? mergedA.slice()
+                    : (Array.isArray(fallbackOpts.activated) ? fallbackOpts.activated
+                        : (fallbackOpts.activated ? [fallbackOpts.activated] : []));
+                const deactivatedHooks: Function[] = mergedDa ? mergedDa.slice()
+                    : (Array.isArray(fallbackOpts.deactivated) ? fallbackOpts.deactivated
+                        : (fallbackOpts.deactivated ? [fallbackOpts.deactivated] : []));
+                if (activatedHooks.length || deactivatedHooks.length) {
+                    out.push({
+                        activated: activatedHooks.length
+                            ? (): void => {
+                                for (let i: number = 0; i < activatedHooks.length; i++) {
+                                    activatedHooks[parseInt(i.toString(), 10)].call(ci.proxy);
+                                }
+                            }
+                            : null,
+                        deactivated: deactivatedHooks.length
+                            ? (): void => {
+                                for (let i: number = 0; i < deactivatedHooks.length; i++) {
+                                    deactivatedHooks[parseInt(i.toString(), 10)].call(ci.proxy);
+                                }
+                            }
+                            : null
+                    });
+                }
+            }
+            collectHooks(ci.subTree, out);
         }
-        collectHooks(ci.subTree, out);
-    }
-    if (Array.isArray(vnode.children)) {
-        for (let i: number = 0; i < vnode.children.length; i++) {
-            collectHooks(vnode.children[parseInt(i.toString(), 10)], out);
+        if (Array.isArray(vnode.children)) {
+            for (let i: number = 0; i < vnode.children.length; i++) {
+                collectHooks(vnode.children[parseInt(i.toString(), 10)], out);
+            }
+        }
+    } catch (e) {
+        if (typeof console !== 'undefined' && console.warn) {
+            console.warn('[ej2-vue-base] keep-alive hook collection failed:', e);
         }
     }
 }
@@ -99,73 +108,92 @@ function collectFromTemplates(proxy: any): any[] {
 }
 /**
  * Patch keep-alive lifecycle handling for slot templates.
+ * Uses registry-based dispatch to support multiple EJ2 instances under one keep-alive child.
  *
- * @param {any} vueInstance - Vue component instance.
+ * @param {any} vueInstance - Vue component instance (EJ2 wrapper proxy).
  * @param {any} app - Rendered vnode.
  * @returns {void}
  */
 function patchKeepAlive(vueInstance: any, app: any): void {
+    try {
+        // Walk up to find the direct child of keep-alive.
+        const start: any = vueInstance.$;
+        let cur: any = start;
+        let keepAliveChild: any = null;
 
-    // Walk up to find the direct child of keep-alive.
-    const start: any = vueInstance.$;
-    let cur: any = start;
-    let keepAliveChild: any = null;
-
-    while (cur) {
-        if (
-            cur.parent &&
-            cur.parent.type &&
-            cur.parent.type.__isKeepAlive
-        ) {
-            keepAliveChild = cur;
-            break;
-        }
-        cur = cur.parent;
-    }
-
-    if (!keepAliveChild) {
-        return;
-    }
-
-    // templateCollection is on ejs-grid vueInstance
-    const gridProxy: any = vueInstance;
-
-    if (!keepAliveChild.isDeactivated) {
-        const immediateHooks: any[] = [];
-
-        collectHooks(app, immediateHooks);
-
-        immediateHooks.forEach((h: any): void => {
-            const activated: Function | null = h.activated;
-
-            if (activated) {
-                activated();
+        while (cur) {
+            if (
+                cur.parent &&
+                cur.parent.type &&
+                cur.parent.type.__isKeepAlive
+            ) {
+                keepAliveChild = cur;
+                break;
             }
-        });
-    }
+            cur = cur.parent;
+        }
 
-    if (!keepAliveChild._sfPatched) {
-        keepAliveChild._sfPatched = true;
+        if (!keepAliveChild) {
+            return;
+        }
 
-        (keepAliveChild.a || (keepAliveChild.a = [])).push((): void => {
-            collectFromTemplates(gridProxy).forEach((h: any): void => {
+        const ej2Registry: any[] = keepAliveChild._sfWatchers || (keepAliveChild._sfWatchers = []);
+        const ej2Proxy: any = vueInstance;
+        if (ej2Registry.indexOf(ej2Proxy) === -1) {
+            ej2Registry.push(ej2Proxy);
+        }
+
+        if (!keepAliveChild.isDeactivated) {
+            const immediateHooks: any[] = [];
+            collectHooks(app, immediateHooks);
+            immediateHooks.forEach((h: any): void => {
                 const activated: Function | null = h.activated;
 
                 if (activated) {
                     activated();
                 }
             });
-        });
+        }
 
-        (keepAliveChild.da || (keepAliveChild.da = [])).push((): void => {
-            collectFromTemplates(gridProxy).forEach((h: any): void => {
-                const deactivated: Function | null = h.deactivated;
+        if (!keepAliveChild._sfPatched) {
+            keepAliveChild._sfPatched = true;
 
-                if (deactivated) {
-                    deactivated();
+            (keepAliveChild.a || (keepAliveChild.a = [])).push((): void => {
+                for (let i: number = 0; i < ej2Registry.length; i++) {
+                    // eslint-disable-next-line security/detect-object-injection
+                    const proxy: any = ej2Registry[i];
+                    if (proxy && proxy.ej2Instances && !proxy.ej2Instances.isDestroyed) {
+                        const hooks: any[] = collectFromTemplates(proxy);
+                        hooks.forEach((h: any): void => {
+                            const activated: Function | null = h.activated;
+                            if (activated) {
+                                activated();
+                            }
+                        });
+                    }
                 }
             });
-        });
+
+            (keepAliveChild.da || (keepAliveChild.da = [])).push((): void => {
+                for (let i: number = 0; i < ej2Registry.length; i++) {
+                    // eslint-disable-next-line security/detect-object-injection
+                    const proxy: any = ej2Registry[i];
+                    if (proxy && proxy.ej2Instances && !proxy.ej2Instances.isDestroyed) {
+                        const hooks: any[] = collectFromTemplates(proxy);
+                        hooks.forEach((h: any): void => {
+                            const deactivated: Function | null = h.deactivated;
+                            if (deactivated) {
+                                deactivated();
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    } catch (e) {
+        if (typeof console !== 'undefined' && console.warn) {
+            console.warn('[ej2-vue-base] keep-alive patching failed:', e);
+        }
     }
 }
 /**

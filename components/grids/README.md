@@ -13,7 +13,7 @@ The [Vue Grid](https://www.syncfusion.com/vue-ui-components/vue-grid?utm_source=
 <p align="center">
 Trusted by the world's leading companies
   <a href="https://www.syncfusion.com">
-    <img src="https://ej2.syncfusion.com/home/images/trusted_companies.png" alt="Bootstrap logo">
+    <img src="https://ej2.syncfusion.com/home/images/trusted_companies.png" alt="Trusted by top brands">
   </a>
 </p>
 
@@ -35,7 +35,7 @@ Trusted by the world's leading companies
 
 ### Create an Vue Application
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue 2 applications.To install Vue CLI use the following commands.
+You can use [`Vue 3 with create-vue/Vite`](https://github.com/vuejs/vue-cli) to setup your Vue 3 applications.To install Vue CLI use the following commands.
 
 ```bash
 npm install -g @vue/cli
@@ -195,7 +195,7 @@ Check the changelog [here](https://github.com/syncfusion/ej2-vue-ui-components/b
 
 > This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's [EULA](https://www.syncfusion.com/eula/es/). To acquire a license for 140+ [Vue UI components](https://www.syncfusion.com/vue-components), you can [purchase](https://www.syncfusion.com/sales/products) or [start a free 30-day trial](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-> A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
+> A free community [license](https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1M revenue, 5 or fewer developers, 10 or fewer employees, never greater than $3M outside capital.
 
 See [LICENSE FILE](https://github.com/syncfusion/ej2-vue-ui-components/blob/master/license?utm_source=npm&utm_medium=listing&utm_campaign=vue-grid-npm) for more info.
 

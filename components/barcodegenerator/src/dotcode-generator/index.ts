@@ -1,0 +1,1 @@
+export { DotCodeGeneratorComponent, DotCodeGeneratorPlugin } from './dotcodegenerator.component';

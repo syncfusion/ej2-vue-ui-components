@@ -5,7 +5,7 @@ import { isUndefined } from '@syncfusion/ej2-base';
 import { RichTextEditorUI, RichTextEditorUIModel } from '@syncfusion/ej2-richtexteditor-ui';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'cssClass', 'enable', 'enablePersistence', 'enableRtl', 'fontColor', 'fontFamily', 'fontSize', 'format', 'height', 'htmlAttributes', 'imageSettings', 'interactionSettings', 'keyBindings', 'linkSettings', 'listSettings', 'locale', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'slashCommandSettings', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueFormat', 'width', 'actionBegin', 'actionComplete', 'beforeDialogClose', 'beforeDialogOpen', 'beforeFileDrop', 'beforeFileUpload', 'beforePopupClose', 'beforePopupOpen', 'blur', 'change', 'created', 'destroyed', 'fileRemoving', 'fileSelected', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus', 'resize', 'resizeStop', 'resizing'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'cssClass', 'enable', 'enablePersistence', 'enableRtl', 'fontColor', 'fontFamily', 'fontSize', 'format', 'height', 'htmlAttributes', 'imageSettings', 'interactionSettings', 'keyBindings', 'linkSettings', 'listSettings', 'locale', 'placeholder', 'quickToolbarSettings', 'readonly', 'saveInterval', 'slashCommandSettings', 'tableSettings', 'toolbarSettings', 'undoRedoSteps', 'undoRedoTimer', 'value', 'valueFormat', 'width', 'actionBegin', 'actionComplete', 'beforeDialogClose', 'beforeDialogOpen', 'beforeFileDrop', 'beforeFileUpload', 'blur', 'change', 'created', 'destroyed', 'fileRemoving', 'fileSelected', 'fileUploadFailed', 'fileUploadSuccess', 'fileUploading', 'focus'];
 export const modelProps: string[] = ['value'];
 
 export const testProp: any = getProps({props: properties});
@@ -15,7 +15,7 @@ for (let props of modelProps) { emitProbs.push('update:'+props) }
 
 /**
  * `ejs-richtexteditor-ui` represents the Vue Rich Text Editor UI component.
- * ```vue
+ * ```ts
  * <ejs-richtexteditor-ui></ejs-richtexteditor-ui>
  * ```
  */
@@ -130,6 +130,9 @@ export let RichTextEditorUIComponent: DefineVueComponent<RichTextEditorUIModel> 
         custom(): void {
             this.updated();
         },
+        beginInternalFocusTransition(): void {
+            return this.ej2Instances.beginInternalFocusTransition();
+        },
         closeDialog(type: Object): void {
             return this.ej2Instances.closeDialog(type);
         },
@@ -138,6 +141,9 @@ export let RichTextEditorUIComponent: DefineVueComponent<RichTextEditorUIModel> 
         },
         destroy(): void {
             return this.ej2Instances.destroy();
+        },
+        endInternalFocusTransition(): void {
+            return this.ej2Instances.endInternalFocusTransition();
         },
         focusIn(): void {
             return this.ej2Instances.focusIn();
@@ -154,26 +160,14 @@ export let RichTextEditorUIComponent: DefineVueComponent<RichTextEditorUIModel> 
         getText(): string {
             return this.ej2Instances.getText();
         },
-        print(): void {
-            return this.ej2Instances.print();
-        },
-        requiredModules(): Object[] {
-            return this.ej2Instances.requiredModules();
-        },
         save(): void {
             return this.ej2Instances.save();
         },
         selectRange(range: Object): void {
             return this.ej2Instances.selectRange(range);
         },
-        triggerUpdatedToolbarStatus(state: Object): void {
-            return this.ej2Instances.triggerUpdatedToolbarStatus(state);
-        },
         updateToolbarItems(updates: Object[]): void {
             return this.ej2Instances.updateToolbarItems(updates);
-        },
-        uploadFile(fileType: string, blobData: Object): void {
-            return this.ej2Instances.uploadFile(fileType, blobData);
         },
     }
 });
@@ -194,21 +188,19 @@ export type RichTextEditorUIComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
+    beginInternalFocusTransition(): void;
     closeDialog(type: Object): void;
     commands(): Object;
     destroy(): void;
+    endInternalFocusTransition(): void;
     focusIn(): void;
     focusOut(): void;
     getDocument(): Object | null;
     getHtml(): string;
     getText(): string;
-    print(): void;
-    requiredModules(): Object[];
     save(): void;
     selectRange(range: Object): void;
-    triggerUpdatedToolbarStatus(state: Object): void;
-    updateToolbarItems(updates: Object[]): void;
-    uploadFile(fileType: string, blobData: Object): void
+    updateToolbarItems(updates: Object[]): void
 };
 
 export const RichTextEditorUIPlugin = {

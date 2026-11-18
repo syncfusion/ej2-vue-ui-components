@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## 35.1.39 (2026-10-07)
+
+### Common
+
+#### Bug Fixes
+
+- `#I836330` - Resolved the `KeepAlive` `lifecycle` hooks not being triggered for components rendered through functional components and transition wrappers.
+
 ## 34.1.29 (2026-07-06)
 
 ### Common

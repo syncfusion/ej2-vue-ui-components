@@ -6,7 +6,7 @@ import { ColumnsDirective, ColumnDirective, ColumnsPlugin, ColumnPlugin } from '
 import { StackedHeadersDirective, StackedHeaderDirective, StackedHeadersPlugin, StackedHeaderPlugin } from './stackedheaders.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowColumnDragAndDrop', 'allowDragAndDrop', 'allowKeyboard', 'cardHeight', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'dialogSettings', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableTooltip', 'enableVirtualization', 'externalDropId', 'height', 'keyField', 'locale', 'query', 'showEmptyColumn', 'sortSettings', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'cardClick', 'cardDoubleClick', 'cardRendered', 'columnDrag', 'columnDragStart', 'columnDrop', 'created', 'dataBinding', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'dialogClose', 'dialogOpen', 'drag', 'dragStart', 'dragStop', 'queryCellInfo'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'allowColumnDragAndDrop', 'allowDragAndDrop', 'allowKeyboard', 'cardHeight', 'cardSettings', 'columns', 'constraintType', 'cssClass', 'dataSource', 'dialogSettings', 'enableHtmlSanitizer', 'enablePersistence', 'enableRtl', 'enableTooltip', 'enableVirtualization', 'enableWebMcp', 'externalDropId', 'height', 'keyField', 'locale', 'query', 'showEmptyColumn', 'sortSettings', 'stackedHeaders', 'swimlaneSettings', 'tooltipTemplate', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'beforeWebMcpToolExecute', 'cardClick', 'cardDoubleClick', 'cardRendered', 'columnDrag', 'columnDragStart', 'columnDrop', 'created', 'dataBinding', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'dialogClose', 'dialogOpen', 'drag', 'dragStart', 'dragStop', 'queryCellInfo'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -33,7 +33,7 @@ export let KanbanComponent: DefineVueComponent<KanbanModel> =  vueDefineComponen
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: true as boolean,
-            hasInjectedModules: false as boolean,
+            hasInjectedModules: true as boolean,
             tagMapper: {"e-columns":"e-column","e-stackedHeaders":"e-stackedHeader"} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,

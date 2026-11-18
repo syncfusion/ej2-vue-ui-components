@@ -1,0 +1,1 @@
+export { PptxEditorComponent, PptxEditorPlugin } from './pptxeditor.component';

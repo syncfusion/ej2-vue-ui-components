@@ -9,7 +9,7 @@ import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPl
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'adaptiveUIMode', 'advancedFilterSettings', 'aggregates', 'allowAdvancedFiltering', 'allowExcelExport', 'allowFiltering', 'allowGrouping', 'allowKeyboard', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextWrap', 'autoFit', 'childGrid', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'cssClass', 'currencyCode', 'currentAction', 'currentViewData', 'dataSource', 'detailTemplate', 'detailTemplateHeight', 'domVirtualizationSettings', 'editSettings', 'ej2StatePersistenceVersion', 'emptyRecordMode', 'emptyRecordTemplate', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableColumnSpan', 'enableColumnVirtualization', 'enableDomVirtualization', 'enableHeaderFocus', 'enableHover', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRowSpan', 'enableRtl', 'enableStickyHeader', 'enableVirtualMaskRow', 'enableVirtualization', 'enableWebMcp', 'exportGrids', 'filterSettings', 'footerRowHeight', 'formulaSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'groupSettings', 'headerRowHeight', 'height', 'hierarchyPrintMode', 'infiniteScrollSettings', 'isRowPinned', 'isRowSelectable', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentDetails', 'printMode', 'query', 'queryString', 'resizeSettings', 'rowDropSettings', 'rowHeight', 'rowRenderingMode', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'setRowHeight', 'showColumnChooser', 'showColumnMenu', 'showHider', 'sortSettings', 'textWrapSettings', 'toolbar', 'toolbarTemplate', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'advancedFilterBegin', 'advancedFilterClose', 'advancedFilterComplete', 'advancedFilterOpen', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeAutoFill', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeCustomFilterOpen', 'beforeDataBound', 'beforeDetailTemplateDetach', 'beforeExcelExport', 'beforeOpenAdaptiveDialog', 'beforeOpenColumnChooser', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beforeWebMcpToolExecute', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellFocus', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkBoxChange', 'columnDataStateChange', 'columnDeselected', 'columnDeselecting', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuClose', 'columnMenuOpen', 'columnSelected', 'columnSelecting', 'commandClick', 'contextMenuClick', 'contextMenuClose', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'destroyed', 'detailCollapse', 'detailCollapsed', 'detailDataBound', 'detailExpand', 'detailExpanded', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'exportDetailDataBound', 'exportDetailTemplate', 'exportGroupCaption', 'headerCellInfo', 'keyPressed', 'lazyLoadGroupCollapse', 'lazyLoadGroupExpand', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordClick', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolbarClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'adaptiveUIMode', 'advancedFilterSettings', 'aggregates', 'allowAdvancedFiltering', 'allowExcelExport', 'allowFiltering', 'allowGrouping', 'allowKeyboard', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextSelection', 'allowTextWrap', 'autoFit', 'cacheLimit', 'childGrid', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'cssClass', 'currencyCode', 'currentAction', 'currentViewData', 'dataSource', 'detailTemplate', 'detailTemplateHeight', 'domVirtualizationSettings', 'editSettings', 'ej2StatePersistenceVersion', 'emptyRecordMode', 'emptyRecordTemplate', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableCache', 'enableColumnSpan', 'enableColumnVirtualization', 'enableDomVirtualization', 'enableHeaderFocus', 'enableHover', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRowSpan', 'enableRtl', 'enableStickyHeader', 'enableVirtualMaskRow', 'enableVirtualization', 'enableWebMcp', 'exportGrids', 'filterSettings', 'findSettings', 'footerRowHeight', 'formulaSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'groupSettings', 'headerRowHeight', 'height', 'hierarchyPrintMode', 'infiniteScrollSettings', 'isRowPinned', 'isRowSelectable', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentDetails', 'printMode', 'query', 'queryString', 'resizeSettings', 'rowDropSettings', 'rowHeight', 'rowRenderingMode', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'setRowHeight', 'showColumnChooser', 'showColumnMenu', 'showHider', 'sortSettings', 'textWrapSettings', 'toolbar', 'toolbarTemplate', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'advancedFilterBegin', 'advancedFilterClose', 'advancedFilterComplete', 'advancedFilterOpen', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeAutoFill', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeCustomFilterOpen', 'beforeDataBound', 'beforeDetailTemplateDetach', 'beforeExcelExport', 'beforeOpenAdaptiveDialog', 'beforeOpenColumnChooser', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beforeWebMcpToolExecute', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellFocus', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkBoxChange', 'columnDataStateChange', 'columnDeselected', 'columnDeselecting', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuClose', 'columnMenuOpen', 'columnSelected', 'columnSelecting', 'commandClick', 'contextMenuClick', 'contextMenuClose', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'destroyed', 'detailCollapse', 'detailCollapsed', 'detailDataBound', 'detailExpand', 'detailExpanded', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'exportDetailDataBound', 'exportDetailTemplate', 'exportGroupCaption', 'findChange', 'findNavigate', 'headerCellInfo', 'keyPressed', 'lazyLoadGroupCollapse', 'lazyLoadGroupExpand', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordClick', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -164,6 +164,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         changeDataSource(dataSource?: Object | Object | Object, columns?: Object[] | string[] | Object[], properties?: Object): void {
             return this.ej2Instances.changeDataSource(dataSource, columns, properties);
         },
+        clearActiveMatch(): void {
+            return this.ej2Instances.clearActiveMatch();
+        },
         clearAdvancedFilter(): void {
             return this.ej2Instances.clearAdvancedFilter();
         },
@@ -175,6 +178,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         clearFilteringAsync(fields?: string[]): Object {
             return this.ej2Instances.clearFilteringAsync(fields);
+        },
+        clearFind(): void {
+            return this.ej2Instances.clearFind();
         },
         clearGrouping(): void {
             return this.ej2Instances.clearGrouping();
@@ -257,8 +263,20 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         filterByColumnAsync(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): Object {
             return this.ej2Instances.filterByColumnAsync(fieldName, filterOperator, filterValue, predicate, matchCase, ignoreAccent, actualFilterValue, actualOperator);
         },
+        find(searchString: string): void {
+            return this.ej2Instances.find(searchString);
+        },
+        findNext(): void {
+            return this.ej2Instances.findNext();
+        },
+        findPrevious(): void {
+            return this.ej2Instances.findPrevious();
+        },
         freezeRefresh(): void {
             return this.ej2Instances.freezeRefresh();
+        },
+        getActiveMatch(): Object {
+            return this.ej2Instances.getActiveMatch();
         },
         getAdvancedFilter(): Object | null {
             return this.ej2Instances.getAdvancedFilter();
@@ -440,6 +458,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         getSummaryValues(summaryCol: Object, summaryData: Object): number {
             return this.ej2Instances.getSummaryValues(summaryCol, summaryData);
         },
+        getTotalMatches(): number {
+            return this.ej2Instances.getTotalMatches();
+        },
         getUidByColumnField(field: string): string {
             return this.ej2Instances.getUidByColumnField(field);
         },
@@ -448,6 +469,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         getWebMcpTools(toolNames?: string[]): Object[] {
             return this.ej2Instances.getWebMcpTools(toolNames);
+        },
+        goToMatch(matchNumber: number): void {
+            return this.ej2Instances.goToMatch(matchNumber);
         },
         goToPage(pageNo: number): void {
             return this.ej2Instances.goToPage(pageNo);
@@ -703,10 +727,12 @@ export type GridComponent = typeof ComponentBase & {
     batchUpdate(changes: Object): void;
     calculatePageSizeByParentHeight(containerHeight: number | string): number;
     changeDataSource(dataSource?: Object | Object | Object, columns?: Object[] | string[] | Object[], properties?: Object): void;
+    clearActiveMatch(): void;
     clearAdvancedFilter(): void;
     clearCellSelection(): void;
     clearFiltering(fields?: string[]): void;
     clearFilteringAsync(fields?: string[]): Object;
+    clearFind(): void;
     clearGrouping(): void;
     clearGroupingAsync(): Object;
     clearRowSelection(): void;
@@ -734,7 +760,11 @@ export type GridComponent = typeof ComponentBase & {
     extendRequiredModules(modules: Object[]): void;
     filterByColumn(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): void;
     filterByColumnAsync(fieldName: string, filterOperator: string, filterValue: string | number | Object | boolean | number[] | string[] | Object[] | boolean[] | null, predicate?: string, matchCase?: boolean, ignoreAccent?: boolean, actualFilterValue?: string, actualOperator?: string): Object;
+    find(searchString: string): void;
+    findNext(): void;
+    findPrevious(): void;
     freezeRefresh(): void;
+    getActiveMatch(): Object;
     getAdvancedFilter(): Object | null;
     getBatchChanges(): Object;
     getCellFormula(primaryKeyValue: number | string, field: string): string | undefined;
@@ -795,9 +825,11 @@ export type GridComponent = typeof ComponentBase & {
     getSelectedRowIndexes(): number[];
     getSelectedRows(): Object[];
     getSummaryValues(summaryCol: Object, summaryData: Object): number;
+    getTotalMatches(): number;
     getUidByColumnField(field: string): string;
     getVisibleColumns(): Object[];
     getWebMcpTools(toolNames?: string[]): Object[];
+    goToMatch(matchNumber: number): void;
     goToPage(pageNo: number): void;
     goToPageAsync(pageNo: number): Object;
     groupCollapseAll(): void;

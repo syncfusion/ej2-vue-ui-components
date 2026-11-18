@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { BarcodeGenerator, BarcodeGeneratorModel } from '@syncfusion/ej2-barcode-generator';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'displayText', 'enableCheckSum', 'enablePersistence', 'enableRtl', 'foreColor', 'height', 'locale', 'margin', 'mode', 'type', 'value', 'width', 'invalid'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'backgroundColor', 'bearerBar', 'bearerBarWidth', 'displayText', 'enableCheckSum', 'enablePersistence', 'enableRtl', 'enableWebMcp', 'foreColor', 'height', 'locale', 'margin', 'mode', 'segmentsPerRow', 'type', 'value', 'webMcpSettings', 'width', 'beforeWebMcpToolExecute', 'invalid'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -31,7 +31,7 @@ export let BarcodeGeneratorComponent: DefineVueComponent<BarcodeGeneratorModel> 
             propKeys: properties as string[],
             models: modelProps as string[],
             hasChildDirective: false as boolean,
-            hasInjectedModules: false as boolean,
+            hasInjectedModules: true as boolean,
             tagMapper: {} as { [key: string]: Object },
             tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,
@@ -101,6 +101,12 @@ export let BarcodeGeneratorComponent: DefineVueComponent<BarcodeGeneratorModel> 
         exportImage(filename: string, exportType: Object): void {
             return this.ej2Instances.exportImage(filename, exportType);
         },
+        getWebMcpTools(toolNames?: string[]): Object[] {
+            return this.ej2Instances.getWebMcpTools(toolNames);
+        },
+        registerWebMcpTools(prefix?: string, tools?: string[] | Object[], exposedTo?: string[]): void {
+            return this.ej2Instances.registerWebMcpTools(prefix, tools, exposedTo);
+        },
     }
 });
 
@@ -122,7 +128,9 @@ export type BarcodeGeneratorComponent = typeof ComponentBase & {
     }, successHandler?: Function): void;
     destroy(): void;
     exportAsBase64Image(exportType: Object): Object;
-    exportImage(filename: string, exportType: Object): void
+    exportImage(filename: string, exportType: Object): void;
+    getWebMcpTools(toolNames?: string[]): Object[];
+    registerWebMcpTools(prefix?: string, tools?: string[] | Object[], exposedTo?: string[]): void
 };
 
 export const BarcodeGeneratorPlugin = {
