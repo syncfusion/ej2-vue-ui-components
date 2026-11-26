@@ -4,7 +4,7 @@ import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 import { PivotView, PivotViewModel } from '@syncfusion/ej2-pivotview';
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'aggregateTypes', 'allowCalculatedField', 'allowConditionalFormatting', 'allowDataCompression', 'allowDeferLayoutUpdate', 'allowDrillThrough', 'allowExcelExport', 'allowGrouping', 'allowNumberFormatting', 'allowPdfExport', 'cellTemplate', 'chartSettings', 'chartTypes', 'cssClass', 'dataSourceSettings', 'displayOption', 'editSettings', 'enableFieldSearching', 'enableHtmlSanitizer', 'enablePaging', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'enableWebMcp', 'exportAllPages', 'flatSettings', 'gridSettings', 'groupingBarSettings', 'height', 'hyperlinkSettings', 'loadOnDemandInMemberEditor', 'locale', 'maxNodeLimitInMemberEditor', 'maxRowsInDrillThrough', 'pageSettings', 'pagerSettings', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showToolbar', 'showTooltip', 'showValuesButton', 'spinnerTemplate', 'toolbar', 'toolbarTemplate', 'tooltipTemplate', 'virtualScrollSettings', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'afterServiceInvoke', 'aggregateCellInfo', 'aggregateMenuOpen', 'beforeExport', 'beforeServiceInvoke', 'beforeWebMcpToolExecute', 'beginDrillThrough', 'calculatedFieldCreate', 'cellClick', 'cellSelected', 'cellSelecting', 'chartSeriesCreated', 'conditionalFormatting', 'created', 'dataBound', 'destroyed', 'drill', 'drillThrough', 'editCompleted', 'enginePopulated', 'enginePopulating', 'exportComplete', 'fetchReport', 'fieldDragStart', 'fieldDrop', 'fieldListRefreshed', 'fieldRemove', 'hyperlinkCellClick', 'load', 'loadReport', 'memberEditorOpen', 'memberFiltering', 'newReport', 'numberFormatting', 'onFieldDropped', 'onHeadersSort', 'onPdfCellRender', 'removeReport', 'renameReport', 'saveReport', 'toolbarClick', 'toolbarRender'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'aggregateTypes', 'allowCalculatedField', 'allowConditionalFormatting', 'allowDataCompression', 'allowDeferLayoutUpdate', 'allowDrillThrough', 'allowExcelExport', 'allowGrouping', 'allowHtmlExport', 'allowImageExport', 'allowNumberFormatting', 'allowPdfExport', 'cellTemplate', 'chartSettings', 'chartTypes', 'cssClass', 'dataSourceSettings', 'displayOption', 'editSettings', 'enableFieldSearching', 'enableHtmlSanitizer', 'enablePaging', 'enablePersistence', 'enableRtl', 'enableValueSorting', 'enableVirtualization', 'enableWebMcp', 'exportAllPages', 'flatSettings', 'gridSettings', 'groupingBarSettings', 'height', 'hyperlinkSettings', 'loadOnDemandInMemberEditor', 'locale', 'maxNodeLimitInMemberEditor', 'maxRowsInDrillThrough', 'pageSettings', 'pagerSettings', 'pivotValues', 'showFieldList', 'showGroupingBar', 'showToolbar', 'showTooltip', 'showValuesButton', 'spinnerTemplate', 'toolbar', 'toolbarTemplate', 'tooltipTemplate', 'virtualScrollSettings', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'afterServiceInvoke', 'aggregateCellInfo', 'aggregateMenuOpen', 'beforeExport', 'beforePrint', 'beforeServiceInvoke', 'beforeWebMcpToolExecute', 'beginDrillThrough', 'calculatedFieldCreate', 'cellClick', 'cellSelected', 'cellSelecting', 'chartSeriesCreated', 'conditionalFormatting', 'created', 'dataBound', 'destroyed', 'drill', 'drillThrough', 'editCompleted', 'enginePopulated', 'enginePopulating', 'exportComplete', 'fetchReport', 'fieldDragStart', 'fieldDrop', 'fieldListRefreshed', 'fieldRemove', 'hyperlinkCellClick', 'load', 'loadReport', 'memberEditorOpen', 'memberFiltering', 'newReport', 'numberFormatting', 'onFieldDropped', 'onHeadersSort', 'onPdfCellRender', 'printComplete', 'removeReport', 'renameReport', 'saveReport', 'toolbarClick', 'toolbarRender'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -92,7 +92,7 @@ export let PivotViewComponent: DefineVueComponent<PivotViewModel> =  vueDefineCo
         custom(): void {
             this.updated();
         },
-        chartExport(type: Object, pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object {
+        chartExport(type: Object, pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: object, isBlob?: boolean): Object {
             return this.ej2Instances.chartExport(type, pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
         },
         createCalculatedFieldDialog(): void {
@@ -113,20 +113,32 @@ export let PivotViewComponent: DefineVueComponent<PivotViewModel> =  vueDefineCo
         exportAsPivot(exportType?: Object): void {
             return this.ej2Instances.exportAsPivot(exportType);
         },
+        exportToHTML(properties?: Object, isBlob?: boolean): Object {
+            return this.ej2Instances.exportToHTML(properties, isBlob);
+        },
+        exportToImage(format: Object, properties?: Object, isBlob?: boolean): Object {
+            return this.ej2Instances.exportToImage(format, properties, isBlob);
+        },
         getWebMcpTools(): Object[] {
             return this.ej2Instances.getWebMcpTools();
         },
         loadPersistData(persistData: string): void {
             return this.ej2Instances.loadPersistData(persistData);
         },
-        pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean, exportBothTableAndChart?: boolean): Object {
+        pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: object, isBlob?: boolean, exportBothTableAndChart?: boolean): Object {
             return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob, exportBothTableAndChart);
+        },
+        print(): void {
+            return this.ej2Instances.print();
         },
         printChart(): void {
             return this.ej2Instances.printChart();
         },
         refresh(): void {
             return this.ej2Instances.refresh();
+        },
+        setFullScreen(enable: boolean): void {
+            return this.ej2Instances.setFullScreen(enable);
         },
         showConditionalFormattingDialog(): void {
             return this.ej2Instances.showConditionalFormattingDialog();
@@ -153,18 +165,22 @@ export type PivotViewComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    chartExport(type: Object, pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object;
+    chartExport(type: Object, pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: object, isBlob?: boolean): Object;
     createCalculatedFieldDialog(): void;
     csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): void;
     destroy(): void;
     encodeHtml(value: string): string;
     excelExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
     exportAsPivot(exportType?: Object): void;
+    exportToHTML(properties?: Object, isBlob?: boolean): Object;
+    exportToImage(format: Object, properties?: Object, isBlob?: boolean): Object;
     getWebMcpTools(): Object[];
     loadPersistData(persistData: string): void;
-    pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean, exportBothTableAndChart?: boolean): Object;
+    pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: object, isBlob?: boolean, exportBothTableAndChart?: boolean): Object;
+    print(): void;
     printChart(): void;
     refresh(): void;
+    setFullScreen(enable: boolean): void;
     showConditionalFormattingDialog(): void;
     showNumberFormattingDialog(): void
 };

@@ -9,7 +9,7 @@ import { AggregateColumnsDirective, AggregateColumnDirective, AggregateColumnsPl
 import { AggregatesDirective, AggregateDirective, AggregatesPlugin, AggregatePlugin } from './aggregates.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'adaptiveUIMode', 'advancedFilterSettings', 'aggregates', 'allowAdvancedFiltering', 'allowExcelExport', 'allowFiltering', 'allowGrouping', 'allowKeyboard', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextSelection', 'allowTextWrap', 'autoFit', 'cacheLimit', 'childGrid', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'cssClass', 'currencyCode', 'currentAction', 'currentViewData', 'dataSource', 'detailTemplate', 'detailTemplateHeight', 'domVirtualizationSettings', 'editSettings', 'ej2StatePersistenceVersion', 'emptyRecordMode', 'emptyRecordTemplate', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableCache', 'enableColumnSpan', 'enableColumnVirtualization', 'enableDomVirtualization', 'enableHeaderFocus', 'enableHighlightOnDataChange', 'enableHover', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRowSpan', 'enableRtl', 'enableStatusBar', 'enableStickyHeader', 'enableVirtualMaskRow', 'enableVirtualization', 'enableWebMcp', 'exportGrids', 'filterSettings', 'findSettings', 'footerRowHeight', 'formulaSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'groupSettings', 'headerRowHeight', 'height', 'hierarchyPrintMode', 'highlightSettings', 'infiniteScrollSettings', 'isRowPinned', 'isRowSelectable', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentDetails', 'printMode', 'query', 'queryString', 'resizeSettings', 'rowDropSettings', 'rowHeight', 'rowRenderingMode', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'setRowHeight', 'showColumnChooser', 'showColumnMenu', 'showHider', 'sortSettings', 'statusBarSettings', 'textWrapSettings', 'toolbar', 'toolbarTemplate', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'advancedFilterBegin', 'advancedFilterClose', 'advancedFilterComplete', 'advancedFilterOpen', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeAutoFill', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeCustomFilterOpen', 'beforeDataBound', 'beforeDetailTemplateDetach', 'beforeExcelExport', 'beforeOpenAdaptiveDialog', 'beforeOpenColumnChooser', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beforeWebMcpToolExecute', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellFocus', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkBoxChange', 'columnDataStateChange', 'columnDeselected', 'columnDeselecting', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuClose', 'columnMenuOpen', 'columnSelected', 'columnSelecting', 'commandClick', 'contextMenuClick', 'contextMenuClose', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'destroyed', 'detailCollapse', 'detailCollapsed', 'detailDataBound', 'detailExpand', 'detailExpanded', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'exportDetailDataBound', 'exportDetailTemplate', 'exportGroupCaption', 'findChange', 'findNavigate', 'headerCellInfo', 'keyPressed', 'lazyLoadGroupCollapse', 'lazyLoadGroupExpand', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordClick', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolbarClick'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'adaptiveUIMode', 'advancedFilterSettings', 'aggregates', 'allowAdvancedFiltering', 'allowExcelExport', 'allowFiltering', 'allowGrouping', 'allowKeyboard', 'allowMultiSorting', 'allowPaging', 'allowPdfExport', 'allowReordering', 'allowResizing', 'allowRowDragAndDrop', 'allowSelection', 'allowSorting', 'allowTextSelection', 'allowTextWrap', 'autoFit', 'cacheLimit', 'childGrid', 'clipMode', 'columnChooserSettings', 'columnMenuItems', 'columnQueryMode', 'columns', 'contextMenuItems', 'cssClass', 'currencyCode', 'currentAction', 'currentViewData', 'dataSource', 'detailTemplate', 'detailTemplateHeight', 'domVirtualizationSettings', 'editSettings', 'ej2StatePersistenceVersion', 'emptyRecordMode', 'emptyRecordTemplate', 'enableAdaptiveUI', 'enableAltRow', 'enableAutoFill', 'enableCache', 'enableColumnSpan', 'enableColumnVirtualization', 'enableDomVirtualization', 'enableHeaderFocus', 'enableHighlightOnDataChange', 'enableHover', 'enableHtmlSanitizer', 'enableImmutableMode', 'enableInfiniteScrolling', 'enablePersistence', 'enableRowSpan', 'enableRtl', 'enableStatusBar', 'enableStickyHeader', 'enableToolPanel', 'enableVirtualMaskRow', 'enableVirtualization', 'enableWebMcp', 'exportGrids', 'filterSettings', 'findSettings', 'footerRowHeight', 'formulaSettings', 'frozenColumns', 'frozenRows', 'gridLines', 'groupSettings', 'headerRowHeight', 'height', 'hierarchyPrintMode', 'highlightSettings', 'infiniteScrollSettings', 'isRowNonDeselectable', 'isRowPinned', 'isRowSelectable', 'loadingIndicator', 'locale', 'pageSettings', 'pagerTemplate', 'parentDetails', 'printMode', 'query', 'queryString', 'resizeSettings', 'rowDropSettings', 'rowHeight', 'rowRenderingMode', 'rowTemplate', 'searchSettings', 'selectedRowIndex', 'selectionSettings', 'setRowHeight', 'showColumnChooser', 'showColumnMenu', 'showHider', 'sortSettings', 'statusBarSettings', 'textWrapSettings', 'toolPanelSettings', 'toolbar', 'toolbarTemplate', 'webMcpSettings', 'width', 'actionBegin', 'actionComplete', 'actionFailure', 'advancedFilterBegin', 'advancedFilterClose', 'advancedFilterComplete', 'advancedFilterOpen', 'batchAdd', 'batchCancel', 'batchDelete', 'beforeAutoFill', 'beforeBatchAdd', 'beforeBatchDelete', 'beforeBatchSave', 'beforeCopy', 'beforeCustomFilterOpen', 'beforeDataBound', 'beforeDetailTemplateDetach', 'beforeExcelExport', 'beforeOpenAdaptiveDialog', 'beforeOpenColumnChooser', 'beforePaste', 'beforePdfExport', 'beforePrint', 'beforeWebMcpToolExecute', 'beginEdit', 'cellDeselected', 'cellDeselecting', 'cellEdit', 'cellFocus', 'cellSave', 'cellSaved', 'cellSelected', 'cellSelecting', 'checkBoxChange', 'columnDataStateChange', 'columnDeselected', 'columnDeselecting', 'columnDrag', 'columnDragStart', 'columnDrop', 'columnMenuClick', 'columnMenuClose', 'columnMenuOpen', 'columnSelected', 'columnSelecting', 'commandClick', 'contextMenuClick', 'contextMenuClose', 'contextMenuOpen', 'created', 'dataBound', 'dataSourceChanged', 'dataStateChange', 'destroyed', 'detailCollapse', 'detailCollapsed', 'detailDataBound', 'detailExpand', 'detailExpanded', 'excelAggregateQueryCellInfo', 'excelExportComplete', 'excelHeaderQueryCellInfo', 'excelQueryCellInfo', 'exportDetailDataBound', 'exportDetailTemplate', 'exportGroupCaption', 'findChange', 'findNavigate', 'headerCellInfo', 'keyPressed', 'lazyLoadGroupCollapse', 'lazyLoadGroupExpand', 'load', 'pdfAggregateQueryCellInfo', 'pdfExportComplete', 'pdfHeaderQueryCellInfo', 'pdfQueryCellInfo', 'printComplete', 'queryCellInfo', 'recordClick', 'recordDoubleClick', 'resizeStart', 'resizeStop', 'resizing', 'rowDataBound', 'rowDeselected', 'rowDeselecting', 'rowDrag', 'rowDragStart', 'rowDragStartHelper', 'rowDrop', 'rowSelected', 'rowSelecting', 'toolPanelClose', 'toolPanelClosed', 'toolPanelColumnDrop', 'toolPanelColumnDropped', 'toolPanelCreated', 'toolPanelOpen', 'toolPanelOpened', 'toolbarClick'];
 export const modelProps: string[] = ['dataSource'];
 
 export const testProp: any = getProps({props: properties});
@@ -188,8 +188,8 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         clearGroupingAsync(): Object {
             return this.ej2Instances.clearGroupingAsync();
         },
-        clearRowSelection(): void {
-            return this.ej2Instances.clearRowSelection();
+        clearRowSelection(includeNonDeselectableRows?: boolean): void {
+            return this.ej2Instances.clearRowSelection(includeNonDeselectableRows);
         },
         clearSelection(): void {
             return this.ej2Instances.clearSelection();
@@ -205,6 +205,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         closeEdit(): void {
             return this.ej2Instances.closeEdit();
+        },
+        closeToolPanel(): void {
+            return this.ej2Instances.closeToolPanel();
         },
         copy(withHeader?: boolean): void {
             return this.ej2Instances.copy(withHeader);
@@ -226,6 +229,12 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         deleteRowAsync(tr: Object): Object {
             return this.ej2Instances.deleteRowAsync(tr);
+        },
+        deselectRow(index: number): void {
+            return this.ej2Instances.deselectRow(index);
+        },
+        deselectRows(rowIndexes: number[]): void {
+            return this.ej2Instances.deselectRows(rowIndexes);
         },
         destroy(): void {
             return this.ej2Instances.destroy();
@@ -413,6 +422,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         getMovableRows(): Object[] {
             return this.ej2Instances.getMovableRows();
         },
+        getOpenedToolPanel(): string | null {
+            return this.ej2Instances.getOpenedToolPanel();
+        },
         getPager(): Object {
             return this.ej2Instances.getPager();
         },
@@ -515,11 +527,17 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         isFrozenGrid(): boolean {
             return this.ej2Instances.isFrozenGrid();
         },
+        isToolPanelShowing(): boolean {
+            return this.ej2Instances.isToolPanelShowing();
+        },
         openAdvancedFilterDialog(): void {
             return this.ej2Instances.openAdvancedFilterDialog();
         },
         openColumnChooser(x?: number, y?: number): void {
             return this.ej2Instances.openColumnChooser(x, y);
+        },
+        openToolPanel(id: string): void {
+            return this.ej2Instances.openToolPanel(id);
         },
         pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object {
             return this.ej2Instances.pdfExport(pdfExportProperties, isMultipleExport, pdfDoc, isBlob);
@@ -547,6 +565,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         refreshHeader(): void {
             return this.ej2Instances.refreshHeader();
+        },
+        refreshToolPanel(id?: string): void {
+            return this.ej2Instances.refreshToolPanel(id);
         },
         removeFormula(name: string): void {
             return this.ej2Instances.removeFormula(name);
@@ -650,6 +671,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         setRowDataAsync(key: string | number, rowData?: Object, delay?: number): Object {
             return this.ej2Instances.setRowDataAsync(key, rowData, delay);
         },
+        setSideBarPosition(position: Object): void {
+            return this.ej2Instances.setSideBarPosition(position);
+        },
         showAdaptiveFilterDialog(): void {
             return this.ej2Instances.showAdaptiveFilterDialog();
         },
@@ -676,6 +700,9 @@ export let GridComponent: DefineVueComponent<GridModel> =  vueDefineComponent({
         },
         suspendFormulaRefresh(): void {
             return this.ej2Instances.suspendFormulaRefresh();
+        },
+        toggleSideBar(show?: boolean): void {
+            return this.ej2Instances.toggleSideBar(show);
         },
         undoEdit(): void {
             return this.ej2Instances.undoEdit();
@@ -741,12 +768,13 @@ export type GridComponent = typeof ComponentBase & {
     clearFind(): void;
     clearGrouping(): void;
     clearGroupingAsync(): Object;
-    clearRowSelection(): void;
+    clearRowSelection(includeNonDeselectableRows?: boolean): void;
     clearSelection(): void;
     clearSorting(): void;
     clearSortingAsync(): Object;
     closeAdvancedFilterDialog(): void;
     closeEdit(): void;
+    closeToolPanel(): void;
     copy(withHeader?: boolean): void;
     csvExport(excelExportProperties?: Object, isMultipleExport?: boolean, workbook?: Object, isBlob?: boolean): Object;
     dataReady(): void;
@@ -754,6 +782,8 @@ export type GridComponent = typeof ComponentBase & {
     deleteRecordAsync(fieldname?: string, data?: Object): Object;
     deleteRow(tr: Object): void;
     deleteRowAsync(tr: Object): Object;
+    deselectRow(index: number): void;
+    deselectRows(rowIndexes: number[]): void;
     destroy(): void;
     destroyTemplate(propertyNames?: string[], index?: any, callback?: Object): void;
     detailCollapseAll(): void;
@@ -816,6 +846,7 @@ export type GridComponent = typeof ComponentBase & {
     getMovableDataRows(): Object[];
     getMovableRowByIndex(index: number): Object;
     getMovableRows(): Object[];
+    getOpenedToolPanel(): string | null;
     getPager(): Object;
     getPersistColumns(): string;
     getPredicateFromRule(rule: Object): Object | null;
@@ -850,8 +881,10 @@ export type GridComponent = typeof ComponentBase & {
     hideSpinner(): void;
     isAdvancedFilterApplied(): boolean;
     isFrozenGrid(): boolean;
+    isToolPanelShowing(): boolean;
     openAdvancedFilterDialog(): void;
     openColumnChooser(x?: number, y?: number): void;
+    openToolPanel(id: string): void;
     pdfExport(pdfExportProperties?: Object, isMultipleExport?: boolean, pdfDoc?: Object, isBlob?: boolean): Object;
     pinRows(data: Object[]): void;
     print(): void;
@@ -861,6 +894,7 @@ export type GridComponent = typeof ComponentBase & {
     refreshFormula(rowIndex: number): void;
     refreshFormulas(): void;
     refreshHeader(): void;
+    refreshToolPanel(id?: string): void;
     removeFormula(name: string): void;
     removeMaskRow(): void;
     reorderColumnByIndex(fromIndex: number, toIndex: number): void;
@@ -895,6 +929,7 @@ export type GridComponent = typeof ComponentBase & {
     setGridPager(element: Object): void;
     setRowData(key: string | number, rowData?: Object): void;
     setRowDataAsync(key: string | number, rowData?: Object, delay?: number): Object;
+    setSideBarPosition(position: Object): void;
     showAdaptiveFilterDialog(): void;
     showAdaptiveSortDialog(): void;
     showColumns(keys: string | string[], showBy?: string): void;
@@ -904,6 +939,7 @@ export type GridComponent = typeof ComponentBase & {
     sortColumnAsync(columnName: string, direction: Object, isMultiSort?: boolean): Object;
     startEdit(): void;
     suspendFormulaRefresh(): void;
+    toggleSideBar(show?: boolean): void;
     undoEdit(): void;
     ungroupColumn(columnName: string): void;
     ungroupColumnAsync(columnName: string): Object;

@@ -1,1 +1,1 @@
-Repository for ej2-vue-template
+# Vue Workflow Designer Component

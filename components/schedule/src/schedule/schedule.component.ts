@@ -9,7 +9,7 @@ import { HeaderRowsDirective, HeaderRowDirective, HeaderRowsPlugin, HeaderRowPlu
 import { ToolbarItemsDirective, ToolbarItemDirective, ToolbarItemsPlugin, ToolbarItemPlugin } from './toolbaritems.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'agendaDaysCount', 'allowClipboard', 'allowDragAndDrop', 'allowInline', 'allowKeyboardInteraction', 'allowMultiCellSelection', 'allowMultiDrag', 'allowMultiRowSelection', 'allowOverlap', 'allowResizing', 'allowSwiping', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentTimeIndicatorSettings', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'dateRangeTemplate', 'dayHeaderTemplate', 'editorFooterTemplate', 'editorHeaderTemplate', 'editorTemplate', 'enableAdaptiveUI', 'enableAllDayScroll', 'enableHtmlSanitizer', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'enableWebMcp', 'endHour', 'eventDragArea', 'eventSettings', 'firstDayOfWeek', 'firstMonthOfYear', 'group', 'headerIndentTemplate', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'monthHeaderTemplate', 'monthsCount', 'overscanCount', 'prerenderDialogs', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'selectedResource', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'timeFormat', 'timeScale', 'timezone', 'timezoneDataSource', 'toolbarItems', 'views', 'webMcpSettings', 'weekRule', 'width', 'workDays', 'workHours', 'actionBegin', 'actionComplete', 'actionFailure', 'beforePaste', 'beforePrint', 'beforeWebMcpToolExecute', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventDoubleClick', 'eventRendered', 'excelExport', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'resizeStart', 'resizeStop', 'resizing', 'select', 'tooltipOpen', 'virtualScrollStart', 'virtualScrollStop'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'agendaDaysCount', 'allowClipboard', 'allowDragAndDrop', 'allowInline', 'allowKeyboardInteraction', 'allowMultiCellSelection', 'allowMultiDrag', 'allowMultiRowSelection', 'allowOverlap', 'allowResizing', 'allowSwiping', 'calendarMode', 'cellHeaderTemplate', 'cellTemplate', 'cssClass', 'currentTimeIndicatorSettings', 'currentView', 'dateFormat', 'dateHeaderTemplate', 'dateRangeTemplate', 'dayHeaderTemplate', 'editorFooterTemplate', 'editorHeaderTemplate', 'editorTemplate', 'enableAdaptiveUI', 'enableAllDayScroll', 'enableHtmlSanitizer', 'enablePersistence', 'enableRecurrenceValidation', 'enableRtl', 'enableWebMcp', 'endHour', 'eventDragArea', 'eventSettings', 'eventSpacing', 'firstDayOfWeek', 'firstMonthOfYear', 'group', 'groupSummary', 'headerIndentTemplate', 'headerRows', 'height', 'hideEmptyAgendaDays', 'locale', 'maxDate', 'minDate', 'monthHeaderTemplate', 'monthsCount', 'overscanCount', 'prerenderDialogs', 'quickInfoOnSelectionEnd', 'quickInfoTemplates', 'readonly', 'resourceHeaderTemplate', 'resources', 'rowAutoHeight', 'selectedDate', 'selectedResource', 'showHeaderBar', 'showQuickInfo', 'showTimeIndicator', 'showWeekNumber', 'showWeekend', 'startHour', 'summaryColumn', 'summaryRow', 'timeFormat', 'timeScale', 'timezone', 'timezoneDataSource', 'toolbarItems', 'views', 'webMcpSettings', 'weekRule', 'width', 'workDays', 'workHours', 'zoomLevel', 'zoomLevels', 'actionBegin', 'actionComplete', 'actionFailure', 'beforePaste', 'beforePrint', 'beforeWebMcpToolExecute', 'cellClick', 'cellDoubleClick', 'created', 'dataBinding', 'dataBound', 'destroyed', 'drag', 'dragStart', 'dragStop', 'eventClick', 'eventDoubleClick', 'eventRendered', 'excelExport', 'hover', 'moreEventsClick', 'navigating', 'popupClose', 'popupOpen', 'renderCell', 'renderSummaryCell', 'resizeStart', 'resizeStop', 'resizing', 'select', 'summaryCellClick', 'tooltipOpen', 'virtualScrollStart', 'virtualScrollStop'];
 export const modelProps: string[] = ['currentView', 'selectedDate'];
 
 export const testProp: any = getProps({props: properties});
@@ -215,6 +215,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[] {
             return this.ej2Instances.getEvents(startDate, endDate, includeOccurrences);
         },
+        getFixedResources(): Object[] {
+            return this.ej2Instances.getFixedResources();
+        },
         getIndexFromResourceId(id: string | number, name?: string): number {
             return this.ej2Instances.getIndexFromResourceId(id, name);
         },
@@ -232,6 +235,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         },
         getSelectedElements(): Object[] {
             return this.ej2Instances.getSelectedElements();
+        },
+        getSummaryCellDetails(element: Object): Object {
+            return this.ej2Instances.getSummaryCellDetails(element);
         },
         getViewDates(type: Object): Object[] {
             return this.ej2Instances.getViewDates(type);
@@ -268,6 +274,9 @@ export let ScheduleComponent: DefineVueComponent<ScheduleModel> =  vueDefineComp
         },
         refreshLayout(): void {
             return this.ej2Instances.refreshLayout();
+        },
+        refreshSummary(cell?: Object | Object | Object): void {
+            return this.ej2Instances.refreshSummary(cell);
         },
         refreshTemplates(templateName?: string): void {
             return this.ej2Instances.refreshTemplates(templateName);
@@ -348,12 +357,14 @@ export type ScheduleComponent = typeof ComponentBase & {
     getEventMaxID(): number | string;
     getEventTemplateName(resIndex: number): string;
     getEvents(startDate?: Object, endDate?: Object, includeOccurrences?: boolean): Object[];
+    getFixedResources(): Object[];
     getIndexFromResourceId(id: string | number, name?: string): number;
     getOccurrencesByID(eventID: number | string): Object[];
     getOccurrencesByRange(startTime: Object, endTime: Object): Object[];
     getResourceCollections(): Object[];
     getResourcesByIndex(index: number): Object;
     getSelectedElements(): Object[];
+    getSummaryCellDetails(element: Object): Object;
     getViewDates(type: Object): Object[];
     getWebMcpTools(toolNames?: string[]): Object[];
     hideSpinner(): void;
@@ -366,6 +377,7 @@ export type ScheduleComponent = typeof ComponentBase & {
     print(printOptions?: Object): void;
     refreshEvents(isRemoteRefresh: boolean): void;
     refreshLayout(): void;
+    refreshSummary(cell?: Object | Object | Object): void;
     refreshTemplates(templateName?: string): void;
     removeResource(resourceId: string | string[] | number | number[], name: string): void;
     resetWorkHours(dates: Object[], start?: string, end?: string, groupIndex?: number): void;

@@ -2,12 +2,9 @@ import { ComponentBase, gh, getProps, isExecute, vueDefineComponent, DefineVueCo
 import { isNullOrUndefined, getValue } from '@syncfusion/ej2-base';
 
 import { WorkflowDesigner, WorkflowDesignerModel } from '@syncfusion/ej2-workflow-designer';
-import { WorkflowStepsDirective, WorkflowStepDirective, WorkflowStepsPlugin, WorkflowStepPlugin } from './workflowsteps.directive'
-import { WorkflowConnectionsDirective, WorkflowConnectionDirective, WorkflowConnectionsPlugin, WorkflowConnectionPlugin } from './workflowconnections.directive'
-import { StickyNotesDirective, StickyNoteDirective, StickyNotesPlugin, StickyNotePlugin } from './stickynotes.directive'
 
 
-export const properties: string[] = ['isLazyUpdate', 'plugins', 'aiAssistSettings', 'canvasToolbarSettings', 'enablePersistence', 'enableRtl', 'errorSettings', 'locale', 'nodeCollectionSettings', 'propertyPanelSettings', 'simulationLogSettings', 'simulationSettings', 'simulationState', 'stickyNotes', 'toolbarSettings', 'workflowConnections', 'workflowSettings', 'workflowSteps', 'aiAssistCompleted', 'aiAssistFailed', 'aiAssistRequested', 'aiRequested', 'apiRequestRequested', 'approvalRequested', 'created', 'customExecutionRequested', 'formatterCompleted', 'notifyRequested', 'simulationCompleted', 'simulationFailed', 'simulationStarted', 'simulationStateChanged', 'simulationStepCompleted', 'simulationStepFailed', 'simulationStepStarted', 'simulationStopped', 'validationCompleted', 'workflowChanged', 'workflowItemSelected', 'workflowPropertyChanged'];
+export const properties: string[] = ['isLazyUpdate', 'plugins', 'aiAssistSettings', 'canvasToolbarSettings', 'connectionDefaults', 'enablePersistence', 'enableRtl', 'executionLogSettings', 'executionSettings', 'height', 'locale', 'propertyPanelSettings', 'stepCollectionSettings', 'stepDefaults', 'toolbarSettings', 'width', 'workflowSettings', 'workflowStepTemplate', 'aiAssistCompleted', 'aiAssistFailed', 'approvalRequested', 'beforeConnect', 'beforeItemRemove', 'beforeRequestSend', 'beforeStepExecute', 'created', 'credentialRequested', 'customExecutionRequested', 'executionCompleted', 'executionStarted', 'executionStepCompleted', 'executionStepFailed', 'executionStepStarted', 'notifyRequested', 'selectionChanged', 'workflowChanged'];
 export const modelProps: string[] = [];
 
 export const testProp: any = getProps({props: properties});
@@ -35,8 +32,8 @@ export let WorkflowDesignerComponent: DefineVueComponent<WorkflowDesignerModel> 
             models: modelProps as string[],
             hasChildDirective: true as boolean,
             hasInjectedModules: false as boolean,
-            tagMapper: {"e-workflow-steps":"e-workflow-step","e-workflow-connections":"e-workflow-connection","e-sticky-notes":"e-sticky-note"} as { [key: string]: Object },
-            tagNameMapper: {"e-workflow-steps":"e-workflowSteps","e-workflow-connections":"e-workflowConnections","e-sticky-notes":"e-stickyNotes"} as Object,
+            tagMapper: {} as { [key: string]: Object },
+            tagNameMapper: {} as Object,
             isVue3: !isExecute as boolean,
             templateCollection: {} as any,
         }
@@ -95,62 +92,32 @@ export let WorkflowDesignerComponent: DefineVueComponent<WorkflowDesignerModel> 
         custom(): void {
             this.updated();
         },
-        addWorkflowItem(item: Object | Object | Object): void {
-            return this.ej2Instances.addWorkflowItem(item);
-        },
-        applyCopilotPreview(proposed: Object, confirmed: boolean): boolean {
-            return this.ej2Instances.applyCopilotPreview(proposed, confirmed);
-        },
-        canRedo(): boolean {
-            return this.ej2Instances.canRedo();
-        },
-        canUndo(): boolean {
-            return this.ej2Instances.canUndo();
-        },
         destroy(): void {
             return this.ej2Instances.destroy();
         },
-        duplicateSelected(): void {
-            return this.ej2Instances.duplicateSelected();
+        exportWorkflow(): string {
+            return this.ej2Instances.exportWorkflow();
         },
-        exportWorkflow(options?: Object): Object | string {
-            return this.ej2Instances.exportWorkflow(options);
+        importWorkflow(fileOrJson: Object | string | Object): Object {
+            return this.ej2Instances.importWorkflow(fileOrJson);
         },
-        fromWorkflowJson(definition: Object | string): void {
-            return this.ej2Instances.fromWorkflowJson(definition);
+        refreshWorkflowStepTemplate(stepId?: string): void {
+            return this.ej2Instances.refreshWorkflowStepTemplate(stepId);
         },
-        getSelectedWorkflowItem(): Object | Object | Object | null {
-            return this.ej2Instances.getSelectedWorkflowItem();
+        runExecution(context?: Object, selectedTriggerId?: string): Object {
+            return this.ej2Instances.runExecution(context, selectedTriggerId);
         },
-        importWorkflow(fileOrJson: Object | string | Object, _options?: Object): Object {
-            return this.ej2Instances.importWorkflow(fileOrJson, _options);
+        showStepCollectionPalette(show: boolean): void {
+            return this.ej2Instances.showStepCollectionPalette(show);
         },
-        layoutWorkflow(): void {
-            return this.ej2Instances.layoutWorkflow();
+        stopExecution(): void {
+            return this.ej2Instances.stopExecution();
         },
-        previewCopilot(proposed: Object): Object {
-            return this.ej2Instances.previewCopilot(proposed);
+        triggerWebhook(message: Object): Object {
+            return this.ej2Instances.triggerWebhook(message);
         },
-        redo(): void {
-            return this.ej2Instances.redo();
-        },
-        removeWorkflowItem(id: string): void {
-            return this.ej2Instances.removeWorkflowItem(id);
-        },
-        runSimulation(context?: Object, selectedTriggerId?: string): Object {
-            return this.ej2Instances.runSimulation(context, selectedTriggerId);
-        },
-        stopSimulation(): void {
-            return this.ej2Instances.stopSimulation();
-        },
-        toWorkflowJson(): Object {
-            return this.ej2Instances.toWorkflowJson();
-        },
-        undo(): void {
-            return this.ej2Instances.undo();
-        },
-        updateWorkflowItem(id: string, changes: Object | Object | Object): void {
-            return this.ej2Instances.updateWorkflowItem(id, changes);
+        updateWorkflowItem(id: string, changes: Object | Object | Object, silent?: boolean): boolean {
+            return this.ej2Instances.updateWorkflowItem(id, changes, silent);
         },
         validateWorkflow(): Object {
             return this.ej2Instances.validateWorkflow();
@@ -174,25 +141,15 @@ export type WorkflowDesignerComponent = typeof ComponentBase & {
     trigger(eventName: string, eventProp: {
         [key: string]: Object;
     }, successHandler?: Function): void;
-    addWorkflowItem(item: Object | Object | Object): void;
-    applyCopilotPreview(proposed: Object, confirmed: boolean): boolean;
-    canRedo(): boolean;
-    canUndo(): boolean;
     destroy(): void;
-    duplicateSelected(): void;
-    exportWorkflow(options?: Object): Object | string;
-    fromWorkflowJson(definition: Object | string): void;
-    getSelectedWorkflowItem(): Object | Object | Object | null;
-    importWorkflow(fileOrJson: Object | string | Object, _options?: Object): Object;
-    layoutWorkflow(): void;
-    previewCopilot(proposed: Object): Object;
-    redo(): void;
-    removeWorkflowItem(id: string): void;
-    runSimulation(context?: Object, selectedTriggerId?: string): Object;
-    stopSimulation(): void;
-    toWorkflowJson(): Object;
-    undo(): void;
-    updateWorkflowItem(id: string, changes: Object | Object | Object): void;
+    exportWorkflow(): string;
+    importWorkflow(fileOrJson: Object | string | Object): Object;
+    refreshWorkflowStepTemplate(stepId?: string): void;
+    runExecution(context?: Object, selectedTriggerId?: string): Object;
+    showStepCollectionPalette(show: boolean): void;
+    stopExecution(): void;
+    triggerWebhook(message: Object): Object;
+    updateWorkflowItem(id: string, changes: Object | Object | Object, silent?: boolean): boolean;
     validateWorkflow(): Object
 };
 
@@ -200,12 +157,6 @@ export const WorkflowDesignerPlugin = {
     name: 'ejs-workflowdesigner',
     install(Vue: any) {
         Vue.component(WorkflowDesignerPlugin.name, WorkflowDesignerComponent);
-        Vue.component(WorkflowStepPlugin.name, WorkflowStepDirective);
-        Vue.component(WorkflowStepsPlugin.name, WorkflowStepsDirective);
-        Vue.component(WorkflowConnectionPlugin.name, WorkflowConnectionDirective);
-        Vue.component(WorkflowConnectionsPlugin.name, WorkflowConnectionsDirective);
-        Vue.component(StickyNotePlugin.name, StickyNoteDirective);
-        Vue.component(StickyNotesPlugin.name, StickyNotesDirective);
 
     }
 }
